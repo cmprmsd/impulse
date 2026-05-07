@@ -61,3 +61,8 @@ pub mod team {
         Default,
     }
 }
+
+pub mod queries {}
+pub mod mutations {}
+pub mod client {}
+pub mod object_permissions {}

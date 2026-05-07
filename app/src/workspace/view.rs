@@ -6,7 +6,9 @@ use crate::legacy_stubs::{AIConversation};
 use crate::legacy_stubs::{CloudConversationData};
 use crate::legacy_stubs::{ServerTime};
 // mod build_plan_migration_modal;  // module removed
-// pub(crate) mod cloud_agent_capacity_modal;  // module removed
+pub(crate) mod cloud_agent_capacity_modal {  // empty stub (cloud detach)
+    pub struct CloudAgentCapacityModal;
+}
 pub(crate) mod codex_modal;
 pub mod conversation_list;
 #[cfg(enable_crash_recovery)]

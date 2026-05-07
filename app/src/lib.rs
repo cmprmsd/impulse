@@ -112,6 +112,9 @@ pub mod remote_server {
 }
 pub mod launch_configs {
     pub struct LaunchConfig;
+    pub mod launch_config {
+        pub use super::LaunchConfig;
+    }
 }
 pub mod workspaces {
     pub mod user_workspaces {

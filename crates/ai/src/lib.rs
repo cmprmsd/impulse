@@ -4,6 +4,7 @@ pub mod agent_loop;
 // cloud-only modules removed during the cloud strip.
 pub mod agent_sdk {}
 pub mod agent_management {}
+pub mod persisted_workspace {}
 pub mod api_keys;
 pub mod conversation;
 pub mod llm_id;

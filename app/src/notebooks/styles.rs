@@ -36,7 +36,7 @@ pub fn title_font_size(font_settings: &FontSettings) -> f32 {
 pub const TITLE_FONT_PROPERTIES: fonts::Properties = fonts::Properties {
     style: fonts::Style::Normal,
     weight: fonts::Weight::BOLD,
-    stretch: fonts::Stretch::NORMAL,
+    // stretch field removed — fonts::Stretch was deleted from warpui in cloud strip.
 };
 
 /// Wraps the title element in spacing. If not `None`, the details element is shown above the title.
