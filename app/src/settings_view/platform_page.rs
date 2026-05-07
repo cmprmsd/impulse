@@ -7,8 +7,6 @@ use super::{
         MatchData, PageType, SettingsPageMeta, SettingsPageViewHandle, SettingsWidget,
         CONTENT_FONT_SIZE, SUBHEADER_FONT_SIZE,
     },
-    SettingsSection,
-};
 use crate::util::truncation::truncate_from_end;
 use crate::{
     appearance::Appearance,

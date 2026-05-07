@@ -5,8 +5,6 @@ use crate::{
     terminal::{
         safe_mode_settings::SafeModeSettings, shared_session::SharedSessionStatus, TerminalModel,
     },
-    test_util::settings::initialize_settings_for_tests,
-};
 
 #[test]
 fn test_viewer_secret_obfuscation_disabled() {

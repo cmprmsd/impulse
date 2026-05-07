@@ -27,17 +27,12 @@ use crate::{
         server_api::object::MockObjectClient,
         sync_queue::SyncQueue,
     },
-    settings::cloud_preferences::{CloudPreferenceModel, CloudPreferencesSettings, Platform},
-    Assets,
-};
 
 use warp_core::{
     settings::{
         macros::define_settings_group, RespectUserSyncSetting, Setting, SupportedPlatforms,
         SyncToCloud,
     },
-    user_preferences::GetUserPreferences,
-};
 
 use super::{
     initialize_cloud_preferences_syncer, ClientIdProvider, CloudPreferencesSyncer,

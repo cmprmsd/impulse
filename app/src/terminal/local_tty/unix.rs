@@ -44,9 +44,6 @@ use std::{
         fs::DirBuilderExt,
         io::{AsRawFd, FromRawFd, RawFd},
     },
-    path::{Path, PathBuf},
-    ptr,
-};
 use warp_core::channel::ChannelState;
 use warpui::{AppContext, SingletonEntity};
 

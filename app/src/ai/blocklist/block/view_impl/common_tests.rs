@@ -19,9 +19,6 @@ use crate::{
         AIAgentInput, AIAgentTextSection, AgentOutputImage, AgentOutputImageLayout,
         AgentOutputMermaidDiagram, MessageId, UserQueryMode,
     },
-    features::FeatureFlag,
-    search::slash_command_menu::static_commands::commands,
-};
 use ui_components::lightbox::{LightboxImage, LightboxImageSource};
 use warpui::{elements::Empty, Element};
 

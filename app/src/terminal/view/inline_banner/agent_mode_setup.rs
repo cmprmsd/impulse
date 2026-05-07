@@ -13,8 +13,6 @@ use crate::{
 use super::{
     render_inline_block_list_banner, InlineBannerButtonState, InlineBannerCloseButton,
     InlineBannerContent, InlineBannerStyle, InlineBannerTextButton, InlineBannerTextButtonFont,
-    InlineBannerTextButtonVariant,
-};
 
 const SPEEDBUMP_HEADER: &str = "Optimize Warp for this codebase?";
 const SPEEDBUMP_TEXT: &str = "Unlock smarter, more consistent responses by letting the Agent understand your codebase and generate rules for it. You can also do this at any point by running /init";

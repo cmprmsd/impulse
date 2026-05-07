@@ -9,10 +9,6 @@ use crate::{
         view::env_var_collection::{EnvVarCollectionEvent, EnvVarCollectionView},
         EnvVarCollectionType,
     },
-    pane_group::focus_state::PaneFocusHandle,
-    server::ids::SyncId,
-    workspaces::user_workspaces::UserWorkspaces,
-};
 
 use super::{
     view::PaneView, DetachType, PaneConfiguration, PaneContent, PaneGroup, PaneId, ShareableLink,

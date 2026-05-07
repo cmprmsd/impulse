@@ -3,8 +3,6 @@ use crate::ai::blocklist::view_util::format_credits;
 use crate::appearance::Appearance;
 use crate::persistence::model::{
     token_usage_category_display_name, ModelTokenUsage, FULL_TERMINAL_USE_CATEGORY,
-    PRIMARY_AGENT_CATEGORY,
-};
 use crate::ui_components::blended_colors;
 use std::cmp::Ordering;
 use std::collections::HashMap;

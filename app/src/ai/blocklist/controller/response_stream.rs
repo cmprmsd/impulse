@@ -14,8 +14,6 @@ use crate::{
     },
     network::NetworkStatus,
     report_error, send_telemetry_from_ctx,
-    server::server_api::ServerApiProvider,
-};
 
 #[derive(Debug, Clone, PartialEq, Eq, Hash)]
 pub struct ResponseStreamId(String);

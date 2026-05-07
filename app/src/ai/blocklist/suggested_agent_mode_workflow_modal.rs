@@ -8,9 +8,6 @@ use crate::{
         workflow_view::{WorkflowView, WorkflowViewEvent},
         WorkflowSelectionSource, WorkflowSource, WorkflowType,
     },
-    workspaces::user_workspaces::UserWorkspaces,
-    TelemetryEvent,
-};
 use pathfinder_geometry::vector::vec2f;
 use std::{collections::HashMap, default::Default, sync::Arc};
 use warp_core::{send_telemetry_from_ctx, ui::appearance::Appearance};

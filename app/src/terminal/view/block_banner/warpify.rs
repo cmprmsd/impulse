@@ -19,9 +19,6 @@ use crate::{
         ssh::warpify::warpify_description,
         view::{RememberForWarpification, TerminalAction},
     },
-    themes::theme::Fill,
-    ui_components::blended_colors,
-};
 
 use super::{render_block_banner, BLOCK_BANNER_DESCRIPTION_MAX_HEIGHT};
 

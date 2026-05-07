@@ -6,9 +6,6 @@ use warpui::{
         ChildAnchor, ConstrainedBox, Container, CornerRadius, Empty, Fill, OffsetPositioning,
         ParentAnchor, ParentElement as _, ParentOffsetBounds, Radius, Stack,
     },
-    ui_components::components::UiComponentStyles,
-    Element,
-};
 
 pub struct RedNotificationDot {}
 

@@ -3,8 +3,6 @@
 use crate::drive::CloudObjectTypeAndId;
 use crate::editor::{
     EditorView, Event as EditorEvent, PropagateAndNoOpNavigationKeys, SingleLineEditorOptions,
-    TextOptions,
-};
 use crate::network::NetworkStatus;
 use crate::search_bar::SearchBar;
 use crate::settings::{AISettings, AISettingsChangedEvent};
@@ -36,8 +34,6 @@ use warpui::{
     platform::Cursor,
     ui_components::components::{UiComponent, UiComponentStyles},
     AppContext, Element, Entity, FocusContext, SingletonEntity, TypedActionView, View, ViewContext,
-    ViewHandle,
-};
 
 use super::{is_edit_allowed, is_syncing, style, AIFact, CloudAIFact, CloudAIFactModel};
 use crate::ai::facts::AIMemory;

@@ -13,9 +13,6 @@ use crate::{
 
 use super::{
     event_listener::ChannelEventListener, model::session::Sessions,
-    model_events::ModelEventDispatcher, ShellLaunchState, TerminalManager, TerminalModel,
-    TerminalView,
-};
 
 pub struct MockTerminalManager {
     model: Arc<FairMutex<TerminalModel>>,

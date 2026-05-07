@@ -14,8 +14,6 @@ use markdown_parser::{FormattedText, FormattedTextFragment, FormattedTextLine};
 use warp_core::ui::theme::WarpTheme;
 use warpui::elements::{
     FormattedTextElement, HighlightedHyperlink, Hoverable, Icon, MainAxisAlignment, MainAxisSize,
-    MouseStateHandle,
-};
 use warpui::keymap::FixedBinding;
 use warpui::ui_components::toggle_menu::ToggleMenuStateHandle;
 use warpui::{

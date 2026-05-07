@@ -5,8 +5,6 @@ use super::{
         render_sub_header, LocalOnlyIconState, MatchData, PageType, SettingsPageMeta,
         SettingsPageViewHandle, SettingsWidget,
     },
-    SettingsSection,
-};
 use crate::send_telemetry_from_ctx;
 use crate::{appearance::Appearance, themes};
 use crate::{
@@ -16,15 +14,11 @@ use crate::{
     editor::{
         Event as EditorEvent, PropagateAndNoOpNavigationKeys, SingleLineEditorOptions, TextOptions,
     },
-    keyboard::UserDefinedKeybinding,
-};
 use crate::{search_bar::SearchBar, settings::CloudPreferencesSettings};
 use crate::{
     util::bindings::{
         filter_bindings_including_keystroke, reset_keybinding_to_default, set_custom_keybinding,
     },
-    TelemetryEvent,
-};
 use itertools::Itertools;
 
 use warp_core::ui::theme::color::internal_colors;

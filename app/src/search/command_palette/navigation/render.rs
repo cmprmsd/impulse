@@ -1,8 +1,6 @@
 use crate::appearance::Appearance;
 use crate::context_chips::display_chip::{
     chip_container, render_git_diff_stats_content, render_udi_chip, udi_font_size, GitLineChanges,
-    UdiChipConfig,
-};
 use crate::context_chips::prompt_snapshot::PromptSnapshot;
 use crate::context_chips::{ChipValue, ContextChipKind};
 use crate::search::command_palette::navigation::search::SessionHighlightIndices;

@@ -10,8 +10,6 @@ use warpui::{
     fonts::Weight,
     ui_components::components::{UiComponent, UiComponentStyles},
     AppContext, Entity, ModelAsRef, ModelHandle, SingletonEntity, TypedActionView, View,
-    ViewContext,
-};
 
 use crate::{
     appearance::Appearance,

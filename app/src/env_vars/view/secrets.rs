@@ -27,8 +27,6 @@ use crate::{
     search::external_secrets::{
         searcher::ExternalSecretSearchItemAction, view::ExternalSecretsMenuEvent,
     },
-    ui_components::icons::Icon,
-};
 #[cfg(all(not(target_family = "wasm"), feature = "local_tty"))]
 use crate::{
     terminal::local_shell::LocalShellState,

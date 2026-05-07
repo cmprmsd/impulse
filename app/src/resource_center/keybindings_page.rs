@@ -32,16 +32,12 @@ use crate::{
         EditorView, Event as EditorEvent, PropagateAndNoOpNavigationKeys, SingleLineEditorOptions,
         TextOptions,
     },
-    util::bindings::CommandBinding,
-};
 
 use super::{
     section_views::{
         DESCRIPTION_FONT_SIZE, ITEM_PADDING_BOTTOM, SCROLLBAR_OFFSET, SCROLLBAR_WIDTH,
         SECTION_HEADER_FONT_SIZE, SECTION_SPACING,
     },
-    utils::{get_additional_keybindings, FUNDAMENTALS_KEYBINDINGS},
-};
 
 use super::utils::{BLOCKS_KEYBINDINGS, INPUT_EDITOR_KEYBINDINGS, TERMINAL_KEYBINDINGS};
 

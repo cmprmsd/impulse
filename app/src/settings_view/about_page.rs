@@ -3,12 +3,8 @@ use super::{
         MatchData, PageType, SettingsPageEvent, SettingsPageMeta, SettingsPageViewHandle,
         SettingsWidget,
     },
-    SettingsSection,
-};
 use crate::{
     appearance::Appearance, channel::ChannelState, themes::theme::ColorScheme,
-    workspace::WorkspaceAction,
-};
 use warpui::{
     assets::asset_cache::AssetSource,
     elements::{

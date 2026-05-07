@@ -11,10 +11,6 @@ use crate::{
             AIExecutionProfile, ActionPermission, AskUserQuestionPermission, WriteToPtyPermission,
         },
     },
-    report_if_error,
-    settings::{AISettings, AgentModeCodingPermissionsType, AgentModeCommandExecutionPredicate},
-    workspaces::{user_workspaces::UserWorkspaces, workspace::AiAutonomySettings},
-};
 use warp_core::execution_mode::AppExecutionMode;
 
 use crate::ai::mcp::mcp_provider_from_file_path;

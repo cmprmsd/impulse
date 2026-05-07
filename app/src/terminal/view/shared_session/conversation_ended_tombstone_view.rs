@@ -27,8 +27,6 @@ use warpui::elements::{
 use warpui::fonts::{Properties, Weight};
 use warpui::{
     AppContext, Element, Entity, EntityId, SingletonEntity, TypedActionView, View, ViewContext,
-    ViewHandle,
-};
 
 #[cfg(not(target_family = "wasm"))]
 

@@ -21,18 +21,12 @@ use crate::{
         ids::{ClientId, SyncId},
         sync_queue::SyncQueue,
     },
-    ui_components::icons::Icon,
-    view_components::DismissibleToast,
-    workspace::ToastStack,
-};
 
 use super::{
     modal::BODY_HEIGHT,
     nodes::{
         expand_dirs, parse_file, FileContent, FileId, FileUploadState, FolderId, UploadResult,
     },
-    queue::{ImportQueue, ImportQueueArgs, ImportQueueEvent, ParentId, RequestContent},
-};
 
 const FILE_PICKER_BUTTON_WIDTH: f32 = 250.;
 const BUTTON_FONT_SIZE: f32 = 14.;

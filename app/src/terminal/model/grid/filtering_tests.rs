@@ -7,8 +7,6 @@ use crate::{
         grid::Dimensions as _,
         index::{VisiblePoint, VisibleRow},
     },
-    test_util::mock_blockgrid,
-};
 
 use super::*;
 

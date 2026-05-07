@@ -1,7 +1,5 @@
 use super::{
     AgentOnboardingVersion, AskAISource, ContextMenuAction, OnboardingIntention, OnboardingVersion,
-    TerminalAction,
-};
 
 use crate::ai::predict::prompt_suggestions::ACCEPT_PROMPT_SUGGESTION_KEYBINDING;
 
@@ -25,10 +23,6 @@ use crate::{
         escape_sequences::{self, EscCodes},
         selection::SelectionDirection,
     },
-    terminal::shared_session::SharedSessionStatus,
-    terminal::TerminalView,
-    util::bindings::CustomAction,
-};
 use warp_core::context_flag::ContextFlag;
 use warpui::keymap::ContextPredicate;
 use warpui::keymap::{BindingDescription, PerPlatformKeystroke};

@@ -17,8 +17,6 @@ use warpui::{
         toggle_menu::{ToggleMenuItem, ToggleMenuStateHandle},
     },
     AppContext, Element, Entity, FocusContext, SingletonEntity, TypedActionView, View, ViewContext,
-    ViewHandle,
-};
 
 use crate::{
     editor::{
@@ -30,8 +28,6 @@ use crate::{
         buttons::{highlight, icon_button},
         icons::{self, Icon},
     },
-    workflows::workflow::ArgumentType,
-};
 
 use warpui::platform::Cursor;
 

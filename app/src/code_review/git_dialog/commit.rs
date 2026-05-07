@@ -39,8 +39,6 @@ use crate::{
         create_pr, get_diff_for_commit_message, get_file_change_entries, run_commit, run_push,
         FileChangeEntry, PrInfo,
     },
-    view_components::action_button::{ActionButton, ButtonSize, SecondaryTheme},
-};
 use warp_core::send_telemetry_from_ctx;
 
 /// What should happen after a successful commit.

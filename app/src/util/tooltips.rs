@@ -13,8 +13,6 @@ use warpui::{
 
 use crate::{
     appearance::Appearance, settings::PrivacySettings, terminal::model::secrets::SecretLevel,
-    ui_components::blended_colors,
-};
 
 /// A link to be shown in a tooltip
 pub struct TooltipLink<OnClick> {

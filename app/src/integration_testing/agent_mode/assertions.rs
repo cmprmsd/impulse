@@ -12,9 +12,6 @@ use crate::{
         AIAgentOutputMessageType, AIAgentOutputStatus, AIAgentTextSection, FileEdit,
         FinishedAIAgentOutput, ReadFilesRequest, TodoOperation,
     },
-    integration_testing::view_getters::terminal_view,
-    BlocklistAIHistoryModel,
-};
 use warpui::{integration::AssertionCallback, integration_assert, EntityId};
 use warpui::{integration::AssertionOutcome, SingletonEntity};
 

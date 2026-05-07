@@ -2,8 +2,6 @@ use std::slice;
 
 use super::{
     changed_lines_intersect_terminal_range, has_malformed_terminal_correction_signal,
-    proposed_terminal_line_range,
-};
 use ai::diff_validation::{DiffDelta, DiffType};
 
 #[test]

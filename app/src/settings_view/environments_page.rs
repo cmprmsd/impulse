@@ -14,8 +14,6 @@ use super::{
         EnvironmentFormInitArgs, EnvironmentFormValues, GithubAuthRedirectTarget,
         UpdateEnvironmentForm, UpdateEnvironmentFormEvent,
     },
-    SettingsSection,
-};
 use crate::{
     ai::cloud_environments::{self, CloudAmbientAgentEnvironment},
     appearance::Appearance,
@@ -42,9 +40,6 @@ use crate::{
         render_copyable_text_field, CopyButtonPlacement, CopyableTextFieldConfig, DismissibleToast,
         COPY_FEEDBACK_DURATION,
     },
-    workspace::{ToastStack, WorkspaceAction},
-    workspaces::user_workspaces::UserWorkspaces,
-};
 use instant::Instant;
 use pathfinder_geometry::vector::vec2f;
 use std::collections::HashMap;

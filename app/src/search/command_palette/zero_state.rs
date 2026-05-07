@@ -14,8 +14,6 @@ use std::collections::HashMap;
 use warpui::elements::{Container, Flex, MouseStateHandle, ParentElement, Shrinkable, Wrap};
 use warpui::{
     AppContext, Element, Entity, ModelHandle, SingletonEntity, TypedActionView, View, ViewContext,
-    WindowId,
-};
 
 /// A zero-state view for the command palette.
 pub struct ZeroState {

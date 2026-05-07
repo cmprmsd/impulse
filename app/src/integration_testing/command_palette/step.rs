@@ -1,7 +1,5 @@
 use crate::integration_testing::command_palette::assertions::{
     assert_command_palette_has_results, assert_command_palette_is_closed,
-    assert_command_palette_is_open,
-};
 use crate::util::bindings::cmd_or_ctrl_shift;
 use warpui::integration::{AssertionOutcome, TestStep};
 use warpui::{App, WindowId};

@@ -30,14 +30,6 @@ use crate::{
     editor::{
         Event as EditorEvent, PropagateAndNoOpNavigationKeys, SingleLineEditorOptions, TextOptions,
     },
-    referral_theme_status::ReferralThemeStatus,
-    report_if_error,
-    settings::{respect_system_theme, ThemeSettings},
-    themes::theme::SelectedSystemThemes,
-    user_config::{load_theme_configs, themes_dir, WarpConfig, WarpConfigUpdateEvent},
-    util::traffic_lights::{TrafficLightData, TrafficLightSide},
-    window_settings::WindowSettings,
-};
 use crate::{appearance::AppearanceManager, send_telemetry_from_ctx};
 use crate::{editor::EditorView, resource_center::TipsCompleted};
 use crate::{

@@ -26,10 +26,6 @@ use crate::{
         searcher::EmbeddingSearchItemAction,
         view::{EmbeddingSearchEvent, EmbeddingSearchMenu},
     },
-    server::ids::SyncId,
-    themes::theme::Fill,
-    ui_components::{buttons::icon_button, icons::Icon},
-};
 
 use super::{
     embedded_item::EmbeddedWorkflow,

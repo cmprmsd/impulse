@@ -9,8 +9,6 @@ use crate::{
         prompt::{PromptConfiguration, PromptSelection},
         ContextChipKind,
     },
-    terminal::session_settings::SessionSettings,
-};
 
 fn initialize_app(app: &mut App) {
     initialize_settings_for_tests(app);

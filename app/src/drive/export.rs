@@ -5,8 +5,6 @@ use std::{
         hash_map::{Entry, OccupiedEntry},
         HashMap,
     },
-    path::{Path, PathBuf},
-};
 
 #[cfg(feature = "local_fs")]
 use aho_corasick::{AhoCorasick, MatchKind};
@@ -31,8 +29,6 @@ use crate::{
 use crate::{
     notebooks::export_notebook, server::cloud_objects::update_manager::get_duplicate_object_name,
     view_components::ToastLink, workflows::export_workflow::export_serialize,
-    workspace::WorkspaceAction,
-};
 
 use super::CloudObjectTypeAndId;
 

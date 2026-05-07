@@ -8,8 +8,6 @@ use crate::ai::{
         AIAgentAction, AIAgentActionType, DocumentContext, EditDocumentsRequest,
         EditDocumentsResult,
     },
-    document::ai_document_model::{AIDocumentId, AIDocumentModel, AIDocumentUpdateSource},
-};
 use crate::notebooks::post_process_notebook;
 
 use super::{ActionExecution, AnyActionExecution, ExecuteActionInput, PreprocessActionInput};

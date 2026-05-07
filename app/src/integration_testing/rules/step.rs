@@ -12,8 +12,6 @@ use crate::{
         cloud_objects::update_manager::UpdateManager,
         ids::{ClientId, SyncId},
     },
-    workspaces::user_workspaces::UserWorkspaces,
-};
 
 /// Create a personal rule and save its sync ID into the step data.
 pub fn create_a_personal_rule(

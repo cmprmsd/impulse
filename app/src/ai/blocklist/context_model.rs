@@ -37,8 +37,6 @@ use crate::{
         model_events::{ModelEvent, ModelEventDispatcher},
         TerminalModel,
     },
-    workspaces::user_workspaces::UserWorkspaces,
-};
 
 use super::{
     block::DirectoryContext, history_model::BlocklistAIHistoryModel, BlocklistAIHistoryEvent,

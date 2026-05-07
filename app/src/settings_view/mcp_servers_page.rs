@@ -25,9 +25,6 @@ use crate::{
         settings_page::{MatchData, PageType, SettingsPageMeta, SettingsWidget},
         SettingsSection,
     },
-    view_components::DismissibleToast,
-    workspace::ToastStack,
-};
 
 /// Describes where an MCP install request originated.
 ///

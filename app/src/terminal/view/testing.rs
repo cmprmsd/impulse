@@ -11,8 +11,6 @@ cfg_if::cfg_if! {
 
         use crate::{
             ai::blocklist::SerializedBlockListItem, pane_group::TerminalViewResources,
-            resource_center::TipsCompleted,
-        };
         use crate::terminal::model::session::Sessions;
         use crate::terminal::model_events::ModelEventDispatcher;
         use crate::terminal::view::WARP_PROMPT_HEIGHT_LINES;

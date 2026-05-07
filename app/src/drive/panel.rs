@@ -4,8 +4,6 @@ use warpui::{
     presenter::ChildView,
     windowing::{StateEvent, WindowManager},
     AppContext, Element, Entity, FocusContext, SingletonEntity, TypedActionView, View, ViewContext,
-    ViewHandle,
-};
 
 use crate::{
     ai::{document::ai_document_model::AIDocumentId, facts::CloudAIFactModel},
@@ -20,9 +18,6 @@ use crate::{
         ids::{ClientId, ServerId, SyncId},
         telemetry::SharingDialogSource,
     },
-    workflows::{manager::WorkflowOpenSource, CloudWorkflow, WorkflowViewMode},
-    workspaces::user_workspaces::UserWorkspaces,
-};
 
 use super::{
     drive_helpers::{

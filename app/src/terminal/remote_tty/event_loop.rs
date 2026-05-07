@@ -1,8 +1,6 @@
 use crate::terminal::{
     bootstrap::init_shell_script_for_shell, event_listener::ChannelEventListener,
     model::ansi::Processor, session_settings::SessionSettings, shell::ShellType,
-    writeable_pty::Message as EventLoopMessage, SizeInfo, TerminalModel,
-};
 use async_channel::Receiver;
 use futures_util::SinkExt;
 use parking_lot::FairMutex;

@@ -5,8 +5,6 @@ use crate::{appearance::Appearance, terminal::view::TerminalAction};
 use super::{
     render_inline_block_list_banner, InlineBannerButtonState, InlineBannerCloseButton,
     InlineBannerContent, InlineBannerIcon, InlineBannerStyle, InlineBannerTextButton,
-    InlineBannerTextButtonVariant,
-};
 
 const AWS_CLI_INSTALL_DOCS_URL: &str =
     "https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html";

@@ -21,9 +21,6 @@ use crate::{
             searcher::EmbeddingSearchItemAction, view::styles,
         },
     },
-    themes::theme::Fill,
-    ui_components::icons::Icon,
-};
 use crate::{notebooks::CloudNotebook, search::item::SearchItem};
 
 /// The size of the object type icons, in pixels.

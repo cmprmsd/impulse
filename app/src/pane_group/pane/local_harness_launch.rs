@@ -8,8 +8,6 @@ use crate::ai::{
         },
         task_env_vars, validate_cli_installed,
     },
-    ambient_agents::{task::HarnessConfig, AgentConfigSnapshot, AmbientAgentTaskId},
-};
 use crate::terminal::cli_agent_sessions::plugin_manager::plugin_manager_for;
 use crate::terminal::shell::ShellType;
 use shell_words::quote as shell_quote;

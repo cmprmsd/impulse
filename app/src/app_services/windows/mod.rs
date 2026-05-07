@@ -4,8 +4,6 @@ use warpui::AppContext;
 use {
     service_impl::forward_uri_to_sole_running_instance,
     single_instance_manager::SingleInstanceManager, thiserror::Error, url::Url,
-    warp_core::channel::ChannelState,
-};
 
 mod registry;
 #[cfg(feature = "release_bundle")]

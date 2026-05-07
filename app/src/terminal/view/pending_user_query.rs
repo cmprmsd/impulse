@@ -6,9 +6,6 @@ use crate::{
         agent::{conversation::AIConversationId, CancellationReason},
         blocklist::block::{FinishReason, PendingUserQueryBlock, PendingUserQueryBlockEvent},
     },
-    auth::AuthStateProvider,
-    terminal::{view::PendingUserQueryKind, TerminalView},
-};
 
 use super::rich_content::RichContentMetadata;
 

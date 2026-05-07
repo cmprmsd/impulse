@@ -12,13 +12,9 @@ use crate::{
         blocklist::BlocklistAIPermissions,
         paths::host_native_absolute_path,
     },
-    terminal::model::session::{active_session::ActiveSession, SessionType},
-};
 
 use super::{
     read_local_file_context, ActionExecution, AnyActionExecution, ExecuteActionInput,
-    PreprocessActionInput,
-};
 
 pub struct ReadFilesExecutor {
     active_session: ModelHandle<ActiveSession>,

@@ -23,8 +23,6 @@ use warp_editor::{
         },
         model::{BlockItem, HitTestBlockType, Location, RenderState},
     },
-    selection::{TextDirection, TextUnit},
-};
 
 use warp_util::{path::LineAndColumnArg, user_input::UserInput};
 use warpui::{

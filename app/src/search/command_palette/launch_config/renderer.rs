@@ -8,8 +8,6 @@ use warpui::{
         components::{Coords, UiComponent, UiComponentStyles},
         text::Span,
     },
-    Element,
-};
 
 use crate::appearance::Appearance;
 use crate::search::result_renderer::ItemHighlightState;

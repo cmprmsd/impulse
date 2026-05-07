@@ -1,8 +1,6 @@
 use crate::ai::mcp::file_based_manager::FileBasedMCPManagerEvent;
 use crate::ai::mcp::templatable_manager::oauth::{
     load_credentials_from_secure_storage, write_to_secure_storage, FILE_BASED_MCP_CREDENTIALS_KEY,
-    TEMPLATABLE_MCP_CREDENTIALS_KEY,
-};
 use crate::ai::mcp::FileBasedMCPManager;
 use core::fmt;
 use itertools::Itertools;
@@ -15,8 +13,6 @@ use crate::ai::mcp::templatable::GalleryData;
 use crate::ai::mcp::templatable_manager::FigmaMcpStatus;
 use crate::ai::mcp::{
     Author, CloudMCPServer, JsonTemplate, MCPGalleryManager, MCPServerUpdate,
-    ParsedTemplatableMCPServerResult,
-};
 
 use crate::ai::mcp::parsing::resolve_json;
 use crate::ai::mcp::TemplatableMCPServer;
@@ -34,11 +30,6 @@ use crate::{
     server::{
         cloud_objects::update_manager::UpdateManager, ids::SyncId, telemetry::TelemetryEvent,
     },
-    settings::AISettings,
-    view_components::DismissibleToast,
-    workspace::ToastStack,
-    GlobalResourceHandlesProvider,
-};
 use async_compat::CompatExt as _;
 use cfg_if::cfg_if;
 use futures::FutureExt as _;

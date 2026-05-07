@@ -44,8 +44,6 @@ use warpui::{
         components::{Coords, UiComponent, UiComponentStyles},
     },
     AppContext, Element, Entity, SingletonEntity, TypedActionView, View, ViewContext, ViewHandle,
-    WindowId,
-};
 use warpui::{platform::SaveFilePickerConfiguration, ModelHandle};
 
 use crate::menu::{Event, Menu, MenuItem, MenuItemFields};

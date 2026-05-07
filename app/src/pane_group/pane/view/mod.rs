@@ -23,8 +23,6 @@ use warpui::{
     keymap::EditableBinding,
     presenter::ChildView,
     AppContext, Element, Entity, ModelHandle, SingletonEntity, TypedActionView, View, ViewContext,
-    ViewHandle,
-};
 
 use crate::pane_group::focus_state::{PaneFocusHandle, PaneGroupFocusEvent};
 

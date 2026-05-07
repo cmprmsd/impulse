@@ -4,8 +4,6 @@ use std::path::{Path, PathBuf};
 use lsp::supported_servers::LSPServerType;
 use lsp::{
     LanguageId, LanguageServerId, LspManagerModel, LspManagerModelEvent, LspServerModel,
-    LspState as LspModelState,
-};
 use warp_core::send_telemetry_from_ctx;
 
 use crate::code::lsp_telemetry::{LspControlActionType, LspEnablementSource, LspTelemetryEvent};

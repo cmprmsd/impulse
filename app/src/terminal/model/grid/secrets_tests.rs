@@ -6,8 +6,6 @@ use crate::terminal::{
         ansi::{self, Handler as _},
         blockgrid::BlockGrid,
     },
-    SizeInfo,
-};
 
 use super::*;
 

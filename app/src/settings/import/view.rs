@@ -14,8 +14,6 @@ use warpui::{
         radio_buttons::{self, RadioButtonItem},
     },
     Element, Entity, ModelContext, ModelHandle, SingletonEntity, TypedActionView, View,
-    ViewContext,
-};
 
 use warpui::ui_components::radio_buttons::RadioButtonStateHandle;
 

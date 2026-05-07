@@ -20,8 +20,6 @@ use crate::{
         items::{mcp_server::WarpDriveMCPServer, WarpDriveItem},
         CloudObjectTypeAndId,
     },
-    server::{ids::SyncId, sync_queue::QueueItem},
-};
 #[cfg(not(target_family = "wasm"))]
 use diesel::{QueryDsl, RunQueryDsl, SqliteConnection};
 use serde::{Deserialize, Serialize};

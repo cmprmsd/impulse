@@ -31,8 +31,6 @@ use warp_editor::model::CoreEditorModel;
 
 use warp_core::ui::theme::color::internal_colors::{
     accent_overlay_2, accent_overlay_3, neutral_1, neutral_3, neutral_4, neutral_6, text_main,
-    text_sub,
-};
 use warp_core::ui::theme::Fill;
 use warpui::{
     clipboard::ClipboardContent,

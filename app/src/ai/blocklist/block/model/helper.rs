@@ -8,8 +8,6 @@ use crate::{
         },
         blocklist::BlocklistAIActionModel,
     },
-    BlocklistAIHistoryModel,
-};
 
 use super::AIBlockModel;
 

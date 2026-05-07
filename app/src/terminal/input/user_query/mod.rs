@@ -13,8 +13,6 @@ use warpui::platform::OperatingSystem;
 
 use crate::terminal::input::inline_menu::{
     default_navigation_message_items, InlineMenuAction, InlineMenuMessageArgs, InlineMenuRowAction,
-    InlineMenuType,
-};
 use crate::terminal::input::message_bar::{Message, MessageItem};
 
 impl InlineMenuAction for SelectUserQuery {

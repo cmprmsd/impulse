@@ -15,8 +15,6 @@ use crate::ai::{
         history_model,
         model::{AIRequestType, PassiveRequestType},
     },
-    llms::LLMId,
-};
 
 use super::{AIBlockModel, AIBlockOutputStatus, OutputStatusUpdateCallback};
 

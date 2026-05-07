@@ -20,8 +20,6 @@ use warpui::{
     },
     keymap::{FixedBinding, Keystroke},
     AppContext, Element, Entity, EntityId, FocusContext, SingletonEntity, TypedActionView, View,
-    ViewContext,
-};
 
 use crate::{
     ai::blocklist::block::view_impl::{CONTENT_HORIZONTAL_PADDING, CONTENT_ITEM_VERTICAL_MARGIN},
@@ -36,9 +34,6 @@ use crate::{
         block_list_element::BlockListMenuSource, block_list_viewport::InputMode,
         view::TerminalAction,
     },
-    ui_components::blended_colors,
-    view_components::action_button::{ButtonSize, KeystrokeSource, NakedTheme, PrimaryTheme},
-};
 
 /// The vertical padding applied to the env var collection block's content body.
 /// For horizontal padding, use [`INLINE_ACTION_HORIZONTAL_PADDING`] for consistency.

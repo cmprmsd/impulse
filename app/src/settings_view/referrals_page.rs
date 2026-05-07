@@ -10,8 +10,6 @@ use super::{
     settings_page::{
         MatchData, PageType, SettingsPageMeta, SettingsPageViewHandle, SettingsWidget, PAGE_PADDING,
     },
-    SettingsSection,
-};
 use crate::{
     appearance::Appearance,
     auth::AuthStateProvider,
@@ -21,9 +19,6 @@ use crate::{
         server_api::referral::{ReferralInfo, ReferralsClient},
         telemetry::TelemetryEvent,
     },
-    ui_components::blended_colors,
-    view_components::ToastFlavor,
-};
 use warpui::{
     clipboard::ClipboardContent,
     elements::{

@@ -27,8 +27,6 @@ use crate::{
 
 use super::telemetry::{
     DiffInvalidFileEvent, DiffMatchFailedEvent, MissingLineNumbersEvent,
-    RequestFileEditsTelemetryEvent,
-};
 
 /// Result of reading a file from disk or a remote server.
 ///

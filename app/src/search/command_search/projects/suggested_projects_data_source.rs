@@ -34,8 +34,6 @@ impl SuggestedProjectsDataSource {
 
         let mut data_source = Self {
             suggestions: Vec::new(),
-            excluded_paths,
-        };
 
         data_source.regenerate_suggestions(SUGGESTION_MAX_COUNT, ctx);
         data_source

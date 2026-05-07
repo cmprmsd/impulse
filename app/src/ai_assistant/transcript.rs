@@ -19,8 +19,6 @@ use warpui::{
     ui_components::components::{UiComponent, UiComponentStyles},
     units::IntoPixels,
     AppContext, Element, Entity, ModelHandle, SingletonEntity, TypedActionView, View, ViewContext,
-    WeakViewHandle,
-};
 use warpui::{BlurContext, FocusContext};
 
 use crate::{
@@ -39,8 +37,6 @@ use super::{
         render_request_limit_info, save_as_workflow_position_id, AssistantTranscriptPart,
         CodeBlockIndex, FormattedTranscriptMessage, MarkdownSegment, TranscriptPartSubType,
     },
-    AI_ASSISTANT_SVG_PATH,
-};
 
 const TRANSCRIPT_POSITION_ID: &str = "ai_assistant::transcript";
 

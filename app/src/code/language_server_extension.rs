@@ -21,8 +21,6 @@ use warpui::{
 
 use crate::code::local_code_editor::{
     HoverContentSegment, LocalCodeEditorView, LspHoverState, HOVER_TOOLTIP_MAX_HEIGHT,
-    HOVER_TOOLTIP_MAX_WIDTH,
-};
 use crate::editor::InteractionState;
 
 use super::editor::view::{CodeEditorRenderOptions, CodeEditorView};

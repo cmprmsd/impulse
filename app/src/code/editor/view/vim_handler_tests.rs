@@ -24,8 +24,6 @@ use warp_util::user_input::UserInput;
 use warpui::text::point::Point;
 use warpui::{
     keymap::Keystroke, platform::WindowStyle, App, SingletonEntity, TypedActionView, UpdateModel,
-    ViewHandle,
-};
 
 // Await render/layout completion for a CodeEditorView in tests.
 async fn layout_editor_view(app: &mut App, editor: &ViewHandle<CodeEditorView>) {

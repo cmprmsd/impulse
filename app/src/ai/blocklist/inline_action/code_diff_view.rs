@@ -24,8 +24,6 @@ use warp_core::{
             Fill,
         },
     },
-    HostId,
-};
 use warp_editor::{
     content::buffer::InitialBufferState, render::element::VerticalExpansionBehavior,
 };

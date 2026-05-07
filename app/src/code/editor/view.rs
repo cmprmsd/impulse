@@ -9,13 +9,6 @@ use crate::code::editor::{
         AddAsContextButton, CommentButton, EditorWrapper, EditorWrapperStateHandle,
         GutterHoverTarget, GutterRange, InnerEditor, LineNumberConfig, RevertHunkButton,
     },
-    find::view::{CodeEditorFind as Find, Event as FindViewEvent},
-    goto_line::view::{Event as GoToLineEvent, GoToLineView},
-    line::EditorLineLocation,
-    model::{CodeEditorModel, CodeEditorModelEvent, HoverableLink, LineBound, StableEditorLine},
-    nav_bar::{NavBar, NavBarBehavior, NavBarEvent},
-    scroll::{ScrollPosition, ScrollTrigger, ScrollWheelBehavior},
-};
 use crate::code::{
     editor::EditorReviewComment, DiffResult, NoopCommentEditorProvider,
     NoopFindReferencesCardProvider, ShowCommentEditorProvider, ShowFindReferencesCardProvider,

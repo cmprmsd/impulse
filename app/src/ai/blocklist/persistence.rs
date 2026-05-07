@@ -18,8 +18,6 @@ use crate::{
         },
         llms::LLMId,
     },
-    terminal::model::block::{BlockId, SerializedBlock},
-};
 
 use super::AIQueryHistoryOutputStatus;
 /// Data we persist for each [`AIAgentExchange`] for use in history. Does not contain output data.

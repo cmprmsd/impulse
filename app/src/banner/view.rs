@@ -16,8 +16,6 @@ use warpui::{
         components::{UiComponent, UiComponentStyles},
     },
     Action, AppContext, Element, Entity, EventContext, SingletonEntity, TypedActionView, View,
-    ViewContext,
-};
 
 use crate::{appearance::Appearance, ui_components::icons::Icon};
 use pathfinder_geometry::vector::Vector2F;

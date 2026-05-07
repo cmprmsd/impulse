@@ -8,10 +8,6 @@ use crate::{
     ai::blocklist::block::view_impl::{
         common::render_user_avatar, CONTENT_HORIZONTAL_PADDING, CONTENT_ITEM_VERTICAL_MARGIN,
     },
-    appearance::Appearance,
-    ui_components::{blended_colors, icons::Icon},
-    view_components::action_button::{ActionButton, ButtonSize, NakedTheme},
-};
 
 /// Renders a pending user query block with dimmed text and a "Queued" badge.
 /// Displayed when a follow-up prompt is queued via `/fork-and-compact <prompt>`,

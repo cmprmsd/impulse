@@ -7,8 +7,6 @@ use crate::{
         find::{FindConfig, RegexDFAs},
         index::Point,
     },
-    view_components::find::FindDirection,
-};
 
 use super::FindOptions;
 

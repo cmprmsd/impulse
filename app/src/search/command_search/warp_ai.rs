@@ -18,12 +18,6 @@ use crate::{
         result_renderer::ItemHighlightState,
         workflows::fuzzy_match::FuzzyMatchWorkflowResult,
     },
-    server::server_api::ai::AIClient,
-    themes::theme::Blend,
-    ui_components::icons::Icon as UIIcon,
-    util::color::{ContrastingColor, MinimumAllowedContrast},
-    workflows::{AIWorkflowOrigin, WorkflowSource, WorkflowType},
-};
 
 use async_trait::async_trait;
 use itertools::Itertools;

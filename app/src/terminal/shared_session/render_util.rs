@@ -41,8 +41,6 @@ pub fn non_hoverable_participant_avatar(
     let background = if is_muted {
         MUTED_PARTICIPANT_COLOR
     } else {
-        participant_color
-    };
     let border_color = if is_muted {
         MUTED_AVATAR_BORDER_COLOR.into()
     } else if image_url.is_none() {

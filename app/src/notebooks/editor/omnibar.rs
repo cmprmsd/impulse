@@ -8,9 +8,6 @@ use warp_editor::{
         BlockType as ContentBlockType, BufferBlockStyle, BufferTextStyle, TextStyles,
         TextStylesWithMetadata,
     },
-    model::RichTextEditorModel,
-    render::model::RenderState,
-};
 use warpui::{
     accessibility::{AccessibilityContent, ActionAccessibilityContent, WarpA11yRole},
     elements::{

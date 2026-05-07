@@ -8,8 +8,6 @@ use warpui::elements::{
 use warpui::ui_components::components::UiComponent;
 use warpui::{
     AppContext, Element, Entity, EventContext, SingletonEntity, TypedActionView, View, ViewContext,
-    ViewHandle,
-};
 
 use crate::report_if_error;
 use crate::Appearance;

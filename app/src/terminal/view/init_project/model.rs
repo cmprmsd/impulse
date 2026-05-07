@@ -15,8 +15,6 @@ use crate::{
         InitActionResult, LanguageServersResult, ProjectScopedRulesResult, FILES_TO_CHECK,
         LINKABLE_FILES,
     },
-    workspaces::user_workspaces::UserWorkspaces,
-};
 
 const INIT_STEP_COUNT: usize = enum_iterator::cardinality::<InitStepKind>();
 

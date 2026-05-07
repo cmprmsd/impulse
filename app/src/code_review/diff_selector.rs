@@ -18,8 +18,6 @@ use warpui::{
         components::{Coords, UiComponent, UiComponentStyles},
     },
     AppContext, Entity, FocusContext, SingletonEntity as _, TypedActionView, View, ViewContext,
-    ViewHandle,
-};
 
 use crate::{
     appearance::Appearance,
@@ -27,8 +25,6 @@ use crate::{
         diff_menu::{CodeReviewDiffMenu, CodeReviewDiffMenuEvent},
         diff_state::DiffMode,
     },
-    ui_components::icons::Icon,
-};
 
 /// A single selectable target in the diff selector menu.
 #[derive(Debug, Clone)]

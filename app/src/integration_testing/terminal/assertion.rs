@@ -27,8 +27,6 @@ use crate::{
         view::TerminalViewState,
         History,
     },
-    workspace::{ActiveSession, Workspace},
-};
 
 use super::util::ExpectedOutput;
 

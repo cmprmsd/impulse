@@ -29,8 +29,6 @@ use warp_util::user_input::UserInput;
 use warpui::event::KeyState;
 use warpui::text_selection_utils::{
     calculate_tick_width, create_newline_tick_rect, selection_crosses_newline_row_based,
-    NewlineTickParams,
-};
 use warpui::ViewHandle;
 use warpui::{event::ModifiersState, text_layout::ComputeBaselinePositionArgs};
 
@@ -40,10 +38,6 @@ use smallvec::SmallVec;
 use std::collections::HashMap;
 use std::{
     cmp, mem,
-    ops::Range,
-    sync::{Arc, Mutex},
-    time::Duration,
-};
 use warpui::{
     elements::{
         AfterLayoutContext, CornerRadius, Element, Event, EventContext, LayoutContext,

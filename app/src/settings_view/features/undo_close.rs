@@ -21,8 +21,6 @@ use crate::{
         features_page::render_group,
         settings_page::{render_body_item, LocalOnlyIconState, ToggleState},
     },
-    undo_close::{settings::UndoCloseEnabled, UndoCloseSettings},
-};
 
 #[derive(Debug, Clone, Copy)]
 pub enum Action {

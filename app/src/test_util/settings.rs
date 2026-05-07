@@ -33,11 +33,6 @@ pub fn initialize_settings_for_tests_with_mode(
             shared_session::settings::SharedSessionSettings, warpify::settings::WarpifySettings,
             BlockListSettings,
         },
-        undo_close::UndoCloseSettings,
-        user_config::WarpConfig,
-        window_settings::WindowSettings,
-        workspace::tab_settings::TabSettings,
-    };
     use warp_core::{execution_mode::AppExecutionMode, semantic_selection::SemanticSelection};
     app.add_singleton_model(|ctx| AppExecutionMode::new(mode, is_sandboxed, ctx));
 

@@ -5,12 +5,6 @@ use warpui::{
         Container, CrossAxisAlignment, Flex, Hoverable, MainAxisAlignment, MouseStateHandle,
         ParentElement,
     },
-    fonts,
-    platform::Cursor,
-    ui_components::components::UiComponent as _,
-    units::{IntoPixels, Pixels},
-    Element,
-};
 
 use crate::{
     appearance::Appearance,

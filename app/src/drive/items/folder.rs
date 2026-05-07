@@ -8,9 +8,6 @@ use crate::{
         cloud_object_styling::warp_drive_icon_color, folders::CloudFolder, index::DriveIndexAction,
         CloudObjectTypeAndId, DriveObjectType,
     },
-    themes::theme::Fill,
-    ui_components::icons::Icon,
-};
 
 use super::{WarpDriveItem, WarpDriveItemId};
 

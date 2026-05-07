@@ -17,13 +17,6 @@ use crate::{
         command_palette::{self},
         command_search::view::CommandSearchView,
     },
-    settings_view::keybindings::KeybindingsView,
-    terminal::{input::Input, TerminalView},
-    themes::theme_chooser::ThemeChooser,
-    view_components::find::Find,
-    workflows::{workflow_view::WorkflowView, CategoriesView},
-    workspace::Workspace,
-};
 use warpui::Entity;
 use warpui::{async_assert, integration::AssertionCallback, App, View, ViewHandle, WindowId};
 

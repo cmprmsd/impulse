@@ -12,8 +12,6 @@ use crate::{
 
 use super::{
     current_prompt::CurrentPrompt, prompt_snapshot::PromptSnapshot, ChipResult, ChipValue,
-    ContextChipKind,
-};
 
 /// The type of warp prompt being used
 #[derive(Clone)]

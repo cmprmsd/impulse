@@ -12,9 +12,6 @@ use crate::{
         document::ai_document_model::{AIDocumentModel, AIDocumentVersion},
         execution_profiles::profiles::AIExecutionProfilesModel,
     },
-    notebooks::editor::model::FileLinkResolutionContext,
-    terminal::model::session::active_session::ActiveSession,
-};
 
 use super::{ActionExecution, AnyActionExecution, ExecuteActionInput, PreprocessActionInput};
 

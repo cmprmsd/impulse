@@ -9,8 +9,6 @@ use warpui::{
 
 use crate::{
     integration_testing::step::new_step_with_default_assertions, settings::CodeSettings,
-    workspace::ActiveSession,
-};
 
 const SYNC_DEFAULT_TIMEOUT: Duration = Duration::from_secs(15 * 60);
 const CWD_DATA_KEY: &str = "cwd";

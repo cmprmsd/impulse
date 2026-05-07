@@ -2,8 +2,6 @@ use super::WorkspaceAction;
 use crate::pane_group::TerminalPaneId;
 use crate::workspace::tab_settings::{
     VerticalTabsDisplayGranularity, VerticalTabsPrimaryInfo, VerticalTabsTabItemMode,
-    VerticalTabsViewMode,
-};
 use crate::workspace::PaneViewLocator;
 use warpui::EntityId;
 

@@ -42,9 +42,6 @@ use crate::ai::{
         AIIdentifiers, EntrypointType, FinishedAIAgentOutput, RenderableAIError, RequestCost,
         RequestMetadata, StaticQueryType, UserQueryMode,
     },
-    llms::LLMPreferences,
-    AIRequestUsageModel,
-};
 use crate::features::FeatureFlag;
 use crate::global_resource_handles::GlobalResourceHandlesProvider;
 use crate::network::NetworkStatus;

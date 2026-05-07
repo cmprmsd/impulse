@@ -11,8 +11,6 @@ use warpui::fonts::FontInfo;
 
 use super::config::{
     calculate_accent_color, Config, ConfigError, ImportableSetting, ParseableConfig, SettingType,
-    ThemeType,
-};
 use pathfinder_color::ColorU;
 
 type AlacrittyColor = String;

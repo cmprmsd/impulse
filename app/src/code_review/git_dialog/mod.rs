@@ -25,8 +25,6 @@ use warpui::{
     platform::Cursor,
     ui_components::components::{Coords, UiComponent, UiComponentStyles},
     AppContext, Entity, FocusContext, SingletonEntity, TypedActionView, View, ViewContext,
-    ViewHandle,
-};
 
 #[cfg(feature = "local_tty")]
 use crate::terminal::local_shell::LocalShellState;
@@ -43,9 +41,6 @@ use crate::{
         action_button::{ActionButton, ButtonSize, NakedTheme, SecondaryTheme},
         DismissibleToast,
     },
-    workspace::ToastStack,
-    workspaces::user_workspaces::UserWorkspaces,
-};
 use warp_core::send_telemetry_from_ctx;
 
 pub(crate) mod commit;

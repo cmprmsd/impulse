@@ -12,8 +12,6 @@ use crate::{
             ActionExecution, AnyActionExecution, ExecuteActionInput, PreprocessActionInput,
         },
     },
-    AIAgentActionResultType,
-};
 
 pub struct PromptSuggestionExecutor {
     suggest_prompt_result_tx: Option<oneshot::Sender<SuggestPromptResult>>,

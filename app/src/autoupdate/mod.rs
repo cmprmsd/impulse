@@ -12,8 +12,6 @@ use crate::send_telemetry_sync_from_app_ctx;
 use crate::workspace::Workspace;
 use crate::{
     channel::Channel, report_if_error, send_telemetry_from_ctx, server::datetime_ext::DateTimeExt,
-    ChannelState,
-};
 use ::channel_versions::{ParsedVersion, VersionInfo};
 use anyhow::{anyhow, Context as _, Result};
 use chrono::{DateTime, FixedOffset, NaiveDate};

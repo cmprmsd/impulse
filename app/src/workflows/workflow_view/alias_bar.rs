@@ -19,8 +19,6 @@ use warpui::{
         components::{Coords, UiComponent, UiComponentStyles},
     },
     AppContext, Element, Entity, SingletonEntity as _, TypedActionView, View, ViewContext,
-    ViewHandle,
-};
 
 use crate::{
     cloud_object::{model::persistence::CloudModel, CloudObject},
@@ -28,12 +26,6 @@ use crate::{
         EditOrigin, EditorView, Event as EditorEvent, PropagateAndNoOpNavigationKeys,
         SingleLineEditorOptions, TextOptions, ValidInputType,
     },
-    send_telemetry_from_ctx,
-    server::{ids::SyncId, telemetry::TelemetrySpace},
-    ui_components::{buttons::icon_button, icons::Icon},
-    workflows::aliases::{WorkflowAlias, WorkflowAliases},
-    TelemetryEvent,
-};
 
 /// Width of the alias name editor.
 const ALIAS_EDITOR_WIDTH: f32 = 100.;

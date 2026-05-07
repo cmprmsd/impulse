@@ -11,8 +11,6 @@ use crate::{
         shell::ShellType,
         History,
     },
-    test_util::{Stub, VirtualFS},
-};
 use chrono::Local;
 use futures::future::join_all;
 use futures::Future;

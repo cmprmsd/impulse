@@ -16,10 +16,6 @@ use crate::ToastStack;
 use crate::ai::mcp::{
     // Import events for file-based manager and watcher conditionally
     // since their WASM variants don't export events.
-    file_based_manager::FileBasedMCPManagerEvent,
-    FileMCPWatcher,
-    FileMCPWatcherEvent,
-};
 
 use crate::{
     ai::mcp::{
@@ -46,12 +42,6 @@ use crate::{
         update_modal::{UpdateModalBody, UpdateModalBodyEvent},
         ServerCardItemId,
     },
-    ui_components::blended_colors,
-    view_components::action_button::{ActionButton, NakedTheme},
-    workflows::local_workflows::tail_command_for_shell,
-    workspace::Workspace,
-    workspaces::user_workspaces::UserWorkspaces,
-};
 use markdown_parser::{FormattedText, FormattedTextFragment, FormattedTextLine};
 use settings::ToggleableSetting as _;
 use std::cmp::Ordering;

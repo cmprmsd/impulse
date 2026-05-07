@@ -10,9 +10,6 @@ use crate::{
         cloud_objects::update_manager::UpdateManager,
         ids::{ClientId, SyncId},
     },
-    workflows::{manager::WorkflowOpenSource, workflow::Workflow, WorkflowViewMode},
-    workspaces::user_workspaces::UserWorkspaces,
-};
 
 use super::open_workflow_count;
 

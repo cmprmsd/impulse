@@ -15,8 +15,6 @@ use warpui::{
     text_layout::ClipConfig,
     ui_components::button::ButtonVariant,
     AppContext, Element, Entity, EventContext, SingletonEntity, TypedActionView, View, ViewContext,
-    ViewHandle,
-};
 
 use string_offset::CharOffset;
 

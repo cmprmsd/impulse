@@ -7,8 +7,6 @@ use warpui::{
     event::DispatchedEvent,
     geometry::{rect::RectF, vector::Vector2F},
     AfterLayoutContext, AppContext, Element, Event, EventContext, LayoutContext, PaintContext,
-    SizeConstraint,
-};
 
 use super::view::TerminalAction;
 

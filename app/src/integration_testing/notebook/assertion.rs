@@ -14,11 +14,6 @@ use crate::{
         terminal::util::ExpectedOutput,
         view_getters::{notebook_view, terminal_view},
     },
-    notebooks::{notebook::NotebookView, CloudNotebookModel, NotebookId},
-    pane_group::PaneGroup,
-    server::ids::SyncId,
-    settings::{CloudPreferenceModel, Preference},
-};
 
 /// Asserts that the notebook in the given pane has the expected Markdown content.
 pub fn assert_notebook_contents(

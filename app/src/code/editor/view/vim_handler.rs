@@ -17,9 +17,6 @@ use warp_editor::{
         AutoScrollBehavior, BufferEditAction, EditOrigin, SelectionOffsets,
         ToBufferCharOffset as _, VimInsertPoint,
     },
-    model::{CoreEditorModel, PlainTextEditorModel},
-    selection::{TextDirection, TextUnit},
-};
 use warpui::{text::point::Point, SingletonEntity, ViewContext};
 
 impl VimHandler for CodeEditorView {

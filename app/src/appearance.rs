@@ -25,9 +25,6 @@ use crate::{
         active_theme_kind, FontSettings, FontSettingsChangedEvent, MonospaceFontSize, Settings,
         ThemeSettings,
     },
-    themes::theme::{ThemeKind, WarpTheme},
-    ASSETS,
-};
 
 use anyhow::anyhow;
 

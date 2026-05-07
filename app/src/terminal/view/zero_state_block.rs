@@ -31,13 +31,6 @@ use crate::{
         settings::{TerminalSettings, TerminalSettingsChangedEvent},
         view::TerminalAction,
     },
-    ui_components::blended_colors,
-    util::bindings::keybinding_name_to_keystroke,
-    workspace::tab_settings::TabSettings,
-    workspace::tab_settings::TabSettingsChangedEvent,
-    workspace::view::TOGGLE_RIGHT_PANEL_BINDING_NAME,
-    WorkspaceAction,
-};
 
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub enum TerminalViewZeroStateAction {

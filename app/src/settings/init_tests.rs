@@ -11,8 +11,6 @@ use crate::terminal::session_settings::{NotificationsMode, NotificationsSettings
 
 use super::{
     migrate_native_settings_to_settings_file, needs_settings_file_migration,
-    SETTINGS_FILE_MIGRATION_COMPLETE_KEY,
-};
 
 // A minimal settings group with one public and one private setting, used to
 // verify that migration only copies public settings.

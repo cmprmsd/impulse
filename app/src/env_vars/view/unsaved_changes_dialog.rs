@@ -7,8 +7,6 @@ use warpui::{
         button::ButtonVariant,
         components::{Coords, UiComponent, UiComponentStyles},
     },
-    Element,
-};
 
 use crate::ui_components::dialog::{dialog_styles, Dialog};
 

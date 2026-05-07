@@ -16,8 +16,6 @@ use warpui::{
         toggle_menu::{ToggleMenuItem, ToggleMenuStateHandle},
     },
     AppContext, Element, Entity, FocusContext, SingletonEntity, TypedActionView, View, ViewContext,
-    ViewHandle,
-};
 
 use crate::{
     cloud_object::{model::persistence::CloudModel, Revision},
@@ -25,10 +23,6 @@ use crate::{
         EditorOptions, EditorView, Event, PropagateAndNoOpNavigationKeys, SingleLineEditorOptions,
         TextOptions,
     },
-    server::ids::{ClientId, SyncId},
-    ui_components::{buttons::icon_button, icons::Icon},
-    workflows::workflow_enum::EnumVariants,
-};
 
 const CONTAINER_PADDING: f32 = 16.;
 const CORE_WIDTH: f32 = 400.;

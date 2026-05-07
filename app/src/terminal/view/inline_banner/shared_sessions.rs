@@ -5,9 +5,6 @@ use warpui::{
         Border, ConstrainedBox, Container, CornerRadius, CrossAxisAlignment, Flex, MainAxisSize,
         ParentElement, Radius, Rect, Shrinkable, Text,
     },
-    fonts::{Properties, Weight},
-    Element,
-};
 
 use crate::appearance::Appearance;
 

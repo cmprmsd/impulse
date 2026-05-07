@@ -12,14 +12,6 @@ use crate::{
         },
         BackingView, Direction, PaneDragDropLocation, PaneId, TabBarHoverIndex,
     },
-    send_telemetry_from_ctx,
-    server::telemetry::{SharingDialogSource, TelemetryEvent},
-    settings::CodeSettings,
-    tab::tab_position_id,
-    terminal::view::TerminalAction,
-    view_components::{FeaturePopup, NewFeaturePopupEvent, NewFeaturePopupLabel},
-    workspace::{TabBarLocation, VerticalTabsPaneDropTargetData},
-};
 
 use crate::workspace::TabBarDropTargetData;
 

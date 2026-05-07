@@ -18,8 +18,6 @@ use warpui::elements::{
 use warpui::keymap::{FixedBinding, Keystroke};
 use warpui::{
     AppContext, Element, Entity, ModelHandle, SingletonEntity, TypedActionView, View, ViewContext,
-    ViewHandle,
-};
 
 use crate::ai::agent::icons;
 use crate::ai::agent::{AIAgentActionId, AIAgentActionResultType};

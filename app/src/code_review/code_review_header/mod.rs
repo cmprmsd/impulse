@@ -9,10 +9,6 @@ use crate::{
         code_review_view::{get_discard_button_disabled_tooltip, CodeReviewAction, LoadedState},
         diff_state::DiffStateModel,
     },
-    menu::Menu,
-    ui_components::icons::Icon,
-    view_components::action_button::ActionButton,
-};
 use pathfinder_geometry::vector::vec2f;
 use warp_core::features::FeatureFlag;
 use warpui::elements::{Hoverable, ParentElement};

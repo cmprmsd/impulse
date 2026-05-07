@@ -17,8 +17,6 @@ use crate::{
         blocklist::{BlocklistAIHistoryModel, BlocklistAIPermissions},
         paths::host_native_absolute_path,
     },
-    server::server_api::ServerApiProvider,
-};
 #[cfg(not(target_family = "wasm"))]
 use warpui::SingletonEntity;
 

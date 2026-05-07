@@ -16,13 +16,9 @@ use crate::{
         },
         paths::host_native_absolute_path,
     },
-    terminal::model::session::active_session::ActiveSession,
-};
 
 use super::{
     read_local_file_context, ActionExecution, AnyActionExecution, ExecuteActionInput,
-    PreprocessActionInput,
-};
 
 pub struct GetFilesExecutor {
     active_session: ModelHandle<ActiveSession>,

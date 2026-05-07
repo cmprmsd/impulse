@@ -13,17 +13,11 @@ use crate::{
         manager::{NotebookManager, NotebookSource},
         notebook::{NotebookEvent, NotebookView},
     },
-    server::ids::SyncId,
-    workflows::{WorkflowSelectionSource, WorkflowSource, WorkflowType},
-    workspaces::user_workspaces::UserWorkspaces,
-};
 
 use super::{
     super::{DefaultSessionModeBehavior, Direction},
     view::PaneView,
     DetachType, PaneConfiguration, PaneContent, PaneGroup, PaneId, ShareableLink,
-    ShareableLinkError,
-};
 
 pub struct NotebookPane {
     view: ViewHandle<PaneView<NotebookView>>,

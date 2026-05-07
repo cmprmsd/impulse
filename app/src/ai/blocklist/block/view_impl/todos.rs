@@ -28,9 +28,6 @@ use crate::{
             },
         },
     },
-    appearance::Appearance,
-    ui_components::{blended_colors, icons::Icon},
-};
 
 use super::WithContentItemSpacing;
 

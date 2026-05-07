@@ -10,8 +10,6 @@ fn diffset_has_higher_priority_tier() {
 
     let item = DiffSetSearchItem {
         diff_mode: DiffMode::Head,
-        match_result,
-    };
 
     assert_eq!(item.priority_tier(), 1);
 }

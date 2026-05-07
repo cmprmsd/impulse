@@ -28,8 +28,6 @@ use crate::{
         model::session::active_session::ActiveSession, model::session::Session, shell::ShellType,
         ShellLaunchData,
     },
-    TelemetryEvent,
-};
 
 use super::{
     get_server_output_id, is_file_path, is_git_repository, ActionExecution, AnyActionExecution,

@@ -494,26 +494,74 @@ If all seven pass, the fork is functional and Syncthing-ready.
   `crates/ai/`, and `crates/warp_files/` dropped its `Remote` backend.
   All non-app crates compile clean.
 
-  The **app crate (`warp`) does not yet compile** because the
-  `app/src/ai/agent/` subsystem is intrinsically built on the deleted
-  hosted-agent proto API and its types are referenced by ~140 files
-  throughout `app/src/ai/`. Replacing that subsystem with a local
-  agent loop is Phase 2 work; until that lands, the app crate stays
-  red.
+  The **app crate (`warp`) does not yet compile**. Two interleaved
+  problems remain:
+
+  1. ~409 files in `app/src/` had multi-line `use foo::bar::{ ... };`
+     blocks where the perl-pass that deleted cloud-crate `use`
+     statements removed only the first line, leaving an orphan
+     `};` and dangling identifier list. A follow-up python pass
+     auto-closed many of these but introduced its own breakage in
+     valid multi-line `use` blocks (mistakenly removing legitimate
+     `};` closers when the run-detector ran twice on shifted line
+     numbers). The end state still has unclosed-delimiter errors
+     surfacing one-at-a-time in `cargo check`.
+  2. The `app/src/ai/agent/` subsystem is intrinsically built on
+     the deleted hosted-agent proto API and its types are referenced
+     by ~140 files throughout `app/src/ai/`. Replacing that subsystem
+     with a local agent loop is Phase 2 work; until that lands, even
+     the syntactic errors won't translate into a working build.
+
+  Both problems are contained — the syntax breakage is mechanical
+  and grep'able; the agent rebuild is the planned Phase 2.
 - Phase 1 — not started.
 - Phase 2 — not started.
 - Phase 3 — not started.
 
 ### What's still needed for a clean Phase 0 compile
 
-The remaining surgery is in `app/src/ai/` (and its dependents):
+Two interleaved tracks. They can be tackled in parallel.
+
+**Track A — finish the mechanical syntax cleanup.**
+Hundreds of multi-line `use foo::bar::{ ... };` blocks across
+`app/src/` were partially mutated by the bulk-strip. The remaining
+breakage shows as:
+
+- `error: this file contains an unclosed delimiter` — the `};` was
+  deleted by the over-aggressive orphan-fix script; restore it.
+- `error: unexpected closing delimiter: }` — the `use foo::{`
+  opening line was deleted by the perl pass and the indented item
+  list + `};` survived; delete the orphan run.
+
+`cargo check -p warp` surfaces these one at a time; each fix is a
+few lines. Recommend writing a more conservative AST-level fixer
+(e.g. via `syn` or `rustfix`) before more handwork — the regex
+detectors in this commit's history were fragile.
+
+The known-broken files include (top of the list):
+`app/src/ai/agent/telemetry.rs`,
+`app/src/ai/agent_events/mod.rs`,
+`app/src/ai/ai_document_view.rs`,
+`app/src/ai/blocklist/history_model.rs`,
+`app/src/ai/blocklist/suggested_rule_modal.rs`,
+`app/src/ai/blocklist/suggestion_chip_view.rs`,
+`app/src/ai/mcp/templatable_manager/native.rs`,
+`app/src/ai_assistant/mod.rs`,
+`app/src/pane_group/mod.rs`,
+`app/src/persistence/mod.rs`,
+plus many under `app/src/ai/blocklist/`,
+`app/src/settings_view/`, `app/src/terminal/`, `app/src/workspace/`.
+Grep for `^use\b[^;]*\{[^}]*$` followed by no matching `};` to
+enumerate.
+
+**Track B — replace the cloud-agent subsystem.**
 
 - `app/src/ai/agent/mod.rs` (3,077 lines) defines types like
   `AIAgentExchange`, `AIAgent...`, `CancellationReason`,
   `MessageId`, `AIConversationId`, `ServerOutputId`,
-  `ServerConversationToken`, etc. that are referenced from ~140 other
-  files. The file itself is essentially a thin layer around the
-  proto API.
+  `ServerConversationToken`, etc. that are referenced from ~140
+  other files. The file itself is essentially a thin layer around
+  the proto API.
 - `app/src/ai/blocklist/history_model.rs` and related blocklist
   files reference `crate::ai::agent::api::*`, `task::*`, and
   `conversation::*` (all deleted).

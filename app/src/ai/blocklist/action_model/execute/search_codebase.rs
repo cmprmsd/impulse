@@ -18,16 +18,9 @@ use crate::{
             GetRelevantFilesController, GetRelevantFilesControllerEvent, GetRelevantFilesError,
         },
     },
-    features::FeatureFlag,
-    send_telemetry_from_ctx,
-    terminal::model::session::active_session::ActiveSession,
-    TelemetryEvent,
-};
 
 use super::{
     read_local_file_context, ActionExecution, AnyActionExecution, ExecuteActionInput,
-    PreprocessActionInput,
-};
 
 pub struct SearchCodebaseExecutor {
     active_session: ModelHandle<ActiveSession>,

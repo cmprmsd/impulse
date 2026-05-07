@@ -6,8 +6,6 @@ use crate::ai::{
         AIAgentAction, AIAgentActionType, DocumentContext, ReadDocumentsRequest,
         ReadDocumentsResult,
     },
-    document::ai_document_model::AIDocumentModel,
-};
 
 use super::{ActionExecution, AnyActionExecution, ExecuteActionInput, PreprocessActionInput};
 

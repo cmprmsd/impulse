@@ -22,8 +22,6 @@ use warpui::{
         components::{UiComponent, UiComponentStyles},
     },
     AppContext, Element, Entity, ModelHandle, SingletonEntity, TypedActionView, View, ViewContext,
-    ViewHandle,
-};
 
 #[cfg(feature = "local_fs")]
 use crate::notebooks::post_process_notebook;

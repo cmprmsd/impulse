@@ -18,14 +18,6 @@ use crate::{
         },
         harness_availability::HarnessAvailabilityModel,
     },
-    appearance::Appearance,
-    context_chips::spacing::{self},
-    editor::position_id_for_cursor,
-    features::FeatureFlag,
-    settings::InputModeSettings,
-    terminal::{settings::TerminalSettings, view::TerminalAction},
-    BlocklistAIHistoryModel,
-};
 use warp_core::settings::Setting;
 use warp_core::ui::theme::color::internal_colors;
 use warpui::elements::Expanded;

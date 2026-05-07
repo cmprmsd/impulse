@@ -17,8 +17,6 @@ use crate::{
         server_api::{ai::AIClient, ServerApi},
         telemetry::{TelemetryEvent, WarpAIRequestResult},
     },
-    workspaces::user_workspaces::UserWorkspaces,
-};
 
 use super::{
     execution_context::WarpAiExecutionContext,

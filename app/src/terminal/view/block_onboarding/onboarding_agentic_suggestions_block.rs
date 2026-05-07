@@ -1,8 +1,6 @@
 use crate::ai::blocklist::ai_brand_color;
 use crate::ai::blocklist::{
     BlocklistAIActionEvent, BlocklistAIActionModel, BlocklistAIHistoryEvent,
-    BlocklistAIHistoryModel,
-};
 use crate::terminal::event::BlockType;
 use crate::terminal::model::session::SessionId;
 use crate::terminal::model_events::{ModelEvent, ModelEventDispatcher};

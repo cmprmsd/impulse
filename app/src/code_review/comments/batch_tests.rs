@@ -5,8 +5,6 @@ use warpui::App;
 use crate::code::editor::line::EditorLineLocation;
 use crate::code_review::comments::{
     AttachedReviewComment, AttachedReviewCommentTarget, CommentOrigin, LineDiffContent,
-    ReviewCommentBatch,
-};
 
 fn line_comment(file_path: &str, line_number: usize, content: &str) -> AttachedReviewComment {
     AttachedReviewComment {

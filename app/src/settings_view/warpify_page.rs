@@ -28,10 +28,6 @@ use crate::ui_components::blended_colors;
 use crate::{
     appearance::Appearance,
     report_if_error, send_telemetry_from_ctx,
-    server::telemetry::TelemetryEvent,
-    terminal::warpify::settings::WarpifySettings,
-    view_components::{SubmittableTextInput, SubmittableTextInputEvent},
-};
 
 use super::settings_page::{
     render_body_item, render_dropdown_item, render_page_title, AdditionalInfo, Category,

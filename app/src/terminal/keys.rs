@@ -8,8 +8,6 @@ use crate::{
         SET_INPUT_MODE_AGENT_ACTION_NAME, SET_INPUT_MODE_TERMINAL_ACTION_NAME,
         SET_INPUT_MODE_UNLOCKED_AGENT_ACTION_NAME, SET_INPUT_MODE_UNLOCKED_TERMINAL_ACTION_NAME,
     },
-    util::bindings::{custom_tag_to_keystroke, keybinding_name_to_display_string, CustomAction},
-};
 
 /// Cache of keybindings used in terminal.
 pub struct TerminalKeybindings {

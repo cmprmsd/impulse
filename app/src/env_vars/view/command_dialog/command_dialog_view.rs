@@ -10,13 +10,9 @@ use warpui::{
         components::{UiComponent, UiComponentStyles},
     },
     AppContext, Element, Entity, FocusContext, SingletonEntity, TypedActionView, View, ViewContext,
-    ViewHandle,
-};
 
 use crate::editor::{
     EditorOptions, EditorView, Event, PropagateAndNoOpNavigationKeys, SingleLineEditorOptions,
-    TextOptions,
-};
 
 use super::EnvVarSecretCommand;
 

@@ -46,8 +46,6 @@ fn render_pill_toggle(is_on: bool, theme: &WarpTheme) -> Box<dyn Element> {
     let alignment = if is_on {
         MainAxisAlignment::End
     } else {
-        MainAxisAlignment::Start
-    };
     let switch_inner = Flex::row()
         .with_main_axis_alignment(alignment)
         .with_main_axis_size(MainAxisSize::Max)

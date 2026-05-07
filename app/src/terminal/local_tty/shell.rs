@@ -18,8 +18,6 @@ use crate::{
         shell::{ShellName, ShellType},
         ShellLaunchData,
     },
-    util::path::resolve_executable,
-};
 
 #[cfg(windows)]
 use crate::util::windows::{powershell_5_path, powershell_7_path, wsl_path};

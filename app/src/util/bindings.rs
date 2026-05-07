@@ -20,8 +20,6 @@ use warpui::{
         BindingDescription, BindingLens, CustomTag, DescriptionContext, EditableBindingLens,
         Keystroke, Trigger,
     },
-    Action,
-};
 use warpui::{AppContext, SingletonEntity};
 
 pub const MAC_MENUS_CONTEXT: DescriptionContext = DescriptionContext::Custom("mac_menus");

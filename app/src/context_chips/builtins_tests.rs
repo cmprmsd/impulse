@@ -9,8 +9,6 @@ use crate::{
             SessionInfo,
         },
     },
-    terminal::shell::ShellType,
-};
 
 #[test]
 fn test_working_directory() {

@@ -11,8 +11,6 @@ use warpui::{
         components::{UiComponent, UiComponentStyles},
     },
     AppContext, Element, Entity, FocusContext, SingletonEntity, TypedActionView, View, ViewContext,
-    ViewHandle,
-};
 
 /// This View is a text that can be hovered over. Upon clicking,
 /// the text becomes a text input that can be submitted

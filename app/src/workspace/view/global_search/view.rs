@@ -39,8 +39,6 @@ use warpui::elements::{
     Highlight, Hoverable, MainAxisAlignment, MainAxisSize, MouseStateHandle, OffsetPositioning,
     Padding, ParentAnchor, ParentElement, ParentOffsetBounds, Radius, ScrollStateHandle,
     Scrollable, ScrollableElement, ScrollbarWidth, Shrinkable, Stack, Text, UniformList,
-    UniformListState,
-};
 use warpui::fonts::{Properties, Weight};
 use warpui::keymap::FixedBinding;
 use warpui::platform::Cursor;

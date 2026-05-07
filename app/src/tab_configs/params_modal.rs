@@ -15,8 +15,6 @@ use warpui::{
     platform::Cursor,
     ui_components::components::UiComponent,
     AppContext, Element, Entity, FocusContext, SingletonEntity, TypedActionView, View, ViewContext,
-    ViewHandle,
-};
 
 use crate::{
     appearance::Appearance,

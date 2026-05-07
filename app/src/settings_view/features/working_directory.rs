@@ -13,8 +13,6 @@ use crate::{
     server::telemetry::TelemetryEvent,
     settings_view::features_page::render_group,
     terminal::session_settings::*,
-    view_components::{dropdown::TOP_MENU_BAR_HEIGHT, Dropdown, DropdownItem},
-};
 
 #[derive(Clone, Debug)]
 #[allow(clippy::enum_variant_names)]

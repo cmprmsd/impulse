@@ -6,8 +6,6 @@ use warpui::{
     elements::ChildView,
     ui_components::components::{Coords, UiComponent, UiComponentStyles},
     AppContext, Element, Entity, FocusContext, SingletonEntity, TypedActionView, View, ViewContext,
-    ViewHandle,
-};
 
 use crate::{
     cloud_object::model::persistence::CloudModel,
@@ -16,10 +14,6 @@ use crate::{
         EditOrigin, EditorView, Event as EditorEvent, PropagateAndNoOpNavigationKeys,
         SingleLineEditorOptions, TextOptions,
     },
-    server::ids::SyncId,
-    view_components::{Dropdown, DropdownItem},
-    workflows::{workflow::ArgumentType, workflow_enum::EnumVariants},
-};
 
 /// Width of the argument editor in alias mode.
 pub const ALIAS_ARGUMENT_EDITOR_WIDTH: f32 = 300.;

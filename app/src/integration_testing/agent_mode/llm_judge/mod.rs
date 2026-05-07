@@ -4,8 +4,6 @@ use anyhow::Result;
 use llm_generate::LLMGenerateRequest;
 use reqwest::blocking::Client;
 use serde::Deserialize;
-    apply_file_diffs_result::success::UpdatedFileContent, message, Message,
-};
 
 use crate::ai::agent::conversation::AIConversation;
 

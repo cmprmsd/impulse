@@ -22,8 +22,6 @@ use crate::workspace::header_toolbar_item::HeaderToolbarItemKind;
 use crate::workspace::tab_settings::TabSettings;
 use crate::workspace::view::conversation_list::item::{
     render_item, render_static_item, ItemProps, ItemState, OverflowMenuDisplay, StaticItemProps,
-    STATIC_ITEM_MIN_HEIGHT,
-};
 use crate::workspace::ToastStack;
 use crate::workspace::WorkspaceAction;
 use warp_core::features::FeatureFlag;

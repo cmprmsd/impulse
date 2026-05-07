@@ -12,8 +12,6 @@ use warpui::{
         ParentElement, Radius, Text,
     },
     AppContext, Element, Entity, FocusContext, SingletonEntity, TypedActionView, View, ViewContext,
-    ViewHandle,
-};
 
 const GOTO_LINE_WIDTH: f32 = 300.;
 const GOTO_LINE_LABEL_FONT_SIZE: f32 = 12.;

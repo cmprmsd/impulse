@@ -15,8 +15,6 @@ use crate::terminal::{
         index::Point,
         terminal_model::{BlockIndex, BlockSortDirection},
     },
-    GridType,
-};
 use crate::view_components::find::FindDirection;
 
 use super::{

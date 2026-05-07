@@ -16,12 +16,6 @@ use crate::{
         safe_mode_settings::get_secret_obfuscation_mode,
         TerminalModel,
     },
-    themes::theme::WarpTheme,
-    ui_components::icons::Icon,
-    util::bindings::CustomAction,
-    view_components::ToastFlavor,
-    workspace::WorkspaceAction,
-};
 
 use super::grid_renderer::CellGlyphCache;
 use super::model::grid::RespectDisplayedOutput;

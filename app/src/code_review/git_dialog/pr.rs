@@ -30,9 +30,6 @@ use crate::{
         create_pr, get_branch_commit_messages, get_branch_diff_entries, get_diff_for_pr,
         FileChangeEntry, PrInfo,
     },
-    view_components::{DismissibleToast, ToastLink},
-    workspace::ToastStack,
-};
 use warp_core::send_telemetry_from_ctx;
 
 /// PR-mode sub-actions, dispatched wrapped in `GitDialogAction::Pr`.

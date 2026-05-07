@@ -33,8 +33,6 @@ use crate::{
         action_button::{ActionButton, ButtonSize, PrimaryTheme, SecondaryTheme},
         DismissibleToast,
     },
-    workspace::ToastStack,
-};
 
 #[cfg(all(feature = "local_fs", not(target_family = "wasm")))]
 use git2::Repository as GitRepository;

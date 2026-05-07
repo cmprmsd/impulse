@@ -6,8 +6,6 @@ use warp_core::ui::theme::{AnsiColorIdentifier, Fill as ThemeFill};
 use warpui::elements::{
     Border, ChildAnchor, ConstrainedBox, Container, CornerRadius, Element, Hoverable,
     MouseStateHandle, OffsetPositioning, ParentAnchor, ParentElement, ParentOffsetBounds, Radius,
-    Stack,
-};
 use warpui::platform::Cursor;
 
 use crate::appearance::Appearance;
@@ -42,8 +40,6 @@ pub(crate) fn render_color_dot(
         let overlay: Option<Box<dyn Element>> = if is_no_color {
             Some(Icon::SlashCircle.to_warpui_icon(foreground_color).finish())
         } else {
-            None
-        };
 
         let dot_element = render_dot_element(dot_color, is_selected, ring_color, overlay);
 

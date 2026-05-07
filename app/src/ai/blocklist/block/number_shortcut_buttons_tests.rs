@@ -8,8 +8,6 @@ use warpui::{
     },
     platform::WindowStyle,
     App, Entity, Event, Presenter, TypedActionView, View, ViewContext, ViewHandle, WindowId,
-    WindowInvalidation,
-};
 
 use super::*;
 

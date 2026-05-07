@@ -8,11 +8,7 @@ use crate::{
     terminal::view::block_onboarding::onboarding_agentic_suggestions_block::OnboardingChipType,
 };
 
-use super::conversation::AIConversationId;
-use super::{
-    AIAgentCitation, AIAgentExchangeId, EntrypointType, PassiveSuggestionTriggerType,
-    ServerOutputId,
-};
+use super::AIAgentCitation;
 
 pub trait ForTelemetry {
     type Output;

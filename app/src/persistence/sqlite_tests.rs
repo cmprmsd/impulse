@@ -7,15 +7,6 @@ use crate::{
         AppState, CodePaneSnapShot, CodePaneTabSnapshot, LeafContents, LeafSnapshot,
         PaneNodeSnapshot, TabSnapshot, TerminalPaneSnapshot, WindowSnapshot,
     },
-    cloud_object::{CloudObjectPermissions, Owner},
-    code::editor_management::CodeSource,
-    notebooks::{CloudNotebook, CloudNotebookModel},
-    persistence::{model::ObjectPermissions, BlockCompleted, ModelEvent},
-    server::ids::ClientId,
-    tab::SelectedTabColor,
-    terminal::model::block::SerializedBlock,
-    terminal::ShellLaunchData,
-};
 
 use super::{
     decode_path, deduplicate_events, encode_path, read_sqlite_data, save_app_state, setup_database,

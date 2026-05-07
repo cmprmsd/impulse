@@ -1,16 +1,11 @@
 use super::dropdown::{
     DropdownAction, DropdownItem, MenuHeaderTextFormatter, DROPDOWN_PADDING, TOP_MENU_BAR_HEIGHT,
-    TOP_MENU_BAR_MAX_WIDTH,
-};
 use crate::{
     appearance::Appearance,
     editor::{
         EditorView, Event as EditorEvent, PropagateAndNoOpNavigationKeys, SingleLineEditorOptions,
         TextOptions,
     },
-    menu::{Event as MenuEvent, Menu, MenuItem, MenuVariant},
-    ui_components::icons,
-};
 use warp_editor::editor::NavigationKey;
 use warpui::{
     elements::{

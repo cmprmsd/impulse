@@ -13,8 +13,6 @@ use crate::{
             ObfuscateSecrets,
         },
     },
-    util::color::OPAQUE,
-};
 
 use super::{BLOCK_FILTER_MATCH_COLOR, FOCUSED_MATCH_COLOR, MATCH_COLOR, URL_COLOR};
 

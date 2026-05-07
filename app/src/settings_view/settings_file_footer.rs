@@ -18,8 +18,6 @@ use warpui::elements::{
     Border, Clipped, ClippedScrollStateHandle, ClippedScrollable, ConstrainedBox, Container,
     CornerRadius, CrossAxisAlignment, Element, Empty, Expanded, Flex, Highlight, Hoverable,
     MainAxisAlignment, MainAxisSize, MouseStateHandle, ParentElement, Radius, ScrollbarWidth, Text,
-    Wrap,
-};
 use warpui::fonts::{FamilyId, Properties, Weight};
 use warpui::platform::Cursor;
 

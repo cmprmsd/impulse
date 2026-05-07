@@ -13,9 +13,6 @@ use crate::{
         model::TerminalModel,
         view::{TerminalAction, PADDING_LEFT},
     },
-    ui_components::icons::Icon,
-    workspaces::user_workspaces::UserWorkspaces,
-};
 use pathfinder_geometry::vector::vec2f;
 use vim::vim::{VimMode, VimState};
 use warp_completer::completer::Description;

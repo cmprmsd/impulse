@@ -14,8 +14,6 @@ use crate::terminal::model::kitty::{KittyAction, KittyChunk, KittyResponse};
 use crate::terminal::model::terminal_model::TmuxInstallationState;
 use crate::terminal::model::{
     completions::ShellData as CompletionsShellData, index::VisibleRow, selection::ScrollDelta,
-    tmux::ControlModeEvent,
-};
 
 /// Trait to be implemented by model objects that handle pty output. The
 /// ansi::Performer (our pty output parser) delegates handling of specific

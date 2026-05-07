@@ -22,8 +22,6 @@ use warp_editor::{
             CODE_BLOCK_SHELL_DISPLAY_LANG,
         },
     },
-    editor::RunnableCommandModel,
-};
 
 use markdown_parser::markdown_parser::CODE_BLOCK_DEFAULT_MARKDOWN_LANG;
 use warp_util::user_input::UserInput;

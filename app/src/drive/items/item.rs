@@ -22,9 +22,6 @@ use crate::{
         model::{persistence::CloudModel, view::CloudViewModel},
         CloudObject, CloudObjectMetadataExt, Owner,
     },
-    drive::CloudObjectTypeAndId,
-    workspaces::{user_profiles::UserProfiles, user_workspaces::UserWorkspaces},
-};
 
 use crate::workspace::header_toolbar_item::HeaderToolbarItemKind;
 use crate::workspace::tab_settings::TabSettings;

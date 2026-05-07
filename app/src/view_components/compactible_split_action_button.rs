@@ -11,8 +11,6 @@ use crate::{
         ActionButton, ButtonSize, KeystrokeSource, NakedTheme, PrimaryRightBiasedTheme,
         PrimaryTheme,
     },
-    view_components::compactible_action_button::CompactibleActionButton,
-};
 
 /// A split button composed of a primary CompactibleActionButton and a trailing
 /// icon-only menu button (chevron-down). The menu button may be used as an anchor

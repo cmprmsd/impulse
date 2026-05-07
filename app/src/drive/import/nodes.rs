@@ -20,10 +20,6 @@ use warpui::{
         Align, ConstrainedBox, Container, CornerRadius, CrossAxisAlignment, Flex, Hoverable,
         MouseStateHandle, ParentElement, Radius, Shrinkable,
     },
-    platform::Cursor,
-    ui_components::components::{UiComponent, UiComponentStyles},
-    Element,
-};
 
 use crate::{
     appearance::Appearance, notebooks::file::is_markdown_file, server::ids::ClientId,

@@ -9,8 +9,6 @@ use crate::input::Vector2F;
 use crate::pane_group::focus_state::PaneFocusHandle;
 use crate::pane_group::pane::view::header::components::{
     render_pane_header_buttons, render_pane_header_title_text, render_three_column_header,
-    CenteredHeaderEdgeWidth,
-};
 use crate::pane_group::pane::view::header::render_pane_header_draggable;
 use crate::pane_group::{CodePane, PaneConfigurationEvent, PaneDragDropLocation};
 use crate::quit_warning::UnsavedStateSummary;

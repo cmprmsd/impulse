@@ -3,8 +3,6 @@ use crate::terminal::model::session::Sessions;
 use crate::terminal::event::{
     AfterBlockCompletedEvent, BlockCompletedEvent, BlockMetadataReceivedEvent, Event,
     ExecutedExecutorCommandEvent, InitSshEvent, InitSubshellEvent, SourcedRcFileInSubshellEvent,
-    TerminalMode,
-};
 
 use crate::terminal::ClipboardType;
 use async_channel::Receiver;

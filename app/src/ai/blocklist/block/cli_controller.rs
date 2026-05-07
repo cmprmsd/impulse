@@ -26,8 +26,6 @@ use crate::{
         model_events::{ModelEvent, ModelEventDispatcher},
         TerminalModel,
     },
-    BlocklistAIHistoryModel,
-};
 
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
 pub enum UserTakeOverReason {

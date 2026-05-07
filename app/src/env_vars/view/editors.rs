@@ -20,8 +20,6 @@ use crate::{
         },
         EnvVarValue,
     },
-    Appearance,
-};
 
 // Metadata labels (name and description)
 const LABEL_FONT_SIZE: f32 = 12.;

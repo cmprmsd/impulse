@@ -3,8 +3,6 @@ use crate::{
         AISettings, AISettingsChangedEvent, InputSettings, InputSettingsChangedEvent,
         WarpPromptSeparator,
     },
-    terminal::session_settings::{SessionSettings, SessionSettingsChangedEvent},
-};
 
 pub use super::ContextChipKind;
 use itertools::Itertools;

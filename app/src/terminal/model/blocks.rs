@@ -11,8 +11,6 @@ use crate::terminal::model::ansi;
 use crate::terminal::model::ansi::{
     Attr, BootstrappedValue, CharsetIndex, ClearMode, CommandFinishedValue, CursorShape,
     CursorStyle, LineClearMode, Mode, PrecmdValue, PreexecValue, Processor, StandardCharset,
-    TabulationClearMode,
-};
 use crate::terminal::model::block::{AgentViewVisibility, Block, SerializedBlock};
 use crate::terminal::model::bootstrap::BootstrapStage;
 use crate::terminal::model::index::{Point, VisibleRow};
@@ -24,8 +22,6 @@ use crate::terminal::{
         BlockType, Event as TerminalEvent,
         Event::{AfterBlockCompleted, TerminalClear},
     },
-    view::{InlineBannerId, InlineBannerItem},
-};
 use crate::terminal::{BlockPadding, ShellHost, SizeInfo, SizeUpdate};
 use anyhow::anyhow;
 use chrono::{DateTime, Local};

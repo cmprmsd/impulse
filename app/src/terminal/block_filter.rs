@@ -23,11 +23,6 @@ use crate::{
         EditOrigin, EditorView, Event as EditorEvent, PropagateAndNoOpNavigationKeys,
         SingleLineEditorOptions, TextOptions, ValidInputType,
     },
-    send_telemetry_from_ctx,
-    server::telemetry::TelemetryEvent,
-    themes::theme::Fill,
-    ui_components::{blended_colors, icons::Icon},
-};
 
 use super::model::find::{FindConfig, RegexDFAs};
 

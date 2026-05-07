@@ -9,8 +9,6 @@ use crate::{
         GenericCloudObject, GenericStringObjectFormat, GenericStringObjectUniqueKey,
         JsonObjectType, Revision, ServerCloudObject,
     },
-    drive::CloudObjectTypeAndId,
-};
 use serde::{Deserialize, Serialize};
 use warp_core::ui::appearance::Appearance;
 

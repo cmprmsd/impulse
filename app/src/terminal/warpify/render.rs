@@ -9,8 +9,6 @@ use warp_core::ui::theme::{Fill, WarpTheme};
 use warpui::elements::{
     Align, ConstrainedBox, Container, CornerRadius, CrossAxisAlignment, Flex, FormattedTextElement,
     HighlightedHyperlink, Icon, MouseStateHandle, ParentElement, Radius, Rect, Shrinkable, Stack,
-    Text,
-};
 use warpui::fonts::{FamilyId, Properties, Weight};
 use warpui::ui_components::components::UiComponent as _;
 use warpui::ui_components::components::UiComponentStyles;

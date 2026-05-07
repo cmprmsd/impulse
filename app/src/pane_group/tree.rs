@@ -6,8 +6,6 @@ use std::{fmt, iter, mem};
 use warpui::elements::{
     ChildAnchor, Container, DispatchEventResult, Empty, OffsetPositioning, ParentAnchor,
     ParentOffsetBounds, PositionedElementAnchor, PositionedElementOffsetBounds, SavePosition,
-    Stack,
-};
 use warpui::AppContext;
 use warpui::{
     elements::{

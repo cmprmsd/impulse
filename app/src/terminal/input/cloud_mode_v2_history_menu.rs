@@ -9,8 +9,6 @@ use warpui::elements::{
 };
 use warpui::{
     AppContext, Element, Entity, EntityId, ModelHandle, SingletonEntity, View, ViewContext,
-    ViewHandle,
-};
 
 use crate::ai::blocklist::agent_view::AgentViewController;
 use crate::search::data_source::QueryFilter;

@@ -17,8 +17,6 @@ use watcher::HomeDirectoryWatcherEvent;
 
 use crate::ai::mcp::{
     home_config_file_path, parsing::normalize_codex_toml_to_json, MCPProvider,
-    ParsedTemplatableMCPServerResult,
-};
 use crate::warp_managed_paths_watcher::{
     warp_managed_mcp_config_path, WarpManagedPathsWatcher, WarpManagedPathsWatcherEvent,
 };

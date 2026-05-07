@@ -11,8 +11,6 @@ use warpui::keymap::Keystroke;
 use crate::ai::document::ai_document_model::AIDocumentVersion;
 use crate::terminal::input::inline_menu::{
     default_navigation_message_items, InlineMenuAction, InlineMenuMessageArgs, InlineMenuRowAction,
-    InlineMenuType,
-};
 use crate::terminal::input::message_bar::{Message, MessageItem};
 
 /// Action emitted when a plan is selected from the inline plan menu.

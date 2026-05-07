@@ -5,8 +5,6 @@ use crate::ai::{
         conversation::AIConversationId, AIAgentInput, AIAgentOutput, RenderableAIError,
         ServerOutputId, Shared,
     },
-    llms::LLMId,
-};
 
 use super::{super::AIBlock, AIBlockModel, AIBlockOutputStatus, OutputStatusUpdateCallback};
 

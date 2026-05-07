@@ -9,8 +9,6 @@ use crate::{
     terminal::profile_model_selector::{
         calculate_max_profile_name_width, calculate_scaled_font_size,
     },
-    terminal::view::ambient_agent::AmbientAgentViewModel,
-};
 use pathfinder_color::ColorU;
 #[cfg(not(target_family = "wasm"))]
 use settings::Setting as _;
@@ -35,8 +33,6 @@ use warp_core::ui::{
         contrast::{foreground_color_with_minimum_contrast, MinimumAllowedContrast},
         Opacity, Rgb,
     },
-    theme,
-};
 
 use std::boxed::Box;
 use warpui::{

@@ -1,8 +1,6 @@
 use super::new_session_option::NewSessionOption;
 use crate::{
     appearance::Appearance, search::command_palette::render_util::render_search_item_icon,
-    ui_components::icons::Icon,
-};
 use fuzzy_match::FuzzyMatchResult;
 
 use crate::search::command_palette::mixer::CommandPaletteItemAction;

@@ -36,8 +36,6 @@ use crate::{
         cloud_preferences::{CloudPreference, CloudPreferenceModel, Platform, Preference},
         manager::SettingsManager,
     },
-    workspaces::user_workspaces::UserWorkspaces,
-};
 
 use warp_core::execution_mode::AppExecutionMode;
 

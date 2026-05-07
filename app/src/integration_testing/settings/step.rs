@@ -5,10 +5,6 @@ use crate::{
     integration_testing::{
         step::new_step_with_default_assertions, view_getters::theme_chooser_view,
     },
-    settings_view::SettingsAction,
-    window_settings::WindowSettings,
-    workspace::{Workspace, WorkspaceAction},
-};
 
 /// Builds a step that will toggle a setting by [`SettingsAction`]. This can
 /// only update settings with a corresponding action on the settings view.

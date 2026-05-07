@@ -15,8 +15,6 @@ use crate::terminal::input::{
         view::QUERY_RESULT_RENDERER_STYLES,
         InlineMenuType,
     },
-    message_bar::common::standard_message_bar_height,
-};
 
 use crate::{
     ai::blocklist::agent_view::AgentViewController,

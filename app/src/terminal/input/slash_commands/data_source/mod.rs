@@ -44,10 +44,6 @@ use crate::{
         },
         SyncDataSource,
     },
-    settings::{AISettings, AISettingsChangedEvent, InputSettings, InputSettingsChangedEvent},
-    terminal::model::session::active_session::{ActiveSession, ActiveSessionEvent},
-    workspaces::user_workspaces::{UserWorkspaces, UserWorkspacesEvent},
-};
 
 pub struct DataSourceArgs {
     pub active_session: ModelHandle<ActiveSession>,

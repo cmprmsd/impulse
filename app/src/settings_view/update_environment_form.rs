@@ -21,9 +21,6 @@ use crate::{
         render_warning_box, SubmittableTextInput, SubmittableTextInputEvent,
         WarningBoxButtonConfig, WarningBoxConfig,
     },
-    workspaces::user_workspaces::UserWorkspaces,
-    ChannelState,
-};
 use instant::{Duration, Instant};
 use log::debug;
 #[cfg(not(target_family = "wasm"))]
@@ -48,8 +45,6 @@ use warpui::{
     prelude::Coords,
     ui_components::components::{UiComponent, UiComponentStyles},
     AppContext, Entity, FocusContext, SingletonEntity, TypedActionView, View, ViewContext,
-    ViewHandle,
-};
 
 const SUBMIT_BUTTON_FOCUSED: &str = "SubmitButtonFocused";
 

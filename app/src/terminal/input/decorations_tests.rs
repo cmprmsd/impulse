@@ -12,8 +12,6 @@ use crate::{
         },
         model::session::SessionInfo,
     },
-    themes::theme::AnsiColorIdentifier,
-};
 use warp_completer::completer::SuggestionTypeName;
 
 #[test]

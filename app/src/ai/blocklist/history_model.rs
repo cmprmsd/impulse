@@ -7,9 +7,6 @@ use itertools::Itertools as _;
 use serde::{Deserialize, Serialize};
 use uuid::Uuid;
 use warp_core::features::FeatureFlag;
-    client_action::{Action, StartNewConversation},
-    response_event::stream_finished::TokenUsage,
-};
 use warpui::{AppContext, Entity, EntityId, ModelContext, SingletonEntity};
 
 #[cfg(feature = "local_fs")]
@@ -39,9 +36,6 @@ use crate::{
         AIAgentActionId, AIAgentExchange, AIAgentInput, AIAgentOutputStatus, FinishedAIAgentOutput,
         MessageId, RenderableAIError, RequestCost, Suggestions,
     },
-    persistence::model::AgentConversation,
-    ui_components::icons::Icon,
-};
 
 #[cfg(feature = "local_fs")]
 use crate::persistence::{database_file_path, establish_ro_connection};

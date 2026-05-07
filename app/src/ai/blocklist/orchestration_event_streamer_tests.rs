@@ -1,8 +1,6 @@
 use super::*;
 use crate::ai::agent_events::{
     agent_event_backoff, agent_event_failures_exceeded_threshold, AgentEventConsumerControlFlow,
-    DEFAULT_AGENT_EVENT_RECONNECT_BACKOFF_STEPS,
-};
 
 #[test]
 fn sse_backoff_escalates_then_caps() {

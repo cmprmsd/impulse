@@ -13,11 +13,6 @@ use crate::{
         auth_manager::{AuthManager, AuthManagerEvent},
         AuthStateProvider,
     },
-    network::{NetworkStatus, NetworkStatusEvent, NetworkStatusKind},
-    report_error,
-    server::server_api::ServerApiProvider,
-    workspaces::user_workspaces::{UserWorkspaces, UserWorkspacesEvent},
-};
 
 use ai::api_keys::{ApiKeyManager, ApiKeyManagerEvent};
 

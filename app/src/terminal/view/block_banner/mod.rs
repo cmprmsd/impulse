@@ -14,8 +14,6 @@ use warpui::{
         ConstrainedBox, Container, CornerRadius, Hoverable, MouseState, MouseStateHandle,
         ParentElement, Radius, Stack,
     },
-    Element,
-};
 
 use crate::themes::theme::WarpTheme;
 

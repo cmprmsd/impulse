@@ -37,8 +37,6 @@ use warpui::{
     },
     fonts::{Properties, Weight},
     AppContext, Element, Entity, EventContext, SingletonEntity as _, TypedActionView, View,
-    ViewHandle,
-};
 use warpui::{BlurContext, ModelHandle};
 
 use crate::code::active_file::{ActiveFileEvent, ActiveFileModel};

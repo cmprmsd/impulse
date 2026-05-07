@@ -9,10 +9,6 @@ use crate::{
         model::persistence::{CloudModel, CloudModelEvent},
         CloudObject as _, GenericStringObjectFormat, JsonObjectType,
     },
-    drive::CloudObjectTypeAndId,
-    server::ids::SyncId,
-    view_components::{DropdownItem, FilterableDropdown, FilterableDropdownOrientation},
-};
 
 /// A reusable [`View`] for choosing environment variable collections.
 pub struct EnvVarSelector {

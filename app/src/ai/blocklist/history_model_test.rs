@@ -28,8 +28,6 @@ use crate::{
 
 use super::{
     AIConversationMetadata, AIQueryHistoryOutputStatus, BlocklistAIHistoryModel, PersistedAIInput,
-    PersistedAIInputType,
-};
 
 /// Helper function to create a PersistedAIInput for testing
 fn create_persisted_query(

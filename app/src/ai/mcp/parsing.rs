@@ -14,8 +14,6 @@ use crate::{
         templatable::{JsonTemplate, TemplatableMCPServer, TemplateVariable},
         templatable_installation::{TemplatableMCPServerInstallation, VariableType, VariableValue},
     },
-    server::datetime_ext::DateTimeExt,
-};
 
 /// Normalize MCP JSON input to ensure it has a server name wrapper.
 ///

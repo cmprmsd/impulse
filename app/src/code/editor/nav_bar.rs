@@ -15,8 +15,6 @@ use warpui::{
     },
     units::IntoPixels,
     AppContext, Element, Entity, ModelHandle, SingletonEntity, TypedActionView, View, ViewContext,
-    ViewHandle,
-};
 
 use crate::{
     editor::InteractionState,

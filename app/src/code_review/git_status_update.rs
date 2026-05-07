@@ -15,9 +15,6 @@ use {
         repository::{RepositorySubscriber, SubscriberId},
         Repository, RepositoryUpdate,
     },
-    std::{collections::HashMap, time::Duration},
-    warpui::{r#async::SpawnedFutureHandle, ModelHandle, WeakModelHandle},
-};
 
 #[cfg(feature = "local_fs")]
 use super::diff_state::DiffStats;

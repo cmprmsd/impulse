@@ -13,8 +13,6 @@ use url::Url;
 use warp_util::path::{CleanPathResult, LineAndColumnArg};
 use warpui::{
     r#async::SpawnedFutureHandle, AppContext, Entity, ModelContext, ModelHandle, SingletonEntity,
-    WindowId,
-};
 
 #[cfg(feature = "local_fs")]
 use crate::util::file::external_editor::EditorSettings;

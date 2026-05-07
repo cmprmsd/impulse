@@ -8,8 +8,6 @@ use warpui::{
     fonts::FamilyId,
     ui_components::components::{UiComponent, UiComponentStyles},
     AppContext, Element, Entity, FocusContext, SingletonEntity, TypedActionView, View, ViewContext,
-    ViewHandle,
-};
 
 use crate::{
     appearance::Appearance,

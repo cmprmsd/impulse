@@ -5,8 +5,6 @@ use crate::terminal::{
         session::command_executor::{InBandCommand, InBandCommandCancelledEvent},
         tmux::commands::TmuxCommand,
     },
-    shell::ShellType,
-};
 
 /// Set of events sent by command executors.
 pub enum ExecutorCommandEvent {

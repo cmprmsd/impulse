@@ -25,14 +25,6 @@ use crate::{
         styles::block_footer_action_button,
         telemetry::{ActionEntrypoint, BlockInfo},
     },
-    server::ids::{HashableId, ToServerId},
-    settings::FontSettings,
-    terminal::input::decorations::{parse_current_commands_and_tokens, ParsedTokensSnapshot},
-    themes::theme::AnsiColorIdentifier,
-    ui_components::icons::Icon,
-    util::bindings::CustomAction,
-    workflows::{CloudWorkflow, WorkflowId},
-};
 
 use super::{
     embedded_item::EmbeddedWorkflow,

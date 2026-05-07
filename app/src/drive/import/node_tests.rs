@@ -38,9 +38,6 @@ fn mock_tree() -> FileUploadState {
     folder_id_to_node.insert(FolderId(0), root_folder);
 
     let state = FileUploadState {
-        folder_id_to_node,
-        file_id_to_node,
-    };
 
     assert_eq!(state.debug_print(), "(top_folder(second_level), top_level)");
     state

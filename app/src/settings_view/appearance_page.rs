@@ -1,16 +1,12 @@
 use super::directory_color_add_picker::{DirectoryColorAddPicker, DirectoryColorAddPickerEvent};
 use super::settings_page::{
     AdditionalInfo, Category, LocalOnlyIconState, MatchData, PageType, SettingsWidget,
-    CONTENT_FONT_SIZE,
-};
 use super::{flags, SettingsSection};
 use super::{
     settings_page::{
         build_reset_button, render_body_item, render_body_item_label, render_dropdown_item,
         SettingsPageEvent, SettingsPageMeta, SettingsPageViewHandle, ToggleState, HEADER_PADDING,
     },
-    SettingsAction,
-};
 use super::{SettingActionPairContexts, SettingActionPairDescriptions, ToggleSettingActionPair};
 use crate::appearance::{Appearance, AppearanceEvent};
 use crate::channel::{Channel, ChannelState};

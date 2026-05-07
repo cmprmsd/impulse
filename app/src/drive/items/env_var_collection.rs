@@ -13,10 +13,6 @@ use crate::{
         model::actions::{ObjectActionType, ObjectActions},
         CloudObjectMetadata,
     },
-    drive::{index::DriveIndexAction, CloudObjectTypeAndId, DriveObjectType},
-    env_vars::{CloudEnvVarCollection, EnvVarValue},
-    themes::theme::Fill,
-};
 
 use super::{WarpDriveItem, WarpDriveItemId};
 

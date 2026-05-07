@@ -11,10 +11,6 @@ use crate::{
         },
         blocklist::agent_view::AgentViewEntryOrigin,
     },
-    search::slash_command_menu::static_commands::commands,
-    terminal::input::slash_commands::SlashCommandTrigger,
-    BlocklistAIHistoryModel,
-};
 
 use super::{
     input_context_for_request, parse_context_attachments, BlocklistAIController,

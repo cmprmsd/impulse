@@ -23,8 +23,6 @@ pub(crate) use telemetry::MalformedFinalLineProxyEvent;
 pub use telemetry::{EditAcceptAndContinueClickedEvent, EditAcceptClickedEvent};
 pub use telemetry::{
     EditReceivedEvent, EditResolvedEvent, EditStats, RequestFileEditsFormatKind,
-    RequestFileEditsTelemetryEvent,
-};
 
 use crate::{
     ai::{
@@ -41,10 +39,6 @@ use crate::{
         },
         paths::host_native_absolute_path,
     },
-    safe_warn,
-    terminal::model::session::{active_session::ActiveSession, SessionType},
-    BlocklistAIHistoryModel,
-};
 
 use super::{ActionExecution, AnyActionExecution, ExecuteActionInput, PreprocessActionInput};
 

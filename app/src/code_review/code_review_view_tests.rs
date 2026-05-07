@@ -4,8 +4,6 @@ use crate::code::local_code_editor::LocalCodeEditorView;
 use crate::code_review::comments::{
     attach_pending_imported_comments, AttachedReviewComment, AttachedReviewCommentTarget,
     CommentId, CommentOrigin, LineDiffContent, PendingImportedReviewComment,
-    PendingImportedReviewCommentTarget,
-};
 use crate::code_review::diff_size_limits::DiffSize;
 use crate::code_review::diff_state::{DiffStateModel, FileDiff, GitFileStatus};
 use crate::code_review::editor_state::CodeReviewEditorState;

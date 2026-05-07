@@ -10,8 +10,6 @@ use crate::{
         session::SessionInfo,
         test_utils::{create_test_block_with_grids, TestBlockBuilder},
     },
-    test_util::mock_blockgrid,
-};
 use float_cmp::assert_approx_eq;
 use futures_lite::stream::StreamExt;
 

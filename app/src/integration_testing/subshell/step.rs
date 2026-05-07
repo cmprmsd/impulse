@@ -2,8 +2,6 @@ use regex::Regex;
 use std::time::Duration;
 use warpui::{
     async_assert, async_assert_eq,
-    integration::{AssertionOutcome, TestStep},
-};
 
 use crate::{
     integration_testing::{
@@ -15,8 +13,6 @@ use crate::{
         },
         view_getters::{single_terminal_view, terminal_view},
     },
-    terminal::{model::rich_content::RichContentType, view::WithinBlockBanner},
-};
 
 use super::util::{ssh_command, user_host};
 

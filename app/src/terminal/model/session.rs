@@ -19,8 +19,6 @@ use std::sync::Arc;
 use typed_path::{TypedPath, TypedPathBuf, WindowsPath};
 use warp_util::path::{
     convert_msys2_to_windows_native_path, convert_wsl_to_windows_host_path, msys2_exe_to_root,
-    ShellFamily,
-};
 
 use version_compare::Version;
 use warp_completer::completer::{

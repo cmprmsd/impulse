@@ -42,8 +42,6 @@ use settings::Setting as _;
 use warp_core::context_flag::ContextFlag;
 use warpui::elements::{
     ConstrainedBox, CrossAxisAlignment, Flex, MainAxisAlignment, MainAxisSize, ParentElement,
-    Shrinkable,
-};
 use warpui::prelude::{ChildView, Container};
 use warpui::text_layout::ClipConfig;
 use warpui::ui_components::components::UiComponent;

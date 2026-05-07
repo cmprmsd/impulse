@@ -12,10 +12,6 @@ use crate::{
         agent::{AgentReviewCommentBatch, DiffSetHunk},
         blocklist::agent_view::AgentViewEntryOrigin,
     },
-    code::editor::comment_editor::DEFAULT_COMMENT_MAX_WIDTH,
-    code_review::diff_state::InvalidationSource,
-    coding_panel_enablement_state::CodingPanelEnablementState,
-};
 
 #[cfg(feature = "local_fs")]
 use crate::code_review::context::{

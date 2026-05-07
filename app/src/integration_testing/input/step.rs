@@ -7,8 +7,6 @@ use crate::{
         step::new_step_with_default_assertions, terminal::assert_context_menu_is_open,
         view_getters::single_terminal_view,
     },
-    terminal::view::TerminalAction,
-};
 
 pub fn open_input_context_menu() -> TestStep {
     new_step_with_default_assertions("Open input context menu")

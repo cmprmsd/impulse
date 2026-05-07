@@ -33,8 +33,6 @@ use crate::{
         update_manager::TeamUpdateManager, user_workspaces::UserWorkspaces,
         workspace::AdminEnablementSetting,
     },
-    TelemetryEvent,
-};
     CodebaseIndexFinishedStatus, CodebaseIndexManager, CodebaseIndexManagerEvent,
     CodebaseIndexStatus, CodebaseIndexingError,
 };

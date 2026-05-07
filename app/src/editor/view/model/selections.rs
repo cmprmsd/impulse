@@ -17,8 +17,6 @@ use crate::{
         soft_wrap::{ClampDirection, DisplayPointAndClampDirection},
         CursorColors, RangeExt,
     },
-    ui_components::avatar::Avatar,
-};
 
 /// This type encapsulates enough information about a selection to be able to
 /// draw it. Compared to the `Selection` type, the points are converted based on

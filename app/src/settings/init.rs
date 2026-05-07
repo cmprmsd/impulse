@@ -23,11 +23,6 @@ use crate::{
         warpify::settings::WarpifySettings,
         BlockListSettings,
     },
-    undo_close::UndoCloseSettings,
-    window_settings::WindowSettings,
-    workflows::aliases::WorkflowAliases,
-    workspace::tab_settings::TabSettings,
-};
 
 use warp_core::semantic_selection::SemanticSelection;
 

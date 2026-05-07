@@ -17,9 +17,6 @@ use crate::{
         view::{PendingEdit, PendingEditKind},
         FileTreeEvent,
     },
-    send_telemetry_from_ctx,
-    server::telemetry::TelemetryEvent,
-};
 
 /// Custom ordering function for items in the file tree.
 ///

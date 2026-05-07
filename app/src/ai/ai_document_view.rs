@@ -12,7 +12,6 @@ use crate::notebooks::editor::view::RichTextEditorConfig;
 use crate::pane_group::focus_state::PaneFocusHandle;
 use crate::pane_group::pane::view::header::components::{
     render_pane_header_buttons, render_pane_header_title_text, render_three_column_header,
-    CenteredHeaderEdgeWidth,
 };
 use crate::pane_group::pane::view::header::toolbelt_button_position_id;
 use crate::pane_group::pane::view::header::PaneHeaderAction;
@@ -42,12 +41,6 @@ use crate::{
         },
         link::{NotebookLinks, SessionSource},
     },
-    pane_group::{pane::view, BackingView, PaneConfiguration, PaneEvent},
-    server::telemetry::TelemetryEvent,
-    ui_components::buttons::icon_button,
-    ui_components::icons::Icon,
-    view_components::action_button::{ActionButton, PrimaryTheme},
-};
 use pathfinder_geometry::vector::vec2f;
 use warp_core::ui::icons;
 use warp_core::ui::icons::ICON_DIMENSIONS;

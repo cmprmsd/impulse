@@ -24,8 +24,6 @@ use crate::{
         buttons::{accent_icon_button, icon_button},
         icons::Icon,
     },
-    workspaces::user_profiles::UserProfiles,
-};
 
 use super::{super::active_notebook_data::ActiveNotebookData, NotebookAction, EDIT_BUTTON_MARGIN};
 

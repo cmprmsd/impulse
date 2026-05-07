@@ -18,8 +18,6 @@ use warpui::{
     keymap::FixedBinding,
     ui_components::components::{Coords, UiComponent, UiComponentStyles},
     AppContext, Entity, FocusContext, SingletonEntity as _, TypedActionView, View, ViewContext,
-    ViewHandle,
-};
 
 use crate::{
     appearance::Appearance,
@@ -28,8 +26,6 @@ use crate::{
         EditorOptions, EditorView, Event as EditorEvent, PropagateAndNoOpNavigationKeys,
         TextOptions,
     },
-    ui_components::icons::Icon,
-};
 
 const MENU_WIDTH: f32 = 280.;
 const MENU_MAX_LIST_HEIGHT: f32 = 200.;
