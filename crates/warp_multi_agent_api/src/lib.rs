@@ -4,7 +4,12 @@
 
 #[derive(Debug, Clone, Default, PartialEq)]
 pub struct Task {
-    pub dependencies: Vec<String>,
+    pub dependencies: Option<TaskDependencies>,
+}
+
+#[derive(Debug, Clone, Default, PartialEq)]
+pub struct TaskDependencies {
+    pub parent_task_id: String,
 }
 
 pub mod response_event {
@@ -41,8 +46,8 @@ pub mod response_event {
         #[derive(Debug, Clone, Default)]
         pub struct ModelTokenUsage {
             pub model_id: String,
-            pub total_tokens: i32,
-            pub token_usage_by_category: HashMap<String, i32>,
+            pub total_tokens: u32,
+            pub token_usage_by_category: HashMap<String, u32>,
         }
 
         #[derive(Debug, Clone, Default)]
