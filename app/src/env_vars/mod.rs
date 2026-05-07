@@ -9,6 +9,7 @@ use crate::legacy_stubs::{GenericStringObjectFormat, GenericStringObjectId, Json
 use crate::legacy_stubs::{GenericCloudObject, GenericStringObjectUniqueKey, JsonSerializer, ServerCloudObject, StringModel, WarpDriveItem};
 use crate::terminal::shell::ShellType;
 use crate::legacy_stubs::{GenericStringModel, JsonModel};
+use crate::legacy_stubs::{ExternalSecret};
 
 pub mod active_env_var_collection_data;
 pub mod env_var_collection_block;

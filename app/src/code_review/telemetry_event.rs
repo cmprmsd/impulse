@@ -6,6 +6,7 @@ use serde_with::SerializeDisplay;
 use std::fmt::Display;
 use strum_macros::{EnumDiscriminants, EnumIter};
 use warp_core::telemetry::{EnablementState, TelemetryEvent, TelemetryEventDesc};
+use crate::legacy_stubs::{CLIAgentType};
 
 /// Identifies which git button the user clicked in the code review header.
 /// Each variant maps to one of the primary action button / dropdown items.

@@ -31,6 +31,7 @@ use crate::{
     workspace::{ToastStack, WorkspaceAction},
 };
 use warpui::{Element, ViewContext};
+use crate::legacy_stubs::{ContentEditability};
 
 impl EnvVarCollectionView {
     pub(super) fn handle_external_secrets_dialog_event(

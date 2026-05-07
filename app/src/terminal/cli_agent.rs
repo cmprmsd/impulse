@@ -26,6 +26,7 @@ use crate::ui_components::icons::Icon;
 use warp_completer::parsers::simple::top_level_command;
 use warp_util::path::EscapeChar;
 use crate::legacy_stubs::{UserWorkspaces};
+use crate::legacy_stubs::{CLIAgentType};
 
 /// UID for the Uber team.
 /// See https://warp.metabaseapp.com/dashboard/1454?team_id=46347

@@ -4,6 +4,8 @@ use crate::terminal::CustomSecretRegexUpdater::redact_secrets;
 use crate::legacy_stubs::{AgentToolbarItemKind, ConversationStatus};
 use crate::ui_components::blended_colors::neutral_2;
 use crate::ui_components::blended_colors::neutral_2;
+use crate::legacy_stubs::{EphemeralMessageModel};
+use crate::ui_components::blended_colors::neutral_2;
 mod action;
 mod block_banner;
 pub mod block_onboarding;

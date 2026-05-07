@@ -22,6 +22,7 @@ use warpui::{AppContext, Element};
 use warpui::platform::{Cursor};
 use crate::legacy_stubs::{UserProfiles};
 use warpui::ui_components::components::{UiComponentStyles};
+use crate::legacy_stubs::{ContainingObject, ContentEditability};
 
 /// Component to show details about a notebook:
 /// * Interactive breadcrumbs for its location within Warp Drive

@@ -20,6 +20,7 @@ use {
 #[cfg(feature = "local_fs")]
 use super::diff_state::DiffStats;
 use warpui::{ModelHandle, WeakModelHandle};
+use crate::legacy_stubs::{SpawnedFutureHandle};
 
 /// Public metadata exposed to consumers — the subset of diff metadata
 /// that the git chip (prompt display, agent view footer) needs.

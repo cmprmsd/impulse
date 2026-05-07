@@ -110,6 +110,7 @@ use super::{
 use warpui::{AppContext, Element, Entity, EntityId, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
 use crate::legacy_stubs::{BlocklistAIHistoryModel, TelemetryEvent};
 use warpui::fonts::{Properties};
+use crate::legacy_stubs::{SpawnedFutureHandle};
 const MENU_WIDTH: f32 = 200.0;
 const MAX_HEIGHT: f32 = 320.0;
 const AVATAR_RIGHT_MARGIN: f32 = 8.;

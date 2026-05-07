@@ -11,6 +11,7 @@ use async_trait::async_trait;
 use crate::legacy_stubs::{FolderId};
 use crate::legacy_stubs::{ObjectType, QueueItem, Revision, ServerId, Space, SyncId};
 use crate::legacy_stubs::{CloudModelType, CloudObjectEventEntrypoint, CreateCloudObjectResult, CreateObjectRequest, GenericCloudObject, ObjectClient, ServerCloudObject};
+use crate::legacy_stubs::{InitiatedBy};
 
 // Re-exported from warp_server_client.
 

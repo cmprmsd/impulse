@@ -2,6 +2,8 @@ use warpui::{AppContext, Element, EventContext, ModelHandle, Pixels};
 use warpui::{Event};
 use warpui::fonts::{FamilyId};
 use warpui::elements::{SizeConstraint};
+use crate::legacy_stubs::{PaintContext};
+use crate::view_components::action_button::SecondaryTheme;
 mod gutter_button;
 pub use gutter_button::{AddAsContextButton, CommentButton, RevertHunkButton};
 

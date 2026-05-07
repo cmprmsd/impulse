@@ -12,6 +12,7 @@ use crate::legacy_stubs::{AmbientAgentTaskId, ServerApiProvider};
 use crate::legacy_stubs::{AIClient};
 use crate::legacy_stubs::{AIConversation, AIConversationId};
 use crate::legacy_stubs::{ConversationStatus};
+use crate::legacy_stubs::{TaskStatusUpdate};
 
 /// Listens for conversation status changes and CLI agent session status
 /// changes, then reports the corresponding task state to the server via

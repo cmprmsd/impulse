@@ -41,6 +41,7 @@ use warp_core::send_telemetry_from_ctx;
 use warpui::{AppContext, ViewContext, ViewHandle};
 use crate::legacy_stubs::{ServerApiProvider};
 use crate::view_components::action_button::ActionButton;
+use crate::view_components::action_button::SecondaryTheme;
 
 /// What should happen after a successful commit.
 #[allow(clippy::enum_variant_names)] // `Commit` prefix is intentional: describes the always-present first stage.

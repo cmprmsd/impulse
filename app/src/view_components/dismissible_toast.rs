@@ -25,6 +25,7 @@ use super::action_button::ActionButton;
 use warpui::{AppContext, Element, Entity, TypedActionView, View, ViewContext};
 use warpui::fonts::{Weight};
 use warpui::ui_components::components::{Coords, UiComponentStyles};
+use crate::legacy_stubs::{SpawnedFutureHandle};
 
 const TOAST_WIDTH: f32 = 464.;
 const TOAST_CORNER_RADIUS: f32 = 4.;

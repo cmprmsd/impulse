@@ -2,6 +2,7 @@ use crate::legacy_stubs::{PaletteSource};
 use crate::legacy_stubs::{AIConversationId, AgentViewController};
 use crate::legacy_stubs::{AnonymousUserSignupEntrypoint, ServerApi, SyncId};
 use crate::legacy_stubs::{CloudModel, Space, TelemetryEvent, UpdateManager, UserWorkspaces};
+use crate::legacy_stubs::{EphemeralMessageModel};
 mod agent;
 pub mod buffer_model;
 mod classic;

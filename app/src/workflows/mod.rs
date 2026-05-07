@@ -7,6 +7,7 @@ use warpui::{AppContext, SingletonEntity};
 use crate::legacy_stubs::{ObjectType, Revision, ServerId, SyncId};
 use crate::legacy_stubs::{QueueItem};
 use crate::legacy_stubs::{CloudModelType, CloudObjectEventEntrypoint, CreateCloudObjectResult, CreateObjectRequest, GenericCloudObject, ObjectClient, ServerCloudObject};
+use crate::legacy_stubs::{InitiatedBy};
 
 pub mod categories;
 use anyhow::Result;

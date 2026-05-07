@@ -14,6 +14,7 @@ use warpui::clipboard::{ClipboardContent, ImageData};
 use warpui::keymap::Keystroke;
 use warpui::{AppContext, Element, Entity, EntityId, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
 use crate::legacy_stubs::{TelemetryEvent};
+use crate::legacy_stubs::{CLIAgentType};
 mod warpify_footer;
 
 pub use crate::terminal::CLIAgent;

@@ -77,6 +77,8 @@ use crate::legacy_stubs::{TelemetryEvent};
 use crate::util::bindings::keybinding_name_to_keystroke;
 use crate::ui_components::blended_colors::neutral_2;
 use crate::ui_components::blended_colors::neutral_2;
+use crate::legacy_stubs::{EphemeralMessageModel};
+use crate::ui_components::blended_colors::neutral_2;
 
 pub fn init(app: &mut AppContext) {
     summarization_cancel_dialog::init(app);

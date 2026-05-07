@@ -24,6 +24,7 @@ use warpui::{AppContext, Element, Entity, FocusContext, ModelHandle, TypedAction
 use warpui::{WeakViewHandle};
 use warpui::elements::{ChildView};
 use warpui::ui_components::components::{UiComponentStyles};
+use crate::legacy_stubs::{ExternalSecret};
 
 lazy_static! {
     static ref QUERY_RESULT_RENDERER_STYLES: QueryResultRendererStyles =

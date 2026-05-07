@@ -6,6 +6,7 @@ use warpui::AppContext;
 use super::external_secret_fuzzy_match::FuzzyMatchExternalSecretResult;
 use super::external_secret_search_item::ExternalSecretSearchItem;
 use super::searcher::ExternalSecretSearchItemAction;
+use crate::legacy_stubs::{ExternalSecret};
 
 pub struct ExternalSecretDataSource {
     secrets: Vec<ExternalSecret>,

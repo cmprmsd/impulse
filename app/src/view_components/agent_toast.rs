@@ -23,6 +23,7 @@ use crate::util::bindings::keybinding_name_to_keystroke;
 use crate::workspace::{Workspace, WorkspaceAction};
 use warpui::{AppContext, Element, Entity, EntityId, TypedActionView, View, ViewContext};
 use warpui::ui_components::components::{Coords, UiComponentStyles};
+use crate::legacy_stubs::{SpawnedFutureHandle};
 
 const AGENT_TOAST_WIDTH: f32 = 260.;
 const AGENT_TOAST_PADDING: f32 = 12.;

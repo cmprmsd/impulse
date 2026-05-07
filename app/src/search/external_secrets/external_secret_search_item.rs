@@ -15,6 +15,7 @@ use super::{
     external_secret_fuzzy_match::FuzzyMatchExternalSecretResult,
     searcher::ExternalSecretSearchItemAction,
 };
+use crate::legacy_stubs::{ExternalSecret};
 
 const ICON_SIZE: f32 = 16.;
 

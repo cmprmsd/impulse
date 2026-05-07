@@ -63,6 +63,7 @@ use warpui::{AppContext, Element, Entity, TypedActionView, View, ViewContext, Vi
 use crate::legacy_stubs::{UserUid};
 use crate::legacy_stubs::{AIClient, CloudModelEvent, Owner, Revision, ServerId, SyncId};
 use crate::legacy_stubs::{ClientId, CloudModel, ObjectType, UpdateManager};
+use crate::legacy_stubs::{ContainingObject};
 
 const BREADCRUMBS_VERTICAL_MARGIN: f32 = 6.;
 const MODAL_WIDTH: f32 = 900.;

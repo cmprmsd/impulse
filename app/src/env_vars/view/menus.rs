@@ -19,6 +19,7 @@ use crate::menu::MenuItemFields;
 use crate::pane_group::pane::PaneEvent;
 use crate::util::bindings::keybinding_name_to_display_string;
 use crate::ui_components::icons::Icon;
+use crate::legacy_stubs::{MenuEvent};
 
 const PANE_MENU_WIDTH: f32 = 200.;
 
