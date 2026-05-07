@@ -591,7 +591,7 @@ enum ExtractedSuggestion {
 /// for `SuggestPrompt` or `ApplyFileDiffs` tool calls.
 async fn extract_suggestion_from_stream(
     stream_result: Result<
-        crate::ai::agent::api::ResponseStream,
+        crate::legacy_stubs::ResponseStream,
         ai::agent::convert::ConvertToAPITypeError,
     >,
 ) -> Option<StreamExtractionResult> {

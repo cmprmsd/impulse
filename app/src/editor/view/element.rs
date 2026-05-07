@@ -27,6 +27,7 @@ use warp_core::features::FeatureFlag;
 use warp_core::ui::appearance::DEFAULT_UI_FONT_SIZE;
 use warp_util::user_input::UserInput;
 use warpui::event::KeyState;
+use warpui::keymap::Keystroke;
 use warpui::text_selection_utils::{
     calculate_tick_width, create_newline_tick_rect, selection_crosses_newline_row_based,
 };
@@ -54,7 +55,7 @@ use warpui::platform::keyboard::KeyCode;
 
 use instant::Instant;
 use warpui::elements::{Radius, DEFAULT_UI_LINE_HEIGHT_RATIO};
-use warpui::{AppContext, Keystroke};
+use warpui::{AppContext};
 use crate::legacy_stubs::{TaskId};
 
 // Similar to the terminal::model::ansi::CursorShape, this Editor Element has different cursor

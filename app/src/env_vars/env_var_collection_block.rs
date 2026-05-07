@@ -13,6 +13,7 @@ use std::sync::Arc;
 use warp_core::semantic_selection::SemanticSelection;
 use warp_core::{features::FeatureFlag, ui::Icon};
 use warpui::{
+use warpui::keymap::Keystroke;
     elements::{
         get_rich_content_position_id, Border, Clipped, Container, CornerRadius, CrossAxisAlignment,
         Flex, FormattedTextElement, MouseStateHandle, ParentElement, Radius, SavePosition,
@@ -35,7 +36,7 @@ use crate::{
     },
 
 };
-use warpui::{AppContext, Element, Entity, EntityId, FocusContext, Keystroke, TypedActionView, View, ViewContext};
+use warpui::{AppContext, Element, Entity, EntityId, FocusContext, TypedActionView, View, ViewContext};
 use warpui::keymap::{FixedBinding};
 /// The vertical padding applied to the env var collection block's content body.
 /// For horizontal padding, use [`INLINE_ACTION_HORIZONTAL_PADDING`] for consistency.

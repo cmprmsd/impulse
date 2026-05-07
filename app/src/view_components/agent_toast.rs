@@ -4,6 +4,7 @@ use pathfinder_color::ColorU;
 use pathfinder_geometry::vector::vec2f;
 use uuid::Uuid;
 use warpui::elements::{DropShadow, Expanded};
+use warpui::keymap::Keystroke;
 use warpui::r#async::Timer;
 use warpui::WindowId;
 use warpui::{
@@ -20,7 +21,7 @@ use crate::settings_view::keybindings::{KeybindingChangedEvent, KeybindingChange
 use crate::terminal::view::TerminalAction;
 use crate::util::bindings::keybinding_name_to_keystroke;
 use crate::workspace::{Workspace, WorkspaceAction};
-use warpui::{AppContext, Element, Entity, EntityId, Keystroke, TypedActionView, View, ViewContext};
+use warpui::{AppContext, Element, Entity, EntityId, TypedActionView, View, ViewContext};
 use warpui::ui_components::components::{Coords, UiComponentStyles};
 
 const AGENT_TOAST_WIDTH: f32 = 260.;

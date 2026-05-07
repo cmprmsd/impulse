@@ -412,7 +412,7 @@ impl InitProjectModel {
         let repo_root_for_callback = repo_root.clone();
         let executor = lsp::CommandBuilder::new(self.path_env_var.clone());
         let http_client =
-            crate::server::server_api::ServerApiProvider::as_ref(ctx).get_http_client();
+            crate::legacy_stubs::ServerApiProvider::as_ref(ctx).get_http_client();
 
         ctx.spawn(
             async move {

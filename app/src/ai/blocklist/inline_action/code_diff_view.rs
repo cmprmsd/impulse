@@ -32,6 +32,7 @@ use warp_util::file::FileSaveError;
 use warp_util::path::common_path;
 use warp_util::standardized_path::StandardizedPath;
 use warpui::{
+use warpui::keymap::Keystroke;
     elements::{
         new_scrollable::{ScrollableAppearance, SingleAxisConfig},
         Align, Border, ChildAnchor, ChildView, Clipped, ClippedScrollStateHandle, ConstrainedBox,
@@ -113,7 +114,7 @@ use ai::diff_validation::{
     fuzzy_match_diffs, fuzzy_match_v4a_diffs, parse_line_numbers, DiffDelta, DiffType, ParsedDiff,
     SearchAndReplace, V4AHunk,
 };
-use warpui::{AppContext, Element, Entity, FocusContext, Keystroke, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
+use warpui::{AppContext, Element, Entity, FocusContext, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
 use warpui::keymap::{FixedBinding};
 use warpui::platform::{Cursor};
 use warpui::ui_components::components::{Coords};

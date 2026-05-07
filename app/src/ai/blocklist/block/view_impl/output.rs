@@ -3770,7 +3770,7 @@ enum ConversationSearchPhase {
     ReadingMessages { count: usize },
 }
 
-fn conversation_search_phase(task: &crate::ai::agent::task::Task) -> ConversationSearchPhase {
+fn conversation_search_phase(task: &crate::legacy_stubs::Task) -> ConversationSearchPhase {
     use crate::ai::agent::{AIAgentActionType, AIAgentOutputMessageType};
 
     let mut current_phase = ConversationSearchPhase::ListingMessages;

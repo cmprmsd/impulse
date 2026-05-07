@@ -155,7 +155,7 @@ fn ai_conversation_new_restored_preserves_last_event_sequence() {
 
 fn make_ambient_task_with_children(
     children: Vec<String>,
-) -> crate::ai::ambient_agents::AmbientAgentTask {
+) -> crate::legacy_stubs::AmbientAgentTask {
     let mut task = make_ambient_task_with_event_seq(None);
     task.children = children;
     task
@@ -163,13 +163,13 @@ fn make_ambient_task_with_children(
 
 fn make_ambient_task_with_event_seq(
     last_event_sequence: Option<i64>,
-) -> crate::ai::ambient_agents::AmbientAgentTask {
+) -> crate::legacy_stubs::AmbientAgentTask {
     use chrono::Utc;
-    crate::ai::ambient_agents::AmbientAgentTask {
+    crate::legacy_stubs::AmbientAgentTask {
         task_id: "550e8400-e29b-41d4-a716-446655440000".parse().unwrap(),
         parent_run_id: None,
         title: "test".to_string(),
-        state: crate::ai::ambient_agents::AmbientAgentTaskState::Succeeded,
+        state: crate::legacy_stubs::AmbientAgentTaskState::Succeeded,
         prompt: "prompt".to_string(),
         created_at: Utc::now(),
         started_at: Some(Utc::now()),

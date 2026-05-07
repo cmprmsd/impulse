@@ -288,17 +288,17 @@ pub static ASSETS: Assets = Assets;
 
 fn determine_agent_source(
     launch_mode: &LaunchMode,
-) -> Option<crate::ai::ambient_agents::AgentSource> {
+) -> Option<crate::legacy_stubs::AgentSource> {
     match launch_mode {
         LaunchMode::CommandLine { .. } => {
             if std::env::var("GITHUB_ACTIONS").ok().as_deref() == Some("true") {
-                Some(crate::ai::ambient_agents::AgentSource::GitHubAction)
+                Some(crate::legacy_stubs::AgentSource::GitHubAction)
             } else {
-                Some(crate::ai::ambient_agents::AgentSource::Cli)
+                Some(crate::legacy_stubs::AgentSource::Cli)
             }
         }
         LaunchMode::App { .. } | LaunchMode::Test { .. } => {
-            Some(crate::ai::ambient_agents::AgentSource::CloudMode)
+            Some(crate::legacy_stubs::AgentSource::CloudMode)
         }
         // RemoteServerProxy and RemoteServerDaemon are headless server
         // processes that don't use the agent subsystem.

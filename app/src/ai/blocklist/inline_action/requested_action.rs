@@ -19,6 +19,7 @@ use std::rc::Rc;
 use warp_core::ui::appearance::Appearance;
 use warp_core::ui::theme::color::internal_colors::neutral_2;
 use warpui::elements::Align;
+use warpui::keymap::Keystroke;
 use warpui::elements::Clipped;
 use warpui::elements::FormattedTextElement;
 use warpui::fonts::FamilyId;
@@ -39,7 +40,7 @@ use crate::ai::blocklist::inline_action::inline_action_header::{
 };
 use crate::ai::blocklist::inline_action::inline_action_icons::icon_size;
 use crate::ui_components::blended_colors;
-use warpui::{AppContext, Element, EventContext, Keystroke};
+use warpui::{AppContext, Element, EventContext};
 use warpui::platform::{Cursor};
 use warpui::ui_components::components::{UiComponentStyles};
 

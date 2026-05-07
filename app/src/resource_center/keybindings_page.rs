@@ -1,6 +1,7 @@
 use enum_iterator::{all, Sequence};
 use itertools::{Either, Itertools};
 use warpui::elements::CornerRadius;
+use warpui::keymap::Keystroke;
 use warpui::presenter::ChildView;
 use warpui::units::Pixels;
 use warpui::FocusContext;
@@ -39,7 +40,7 @@ use super::{
 };
 
 use super::utils::{BLOCKS_KEYBINDINGS, INPUT_EDITOR_KEYBINDINGS, TERMINAL_KEYBINDINGS};
-use warpui::{AppContext, Entity, Keystroke, TypedActionView, View, ViewContext, ViewHandle};
+use warpui::{AppContext, Entity, TypedActionView, View, ViewContext, ViewHandle};
 use warpui::ui_components::components::{UiComponentStyles};
 use warpui::ui_components::components::{Coords};
 

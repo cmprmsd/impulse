@@ -956,7 +956,7 @@ impl InitStepBlock {
         let window_id = ctx.window_id();
         let executor = lsp::CommandBuilder::new(path_env_var);
         let http_client =
-            crate::server::server_api::ServerApiProvider::as_ref(ctx).get_http_client();
+            crate::legacy_stubs::ServerApiProvider::as_ref(ctx).get_http_client();
 
         ctx.spawn(
             async move {

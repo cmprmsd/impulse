@@ -67,7 +67,7 @@ fn sender_run_id_and_task_id_for_send(
 
 #[cfg(not(target_family = "wasm"))]
 async fn send_agent_message_with_timeout(
-    server_api: std::sync::Arc<crate::server::server_api::ServerApi>,
+    server_api: std::sync::Arc<crate::legacy_stubs::ServerApi>,
     ai_client: std::sync::Arc<dyn crate::server::server_api::ai::AIClient>,
     task_id: Option<AmbientAgentTaskId>,
     request: SendAgentMessageRequest,
@@ -100,7 +100,7 @@ async fn send_agent_message_with_timeout(
 
 #[cfg(target_family = "wasm")]
 async fn send_agent_message_with_timeout(
-    server_api: std::sync::Arc<crate::server::server_api::ServerApi>,
+    server_api: std::sync::Arc<crate::legacy_stubs::ServerApi>,
     ai_client: std::sync::Arc<dyn crate::server::server_api::ai::AIClient>,
     task_id: Option<AmbientAgentTaskId>,
     request: SendAgentMessageRequest,

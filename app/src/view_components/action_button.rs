@@ -7,6 +7,7 @@ use warp_core::ui::{
     theme::{color::internal_colors, AnsiColorIdentifier, Fill},
 };
 use warpui::{elements::MainAxisAlignment, Gradient};
+use warpui::keymap::Keystroke;
 use warpui::{elements::MainAxisSize, text_layout::ClipConfig};
 use warpui::{
     elements::{
@@ -22,7 +23,7 @@ use crate::{
     ui_components::icons::Icon,
     util::bindings::keybinding_name_to_keystroke,
 };
-use warpui::{AppContext, BlurContext, Element, Entity, EventContext, FocusContext, Keystroke, TypedActionView, View, ViewContext};
+use warpui::{AppContext, BlurContext, Element, Entity, EventContext, FocusContext, TypedActionView, View, ViewContext};
 use warpui::fonts::{Properties, Weight};
 use warpui::platform::{Cursor};
 use warpui::ui_components::components::{Coords, UiComponentStyles};

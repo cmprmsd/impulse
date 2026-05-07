@@ -4,6 +4,7 @@ use pathfinder_color::ColorU;
 use pathfinder_geometry::vector::vec2f;
 use warp_core::ui::builder::AnimatedButtonOptions;
 use warpui::clipboard::ClipboardContent;
+use warpui::keymap::Keystroke;
 use warpui::elements::{DispatchEventResult, Stack};
 use warpui::units::Pixels;
 use warpui::{
@@ -32,7 +33,7 @@ use super::{
         CodeBlockIndex, FormattedTranscriptMessage, MarkdownSegment, TranscriptPartSubType,
     },
 };
-use warpui::{AppContext, Element, Entity, Keystroke, ModelHandle, TypedActionView, View, ViewContext};
+use warpui::{AppContext, Element, Entity, ModelHandle, TypedActionView, View, ViewContext};
 use warpui::{WeakViewHandle};
 use warpui::platform::{Cursor};
 use crate::legacy_stubs::{UserWorkspaces};

@@ -26,6 +26,7 @@ use itertools::Itertools;
 
 use warp_core::ui::theme::color::internal_colors;
 use warpui::{elements::Wrap, units::Pixels};
+use warpui::keymap::Keystroke;
 use warpui::{
     elements::{
         Align, Border, ClippedScrollStateHandle, ClippedScrollable, Container, CornerRadius, Empty,
@@ -41,7 +42,7 @@ use warpui::{
     elements::{CrossAxisAlignment, Text},
     keymap::DescriptionContext,
 };
-use warpui::{AppContext, Element, Entity, Keystroke, SingletonEntity, TypedActionView, View, ViewContext, ViewHandle};
+use warpui::{AppContext, Element, Entity, SingletonEntity, TypedActionView, View, ViewContext, ViewHandle};
 use warpui::fonts::{Weight};
 use warpui::ui_components::components::{Coords, UiComponentStyles};
 use crate::legacy_stubs::{SettingsSection, TelemetryEvent};

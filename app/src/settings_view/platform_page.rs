@@ -69,7 +69,7 @@ impl PlatformPageView {
         }
 
         // Build and send the GraphQL query
-        let server_api = crate::server::server_api::ServerApiProvider::as_ref(ctx).get();
+        let server_api = crate::legacy_stubs::ServerApiProvider::as_ref(ctx).get();
 
         ctx.spawn(
             async move { server_api.list_api_keys().await },

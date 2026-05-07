@@ -8,6 +8,7 @@ use warp_core::features::FeatureFlag;
 use warp_core::report_error;
 use warp_core::ui::theme::color::internal_colors;
 use warpui::elements::new_scrollable::SingleAxisConfig;
+use warpui::keymap::Keystroke;
 use warpui::elements::{
     ClippedScrollStateHandle, ConstrainedBox, Empty, Fill, FormattedTextElement, Highlight,
     HighlightedHyperlink, Hoverable, MainAxisAlignment, MainAxisSize, NewScrollable, SavePosition,
@@ -107,7 +108,7 @@ use super::{
     },
     EmbeddedCodeEditorView, SecretRedactionState,
 };
-use warpui::{AppContext, Element, Entity, EntityId, Keystroke, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
+use warpui::{AppContext, Element, Entity, EntityId, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
 use crate::legacy_stubs::{BlocklistAIHistoryModel, TelemetryEvent};
 use warpui::fonts::{Properties};
 const MENU_WIDTH: f32 = 200.0;

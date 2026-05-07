@@ -1,5 +1,6 @@
 use pathfinder_geometry::vector::vec2f;
 use warpui::elements::{
+use warpui::keymap::Keystroke;
     Align, ChildAnchor, ClippedScrollStateHandle, ClippedScrollable, DispatchEventResult,
     EventHandler, Hoverable, Icon, MouseStateHandle, OffsetPositioning, PositionedElementAnchor,
     PositionedElementOffsetBounds, Radius, ScrollbarWidth, Stack,
@@ -21,7 +22,7 @@ use crate::themes::theme::{Blend, Fill};
 use crate::util::bindings::trigger_to_keystroke;
 
 use super::WELCOME_TIP_FEATURE_LENGTH;
-use warpui::{AppContext, Entity, Keystroke, TypedActionView, View};
+use warpui::{AppContext, Entity, TypedActionView, View};
 use warpui::fonts::{Weight};
 use warpui::ui_components::components::{UiComponentStyles};
 

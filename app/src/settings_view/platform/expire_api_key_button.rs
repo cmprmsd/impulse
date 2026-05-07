@@ -45,7 +45,7 @@ impl ExpireApiKeyButton {
         self.request_state = RequestState::Pending;
         ctx.notify();
 
-        let server_api = crate::server::server_api::ServerApiProvider::as_ref(ctx).get();
+        let server_api = crate::legacy_stubs::ServerApiProvider::as_ref(ctx).get();
         let uid_for_req = self.key_uid.clone();
         ctx.spawn(
             async move { server_api.expire_api_key(&uid_for_req).await },

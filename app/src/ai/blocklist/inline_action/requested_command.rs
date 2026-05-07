@@ -11,6 +11,7 @@ use warp_core::ui::appearance::Appearance;
 use warp_core::ui::Icon;
 use warp_editor::render::element::VerticalExpansionBehavior;
 use warpui::elements::{ConstrainedBox, ScrollbarWidth};
+use warpui::keymap::Keystroke;
 use warpui::ui_components::components::UiComponent as _;
 use warpui::{
     elements::{
@@ -68,7 +69,7 @@ use crate::view_components::compactible_split_action_button::CompactibleSplitAct
 use crate::{cmd_or_ctrl_shift, settings::InputModeSettings, ui_components::blended_colors};
 
 use super::inline_action_icons::{self, icon_size};
-use warpui::{AppContext, Element, Entity, Keystroke, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
+use warpui::{AppContext, Element, Entity, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
 use warpui::keymap::{FixedBinding};
 
 /// The vertical padding applied to the requested command row's content body.

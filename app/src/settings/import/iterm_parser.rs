@@ -7,9 +7,8 @@ use palette::Srgba;
 use pathfinder_color::ColorU;
 use plist::{Dictionary, Value};
 use warp_core::ui::theme::{AnsiColors, TerminalColors, WarpTheme};
-use warpui::{
-    fonts::FontInfo, keymap::Keystroke, platform::mac::utils::unicode_char_to_key, DisplayIdx,
-};
+use warpui::{fonts::FontInfo, keymap::Keystroke, platform::mac::utils::unicode_char_to_key, DisplayIdx, };
+use warpui::keymap::Keystroke;
 
 use crate::{
     root_view::QuakeModePinPosition,

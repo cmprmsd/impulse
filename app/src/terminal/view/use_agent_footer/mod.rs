@@ -11,7 +11,8 @@ use crate::util::image::{infer_mime_type, MAX_IMAGE_SIZE_BYTES_FOR_CLI_AGENT, MI
 use base64::Engine;
 use session_sharing_protocol::sharer::SessionSourceType;
 use warpui::clipboard::{ClipboardContent, ImageData};
-use warpui::{AppContext, Element, Entity, EntityId, Keystroke, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
+use warpui::keymap::Keystroke;
+use warpui::{AppContext, Element, Entity, EntityId, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
 use crate::legacy_stubs::{TelemetryEvent};
 mod warpify_footer;
 

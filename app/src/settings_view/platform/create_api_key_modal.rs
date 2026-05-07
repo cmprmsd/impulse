@@ -288,7 +288,7 @@ impl CreateApiKeyModal {
         };
 
         // Fire mutation via ServerApi AuthClient
-        let server_api = crate::server::server_api::ServerApiProvider::as_ref(ctx).get();
+        let server_api = crate::legacy_stubs::ServerApiProvider::as_ref(ctx).get();
         ctx.spawn(
             async move { server_api.create_api_key(final_name, team_id, expires_at).await },
             |me, res, ctx| {

@@ -4,6 +4,7 @@ use warp_core::ui::theme::color::internal_colors;
 use warp_core::ui::Icon;
 use warp_editor::editor::NavigationKey;
 use warpui::{
+use warpui::keymap::Keystroke;
     elements::{
         Border, ChildView, ClippedScrollStateHandle, ClippedScrollable, ConstrainedBox, Container,
         CornerRadius, CrossAxisAlignment, Fill, Flex, Hoverable, MainAxisAlignment, MainAxisSize,
@@ -29,7 +30,7 @@ use crate::{
     },
 };
 use warpui::{AppContext, Element, Entity, FocusContext, TypedActionView, View, ViewContext, ViewHandle};
-use warpui::{Keystroke};
+
 use warpui::fonts::{Properties, Weight};
 use warpui::keymap::{FixedBinding};
 use warpui::platform::{Cursor};

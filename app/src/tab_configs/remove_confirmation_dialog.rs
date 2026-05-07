@@ -3,6 +3,7 @@ use std::path::PathBuf;
 use pathfinder_geometry::vector::vec2f;
 use warp_core::ui::theme::Fill;
 use warpui::{
+use warpui::keymap::Keystroke;
     elements::{
         Align, ChildAnchor, ChildView, Container, OffsetPositioning, ParentAnchor,
         ParentOffsetBounds, Stack,
@@ -17,7 +18,7 @@ use crate::{
     },
 };
 use warpui::{AppContext, Element, Entity, TypedActionView, View, ViewContext, ViewHandle};
-use warpui::{Keystroke};
+
 use warpui::keymap::{FixedBinding};
 use warpui::ui_components::components::{UiComponentStyles};
 
