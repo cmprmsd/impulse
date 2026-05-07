@@ -11,6 +11,10 @@ pub struct RequestParams;
 pub mod review_comment {
     #[derive(Debug, Clone, Default)]
     pub struct ReviewComment;
+    #[derive(Debug, Clone)]
+    pub enum CommentTarget {
+        Default,
+    }
 }
 
 pub mod agent_event {
@@ -40,6 +44,13 @@ pub mod agent_event {
         pub struct Cancelled;
         #[derive(Debug, Clone)]
         pub enum Type {
+            Started(Started),
+            Completed(Completed),
+            Failed(Failed),
+            Cancelled(Cancelled),
+        }
+        #[derive(Debug, Clone)]
+        pub enum Detail {
             Started(Started),
             Completed(Completed),
             Failed(Failed),
