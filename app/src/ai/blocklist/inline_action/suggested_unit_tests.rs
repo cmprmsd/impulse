@@ -1,4 +1,3 @@
-use crate::send_telemetry_from_ctx;
 use std::sync::Arc;
 
 use markdown_parser::{FormattedText, FormattedTextFragment, FormattedTextLine};

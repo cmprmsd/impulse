@@ -1,4 +1,3 @@
-use crate::send_telemetry_from_ctx;
 use warpui::keymap::macros::*;
 use crate::{
     appearance::Appearance,

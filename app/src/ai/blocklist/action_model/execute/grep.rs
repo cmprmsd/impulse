@@ -1,4 +1,3 @@
-use crate::send_telemetry_from_app_ctx;
 use std::borrow::Cow;
 use crate::legacy_stubs::redact_secrets;
 use crate::legacy_stubs::{AIConversationId};

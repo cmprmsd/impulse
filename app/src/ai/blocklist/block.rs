@@ -1,5 +1,4 @@
 //! Implementation of "AI blocks" used to render AI queries and outputs in the blocklist.
-use crate::send_telemetry_from_ctx;
 use warpui::keymap::macros::*;
 pub mod cli;
 pub mod cli_controller;

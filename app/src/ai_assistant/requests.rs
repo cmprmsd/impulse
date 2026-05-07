@@ -1,6 +1,5 @@
 // TODO(roland): Delete all of this once agent mode fully replaces the AI assistant panel.
 // app/src/ai/request_usage_model duplicates much of this logic.
-use crate::send_telemetry_from_ctx;
 use std::sync::Arc;
 
 use chrono::{OutOfRangeError, Utc};
