@@ -49,7 +49,7 @@ use super::{
     super::telemetry::SelectionMode as TelemetrySelectionMode, embedding_model::NotebookEmbed,
     interaction_state_model::InteractionStateModel, notebook_command::NotebookCommand,
 };
-use warpui::{TextDirection, TextUnit};
+use warp_editor::selection::{TextDirection, TextUnit};
 use crate::legacy_stubs::{CloudModelEvent};
 use crate::legacy_stubs::{CloudModel};
 use warp_editor::selection::SelectionModel;

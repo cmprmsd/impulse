@@ -1,6 +1,6 @@
 #![cfg_attr(target_family = "wasm", allow(dead_code, unused_imports))]
 
-use warpui::{TextUnit};
+use warp_editor::selection::{TextUnit};
 // Adding this file level gate as some of the code around editability is not used in WASM yet.
 
 use crate::code::editor::line_iterator::LineIterator;

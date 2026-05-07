@@ -19,7 +19,7 @@ use warp_editor::{
     },
 };
 use warpui::{text::point::Point, SingletonEntity, ViewContext};
-use warpui::{TextDirection, TextUnit};
+use warp_editor::selection::{TextDirection, TextUnit};
 
 impl VimHandler for CodeEditorView {
     fn insert_char(&mut self, c: char, ctx: &mut ViewContext<Self>) {
