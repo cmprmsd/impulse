@@ -509,3 +509,106 @@ pub struct AIAgentHarness;
 
 #[derive(Debug, Clone, Default)]
 pub struct CloudConversationData;
+
+// ---------------------------------------------------------------------------
+// Fourth sweep: more deleted cloud types
+// ---------------------------------------------------------------------------
+
+#[derive(Debug, Clone, Default)]
+pub struct CloudObjectLocation;
+
+#[derive(Debug, Clone, Default)]
+pub struct GenericCloudObject;
+
+#[derive(Debug, Clone, Default)]
+pub struct ServerCloudObject;
+
+#[derive(Debug, Clone, Default)]
+pub struct GenericStringObjectUniqueKey;
+
+#[derive(Debug, Clone, Default)]
+pub struct ShareableLinkError;
+
+#[derive(Debug, Clone, Default)]
+pub struct AmbientAgentViewModel;
+
+#[derive(Debug, Clone, Default)]
+pub struct StringModel;
+
+#[derive(Debug, Clone, Default)]
+pub struct DisplaySetting;
+
+#[derive(Debug, Clone, Default)]
+pub struct LoginGatedFeature;
+
+#[derive(Debug, Clone, Default)]
+pub struct JsonSerializer;
+
+#[derive(Debug, Clone, Default)]
+pub struct SecretHandle;
+
+#[derive(Debug, Clone, Default)]
+pub struct AgentModeCitation;
+
+#[derive(Debug, Clone, Default)]
+pub struct CreateCloudObjectResult;
+
+#[derive(Debug, Clone, Default)]
+pub struct CreateObjectRequest;
+
+#[derive(Debug, Clone, Default)]
+pub struct CloudObjectSyncStatus;
+
+#[derive(Debug, Clone, Default)]
+pub struct CloudModelType;
+
+#[derive(Debug, Clone, Default)]
+pub struct CloudObjectEventEntrypoint;
+
+#[derive(Debug, Clone, Default)]
+pub struct StringWithRequestId;
+
+#[derive(Debug, Clone, Default)]
+pub struct OrchestrationCardConfig;
+
+#[derive(Debug, Clone, Default)]
+pub struct AmbientAgentTask;
+
+#[derive(Debug, Clone, Default)]
+pub struct CloudAIFactModel;
+
+#[derive(Debug, Clone, Default)]
+pub struct CloudAIFact;
+
+#[derive(Debug, Clone, Default)]
+pub struct AIFact;
+
+#[derive(Debug, Clone, Default)]
+pub struct AIMemory;
+
+#[derive(Debug, Clone, Default)]
+pub struct DriveObjectPayload;
+
+#[derive(Debug, Clone, Default)]
+pub struct CloudEnvVarCollection;
+
+#[derive(Debug, Clone, Default)]
+pub struct WarpDriveItemId;
+
+#[derive(Debug, Clone, Default)]
+pub struct WarpDriveItem;
+
+#[derive(Debug, Clone, Default)]
+pub struct DriveIndexVariant;
+
+#[derive(Debug, Clone, Default)]
+pub struct ShareableObject;
+
+#[derive(Debug, Clone, Default)]
+pub struct OpenWarpDriveObjectArgs;
+
+#[derive(Debug, Clone, Default)]
+pub struct OpenWarpDriveObjectSettings;
+
+#[derive(Debug, Clone, Default)]
+pub struct ObjectClient;
