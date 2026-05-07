@@ -514,13 +514,31 @@ If all seven pass, the fork is functional and Syncthing-ready.
     conversation log. Builds with `cargo build --example agent_demo
     -p ai` and works against OpenRouter / Ollama / `claude` CLI.
   - 101/101 unit tests pass on the `ai` crate.
-- **Phase 0 Track A — bulk syntax cleanup mostly done.** The bulk
-  `use foo::{...};` repair scripts plus hand-fixes brought the app
-  crate from ~1000 syntax errors at the start of cleanup down to
-  semantic errors only. Subsequent unmasking found ~8000 missing-
-  type errors — symptoms of the same broken-import problem in
-  files my detectors couldn't disambiguate. Not the productive
-  direction.
+- **Phase 0 Track A — substantial progress, not yet complete.** Brought
+  the app crate from ~1000 initial parse errors down to ~880 errors,
+  back up to ~3700 (each parse-fix unmasks deeper issues), then down
+  again with subsequent passes. Concrete deliverables:
+  - 4 bulk-fix scripts repaired ~700 files of orphan multi-line
+    `use foo::{...};` blocks left by the perl-strip.
+  - `app/src/legacy_stubs.rs` defines ~80 placeholder types covering
+    the deleted-cloud surface (SyncId, ServerId,
+    CloudObjectTypeAndId, BlocklistAIHistoryModel, TelemetryEvent,
+    UserWorkspaces, RemoteServerManager, ContextChipKind,
+    LaunchConfig, ChannelState, AgentRunEvent, ApiKeyUid, ...).
+    Each is `#[derive(Clone, Debug, Default)]` only — the bodies
+    are hollow; calls are dead at runtime.
+  - 323 files got missing `warpui` imports re-introduced (parsed
+    from cargo's `cannot find type X` errors and matched against
+    a known set of warpui sub-paths).
+  - 130 files had `use` statements pointing at deleted modules
+    (`crate::ai::agent::conversation`, `crate::cloud_object`,
+    `warp_multi_agent_api`, etc.) deleted, taking 297 lines with
+    them.
+  Remaining work: more rounds of the same iteration, plus crate-
+  internal type imports the script doesn't yet know about
+  (`crate::appearance::Appearance`, `crate::terminal::TerminalView`,
+  etc.). This is mechanical but slow because each `cargo check`
+  iteration takes 5–15 minutes.
 - **Phase 0 Track B / Phase 2 wiring — not started.** This is the
   remaining work. See "What's still needed" below.
 
