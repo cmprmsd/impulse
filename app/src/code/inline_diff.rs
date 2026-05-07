@@ -1,3 +1,4 @@
+use warp_core::safe_error;
 use std::rc::Rc;
 
 #[cfg(not(target_family = "wasm"))]

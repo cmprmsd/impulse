@@ -1,5 +1,6 @@
 #![allow(deprecated)]
 
+use warp_core::safe_info;
 use command::{blocking, r#async::Command};
 use futures::{StreamExt, TryStreamExt as _};
 use futures_lite::future;

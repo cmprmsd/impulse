@@ -283,6 +283,8 @@ pub use persistence::testing as sqlite_testing;
 
 use ::settings::{Setting, ToggleableSetting};
 pub use warp_core::errors::{report_error, report_if_error};
+// Re-export warp_core safe_* macros so `crate::safe_debug` etc. resolve.
+pub use warp_core::{safe_debug, safe_error, safe_info, safe_warn};
 
 #[cfg(feature = "plugin_host")]
 pub use plugin::{run_plugin_host, PLUGIN_HOST_FLAG};
