@@ -9793,29 +9793,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b89455ef41ed200cafc47c76c552ee7792370ac420497e551f16123a9135f76e"
 dependencies = [
  "prost 0.14.3",
- "prost-reflect-derive",
  "prost-types",
-]
-
-[[package]]
-name = "prost-reflect-build"
-version = "0.16.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8214ae2c30bbac390db0134d08300e770ef89b6d4e5abf855e8d300eded87e28"
-dependencies = [
- "prost-build",
- "prost-reflect",
-]
-
-[[package]]
-name = "prost-reflect-derive"
-version = "0.16.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7b6d90e29fa6c0d13c2c19ba5e4b3fb0efbf5975d27bcf4e260b7b15455bcabe"
-dependencies = [
- "proc-macro2",
- "quote",
- "syn 2.0.117",
 ]
 
 [[package]]
@@ -14145,6 +14123,7 @@ dependencies = [
  "warp_isolation_platform",
  "warp_js",
  "warp_logging",
+ "warp_multi_agent_api",
  "warp_ripgrep",
  "warp_terminal",
  "warp_util",
@@ -14460,15 +14439,7 @@ dependencies = [
 
 [[package]]
 name = "warp_multi_agent_api"
-version = "0.0.0"
-source = "git+https://github.com/warpdotdev/warp-proto-apis.git?rev=02997b8fc6a468783642d93bf1bfa89fb7f42502#02997b8fc6a468783642d93bf1bfa89fb7f42502"
-dependencies = [
- "prost 0.14.3",
- "prost-reflect",
- "prost-reflect-build",
- "prost-types",
- "regex",
-]
+version = "0.1.0"
 
 [[package]]
 name = "warp_ripgrep"
