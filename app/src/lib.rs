@@ -227,9 +227,10 @@ use ::ai::index::full_source_code_embedding::manager::CodebaseIndexManager;
 // use ::ai::index::full_source_code_embedding::SyncTask;  // unresolved (cloud detach)
 use ::ai::index::DEFAULT_SYNC_REQUESTS_PER_MIN;
 // use ::ai::project_context::model::ProjectContextModel;  // unresolved (cloud detach)
-pub use ai::agent::{todos::AIAgentTodoList, AIAgentActionResultType, FileEdit, TodoOperation};
+pub use ai::agent::{AIAgentActionResultType, FileEdit};
+// use ai::agent::{todos::AIAgentTodoList, TodoOperation};  // unresolved (cloud detach)
 // use ai::agent_conversations_model::AgentConversationsModel;  // unresolved (cloud detach)
-use ai::ambient_agents::scheduled::ScheduledAgentManager;
+// use ai::ambient_agents::scheduled::ScheduledAgentManager;  // unresolved (cloud detach)
 use ai::blocklist::{BlocklistAIHistoryModel, BlocklistAIPermissions};
 use ai::execution_profiles::editor::ExecutionProfileEditorManager;
 use ai::execution_profiles::profiles::AIExecutionProfilesModel;

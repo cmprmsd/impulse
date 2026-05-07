@@ -1,4 +1,3 @@
-use crate::send_telemetry_from_ctx;
 use itertools::Itertools;
 use warp_core::{settings::Setting, ui::appearance::Appearance};
 

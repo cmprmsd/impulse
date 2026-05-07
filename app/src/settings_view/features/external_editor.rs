@@ -1,4 +1,3 @@
-use crate::send_telemetry_from_ctx;
 use std::{cell::RefCell, collections::HashMap};
 
 use settings::{Setting, ToggleableSetting};

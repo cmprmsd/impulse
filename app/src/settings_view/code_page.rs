@@ -1,4 +1,3 @@
-use crate::send_telemetry_from_ctx;
 use crate::settings_view::SettingsSection;
 use warpui::keymap::macros::*;
 #[cfg(feature = "local_fs")]

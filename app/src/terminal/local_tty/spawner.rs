@@ -1,4 +1,3 @@
-use crate::send_telemetry_from_app_ctx;
 use anyhow::Result;
 use warpui::{AppContext, Entity, SingletonEntity};
 

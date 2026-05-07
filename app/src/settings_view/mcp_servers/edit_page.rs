@@ -1,5 +1,4 @@
 #[cfg(not(target_family = "wasm"))]
-use crate::send_telemetry_from_ctx;
 use std::sync::Arc;
 use std::{collections::HashMap, path::Path};
 

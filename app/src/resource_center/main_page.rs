@@ -1,4 +1,3 @@
-use crate::send_telemetry_from_ctx;
 use crate::{
     changelog_model::ChangelogModel,
     channel::ChannelState,

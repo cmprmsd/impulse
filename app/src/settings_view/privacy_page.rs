@@ -1,4 +1,3 @@
-use crate::send_telemetry_from_ctx;
 use crate::settings_view::SettingsSection;
 use std::borrow::Cow;
 use std::cell::RefCell;
