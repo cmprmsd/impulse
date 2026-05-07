@@ -1,7 +1,6 @@
 use std::sync::Arc;
 
-use crate::{
-    safe_info};
+use warp_core::safe_info;
 use serde::{Deserialize, Serialize};
 use warp_core::user_preferences::GetUserPreferences as _;
 use warpui::{Entity, ModelContext, SingletonEntity};

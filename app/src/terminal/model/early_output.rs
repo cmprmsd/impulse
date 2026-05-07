@@ -4,7 +4,7 @@ use std::mem;
 use pathfinder_color::ColorU;
 use string_offset::CharOffset;
 
-use crate::safe_debug;
+use warp_core::safe_debug;
 use crate::terminal::view::CONTROL_MASTER_ERROR_REGEX;
 use crate::terminal::{event::Event as TerminalEvent, event_listener::ChannelEventListener};
 

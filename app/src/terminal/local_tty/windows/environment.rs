@@ -14,7 +14,7 @@ use winreg::{
     RegKey, RegValue,
 };
 
-use crate::safe_info;
+use warp_core::safe_info;
 use crate::terminal::local_tty::{shell::ShellStarter, PtyOptions};
 
 const HONOR_PS1_NAME: &str = "WARP_HONOR_PS1";

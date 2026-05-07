@@ -1,5 +1,5 @@
 use super::{CommandExecutor, CommandOutput, ExecuteCommandOptions};
-use crate::safe_warn;
+use warp_core::safe_warn;
 use crate::terminal::shell::{Shell, ShellType};
 use anyhow::{anyhow, Result};
 use async_trait::async_trait;

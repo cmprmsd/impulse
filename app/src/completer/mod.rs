@@ -20,7 +20,7 @@ use warp_core::features::FeatureFlag;
 use warp_util::path::{EscapeChar, ShellFamily};
 use warpui::{AppContext, SingletonEntity};
 
-use crate::safe_warn;
+use warp_core::safe_warn;
 use crate::terminal::model::session::{ExecuteCommandOptions, Session, SessionType};
 use crate::util::AsciiDebug;
 use crate::workflows::aliases::WorkflowAliases;

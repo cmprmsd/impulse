@@ -1,6 +1,6 @@
 use super::{CommandExecutor, CommandOutput, ExecuteCommandOptions};
 use crate::env_vars::{serialize_variables_for_shell, EnvVarValue};
-use crate::safe_warn;
+use warp_core::safe_warn;
 use crate::terminal::shell::{Shell, ShellType};
 use anyhow::{anyhow, Result};
 use async_trait::async_trait;

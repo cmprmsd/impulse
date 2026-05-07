@@ -2,7 +2,7 @@ use crate::send_telemetry_from_ctx;
 use crate::legacy_stubs::{BlocklistAIHistoryModel};
 use crate::legacy_stubs::{AIConversationId};
 use crate::terminal::model::session::active_session::ActiveSession;
-use crate::{safe_warn};
+use warp_core::safe_warn;
 mod apply_diff_model;
 mod diff_application;
 mod telemetry;
