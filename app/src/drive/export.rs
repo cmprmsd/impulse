@@ -21,12 +21,12 @@ use warpui::{
     AppContext, Entity, ModelContext, SingletonEntity, WindowId,
 };
 
-use crate::{
-    cloud_object::{model::persistence::CloudModel, Space},
-    safe_warn,
-    view_components::DismissibleToast,
-    workspace::{active_terminal_in_window, ToastStack},
-};
+// use crate::{  // unresolved (cloud detach)
+//     cloud_object::{model::persistence::CloudModel, Space},
+//     safe_warn,
+//     view_components::DismissibleToast,
+//     workspace::{active_terminal_in_window, ToastStack},
+// };
 #[cfg(feature = "local_fs")]
 use crate::{
     notebooks::export_notebook, server::cloud_objects::update_manager::get_duplicate_object_name,

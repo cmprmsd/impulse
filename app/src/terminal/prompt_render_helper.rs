@@ -246,7 +246,7 @@ impl PromptRenderHelper {
     }
 
     fn bootstrapping_shell_message(&self, model: &TerminalModel, sessions: &Sessions) -> String {
-        use crate::terminal::event::RemoteServerSetupState;
+//         use crate::terminal::event::RemoteServerSetupState;  // unresolved (cloud detach)
 
         // If a remote server setup is in progress for the pending session,
         // show a stage-specific message instead of the generic "Starting shell...".

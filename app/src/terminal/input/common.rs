@@ -1,19 +1,19 @@
 use std::sync::Arc;
 
-use crate::{
-    ai::{
-        llms::{is_using_api_key_for_provider, LLMPreferences},
-        AIRequestUsageModel, BuyCreditsBannerDisplayState,
-    },
-    appearance::Appearance,
-    settings::{AISettings, InputSettings},
-    terminal::{
-        buy_credits_banner::BuyCreditsBanner,
-        input::{Input, InputAction, InputSuggestionsMode, MenuPositioning},
-        model::TerminalModel,
-        view::{TerminalAction, PADDING_LEFT},
-    },
-};
+// use crate::{  // unresolved (cloud detach)
+//     ai::{
+//         llms::{is_using_api_key_for_provider, LLMPreferences},
+//         AIRequestUsageModel, BuyCreditsBannerDisplayState,
+//     },
+//     appearance::Appearance,
+//     settings::{AISettings, InputSettings},
+//     terminal::{
+//         buy_credits_banner::BuyCreditsBanner,
+//         input::{Input, InputAction, InputSuggestionsMode, MenuPositioning},
+//         model::TerminalModel,
+//         view::{TerminalAction, PADDING_LEFT},
+//     },
+// };
 use pathfinder_geometry::vector::vec2f;
 use vim::vim::{VimMode, VimState};
 use warp_completer::completer::Description;

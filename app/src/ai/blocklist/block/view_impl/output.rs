@@ -17,9 +17,9 @@ use crate::ai::blocklist::inline_action::create_or_edit_document::CreateOrEditDo
 use crate::ai::blocklist::secret_redaction::SecretRedactionState;
 use crate::ai::blocklist::view_util::format_credits;
 use crate::ai::skills::SkillOpenOrigin;
-use crate::ai::skills::{
-    icon_override_for_skill_name, render_skill_button, skill_path_from_file_path,
-};
+// use crate::ai::skills::{  // unresolved (cloud detach)
+//     icon_override_for_skill_name, render_skill_button, skill_path_from_file_path,
+// };
 
 use crate::code::editor_management::CodeSource;
 use crate::terminal::shared_session::SharedSessionStatus;

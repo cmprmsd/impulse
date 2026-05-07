@@ -1,3 +1,4 @@
+use crate::report_if_error;
 use crate::legacy_stubs::{AmbientAgentTaskId, AnonymousUserSignupEntrypoint, AuthManager, AuthState, AuthStateProvider, CloseTarget, CloudModel, CodebaseIndexManager, GenericStringObjectFormat, JsonObjectType, ObjectOperation, ObjectType, ObjectUid, OperationSuccessType, Owner, PaletteSource, RemoteServerManager, RemoteServerManagerEvent, ServerApi, ServerApiProvider, ServerId, SharingDialogSource, Space, SyncId, UpdateManager, UpdateManagerEvent, UserWorkspaces};
 use crate::legacy_stubs::{AIConversationId, ServerConversationToken};
 use crate::legacy_stubs::{AIClient};
@@ -70,16 +71,16 @@ use crate::notification::NotificationContext;
 use crate::pane_group::pane::ActionOrigin;
 use crate::projects::ProjectManagementModel;
 use crate::settings_view::mcp_servers_page::MCPServersSettingsPage;
-use crate::terminal::enable_auto_reload_modal::{
-    EnableAutoReloadModal, EnableAutoReloadModalEvent,
-};
+// use crate::terminal::enable_auto_reload_modal::{  // unresolved (cloud detach)
+//     EnableAutoReloadModal, EnableAutoReloadModalEvent,
+// };
 use crate::terminal::model::terminal_model::ConversationTranscriptViewerStatus;
 use crate::terminal::session_settings::SessionSettings;
 use crate::terminal::view::inline_banner::ZeroStatePromptSuggestionType;
-use crate::terminal::view::{
-    AgentOnboardingVersion, ConversationRestorationInNewPaneType, OnboardingIntention,
-    OnboardingVersion,
-};
+// use crate::terminal::view::{  // unresolved (cloud detach)
+//     AgentOnboardingVersion, ConversationRestorationInNewPaneType, OnboardingIntention,
+//     OnboardingVersion,
+// };
 use crate::ui_components::red_notification_dot::RedNotificationDot;
 #[cfg(feature = "local_fs")]
 use crate::util::file::external_editor::settings::OpenConversationPreference;
@@ -106,16 +107,16 @@ use crate::terminal::cli_agent_sessions::{CLIAgentSessionsModel, CLIAgentSession
 use crate::workspace::header_toolbar_editor::{HeaderToolbarEditorEvent, HeaderToolbarEditorModal};
 use crate::workspace::header_toolbar_item::HeaderToolbarItemKind;
 use crate::workspace::tab_settings::TabCloseButtonPosition;
-use crate::workspace::view::build_plan_migration_modal::{
-    BuildPlanMigrationModal, BuildPlanMigrationModalEvent,
-};
-use crate::workspace::view::cloud_agent_capacity_modal::{
-    CloudAgentCapacityModal, CloudAgentCapacityModalEvent, CloudAgentCapacityModalVariant,
-};
+// use crate::workspace::view::build_plan_migration_modal::{  // unresolved (cloud detach)
+//     BuildPlanMigrationModal, BuildPlanMigrationModalEvent,
+// };
+// use crate::workspace::view::cloud_agent_capacity_modal::{  // unresolved (cloud detach)
+//     CloudAgentCapacityModal, CloudAgentCapacityModalEvent, CloudAgentCapacityModalVariant,
+// };
 use crate::workspace::view::codex_modal::{CodexModal, CodexModalEvent};
-use crate::workspace::view::free_tier_limit_hit_modal::{
-    FreeTierLimitHitModal, FreeTierLimitHitModalEvent,
-};
+// use crate::workspace::view::free_tier_limit_hit_modal::{  // unresolved (cloud detach)
+//     FreeTierLimitHitModal, FreeTierLimitHitModalEvent,
+// };
 use crate::workspace::view::launch_modal::{LaunchModal, LaunchModalEvent, OzLaunchSlide};
 use crate::workspace::view::openwarp_launch_modal::{
     OpenWarpLaunchModal, OpenWarpLaunchModalEvent,
@@ -267,7 +268,7 @@ use crate::terminal::view::docker_sandbox::DEFAULT_DOCKER_SANDBOX_BASE_IMAGE;
 use crate::terminal::{self, SizeInfo, TerminalView};
 #[cfg(target_os = "macos")]
 use crate::workspace::cli_install;
-use crate::{report_if_error, AgentNotificationsModel};
+// use crate::{report_if_error, AgentNotificationsModel};  // unresolved (cloud detach)
 use ::settings::{Setting, ToggleableSetting};
 use warp_core::features::FeatureFlag;
 

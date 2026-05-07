@@ -1,14 +1,14 @@
 use std::{collections::HashMap, ffi::OsString, path::PathBuf, sync::Arc};
 
-use crate::ai::{
-    agent_sdk::{
-        driver::{
-            harness::{harness_kind, HarnessKind},
-            AgentDriverError,
-        },
-        task_env_vars, validate_cli_installed,
-    },
-};
+// use crate::ai::{  // unresolved (cloud detach)
+//     agent_sdk::{
+//         driver::{
+//             harness::{harness_kind, HarnessKind},
+//             AgentDriverError,
+//         },
+//         task_env_vars, validate_cli_installed,
+//     },
+// };
 use crate::terminal::cli_agent_sessions::plugin_manager::plugin_manager_for;
 use crate::terminal::shell::ShellType;
 use shell_words::quote as shell_quote;

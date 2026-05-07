@@ -8,24 +8,24 @@ use warp_core::send_telemetry_from_ctx;
 use warpui::{Entity, EntityId, ModelContext, ModelHandle, SingletonEntity};
 
 use crate::ai::blocklist::context_model::block_context_from_terminal_model;
-use crate::{
-    ai::{
-        agent::{ AIAgentActionId, AIAgentActionResultType,
-            AIAgentContext, CancellationReason, ReadShellCommandOutputResult,
-            RequestCommandOutputResult, TransferShellCommandControlToUserResult,
-            WriteToLongRunningShellCommandResult},
-        blocklist::{
-            agent_view::{AgentViewController, AgentViewEntryOrigin},
-            BlocklistAIActionEvent, BlocklistAIActionModel, BlocklistAIController,
-            BlocklistAIHistoryEvent,
-        },
-    },
-    terminal::{
-        model::block::BlockId,
-        model_events::{ModelEvent, ModelEventDispatcher},
-        TerminalModel,
-    },
-};
+// use crate::{  // unresolved (cloud detach)
+//     ai::{
+//         agent::{ AIAgentActionId, AIAgentActionResultType,
+//             AIAgentContext, CancellationReason, ReadShellCommandOutputResult,
+//             RequestCommandOutputResult, TransferShellCommandControlToUserResult,
+//             WriteToLongRunningShellCommandResult},
+//         blocklist::{
+//             agent_view::{AgentViewController, AgentViewEntryOrigin},
+//             BlocklistAIActionEvent, BlocklistAIActionModel, BlocklistAIController,
+//             BlocklistAIHistoryEvent,
+//         },
+//     },
+//     terminal::{
+//         model::block::BlockId,
+//         model_events::{ModelEvent, ModelEventDispatcher},
+//         TerminalModel,
+//     },
+// };
 use crate::legacy_stubs::{BlocklistAIHistoryModel, TelemetryEvent};
 
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]

@@ -1,3 +1,4 @@
+use crate::report_if_error;
 use crate::legacy_stubs::{PaletteSource};
 use crate::legacy_stubs::{AIConversationId, AgentViewController};
 use crate::legacy_stubs::{AnonymousUserSignupEntrypoint, ServerApi, SyncId};
@@ -53,7 +54,7 @@ use crate::settings::PrivacySettings;
 use crate::suggestions::ignored_suggestions_model::{
     IgnoredSuggestionsModel, IgnoredSuggestionsModelEvent, SuggestionType,
 };
-use crate::terminal::buy_credits_banner::{BuyCreditsBanner, BuyCreditsBannerEvent};
+// use crate::terminal::buy_credits_banner::{BuyCreditsBanner, BuyCreditsBannerEvent};  // unresolved (cloud detach)
 #[cfg(not(target_family = "wasm"))]
 use crate::terminal::cli_agent_sessions::plugin_manager::PluginModalKind;
 use crate::terminal::cli_agent_sessions::{
@@ -105,110 +106,110 @@ use crate::ai::attachment_utils::MAX_ATTACHMENT_SIZE_BYTES;
 use crate::ai::block_context::BlockContext;
 use crate::ai::blocklist::AttachmentType;
 use crate::ai::mcp::TemplatableMCPServerManager;
-use crate::{
-    ai::{
-        agent::{AIAgentContext, EntrypointType},
-        blocklist::{
-            prompt::prompt_alert::{PromptAlertEvent, PromptAlertView},
-            render_ai_agent_mode_icon, render_ai_follow_up_icon,
-            telemetry_banner::should_collect_ai_ugc_telemetry,
-            BlocklistAIContextEvent, BlocklistAIContextModel, BlocklistAIController,
-            BlocklistAIControllerEvent, BlocklistAIHistoryEvent, BlocklistAIHistoryModel,
-            BlocklistAIInputEvent, BlocklistAIInputModel, InputConfig, InputType,
-            BLOCK_CONTEXT_ATTACHMENT_REGEX, DIFF_HUNK_ATTACHMENT_REGEX,
-            DRIVE_OBJECT_ATTACHMENT_REGEX,
-        },
-        llms::{LLMPreferences, LLMPreferencesEvent},
-        predict::{
-            next_command_model::{
-                is_command_valid, is_next_command_enabled, NextCommandModel, NextCommandModelEvent,
-                NextCommandSuggestionState, ZeroStateSuggestionInfo,
-            },
-            predict_am_queries::PredictAMQueriesRequest,
-        },
-        AIRequestUsageModel,
-    },
-    ai_assistant::execution_context::WarpAiExecutionContext,
-    appearance::{Appearance, AppearanceEvent},
-    channel::{Channel, ChannelState},
-    cmd_or_ctrl_shift,
-    code_review::diff_state::DiffMode,
-    completer::SessionContext,
-    context_chips::{
-        display::{PromptDisplay, PromptDisplayEvent},
-        display_chip::DisplayChipConfig,
-        prompt_type::PromptType,
-    },
-    debounce::debounce,
-    editor::{
-        default_cursor_colors, position_id_for_cached_point, position_id_for_cursor,
-        position_id_for_first_cursor, AttachedImage as AttachedImageRawData,
-        AutosuggestionLocation, AutosuggestionType, BaselinePositionComputationMethod,
-        CommandXRayAnchor, CrdtOperation, CursorColors, DisplayPoint, EditOrigin, EditorAction,
-        EditorDecoratorElements, EditorOptions, EditorSnapshot, EditorView, Event as EditorEvent,
-        ImageContextOptions, InteractionState, PathTransformerFn, PlainTextEditorViewAction,
-        Point as BufferPoint, PropagateAndNoOpEscapeKey, PropagateAndNoOpNavigationKeys,
-        PropagateHorizontalNavigationKeys, ReplicaId, TextColors, TextRun,
-        MAX_IMAGES_PER_CONVERSATION,
-    },
-    features::FeatureFlag,
-    input_suggestions::{
-        Event as InputSuggestionsEvent, HistoryInputSuggestion, InputSuggestions,
-        TabCompletionsPreselectOption,
-    },
-    network::NetworkStatus,
-    pane_group::PaneGroupAction,
-    prefix::longest_common_prefix,
-    report_if_error,
-    resource_center::{
-        mark_feature_used_and_write_to_user_defaults, Tip, TipAction, TipHint, TipsCompleted,
-    },
-    search::{
-        ai_context_menu::{
-            mixer::AIContextMenuSearchableAction, search::is_valid_search_query,
-            view::AIContextMenuAction,
-        },
-        QueryFilter,
-    },
-    send_telemetry_from_ctx,
-    session_management::SessionNavigationPromptElements,
-    settings::{
-        AISettings, AISettingsChangedEvent, AliasExpansionSettings, AppEditorSettings,
-        AppEditorSettingsChangedEvent, InputModeSettings, InputSettings, InputSettingsChangedEvent,
-        MAX_TIMES_TO_SHOW_AUTOSUGGESTION_HINT,
-    },
-    settings_view::{flags, SettingsSection},
-    terminal::view::inline_banner::{PromptSuggestionsEvent, PromptSuggestionsView},
-    ui_components::{blended_colors, icons::Icon},
-    user_config::WarpConfig,
-    util::bindings::{self, CustomAction},
-    util::image::MAX_IMAGE_COUNT_FOR_QUERY,
-    view_components::{DismissibleToast, ToastFlavor},
-    voltron::{
-        Voltron, VoltronEvent, VoltronFeatureView, VoltronFeatureViewHandle,
-        VoltronFeatureViewMeta, VoltronItem, VoltronMetadata,
-    },
-    workflows::{
-        self,
-        aliases::WorkflowAliases,
-        command_parser::{
-            compute_workflow_display_data, compute_workflow_display_data_for_history_command,
-            compute_workflow_display_data_with_overrides, WorkflowArgumentIndex,
-            WorkflowDisplayData,
-        },
-        info_box::{
-            WorkflowsInfoBoxViewEvent, WorkflowsMoreInfoView, WORKFLOW_PARAMETER_HIGHLIGHT_COLOR,
-        },
-        local_workflows::LocalWorkflows,
-        workflow_enum::EnumVariants,
-        WorkflowSelectionSource, WorkflowSource, WorkflowType,
-    },
-    workspace::{
-        sync_inputs::SyncedInputState, CommandSearchOptions, ForkFromExchange,
-        ForkedConversationDestination, InitContent, RestoreConversationLayout, ToastStack,
-        WorkspaceAction,
-    },
-    AgentModeEntrypoint, ServerApiProvider};
+// use crate::{  // unresolved (cloud detach)
+//     ai::{
+//         agent::{AIAgentContext, EntrypointType},
+//         blocklist::{
+//             prompt::prompt_alert::{PromptAlertEvent, PromptAlertView},
+//             render_ai_agent_mode_icon, render_ai_follow_up_icon,
+//             telemetry_banner::should_collect_ai_ugc_telemetry,
+//             BlocklistAIContextEvent, BlocklistAIContextModel, BlocklistAIController,
+//             BlocklistAIControllerEvent, BlocklistAIHistoryEvent, BlocklistAIHistoryModel,
+//             BlocklistAIInputEvent, BlocklistAIInputModel, InputConfig, InputType,
+//             BLOCK_CONTEXT_ATTACHMENT_REGEX, DIFF_HUNK_ATTACHMENT_REGEX,
+//             DRIVE_OBJECT_ATTACHMENT_REGEX,
+//         },
+//         llms::{LLMPreferences, LLMPreferencesEvent},
+//         predict::{
+//             next_command_model::{
+//                 is_command_valid, is_next_command_enabled, NextCommandModel, NextCommandModelEvent,
+//                 NextCommandSuggestionState, ZeroStateSuggestionInfo,
+//             },
+//             predict_am_queries::PredictAMQueriesRequest,
+//         },
+//         AIRequestUsageModel,
+//     },
+//     ai_assistant::execution_context::WarpAiExecutionContext,
+//     appearance::{Appearance, AppearanceEvent},
+//     channel::{Channel, ChannelState},
+//     cmd_or_ctrl_shift,
+//     code_review::diff_state::DiffMode,
+//     completer::SessionContext,
+//     context_chips::{
+//         display::{PromptDisplay, PromptDisplayEvent},
+//         display_chip::DisplayChipConfig,
+//         prompt_type::PromptType,
+//     },
+//     debounce::debounce,
+//     editor::{
+//         default_cursor_colors, position_id_for_cached_point, position_id_for_cursor,
+//         position_id_for_first_cursor, AttachedImage as AttachedImageRawData,
+//         AutosuggestionLocation, AutosuggestionType, BaselinePositionComputationMethod,
+//         CommandXRayAnchor, CrdtOperation, CursorColors, DisplayPoint, EditOrigin, EditorAction,
+//         EditorDecoratorElements, EditorOptions, EditorSnapshot, EditorView, Event as EditorEvent,
+//         ImageContextOptions, InteractionState, PathTransformerFn, PlainTextEditorViewAction,
+//         Point as BufferPoint, PropagateAndNoOpEscapeKey, PropagateAndNoOpNavigationKeys,
+//         PropagateHorizontalNavigationKeys, ReplicaId, TextColors, TextRun,
+//         MAX_IMAGES_PER_CONVERSATION,
+//     },
+//     features::FeatureFlag,
+//     input_suggestions::{
+//         Event as InputSuggestionsEvent, HistoryInputSuggestion, InputSuggestions,
+//         TabCompletionsPreselectOption,
+//     },
+//     network::NetworkStatus,
+//     pane_group::PaneGroupAction,
+//     prefix::longest_common_prefix,
+//     report_if_error,
+//     resource_center::{
+//         mark_feature_used_and_write_to_user_defaults, Tip, TipAction, TipHint, TipsCompleted,
+//     },
+//     search::{
+//         ai_context_menu::{
+//             mixer::AIContextMenuSearchableAction, search::is_valid_search_query,
+//             view::AIContextMenuAction,
+//         },
+//         QueryFilter,
+//     },
+//     send_telemetry_from_ctx,
+//     session_management::SessionNavigationPromptElements,
+//     settings::{
+//         AISettings, AISettingsChangedEvent, AliasExpansionSettings, AppEditorSettings,
+//         AppEditorSettingsChangedEvent, InputModeSettings, InputSettings, InputSettingsChangedEvent,
+//         MAX_TIMES_TO_SHOW_AUTOSUGGESTION_HINT,
+//     },
+//     settings_view::{flags, SettingsSection},
+//     terminal::view::inline_banner::{PromptSuggestionsEvent, PromptSuggestionsView},
+//     ui_components::{blended_colors, icons::Icon},
+//     user_config::WarpConfig,
+//     util::bindings::{self, CustomAction},
+//     util::image::MAX_IMAGE_COUNT_FOR_QUERY,
+//     view_components::{DismissibleToast, ToastFlavor},
+//     voltron::{
+//         Voltron, VoltronEvent, VoltronFeatureView, VoltronFeatureViewHandle,
+//         VoltronFeatureViewMeta, VoltronItem, VoltronMetadata,
+//     },
+//     workflows::{
+//         self,
+//         aliases::WorkflowAliases,
+//         command_parser::{
+//             compute_workflow_display_data, compute_workflow_display_data_for_history_command,
+//             compute_workflow_display_data_with_overrides, WorkflowArgumentIndex,
+//             WorkflowDisplayData,
+//         },
+//         info_box::{
+//             WorkflowsInfoBoxViewEvent, WorkflowsMoreInfoView, WORKFLOW_PARAMETER_HIGHLIGHT_COLOR,
+//         },
+//         local_workflows::LocalWorkflows,
+//         workflow_enum::EnumVariants,
+//         WorkflowSelectionSource, WorkflowSource, WorkflowType,
+//     },
+//     workspace::{
+//         sync_inputs::SyncedInputState, CommandSearchOptions, ForkFromExchange,
+//         ForkedConversationDestination, InitContent, RestoreConversationLayout, ToastStack,
+//         WorkspaceAction,
+//     },
+//     AgentModeEntrypoint, ServerApiProvider};
 
 use ai::skills::SkillReference;
 use base64::Engine as _;
@@ -288,45 +289,45 @@ pub use warpui::{
 };
 
 use self::decorations::InputBackgroundJobOptions;
-use super::{
-    alias::is_expandable_alias,
-    block_list_viewport::InputMode,
-    event::{BlockCompletedEvent, BlockType, UserBlockCompleted},
-    ligature_settings::LigatureSettings,
-    model::{
-        block::{AgentInteractionMetadata, BlockId, BlockMetadata, BlocklistEnvVarMetadata},
-        session::{Session, SessionId, SessionType, Sessions},
-    },
-    prompt,
-    prompt_render_helper::{
-        should_render_prompt_on_same_line, should_render_prompt_using_editor_decorator_elements,
-        PromptRenderHelper, SameLinePromptElements,
-    },
-    safe_mode_settings::{
-        get_secret_obfuscation_mode, SafeModeSettings, SafeModeSettingsChangedEvent,
-    },
-    session_settings::{SessionSettings, SessionSettingsChangedEvent},
-    settings::{SpacingMode, TerminalSettings, TerminalSettingsChangedEvent},
-    shared_session::{
-        presence_manager::PresenceManager, viewer::history_model::SharedSessionHistoryModel,
-        SharedSessionStatus,
-    },
-    shell::ShellType,
-    universal_developer_input::{
-        UniversalDeveloperInputButtonBar, UniversalDeveloperInputButtonBarEvent,
-    },
-    view::{
-        ambient_agent::{AmbientAgentViewModel, AmbientAgentViewModelEvent},
-        inline_banner::{
-            PromptSuggestionBannerState, ZeroStatePromptSuggestionTriggeredFrom,
-            ZeroStatePromptSuggestionType,
-        },
-        ExecuteCommandEvent, SyncInputType, TerminalAction,
-        PADDING_LEFT as TERMINAL_VIEW_PADDING_LEFT,
-    },
-    warpify::SubshellSource,
-    History, HistoryEntry, SizeInfo, TerminalModel, UpArrowHistoryConfig,
-};
+// use super::{  // unresolved (cloud detach)
+//     alias::is_expandable_alias,
+//     block_list_viewport::InputMode,
+//     event::{BlockCompletedEvent, BlockType, UserBlockCompleted},
+//     ligature_settings::LigatureSettings,
+//     model::{
+//         block::{AgentInteractionMetadata, BlockId, BlockMetadata, BlocklistEnvVarMetadata},
+//         session::{Session, SessionId, SessionType, Sessions},
+//     },
+//     prompt,
+//     prompt_render_helper::{
+//         should_render_prompt_on_same_line, should_render_prompt_using_editor_decorator_elements,
+//         PromptRenderHelper, SameLinePromptElements,
+//     },
+//     safe_mode_settings::{
+//         get_secret_obfuscation_mode, SafeModeSettings, SafeModeSettingsChangedEvent,
+//     },
+//     session_settings::{SessionSettings, SessionSettingsChangedEvent},
+//     settings::{SpacingMode, TerminalSettings, TerminalSettingsChangedEvent},
+//     shared_session::{
+//         presence_manager::PresenceManager, viewer::history_model::SharedSessionHistoryModel,
+//         SharedSessionStatus,
+//     },
+//     shell::ShellType,
+//     universal_developer_input::{
+//         UniversalDeveloperInputButtonBar, UniversalDeveloperInputButtonBarEvent,
+//     },
+//     view::{
+//         ambient_agent::{AmbientAgentViewModel, AmbientAgentViewModelEvent},
+//         inline_banner::{
+//             PromptSuggestionBannerState, ZeroStatePromptSuggestionTriggeredFrom,
+//             ZeroStatePromptSuggestionType,
+//         },
+//         ExecuteCommandEvent, SyncInputType, TerminalAction,
+//         PADDING_LEFT as TERMINAL_VIEW_PADDING_LEFT,
+//     },
+//     warpify::SubshellSource,
+//     History, HistoryEntry, SizeInfo, TerminalModel, UpArrowHistoryConfig,
+// };
 use async_channel::Sender;
 use futures::stream::AbortHandle;
 use parking_lot::FairMutex;

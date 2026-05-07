@@ -1,6 +1,6 @@
 //! This module contains the implementation of `BackingView` for `TerminalView`, as well as
 //! business logic for integrating the terminal view with the pane infra (`crate::pane_group`).
-use super::ambient_agent::is_cloud_agent_pre_first_exchange;
+// use super::ambient_agent::is_cloud_agent_pre_first_exchange;  // unresolved (cloud detach)
 use super::shared_session::adapter::Kind as SharedSessionKind;
 use super::{Event, PaneConfiguration, TerminalAction, TerminalViewState, Viewer};
 use crate::ai::blocklist::BlocklistAIHistoryModel;

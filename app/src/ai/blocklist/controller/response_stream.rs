@@ -7,11 +7,11 @@ use futures::channel::oneshot;
 use uuid::Uuid;
 use warpui::{Entity, ModelContext, SingletonEntity};
 
-use crate::{
-    ai::agent::{
-        api::{self, generate_multi_agent_output, ConvertToAPITypeError},
-        AIIdentifiers, CancellationReason},
-};
+// use crate::{  // unresolved (cloud detach)
+//     ai::agent::{
+//         api::{self, generate_multi_agent_output, ConvertToAPITypeError},
+//         AIIdentifiers, CancellationReason},
+// };
 use crate::legacy_stubs::{ServerApiProvider};
 use crate::network::NetworkStatus;
 use crate::{report_error, send_telemetry_from_ctx};

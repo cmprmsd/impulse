@@ -1,8 +1,8 @@
-use crate::ai::agent::conversation::AIConversationId;
+// use crate::ai::agent::conversation::AIConversationId;  // unresolved (cloud detach)
 use crate::ai::agent_management::telemetry::{AgentManagementTelemetryEvent, ArtifactType};
-use crate::ai::ambient_agents::{
-    conversation_output_status_from_conversation, AmbientAgentTaskId, AmbientConversationStatus,
-};
+// use crate::ai::ambient_agents::{  // unresolved (cloud detach)
+//     conversation_output_status_from_conversation, AmbientAgentTaskId, AmbientConversationStatus,
+// };
 use crate::ai::artifacts::{Artifact, ArtifactButtonsRow, ArtifactButtonsRowEvent};
 use crate::ai::blocklist::{format_credits, BlocklistAIHistoryModel};
 use crate::appearance::Appearance;
@@ -20,7 +20,7 @@ use warp_core::features::FeatureFlag;
 use warp_core::paths::home_relative_path;
 
 #[cfg(not(target_family = "wasm"))]
-use crate::ai::ambient_agents::AmbientAgentTask;
+// use crate::ai::ambient_agents::AmbientAgentTask;  // unresolved (cloud detach)
 use warp_core::send_telemetry_from_ctx;
 use warp_core::ui::icons::Icon;
 use warp_core::ui::theme::{AnsiColorIdentifier, Fill};

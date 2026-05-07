@@ -35,7 +35,7 @@ use warpui::{
 };
 use warpui::{AppContext};
 use crate::pane_group::pane::view::PaneHeaderCustomAction;
-use crate::terminal::TerminalAction;
+// use crate::terminal::TerminalAction;  // unresolved (cloud detach)
 use crate::terminal::view::TerminalView;
 
 pub const TOGGLE_BLOCK_FILTER_KEYBINDING: &str =

@@ -5,6 +5,8 @@
 //! exposes methods for running query autodetection, where an algorithm determines if the current
 //! input contents are an AI query or shell command, which is then used to update the input mode.
 
+use crate::report_if_error;
+use crate::send_telemetry_from_ctx;
 use std::sync::Arc;
 
 use futures::stream::AbortHandle;
@@ -27,16 +29,16 @@ use crate::terminal::cli_agent_sessions::{
 use crate::PrivacySettings;
 use warp_completer::completer::CompletionContext;
 
-use crate::{
-    input_classifier::InputClassifierModel,
-    report_if_error, send_telemetry_from_ctx,
-    settings::{AISettings, AISettingsChangedEvent, InputBoxType, InputSettings},
-    terminal::{
-        input::decorations::ParsedTokensSnapshot,
-        model::{rich_content::RichContentType, session::SessionId},
-        History, TerminalModel,
-    },
-};
+// use crate::{  // unresolved (cloud detach)
+//     input_classifier::InputClassifierModel,
+//     report_if_error, send_telemetry_from_ctx,
+//     settings::{AISettings, AISettingsChangedEvent, InputBoxType, InputSettings},
+//     terminal::{
+//         input::decorations::ParsedTokensSnapshot,
+//         model::{rich_content::RichContentType, session::SessionId},
+//         History, TerminalModel,
+//     },
+// };
 
 use super::telemetry_banner::should_collect_ai_ugc_telemetry;
 use crate::legacy_stubs::{TelemetryEvent};

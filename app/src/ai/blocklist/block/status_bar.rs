@@ -1,3 +1,4 @@
+use crate::send_telemetry_from_app_ctx;
 use std::{collections::HashSet, sync::Arc, time::Duration};
 
 use super::{
@@ -9,64 +10,64 @@ use super::{
         WarpingIndicatorProps, WarpingProps, LOAD_OUTPUT_MESSAGE, WAITING_FOR_USER_INPUT_MESSAGE,
     },
 };
-use crate::{
-    ai::agent_tips::AITipModel,
-    terminal::{
-        input::buffer_model::InputBufferUpdateEvent,
-        view::ambient_agent::is_cloud_agent_pre_first_exchange,
-    },
-};
-use crate::{
-    ai::blocklist::agent_view::{
-        agent_view_bg_fill, child_agent_status_card::ChildAgentStatusCard, AgentMessageBar,
-        AgentViewController, EphemeralMessageModel,
-    },
-    terminal::input::{
-        buffer_model::InputBufferModel,
-        message_bar::common::render_standard_message_bar,
-        message_bar::{Message, MessageItem},
-        slash_command_model::SlashCommandModel,
-        suggestions_mode_model::InputSuggestionsModeModel,
-    },
-};
-use warp_multi_agent_api as api;
+// use crate::{  // unresolved (cloud detach)
+//     ai::agent_tips::AITipModel,
+//     terminal::{
+//         input::buffer_model::InputBufferUpdateEvent,
+//         view::ambient_agent::is_cloud_agent_pre_first_exchange,
+//     },
+// };
+// use crate::{  // unresolved (cloud detach)
+//     ai::blocklist::agent_view::{
+//         agent_view_bg_fill, child_agent_status_card::ChildAgentStatusCard, AgentMessageBar,
+//         AgentViewController, EphemeralMessageModel,
+//     },
+//     terminal::input::{
+//         buffer_model::InputBufferModel,
+//         message_bar::common::render_standard_message_bar,
+//         message_bar::{Message, MessageItem},
+//         slash_command_model::SlashCommandModel,
+//         suggestions_mode_model::InputSuggestionsModeModel,
+//     },
+// };
+// use warp_multi_agent_api as api;  // unresolved (cloud detach)
 
-use crate::{
-    ai::{
-        agent::{
-            conversation::AIConversationId, icons, AIAgentExchangeId, AIAgentOutput,
-            AIAgentOutputMessageType, CancellationReason, SummarizationType,
-        },
-        blocklist::{
-            agent_view::shortcuts::AgentShortcutViewModel,
-            ai_brand_color,
-            model::AIBlockModelHelper,
-            summarization_cancel_dialog::{
-                self, SummarizationCancelDialog, SummarizationCancelDialogEvent,
-            },
-            BlocklistAIActionEvent, BlocklistAIActionModel, BlocklistAIContextEvent,
-            BlocklistAIContextModel, BlocklistAIController, BlocklistAIHistoryEvent,
-            BlocklistAIInputEvent, BlocklistAIInputModel, ResponseStreamId,
-        },
-        llms::LLMPreferences,
-        AgentTip,
-    },
-    send_telemetry_from_app_ctx,
-    server::telemetry::TelemetryEvent,
-    settings::{InputModeSettings, InputSettings},
-    settings_view::keybindings::KeybindingChangedNotifier,
-    terminal::{
-        input::SET_INPUT_MODE_TERMINAL_ACTION_NAME,
-        model::block::LONG_RUNNING_COMMAND_DURATION_MS,
-        model_events::{ModelEvent, ModelEventDispatcher},
-        view::ambient_agent::{AmbientAgentViewModel, AmbientAgentViewModelEvent},
-        warpify::render::LEFT_STRIPE_WIDTH,
-        TerminalModel, CANCEL_COMMAND_KEYBINDING, TOGGLE_AUTOEXECUTE_MODE_KEYBINDING,
-        TOGGLE_HIDE_CLI_RESPONSES_KEYBINDING, TOGGLE_QUEUE_NEXT_PROMPT_KEYBINDING,
-    },
-    util::bindings::keybinding_name_to_keystroke,
-    BlocklistAIHistoryModel,
-};
+// use crate::{  // unresolved (cloud detach)
+//     ai::{
+//         agent::{
+//             conversation::AIConversationId, icons, AIAgentExchangeId, AIAgentOutput,
+//             AIAgentOutputMessageType, CancellationReason, SummarizationType,
+//         },
+//         blocklist::{
+//             agent_view::shortcuts::AgentShortcutViewModel,
+//             ai_brand_color,
+//             model::AIBlockModelHelper,
+//             summarization_cancel_dialog::{
+//                 self, SummarizationCancelDialog, SummarizationCancelDialogEvent,
+//             },
+//             BlocklistAIActionEvent, BlocklistAIActionModel, BlocklistAIContextEvent,
+//             BlocklistAIContextModel, BlocklistAIController, BlocklistAIHistoryEvent,
+//             BlocklistAIInputEvent, BlocklistAIInputModel, ResponseStreamId,
+//         },
+//         llms::LLMPreferences,
+//         AgentTip,
+//     },
+//     send_telemetry_from_app_ctx,
+//     server::telemetry::TelemetryEvent,
+//     settings::{InputModeSettings, InputSettings},
+//     settings_view::keybindings::KeybindingChangedNotifier,
+//     terminal::{
+//         input::SET_INPUT_MODE_TERMINAL_ACTION_NAME,
+//         model::block::LONG_RUNNING_COMMAND_DURATION_MS,
+//         model_events::{ModelEvent, ModelEventDispatcher},
+//         view::ambient_agent::{AmbientAgentViewModel, AmbientAgentViewModelEvent},
+//         warpify::render::LEFT_STRIPE_WIDTH,
+//         TerminalModel, CANCEL_COMMAND_KEYBINDING, TOGGLE_AUTOEXECUTE_MODE_KEYBINDING,
+//         TOGGLE_HIDE_CLI_RESPONSES_KEYBINDING, TOGGLE_QUEUE_NEXT_PROMPT_KEYBINDING,
+//     },
+//     util::bindings::keybinding_name_to_keystroke,
+//     BlocklistAIHistoryModel,
+// };
 use instant::Instant;
 use parking_lot::FairMutex;
 use pathfinder_color::ColorU;
@@ -996,7 +997,7 @@ fn latest_model_used_before_exchange<V: View>(
 }
 
 fn render_agent_tip(tip: &AgentTip, app: &AppContext) -> Box<dyn Element> {
-    use crate::ai::agent_tips::AITip;
+//     use crate::ai::agent_tips::AITip;  // unresolved (cloud detach)
     use markdown_parser::{FormattedTextFragment, FormattedTextLine};
     use warpui::text_layout::ClipConfig;
 

@@ -12,41 +12,41 @@ use input_context::{input_context_for_request, parse_context_attachments};
 pub use slash_command::*;
 
 use self::response_stream::{ResponseStream, ResponseStreamEvent};
-use super::agent_view::AgentViewEntryOrigin;
+// use super::agent_view::AgentViewEntryOrigin;  // unresolved (cloud detach)
 use super::ResponseStreamId;
-use super::{
-    action_model::{BlocklistAIActionEvent, BlocklistAIActionModel},
-    agent_view::{AgentViewController, AgentViewControllerEvent},
-    context_model::BlocklistAIContextModel,
-    history_model::BlocklistAIHistoryModel,
-    input_model::InputConfig,
-    BlocklistAIInputModel, InputType,
-};
-use crate::ai::agent::api::{self, ServerConversationToken};
-use crate::ai::agent::conversation::{AIConversation, ConversationStatus};
-use crate::ai::agent::task::TaskId;
+// use super::{  // unresolved (cloud detach)
+//     action_model::{BlocklistAIActionEvent, BlocklistAIActionModel},
+//     agent_view::{AgentViewController, AgentViewControllerEvent},
+//     context_model::BlocklistAIContextModel,
+//     history_model::BlocklistAIHistoryModel,
+//     input_model::InputConfig,
+//     BlocklistAIInputModel, InputType,
+// };
+// use crate::ai::agent::api::{self, ServerConversationToken};  // unresolved (cloud detach)
+// use crate::ai::agent::conversation::{AIConversation, ConversationStatus};  // unresolved (cloud detach)
+// use crate::ai::agent::task::TaskId;  // unresolved (cloud detach)
 use crate::ai::agent::{
     AIAgentActionResult, CancellationReason, PassiveSuggestionResultType, PassiveSuggestionTrigger,
     PassiveSuggestionTriggerType, RunningCommand,
 };
 use crate::ai::agent::{DocumentContentAttachmentSource, FileContext};
 #[cfg(not(target_family = "wasm"))]
-use crate::ai::agent_sdk::ClaudeHarness;
-use crate::ai::ambient_agents::AmbientAgentTaskId;
+// use crate::ai::agent_sdk::ClaudeHarness;  // unresolved (cloud detach)
+// use crate::ai::ambient_agents::AmbientAgentTaskId;  // unresolved (cloud detach)
 use crate::ai::document::ai_document_model::{
     AIDocumentId, AIDocumentModel, AIDocumentUserEditStatus,
 };
 use crate::ai::llms::LLMId;
-use crate::ai::{
-    agent::{
-        conversation::AIConversationId, extract_user_query_mode, AIAgentActionResultType,
-        AIAgentAttachment, AIAgentContext, AIAgentExchangeId, AIAgentInput, AIAgentOutputStatus,
-        AIIdentifiers, EntrypointType, FinishedAIAgentOutput, RenderableAIError, RequestCost,
-        RequestMetadata, StaticQueryType, UserQueryMode,
-    },
-    llms::LLMPreferences,
-    AIRequestUsageModel,
-};
+// use crate::ai::{  // unresolved (cloud detach)
+//     agent::{
+//         conversation::AIConversationId, extract_user_query_mode, AIAgentActionResultType,
+//         AIAgentAttachment, AIAgentContext, AIAgentExchangeId, AIAgentInput, AIAgentOutputStatus,
+//         AIIdentifiers, EntrypointType, FinishedAIAgentOutput, RenderableAIError, RequestCost,
+//         RequestMetadata, StaticQueryType, UserQueryMode,
+//     },
+//     llms::LLMPreferences,
+//     AIRequestUsageModel,
+// };
 use crate::cloud_object::model::persistence::CloudModel;
 use crate::features::FeatureFlag;
 use crate::global_resource_handles::GlobalResourceHandlesProvider;
@@ -80,7 +80,7 @@ use std::path::PathBuf;
 use std::sync::Arc;
 use std::time::Duration;
 use warp_core::assertions::safe_assert;
-use warp_multi_agent_api::{message, Task, ToolType};
+// use warp_multi_agent_api::{message, Task, ToolType};  // unresolved (cloud detach)
 use warpui::r#async::{SpawnedFutureHandle, Timer};
 
 use super::orchestration_event_streamer::{
@@ -2899,7 +2899,7 @@ impl BlocklistAIController {
                 });
             }
             Some(warp_multi_agent_api::response_event::stream_finished::Reason::InvalidApiKey(details)) => {
-                use warp_multi_agent_api::LlmProvider;
+//                 use warp_multi_agent_api::LlmProvider;  // unresolved (cloud detach)
                 let is_aws_bedrock = details
                     .provider
                     .try_into()

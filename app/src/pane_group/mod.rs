@@ -1,12 +1,12 @@
-use crate::ai::active_agent_views_model::ActiveAgentViewsModel;
-use crate::ai::agent::api::ServerConversationToken;
-use crate::ai::agent::conversation::{AIAgentHarness, AIConversation, AIConversationId};
-use crate::ai::agent_conversations_model::{
-    AgentConversationsModel, AgentConversationsModelEvent, ConversationOrTask,
-};
-use crate::ai::ai_document_view::AIDocumentView;
-use crate::ai::ambient_agents::AmbientAgentTaskId;
-use crate::ai::blocklist::agent_view::AgentViewEntryOrigin;
+// use crate::ai::active_agent_views_model::ActiveAgentViewsModel;  // unresolved (cloud detach)
+// use crate::ai::agent::api::ServerConversationToken;  // unresolved (cloud detach)
+// use crate::ai::agent::conversation::{AIAgentHarness, AIConversation, AIConversationId};  // unresolved (cloud detach)
+// use crate::ai::agent_conversations_model::{  // unresolved (cloud detach)
+//     AgentConversationsModel, AgentConversationsModelEvent, ConversationOrTask,
+// };
+// use crate::ai::ai_document_view::AIDocumentView;  // unresolved (cloud detach)
+// use crate::ai::ambient_agents::AmbientAgentTaskId;  // unresolved (cloud detach)
+// use crate::ai::blocklist::agent_view::AgentViewEntryOrigin;  // unresolved (cloud detach)
 use crate::ai::blocklist::history_model::CloudConversationData;
 use crate::ai::blocklist::inline_action::code_diff_view::CodeDiffView;
 use crate::ai::blocklist::suggested_agent_mode_workflow_modal::SuggestedAgentModeWorkflowAndId;
@@ -15,11 +15,11 @@ use crate::ai::blocklist::{BlocklistAIHistoryModel, InputConfig};
 use crate::ai::document::ai_document_model::{AIDocumentId, AIDocumentModel, AIDocumentVersion};
 use crate::ai::execution_profiles::profiles::{AIExecutionProfilesModel, ClientProfileId};
 use crate::ai::llms::LLMId;
-use crate::ai::restored_conversations::RestoredAgentConversations;
+// use crate::ai::restored_conversations::RestoredAgentConversations;  // unresolved (cloud detach)
 use crate::auth::auth_manager::AuthManager;
 use crate::auth::auth_view_modal::AuthViewVariant;
-use crate::auth::AuthStateProvider;
-use crate::cloud_object::Space;
+// use crate::auth::AuthStateProvider;  // unresolved (cloud detach)
+// use crate::cloud_object::Space;  // unresolved (cloud detach)
 #[cfg(feature = "local_fs")]
 use crate::code::editor_management::CodeSource;
 use crate::code::view::CodeViewAction;
@@ -44,7 +44,7 @@ use crate::terminal::cli_agent_sessions::plugin_manager::PluginModalKind;
 use crate::terminal::view::inline_banner::{
     ZeroStatePromptSuggestionTriggeredFrom, ZeroStatePromptSuggestionType,
 };
-use crate::terminal::view::load_ai_conversation::RestoredAIConversation;
+// use crate::terminal::view::load_ai_conversation::RestoredAIConversation;  // unresolved (cloud detach)
 use crate::undo_close::UndoCloseStack;
 use crate::undo_close::UndoCloseStackEvent;
 #[cfg(target_family = "wasm")]
@@ -115,7 +115,7 @@ use crate::code::view::CodeView;
 use crate::drive::items::WarpDriveItemId;
 use crate::drive::{CloudObjectTypeAndId, OpenWarpDriveObjectArgs};
 use crate::features::FeatureFlag;
-use crate::launch_configs::launch_config::{self, PaneMode, PaneTemplateType};
+// use crate::launch_configs::launch_config::{self, PaneMode, PaneTemplateType};  // unresolved (cloud detach)
 use crate::persistence::ModelEvent;
 use crate::report_if_error;
 use crate::resource_center::{
@@ -140,10 +140,10 @@ use crate::terminal::shared_session::role_change_modal::{
 use crate::terminal::shared_session::share_modal::{ShareSessionModal, ShareSessionModalEvent};
 use crate::terminal::shared_session::{self, IsSharedSessionCreator, SharedSessionActionSource};
 use crate::terminal::view::ssh_file_upload::FileUploadId;
-use crate::terminal::view::{
-    BlockNotification, ConversationRestorationInNewPaneType, ExecuteCommandEvent,
-    LeftPanelTargetView, SyncEvent, TerminalViewState,
-};
+// use crate::terminal::view::{  // unresolved (cloud detach)
+//     BlockNotification, ConversationRestorationInNewPaneType, ExecuteCommandEvent,
+//     LeftPanelTargetView, SyncEvent, TerminalViewState,
+// };
 use crate::terminal::{
     MockTerminalManager, ShareBlockModal, ShareBlockModalEvent, ShellLaunchData, ShellLaunchState,
 };
@@ -172,7 +172,7 @@ pub mod tree;
 pub mod working_directories;
 use child_agent::{apply_hidden_child_agent_task_context, HiddenChildAgentTaskContext};
 
-use focus_state::PaneGroupFocusState;
+// use focus_state::PaneGroupFocusState;  // unresolved (cloud detach)
 
 #[cfg(test)]
 #[path = "mod_tests.rs"]

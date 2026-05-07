@@ -58,55 +58,55 @@ use crate::{
         loading::shimmering_warp_loading_text,
     },
 };
-use crate::{
-    ai::{
-        agent::{
-            icons::red_stop_icon, AIAgentAction, AIAgentActionType, AIAgentInput,
-            AIAgentOutputMessageType, AIAgentTextSection, AgentOutputImage, AgentOutputImageLayout,
-            AgentOutputMermaidDiagram, AgentOutputTable, AgentOutputTableRendering,
-            ProgrammingLanguage, RenderableAIError, SummarizationType, UserQueryMode,
-            WebSearchStatus,
-        },
-        blocklist::{
-            block::{
-                find::FindState, view_impl::CONTENT_HORIZONTAL_PADDING, AIBlockAction,
-                CollapsibleElementState, CollapsibleExpansionState, EmbeddedCodeEditorView,
-                TableSectionHandles,
-            },
-            code_block::{
-                render_code_block_plain, render_code_block_with_warp_text, CodeBlockOptions,
-                CodeSnippetButtonHandles,
-            },
-            inline_action::{
-                aws_bedrock_credentials_error::AwsBedrockCredentialsErrorView,
-                inline_action_header::{
-                    INLINE_ACTION_HEADER_VERTICAL_PADDING, INLINE_ACTION_HORIZONTAL_PADDING,
-                },
-                inline_action_icons::{self, icon_size},
-                requested_action::RenderableAction,
-            },
-            model::{AIBlockModel, AIBlockModelHelper},
-            secret_redaction::{redact_secrets_in_element, SecretRedactionState},
-            view_util::error_color,
-            TextLocation,
-        },
-        AIRequestUsageModel,
-    },
-    code::{editor::view::CodeEditorView, editor_management::CodeSource},
-    notebooks::editor::{markdown_table_appearance, rich_text_styles},
-    settings_view::SettingsSection,
-    terminal::{
-        find::TerminalFindModel, safe_mode_settings::get_secret_obfuscation_mode,
-        view::TerminalAction, ShellLaunchData,
-    },
-    ui_components::{
-        avatar::{Avatar, AvatarContent},
-        blended_colors,
-        buttons::icon_button,
-        icons::Icon,
-    },
-    workspace::WorkspaceAction,
-};
+// use crate::{  // unresolved (cloud detach)
+//     ai::{
+//         agent::{
+//             icons::red_stop_icon, AIAgentAction, AIAgentActionType, AIAgentInput,
+//             AIAgentOutputMessageType, AIAgentTextSection, AgentOutputImage, AgentOutputImageLayout,
+//             AgentOutputMermaidDiagram, AgentOutputTable, AgentOutputTableRendering,
+//             ProgrammingLanguage, RenderableAIError, SummarizationType, UserQueryMode,
+//             WebSearchStatus,
+//         },
+//         blocklist::{
+//             block::{
+//                 find::FindState, view_impl::CONTENT_HORIZONTAL_PADDING, AIBlockAction,
+//                 CollapsibleElementState, CollapsibleExpansionState, EmbeddedCodeEditorView,
+//                 TableSectionHandles,
+//             },
+//             code_block::{
+//                 render_code_block_plain, render_code_block_with_warp_text, CodeBlockOptions,
+//                 CodeSnippetButtonHandles,
+//             },
+//             inline_action::{
+//                 aws_bedrock_credentials_error::AwsBedrockCredentialsErrorView,
+//                 inline_action_header::{
+//                     INLINE_ACTION_HEADER_VERTICAL_PADDING, INLINE_ACTION_HORIZONTAL_PADDING,
+//                 },
+//                 inline_action_icons::{self, icon_size},
+//                 requested_action::RenderableAction,
+//             },
+//             model::{AIBlockModel, AIBlockModelHelper},
+//             secret_redaction::{redact_secrets_in_element, SecretRedactionState},
+//             view_util::error_color,
+//             TextLocation,
+//         },
+//         AIRequestUsageModel,
+//     },
+//     code::{editor::view::CodeEditorView, editor_management::CodeSource},
+//     notebooks::editor::{markdown_table_appearance, rich_text_styles},
+//     settings_view::SettingsSection,
+//     terminal::{
+//         find::TerminalFindModel, safe_mode_settings::get_secret_obfuscation_mode,
+//         view::TerminalAction, ShellLaunchData,
+//     },
+//     ui_components::{
+//         avatar::{Avatar, AvatarContent},
+//         blended_colors,
+//         buttons::icon_button,
+//         icons::Icon,
+//     },
+//     workspace::WorkspaceAction,
+// };
 use crate::{
     search::slash_command_menu::static_commands::commands,
     settings::{FontSettings, InputSettings},

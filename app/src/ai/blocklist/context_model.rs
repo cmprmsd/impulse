@@ -19,24 +19,24 @@ use parking_lot::FairMutex;
 use warp_core::features::FeatureFlag;
 use warpui::{AppContext, Entity, EntityId, ModelContext, ModelHandle, SingletonEntity};
 
-use crate::{
-    ai::{
-        agent::todos::AIAgentTodoList,
-        agent::{
-            conversation::{AIConversation, AIConversationId},
-            AIAgentAttachment, AIAgentContext, ImageContext,
-        },
-        document::ai_document_model::AIDocumentId,
-        llms::{LLMPreferences, LLMPreferencesEvent},
-        outline::RepoOutlines,
-    },
-    terminal::{
-        event::{BlockCompletedEvent, BlockType},
-        model::{block::BlockId, session::Sessions},
-        model_events::{ModelEvent, ModelEventDispatcher},
-        TerminalModel,
-    },
-};
+// use crate::{  // unresolved (cloud detach)
+//     ai::{
+//         agent::todos::AIAgentTodoList,
+//         agent::{
+//             conversation::{AIConversation, AIConversationId},
+//             AIAgentAttachment, AIAgentContext, ImageContext,
+//         },
+//         document::ai_document_model::AIDocumentId,
+//         llms::{LLMPreferences, LLMPreferencesEvent},
+//         outline::RepoOutlines,
+//     },
+//     terminal::{
+//         event::{BlockCompletedEvent, BlockType},
+//         model::{block::BlockId, session::Sessions},
+//         model_events::{ModelEvent, ModelEventDispatcher},
+//         TerminalModel,
+//     },
+// };
 
 use super::{
     block::DirectoryContext, history_model::BlocklistAIHistoryModel, BlocklistAIHistoryEvent,

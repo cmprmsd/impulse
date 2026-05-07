@@ -1,11 +1,11 @@
 //! AI Assistant has since been renamed to "Warp AI" in the product.
 use std::{collections::HashSet, sync::Arc};
 
-use crate::{
-    ai::{RequestLimitInfo, RequestLimitRefreshDuration},
-    terminal::model::terminal_model::BlockIndex,
-    workflows::workflow::{Argument, Workflow},
-};
+// use crate::{  // unresolved (cloud detach)
+//     ai::{RequestLimitInfo, RequestLimitRefreshDuration},
+//     terminal::model::terminal_model::BlockIndex,
+//     workflows::workflow::{Argument, Workflow},
+// };
 use itertools::Itertools;
 use lazy_static::lazy_static;
 use pathfinder_color::ColorU;

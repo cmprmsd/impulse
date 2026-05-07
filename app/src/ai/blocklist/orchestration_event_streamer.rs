@@ -3,10 +3,10 @@ use super::orchestration_events::{
     build_lifecycle_event, LifecycleEventDetailPayload, LifecycleEventDetailStage,
     OrchestrationEventService, PendingEvent, PendingEventDetail,
 };
-use crate::ai::agent::{
-    conversation::{AIAgentHarness, AIConversationId, ConversationStatus},
-    AIAgentExchangeId, AIAgentOutputMessageType, ReceivedMessageInput,
-};
+// use crate::ai::agent::{  // unresolved (cloud detach)
+//     conversation::{AIAgentHarness, AIConversationId, ConversationStatus},
+//     AIAgentExchangeId, AIAgentOutputMessageType, ReceivedMessageInput,
+// };
 use crate::ai::agent_events::{
     run_agent_event_driver, AgentEventConsumer, AgentEventConsumerControlFlow,
     AgentEventDriverConfig, MessageHydrator, ServerApiAgentEventSource,

@@ -54,7 +54,7 @@ use crate::terminal::model::{
     find::{Match, RegexDFAs},
     index::Direction,
 };
-use crate::terminal::model::{Secret, SecretHandle};
+// use crate::terminal::model::{Secret, SecretHandle};  // unresolved (cloud detach)
 
 use super::displayed_output::DisplayedOutput;
 use super::grapheme_cursor::{self, GraphemeCursor};

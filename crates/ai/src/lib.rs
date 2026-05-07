@@ -1,5 +1,9 @@
 pub mod agent;
 pub mod agent_loop;
+// Stubs for cloud-detached builds: agent_sdk and agent_management were
+// cloud-only modules removed during the cloud strip.
+pub mod agent_sdk {}
+pub mod agent_management {}
 pub mod api_keys;
 pub mod conversation;
 pub mod llm_id;

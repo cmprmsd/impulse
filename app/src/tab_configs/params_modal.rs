@@ -1,3 +1,4 @@
+use warpui::keymap::macros::*;
 use std::{collections::HashMap, path::PathBuf};
 
 use warp_core::ui::theme::color::internal_colors;

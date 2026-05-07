@@ -4,13 +4,13 @@ use crate::legacy_stubs::{AIConversationId};
 use warp_core::features::FeatureFlag;
 use warpui::{AppContext, ModelContext, SingletonEntity};
 
-use crate::{
-    ai::{
-        agent::{ AIAgentContext, AIAgentInput, CancellationReason,
-            CloneRepositoryURL, EntrypointType, RequestMetadata},
-        blocklist::agent_view::AgentViewEntryOrigin,
-    },
-};
+// use crate::{  // unresolved (cloud detach)
+//     ai::{
+//         agent::{ AIAgentContext, AIAgentInput, CancellationReason,
+//             CloneRepositoryURL, EntrypointType, RequestMetadata},
+//         blocklist::agent_view::AgentViewEntryOrigin,
+//     },
+// };
 
 use super::{
     input_context_for_request, parse_context_attachments, BlocklistAIController,

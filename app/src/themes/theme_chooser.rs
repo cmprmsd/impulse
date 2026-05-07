@@ -1,3 +1,4 @@
+use crate::report_if_error;
 use pathfinder_color::ColorU;
 use settings::Setting as _;
 use warp_editor::editor::NavigationKey;
@@ -40,7 +41,7 @@ use warpui::platform::{Cursor};
 use warpui::fonts::{FamilyId};
 use warpui::ui_components::components::{UiComponentStyles};
 use crate::legacy_stubs::{TelemetryEvent};
-use crate::appearance::respect_system_theme;
+// use crate::appearance::respect_system_theme;  // unresolved (cloud detach)
 use pathfinder_geometry::vector::vec2f;
 
 // All units in px

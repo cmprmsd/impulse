@@ -12,51 +12,51 @@ use string_offset::CharOffset;
 use syntax_highlightable::SyntaxHighlightable;
 use url::Url;
 
-use crate::{
-    ai::{blocklist::secret_redaction::find_secrets_in_text, AIRequestUsageModel},
-    appearance::Appearance,
-    drive::{
-        cloud_object_styling::warp_drive_icon_color,
-        drive_helpers::has_feature_gated_anonymous_user_reached_workflow_limit,
-        items::WarpDriveItemId,
-        sharing::{ContentEditability, ShareableObject, SharingAccessLevel},
-        workflows::{
-            ai_assist::GeneratedCommandMetadataError,
-            arguments::ArgumentsState,
-            enum_creation_dialog::{EnumCreationDialog, EnumCreationDialogEvent, WorkflowEnumData},
-            workflow_arg_selector::{WorkflowArgSelector, WorkflowArgSelectorEvent},
-            workflow_arg_type_helpers::{self, ArgumentEditorRowIndex},
-        },
-        CloudObjectTypeAndId, DriveObjectType, OpenWarpDriveObjectSettings,
-    },
-    editor::{
-        EditorOptions, EditorView, EnterAction, EnterSettings, Event as EditorEvent,
-        InteractionState, PlainTextEditorViewAction as EditorAction,
-        PropagateAndNoOpNavigationKeys, SingleLineEditorOptions, TextOptions, TextStyleOperation,
-    },
-    menu::{MenuItem, MenuItemFields},
-    network::NetworkStatus,
-    pane_group::{
-        focus_state::PaneFocusHandle, pane::view, BackingView, PaneConfiguration, PaneEvent,
-    },
-    send_telemetry_from_ctx,
-    settings::{
-        app_installation_detection::{UserAppInstallDetectionSettings, UserAppInstallStatus},
-        AISettings,
-    },
-    terminal::safe_mode_settings::get_secret_obfuscation_mode,
-    ui_components::{
-        breadcrumb::{render_breadcrumbs, BreadcrumbState},
-        buttons::{accent_icon_button, icon_button},
-        dialog::{dialog_styles, Dialog},
-        icons::Icon,
-    },
-    util::bindings::CustomAction,
-    view_components::{DismissibleToast, ToastLink, ToastType},
-    workflows::{
-        workflow::{Argument, Workflow},
-        CloudWorkflow,
-    }};
+// use crate::{  // unresolved (cloud detach)
+//     ai::{blocklist::secret_redaction::find_secrets_in_text, AIRequestUsageModel},
+//     appearance::Appearance,
+//     drive::{
+//         cloud_object_styling::warp_drive_icon_color,
+//         drive_helpers::has_feature_gated_anonymous_user_reached_workflow_limit,
+//         items::WarpDriveItemId,
+//         sharing::{ContentEditability, ShareableObject, SharingAccessLevel},
+//         workflows::{
+//             ai_assist::GeneratedCommandMetadataError,
+//             arguments::ArgumentsState,
+//             enum_creation_dialog::{EnumCreationDialog, EnumCreationDialogEvent, WorkflowEnumData},
+//             workflow_arg_selector::{WorkflowArgSelector, WorkflowArgSelectorEvent},
+//             workflow_arg_type_helpers::{self, ArgumentEditorRowIndex},
+//         },
+//         CloudObjectTypeAndId, DriveObjectType, OpenWarpDriveObjectSettings,
+//     },
+//     editor::{
+//         EditorOptions, EditorView, EnterAction, EnterSettings, Event as EditorEvent,
+//         InteractionState, PlainTextEditorViewAction as EditorAction,
+//         PropagateAndNoOpNavigationKeys, SingleLineEditorOptions, TextOptions, TextStyleOperation,
+//     },
+//     menu::{MenuItem, MenuItemFields},
+//     network::NetworkStatus,
+//     pane_group::{
+//         focus_state::PaneFocusHandle, pane::view, BackingView, PaneConfiguration, PaneEvent,
+//     },
+//     send_telemetry_from_ctx,
+//     settings::{
+//         app_installation_detection::{UserAppInstallDetectionSettings, UserAppInstallStatus},
+//         AISettings,
+//     },
+//     terminal::safe_mode_settings::get_secret_obfuscation_mode,
+//     ui_components::{
+//         breadcrumb::{render_breadcrumbs, BreadcrumbState},
+//         buttons::{accent_icon_button, icon_button},
+//         dialog::{dialog_styles, Dialog},
+//         icons::Icon,
+//     },
+//     util::bindings::CustomAction,
+//     view_components::{DismissibleToast, ToastLink, ToastType},
+//     workflows::{
+//         workflow::{Argument, Workflow},
+//         CloudWorkflow,
+//     }};
 
 use warp_core::{context_flag::ContextFlag, settings::Setting, ui::theme::AnsiColorIdentifier};
 use warp_editor::editor::NavigationKey;

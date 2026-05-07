@@ -1,7 +1,7 @@
 use std::fmt::Display;
 use warpui::ui_components::button::ButtonVariant;
 
-use super::teams_page::TeamsPageAction;
+// use super::teams_page::TeamsPageAction;  // unresolved (cloud detach)
 use crate::Appearance;
 use warpui::elements::MouseStateHandle;
 use warpui::ui_components::components::UiComponent;

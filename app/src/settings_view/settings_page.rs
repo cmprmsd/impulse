@@ -5,24 +5,24 @@ use pathfinder_color::ColorU;
 use std::borrow::Cow;
 use std::collections::HashMap;
 
-use super::{
-    about_page::AboutPageView,
-    ai_page::{AISettingsPageAction, AISettingsPageView},
-    appearance_page::AppearanceSettingsPageView,
-    billing_and_usage_page::BillingAndUsagePageView,
-    code_page::CodeSettingsPageView,
-    environments_page::EnvironmentsPageView,
-    features_page::FeaturesPageView,
-    keybindings::KeybindingsView,
-    main_page::MainSettingsPageView,
-    mcp_servers_page::MCPServersSettingsPageView,
-    privacy_page::PrivacyPageView,
-    referrals_page::ReferralsPageView,
-    show_blocks_view::ShowBlocksView,
-    teams_page::TeamsPageView,
-    warp_drive_page::WarpDriveSettingsPageView,
-    warpify_page::WarpifyPageView,
-};
+// use super::{  // unresolved (cloud detach)
+//     about_page::AboutPageView,
+//     ai_page::{AISettingsPageAction, AISettingsPageView},
+//     appearance_page::AppearanceSettingsPageView,
+//     billing_and_usage_page::BillingAndUsagePageView,
+//     code_page::CodeSettingsPageView,
+//     environments_page::EnvironmentsPageView,
+//     features_page::FeaturesPageView,
+//     keybindings::KeybindingsView,
+//     main_page::MainSettingsPageView,
+//     mcp_servers_page::MCPServersSettingsPageView,
+//     privacy_page::PrivacyPageView,
+//     referrals_page::ReferralsPageView,
+//     show_blocks_view::ShowBlocksView,
+//     teams_page::TeamsPageView,
+//     warp_drive_page::WarpDriveSettingsPageView,
+//     warpify_page::WarpifyPageView,
+// };
 use crate::{
     appearance::Appearance,
     settings::CloudPreferencesSettings,

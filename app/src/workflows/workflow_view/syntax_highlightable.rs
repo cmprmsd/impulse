@@ -15,9 +15,9 @@ use crate::appearance::Appearance;
 use crate::completer::SessionAgnosticContext;
 use crate::debounce::debounce;
 use crate::editor::{EditorView, TextStyleOperation};
-use crate::terminal::input::decorations::{
-    parse_current_commands_and_tokens, ParsedTokenData, ParsedTokensSnapshot,
-};
+// use crate::terminal::input::decorations::{  // unresolved (cloud detach)
+//     parse_current_commands_and_tokens, ParsedTokenData, ParsedTokensSnapshot,
+// };
 
 /// Debounce for syntax highlighting workflow
 pub const DEBOUNCE_INPUT_DECORATION_PERIOD: Duration = Duration::from_millis(500);

@@ -1,3 +1,4 @@
+use warp_core::bundled_asset;
 use std::rc::Rc;
 
 use crate::ai::blocklist::inline_action::requested_action::{ENTER_KEYSTROKE, ESCAPE_KEYSTROKE};

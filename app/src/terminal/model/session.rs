@@ -44,7 +44,7 @@ use crate::terminal::History;
 
 use super::ansi::{BootstrappedValue, InitShellValue, SSHValue};
 use super::terminal_model::{HistoryEntry, SubshellInitializationInfo};
-use crate::terminal::event::RemoteServerSetupState;
+// use crate::terminal::event::RemoteServerSetupState;  // unresolved (cloud detach)
 
 #[derive(thiserror::Error, Debug)]
 pub enum ReadHistoryContentsError {

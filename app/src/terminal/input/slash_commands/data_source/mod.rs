@@ -32,20 +32,20 @@ use warp_cli::agent::Harness;
 use warp_core::ui::Icon as WarpIcon;
 
 use super::AcceptSlashCommandOrSavedPrompt;
-use crate::{
-    ai::blocklist::{
-        agent_view::{AgentViewController, AgentViewControllerEvent},
-        block::cli_controller::{CLISubagentController, CLISubagentEvent},
-        BlocklistAIHistoryEvent,
-    },
-    search::{
-        slash_command_menu::{
-            static_commands::commands::{self, COMMAND_REGISTRY},
-            SlashCommandId, StaticCommand,
-        },
-        SyncDataSource,
-    },
-};
+// use crate::{  // unresolved (cloud detach)
+//     ai::blocklist::{
+//         agent_view::{AgentViewController, AgentViewControllerEvent},
+//         block::cli_controller::{CLISubagentController, CLISubagentEvent},
+//         BlocklistAIHistoryEvent,
+//     },
+//     search::{
+//         slash_command_menu::{
+//             static_commands::commands::{self, COMMAND_REGISTRY},
+//             SlashCommandId, StaticCommand,
+//         },
+//         SyncDataSource,
+//     },
+// };
 
 pub struct DataSourceArgs {
     pub active_session: ModelHandle<ActiveSession>,

@@ -56,7 +56,7 @@ use crate::ai::blocklist::{
     BlocklistAIContextEvent, BlocklistAIContextModel, BlocklistAIControllerEvent,
     BlocklistAIHistoryEvent, BlocklistAIHistoryModel, InputConfig, SerializedBlockListItem,
 };
-use crate::terminal::view::ConversationRestorationInNewPaneType;
+// use crate::terminal::view::ConversationRestorationInNewPaneType;  // unresolved (cloud detach)
 
 use crate::banner::BannerState;
 use crate::context_chips::current_prompt::CurrentPrompt;

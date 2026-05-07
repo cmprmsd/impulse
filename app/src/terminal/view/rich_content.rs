@@ -1,29 +1,29 @@
 use warpui::{prelude::ChildView, Element, EntityId, View, ViewContext, ViewHandle};
 use crate::legacy_stubs::{AIConversationId};
 
-use crate::{
-    ai::{
-        agent::{ AIAgentExchangeId},
-        blocklist::{agent_view::AgentViewEntryOrigin, telemetry_banner::TelemetryBanner, AIBlock},
-    },
-    env_vars::env_var_collection_block::EnvVarCollectionBlock,
-    terminal::{
-        block_list_viewport::ScrollPositionUpdate,
-        model::{
-            blocks::RichContentItem, rich_content::RichContentType, terminal_model::BlockIndex,
-        },
-        ssh::{error::SshErrorBlock, install_tmux::SshInstallTmuxBlock, warpify::SshWarpifyBlock},
-        view::{
-            ambient_agent::AmbientAgentEntryBlock,
-            block_onboarding::onboarding_agentic_suggestions_block::OnboardingAgenticSuggestionsBlock,
-            init_environment::InitEnvironmentBlock,
-            ssh_remote_server_choice_view::SshRemoteServerChoiceView,
-            ssh_remote_server_failed_banner::SshRemoteServerFailedBanner,
-        },
-        warpify::success_block::WarpifySuccessBlock,
-        TerminalView,
-    },
-};
+// use crate::{  // unresolved (cloud detach)
+//     ai::{
+//         agent::{ AIAgentExchangeId},
+//         blocklist::{agent_view::AgentViewEntryOrigin, telemetry_banner::TelemetryBanner, AIBlock},
+//     },
+//     env_vars::env_var_collection_block::EnvVarCollectionBlock,
+//     terminal::{
+//         block_list_viewport::ScrollPositionUpdate,
+//         model::{
+//             blocks::RichContentItem, rich_content::RichContentType, terminal_model::BlockIndex,
+//         },
+//         ssh::{error::SshErrorBlock, install_tmux::SshInstallTmuxBlock, warpify::SshWarpifyBlock},
+//         view::{
+//             ambient_agent::AmbientAgentEntryBlock,
+//             block_onboarding::onboarding_agentic_suggestions_block::OnboardingAgenticSuggestionsBlock,
+//             init_environment::InitEnvironmentBlock,
+//             ssh_remote_server_choice_view::SshRemoteServerChoiceView,
+//             ssh_remote_server_failed_banner::SshRemoteServerFailedBanner,
+//         },
+//         warpify::success_block::WarpifySuccessBlock,
+//         TerminalView,
+//     },
+// };
 
 use super::{InitStepBlock, InitStepKind};
 

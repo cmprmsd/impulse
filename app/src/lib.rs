@@ -14,6 +14,82 @@ mod app_state;
 #[macro_use]
 pub mod legacy_macros;
 pub mod legacy_stubs;
+
+// Stub modules for cloud-detached builds. The original cloud-only
+// modules (server, auth, cloud_object) are removed; these shells
+// re-export legacy_stubs types so paths like `crate::server::ids::SyncId`
+// continue to resolve to the same stub types.
+pub mod server {
+    pub mod ids {
+        pub use crate::legacy_stubs::{ClientId, ObjectUid, ServerId, SyncId};
+        pub type ApiKeyUid = uuid::Uuid;
+    }
+    pub mod server_api {
+        pub use crate::legacy_stubs::{AIApiError, ServerApi, ServerApiProvider};
+        pub const FETCH_CHANNEL_VERSIONS_TIMEOUT: std::time::Duration =
+            std::time::Duration::from_secs(30);
+        pub mod auth {}
+    }
+    pub mod telemetry {
+        pub use crate::legacy_stubs::{
+            AnonymousUserSignupEntrypoint, InteractionSource, PaletteSource, SharingDialogSource,
+            TelemetryEvent,
+        };
+        // Cloud-only telemetry markers, all stubbed as unit structs.
+        pub struct AgentModeRewindEntrypoint;
+        pub struct AutonomySettingToggleSource;
+        pub struct CommandCorrectionAcceptedType;
+        pub struct CommandCorrectionEvent;
+        pub struct NotificationsTurnedOnSource;
+        pub struct SaveAsWorkflowModalSource;
+        pub struct BlockLatencyInfo;
+        pub struct BootstrappingInfo;
+        pub struct FileTreeSource;
+        pub struct MCPTemplateInstallationSource;
+        pub fn telemetry_context() {}
+    }
+    pub mod cloud_objects {
+        pub mod update_manager {
+            pub use crate::legacy_stubs::{ObjectOperation, UpdateManager, UpdateManagerEvent};
+            pub fn get_duplicate_object_name(name: &str, _existing: &[String]) -> String {
+                name.to_string()
+            }
+        }
+        pub mod listener {
+            pub struct CloudObjectsListener;
+        }
+    }
+}
+pub mod auth {
+    pub mod auth_state {
+        pub use crate::legacy_stubs::{AuthState, AuthStateProvider};
+    }
+    pub mod auth_manager {
+        pub use crate::legacy_stubs::{AuthManager, LoginGatedFeature};
+    }
+    pub mod auth_view_modal {
+        pub struct AuthViewModal;
+        pub enum AuthViewVariant {
+            SignIn,
+            SignUp,
+        }
+    }
+}
+pub mod cloud_object {
+    pub mod model {
+        pub mod persistence {
+            pub use crate::legacy_stubs::{CloudModel, CloudModelEvent};
+            pub struct UpdateSource;
+        }
+        pub mod generic_string_model {
+            pub use crate::legacy_stubs::GenericStringObjectId;
+        }
+        pub mod actions {}
+    }
+    pub use crate::legacy_stubs::Space;
+}
+pub mod remote_server {}
+pub mod server_id_traits {}
 mod autoupdate;
 mod banner;
 mod changelog_model;
@@ -130,16 +206,16 @@ use crate::ai::mcp::FileBasedMCPManager;
 use crate::ai::mcp::FileMCPWatcher;
 use crate::uri::web_intent_parser::maybe_rewrite_web_url_to_intent;
 use ::ai::index::full_source_code_embedding::manager::CodebaseIndexManager;
-use ::ai::index::full_source_code_embedding::SyncTask;
+// use ::ai::index::full_source_code_embedding::SyncTask;  // unresolved (cloud detach)
 use ::ai::index::DEFAULT_SYNC_REQUESTS_PER_MIN;
-use ::ai::project_context::model::ProjectContextModel;
+// use ::ai::project_context::model::ProjectContextModel;  // unresolved (cloud detach)
 pub use ai::agent::{todos::AIAgentTodoList, AIAgentActionResultType, FileEdit, TodoOperation};
-use ai::agent_conversations_model::AgentConversationsModel;
+// use ai::agent_conversations_model::AgentConversationsModel;  // unresolved (cloud detach)
 use ai::ambient_agents::scheduled::ScheduledAgentManager;
 use ai::blocklist::{BlocklistAIHistoryModel, BlocklistAIPermissions};
 use ai::execution_profiles::editor::ExecutionProfileEditorManager;
 use ai::execution_profiles::profiles::AIExecutionProfilesModel;
-use ai::persisted_workspace::PersistedWorkspace;
+// use ai::persisted_workspace::PersistedWorkspace;  // unresolved (cloud detach)
 use code::editor_management::CodeManager;
 use code::opened_files::OpenedFilesModel;
 use code_review::GlobalCodeReviewModel;

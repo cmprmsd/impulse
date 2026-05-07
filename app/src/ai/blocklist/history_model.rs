@@ -25,13 +25,13 @@ use crate::persistence::ModelEvent;
 use crate::terminal::model::block::BlockId;
 use crate::terminal::view::blocklist_filter;
 use crate::GlobalResourceHandlesProvider;
-use crate::{
-    ai::agent::{
-        conversation::{AIConversation, AIConversationId},
-        AIAgentActionId, AIAgentExchange, AIAgentInput, AIAgentOutputStatus, FinishedAIAgentOutput,
-        MessageId, RenderableAIError, RequestCost, Suggestions,
-    },
-};
+// use crate::{  // unresolved (cloud detach)
+//     ai::agent::{
+//         conversation::{AIConversation, AIConversationId},
+//         AIAgentActionId, AIAgentExchange, AIAgentInput, AIAgentOutputStatus, FinishedAIAgentOutput,
+//         MessageId, RenderableAIError, RequestCost, Suggestions,
+//     },
+// };
 
 #[cfg(feature = "local_fs")]
 use crate::persistence::{database_file_path, establish_ro_connection};

@@ -1,9 +1,9 @@
-use ai::index::{
-    full_source_code_embedding::{
-        manager::{CodebaseIndexManager, CodebaseIndexManagerEvent},
-        RetrievalID,
-    },
-};
+// use ai::index::{  // unresolved (cloud detach)
+//     full_source_code_embedding::{
+//         manager::{CodebaseIndexManager, CodebaseIndexManagerEvent},
+//         RetrievalID,
+//     },
+// };
 use anyhow::anyhow;
 use futures_util::stream::AbortHandle;
 use instant::Instant;

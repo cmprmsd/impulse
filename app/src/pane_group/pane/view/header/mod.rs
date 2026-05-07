@@ -37,7 +37,7 @@ use super::PaneDropTargetData;
 use warpui::{AppContext, Element, Entity, EntityId, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
 use warpui::elements::{ChildView};
 use crate::legacy_stubs::{SharingDialogSource};
-use crate::terminal::TerminalAction;
+// use crate::terminal::TerminalAction;  // unresolved (cloud detach)
 
 mod sharing;
 

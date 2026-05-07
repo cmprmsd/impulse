@@ -15,7 +15,7 @@ use crate::cloud_object::model::persistence::{CloudModelEvent, UpdateSource};
 use crate::{send_telemetry_from_ctx, LaunchMode, TelemetryEvent};
 
 use crate::ai::mcp::TemplatableMCPServerManager;
-use crate::cloud_object::{GenericStringObjectFormat, JsonObjectType};
+// use crate::cloud_object::{GenericStringObjectFormat, JsonObjectType};  // unresolved (cloud detach)
 use crate::drive::CloudObjectTypeAndId;
 use crate::server::cloud_objects::update_manager::UpdateManager;
 use crate::server::ids::SyncId;

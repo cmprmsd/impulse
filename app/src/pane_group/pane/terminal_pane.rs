@@ -11,41 +11,41 @@ use warpui::{
     AppContext, EntityId, ModelHandle, SingletonEntity, ViewContext, ViewHandle, WindowId,
 };
 
-use crate::{
-    ai::{
-        active_agent_views_model::ActiveAgentViewsModel,
-        agent::{
-            conversation::{AIConversationId, ConversationStatus},
-            LifecycleEventType, StartAgentExecutionMode,
-        },
-        ambient_agents::{task::HarnessConfig, AgentConfigSnapshot},
-        blocklist::{
-            agent_view::AgentViewEntryOrigin, orchestration_events::OrchestrationEventService,
-            BlocklistAIHistoryModel, StartAgentRequest,
-        },
-        llms::LLMPreferences,
-        skills::SkillManager,
-    },
-    app_state::{AmbientAgentPaneSnapshot, LeafContents, TerminalPaneSnapshot},
-    pane_group::child_agent::{
-        create_error_child_agent_conversation, create_hidden_child_agent_conversation,
-        HiddenChildAgentConversation,
-    },
-    pane_group::{self, Direction, Event::OpenConversationHistory, PaneGroup},
-    persistence::{BlockCompleted, ModelEvent},
-    session_management::SessionNavigationData,
-    terminal::cli_agent_sessions::CLIAgentSessionsModel,
-    terminal::{
-        general_settings::GeneralSettings,
-        shared_session::{
-            join_link,
-            manager::{Manager, ManagerEvent},
-            role_change_modal::RoleChangeOpenSource,
-            SharedSessionStatus,
-        },
-        view::Event,
-        TerminalManager, TerminalView,
-    }};
+// use crate::{  // unresolved (cloud detach)
+//     ai::{
+//         active_agent_views_model::ActiveAgentViewsModel,
+//         agent::{
+//             conversation::{AIConversationId, ConversationStatus},
+//             LifecycleEventType, StartAgentExecutionMode,
+//         },
+//         ambient_agents::{task::HarnessConfig, AgentConfigSnapshot},
+//         blocklist::{
+//             agent_view::AgentViewEntryOrigin, orchestration_events::OrchestrationEventService,
+//             BlocklistAIHistoryModel, StartAgentRequest,
+//         },
+//         llms::LLMPreferences,
+//         skills::SkillManager,
+//     },
+//     app_state::{AmbientAgentPaneSnapshot, LeafContents, TerminalPaneSnapshot},
+//     pane_group::child_agent::{
+//         create_error_child_agent_conversation, create_hidden_child_agent_conversation,
+//         HiddenChildAgentConversation,
+//     },
+//     pane_group::{self, Direction, Event::OpenConversationHistory, PaneGroup},
+//     persistence::{BlockCompleted, ModelEvent},
+//     session_management::SessionNavigationData,
+//     terminal::cli_agent_sessions::CLIAgentSessionsModel,
+//     terminal::{
+//         general_settings::GeneralSettings,
+//         shared_session::{
+//             join_link,
+//             manager::{Manager, ManagerEvent},
+//             role_change_modal::RoleChangeOpenSource,
+//             SharedSessionStatus,
+//         },
+//         view::Event,
+//         TerminalManager, TerminalView,
+//     }};
 
 #[cfg(feature = "local_fs")]
 use crate::ai::blocklist::BlocklistAIHistoryEvent;

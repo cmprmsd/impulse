@@ -51,7 +51,7 @@ use warpui::{Event};
 use crate::pane_group::pane::view::PaneHeaderCustomAction;
 use crate::workspace::WorkspaceAction;
 use crate::legacy_stubs::{TelemetryEvent};
-use warpui::elements::{Lines, SizeConstraint};
+// use warpui::elements::{Lines, SizeConstraint};  // unresolved (cloud detach)
 use crate::legacy_stubs::{DisplaySetting};
 use crate::ui_components::icons::Icon;
 use crate::legacy_stubs::{PaintContext};

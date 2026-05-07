@@ -1,3 +1,4 @@
+use warpui::keymap::macros::*;
 use pathfinder_geometry::vector::{vec2f, Vector2F};
 
 use warp_core::features::FeatureFlag;
@@ -12,37 +13,37 @@ use warpui::{
     },
 };
 
-use crate::{
-    ai::blocklist::block::secret_redaction::find_secrets_in_text_with_levels,
-    drive::{
-        items::WarpDriveItemId,
-        sharing::{ContentEditability, ShareableObject},
-    },
-    editor::EditorView,
-    env_vars::{
-        active_env_var_collection_data::{
-            ActiveEnvVarCollection, ActiveEnvVarCollectionData, ActiveEnvVarCollectionDataEvent,
-            SavingStatus, TrashStatus,
-        },
-        CloudEnvVarCollection, CloudEnvVarCollectionModel, EnvVar, EnvVarCollection,
-        EnvVarCollectionType, EnvVarValue,
-    },
-    menu::MenuItem,
-    network::{NetworkStatus, NetworkStatusEvent},
-    pane_group::{
-        focus_state::PaneFocusHandle, pane::view, BackingView, PaneConfiguration, PaneEvent,
-    },
-    search::external_secrets::view::ExternalSecretsMenu,
-    send_telemetry_from_ctx,
-    terminal::{model::secrets::SecretLevel, safe_mode_settings::get_secret_obfuscation_mode},
-    ui_components::{
-        breadcrumb::{render_breadcrumbs, BreadcrumbState},
-        buttons::icon_button,
-        icons::Icon,
-        menu_button::{
-            highlight_icon_button_with_context_menu, icon_button_with_context_menu, MenuDirection,
-        },
-    }};
+// use crate::{  // unresolved (cloud detach)
+//     ai::blocklist::block::secret_redaction::find_secrets_in_text_with_levels,
+//     drive::{
+//         items::WarpDriveItemId,
+//         sharing::{ContentEditability, ShareableObject},
+//     },
+//     editor::EditorView,
+//     env_vars::{
+//         active_env_var_collection_data::{
+//             ActiveEnvVarCollection, ActiveEnvVarCollectionData, ActiveEnvVarCollectionDataEvent,
+//             SavingStatus, TrashStatus,
+//         },
+//         CloudEnvVarCollection, CloudEnvVarCollectionModel, EnvVar, EnvVarCollection,
+//         EnvVarCollectionType, EnvVarValue,
+//     },
+//     menu::MenuItem,
+//     network::{NetworkStatus, NetworkStatusEvent},
+//     pane_group::{
+//         focus_state::PaneFocusHandle, pane::view, BackingView, PaneConfiguration, PaneEvent,
+//     },
+//     search::external_secrets::view::ExternalSecretsMenu,
+//     send_telemetry_from_ctx,
+//     terminal::{model::secrets::SecretLevel, safe_mode_settings::get_secret_obfuscation_mode},
+//     ui_components::{
+//         breadcrumb::{render_breadcrumbs, BreadcrumbState},
+//         buttons::icon_button,
+//         icons::Icon,
+//         menu_button::{
+//             highlight_icon_button_with_context_menu, icon_button_with_context_menu, MenuDirection,
+//         },
+//     }};
 
 use super::{command_dialog::EnvVarCommandDialog, menus::Menus};
 use warpui::{AppContext, BlurContext, Element, Entity, FocusContext, ModelHandle, TypedActionView, View, ViewContext, ViewHandle, WindowId};

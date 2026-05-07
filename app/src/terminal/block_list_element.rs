@@ -1,4 +1,4 @@
-use crate::ai::blocklist::agent_view::{agent_view_bg_fill, AgentViewState};
+// use crate::ai::blocklist::agent_view::{agent_view_bg_fill, AgentViewState};  // unresolved (cloud detach)
 use crate::ai::blocklist::{ai_brand_color, ATTACH_AS_AGENT_MODE_CONTEXT_TEXT};
 use crate::ai_assistant::{AI_ASSISTANT_SVG_PATH, ASK_AI_ASSISTANT_TEXT};
 use crate::appearance::Appearance;
@@ -76,7 +76,7 @@ use super::model::image_map::StoredImageMetadata;
 use super::model::mouse::{MouseAction, MouseButton, MouseState};
 use super::model::session::SessionId;
 use super::model::terminal_model::{SelectedBlocks, WithinBlock, WithinModel};
-use super::model::SecretHandle;
+// use super::model::SecretHandle;  // unresolved (cloud detach)
 use super::shared_session::presence_manager::{
     text_selection_color, PresenceManager, MUTED_PARTICIPANT_COLOR,
 };

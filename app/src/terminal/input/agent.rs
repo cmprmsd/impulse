@@ -5,19 +5,19 @@ use super::{
         wrap_input_with_terminal_padding_and_focus_handler,
     },
 };
-use crate::{
-    ai::{
-        blocklist::{
-            agent_view::{
-                agent_view_bg_fill,
-                shortcuts::{render_agent_shortcuts_view, AgentShortcutsViewContext},
-                AgentViewState,
-            },
-            InputType,
-        },
-        harness_availability::HarnessAvailabilityModel,
-    },
-};
+// use crate::{  // unresolved (cloud detach)
+//     ai::{
+//         blocklist::{
+//             agent_view::{
+//                 agent_view_bg_fill,
+//                 shortcuts::{render_agent_shortcuts_view, AgentShortcutsViewContext},
+//                 AgentViewState,
+//             },
+//             InputType,
+//         },
+//         harness_availability::HarnessAvailabilityModel,
+//     },
+// };
 use warp_core::settings::Setting;
 use warp_core::ui::theme::color::internal_colors;
 use warpui::elements::Expanded;
@@ -33,7 +33,7 @@ use warpui::{AppContext};
 use warpui::elements::{ChildView};
 use crate::legacy_stubs::{BlocklistAIHistoryModel};
 use crate::appearance::Appearance;
-use crate::terminal::TerminalAction;
+// use crate::terminal::TerminalAction;  // unresolved (cloud detach)
 
 pub(super) const CLOUD_MODE_V2_MAX_WIDTH: f32 = 720.;
 

@@ -41,13 +41,13 @@ use super::kitty::{
 };
 use super::secrets::{RespectObfuscatedSecrets, SecretAndHandle};
 use super::selection::ScrollDelta;
-use super::session::{BootstrapSessionType, InBandCommandOutputReceiver, SessionId};
+// use super::session::{BootstrapSessionType, InBandCommandOutputReceiver, SessionId};  // unresolved (cloud detach)
 use super::tmux::commands::TmuxCommand;
 use super::{
     super::{AltScreen, BlockList},
     ansi::BootstrappedValue,
 };
-use super::{tmux, Secret, SecretHandle};
+// use super::{tmux, Secret, SecretHandle};  // unresolved (cloud detach)
 use crate::terminal::model::ansi::{
     ClearValue, CommandFinishedValue, ExitShellValue, InitShellValue, InitSshValue,
     InitSubshellValue, PreInteractiveSSHSessionValue, PrecmdValue, PreexecValue, SSHValue,

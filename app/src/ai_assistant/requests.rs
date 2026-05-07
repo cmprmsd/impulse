@@ -8,10 +8,10 @@ use futures::stream::AbortHandle;
 use warp_core::user_preferences::GetUserPreferences as _;
 use warpui::{AppContext, Entity, ModelContext, SingletonEntity};
 
-use crate::{
-    ai::{RequestLimitInfo, RequestUsageInfo},
-    ai_assistant::utils::{AssistantTranscriptPart, TranscriptPartSubType},
-    send_telemetry_from_ctx};
+// use crate::{  // unresolved (cloud detach)
+//     ai::{RequestLimitInfo, RequestUsageInfo},
+//     ai_assistant::utils::{AssistantTranscriptPart, TranscriptPartSubType},
+//     send_telemetry_from_ctx};
 
 use super::{
     execution_context::WarpAiExecutionContext,

@@ -53,7 +53,7 @@ use warp_editor::selection::{TextDirection, TextUnit};
 use crate::legacy_stubs::{CloudModelEvent};
 use crate::legacy_stubs::{CloudModel};
 use warp_editor::selection::SelectionModel;
-use crate::notebooks::editor::rich_text_styles::RichTextStyles;
+// use crate::notebooks::editor::rich_text_styles::RichTextStyles;  // unresolved (cloud detach)
 use crate::legacy_stubs::{RenderState};
 
 const DEBOUNCED_RESIZE_PERIOD: Duration = Duration::from_millis(5);

@@ -99,7 +99,7 @@ impl AISubpage {
         }
     }
 }
-use crate::ai::{AIRequestUsageModel, AIRequestUsageModelEvent};
+// use crate::ai::{AIRequestUsageModel, AIRequestUsageModelEvent};  // unresolved (cloud detach)
 use crate::menu::{MenuItem, MenuItemFields};
 use crate::ui_components::icons::Icon;
 use crate::view_components::dropdown::DropdownAction;

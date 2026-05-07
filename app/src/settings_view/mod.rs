@@ -1,3 +1,4 @@
+use warpui::keymap::macros::*;
 use self::telemetry::SettingsTelemetryEvent;
 use crate::pane_group::focus_state::PaneFocusHandle;
 use crate::settings_view::mcp_servers_page::MCPServersSettingsPage;
@@ -17,7 +18,7 @@ use crate::{
 use about_page::AboutPageView;
 use ai_page::{AISettingsPageAction, AISettingsPageEvent, AISettingsPageView, AISubpage};
 use appearance_page::{AppearancePageAction, AppearanceSettingsPageView};
-use billing_and_usage_page::{BillingAndUsagePageEvent, BillingAndUsagePageView};
+// use billing_and_usage_page::{BillingAndUsagePageEvent, BillingAndUsagePageView};  // unresolved (cloud detach)
 use code_page::CodeSubpage;
 use code_page::{CodeSettingsPageAction, CodeSettingsPageEvent};
 use environments_page::EnvironmentsPageView;
@@ -38,7 +39,7 @@ use show_blocks_view::{ShowBlocksEvent, ShowBlocksView};
 use std::collections::HashMap;
 use std::path::PathBuf;
 use std::str::FromStr;
-use teams_page::{TeamsPageView, TeamsPageViewEvent};
+// use teams_page::{TeamsPageView, TeamsPageViewEvent};  // unresolved (cloud detach)
 use warp_core::send_telemetry_from_ctx;
 use warp_core::{
     channel::ChannelState, context_flag::ContextFlag, features::FeatureFlag,
@@ -64,8 +65,8 @@ use crate::pane_group::pane::view::PaneHeaderCustomAction;
 use crate::GlobalResourceHandlesProvider;
 use crate::workspace::WorkspaceAction;
 use crate::util::bindings::keybinding_name_to_display_string;
-use crate::legacy_stubs::{SizeInfo};
-use warpui::keymap::ContextPredicate;
+// use crate::legacy_stubs::{SizeInfo};  // unresolved (cloud detach)
+// use warpui::keymap::ContextPredicate;  // unresolved (cloud detach)
 
 mod about_page;
 mod admin_actions;

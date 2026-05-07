@@ -9,7 +9,7 @@ use super::{
     },
     SettingsSection,
 };
-use crate::auth::AuthStateProvider;
+// use crate::auth::AuthStateProvider;  // unresolved (cloud detach)
 use crate::server::{ids::ApiKeyUid, server_api::auth::AuthClient};
 use crate::util::truncation::truncate_from_end;
 use crate::{

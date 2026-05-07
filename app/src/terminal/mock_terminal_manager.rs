@@ -5,10 +5,10 @@ use parking_lot::FairMutex;
 use pathfinder_geometry::vector::Vector2F;
 use warpui::{AppContext, ModelHandle, SingletonEntity, ViewHandle, WindowId};
 
-use crate::{
-    ai::blocklist::SerializedBlockListItem, context_chips::prompt_type::PromptType,
-    pane_group::TerminalViewResources, terminal::view::ConversationRestorationInNewPaneType,
-};
+// use crate::{  // unresolved (cloud detach)
+//     ai::blocklist::SerializedBlockListItem, context_chips::prompt_type::PromptType,
+//     pane_group::TerminalViewResources, terminal::view::ConversationRestorationInNewPaneType,
+// };
 
 use super::{
     event_listener::ChannelEventListener, model::session::Sessions,

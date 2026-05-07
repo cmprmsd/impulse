@@ -14,18 +14,18 @@ use warpui::{
     ViewContext, ViewHandle, WeakViewHandle,
 };
 
-use crate::{
-    appearance::Appearance,
-    external_secrets::ExternalSecret,
-    search::{
-        external_secrets::{
-            external_secret_data_source::ExternalSecretDataSource,
-            searcher::{ExternalSecretSearchItemAction, ExternalSecretSearchMixer},
-        },
-        result_renderer::{QueryResultRenderer, QueryResultRendererStyles},
-        search_bar::{SearchBar, SearchBarEvent, SearchBarState, SearchResultOrdering},
-    },
-};
+// use crate::{  // unresolved (cloud detach)
+//     appearance::Appearance,
+//     external_secrets::ExternalSecret,
+//     search::{
+//         external_secrets::{
+//             external_secret_data_source::ExternalSecretDataSource,
+//             searcher::{ExternalSecretSearchItemAction, ExternalSecretSearchMixer},
+//         },
+//         result_renderer::{QueryResultRenderer, QueryResultRendererStyles},
+//         search_bar::{SearchBar, SearchBarEvent, SearchBarState, SearchResultOrdering},
+//     },
+// };
 
 lazy_static! {
     static ref QUERY_RESULT_RENDERER_STYLES: QueryResultRendererStyles =

@@ -19,7 +19,7 @@ use warpui::{AppContext, Element, EntityId, PaintContext};
 use super::model::ansi::{CursorShape, CursorStyle};
 use super::model::grid::RespectDisplayedOutput;
 use super::model::image_map::StoredImageMetadata;
-use super::model::SecretHandle;
+// use super::model::SecretHandle;  // unresolved (cloud detach)
 
 pub struct GridRenderParams {
     pub warp_theme: WarpTheme,
