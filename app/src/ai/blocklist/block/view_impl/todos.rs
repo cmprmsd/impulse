@@ -9,9 +9,7 @@ use warpui::{
     },
 };
 
-use crate::ai::agent::conversation::{AIConversation, TodoStatus};
 use crate::ai::agent::icons::{gray_stop_icon, in_progress_icon, pending_icon, succeeded_icon};
-use crate::ai::agent::todos::AIAgentTodoList;
 use crate::ai::agent::{AIAgentTodo, MessageId};
 use crate::ai::blocklist::inline_action::inline_action_icons::cancelled_icon;
 use crate::{

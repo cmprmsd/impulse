@@ -17,14 +17,6 @@ use super::{
     agent_conversation_entry_icon_variant, agent_icon_variant_for_run,
     agent_icon_variant_from_terminal_inputs, CLISessionInputs, TerminalIconInputs,
 };
-use crate::ai::agent::conversation::{AIConversationId, ConversationStatus};
-use crate::ai::agent_conversations_model::entry::{
-    AgentConversationBackingData, AgentConversationCapabilities, AgentConversationCreator,
-    AgentConversationDisplayData, AgentConversationIdentity,
-};
-use crate::ai::agent_conversations_model::{
-    AgentConversationEntry, AgentConversationEntryId, AgentConversationProvenance,
-};
 use crate::terminal::CLIAgent;
 use crate::ui_components::icon_with_status::IconWithStatusVariant;
 

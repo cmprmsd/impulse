@@ -1,9 +1,6 @@
 //! Renders the AI output portion of the AI block.
 //!
 //! This includes text, code snippets, suggested commands, and interactive inline action UX.
-use crate::ai::agent::api::ServerConversationToken;
-use crate::ai::agent::comment::ReviewComment;
-use crate::ai::agent::task::TaskId;
 use crate::ai::agent::{
     AIAgentInput, CreateDocumentsResult, EditDocumentsResult, ReadFilesResult, SubagentCall,
     SubagentType, TodoOperation, UploadArtifactResult,

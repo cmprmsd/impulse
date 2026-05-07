@@ -4,8 +4,6 @@ use itertools::Itertools;
 use ordered_float::OrderedFloat;
 use warpui::{AppContext, Entity, ModelHandle};
 
-use crate::ai::blocklist::agent_view::AgentViewController;
-use crate::ai::conversation_navigation::ConversationNavigationData;
 use crate::search::data_source::{Query, QueryFilter, QueryResult};
 use crate::search::mixer::DataSourceRunErrorWrapper;
 use crate::search::SyncDataSource;

@@ -4,7 +4,6 @@ use std::ops::Range;
 use warpui::App;
 
 use super::*;
-use crate::ai::agent::conversation::AIConversationId;
 use crate::appearance::Appearance;
 use crate::test_util::settings::initialize_settings_for_tests;
 

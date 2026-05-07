@@ -405,7 +405,6 @@ fn test_merge_cloud_conversation_metadata() {
 /// the server_metadata is populated when merge_cloud_conversation_metadata is called.
 #[test]
 fn test_merge_cloud_metadata_updates_already_restored_conversations() {
-    use crate::ai::agent::conversation::AIConversation;
 
     App::test((), |mut app| async move {
         let history_model = app.add_singleton_model(|_| BlocklistAIHistoryModel::new(vec![], &[]));
@@ -723,7 +722,6 @@ fn test_child_conversation_ids_of_unknown_parent() {
 
 #[test]
 fn test_restore_conversations_maintains_children_by_parent() {
-    use crate::ai::agent::conversation::AIConversation;
 
     App::test((), |mut app| async move {
         let terminal_view_id = EntityId::new();
@@ -746,7 +744,6 @@ fn test_restore_conversations_maintains_children_by_parent() {
 
 #[test]
 fn test_restore_conversations_dedup_children_by_parent() {
-    use crate::ai::agent::conversation::AIConversation;
 
     App::test((), |mut app| async move {
         let terminal_view_id = EntityId::new();
@@ -948,7 +945,6 @@ fn test_find_by_token_after_merge_cloud_metadata() {
 
 #[test]
 fn test_find_by_token_after_restore_conversations() {
-    use crate::ai::agent::conversation::AIConversation;
 
     App::test((), |mut app| async move {
         let history_model = app.add_singleton_model(|_| BlocklistAIHistoryModel::new(vec![], &[]));
@@ -1202,7 +1198,6 @@ fn test_find_by_token_after_insert_forked_conversation_from_tasks() {
 
 #[test]
 fn test_find_by_token_after_mark_conversations_historical_for_terminal_view() {
-    use crate::ai::agent::conversation::AIConversation;
 
     App::test((), |mut app| async move {
         let now = Local::now();
@@ -1321,7 +1316,6 @@ fn test_set_server_conversation_token_rebinds_reverse_index() {
 /// index resolves the cloud token to the forked conversation.
 #[test]
 fn test_fork_then_bind_handoff_token_resolves_to_forked_conversation() {
-    use crate::ai::agent::conversation::AIConversation;
     use crate::persistence::model::AgentConversationData;
     use crate::test_util::ai_agent_tasks::{create_api_task, create_message};
 
@@ -1414,7 +1408,6 @@ fn test_fork_then_bind_handoff_token_resolves_to_forked_conversation() {
 /// prefixed.
 #[test]
 fn test_fork_conversation_preserves_task_ids_when_requested() {
-    use crate::ai::agent::conversation::AIConversation;
     use crate::persistence::model::AgentConversationData;
     use crate::test_util::ai_agent_tasks::{create_api_subtask, create_api_task, create_message};
 

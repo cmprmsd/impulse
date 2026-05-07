@@ -4,7 +4,6 @@ use std::path::{Path, PathBuf};
 use async_channel::unbounded;
 use warpui::{App, EntityId, ModelHandle};
 
-use crate::ai::agent::task::TaskId;
 use crate::ai::agent::{
     AIAgentAction, AIAgentActionId, AIAgentActionResultType, AIAgentActionType,
     UploadArtifactRequest, UploadArtifactResult,

@@ -5,7 +5,6 @@ use llm_generate::LLMGenerateRequest;
 use reqwest::blocking::Client;
 use serde::Deserialize;
 
-use crate::ai::agent::conversation::AIConversation;
 
 #[derive(Clone, Debug)]
 pub struct LLMJudgeConfig {

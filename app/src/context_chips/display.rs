@@ -1,6 +1,5 @@
 use std::sync::Arc;
 
-use crate::ai::blocklist::agent_view::AgentViewController;
 use crate::ai::blocklist::{BlocklistAIHistoryEvent, BlocklistAIHistoryModel};
 use crate::ai::document::ai_document_model::{AIDocumentId, AIDocumentVersion};
 use crate::context_chips::display_chip::format_git_branch_command;

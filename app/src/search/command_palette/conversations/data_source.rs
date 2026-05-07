@@ -1,5 +1,3 @@
-use crate::ai::agent::conversation::{AIConversation, AIConversationId};
-use crate::ai::conversation_navigation::ConversationNavigationData;
 use crate::search::command_palette::conversations::search::{
     ConversationMatchResult, ConversationSearcher, FuzzyConversationSearcher, MatchedConversation,
 };

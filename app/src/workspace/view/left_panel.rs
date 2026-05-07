@@ -12,7 +12,6 @@ use warpui::{
     },
 };
 
-use crate::ai::agent::conversation::AIConversationId;
 #[cfg(feature = "local_fs")]
 use crate::code::file_tree::FileTreeEvent;
 use crate::coding_panel_enablement_state::CodingPanelEnablementState;

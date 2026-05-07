@@ -1,4 +1,3 @@
-use crate::ai::agent::conversation::AIConversationId;
 use crate::drive::CloudObjectTypeAndId;
 use crate::search::command_palette::new_session::{NewSessionOption, NewSessionOptionId};
 use crate::search::mixer::SearchMixer;

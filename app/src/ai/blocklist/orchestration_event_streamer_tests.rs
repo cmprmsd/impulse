@@ -109,7 +109,6 @@ fn ai_conversation_new_restored_preserves_last_event_sequence() {
     // Guards against regressions that drop the field when wiring the restore
     // path: a conversation restored with `last_event_sequence: Some(N)`
     // should expose it via `conversation.last_event_sequence()`.
-    use crate::ai::agent::conversation::{AIConversation, AIConversationId};
     use crate::persistence::model::AgentConversationData;
 
     let task = api::Task {
@@ -193,7 +192,6 @@ fn make_ambient_task_with_event_seq(
 fn make_server_metadata_with_harness(
     harness: AIAgentHarness,
 ) -> crate::ai::agent::conversation::ServerAIConversationMetadata {
-    use crate::ai::agent::api::ServerConversationToken;
     use crate::persistence::model::ConversationUsageMetadata;
     use chrono::Utc;
 
@@ -229,7 +227,6 @@ fn make_server_metadata_with_harness(
 
 #[test]
 fn dormant_local_claude_child_skips_generic_sse_but_allows_wake_listener() {
-    use crate::ai::agent::conversation::{AIConversation, ConversationStatus};
     use std::sync::Arc;
     use warpui::App;
 
@@ -287,7 +284,6 @@ fn dormant_local_claude_child_skips_generic_sse_but_allows_wake_listener() {
 
 #[test]
 fn dormant_local_claude_child_uses_task_harness_when_server_metadata_missing() {
-    use crate::ai::agent::conversation::{AIConversation, ConversationStatus};
     use std::sync::Arc;
     use warp_cli::agent::Harness;
     use warpui::App;
@@ -397,7 +393,6 @@ async fn dormant_claude_wake_consumer_stops_on_first_target_event() {
 
 #[test]
 fn restored_conversations_skip_v2_streaming_when_orchestration_v2_disabled() {
-    use crate::ai::agent::conversation::AIConversation;
     use std::sync::Arc;
     use warpui::App;
 
@@ -498,7 +493,6 @@ async fn sse_forwarding_consumer_skips_message_hydration_when_disabled() {
 }
 #[test]
 fn finish_restore_fetch_uses_server_cursor_when_sqlite_is_absent() {
-    use crate::ai::agent::conversation::AIConversation;
     use std::sync::Arc;
     use warpui::App;
 
@@ -555,7 +549,6 @@ fn finish_restore_fetch_uses_server_cursor_when_sqlite_is_absent() {
 
 #[test]
 fn handle_event_batch_persists_max_seq_to_history_model() {
-    use crate::ai::agent::conversation::{AIConversation, AIConversationId};
     use crate::persistence::ModelEvent;
     use crate::test_util::settings::initialize_settings_for_tests;
     use crate::{GlobalResourceHandles, GlobalResourceHandlesProvider};
@@ -653,7 +646,6 @@ fn finish_restore_fetch_no_ops_when_conversation_deleted_mid_flight() {
     // RemoveConversation handler removes the streams entry. finish_restore_fetch
     // uses the missing entry as a sentinel and must not re-populate
     // streamer state for the deleted conversation.
-    use crate::ai::agent::conversation::AIConversation;
     use std::sync::Arc;
     use warpui::App;
 
@@ -720,7 +712,6 @@ fn finish_restore_fetch_err_does_not_resurrect_deleted_conversation() {
     // was just removed must not resurrect a streams entry (which would then
     // defeat the deletion sentinel inside the retry timer and cause an
     // indefinite retry loop).
-    use crate::ai::agent::conversation::AIConversation;
     use std::sync::Arc;
     use warpui::App;
 
@@ -783,7 +774,6 @@ fn on_conversation_removed_prunes_stale_child_run_id_from_parent() {
     // filter. Previously the streamer looked up the run_id from the history
     // model after the removal, which always returned `None` because the
     // history model emits `RemoveConversation` after dropping the record.
-    use crate::ai::agent::conversation::AIConversation;
     use std::sync::Arc;
     use warpui::App;
 
@@ -843,7 +833,6 @@ fn finish_restore_fetch_reconnects_sse_when_children_added_to_open_connection() 
     // When a status transition races with the restore fetch and opens SSE
     // before children are known, finish_restore_fetch must reconnect SSE
     // with the updated run_id set rather than leaving children unwatched.
-    use crate::ai::agent::conversation::{AIConversation, ConversationStatus};
     use std::sync::Arc;
     use warpui::App;
 

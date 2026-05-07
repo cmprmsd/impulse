@@ -1,4 +1,3 @@
-use crate::ai::conversation_navigation::ConversationNavigationData;
 use crate::search::command_palette::conversations::search_item::ConversationAction;
 use crate::search::command_palette::conversations::search_item::ConversationSearchItem;
 use crate::search::command_palette::conversations::DataSource;

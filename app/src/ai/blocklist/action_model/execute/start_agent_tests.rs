@@ -1,6 +1,4 @@
 use super::*;
-use crate::ai::agent::conversation::ConversationStatus;
-use crate::ai::agent::task::TaskId;
 use crate::ai::agent::{
     AIAgentAction, AIAgentActionId, AIAgentActionResultType, AIAgentActionType,
     StartAgentExecutionMode, StartAgentResult,

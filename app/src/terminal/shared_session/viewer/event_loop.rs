@@ -1,6 +1,5 @@
 use crate::ai::agent::AIAgentActionId;
 use crate::ai::blocklist::block::cli_controller::LongRunningCommandControlState;
-use crate::ai::blocklist::history_model::BlocklistAIHistoryModel;
 use crate::features::FeatureFlag;
 use crate::terminal::model::block::AgentInteractionMetadata;
 use parking_lot::FairMutex;

@@ -1,7 +1,6 @@
 use std::sync::Arc;
 
 use super::super::controller::{BlocklistAIController, BlocklistAIControllerEvent};
-use crate::ai::agent::api::generate_multi_agent_output;
 use crate::ai::agent::AIIdentifiers;
 use crate::ai::agent::FileContext;
 use crate::ai::agent::PassiveCodeDiffEntry;
@@ -596,7 +595,6 @@ async fn extract_suggestion_from_stream(
         ai::agent::convert::ConvertToAPITypeError,
     >,
 ) -> Option<StreamExtractionResult> {
-    use crate::ai::agent::task::helper::MessageExt;
     use futures_util::StreamExt;
 
     let Ok(mut stream) = stream_result else {

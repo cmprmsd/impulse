@@ -12,10 +12,7 @@ use warpui::scene::{CornerRadius, Radius};
 use warpui::text_layout::ClipConfig;
 use warpui::{AppContext, Element, SingletonEntity};
 
-use crate::ai::active_agent_views_model::{ActiveAgentViewsModel, ConversationOrTaskId};
-use crate::ai::agent::conversation::ConversationStatus;
 use crate::ai::blocklist::BlocklistAIHistoryModel;
-use crate::ai::conversation_navigation::ConversationNavigationData;
 use crate::ai::conversation_status_ui::{render_status_element, STATUS_ELEMENT_PADDING};
 use crate::appearance::Appearance;
 use crate::search::{ItemHighlightState, SearchItem};

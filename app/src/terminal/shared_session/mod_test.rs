@@ -1,6 +1,5 @@
 use super::{decode_scrollback, SharedSessionScrollbackType};
 
-use crate::ai::blocklist::agent_view::AgentViewState;
 use crate::assert_lines_approx_eq;
 use crate::channel::ChannelState;
 use crate::terminal::color::List;

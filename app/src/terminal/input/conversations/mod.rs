@@ -10,8 +10,6 @@ use pathfinder_color::ColorU;
 use warp_core::ui::appearance::Appearance;
 use warpui::{keymap::Keystroke, SingletonEntity};
 
-use crate::ai::active_agent_views_model::{ActiveAgentViewsModel, ConversationOrTaskId};
-use crate::ai::conversation_navigation::ConversationNavigationData;
 use crate::terminal::input::inline_menu::{
     default_navigation_message_items, InlineMenuAction, InlineMenuMessageArgs, InlineMenuRowAction,
 };

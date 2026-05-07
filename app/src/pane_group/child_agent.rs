@@ -3,8 +3,6 @@ use std::{collections::HashMap, ffi::OsString, path::PathBuf};
 use crate::ai::attachment_utils::attachments_download_dir;
 use warpui::{EntityId, SingletonEntity, ViewContext, ViewHandle};
 
-use crate::ai::agent::conversation::{AIConversationId, ConversationStatus};
-use crate::ai::blocklist::agent_view::AgentViewEntryOrigin;
 use crate::ai::blocklist::BlocklistAIHistoryModel;
 use crate::ai::llms::LLMPreferences;
 use crate::pane_group::{PaneGroup, PaneId};

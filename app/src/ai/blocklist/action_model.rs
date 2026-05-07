@@ -15,7 +15,6 @@
 mod execute;
 mod preprocess;
 
-use crate::ai::agent::conversation::ConversationStatus;
 use crate::ai::agent::{
     AIAgentActionResultType, AIAgentActionType, AIAgentExchange, CancellationReason,
     CreateDocumentsResult, EditDocumentsResult, RequestCommandOutputResult,
@@ -49,7 +48,6 @@ use std::{
     sync::Arc,
 };
 
-use crate::ai::agent::conversation::AIConversationId;
 use itertools::Itertools;
 use parking_lot::FairMutex;
 use warpui::{AppContext, Entity, EntityId, ModelContext, ModelHandle, SingletonEntity};
@@ -72,7 +70,6 @@ use self::execute::{
 };
 
 use super::BlocklistAIHistoryModel;
-use crate::ai::ai_document_view::DEFAULT_PLANNING_DOCUMENT_TITLE;
 use crate::ai::document::ai_document_model::AIDocumentModel;
 use crate::{send_telemetry_from_ctx, TelemetryEvent};
 

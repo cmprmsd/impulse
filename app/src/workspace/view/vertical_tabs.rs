@@ -1,6 +1,5 @@
 pub mod telemetry;
 
-use crate::ai::agent::conversation::ConversationStatus;
 use crate::ai::conversation_status_ui::render_status_element;
 use crate::code::editor::{add_color, remove_color};
 use crate::code::icon_from_file_path;

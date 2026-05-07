@@ -14,7 +14,6 @@ use warpui::{App, EntityId, ModelHandle};
 
 use super::{BlocklistAIContextModel, PendingAttachment, PendingFile};
 use crate::ai::agent::ImageContext;
-use crate::ai::blocklist::agent_view::{AgentViewController, EphemeralMessageModel};
 use crate::terminal::color::{self, Colors};
 use crate::terminal::event_listener::ChannelEventListener;
 use crate::terminal::model::test_utils::block_size;

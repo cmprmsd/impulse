@@ -1,7 +1,6 @@
 //! Utility functions for working with skills.
 
 use super::{SkillDescriptor, SkillManager};
-use crate::ai::agent::conversation::AIConversationId;
 use crate::ai::blocklist::view_util::render_provider_icon_button;
 use crate::ai::blocklist::BlocklistAIHistoryModel;
 use ai::skills::{

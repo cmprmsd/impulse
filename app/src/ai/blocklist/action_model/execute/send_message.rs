@@ -12,7 +12,6 @@ use warpui::{AppContext, Entity, ModelContext, SingletonEntity};
 use crate::ai::agent::{
     conversation::AIConversationId, AIAgentAction, AIAgentActionResultType, AIAgentActionType,
 };
-use crate::ai::blocklist::history_model::BlocklistAIHistoryModel;
 use crate::ai::blocklist::orchestration_events::{OrchestrationEventService, SendMessageResult};
 use crate::ai::blocklist::telemetry::{
     BlocklistOrchestrationTelemetryEvent, TeamAgentCommunicationFailedEvent,

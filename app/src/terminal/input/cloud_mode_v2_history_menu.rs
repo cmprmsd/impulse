@@ -11,7 +11,6 @@ use warpui::{
     AppContext, Element, Entity, EntityId, ModelHandle, SingletonEntity, View, ViewContext,
 };
 
-use crate::ai::blocklist::agent_view::AgentViewController;
 use crate::search::data_source::QueryFilter;
 use crate::terminal::input::buffer_model::InputBufferModel;
 use crate::terminal::input::inline_history::{

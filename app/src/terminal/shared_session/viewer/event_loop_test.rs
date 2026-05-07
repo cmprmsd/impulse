@@ -1,4 +1,3 @@
-use crate::ai::blocklist::agent_view::AgentViewState;
 use crate::terminal::model::block::{BlockId, SerializedBlock};
 use crate::terminal::shared_session::tests::terminal_model_for_viewer;
 use crate::terminal::TerminalView;

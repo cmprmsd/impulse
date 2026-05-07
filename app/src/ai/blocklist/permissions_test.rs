@@ -7,7 +7,6 @@ use warpui::{App, EntityId, ModelHandle};
 
 use warp_core::execution_mode::ExecutionMode;
 
-use crate::ai::active_agent_views_model::ActiveAgentViewsModel;
 use crate::terminal::cli_agent_sessions::CLIAgentSessionsModel;
 use crate::{
     ai::{

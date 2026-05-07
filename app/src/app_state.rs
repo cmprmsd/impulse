@@ -7,7 +7,6 @@ use warpui::platform::FullscreenState;
 
 use warpui::AppContext;
 
-use crate::ai::agent::conversation::AIConversationId;
 use crate::ai::blocklist::InputConfig;
 use crate::ai::blocklist::SerializedBlockListItem;
 use crate::code::editor_management::CodeSource;

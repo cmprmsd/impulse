@@ -12,10 +12,6 @@ use warp_cli::agent::Harness;
 use warpui::AppContext;
 use warpui::SingletonEntity;
 
-use crate::ai::agent::conversation::ConversationStatus;
-use crate::ai::agent_conversations_model::{
-    AgentConversationEntry, AgentConversationProvenance, AgentConversationsModel,
-};
 use crate::terminal::cli_agent_sessions::listener::agent_supports_rich_status;
 use crate::terminal::cli_agent_sessions::CLIAgentSessionsModel;
 use crate::terminal::view::TerminalView;

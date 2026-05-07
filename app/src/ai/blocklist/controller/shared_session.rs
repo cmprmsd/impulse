@@ -9,13 +9,10 @@ use warp_core::features::FeatureFlag;
 
 use super::response_stream::ResponseStreamId;
 use super::{BlocklistAIController, RequestInput};
-use crate::ai::agent::conversation::{AIConversationId, ConversationStatus};
 use crate::ai::agent::{AIAgentActionId, AIAgentAttachment, EntrypointType};
 use crate::ai::attachment_utils::{
     build_file_attachment_map, download_file, sanitize_filename, DownloadedAttachment,
 };
-use crate::ai::blocklist::agent_view::AgentViewEntryOrigin;
-use crate::ai::blocklist::history_model::BlocklistAIHistoryModel;
 use crate::terminal::model::block::BlockId;
 use warpui::{AppContext, ModelContext, SingletonEntity};
 use warpui::{Action};

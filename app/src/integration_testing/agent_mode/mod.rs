@@ -8,7 +8,6 @@ use std::fs::File;
 use std::io::Write;
 
 use crate::ai::agent::{AIAgentOutputStatus, FinishedAIAgentOutput};
-pub use crate::ai::blocklist::agent_view::AgentViewState;
 use crate::BlocklistAIHistoryModel;
 use crate::{ai::agent::AIAgentActionType, integration_testing::view_getters::terminal_view};
 pub use assertions::*;

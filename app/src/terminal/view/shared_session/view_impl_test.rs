@@ -1,8 +1,6 @@
 use pathfinder_geometry::vector::vec2f;
 use session_sharing_protocol::sharer::SessionSourceType;
 
-use crate::ai::agent::conversation::ConversationStatus;
-use crate::ai::blocklist::history_model::BlocklistAIHistoryModel;
 use warpui::platform::WindowStyle;
 use warpui::{App, ViewHandle};
 

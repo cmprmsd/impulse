@@ -11,15 +11,11 @@ use warpui::{AppContext, Element, SingletonEntity};
 use markdown_parser::{FormattedText, FormattedTextFragment, FormattedTextLine};
 use warpui::elements::FormattedTextElement;
 
-use crate::ai::agent::conversation::{AIConversation, AIConversationId, ConversationStatus};
 use crate::ai::agent::{
     AIAgentActionId, AIAgentActionResultType, MessageId, ReceivedMessageDisplay,
     SendMessageToAgentResult, StartAgentExecutionMode, StartAgentResult,
 };
 use crate::ai::blocklist::action_model::AIActionStatus;
-use crate::ai::blocklist::agent_view::orchestration_conversation_links::{
-    conversation_id_for_agent_id, conversation_navigation_card_with_icon,
-};
 use crate::ai::blocklist::block::model::AIBlockModelHelper;
 use crate::ai::blocklist::block::{AIBlockAction, CollapsibleExpansionState};
 use crate::ai::blocklist::inline_action::inline_action_header::{

@@ -1,4 +1,3 @@
-use crate::ai::agent::conversation::{AIConversationId, ConversationStatus};
 use crate::ai::agent::{StartAgentExecutionMode, StartAgentResult};
 use crate::BlocklistAIHistoryModel;
 use ai::agent::action_result::StartAgentVersion;

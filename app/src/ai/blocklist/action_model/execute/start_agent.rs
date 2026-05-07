@@ -3,7 +3,6 @@ use std::collections::HashMap;
 use futures::{future::BoxFuture, FutureExt};
 use warpui::{Entity, ModelContext, SingletonEntity};
 
-use crate::ai::agent::conversation::{AIConversationId, ConversationStatus};
 use crate::ai::agent::{
     AIAgentAction, AIAgentActionResultType, AIAgentActionType, LifecycleEventType,
     StartAgentExecutionMode, StartAgentResult,

@@ -11,7 +11,6 @@ use futures::FutureExt;
 use warpui::r#async::FutureExt as AsyncFutureExt;
 use warpui::{AppContext, Entity, EntityId, ModelContext, ModelHandle, SingletonEntity};
 
-use crate::ai::agent::redaction::redact_secrets;
 use crate::ai::agent::{
     conversation::AIConversationId, AIAgentAction, AIAgentActionType, GrepResult, ServerOutputId,
 };

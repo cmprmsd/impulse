@@ -69,12 +69,6 @@ use crate::legacy_stubs::{ServerTimestamp, SettingsSection, UserWorkspaces};
 mod new_environment_button;
 use new_environment_button::NewEnvironmentButtonView;
 
-#[cfg(not(target_family = "wasm"))]
-#[allow(unused_imports)] // IntegrationsClient trait is used in fetch_github_repos
-use {
-    crate::server::server_api::{integrations::IntegrationsClient, ServerApiProvider},
-    warp_graphql::queries::user_github_info::UserGithubInfoResult,
-};
 
 const PAGE_TITLE_TEXT: &str = "Environments";
 const PAGE_DESCRIPTION_TEXT: &str = "Environments define where your ambient agents run. Set one up in minutes via GitHub (recommended), Warp-assisted setup, or manual configuration.";
