@@ -146,7 +146,6 @@ impl MainPageAction {
 
 impl From<&MainPageAction> for LoginGatedFeature {
     fn from(val: &MainPageAction) -> LoginGatedFeature {
-        use MainPageAction::*;
         match val {
             Upgrade { .. } => "Upgrade Plan",
             GenerateStripeBillingPortalLink { .. } => "Generate Stripe Billing Portal Link",

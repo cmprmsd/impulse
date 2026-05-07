@@ -1349,7 +1349,6 @@ pub fn init(app: &mut AppContext) {
 }
 
 fn add_open_setting_pages_as_editable_binding(app: &mut AppContext) {
-    use warpui::keymap::macros::*;
 
     // Add the ability to open setting modals to the command palette.
     app.register_editable_bindings([
@@ -1494,7 +1493,6 @@ fn add_open_setting_pages_as_editable_binding(app: &mut AppContext) {
 }
 
 fn add_overflow_menu_items_as_editable_binding(app: &mut AppContext) {
-    use warpui::keymap::macros::*;
 
     // Add the ability to open all overflow menu items to the command palette.
     app.register_editable_bindings([

@@ -309,7 +309,6 @@ fn valid_query_filters(app: &AppContext) -> Vec<QueryFilter> {
 }
 
 mod styles {
-    use crate::appearance::Appearance;
 
     pub const FILTER_CHIP_MARGIN: f32 = 8.;
     pub const FILTER_CHIPS_MARGIN_BOTTOM: f32 = 16.;

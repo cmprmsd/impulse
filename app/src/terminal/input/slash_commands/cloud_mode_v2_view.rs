@@ -434,11 +434,11 @@ impl CloudModeV2SlashCommandView {
         let on_click_fn = |_idx: usize,
                            item: AcceptSlashCommandOrSavedPrompt,
                            evt_ctx: &mut warpui::EventContext| {
-                           }
             evt_ctx.dispatch_typed_action(CloudModeV2SlashCommandAction::Accept {
                 item,
                 cmd_or_ctrl_enter: false,
             });
+        };
 
         let renderers: Vec<QueryResultRenderer<AcceptSlashCommandOrSavedPrompt>> = self
             .mixer

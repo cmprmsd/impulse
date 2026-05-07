@@ -4576,7 +4576,6 @@ fn test_alias_expansion_multiple_commands_in_input() {
             input.user_insert("gco \ngco ", ctx);
         });
         editor.update(&mut app, |editor, ctx| {
-            use crate::editor::EditorAction;
             editor.move_to_buffer_end(ctx);
             editor.handle_action(&EditorAction::AddCursorAbove, ctx);
             // Cursor is now at "gco |\ngco |"
@@ -4967,7 +4966,6 @@ fn test_get_expanded_command_on_execute() {
             input.user_insert("gco test", ctx);
         });
         editor.update(&mut app, |editor, ctx| {
-            use crate::editor::EditorAction;
             editor.move_to_buffer_start(ctx);
             editor.handle_action(&EditorAction::MoveForwardOneWord, ctx);
             // Cursor is now at "gco| test"
@@ -6214,7 +6212,6 @@ fn test_terminal_only_ai_enter_enters_agent_view_and_clears_buffer() {
 
 #[test]
 fn test_terminal_only_escape_locks_shell_mode() {
-    use crate::ai::blocklist::InputConfig;
 
     App::test((), |mut app| async move {
         let _am_flag = FeatureFlag::AgentMode.override_enabled(true);

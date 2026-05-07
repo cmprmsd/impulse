@@ -501,7 +501,6 @@ impl FileTreeView {
         ctx: &mut ViewContext<Self>,
     ) {
         use repo_metadata::RepoMetadataEvent;
-        use repo_metadata::RepositoryIdentifier;
         match event {
             RepoMetadataEvent::RepositoryUpdated {
                 id: RepositoryIdentifier::Local(std_path),

@@ -47,7 +47,6 @@ impl ImportedConfigModel {
     pub fn search_for_settings_to_import(&mut self, ctx: &mut ModelContext<Self>) {
         use itertools::Itertools;
         use std::sync::Arc;
-        use strum::IntoEnumIterator;
         self.started = true;
 
         let loaded_system_fonts = warpui::fonts::Cache::handle(ctx)

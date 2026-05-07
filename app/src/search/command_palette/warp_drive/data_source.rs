@@ -538,21 +538,14 @@ mod full_text_searcher {
     use std::sync::Arc;
 
     use crate::define_search_schema;
-    use crate::drive::folders::CloudFolder;
-    use crate::env_vars::CloudEnvVarCollection;
     use crate::notebooks::manager::NotebookManager;
-    use crate::notebooks::CloudNotebook;
     use crate::search::command_palette::warp_drive::data_source::WarpDriveSearcher;
     use crate::search::command_palette::warp_drive::env_var_collection_search_item::{
         EnvVarCollectionSearchItem, ENV_VAR_NAME_SEPARATOR,
     };
     use crate::search::command_palette::warp_drive::notebook_search_item::NotebookSearchItem;
     use crate::search::command_palette::warp_drive::workflow_search_item::WorkflowSearchItem;
-    use crate::search::env_var_collections::fuzzy_match::FuzzyMatchEnvVarCollectionResult;
-    use crate::search::notebooks::fuzzy_match::FuzzyMatchNotebookResult;
     use crate::search::searcher::{AsyncSearcher, DEFAULT_MEMORY_BUDGET, SCORE_CONVERSION_FACTOR};
-    use crate::search::workflows::fuzzy_match::FuzzyMatchWorkflowResult;
-    use crate::workflows::CloudWorkflow;
     use fuzzy_match::FuzzyMatchResult;
     use itertools::Itertools;
     use warpui::r#async::executor::Background;

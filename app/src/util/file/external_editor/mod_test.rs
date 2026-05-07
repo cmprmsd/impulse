@@ -303,7 +303,6 @@ fn test_editor_try_from_supported_editors() {
 
 #[test]
 fn test_editor_try_from_unsupported_editors() {
-    use super::Editor;
 
     // Test unsupported terminal editors
     assert!(Editor::try_from("vim").is_err());

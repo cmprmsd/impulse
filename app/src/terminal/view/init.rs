@@ -96,7 +96,6 @@ fn init_overlapping_keybindings(app: &mut AppContext) {
 
 /// Register keybindings for [`TerminalView`] actions.
 pub fn init(app: &mut AppContext) {
-    use warpui::keymap::macros::*;
 
     app.register_binding_validator::<TerminalView>(is_binding_pty_compliant);
 
@@ -1132,7 +1131,6 @@ pub fn init(app: &mut AppContext) {
 
 /// Registers bindings related to input modes.
 fn register_input_mode_bindings(app: &mut AppContext) {
-    use warpui::keymap::macros::*;
 
     // A context predicate that matches when the input mode bindings are
     // available for use. Disabled when a CLI agent session is active — the

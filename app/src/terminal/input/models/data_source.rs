@@ -410,7 +410,6 @@ impl SearchItem for ModelSearchItem {
     }
 
     fn render_details(&self, app: &AppContext) -> Option<Box<dyn Element>> {
-        use warpui::elements::{Flex, ParentElement as _};
 
         let appearance = crate::appearance::Appearance::as_ref(app);
         let theme = appearance.theme();

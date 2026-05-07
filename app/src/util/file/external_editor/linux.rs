@@ -406,7 +406,6 @@ impl Editor {
     }
 
     pub fn is_installed(&self, _ctx: &mut AppContext) -> bool {
-        use Editor::*;
         match self {
             // For Zed editors on Linux, we need to detect which channel is installed by checking both
             // the .desktop file and the actual binary location
@@ -440,7 +439,6 @@ impl Editor {
         file_path: &Path,
         line_column_number: Option<LineAndColumnArg>,
     ) -> Option<Command> {
-        use Editor::*;
         match self {
             VSCode => {
                 let suffix = line_column_number

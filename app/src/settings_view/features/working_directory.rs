@@ -14,7 +14,6 @@ use crate::{
     terminal::session_settings::*};
 use crate::view_components::dropdown::Dropdown;
 use crate::legacy_stubs::{TelemetryEvent};
-use crate::view_components::dropdown::Dropdown;
 
 #[derive(Clone, Debug)]
 #[allow(clippy::enum_variant_names)]

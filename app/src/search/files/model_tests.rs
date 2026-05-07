@@ -176,7 +176,6 @@ mod file_search_model_tests {
 
 #[cfg(test)]
 mod file_search_item_tests {
-    use super::*;
 
     #[test]
     fn test_file_search_item_from_result() {
@@ -252,7 +251,6 @@ mod file_search_item_tests {
 
 #[cfg(test)]
 mod strip_absolute_path_prefix_tests {
-    use super::*;
     use std::path::{Path, PathBuf};
 
     /// Builds an absolute path from the given components, using the platform's
@@ -388,7 +386,6 @@ mod strip_absolute_path_prefix_tests {
 
 #[cfg(test)]
 mod integration_tests {
-    use super::*;
 
     #[test]
     fn test_typical_search_workflow() {

@@ -1234,7 +1234,6 @@ impl CurrentPrompt {
         ctx: &mut warpui::AppContext,
     ) -> futures_util::future::BoxFuture<'static, ()> {
         use futures_util::FutureExt;
-        use itertools::Itertools;
         // This structure prevents the returned Future from referencing self.
         let chip_futures = self
             .states

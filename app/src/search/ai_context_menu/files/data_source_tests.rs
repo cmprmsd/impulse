@@ -430,10 +430,8 @@ fn test_directory_search_support() {
 
 #[test]
 fn test_directory_action_type() {
-    use crate::search::ai_context_menu::files::search_item::FileSearchItem;
     use crate::search::ai_context_menu::mixer::AIContextMenuSearchableAction;
     use crate::search::item::SearchItem;
-    use fuzzy_match::FuzzyMatchResult;
 
     let directory_item = FileSearchItem {
         path: PathBuf::from("src/components/"),

@@ -548,8 +548,6 @@ pub fn install_root_tmux_script(
     app: &AppContext,
     can_run_sudo: bool,
 ) -> Option<String> {
-    use asset_macro::bundled_asset;
-    use warpui::assets::asset_cache::{AssetCache, AssetState};
 
     let asset_source = match (
         system.operating_system.as_str(),

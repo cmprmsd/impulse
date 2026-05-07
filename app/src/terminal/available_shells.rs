@@ -399,7 +399,6 @@ impl TryFrom<&str> for AvailableShell {
     type Error = ();
 
     fn try_from(value: &str) -> Result<Self, Self::Error> {
-        use crate::terminal::local_tty::shell::supported_shell_path_and_type;
         let (path, shell_type) = supported_shell_path_and_type(value).ok_or(())?;
         let command = path
             .file_name()
@@ -624,7 +623,6 @@ impl AvailableShells {
         paths_to_search: &[PathBuf],
         fallback_path: Option<&Path>,
     ) -> Vec<AvailableShell> {
-        use warp_core::features::FeatureFlag;
 
         if !FeatureFlag::ShellSelector.is_enabled() {
             return vec![
@@ -722,7 +720,6 @@ impl AvailableShells {
     fn locate_msys2_executables() -> Vec<PathBuf> {
         use std::env;
 
-        use warp_core::features::FeatureFlag;
 
         let mut paths = Vec::new();
 
@@ -861,7 +858,6 @@ impl AvailableShells {
     }
 
     fn get_user_preferred_shell_setting(&self, ctx: &AppContext) -> NewSessionShell {
-        use super::session_settings::SessionSettings;
 
         let new_session_shell_override = SessionSettings::as_ref(ctx)
             .new_session_shell_override
@@ -878,7 +874,6 @@ impl AvailableShells {
     }
 
     fn get_user_preferred_shell_setting_fallback(&self, ctx: &AppContext) -> NewSessionShell {
-        use super::session_settings::SessionSettings;
 
         let startup_shell = SessionSettings::as_ref(ctx)
             .startup_shell_override

@@ -1315,7 +1315,6 @@ fn test_set_server_conversation_token_rebinds_reverse_index() {
 /// index resolves the cloud token to the forked conversation.
 #[test]
 fn test_fork_then_bind_handoff_token_resolves_to_forked_conversation() {
-    use crate::persistence::model::AgentConversationData;
     use crate::test_util::ai_agent_tasks::{create_api_task, create_message};
 
     App::test((), |mut app| async move {
@@ -1407,7 +1406,6 @@ fn test_fork_then_bind_handoff_token_resolves_to_forked_conversation() {
 /// prefixed.
 #[test]
 fn test_fork_conversation_preserves_task_ids_when_requested() {
-    use crate::persistence::model::AgentConversationData;
     use crate::test_util::ai_agent_tasks::{create_api_subtask, create_api_task, create_message};
 
     App::test((), |mut app| async move {

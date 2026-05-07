@@ -517,8 +517,6 @@ fn detect_nvm_installed() -> bool {
 
 // Enumerate installed Node versions managed by nvm (best-effort, cross-OS)
 fn list_nvm_versions() -> Vec<String> {
-    use std::env;
-    use std::path::Path;
 
     let mut out: Vec<String> = Vec::new();
 

@@ -9,8 +9,6 @@ use warp_core::{
 };
 use warpui::{AppContext, ModelContext, SingletonEntity};
 
-use crate::{
-
 define_settings_group!(WorkflowAliases, settings: [
     aliases: Aliases {
         type: Vec<WorkflowAlias>,
@@ -20,7 +18,7 @@ define_settings_group!(WorkflowAliases, settings: [
         private: true,
         storage_key: "WorkflowAliases",
     }
-]);};
+]);
 
 #[derive(Debug, PartialEq, Serialize, Deserialize, Clone, schemars::JsonSchema, SettingsValue)]
 #[schemars(description = "A shortcut alias for a Warp Drive workflow.")]

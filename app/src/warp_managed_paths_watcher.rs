@@ -358,7 +358,6 @@ impl SingletonEntity for WarpManagedPathsWatcher {}
 
 #[cfg(test)]
 mod tests {
-    use dirs::home_dir;
     use std::collections::{HashMap, HashSet};
     use std::path::PathBuf;
 

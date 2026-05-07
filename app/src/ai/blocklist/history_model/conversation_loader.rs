@@ -22,7 +22,6 @@ use crate::legacy_stubs::{ServerApiProvider};
 use crate::legacy_stubs::{AIClient};
 use crate::legacy_stubs::{AIConversation, AIConversationId, ServerConversationToken};
 use crate::legacy_stubs::{AIAgentHarness};
-use crate::legacy_stubs::CloudConversationData;
 use crate::legacy_stubs::{ServerAIConversationMetadata};
 
 /// A conversation transcript from a CLI agent harness (e.g. Claude Code).

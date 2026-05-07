@@ -3067,7 +3067,6 @@ impl BlockListElement {
         state: &KeyState,
         ctx: &mut EventContext,
     ) -> bool {
-        use crate::terminal::view::TerminalAction;
 
         if let Some(voice_input_toggle_key_code) = self.voice_input_toggle_key_code {
             if *key_code == voice_input_toggle_key_code {

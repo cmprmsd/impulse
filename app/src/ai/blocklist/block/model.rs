@@ -219,7 +219,6 @@ pub trait AIBlockModel {
 
 #[cfg(any(test, feature = "integration_tests"))]
 pub mod testing {
-    use warpui::{AppContext, ViewContext};
 
     use crate::ai::{
         agent::{ AIAgentInput, AIAgentOutput, ServerOutputId, Shared},

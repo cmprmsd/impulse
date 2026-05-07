@@ -101,7 +101,6 @@ pub(super) fn upsert_agent_conversation<'a>(
 pub(super) fn read_agent_conversations(
     conn: &mut SqliteConnection,
 ) -> Result<Vec<AgentConversation>, diesel::result::Error> {
-    use schema::agent_conversations::dsl::*;
 
     let mut conversations_by_id = HashMap::<String, AgentConversation>::from_iter(
         agent_conversations
@@ -151,7 +150,6 @@ pub(crate) fn read_agent_conversation_by_id(
     conversation_id_str: &str,
 ) -> Result<Option<AgentConversation>, diesel::result::Error> {
     use schema::agent_conversations::dsl as convo_dsl;
-    use schema::agent_tasks::dsl as tasks_dsl;
 
     let maybe_record: Option<AgentConversationRecord> = convo_dsl::agent_conversations
         .filter(convo_dsl::conversation_id.eq(conversation_id_str.to_owned()))
@@ -188,10 +186,6 @@ pub(super) fn delete_agent_conversations(
     conn: &mut SqliteConnection,
     conversation_ids: Vec<String>,
 ) -> Result<(), diesel::result::Error> {
-    use diesel::ExpressionMethods;
-    use diesel::QueryDsl;
-    use schema::agent_conversations::dsl::*;
-    use schema::agent_tasks::dsl as tasks_dsl;
 
     conn.transaction::<_, Error, _>(|conn| {
         // Delete tasks for these conversations first (due to foreign key constraint)

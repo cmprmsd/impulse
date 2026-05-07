@@ -2312,7 +2312,6 @@ fn test_partial_autosuggestion() -> Result<()> {
 
 #[test]
 fn test_placeholder_text() {
-    use warpui::text_layout::LayoutCache;
 
     App::test((), |mut app| async move {
         initialize_app(&mut app);

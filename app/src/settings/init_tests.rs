@@ -351,8 +351,6 @@ fn test_migration_with_multiple_setting_types() {
 
 mod notifications_migration {
     use settings::{PrivatePreferences, PublicPreferences, SettingsManager};
-    use warp_core::settings::{macros::define_settings_group, SupportedPlatforms, SyncToCloud};
-    use warpui_extras::user_preferences;
 
     use crate::terminal::session_settings::NotificationsSettings;
 

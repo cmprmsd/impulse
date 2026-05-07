@@ -353,7 +353,6 @@ fn needs_settings_file_migration(ctx: &AppContext) -> bool {
 /// the in-memory setting, and writes to the TOML file with the correct
 /// hierarchy, `serialize_for_file` transforms, and `max_table_depth`.
 fn migrate_native_settings_to_settings_file(ctx: &mut AppContext) {
-    use warp_core::user_preferences::GetUserPreferences as _;
 
     log::info!("Migrating public settings from native store to settings.toml");
 

@@ -103,7 +103,6 @@ impl CanonicalRunState {
     /// The canonical [`AgentIconFields`] for this state. `None` means no agent icon renders.
     /// Editing an arm here is the deliberate way to evolve the cross-surface contract.
     fn expected(&self) -> Option<AgentIconFields> {
-        use CanonicalRunState::*;
         match self {
             PlainTerminal => None,
             LocalOzInProgress => Some(AgentIconFields {
@@ -161,7 +160,6 @@ impl CanonicalRunState {
 
     /// Terminal-view inputs for this state. Every state has a terminal representation.
     fn terminal_inputs(&self) -> TerminalIconInputs {
-        use CanonicalRunState::*;
         match self {
             PlainTerminal => TerminalIconInputs {
                 is_ambient: false,
@@ -251,7 +249,6 @@ impl CanonicalRunState {
     /// Run-card inputs for this state, if it can surface as a run card.
     /// Cards only exist for cloud/ambient runs; local states return `None`.
     fn run_inputs(&self) -> Option<(Harness, ConversationStatus, bool)> {
-        use CanonicalRunState::*;
         match self {
             CloudOzInProgress => Some((Harness::Oz, ConversationStatus::InProgress, true)),
             CloudClaudePreDispatch | CloudClaudeInProgress => {

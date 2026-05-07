@@ -251,7 +251,6 @@ fn create_block<'a>(
 }
 
 pub(super) fn delete_blocks(conn: &mut SqliteConnection, pane_id: Vec<u8>) -> Result<(), Error> {
-    use schema::blocks::dsl::*;
     conn.transaction::<_, Error, _>(|conn| {
         diesel::delete(schema::blocks::dsl::blocks.filter(pane_leaf_uuid.eq(pane_id.clone())))
             .execute(conn)?;
@@ -264,7 +263,6 @@ pub(super) fn update_block_agent_view_visibility(
     target_block_id: &str,
     visibility: &SerializedAgentViewVisibility,
 ) -> anyhow::Result<()> {
-    use schema::blocks::dsl::*;
     let visibility_json = serde_json::to_string(visibility)?;
     diesel::update(blocks.filter(block_id.eq(target_block_id)))
         .set(agent_view_visibility.eq(visibility_json))

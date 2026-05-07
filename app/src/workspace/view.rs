@@ -4,13 +4,13 @@ use crate::legacy_stubs::{AIClient};
 use crate::legacy_stubs::{AIConversation};
 use crate::legacy_stubs::{CloudConversationData};
 use crate::legacy_stubs::{ServerTime};
-mod build_plan_migration_modal;
-pub(crate) mod cloud_agent_capacity_modal;
+// mod build_plan_migration_modal;  // module removed
+// pub(crate) mod cloud_agent_capacity_modal;  // module removed
 pub(crate) mod codex_modal;
 pub mod conversation_list;
 #[cfg(enable_crash_recovery)]
 mod crash_recovery;
-pub(crate) mod free_tier_limit_hit_modal;
+// pub(crate) mod free_tier_limit_hit_modal;  // module removed
 pub mod global_search;
 pub(crate) mod launch_modal;
 pub(crate) mod left_panel;
@@ -20347,7 +20347,6 @@ impl TypedActionView for Workspace {
                 });
                 #[cfg(feature = "local_tty")]
                 if let Some(shell) = shell {
-                    use crate::terminal::available_shells::AvailableShells;
                     AvailableShells::handle(ctx).update(ctx, |model, ctx| {
                         let _ = model.set_user_preferred_shell(shell.clone(), ctx);
                     });

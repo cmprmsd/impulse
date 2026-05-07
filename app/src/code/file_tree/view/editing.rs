@@ -29,7 +29,6 @@ pub(super) fn sort_entries_for_file_tree(
     entry_2: &StandardizedPath,
     entry_map: &FileTreeEntry,
 ) -> Ordering {
-    use std::cmp::Ordering;
 
     // Entries missing from the map sort before present entries, and compare
     // equal to each other. Using the same `Ordering` on both sides would

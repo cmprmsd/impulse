@@ -466,11 +466,7 @@ pub fn disableable_message_item_color_overrides(
 }
 
 pub mod styles {
-    use pathfinder_color::ColorU;
-    use warp_core::ui::appearance::Appearance;
-    use warpui::{AppContext, SingletonEntity};
 
-    use crate::ui_components::blended_colors;
 
     pub fn font_size(app: &AppContext) -> f32 {
         let appearance = Appearance::as_ref(app);

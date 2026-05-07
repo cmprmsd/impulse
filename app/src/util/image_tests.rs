@@ -66,7 +66,6 @@ fn test_process_image_for_agent_invalid_data() {
 
 /// Creates a large test PNG image that exceeds MAX_IMAGE_PIXELS.
 fn create_large_test_png() -> Vec<u8> {
-    use image::{ImageBuffer, Rgba};
     // Create a 2000x1000 image (2M pixels, exceeds MAX_IMAGE_PIXELS of 1.15M)
     let img: ImageBuffer<Rgba<u8>, Vec<u8>> =
         ImageBuffer::from_fn(2000, 1000, |_x, _y| Rgba([255u8, 0u8, 0u8, 255u8]));
@@ -100,7 +99,6 @@ fn test_resize_image_large_image_gets_resized() {
 
 /// Creates a very tall/narrow image to test dimension clamping.
 fn create_tall_test_png() -> Vec<u8> {
-    use image::{ImageBuffer, Rgba};
     // Create a 100x20000 image (2M pixels, but very tall)
     // After pixel-based scaling, height would still exceed MAX_IMAGE_DIMENSION
     let img: ImageBuffer<Rgba<u8>, Vec<u8>> =

@@ -93,8 +93,6 @@ pub fn output_code_diff_debug_info(app: &mut App, window_id: WindowId) {
 
         let mut output_file = open_debug_file_from_env(CODE_DIFF_OUTPUT_FILE_ENV_VAR);
         if let Some(output_file) = &mut output_file {
-            use command::blocking::Command;
-            use std::io::Write;
             if edited_files.is_empty() {
                 writeln!(output_file, "No files were edited for this test")
                     .expect("Failed to write to code diff file");
@@ -158,7 +156,6 @@ pub fn output_conversation_debug_info(
         // Create a function to handle output
         let mut write_to_debug_file = |text: &str| {
             if let Some(file) = &mut output_file {
-                use std::io::Write;
                 writeln!(file, "{text}").expect("Failed to write to debug output file");
             } else {
                 println!("{text}");

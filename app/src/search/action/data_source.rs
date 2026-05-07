@@ -192,11 +192,7 @@ mod full_text_searcher {
     use crate::search::searcher::{
         SimpleFullTextSearcher, DEFAULT_MEMORY_BUDGET, SCORE_CONVERSION_FACTOR,
     };
-    use crate::util::bindings::CommandBinding;
     use fuzzy_match::FuzzyMatchResult;
-    use std::collections::HashMap;
-    use std::sync::Arc;
-    use warpui::keymap::{BindingId, DescriptionContext};
 
     define_search_schema!(
         schema_name: ACTION_SEARCH_SCHEMA,

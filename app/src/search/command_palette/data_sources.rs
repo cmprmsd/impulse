@@ -277,8 +277,6 @@ impl DataSourceStore {
                 project_directory,
             } => {
                 // Create a directory search item from the summary
-                use crate::search::command_palette::files::search_item::FileSearchItem;
-                use fuzzy_match::FuzzyMatchResult;
 
                 let search_item = FileSearchItem {
                     path: PathBuf::from(path),

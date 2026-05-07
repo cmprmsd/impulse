@@ -363,7 +363,6 @@ pub mod testing {
 
     use anyhow::anyhow;
     use command::r#async::Command;
-    use warp_completer::completer::CommandOutput;
 
     use super::*;
 

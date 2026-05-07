@@ -3141,7 +3141,6 @@ impl RootView {
         key_code: &warpui::platform::keyboard::KeyCode,
         ctx: &mut ViewContext<Self>,
     ) -> bool {
-        use crate::settings::AISettings;
         use voice_input::{VoiceInput, VoiceInputState, VoiceInputToggledFrom};
         use warpui::event::KeyState;
 

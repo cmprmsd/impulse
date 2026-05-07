@@ -42,25 +42,6 @@ macro_rules! safe_error {
 }
 
 #[macro_export]
-macro_rules! report_error {
-    ($($arg:tt)+) => { log::error!($($arg)+) };
-}
-
-#[macro_export]
-macro_rules! report_if_error {
-    ($result:expr) => {
-        if let Err(e) = $result {
-            log::error!("{e}");
-        }
-    };
-    ($result:expr, $($arg:tt)+) => {
-        if let Err(e) = $result {
-            log::error!($($arg)+);
-        }
-    };
-}
-
-#[macro_export]
 macro_rules! send_telemetry_from_ctx {
     ($($arg:tt)*) => { () };
 }

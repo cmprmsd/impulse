@@ -1600,7 +1600,6 @@ fn test_open_or_toggle_warp_drive() {
 
 #[test]
 fn test_stop_sharing_session() {
-    use crate::terminal::shared_session::manager::Manager;
     let _guard = FeatureFlag::CreatingSharedSessions.override_enabled(true);
 
     App::test((), |mut app| async move {
@@ -1637,7 +1636,6 @@ fn test_stop_sharing_session() {
 
 #[test]
 fn test_stop_sharing_all_sessions_in_tab() {
-    use crate::terminal::shared_session::manager::Manager;
     let _guard = FeatureFlag::CreatingSharedSessions.override_enabled(true);
 
     App::test((), |mut app| async move {

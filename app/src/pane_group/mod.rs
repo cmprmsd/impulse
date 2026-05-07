@@ -4781,7 +4781,6 @@ impl PaneGroup {
         source: Option<crate::code::editor_management::CodeSource>,
         ctx: &mut ViewContext<Self>,
     ) {
-        use crate::code::editor_management::CodeSource;
         use crate::pane_group::CodePane;
 
         // Use the provided source if available.

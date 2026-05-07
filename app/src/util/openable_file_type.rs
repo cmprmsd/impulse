@@ -237,7 +237,6 @@ mod tests {
     use super::*;
     #[cfg(feature = "local_fs")]
     use settings::Setting as _;
-    use std::path::Path;
 
     #[test]
     fn test_binary_files_not_openable() {
@@ -404,7 +403,6 @@ mod tests {
     #[test]
     #[cfg(unix)]
     fn test_is_runnable_shell_script_executable_sh() {
-        use std::os::unix::fs::PermissionsExt;
         let dir = tempfile::tempdir().unwrap();
         let p = dir.path().join("hello.sh");
         std::fs::write(&p, b"#!/bin/bash\necho hi\n").unwrap();
@@ -417,7 +415,6 @@ mod tests {
     #[test]
     #[cfg(unix)]
     fn test_is_runnable_shell_script_non_executable_sh() {
-        use std::os::unix::fs::PermissionsExt;
         let dir = tempfile::tempdir().unwrap();
         let p = dir.path().join("hello.sh");
         std::fs::write(&p, b"#!/bin/bash\necho hi\n").unwrap();
@@ -432,7 +429,6 @@ mod tests {
     fn test_is_runnable_shell_script_group_only_executable_rejected() {
         // Mode 0o070: group-x and group-r/w only, no user-execute. Must NOT classify
         // as runnable — only the owner's execute bit drives the routing decision.
-        use std::os::unix::fs::PermissionsExt;
         let dir = tempfile::tempdir().unwrap();
         let p = dir.path().join("group_only.sh");
         std::fs::write(&p, b"#!/bin/bash\necho hi\n").unwrap();
@@ -443,7 +439,6 @@ mod tests {
     #[test]
     #[cfg(unix)]
     fn test_is_runnable_shell_script_other_shell_extensions() {
-        use std::os::unix::fs::PermissionsExt;
         let dir = tempfile::tempdir().unwrap();
         for name in ["run.bash", "run.zsh", "run.fish", "run.ksh"] {
             let p = dir.path().join(name);
@@ -456,7 +451,6 @@ mod tests {
     #[test]
     #[cfg(unix)]
     fn test_is_runnable_shell_script_shebang_no_extension() {
-        use std::os::unix::fs::PermissionsExt;
         let dir = tempfile::tempdir().unwrap();
         let p = dir.path().join("noext");
         std::fs::write(&p, b"#!/bin/sh\necho hi\n").unwrap();
@@ -467,7 +461,6 @@ mod tests {
     #[test]
     #[cfg(unix)]
     fn test_is_runnable_shell_script_shebang_no_extension_no_x_bit() {
-        use std::os::unix::fs::PermissionsExt;
         let dir = tempfile::tempdir().unwrap();
         let p = dir.path().join("noext");
         std::fs::write(&p, b"#!/bin/sh\necho hi\n").unwrap();
@@ -478,7 +471,6 @@ mod tests {
     #[test]
     #[cfg(unix)]
     fn test_is_runnable_shell_script_plain_text_rejected() {
-        use std::os::unix::fs::PermissionsExt;
         let dir = tempfile::tempdir().unwrap();
         let p = dir.path().join("notes.txt");
         std::fs::write(&p, b"just some text\n").unwrap();
@@ -489,7 +481,6 @@ mod tests {
     #[test]
     #[cfg(unix)]
     fn test_is_runnable_shell_script_symlink_to_executable() {
-        use std::os::unix::fs::PermissionsExt;
         let dir = tempfile::tempdir().unwrap();
         let target = dir.path().join("real.sh");
         std::fs::write(&target, b"#!/bin/sh\n:\n").unwrap();

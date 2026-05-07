@@ -128,8 +128,7 @@ use serde_json::{json, Value};
 use settings::Setting as _;
 use std::{collections::HashMap, ops::Mul, path::PathBuf};
 use warp_core::features::FeatureFlag;
-use warpui::{elements::DEFAULT_UI_LINE_HEIGHT_RATIO, keymap::Keystroke, AppContext, DisplayIdx, SingletonEntity, };
-use warpui::keymap::Keystroke;
+use warpui::{elements::DEFAULT_UI_LINE_HEIGHT_RATIO, keymap::Keystroke, AppContext, DisplayIdx, SingletonEntity};
 
 // The following are user preferences keys.
 pub const CHANGELOG_VERSIONS: &str = "ChangelogVersions";

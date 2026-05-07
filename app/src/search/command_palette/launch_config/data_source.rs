@@ -119,12 +119,9 @@ impl LaunchConfigSearcher for FuzzyLaunchConfigSearcher {
 mod full_text_searcher {
     use crate::define_search_schema;
     use crate::search::command_palette::launch_config::data_source::LaunchConfigSearcher;
-    use crate::search::command_palette::launch_config::search_item::SearchItem;
     use crate::search::searcher::{AsyncSearcher, DEFAULT_MEMORY_BUDGET, SCORE_CONVERSION_FACTOR};
     use crate::user_config::WarpConfig;
     use fuzzy_match::FuzzyMatchResult;
-    use std::collections::HashMap;
-    use std::sync::Arc;
     use warpui::r#async::executor::Background;
     use warpui::{AppContext, SingletonEntity};
 

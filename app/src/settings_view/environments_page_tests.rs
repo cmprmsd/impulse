@@ -1387,7 +1387,6 @@ fn test_render_environment_card_with_last_used_never() {
 
 #[test]
 fn test_render_environment_card_with_last_used_timestamp() {
-    use chrono::{Duration, Utc};
 
     App::test((), |mut app| async move {
         app.add_singleton_model(|_| Appearance::mock());

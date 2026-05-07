@@ -787,7 +787,6 @@ impl GlobalBufferModel {
 
         let path_clone = path.to_path_buf();
         ctx.subscribe_to_model(&buffer, move |me, event, ctx| {
-            use warp_editor::content::buffer::BufferEvent;
 
             let Some(state) = me.buffers.get(&file_id) else {
                 me.log_lsp_sync_debug(

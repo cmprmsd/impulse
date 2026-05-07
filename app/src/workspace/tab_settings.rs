@@ -263,7 +263,6 @@ impl HeaderToolbarChipSelection {
     }
 
     pub fn right_items(&self) -> Vec<super::header_toolbar_item::HeaderToolbarItemKind> {
-        use super::header_toolbar_item::HeaderToolbarItemKind;
         match self {
             Self::Default => HeaderToolbarItemKind::default_right(),
             Self::Custom { right, .. } => right.clone(),

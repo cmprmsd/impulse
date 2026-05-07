@@ -523,7 +523,6 @@ fn add_buy_credits_banner_overlay(
     buy_credits_banner: &ViewHandle<BuyCreditsBanner>,
     is_input_at_top: bool,
 ) {
-    use pathfinder_geometry::vector::vec2f;
 
     let (parent_anchor, child_anchor, y_offset) = if is_input_at_top {
         (ParentAnchor::BottomLeft, ChildAnchor::TopLeft, 8.)

@@ -1,15 +1,11 @@
 mod action;
-mod agent_view;
-pub mod ambient_agent;
 mod block_banner;
 pub mod block_onboarding;
 pub(crate) mod blocklist_filter;
 mod bookmarks;
 pub mod init;
 pub mod inline_banner;
-pub mod load_ai_conversation;
 use ai::agent::action::InsertReviewComment;
-pub use load_ai_conversation::ConversationRestorationInNewPaneType;
 // TODO(advait): if we align on prompt suggestions banner in Input, move code out of inline_banner mod.
 pub(crate) mod init_environment;
 mod init_project;
@@ -17,7 +13,7 @@ use crate::ai::block_context::BlockContext;
 #[cfg(feature = "local_fs")]
 use crate::ai::skills::SkillOpenOrigin;
 use crate::global_resource_handles::GlobalResourceHandlesProvider;
-use crate::terminal::view::ambient_agent::is_cloud_agent_pre_first_exchange;
+// use crate::terminal::view::ambient_agent::is_cloud_agent_pre_first_exchange;  // module removed
 pub use init_project::{
     InitActionResult, InitProjectModel, InitProjectModelEvent, InitStepBlock, InitStepKind,
     ProjectScopedRulesResult,
@@ -36,8 +32,8 @@ pub mod rich_content;
 mod shared_session;
 mod shell_terminated_banner;
 pub mod ssh_file_upload;
-pub(crate) mod ssh_remote_server_choice_view;
-pub(crate) mod ssh_remote_server_failed_banner;
+// pub(crate) mod ssh_remote_server_choice_view;  // module removed
+// pub(crate) mod ssh_remote_server_failed_banner;  // module removed
 mod tab_metadata;
 #[cfg(any(test, feature = "integration_tests"))]
 mod testing;
@@ -23117,7 +23113,6 @@ impl TerminalView {
     }
 
     fn context_menu_action(&mut self, action: &ContextMenuAction, ctx: &mut ViewContext<Self>) {
-        use ContextMenuAction::*;
 
         // TODO: handle sharing session with > 1 block selected
         let source = SharedSessionActionSource::BlocklistContextMenu {
@@ -23489,7 +23484,6 @@ impl TerminalView {
         action: &InputContextMenuAction,
         ctx: &mut ViewContext<Self>,
     ) {
-        use InputContextMenuAction::*;
 
         match action {
             CutSelectedText => self.cut_selected_text_from_input(ctx),
@@ -24868,7 +24862,6 @@ impl TypedActionView for TerminalView {
     }
 
     fn handle_action(&mut self, action: &TerminalAction, ctx: &mut ViewContext<Self>) {
-        use TerminalAction::*;
         let input_mode = *InputModeSettings::as_ref(ctx).input_mode.value();
 
         match action {

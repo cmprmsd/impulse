@@ -2828,7 +2828,6 @@ impl Block {
     }
 
     pub fn grid_storage_lines(&self) -> usize {
-        use warp_terminal::model::grid::Dimensions as _;
 
         self.all_grids_iter()
             .map(|grid| grid.grid_storage().total_rows())

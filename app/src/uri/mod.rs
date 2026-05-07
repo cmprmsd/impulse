@@ -965,7 +965,6 @@ impl Action {
     /// When handling this URI action, determine which window(s) should be focused.
     #[cfg_attr(not(any(target_os = "linux", target_os = "freebsd")), allow(dead_code))]
     fn window_behavior_hint(&self) -> WindowBehaviorHint {
-        use WindowBehaviorHint as W;
         match self {
             Self::Docker
             | Self::CreateEnvironment { .. }

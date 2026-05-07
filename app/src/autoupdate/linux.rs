@@ -171,7 +171,6 @@ mod package_manager {
 
     use crate::appearance::Appearance;
 
-    use super::*;
 
     pub struct AutoupdateContextBlock {
         package_manager: PackageManager,

@@ -918,7 +918,6 @@ impl UpdateEnvironmentForm {
     }
 
     fn parse_repo_input(input: &str) -> Option<(String, String)> {
-        use url::Url;
         let trimmed = input.trim().trim_end_matches('/');
 
         fn parse_owner_repo<'a, I>(mut segments: I) -> Option<(String, String)>

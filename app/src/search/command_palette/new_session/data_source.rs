@@ -312,8 +312,6 @@ mod full_text_searcher {
         AsyncSearcher, DEFAULT_MEMORY_BUDGET, MIN_MEMORY_BUDGET, SCORE_CONVERSION_FACTOR,
     };
     use fuzzy_match::FuzzyMatchResult;
-    use std::collections::HashMap;
-    use std::sync::Arc;
     use warpui::r#async::executor::Background;
 
     define_search_schema!(

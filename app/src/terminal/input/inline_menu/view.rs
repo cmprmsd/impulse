@@ -115,7 +115,6 @@ impl<A: InlineMenuAction> QueryResultRenderer<A> {
         app: &AppContext,
     ) -> Box<dyn Element> {
         use warpui::elements::{DispatchEventResult, EventHandler, Hoverable};
-        use warpui::platform::Cursor;
 
         if self.search_result.is_static_separator() {
             return self.render_inline_with_highlight_state(ItemHighlightState::Default, true, app);

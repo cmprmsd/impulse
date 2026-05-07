@@ -691,7 +691,6 @@ impl From<&WorkspaceAction> for LoginGatedFeature {
 
 impl WorkspaceAction {
     pub fn blocked_for_anonymous_user(&self) -> bool {
-        use WorkspaceAction::*;
         matches!(
             self,
             ImportToTeamDrive
@@ -708,7 +707,6 @@ impl WorkspaceAction {
     /// actions directly, rather than using _, so we're forced to make a conscious decision for each
     /// of them, rather than following some default.
     pub fn should_save_app_state_on_action(&self) -> bool {
-        use WorkspaceAction::*;
         match self {
             #[cfg(not(target_family = "wasm"))]
             ContinueConversationLocally { .. } => true,

@@ -1327,7 +1327,6 @@ fn decode_path(bytes: Vec<u8>) -> PathBuf {
 
     cfg_if::cfg_if! {
         if #[cfg(unix)] {
-            use std::os::unix::ffi::OsStringExt;
             OsString::from_vec(bytes).into()
         } else if #[cfg(windows)] {
             use std::os::windows::ffi::OsStringExt;
@@ -1359,7 +1358,6 @@ fn save_codebase_index_metadata(
 fn get_all_codebase_index_metadata(
     conn: &mut SqliteConnection,
 ) -> Result<Vec<ai::workspace::WorkspaceMetadata>, diesel::result::Error> {
-    use schema::workspace_metadata::dsl::*;
 
     Ok(workspace_metadata
         .load_iter::<WorkspaceMetadataModel, DefaultLoadingMode>(conn)?
@@ -1404,8 +1402,6 @@ fn upsert_workspace_language_server(
     server_type: LSPServerType,
     enablement: EnablementState,
 ) -> Result<()> {
-    use schema::workspace_language_server::dsl::*;
-    use schema::workspace_metadata::dsl::*;
     let path_string = workspace_path.to_string_lossy().to_string();
 
     // Try to find existing workspace
@@ -1450,7 +1446,6 @@ fn upsert_workspace_language_server(
 }
 
 fn delete_codebase_index_metadata(conn: &mut SqliteConnection, index_path: &Path) -> Result<()> {
-    use schema::workspace_metadata::dsl::*;
 
     let target_path = index_path.to_string_lossy().to_string();
     diesel::delete(workspace_metadata.filter(repo_path.eq(target_path))).execute(conn)?;
@@ -1472,7 +1467,6 @@ fn save_project(conn: &mut SqliteConnection, project: Project) -> Result<()> {
 }
 
 fn get_all_projects(conn: &mut SqliteConnection) -> Result<Vec<Project>, diesel::result::Error> {
-    use schema::projects::dsl::*;
 
     Ok(projects
         .load_iter::<Project, DefaultLoadingMode>(conn)?
@@ -1481,7 +1475,6 @@ fn get_all_projects(conn: &mut SqliteConnection) -> Result<Vec<Project>, diesel:
 }
 
 fn delete_project(conn: &mut SqliteConnection, project_path: &str) -> Result<()> {
-    use schema::projects::dsl::*;
 
     diesel::delete(projects.filter(path.eq(project_path))).execute(conn)?;
 
@@ -1509,7 +1502,6 @@ fn upsert_project_rules(
     conn: &mut SqliteConnection,
     new_project_rules: Vec<ProjectRulePath>,
 ) -> Result<()> {
-    use schema::project_rules::dsl::*;
 
     // SQLite doesn't support batch upserts, so we need to iterate
     for rule in new_project_rules {
@@ -1530,7 +1522,6 @@ fn upsert_project_rules(
 }
 
 fn delete_project_rules(conn: &mut SqliteConnection, rules_paths: Vec<PathBuf>) -> Result<()> {
-    use schema::project_rules::dsl::*;
 
     // Convert PathBuf to String for comparison
     let path_strings: Vec<String> = rules_paths
@@ -1605,7 +1596,6 @@ fn upsert_mcp_server_installation(
     conn: &mut SqliteConnection,
     mcp_server_installation: TemplatableMCPServerInstallation,
 ) -> Result<()> {
-    use schema::mcp_server_installations::dsl::*;
 
     let new_installation = model::NewMCPServerInstallation {
         id: mcp_server_installation.uuid().to_string(),
@@ -1634,7 +1624,6 @@ fn upsert_mcp_server_installation(
 }
 
 fn delete_mcp_server_installations(conn: &mut SqliteConnection, uuids: Vec<Uuid>) -> Result<()> {
-    use schema::mcp_server_installations::dsl::*;
 
     let id_strings: Vec<String> = uuids.iter().map(|uuid| uuid.to_string()).collect();
     diesel::delete(mcp_server_installations.filter(id.eq_any(id_strings))).execute(conn)?;
@@ -1646,7 +1635,6 @@ fn delete_mcp_server_installations_by_template_uuid(
     conn: &mut SqliteConnection,
     target_template_uuid: Uuid,
 ) -> Result<()> {
-    use schema::mcp_server_installations::dsl::*;
 
     diesel::delete(mcp_server_installations.filter(
         json_extract(templatable_mcp_server, "$.uuid").eq(target_template_uuid.to_string()),
@@ -1659,7 +1647,6 @@ fn delete_mcp_server_installations_by_template_uuid(
 fn get_mcp_servers_to_restore(
     conn: &mut SqliteConnection,
 ) -> Result<Vec<Uuid>, diesel::result::Error> {
-    use schema::mcp_server_installations::dsl::*;
 
     let rows = mcp_server_installations
         .filter(restore_running.eq(true))
@@ -1679,7 +1666,6 @@ fn update_mcp_server_running(
     installation_uuid: Uuid,
     running: bool,
 ) -> Result<(), diesel::result::Error> {
-    use schema::mcp_server_installations::dsl::*;
 
     diesel::update(mcp_server_installations.find(installation_uuid.to_string()))
         .set((
@@ -1696,7 +1682,6 @@ fn add_ignored_suggestion(
     suggestion_text: String,
     suggestion_type_param: SuggestionType,
 ) -> Result<()> {
-    use schema::ignored_suggestions::dsl::*;
 
     let new_suggestion = model::NewIgnoredSuggestion {
         suggestion: suggestion_text,
@@ -1717,7 +1702,6 @@ fn remove_ignored_suggestion(
     suggestion_text: String,
     suggestion_type_param: SuggestionType,
 ) -> Result<()> {
-    use schema::ignored_suggestions::dsl::*;
 
     diesel::delete(
         ignored_suggestions.filter(
@@ -1813,9 +1797,6 @@ fn save_workspaces(
     workspaces_to_insert: Vec<WorkspaceMetadata>,
 ) -> Result<()> {
     use schema::team_settings::dsl::*;
-    use schema::teams::dsl::*;
-    use schema::workspace_teams::dsl::*;
-    use schema::workspaces::dsl::*;
 
     // Get currently selected workspace uid if there is one
     let current_workspace_uid: Option<WorkspaceUid> = workspaces
@@ -1964,7 +1945,6 @@ fn save_workspaces(
 }
 
 fn set_current_workspace(conn: &mut SqliteConnection, workspace_uid: WorkspaceUid) -> Result<()> {
-    use schema::workspaces::dsl::*;
 
     // Set all existing workspaces as not selected
     diesel::update(workspaces)
@@ -2012,7 +1992,6 @@ fn increment_retry_count(
     conn: &mut SqliteConnection,
     server_id_string: String,
 ) -> Result<(), Error> {
-    use schema::object_metadata::dsl::*;
     conn.transaction::<(), Error, _>(|conn| {
         diesel::update(object_metadata.filter(server_id.eq(Some(server_id_string))))
             .set(retry_count.eq(retry_count + 1))
@@ -2027,7 +2006,6 @@ fn update_object_after_server_creation(
     server_creation_info: ServerCreationInfo,
 ) -> Result<(), Error> {
     use schema::commands::dsl::*;
-    use schema::object_metadata::dsl::*;
 
     conn.transaction::<(), Error, _>(|conn| {
         diesel::update(object_metadata.filter(client_id.eq(Some(client_id_string.clone()))))
@@ -2063,7 +2041,6 @@ fn delete_cloud_object(
     object_id_type: ObjectIdType,
     delete_object_fn: DeleteCloudObjectFn,
 ) -> Result<(), Error> {
-    use schema::object_metadata::dsl::*;
 
     // Filter to find metadata row.
     // The diesel types for `filter`s are dependent on the columns being filtered
@@ -2098,7 +2075,6 @@ fn update_object_metadata(
     hashed_id: String,
     metadata: CloudObjectMetadata,
 ) -> Result<(), Error> {
-    use schema::object_metadata::dsl::*;
     let metadata_last_updated_at = metadata
         .metadata_last_updated_ts
         .map(|ts| ts.timestamp_micros());
@@ -3379,7 +3355,6 @@ fn insert_command(
     conn: &mut SqliteConnection,
     command_metadata: StartedCommandMetadata,
 ) -> Result<(), Error> {
-    use schema::commands::dsl::*;
 
     conn.transaction::<(), Error, _>(|conn| {
         let command_count: i64 = commands.count().first(conn)?;
@@ -3401,7 +3376,6 @@ fn update_finished_command(
     conn: &mut SqliteConnection,
     completed_command: FinishedCommandMetadata,
 ) -> Result<(), Error> {
-    use schema::commands::dsl::*;
 
     let completed_command_session_id: Option<i64> =
         completed_command.session_id.as_u64().try_into().ok();
@@ -3634,7 +3608,6 @@ fn delete_objects(
                     sync_id,
                     object_id_type,
                     Box::new(|conn, notebook_id| {
-                        use schema::notebooks::dsl::*;
                         diesel::delete(notebooks.filter(id.eq(notebook_id))).execute(conn)?;
                         Ok(())
                     }),
@@ -3644,7 +3617,6 @@ fn delete_objects(
                     sync_id,
                     object_id_type,
                     Box::new(|conn, workflow_id| {
-                        use schema::workflows::dsl::*;
                         diesel::delete(workflows.filter(id.eq(workflow_id))).execute(conn)?;
                         Ok(())
                     }),
@@ -3654,7 +3626,6 @@ fn delete_objects(
                     sync_id,
                     object_id_type,
                     Box::new(|conn, folder_id| {
-                        use schema::folders::dsl::*;
                         diesel::delete(folders.filter(id.eq(folder_id))).execute(conn)?;
                         Ok(())
                     }),
@@ -3664,7 +3635,6 @@ fn delete_objects(
                     sync_id,
                     object_id_type,
                     Box::new(|conn, gso_id| {
-                        use schema::generic_string_objects::dsl::*;
                         diesel::delete(generic_string_objects.filter(id.eq(gso_id)))
                             .execute(conn)?;
                         Ok(())

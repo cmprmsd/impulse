@@ -311,7 +311,6 @@ fn test_toolbar_command_map_from_file_value_map_format() {
 
 #[test]
 fn test_toolbar_command_map_from_file_value_legacy_array() {
-    use settings_value::SettingsValue;
 
     // Patterns are intentionally non-alphabetical to verify insertion order is preserved.
     let value = serde_json::json!(["^zebra", "^alpha", "^middle"]);
@@ -326,7 +325,6 @@ fn test_toolbar_command_map_from_file_value_legacy_array() {
 
 #[test]
 fn test_toolbar_command_map_from_file_value_invalid() {
-    use settings_value::SettingsValue;
 
     let value = serde_json::json!(42);
     assert!(ToolbarCommandMap::from_file_value(&value).is_none());
@@ -334,7 +332,6 @@ fn test_toolbar_command_map_from_file_value_invalid() {
 
 #[test]
 fn test_toolbar_command_map_roundtrip() {
-    use settings_value::SettingsValue;
 
     let mut inner = IndexMap::new();
     inner.insert("^claude".to_string(), "Claude".to_string());

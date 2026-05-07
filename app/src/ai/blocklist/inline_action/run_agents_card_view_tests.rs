@@ -306,7 +306,6 @@ mod format_terminal_state_tests {
 
 mod should_auto_launch_tests {
     use super::super::{should_auto_launch, RunAgentsEditState};
-    use super::*;
     use ai::agent::orchestration_config::{
         OrchestrationConfig, OrchestrationConfigStatus, OrchestrationExecutionMode,
     };

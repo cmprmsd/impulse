@@ -594,7 +594,6 @@ fn test_open_file_executable_sh_routes_to_execute() {
 #[test]
 #[cfg(unix)]
 fn test_open_file_non_executable_sh_routes_to_editor() {
-    use std::os::unix::fs::PermissionsExt;
     let dir = tempfile::tempdir().unwrap();
     let p = dir.path().join("view.sh");
     std::fs::write(&p, b"#!/bin/sh\n:\n").unwrap();
@@ -605,7 +604,6 @@ fn test_open_file_non_executable_sh_routes_to_editor() {
 #[test]
 #[cfg(unix)]
 fn test_open_file_executable_bash_zsh_fish_route_to_execute() {
-    use std::os::unix::fs::PermissionsExt;
     let dir = tempfile::tempdir().unwrap();
     for name in ["run.bash", "run.zsh", "run.fish"] {
         let p = dir.path().join(name);
@@ -651,7 +649,6 @@ fn test_open_file_non_runnable_shebang_routes_to_editor() {
     // Extensionless `#!/bin/sh` file without the user-execute bit. Without the
     // shebang fall-through this would hit `ExecuteInSession` and the shell would
     // refuse to run it; the editor is the right place to view it.
-    use std::os::unix::fs::PermissionsExt;
     let dir = tempfile::tempdir().unwrap();
     let p = dir.path().join("noext");
     std::fs::write(&p, b"#!/bin/sh\necho hi\n").unwrap();
