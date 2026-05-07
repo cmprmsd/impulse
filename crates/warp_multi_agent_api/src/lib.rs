@@ -25,6 +25,10 @@ pub enum ToolType {
 pub mod message {
     #[derive(Debug, Clone, Default)]
     pub struct Message;
+    pub mod tool_call {
+        #[derive(Debug, Clone, Default)]
+        pub struct ToolCall;
+    }
 }
 
 pub mod response_event {

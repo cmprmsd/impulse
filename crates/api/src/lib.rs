@@ -23,6 +23,24 @@ pub mod agent_event {
         StreamFinished(StreamFinished),
         AssistantMessage(AssistantMessage),
     }
+
+    pub mod lifecycle_event {
+        #[derive(Debug, Clone, Default)]
+        pub struct Started;
+        #[derive(Debug, Clone, Default)]
+        pub struct Completed;
+        #[derive(Debug, Clone, Default)]
+        pub struct Failed;
+        #[derive(Debug, Clone, Default)]
+        pub struct Cancelled;
+        #[derive(Debug, Clone)]
+        pub enum Type {
+            Started(Started),
+            Completed(Completed),
+            Failed(Failed),
+            Cancelled(Cancelled),
+        }
+    }
 }
 pub mod message {
     pub mod artifact_event {
