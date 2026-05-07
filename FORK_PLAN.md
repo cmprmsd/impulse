@@ -493,14 +493,24 @@ If all seven pass, the fork is functional and Syncthing-ready.
   AWS Bedrock paths stripped from `crates/ai/`, and
   `crates/warp_files/` dropped its `Remote` backend. All non-app
   crates compile clean.
-- **Phase 2 — foundation landed.**
-  `crates/ai/src/model_client/` (the `ModelClient` trait,
-  `OpenAiCompatibleClient`, `ClaudeCliClient`),
-  `crates/ai/src/conversation/` (JSONL local store), and
-  `crates/ai/src/agent_loop.rs` (minimal `run_turn` wrapper) are in
-  place with 6 unit tests passing. App-side integration (replacing
-  the deleted `app/src/ai/agent/` types and wiring the `ModelClient`
-  through the existing UI) is the next step.
+- **Phase 2 — foundation landed.** All in `crates/ai/`, all unit-tested:
+  - `model_client/` — `ModelClient` trait,
+    `OpenAiCompatibleClient` (POST `/v1/chat/completions`, SSE,
+    multi-chunk tool-call argument buffering),
+    `ClaudeCliClient` (subprocess of `claude --output-format
+    stream-json --input-format stream-json --verbose`).
+  - `conversation/` — `Conversation`, `ConversationEvent`
+    (Header/UserMessage/AssistantMessage/ToolResult/Info/Closed),
+    JSONL `ConversationStore` at `<root>/ai_conversations/<uuid>.jsonl`.
+  - `agent_loop.rs` — `run_turn(client, store, conversation,
+    user_text, tools, system)` ties the trait + store together;
+    `record_tool_result()`, `load_or_new()` helpers.
+  - `provider_settings.rs` — `AiProvider {OpenAiCompatible | ClaudeCli}`
+    with JSON serde, `build_client(&provider, &keys) ->
+    Arc<dyn ModelClient>` factory, `ApiKeyRef` resolver.
+  - 101/101 unit tests pass on the `ai` crate.
+- **Phase 0 app-crate compile + Phase 2 wiring — not started.**
+  See "What's still needed" below.
 
   The **app crate (`warp`) does not yet compile**. Two interleaved
   problems remain:
@@ -526,25 +536,27 @@ If all seven pass, the fork is functional and Syncthing-ready.
 - Phase 2 — not started.
 - Phase 3 — not started.
 
-### What's still needed for a clean Phase 0 compile
+### What's still needed
 
-Two interleaved tracks. They can be tackled in parallel.
+The Phase 2 *backends* are usable today as standalone library code
+(101 unit tests pass). What's missing is the bridge between them and
+the existing app's UI.
 
 **Track A — finish the mechanical syntax cleanup.**
-Hundreds of multi-line `use foo::bar::{ ... };` blocks across
-`app/src/` were partially mutated by the bulk-strip. The remaining
-breakage shows as:
+Hundreds of multi-line `use foo::{ ... };` blocks across `app/src/`
+were partially mutated by the bulk-strip. The remaining breakage
+shows in `cargo check -p warp` as:
 
 - `error: this file contains an unclosed delimiter` — the `};` was
-  deleted by the over-aggressive orphan-fix script; restore it.
+  deleted; restore it.
 - `error: unexpected closing delimiter: }` — the `use foo::{`
-  opening line was deleted by the perl pass and the indented item
-  list + `};` survived; delete the orphan run.
+  opening line was deleted; delete the orphan run.
 
-`cargo check -p warp` surfaces these one at a time; each fix is a
-few lines. Recommend writing a more conservative AST-level fixer
-(e.g. via `syn` or `rustfix`) before more handwork — the regex
-detectors in this commit's history were fragile.
+These should be fixed with a real AST-aware tool (e.g. a small
+program using `syn`) — the regex detectors attempted in earlier
+commits were fragile and caused collateral damage to struct/enum/match
+braces. Hand-fixing one at a time as `cargo check` surfaces them is
+slow but safe.
 
 The known-broken files include (top of the list):
 `app/src/ai/agent/telemetry.rs`,
@@ -559,30 +571,58 @@ The known-broken files include (top of the list):
 `app/src/persistence/mod.rs`,
 plus many under `app/src/ai/blocklist/`,
 `app/src/settings_view/`, `app/src/terminal/`, `app/src/workspace/`.
-Grep for `^use\b[^;]*\{[^}]*$` followed by no matching `};` to
-enumerate.
 
-**Track B — replace the cloud-agent subsystem.**
+**Track B — bridge Phase 2 backends into the app.**
 
-- `app/src/ai/agent/mod.rs` (3,077 lines) defines types like
-  `AIAgentExchange`, `AIAgent...`, `CancellationReason`,
-  `MessageId`, `AIConversationId`, `ServerOutputId`,
-  `ServerConversationToken`, etc. that are referenced from ~140
-  other files. The file itself is essentially a thin layer around
-  the proto API.
-- `app/src/ai/blocklist/history_model.rs` and related blocklist
-  files reference `crate::ai::agent::api::*`, `task::*`, and
-  `conversation::*` (all deleted).
-- The `BlocklistAIHistoryModel` (used in `lib.rs`, `tab.rs`, ~100
-  call sites) wraps the cloud conversation persistence layer and
-  needs to be replaced with the local
-  `~/WarpData/ai_conversations/{uid}.jsonl` model from Phase 1/2.
+- `app/src/ai/agent/mod.rs` (~3,000 lines after the partial strip)
+  defines types like `AIAgentExchange`, `AIConversation`,
+  `AIConversationId`, `ServerOutputId`, `ServerConversationToken`,
+  etc. that are referenced from ~140 other files. Most of these
+  were thin wrappers around the deleted hosted-agent proto API.
+  The path forward:
+    1. Add a new module `app/src/ai/local_agent/` that re-exports
+       `ai::model_client::*`, `ai::conversation::*`, and
+       `ai::agent_loop::*` for the rest of the app.
+    2. Replace `BlocklistAIHistoryModel` with a thin `warpui::Entity`
+       wrapper around `ai::conversation::ConversationStore` —
+       roughly 100 call sites use it, but most just call
+       `add_message`, `current_conversation`, or `set_active_id`,
+       which map cleanly to the new store.
+    3. For each surviving cloud-agent type referenced in app/src,
+       either (a) re-define it as a thin shim around the new types
+       or (b) delete the referrer if it's a cloud-only UI surface
+       (e.g. cloud-agent capacity modals).
+- Wire `provider_settings::AiProvider` into the existing settings
+  UI (`app/src/settings_view/ai_page.rs`) — add radio for
+  `OpenAiCompatible` vs `ClaudeCli`, text fields for `base_url`,
+  `model`, `binary_path`, etc. The settings system already exists
+  in `crates/settings/`.
+- Hook `build_client(provider, keys)` into a single
+  `Arc<dyn ModelClient>` slot stored in `AppState` (see
+  `app/src/app_state.rs`), swap on settings changes.
+- Replace the call sites that previously POSTed to the deleted
+  `/ai/multi-agent` endpoint (in the now-gone
+  `app/src/server/server_api.rs:1135-1227`) with calls to
+  `agent_loop::run_turn(client, store, conv, user_text, tools,
+  system)` — for v1, leave `tools = vec![]` and `system = None`
+  so we get a working text-only agent first, then layer in tool
+  dispatch in a later commit.
 
-The recommended next step is to begin Phase 2 work: define the new
-`ModelClient` trait and a minimal local conversation model in
-`crates/ai/`, then re-stub the app-side types so the build comes
-back green. Once Phase 2 lands a working agent loop, the Phase 0
-checkpoint becomes a clean compile.
+### Recommended order
+
+1. Track A on a clean branch from the current HEAD: hand-fix orphan
+   `use` blocks until `cargo check -p warp` is silent or only
+   showing missing-symbol errors (not parse errors).
+2. Track B step 1 (re-export module) — small, mechanical.
+3. Track B step 2 (BlocklistAIHistoryModel rewrite) — the largest
+   single piece of work; ~1 day for a focused engineer.
+4. Track B steps 3-5 (settings UI, AppState slot, call-site
+   rewrites) in any order; each is small.
+
+Once those land, the agent UI works end-to-end against either an
+OpenAI-compatible endpoint or the user's `claude` CLI. Phase 1
+(local-folder Drive replacement) is still pending and is independent
+of Phase 2.
 
 The intended branch for the work is `claude/audit-warp-terminal-lNAJT`;
 each phase's sub-commits should land here in the order above. Any future
