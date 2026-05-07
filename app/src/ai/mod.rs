@@ -28,6 +28,16 @@ pub mod outline;
 
 pub(crate) use ai::paths;
 
+// Stubs for cloud-only submodules removed during the cloud strip.
+pub mod agent_sdk {
+    pub mod artifact_upload {
+        #[derive(Default)]
+        pub struct FileArtifactUploadRequest;
+        pub struct FileArtifactUploader;
+    }
+}
+pub mod agent_management {}
+
 pub fn init(app: &mut AppContext) {
     blocklist::keyboard_navigable_buttons::init(app);
     blocklist::block::number_shortcut_buttons::init(app);

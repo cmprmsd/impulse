@@ -15,7 +15,7 @@ use warpui::{
 
 use crate::{
     drive::CloudObjectTypeAndId,
-    terminal::view::telemetry::SharingDialogSource,
+    legacy_stubs::SharingDialogSource,
     ui_components::icons::Icon,
     workspace::WorkspaceAction};
 use warpui::{AppContext, Element, Entity, View, ViewContext};

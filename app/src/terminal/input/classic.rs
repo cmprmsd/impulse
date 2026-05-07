@@ -31,7 +31,8 @@ use warpui::{
     },
 };
 
-use super::{should_render_prompt_using_editor_decorator_elements, Input, SubshellRenderState};
+use super::{Input, SubshellRenderState};
+// `should_render_prompt_using_editor_decorator_elements` was removed during the cloud strip.
 use warpui::{AppContext};
 
 impl Input {

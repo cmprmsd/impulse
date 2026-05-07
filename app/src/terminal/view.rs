@@ -161,7 +161,7 @@ use crate::terminal::view::init_environment::{
 // use crate::terminal::view::ssh_remote_server_failed_banner::{  // unresolved (cloud detach)
 //     SshRemoteServerFailedBanner, SshRemoteServerFailedBannerEvent, SshRemoteServerFailureKind,
 // };
-use crate::terminal::view::telemetry::PromptSuggestionFallbackReason;
+// use crate::terminal::view::telemetry::PromptSuggestionFallbackReason;  // unresolved (cloud detach)
 // use crate::workspace::view::cloud_agent_capacity_modal::CloudAgentCapacityModalVariant;  // unresolved (cloud detach)
 use crate::workspaces::user_workspaces::UserWorkspacesEvent;
 
@@ -201,7 +201,8 @@ use crate::ai::agent::{
     AIAgentActionType, AIAgentOutputStatus, AIAgentTextSection, EntrypointType,
     FinishedAIAgentOutput, RenderableAIError, StaticQueryType,
 };
-use crate::ai::blocklist::agent_view::agent_input_footer::toolbar_item::AgentToolbarItemKind;
+// use crate::ai::blocklist::agent_view::agent_input_footer::toolbar_item::AgentToolbarItemKind;  // unresolved (cloud detach)
+use crate::legacy_stubs::AgentToolbarItemKind;
 use crate::ai::blocklist::suggested_agent_mode_workflow_modal::SuggestedAgentModeWorkflowAndId;
 use crate::ai::blocklist::suggested_rule_modal::SuggestedRuleAndId;
 use crate::ai::blocklist::{model::AIBlockModelImpl, ClientIdentifiers};
