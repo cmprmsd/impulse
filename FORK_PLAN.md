@@ -515,44 +515,90 @@ If all seven pass, the fork is functional and Syncthing-ready.
     -p ai` and works against OpenRouter / Ollama / `claude` CLI.
   - 101/101 unit tests pass on the `ai` crate.
 - **Phase 0 Track A — substantial progress, not yet complete.**
-  Iterated the warp app crate from ~8314 errors down to ~4574 over
-  4 rounds of bulk-fix scripts:
+  Iterated the warp app crate from ~8314 errors down to ~4099 over
+  18 rounds of bulk-fix scripts (~50% reduction). Concrete deliverables:
   - 4 bulk-fix scripts repaired ~700 files of orphan multi-line
     `use foo::{...};` blocks left by the perl-strip.
-  - `app/src/legacy_stubs.rs` defines ~95 placeholder types covering
+  - `app/src/legacy_stubs.rs` defines ~150 placeholder types covering
     the deleted-cloud surface (SyncId, ServerId,
     CloudObjectTypeAndId, BlocklistAIHistoryModel, TelemetryEvent,
     UserWorkspaces, RemoteServerManager, ContextChipKind, ChipValue,
     LaunchConfig, ChannelState, AgentRunEvent, ApiKeyUid,
     AIConversationId, ServerConversationToken, AgentViewController,
     AgentViewState, ConversationStatus, AgentToolbarItemKind,
-    TaskId, ResponseEvent, ...).
-  - 443 files received bulk import additions:
-    `warpui::{ViewContext, AppContext, Element, ...}`,
+    TaskId, ResponseEvent, CloudObjectLocation, GenericCloudObject,
+    ServerCloudObject, ShareableLinkError, AmbientAgentViewModel,
+    StringModel, DisplaySetting, LoginGatedFeature, JsonSerializer,
+    SecretHandle, AgentModeCitation, ServerAIConversationMetadata,
+    ReviewComment, JsonModel, GenericStringModel, ServerTime,
+    MessageProvider, SizeInfo, PaneTemplateType, NetworkLogView,
+    SubmittableTextInput, TipsCompleted, DetectedLinksState,
+    AmbientAgentTaskInput, ScheduledAmbientAgent, AgentRun,
+    StartAgentExecutionMode, AIAgentExecutionProfileFields,
+    AgentEnvironment, ScheduledAgentTaskRunHistory,
+    PassiveSuggestionTriggerType, EntrypointType, OutputModelInfo,
+    ChannelStateEvent, ServerEnvironment, AmbientAgentDispatchSource,
+    DispatchAmbientAgentRequest, ExternalSecret, InitiatedBy,
+    ContainingObject, CLIAgentType, PaintContext, MenuEvent,
+    EphemeralMessageModel, ContentEditability, TaskStatusUpdate,
+    StoredCredentials, SpawnedFutureHandle, VisibleRow, SizeConstraint,
+    SharingDialog, SharingAccessLevel, ParsedTemplatableMCPServerResult,
+    ImportQueueArgs, CloudStringObject, CloudObjectTelemetryMetadata,
+    BlockClient, AuthError, AuthClient, AttachmentInput, RenderState,
+    InlineMenuType, GridType, FuzzyMatchResult, FindOptions,
+    ArgumentType, AgentInputFooter, AgentConversationEntry, AIApiError,
+    WorkspaceDecorationVisibility, UploadIntent, UploadId, UnlinkRunArgs,
+    ToolCall, TimedSession, TerminationGracePeriod, StreamFinishedReason,
+    SkillReference, ScheduleArgs, ScheduleAndDispatch,
+    RunWithStartingSnapshot, RunActionArgs, ResumeConversationArgs,
+    RegisterMacroArgs, PrTaskCounts, PathRoot, PassiveSuggestionTrigger,
+    InteractionSource, GENERIC_STRING_OBJECT_PREFIX, CodeReviewModel,
+    GlobalCodeReviewModel, AgentSdkProvider, AgentManagement,
+    AmbientAgentLifecycle, CodebaseIndexingState, AgentMetadata,
+    AgentMessage, AgentTaskState, ConversationOptions, AIInputBlock,
+    AICommandBlock, AIOutput, AIOutputId, ChannelState,
+    PaneViewLocator, ContextChipKind, ChipValue, LaunchConfig,
+    AIClient, ApiKeyUid, CellType, GenericStringObjectId,
+    AmbientAgentTaskMetadata, UserContextMetadata).
+  - `app/src/legacy_macros.rs` provides crate-wide stub macros for
+    `safe_warn!`, `safe_debug!`, `safe_info!`, `safe_error!`,
+    `report_error!`, `report_if_error!`,
+    `send_telemetry_from_ctx!`, `send_telemetry_from_app_ctx!`,
+    `send_telemetry_on_executor!`, `send_telemetry_sync_from_app_ctx!`,
+    `id!`, `eq!`, `ne!`. Most are no-ops or `log::*` redirects. The
+    keymap macros (`id!` etc.) construct `ContextPredicate` via
+    absolute `::warpui::keymap::ContextPredicate::*` paths so they
+    work without callers importing the type.
+  - 600+ files received bulk import additions across ~20 import
+    rounds — `warpui::{ViewContext, AppContext, Element, ...}`,
     `warpui::{fonts, keymap, platform, elements,
-    ui_components::components}`, `warp_core::send_telemetry_from_ctx`
-    + similar macros, plus crate-internal lookups for `Appearance`,
-    `TerminalView`, `ToastStack`, `PaneGroup`, etc.
-  - 130 + 16 + 147 files had dead-module `use` statements + inline
-    references stripped (top-level use lines and nested branches
-    inside `use crate::{ ... }` blocks).
-  - 30 files had inline path replacements: `crate::cloud_object::*`,
-    `crate::ai::agent::conversation::*`, `crate::auth::*`,
-    `crate::workspaces::*` rewritten to `crate::legacy_stubs::*`.
-  - 92 files had stub imports restored after the dead-branch strip
-    over-reached.
-  Remaining work: ~4574 cargo errors. Top patterns are crate-internal
-  type imports the script doesn't yet enumerate (UiComponentStyles in
-  many file contexts where the existing `use warpui::ui_components::*`
-  doesn't reach, Coords, Lines, Dropdown, Menu, MenuItem, ActionButton
-  in deeply-imported nested mod blocks, plus dozens of cloud-coupled
-  types not yet stubbed: CloudObjectLocation, GenericCloudObject,
-  ServerCloudObject, GenericStringObjectUniqueKey, AmbientAgentViewModel,
-  ShareableLinkError, etc.) — and the macros `id!`,
-  `send_telemetry_from_ctx!` etc. that need import inside specific
-  function/module scopes rather than at file level. Each cargo
-  iteration takes 10–15 minutes; getting to clean compile is
-  realistic in 5–10 more focused sessions of the same iteration.
+    ui_components::components, units}`, plus crate-internal lookups
+    for `Appearance`, `TerminalView`, `ToastStack`, `PaneGroup`,
+    `Dropdown`, `ActionButton`, `Menu`, `MenuItem`, `NakedTheme`,
+    `PrimaryTheme`, `SecondaryTheme`, `LLMId`, `AvailableShell`,
+    `Range`, `WriterHandles`, `WorkflowViewMode`, `BackingView`,
+    `PaneConfiguration`, `PaneEvent`, `RichTextStyles`, etc.
+  - 200+ files had dead-module `use` statements + inline references
+    stripped (top-level use lines, nested branches inside
+    `use crate::{ ... }` blocks, and direct path replacements like
+    `crate::cloud_object::Foo` → `crate::legacy_stubs::Foo`).
+
+  Remaining work: ~4099 cargo errors. Each round saves ~80-100; the
+  iteration is converging slowly because the remaining errors are
+  cascade failures from method calls on stubs (e.g.
+  `BlocklistAIHistoryModel::handle(ctx).update(...)` fails because
+  `handle()` isn't defined on the stub). To converge from here, the
+  stubs need actual method implementations (or no-op equivalents),
+  not just type definitions. That's a different kind of work — one
+  that probably needs to be done file-by-file by following the
+  cargo errors, looking at the original code, and either adding the
+  expected methods to the stub or removing the call site.
+
+  At this point ~50% of the original error volume is from these
+  method-call cascades. The remaining 50% is more bulk-fixable
+  through the same import-add / use-strip patterns we've been
+  applying — another 5-10 mechanical rounds should bring those to
+  near zero, then the method-cascade work is what's left.
 - **Phase 0 Track B / Phase 2 wiring — not started.** This is the
   remaining work. See "What's still needed" below.
 
