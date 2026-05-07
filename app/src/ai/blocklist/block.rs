@@ -52,7 +52,6 @@ use crate::view_components::action_button::{
     ActionButtonTheme, NakedTheme, PrimaryTheme, SecondaryTheme,
 };
 use crate::view_components::compactible_action_button::CompactibleActionButton;
-use ;
 use crate::FileEdit;
 use pathfinder_color::ColorU;
 use warp_core::ui::theme::color::internal_colors;
