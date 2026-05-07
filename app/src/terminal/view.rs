@@ -3,6 +3,12 @@ use crate::send_telemetry_on_executor;
 use crate::send_telemetry_from_ctx;
 use warpui::keymap::macros::*;
 mod action;
+// Stub modules for cloud-detached builds (originals removed).
+pub mod ambient_agent {
+    pub use crate::legacy_stubs::AmbientAgentViewModel;
+    pub struct FirstTimeCloudAgentSetupView;
+    pub fn is_cloud_agent_pre_first_exchange(_: &impl Sized) -> bool { false }
+}
 mod block_banner;
 pub mod block_onboarding;
 pub(crate) mod blocklist_filter;

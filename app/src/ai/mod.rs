@@ -37,6 +37,9 @@ pub mod agent_sdk {
     }
 }
 pub mod agent_management {}
+pub mod conversation_details_panel {
+    pub struct ConversationDetailsPanel;
+}
 
 pub fn init(app: &mut AppContext) {
     blocklist::keyboard_navigable_buttons::init(app);
