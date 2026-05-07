@@ -6,6 +6,7 @@ use std::sync::{
 };
 
 use event_listener::Event;
+use std::sync::Arc;
 
 #[cfg(test)]
 #[path = "sync_tests.rs"]

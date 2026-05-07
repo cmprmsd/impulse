@@ -11,6 +11,7 @@ use warpui::{AppContext, SingletonEntity};
 
 use crate::search::result_renderer::ItemHighlightState;
 use crate::ui_components::blended_colors::neutral_2;
+use crate::ui_components::blended_colors::neutral_2;
 
 /// Font size used for inline menu items.
 pub fn font_size(appearance: &Appearance) -> f32 {

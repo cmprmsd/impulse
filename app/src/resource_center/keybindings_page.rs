@@ -43,6 +43,7 @@ use super::utils::{BLOCKS_KEYBINDINGS, INPUT_EDITOR_KEYBINDINGS, TERMINAL_KEYBIN
 use warpui::{AppContext, Entity, TypedActionView, View, ViewContext, ViewHandle};
 use warpui::ui_components::components::{UiComponentStyles};
 use warpui::ui_components::components::{Coords};
+use crate::util::bindings::CommandBinding;
 
 const KEYBINDINGS_PAGE_SHORTCUT: &str = "workspace:toggle_keybindings_page";
 const LINK_WIDTH: f32 = 30.;

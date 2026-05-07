@@ -5,6 +5,7 @@ use std::{
 use parking_lot::Mutex;
 
 use super::{api, protocol};
+use std::sync::Arc;
 
 /// A logger which forwards log entries from the terminal server to the host
 /// application process via a Unix socket.

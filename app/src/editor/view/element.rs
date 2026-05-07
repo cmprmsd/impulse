@@ -57,6 +57,7 @@ use instant::Instant;
 use warpui::elements::{Radius, DEFAULT_UI_LINE_HEIGHT_RATIO};
 use warpui::{AppContext};
 use crate::legacy_stubs::{TaskId};
+use std::sync::Arc;
 
 // Similar to the terminal::model::ansi::CursorShape, this Editor Element has different cursor
 // shapes. However, this element doesn't implement all the same variants, so we don't share that

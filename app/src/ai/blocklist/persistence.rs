@@ -21,6 +21,7 @@ use crate::{
 
 use super::AIQueryHistoryOutputStatus;
 use crate::terminal::model::block::BlockId;
+use crate::terminal::model::block::SerializedBlock;
 /// Data we persist for each [`AIAgentExchange`] for use in history. Does not contain output data.
 #[derive(Debug, Deserialize, Clone)]
 pub struct PersistedAIInput {

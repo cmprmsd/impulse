@@ -19,6 +19,7 @@ use super::{
     session_settings::{NewSessionShell, StartupShell},
     shell::ShellType,
 };
+use warp_terminal::shell::ShellLaunchData;
 
 #[derive(Debug, PartialEq, Eq, Hash)]
 struct LocalConfig {

@@ -1,4 +1,5 @@
 use crate::legacy_stubs::{LaunchConfig};
+use crate::workflows::workflow::Workflow;
 pub mod util;
 
 #[cfg_attr(not(target_family = "wasm"), path = "native.rs")]

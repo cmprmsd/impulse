@@ -52,6 +52,7 @@ use super::{
 use warpui::{TextDirection, TextUnit};
 use crate::legacy_stubs::{CloudModelEvent};
 use crate::legacy_stubs::{CloudModel};
+use warp_editor::selection::SelectionModel;
 
 const DEBOUNCED_RESIZE_PERIOD: Duration = Duration::from_millis(5);
 

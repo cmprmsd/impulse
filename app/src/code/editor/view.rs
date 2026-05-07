@@ -73,6 +73,7 @@ use warpui::{
     },
 };
 use pathfinder_geometry::vector::Vector2F;
+use crate::code::editor::line::EditorLineLocation;
 
 mod actions;
 pub use actions::init;

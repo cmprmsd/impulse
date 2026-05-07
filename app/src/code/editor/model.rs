@@ -81,6 +81,7 @@ use super::diff::{
 };
 use super::line::EditorLineLocation;
 use crate::code_review::comments::{CommentId, CommentOrigin, LineDiffContent};
+use warp_editor::selection::SelectionModel;
 
 /// An opaque handle to a stable line in the editor content, suitable for scroll
 /// position preservation. Contains an internal anchor that tracks through

@@ -66,6 +66,7 @@ use crate::workspace::WorkspaceAction;
 use crate::pane_group::pane::view::PaneHeaderCustomAction;
 use crate::util::bindings::keybinding_name_to_display_string;
 use crate::legacy_stubs::{SizeInfo};
+use warpui::keymap::ContextPredicate;
 
 mod about_page;
 mod admin_actions;

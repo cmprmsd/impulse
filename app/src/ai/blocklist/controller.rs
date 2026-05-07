@@ -8,6 +8,7 @@ use crate::legacy_stubs::{AmbientAgentTaskId, CloudModel, ServerApiProvider, Tea
 use crate::legacy_stubs::{AIConversationId};
 use crate::legacy_stubs::{AIConversation, ServerConversationToken, TaskId};
 use crate::legacy_stubs::{ConversationStatus};
+use warp_terminal::shell::ShellLaunchData;
 pub mod input_context;
 mod pending_response_streams;
 pub mod response_stream;

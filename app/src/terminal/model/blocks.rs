@@ -1,5 +1,6 @@
 use crate::legacy_stubs::{AgentViewState};
 use crate::legacy_stubs::{AIConversationId};
+use crate::terminal::view::InlineBannerItem;
 mod selection;
 
 use crate::ai::agent::{ AIAgentActionId};

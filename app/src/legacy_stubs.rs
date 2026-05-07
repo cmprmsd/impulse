@@ -716,3 +716,60 @@ pub struct AmbientAgentDispatchSource;
 
 #[derive(Debug, Clone, Default)]
 pub struct DispatchAmbientAgentRequest;
+
+// ---------------------------------------------------------------------------
+// Sixth sweep: more types
+// ---------------------------------------------------------------------------
+
+#[derive(Debug, Clone, Default)]
+pub struct ExternalSecret;
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
+pub enum InitiatedBy {
+    #[default]
+    User,
+    Agent,
+}
+
+#[derive(Debug, Clone, Default)]
+pub struct ContainingObject;
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
+pub enum CLIAgentType {
+    #[default]
+    Default,
+}
+
+#[derive(Debug, Clone, Default)]
+pub struct PaintContext;
+
+#[derive(Debug, Clone)]
+pub enum MenuEvent {
+    Selected,
+    Closed,
+}
+
+#[derive(Debug, Clone, Default)]
+pub struct EphemeralMessageModel;
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
+pub enum ContentEditability {
+    #[default]
+    Editable,
+    ReadOnly,
+}
+
+#[derive(Debug, Clone, Default)]
+pub struct TaskStatusUpdate;
+
+#[derive(Debug, Clone, Default)]
+pub struct StoredCredentials;
+
+#[derive(Debug, Clone, Default)]
+pub struct SpawnedFutureHandle;
+
+#[derive(Debug, Clone, Default)]
+pub struct VisibleRow;
+
+#[derive(Debug, Clone, Default)]
+pub struct SizeConstraint;
