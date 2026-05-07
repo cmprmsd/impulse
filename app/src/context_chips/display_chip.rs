@@ -57,6 +57,7 @@ use warpui::fonts::{Properties, Weight};
 use warpui::fonts::{FamilyId};
 use crate::legacy_stubs::{ContextChipKind};
 use crate::legacy_stubs::{AgentViewController};
+use crate::legacy_stubs::{AmbientAgentViewModel};
 
 /// Helper function to render git diff stats content (file icon or +- icons, file count, bullet, +/- counts)
 /// Used by both the context chips and the AI control panel

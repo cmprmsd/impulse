@@ -34,6 +34,7 @@ use warpui::{AppContext, ViewContext, ViewHandle};
 use crate::legacy_stubs::{SyncId};
 use crate::legacy_stubs::{Space};
 use crate::legacy_stubs::{CloudModel, ObjectIdType};
+use crate::ui_components::buttons::icon_button;
 /// The saved position ID for the block insertion button.
 const BLOCK_INSERT_BUTTON_ID: &str = "notebook_block_insertion_button";
 

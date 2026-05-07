@@ -29,6 +29,7 @@ use crate::terminal::view::TerminalView;
 use crate::workspace::ToastStack;
 use crate::workspace::Workspace;
 use crate::workspace::WorkspaceAction;
+use crate::util::bindings::keybinding_name_to_display_string;
 
 pub fn init(app: &mut AppContext) {
     use warpui::keymap::macros::*;

@@ -29,6 +29,7 @@ use crate::{
 use warpui::{AppContext, Element, Entity, ModelHandle, TypedActionView, View, ViewContext};
 use crate::workspace::WorkspaceAction;
 use crate::legacy_stubs::{AgentViewController};
+use crate::util::bindings::keybinding_name_to_keystroke;
 
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub enum TerminalViewZeroStateAction {

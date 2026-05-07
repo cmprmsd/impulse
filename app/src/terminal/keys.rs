@@ -11,6 +11,8 @@ use crate::{
 
 };
 use crate::pane_group::pane::view::PaneHeaderCustomAction;
+use crate::pane_group::pane::view::PaneHeaderCustomAction;
+use crate::util::bindings::keybinding_name_to_display_string;
 /// Cache of keybindings used in terminal.
 pub struct TerminalKeybindings {
     // Cache of editable keybinding names, to render in tooltips. This cache is necessary because

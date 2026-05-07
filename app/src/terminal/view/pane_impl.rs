@@ -44,6 +44,8 @@ use warpui::ui_components::components::UiComponentStyles;
 use warpui::WeakModelHandle;
 use warpui::{AppContext, Element, ModelHandle, SingletonEntity, TypedActionView, ViewContext};
 use crate::legacy_stubs::{AIConversation, ConversationStatus};
+use crate::legacy_stubs::{ShareableObject};
+use crate::legacy_stubs::CloudConversationData;
 
 /// Total size of the agent icon-with-status component rendered in the pane header.
 /// Sub-components (circle, badge, cloud) are derived inside `render_icon_with_status`.

@@ -15,6 +15,7 @@ use super::{
     view::PaneView, DetachType, PaneConfiguration, PaneContent, PaneGroup, PaneId, ShareableLink,
 };
 use crate::legacy_stubs::{SyncId, UserWorkspaces};
+use crate::legacy_stubs::{ShareableLinkError};
 
 pub struct EnvVarCollectionPane {
     view: ViewHandle<PaneView<EnvVarCollectionView>>,

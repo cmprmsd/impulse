@@ -57,6 +57,7 @@ use crate::legacy_stubs::{TelemetryEvent};
 use crate::workspace::WorkspaceAction;
 use crate::legacy_stubs::{AIConversationId};
 use warpui::ui_components::components::{UiComponentStyles};
+use crate::util::bindings::keybinding_name_to_display_string;
 
 #[derive(Default)]
 struct MouseStateHandles {

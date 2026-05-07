@@ -10,6 +10,7 @@ use crate::{
 use super::{
     view::PaneView, DetachType, PaneConfiguration, PaneContent, PaneGroup, PaneId, ShareableLink,
 };
+use crate::legacy_stubs::{ShareableLinkError};
 
 pub struct SettingsPane {
     view: ViewHandle<PaneView<SettingsView>>,

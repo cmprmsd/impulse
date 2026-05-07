@@ -51,6 +51,8 @@ use warpui::{Event};
 use crate::pane_group::pane::view::PaneHeaderCustomAction;
 use crate::workspace::WorkspaceAction;
 use crate::legacy_stubs::{TelemetryEvent};
+use warpui::elements::{Lines, SizeConstraint};
+use crate::legacy_stubs::{DisplaySetting};
 
 const PADDING: f32 = 30.;
 const INNER_MARGIN: f32 = 20.;

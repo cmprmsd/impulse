@@ -26,6 +26,7 @@ use warpui::r#async::SpawnedFutureHandle;
 use warpui::{Entity, EntityId, ModelContext, ModelHandle, SingletonEntity};
 use warpui::{Action};
 use crate::legacy_stubs::{AuthStateProvider, ServerApiProvider, UserWorkspaces};
+use crate::legacy_stubs::{AmbientAgentViewModel};
 
 cfg_if::cfg_if! {
     if #[cfg(feature = "local_fs")] {

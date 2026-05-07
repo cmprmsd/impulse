@@ -1,4 +1,5 @@
 use crate::legacy_stubs::{ObjectType, Owner, QueueItem, Revision, ServerId, SyncId};
+use crate::legacy_stubs::{CloudModelType, CloudObjectEventEntrypoint, CreateCloudObjectResult, CreateObjectRequest, GenericCloudObject, ObjectClient, ServerCloudObject};
 pub mod active_notebook_data;
 mod context_menu;
 pub mod editor;

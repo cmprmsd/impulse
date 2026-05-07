@@ -6,6 +6,7 @@ use warp_core::features::FeatureFlag;
 use warpui::{AppContext, SingletonEntity};
 use crate::legacy_stubs::{ObjectType, Revision, ServerId, SyncId};
 use crate::legacy_stubs::{QueueItem};
+use crate::legacy_stubs::{CloudModelType, CloudObjectEventEntrypoint, CreateCloudObjectResult, CreateObjectRequest, GenericCloudObject, ObjectClient, ServerCloudObject};
 
 pub mod categories;
 use anyhow::Result;

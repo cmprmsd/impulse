@@ -42,6 +42,7 @@ use super::RequestInput;
 use warpui::{Action};
 use crate::legacy_stubs::{ServerApiProvider};
 use crate::legacy_stubs::{ConversationStatus, ServerConversationToken, TaskId};
+use crate::legacy_stubs::CloudConversationData;
 
 mod conversation_loader;
 pub use conversation_loader::{

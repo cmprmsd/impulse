@@ -13,6 +13,7 @@ use warpui::event::DispatchedEvent;
 use warpui::geometry::rect::RectF;
 
 use super::blockgrid_renderer::GridRenderParams;
+use warpui::elements::{SizeConstraint};
 
 pub struct BlockGridElement {
     block_grid: BlockGrid,

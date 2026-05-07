@@ -7,6 +7,7 @@ use crate::terminal::{
     },
 
 };
+use crate::terminal::shell::ShellType;
 /// Set of events sent by command executors.
 pub enum ExecutorCommandEvent {
     /// The command should be executed.

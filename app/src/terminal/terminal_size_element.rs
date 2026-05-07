@@ -10,6 +10,7 @@ use warpui::{
 };
 
 use super::view::TerminalAction;
+use warpui::elements::{SizeConstraint};
 
 pub struct TerminalSizeElement {
     child: Box<dyn Element>,

@@ -28,6 +28,7 @@ use warpui::{
 use warpui::{ViewHandle};
 use crate::legacy_stubs::{AmbientAgentTaskId, ServerApiProvider, SyncId};
 use crate::legacy_stubs::{AIConversationId};
+use crate::legacy_stubs::{AmbientAgentTask};
 
 #[cfg(not(target_family = "wasm"))]
 

@@ -46,6 +46,7 @@ use warpui::{AppContext, Element, ViewHandle};
 use crate::legacy_stubs::{CloudObjectTypeAndId, UserProfiles, UserWorkspaces};
 use crate::legacy_stubs::{CloudObject, Space};
 use crate::legacy_stubs::{CloudModel, Owner};
+use crate::legacy_stubs::{CloudObjectLocation};
 
 pub(crate) fn tools_panel_menu_direction(app: &AppContext) -> MenuDirection {
     let config = TabSettings::as_ref(app)

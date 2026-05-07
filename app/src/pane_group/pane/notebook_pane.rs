@@ -20,6 +20,7 @@ use super::{
 };
 use crate::legacy_stubs::{SyncId, UserWorkspaces};
 use crate::legacy_stubs::{Space};
+use crate::legacy_stubs::{ShareableLinkError};
 
 pub struct NotebookPane {
     view: ViewHandle<PaneView<NotebookView>>,

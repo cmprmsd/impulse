@@ -7,6 +7,7 @@ use crate::{
     },
 };
 use warpui::{AppContext, ModelHandle, SingletonEntity, View, ViewContext, ViewHandle};
+use crate::legacy_stubs::{ShareableLinkError};
 
 pub struct ExecutionProfileEditorPane {
     view: ViewHandle<PaneView<ExecutionProfileEditorView>>,

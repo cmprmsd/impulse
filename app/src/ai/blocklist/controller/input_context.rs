@@ -25,6 +25,7 @@ use crate::{
 use crate::legacy_stubs::{CodebaseIndexManager};
 use crate::legacy_stubs::{GenericStringObjectId, ObjectType};
 use crate::legacy_stubs::{CloudModel, GenericStringObjectFormat, JsonObjectType};
+use crate::legacy_stubs::{GenericCloudObject};
 
 lazy_static! {
     // Regex to match <block:[block_id]> patterns

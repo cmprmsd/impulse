@@ -38,6 +38,7 @@ use super::tab_settings::{
 use super::view::{OnboardingTutorial, WorkspaceBanner};
 use crate::legacy_stubs::{AgentModeEntrypoint, AmbientAgentTaskId, PaletteSource, SharingDialogSource, SyncId};
 use crate::legacy_stubs::{AIConversationId, ServerConversationToken};
+use crate::legacy_stubs::{LoginGatedFeature};
 
 /// This enum determines how the search query is initialized when opening command search.
 #[derive(Clone, Default, Debug)]

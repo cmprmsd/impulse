@@ -6,6 +6,7 @@ use crate::workspace::PaneViewLocator;
 use super::{
     view::PaneView, DetachType, PaneConfiguration, PaneContent, PaneGroup, PaneId, ShareableLink,
 };
+use crate::legacy_stubs::{ShareableLinkError};
 
 pub struct NetworkLogPane {
     view: ViewHandle<PaneView<NetworkLogView>>,

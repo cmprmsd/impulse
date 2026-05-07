@@ -15,6 +15,7 @@ use super::llms::{LLMContextWindow, LLMId, LLMPreferences};
 use crate::legacy_stubs::{UserWorkspaces};
 use crate::legacy_stubs::{QueueItem};
 use crate::legacy_stubs::{GenericStringObjectFormat, GenericStringObjectId, JsonObjectType, Revision};
+use crate::legacy_stubs::{GenericCloudObject, GenericStringObjectUniqueKey, JsonSerializer, ServerCloudObject, StringModel};
 
 pub const PROFILE_NAME_MAX_LENGTH: usize = 50;
 

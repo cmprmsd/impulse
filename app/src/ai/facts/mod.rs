@@ -6,6 +6,7 @@ use warp_core::ui::appearance::Appearance;
 use crate::legacy_stubs::{CloudObjectTypeAndId, SyncId};
 use crate::legacy_stubs::{QueueItem};
 use crate::legacy_stubs::{GenericStringObjectFormat, GenericStringObjectId, JsonObjectType, Revision};
+use crate::legacy_stubs::{GenericCloudObject, GenericStringObjectUniqueKey, JsonSerializer, ServerCloudObject, StringModel};
 
 pub mod manager;
 pub mod view;

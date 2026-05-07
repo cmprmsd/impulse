@@ -15,6 +15,7 @@ use url::Url;
 use warpui::{AppContext, ModelHandle, SingletonEntity, ViewContext, ViewHandle};
 use crate::legacy_stubs::{UserWorkspaces};
 use crate::legacy_stubs::{SyncId};
+use crate::legacy_stubs::{ShareableLinkError};
 
 pub struct WorkflowPane {
     view: ViewHandle<PaneView<WorkflowView>>,

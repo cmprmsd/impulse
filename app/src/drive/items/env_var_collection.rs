@@ -13,6 +13,8 @@ use crate::{
 use super::{WarpDriveItem, WarpDriveItemId};
 use crate::legacy_stubs::{CloudObjectTypeAndId, DriveObjectType};
 use crate::legacy_stubs::{CloudObjectMetadata};
+use warpui::elements::{Fill};
+use crate::legacy_stubs::{CloudEnvVarCollection};
 
 #[derive(Clone)]
 pub struct WarpDriveEnvVarCollection {

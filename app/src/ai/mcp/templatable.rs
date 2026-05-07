@@ -12,6 +12,7 @@ use crate::legacy_stubs::{SyncId};
 use crate::legacy_stubs::{QueueItem};
 use crate::legacy_stubs::{GenericStringObjectFormat, GenericStringObjectId, JsonObjectType, Revision};
 use crate::legacy_stubs::{CloudModel};
+use crate::legacy_stubs::{GenericCloudObject, GenericStringObjectUniqueKey, JsonSerializer, ServerCloudObject, StringModel, WarpDriveItem};
 
 const UNIQUENESS_KEY_PREFIX: &str = "templatable_mcp_server";
 

@@ -17,6 +17,7 @@ use warpui::{
 use warpui::{AppContext, Element, Entity, EntityId, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
 use warpui::platform::{Cursor};
 use crate::workspace::WorkspaceAction;
+use crate::legacy_stubs::{AmbientAgentViewModel};
 
 const SIDECAR_HORIZONTAL_GAP: f32 = 8.;
 const SIDECAR_POSITION_ID: &str = "model_sidecar_panel";

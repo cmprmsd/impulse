@@ -10,6 +10,7 @@ use crate::{
 
 use super::{WarpDriveItem, WarpDriveItemId};
 use crate::legacy_stubs::{CloudObjectMetadata};
+use warpui::elements::{Fill};
 
 #[derive(Clone)]
 pub struct WarpDriveFolder {
