@@ -1,6 +1,6 @@
 use crate::legacy_stubs::{AIConversationId, AgentViewState};
 use crate::legacy_stubs::{SyncId};
-use crate::terminal::CustomSecretRegexUpdater::redact_secrets;
+
 use crate::legacy_stubs::{DisplaySetting};
 mod interaction_mode;
 mod serialized_block;

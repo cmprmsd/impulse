@@ -5103,7 +5103,7 @@ fn ctrl_c_does_not_accept_prompt_suggestion_banner() {
 /// send it.
 #[test]
 fn linear_deeplink_populates_input_as_draft_when_not_in_agent_view() {
-    use super::agent_view::ENTER_AGAIN_TO_SEND_MESSAGE_ID;
+    
 
     App::test((), |mut app| async move {
         initialize_app_for_terminal_view(&mut app);
@@ -5149,7 +5149,7 @@ fn linear_deeplink_populates_input_as_draft_when_not_in_agent_view() {
 /// `was_in_agent_view_already` shortcut cannot promote it to auto-submit.
 #[test]
 fn linear_deeplink_does_not_auto_submit_when_already_in_agent_view() {
-    use super::agent_view::ENTER_AGAIN_TO_SEND_MESSAGE_ID;
+    
 
     App::test((), |mut app| async move {
         initialize_app_for_terminal_view(&mut app);
@@ -5229,7 +5229,7 @@ fn linear_deeplink_does_not_auto_submit_when_already_in_agent_view() {
 /// auto-submit regardless of prior agent-view state.
 #[test]
 fn linear_deeplink_via_default_entrypoint_does_not_auto_submit_in_fullscreen() {
-    use super::agent_view::ENTER_AGAIN_TO_SEND_MESSAGE_ID;
+    
 
     App::test((), |mut app| async move {
         initialize_app_for_terminal_view(&mut app);

@@ -13,7 +13,7 @@ use crate::ai::{
     block_context::BlockContext,
 };
 
-use super::agent_view::{AgentViewController, AgentViewEntryOrigin, EnterAgentViewError};
+
 use ai::project_context::model::ProjectContextModel;
 use parking_lot::FairMutex;
 use warp_core::features::FeatureFlag;
@@ -281,7 +281,7 @@ impl BlocklistAIContextModel {
 
         // Clear auto-attached blocks when exiting agent view or switching conversations
         ctx.subscribe_to_model(&agent_view_controller, |me, event, _ctx| {
-            use super::agent_view::AgentViewControllerEvent;
+            
             match event {
                 AgentViewControllerEvent::ExitedAgentView { .. }
                 | AgentViewControllerEvent::EnteredAgentView { .. } => {

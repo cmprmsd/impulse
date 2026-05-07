@@ -254,7 +254,7 @@ use crate::notification::NotificationContext;
 use crate::root_view::{
     quake_mode_window_id, quake_mode_window_is_open, OpenFromRestoredArg, OpenPath,
 };
-use crate::terminal::CustomSecretRegexUpdater;
+
 use crate::util::bindings::is_binding_cross_platform;
 use crate::workspace::{PaneViewLocator, Workspace, WorkspaceAction};
 use warp_logging::LogDestination;

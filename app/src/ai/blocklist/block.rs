@@ -3,7 +3,7 @@
 use crate::legacy_stubs::{AuthStateProvider, CloudModel, SyncId, UserWorkspaces};
 use crate::legacy_stubs::{GenericStringObjectId};
 use crate::legacy_stubs::{AIConversationId, AgentViewController};
-use crate::terminal::CustomSecretRegexUpdater::redact_secrets;
+
 use crate::legacy_stubs::{TelemetryEvent};
 use crate::legacy_stubs::{AmbientAgentViewModel};
 use crate::legacy_stubs::{InteractionSource};

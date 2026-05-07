@@ -19,7 +19,7 @@ use warpui::{AppContext, Entity, EntityId, ModelContext, ModelHandle, SingletonE
 
 pub use input_classifier::InputType;
 
-use super::agent_view::{AgentViewController, AgentViewControllerEvent, AgentViewEntryOrigin};
+
 use super::context_model::BlocklistAIContextModel;
 use crate::terminal::cli_agent_sessions::{
     CLIAgentInputState, CLIAgentSessionsModel, CLIAgentSessionsModelEvent,
