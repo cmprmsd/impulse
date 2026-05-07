@@ -15,6 +15,7 @@ use crate::{
 use super::{notebook::NotebookView, CloudNotebook};
 use warpui::{WindowId};
 use crate::legacy_stubs::{PaneViewLocator};
+use crate::legacy_stubs::{CloudModelEvent, Owner, SyncId, UpdateManagerEvent};
 
 #[cfg(test)]
 #[path = "manager_tests.rs"]

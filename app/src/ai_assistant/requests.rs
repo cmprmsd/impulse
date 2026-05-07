@@ -19,6 +19,7 @@ use super::{
 };
 use anyhow::Result;
 use crate::legacy_stubs::{UserWorkspaces};
+use crate::legacy_stubs::{AIClient, ServerApi};
 
 /// The key for the corresponding entry in UserDefaults.
 /// Not wiring through Settings for now since this data is only needed by the panel view.

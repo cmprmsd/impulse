@@ -21,6 +21,7 @@ use warpui::fonts::{Weight};
 use warpui::keymap::{FixedBinding};
 use warpui::elements::{ChildView};
 use crate::legacy_stubs::{TelemetryEvent, UserWorkspaces};
+use crate::legacy_stubs::{SyncId};
 
 const SUGGESTED_PROMPT_MODAL_HEADER: &str = "Prompt";
 

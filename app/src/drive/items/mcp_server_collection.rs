@@ -6,6 +6,7 @@ use crate::{
     themes::theme::Fill};
 
 use super::{WarpDriveItem, WarpDriveItemId};
+use crate::legacy_stubs::{ClientId, CloudObjectMetadata};
 
 #[derive(Clone)]
 pub struct WarpDriveMCPServerCollection {

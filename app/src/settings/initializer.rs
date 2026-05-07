@@ -10,6 +10,7 @@ use crate::{
     settings::{InputSettings, PrivacySettings, ThemeSettings},
     terminal::session_settings::SessionSettings,
     themes::theme::ThemeKind};
+use crate::legacy_stubs::{AuthState};
 
 pub struct SettingsInitializer;
 

@@ -86,6 +86,7 @@ use super::{
 };
 use warpui::{AppContext, BlurContext, Element, Entity, FocusContext, ModelHandle, Pixels, TypedActionView, View, ViewContext, ViewHandle};
 use warpui::{TextDirection, TextUnit, WeakViewHandle};
+use crate::legacy_stubs::{SyncId};
 
 #[cfg(test)]
 #[path = "view_tests.rs"]

@@ -9,6 +9,7 @@ use crate::{
 
 use super::channel_versions::fetch_channel_versions;
 use super::release_assets_directory_url;
+use crate::legacy_stubs::{ServerApi};
 
 pub async fn get_current_changelog(server_api: Arc<ServerApi>) -> Result<Option<Changelog>> {
     let rand: String = {

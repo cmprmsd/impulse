@@ -6,6 +6,7 @@ use channel_versions::ChannelVersions;
 use crate::{
     channel::{Channel, ChannelState},
     report_error};
+use crate::legacy_stubs::{ServerApi};
 
 // Fetches channel versions asynchronously from the Warp server. If the Warp server request fails,
 // then fetches from GCP JSON storage as a fallback.

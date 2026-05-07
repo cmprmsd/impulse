@@ -47,6 +47,7 @@ use warpui::{
 };
 use warpui::{Action, AppContext};
 use crate::legacy_stubs::{AuthStateProvider, SettingsAction, SettingsSection, TelemetryEvent, ToggleSettingActionPair, UserUid, UserWorkspaces};
+use crate::legacy_stubs::{AuthState, ServerId};
 
 const PHOTO_SIZE: f32 = 40.;
 const REFERRAL_CTA: &str = "Earn rewards by sharing Warp with friends & colleagues";

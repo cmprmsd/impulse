@@ -1,3 +1,4 @@
+use crate::legacy_stubs::{ObjectType, Owner, QueueItem, Revision, ServerId, SyncId};
 pub mod active_notebook_data;
 mod context_menu;
 pub mod editor;

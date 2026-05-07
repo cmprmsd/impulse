@@ -5,6 +5,7 @@ use crate::{
     notebooks::CloudNotebook};
 
 use super::{CloudNotebookModel, NotebookId};
+use crate::legacy_stubs::{CloudModelEvent, Owner, Space, SyncId, UpdateManagerEvent};
 
 #[derive(Default, Clone)]
 pub enum ActiveNotebook {

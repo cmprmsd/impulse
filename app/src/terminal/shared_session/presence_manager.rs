@@ -26,6 +26,7 @@ use crate::{
     editor::{CursorColors, PeerSelectionData},
     terminal::model::{block::BlockId, blocks::BlockList, terminal_model::BlockIndex},
     util::color::coloru_with_opacity};
+use crate::legacy_stubs::{UserUid};
 
 /// Selections have 25% opacity.
 pub fn text_selection_color(participant_color: ColorU) -> ColorU {

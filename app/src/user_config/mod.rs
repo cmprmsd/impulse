@@ -1,3 +1,4 @@
+use crate::legacy_stubs::{LaunchConfig};
 pub mod util;
 
 #[cfg_attr(not(target_family = "wasm"), path = "native.rs")]

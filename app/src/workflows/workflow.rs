@@ -3,6 +3,7 @@ use serde_json::Value;
 use warp_workflows;
 
 use crate::{};
+use crate::legacy_stubs::{GenericStringObjectId, SyncId};
 
 /// Workflow model to be used inside of `warp-internal`
 #[derive(Clone, Debug, Serialize, Deserialize, Eq, PartialEq, Hash)]

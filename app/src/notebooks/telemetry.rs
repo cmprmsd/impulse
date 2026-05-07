@@ -5,6 +5,7 @@ use serde::{Deserialize, Serialize};
 use crate::{ workflows::WorkflowId};
 
 use super::editor::BlockInsertionSource;
+use crate::legacy_stubs::{ServerId};
 
 /// A user action within a notebook. Some actions, like running a command, are not included here
 /// because they're covered by existing telemetry.

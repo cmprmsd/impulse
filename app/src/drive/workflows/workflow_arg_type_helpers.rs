@@ -13,6 +13,7 @@ use super::{
     enum_creation_dialog::{EnumCreationDialog, WorkflowEnumData},
     workflow_arg_selector::WorkflowArgSelector,
 };
+use crate::legacy_stubs::{Owner, SyncId};
 
 #[derive(Debug, Clone)]
 pub struct ArgumentEditorRowIndex(pub usize);

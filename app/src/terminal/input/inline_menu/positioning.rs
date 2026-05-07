@@ -24,6 +24,7 @@ use crate::{
         block_list_viewport::InputMode, element_size_at_last_frame,
         input::suggestions_mode_model::InputSuggestionsModeModel, SizeInfo,
     }};
+use crate::legacy_stubs::{AgentViewController};
 
 const DEFAULT_VISIBLE_RESULT_COUNT: f32 = 9.;
 const MIN_VISIBLE_RESULT_COUNT: f32 = 3.;

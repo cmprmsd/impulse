@@ -13,6 +13,7 @@ use crate::{
     autoupdate::{self},
     channel::{Channel, ChannelState},
     features::{FeatureFlag, PREVIEW_FLAGS}};
+use crate::legacy_stubs::{ServerApi};
 
 pub struct ChangelogModel {
     pub changelog: ChangelogState,

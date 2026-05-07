@@ -20,6 +20,7 @@ use crate::{
         local_workflows::LocalWorkflows, workflow::Workflow, WorkflowId, WorkflowSource,
         WorkflowType,
     }};
+use crate::legacy_stubs::{SyncId};
 
 mod up_arrow;
 pub(crate) use up_arrow::UpArrowHistoryConfig;

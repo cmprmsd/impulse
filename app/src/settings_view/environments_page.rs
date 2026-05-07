@@ -55,6 +55,7 @@ use warpui::{AppContext, Entity, FocusContext, ModelHandle, TypedActionView, Vie
 use crate::legacy_stubs::{ServerTimestamp, SettingsSection, UserWorkspaces};
 use crate::workspace::ToastStack;
 use crate::workspace::WorkspaceAction;
+use crate::legacy_stubs::{ClientId, Owner, ServerId, SyncId, UpdateManagerEvent};
 
 mod new_environment_button;
 use new_environment_button::NewEnvironmentButtonView;

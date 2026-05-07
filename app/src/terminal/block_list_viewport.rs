@@ -31,6 +31,7 @@ use super::{
     },
 
 };
+use crate::legacy_stubs::{AgentViewState};
 /// Wraps a scroll position for the purposes of centralizing update logic.
 pub struct ScrollState {
     position: ScrollPosition,

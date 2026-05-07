@@ -77,6 +77,7 @@ use warpui::{
     UpdateView, View, ViewContext, ViewHandle, WindowId,
 };
 use crate::legacy_stubs::{CloudObjectTypeAndId, DriveObjectType};
+use crate::legacy_stubs::{AuthState, CloudModel, CloudModelEvent, CloudObject, ObjectType, ObjectUid, ServerId, SharingDialogSource, Space, SyncId, UserWorkspaces, WorkspaceUid};
 
 const WARP_DRIVE_TITLE: &str = "Warp Drive";
 

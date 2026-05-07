@@ -21,6 +21,7 @@ use super::{
 use warpui::{ViewHandle};
 use crate::legacy_stubs::{CloudObjectTypeAndId, DriveIndexEvent, DriveObjectType, UserWorkspaces};
 use crate::workflows::CloudWorkflow;
+use crate::legacy_stubs::{Owner, ServerId, SharingDialogSource, Space, SyncId};
 
 pub const MIN_SIDEBAR_WIDTH: f32 = 250.;
 pub const MAX_SIDEBAR_WIDTH_RATIO: f32 = 0.75;

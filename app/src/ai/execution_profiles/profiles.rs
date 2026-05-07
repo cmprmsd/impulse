@@ -23,6 +23,7 @@ use super::{
     AIExecutionProfile, ActionPermission, CloudAIExecutionProfileModel, WriteToPtyPermission,
 };
 use crate::legacy_stubs::{CloudModelEvent, GenericStringObjectFormat, JsonObjectType, SyncId, UpdateManager, UserWorkspaces};
+use crate::legacy_stubs::{GenericStringObjectId};
 
 /// ExecutionProfileId is the identifier that users of the AIExecutionProfilesModel use
 /// to refer back to a specific profile. These are unique across the lifespan of the app.

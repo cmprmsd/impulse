@@ -61,6 +61,7 @@ use super::workflow_arg_selector::{
 use super::workflow_arg_type_helpers::{self, ArgumentEditorRowIndex};
 use warpui::{AppContext, Element, Entity, TypedActionView, View, ViewContext, ViewHandle};
 use crate::legacy_stubs::{UserUid};
+use crate::legacy_stubs::{AIClient, CloudModelEvent, Owner, Revision, ServerId, SyncId};
 
 const BREADCRUMBS_VERTICAL_MARGIN: f32 = 6.;
 const MODAL_WIDTH: f32 = 900.;

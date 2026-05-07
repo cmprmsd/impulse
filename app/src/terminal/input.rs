@@ -1,5 +1,6 @@
 use crate::legacy_stubs::{PaletteSource};
 use crate::legacy_stubs::{AIConversationId, AgentViewController};
+use crate::legacy_stubs::{AnonymousUserSignupEntrypoint, ServerApi, SyncId};
 mod agent;
 pub mod buffer_model;
 mod classic;

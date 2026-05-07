@@ -38,6 +38,7 @@ use super::{
 use warpui::{AppContext, Element, Entity, EventContext, TypedActionView, View, ViewContext, ViewHandle};
 use warpui::fonts::{Properties, Weight};
 use warpui::elements::{ChildView};
+use crate::legacy_stubs::{SyncId};
 
 const INFO_BOX_PADDING: f32 = 20.;
 const ARGUMENT_PADDING: f32 = 10.;

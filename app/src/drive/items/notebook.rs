@@ -12,6 +12,7 @@ use crate::{
     themes::theme::Fill};
 
 use super::{WarpDriveItem, WarpDriveItemId};
+use crate::legacy_stubs::{CloudObjectMetadata};
 
 #[derive(Clone)]
 pub struct WarpDriveNotebook {

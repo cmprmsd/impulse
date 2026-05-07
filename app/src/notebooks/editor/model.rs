@@ -50,6 +50,7 @@ use super::{
     interaction_state_model::InteractionStateModel, notebook_command::NotebookCommand,
 };
 use warpui::{TextDirection, TextUnit};
+use crate::legacy_stubs::{CloudModelEvent};
 
 const DEBOUNCED_RESIZE_PERIOD: Duration = Duration::from_millis(5);
 

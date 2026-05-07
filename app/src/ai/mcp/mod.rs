@@ -20,6 +20,7 @@ use warp_core::ui::appearance::Appearance;
 use warp_core::ui::Icon;
 use crate::legacy_stubs::{SyncId};
 use crate::legacy_stubs::{QueueItem};
+use crate::legacy_stubs::{GenericStringObjectFormat, GenericStringObjectId, JsonObjectType, Revision};
 
 pub mod manager;
 pub mod templatable_manager;

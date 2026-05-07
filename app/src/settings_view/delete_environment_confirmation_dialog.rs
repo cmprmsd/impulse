@@ -8,6 +8,7 @@ use crate::{
     appearance::Appearance,
     ui_components::dialog::{dialog_styles, Dialog},
     view_components::action_button::{ActionButton, DangerPrimaryTheme, NakedTheme}};
+use crate::legacy_stubs::{SyncId};
 
 const DIALOG_WIDTH: f32 = 450.;
 

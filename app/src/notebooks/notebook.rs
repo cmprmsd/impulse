@@ -93,6 +93,7 @@ use crate::legacy_stubs::{UserWorkspaces};
 use crate::pane_group::pane::view::PaneHeaderCustomAction;
 use crate::workspace::ToastStack;
 use crate::legacy_stubs::{ModelAsRef};
+use crate::legacy_stubs::{CloudModelEvent, Owner, ServerId, SharingDialogSource, Space, SyncId};
 
 mod details_bar;
 

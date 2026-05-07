@@ -43,6 +43,7 @@ use warpui::clipboard::ClipboardContent;
 use warpui::r#async::Timer;
 use warpui::{AppContext, Element, Entity, FocusContext, TypedActionView, View, ViewContext, ViewHandle, WindowId};
 use warpui::keymap::{FixedBinding};
+use crate::legacy_stubs::{SyncId};
 
 /// Trait for items that can be displayed in a generic menu
 pub trait GenericMenuItem: Debug + 'static {

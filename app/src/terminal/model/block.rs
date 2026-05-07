@@ -1,4 +1,5 @@
 use crate::legacy_stubs::{AIConversationId, AgentViewState};
+use crate::legacy_stubs::{SyncId};
 mod interaction_mode;
 mod serialized_block;
 

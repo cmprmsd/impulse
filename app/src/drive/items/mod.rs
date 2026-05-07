@@ -10,6 +10,7 @@ use super::{
     index::{warp_drive_section_header_position_id, DriveIndexAction, DriveIndexSection},
     CloudObjectTypeAndId, DriveObjectType,
 };
+use crate::legacy_stubs::{CloudObjectMetadata, Space};
 
 pub mod ai_fact;
 pub mod ai_fact_collection;

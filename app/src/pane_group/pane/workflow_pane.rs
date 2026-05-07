@@ -14,6 +14,7 @@ use std::{collections::HashMap, sync::Arc};
 use url::Url;
 use warpui::{AppContext, ModelHandle, SingletonEntity, ViewContext, ViewHandle};
 use crate::legacy_stubs::{UserWorkspaces};
+use crate::legacy_stubs::{SyncId};
 
 pub struct WorkflowPane {
     view: ViewHandle<PaneView<WorkflowView>>,

@@ -6,6 +6,7 @@ use parking_lot::FairMutex;
 use std::sync::{Arc, Mutex};
 use warpui::r#async::executor::Background;
 use crate::terminal::TerminalModel;
+use crate::legacy_stubs::{AuthState};
 
 /// We want to measure throughput as bytes / sec.
 const PTY_THROUGHPUT_TIME_INTERVAL: Duration = Duration::from_secs(1);

@@ -16,6 +16,7 @@ use super::{
     workflow::{Argument, ArgumentType, Workflow},
     workflow_enum::{EnumVariants, WorkflowEnum},
 };
+use crate::legacy_stubs::{ClientId, SyncId};
 
 /// Separate structure for exporting arguments. This new structure holds explicit enum information,
 /// unlike the `Argument` struct which just holds the enum_id. It is also flatter than the normal `Argument`

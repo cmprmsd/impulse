@@ -16,6 +16,7 @@ use crate::{
 use warpui::{AppContext, Element, Entity, TypedActionView, View, ViewContext, ViewHandle};
 use warpui::{Keystroke};
 use warpui::keymap::{FixedBinding};
+use crate::legacy_stubs::{AIConversationId};
 
 pub fn init(app: &mut AppContext) {
     use warpui::keymap::macros::*;

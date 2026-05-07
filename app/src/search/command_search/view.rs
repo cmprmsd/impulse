@@ -55,6 +55,7 @@ use warpui::{AppContext, Element, Entity, FocusContext, ModelHandle, TypedAction
 use warpui::{WeakViewHandle};
 use warpui::elements::{ChildView};
 use crate::legacy_stubs::{UserWorkspaces};
+use crate::legacy_stubs::{AIClient, AuthState, ServerId, UserUid};
 
 const DEFAULT_PLACEHOLDER_TEXT: &str = "Search your history, workflows, and more";
 const PANEL_POSITION_ID: &str = "CommandSearchViewPanel";

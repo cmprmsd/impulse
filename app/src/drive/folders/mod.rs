@@ -9,6 +9,7 @@ use crate::{
 use anyhow::Result;
 use async_trait::async_trait;
 use crate::legacy_stubs::{FolderId};
+use crate::legacy_stubs::{ObjectType, QueueItem, Revision, ServerId, Space, SyncId};
 
 // Re-exported from warp_server_client.
 

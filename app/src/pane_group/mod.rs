@@ -141,6 +141,7 @@ use crate::{
     terminal::{TerminalManager, TerminalModel, TerminalView}};
 use crate::legacy_stubs::{AgentConversationEntryId, AmbientAgentTaskId, AnonymousUserSignupEntrypoint, AuthManager, AuthStateProvider, ObjectUid, PaletteSource, ServerApiProvider, SharingDialogSource, Space, SyncId, TelemetryEvent};
 use crate::legacy_stubs::{AIConversation, AIConversationId, CloudConversationData, ServerConversationToken};
+use crate::legacy_stubs::{ServerApi};
 
 mod child_agent;
 pub mod focus_state;

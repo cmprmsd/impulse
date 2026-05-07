@@ -1,5 +1,6 @@
 use crate::{channel::ChannelState};
 use warpui::AppContext;
+use crate::legacy_stubs::{ServerId};
 
 /// Shared admin panel actions and utilities for settings views
 pub struct AdminActions;

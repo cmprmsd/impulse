@@ -6,6 +6,7 @@ use crate::{
     themes::theme::Fill};
 
 use super::{WarpDriveItem, WarpDriveItemId};
+use crate::legacy_stubs::{CloudObjectMetadata, Space};
 
 #[derive(Clone)]
 pub struct WarpDriveSpace {

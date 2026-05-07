@@ -23,6 +23,7 @@ use crate::{
         TerminalView,
     }};
 use crate::legacy_stubs::{CodebaseIndexManager};
+use crate::legacy_stubs::{GenericStringObjectId, ObjectType};
 
 lazy_static! {
     // Regex to match <block:[block_id]> patterns

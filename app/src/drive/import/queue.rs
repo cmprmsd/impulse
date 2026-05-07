@@ -7,6 +7,7 @@ use crate::{
     notebooks::CloudNotebookModel};
 
 use super::nodes::{self, FileId};
+use crate::legacy_stubs::{ClientId, Owner, SyncId, UpdateManagerEvent};
 
 pub(super) enum ImportQueueEvent {
     FileCompleted {

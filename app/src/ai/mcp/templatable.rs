@@ -10,6 +10,7 @@ use warpui::{AppContext, SingletonEntity as _};
 use crate::{};
 use crate::legacy_stubs::{SyncId};
 use crate::legacy_stubs::{QueueItem};
+use crate::legacy_stubs::{GenericStringObjectFormat, GenericStringObjectId, JsonObjectType, Revision};
 
 const UNIQUENESS_KEY_PREFIX: &str = "templatable_mcp_server";
 
