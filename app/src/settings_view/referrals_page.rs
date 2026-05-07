@@ -34,6 +34,7 @@ use warpui::{
         components::{Coords, UiComponent, UiComponentStyles},
     },
 };
+use warpui::{AppContext, Entity, EventContext, FocusContext, TypedActionView, View, ViewContext, ViewHandle};
 
 const HEADER_FONT_SIZE: f32 = 18.;
 const HEADER_MARGIN_BOTTOM: f32 = 32.;

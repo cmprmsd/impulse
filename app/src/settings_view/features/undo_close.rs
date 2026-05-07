@@ -21,6 +21,7 @@ use crate::{
         settings_page::{render_body_item, LocalOnlyIconState, ToggleState},
     },
 };
+use warpui::{AppContext, Element, Entity, TypedActionView, View, ViewContext, ViewHandle};
 
 #[derive(Debug, Clone, Copy)]
 pub enum Action {

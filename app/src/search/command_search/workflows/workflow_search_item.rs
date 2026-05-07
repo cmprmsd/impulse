@@ -16,6 +16,7 @@ use crate::search::workflows::fuzzy_match::FuzzyMatchWorkflowResult;
 use crate::ui_components::icons::Icon;
 use crate::workflows::workflow::Workflow;
 use crate::workflows::{CloudWorkflowModel, WorkflowSource, WorkflowType};
+use warpui::{AppContext, Element};
 
 /// Holds workflow data for a `WorkflowSearchItem`, used to read workflow fields
 /// during rendering and to produce an `AcceptedWorkflow` payload on selection.

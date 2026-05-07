@@ -13,6 +13,7 @@ use warpui::{
     AppContext, Element, Entity, FocusContext, SingletonEntity, TypedActionView, View, ViewContext,
 
 };
+use warpui::{ViewHandle};
 /// This View is a text that can be hovered over. Upon clicking,
 /// the text becomes a text input that can be submitted
 /// by hitting enter or clicking outside the input.

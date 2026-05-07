@@ -34,6 +34,7 @@ use warpui::{
         MouseStateHandle, ParentElement, Text, Wrap,
     },
 };
+use warpui::{AppContext, Element, Entity, ModelHandle, View, ViewContext};
 
 const ONBOARDING_BOX_WIDTH: f32 = 210.;
 const ONBOARDING_BOX_HEIGHT: f32 = 140.;

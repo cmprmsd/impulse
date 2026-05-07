@@ -6,6 +6,7 @@ use warpui::{
 
 use crate::appearance::Appearance;
 use crate::terminal::{model::block::Block, view::WARP_PROMPT_HEIGHT_LINES};
+use warpui::{Element};
 
 pub(super) fn render_floating_block_snapshot(
     block: &Block,

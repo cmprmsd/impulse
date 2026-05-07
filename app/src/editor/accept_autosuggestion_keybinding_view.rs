@@ -32,6 +32,7 @@ use warpui::{
 use warpui::{Entity, TypedActionView, View, ViewHandle};
 
 use super::EditorElement;
+use warpui::{AppContext};
 
 pub const AUTOSUGGESTION_HINT_MINIMUM_HEIGHT: f32 = 12.;
 

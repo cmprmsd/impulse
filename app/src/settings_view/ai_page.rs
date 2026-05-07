@@ -74,6 +74,7 @@ use super::{
     },
 
 };
+use warpui::{Action, AppContext, Element, Entity, TypedActionView, View, ViewContext, ViewHandle};
 /// Identifies which subpage of the AI settings the user is viewing.
 /// When `None`, the page shows all widgets (legacy/full view).
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]

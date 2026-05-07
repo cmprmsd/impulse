@@ -14,6 +14,7 @@ use warpui::{
         components::{Coords, UiComponent, UiComponentStyles},
     },
 };
+use warpui::{AppContext, Element, Entity, TypedActionView, View, ViewContext, ViewHandle};
 
 const LABEL_FONT_SIZE: f32 = 12.;
 

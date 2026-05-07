@@ -31,6 +31,7 @@ use warpui::{
         components::{Coords, UiComponent, UiComponentStyles},
     },
 };
+use warpui::{AppContext, Entity, TypedActionView, View, ViewContext, ViewHandle};
 
 const MODAL_WIDTH: f32 = 460.;
 const MODAL_HEIGHT: f32 = 320.;

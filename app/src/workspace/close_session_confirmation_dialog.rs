@@ -20,6 +20,7 @@ use crate::{
     ui_components::dialog::{dialog_styles, Dialog},
     workspace::TabMovement,
 };
+use warpui::{AppContext, Element, Entity, EntityId, TypedActionView, View, ViewContext};
 
 #[allow(clippy::enum_variant_names)]
 #[derive(Copy, Clone)]

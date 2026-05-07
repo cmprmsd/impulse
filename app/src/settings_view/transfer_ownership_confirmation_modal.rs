@@ -7,6 +7,7 @@ use warpui::{
 };
 
 use crate::appearance::Appearance;
+use warpui::{AppContext, Element, Entity, TypedActionView, View, ViewContext};
 
 pub struct TransferOwnershipConfirmationModal {
     cancel_mouse_state: MouseStateHandle,

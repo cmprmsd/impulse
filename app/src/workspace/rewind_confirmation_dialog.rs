@@ -21,6 +21,7 @@ use crate::{
     ui_components::dialog::{dialog_styles, Dialog},
     ui_components::icons::Icon,
 };
+use warpui::{AppContext, Element, Entity, EntityId, TypedActionView, View, ViewContext};
 
 pub fn init(app: &mut AppContext) {
     use warpui::keymap::macros::*;

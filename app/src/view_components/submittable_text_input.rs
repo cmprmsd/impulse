@@ -11,6 +11,7 @@ use crate::{
     editor::{EditorOptions, EditorView, Event as EditorEvent, InteractionState, TextOptions},
     themes::theme::Fill,
 };
+use warpui::{AppContext, Element, Entity, FocusContext, TypedActionView, View, ViewContext, ViewHandle};
 
 const ENTER_BUTTON_SIZE: f32 = 22.;
 

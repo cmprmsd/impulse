@@ -1,3 +1,4 @@
+use warpui::{Element};
 //! "Block banners" are banners that render _inside_ a block, or its snackbar header. Currently it
 //! will only render inside the active block, though that constraint can be relaxed with a bit more
 //! work. The most important constraint that makes these different from other UI components is that

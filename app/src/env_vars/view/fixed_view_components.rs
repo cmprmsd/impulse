@@ -20,6 +20,7 @@ use crate::{
         view::env_var_collection::{EnvVarCollectionAction, EnvVarCollectionView},
     },
 };
+use warpui::{AppContext, Element, ViewContext};
 
 const VARIABLE_DIVIDER_HEIGHT: f32 = 2.;
 const SECTION_FONT_SIZE: f32 = 16.;

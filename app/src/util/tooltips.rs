@@ -13,6 +13,7 @@ use crate::{
     appearance::Appearance, settings::PrivacySettings, terminal::model::secrets::SecretLevel,
 
 };
+use warpui::{AppContext, Element, EventContext};
 /// A link to be shown in a tooltip
 pub struct TooltipLink<OnClick> {
     pub text: String,

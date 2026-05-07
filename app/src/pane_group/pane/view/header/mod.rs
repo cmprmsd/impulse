@@ -34,6 +34,7 @@ use warpui::{
 };
 
 use super::PaneDropTargetData;
+use warpui::{AppContext, Element, Entity, EntityId, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
 
 mod sharing;
 

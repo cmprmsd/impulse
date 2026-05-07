@@ -21,6 +21,7 @@ use crate::themes::theme::{Blend, Fill};
 use crate::util::bindings::trigger_to_keystroke;
 
 use super::WELCOME_TIP_FEATURE_LENGTH;
+use warpui::{AppContext, Entity, Keystroke, TypedActionView, View};
 
 const CHECK_MARK_WIDTH: f32 = 20.;
 const TIP_VIEW_WIDTH: f32 = 250.;

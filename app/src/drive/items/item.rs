@@ -49,6 +49,7 @@ use crate::{
 use crate::{cloud_object::CloudObjectLocation, drive::items::WarpDriveItem};
 
 use super::WarpDriveItemId;
+use warpui::{AppContext, Element, ViewHandle};
 
 pub(crate) fn tools_panel_menu_direction(app: &AppContext) -> MenuDirection {
     let config = TabSettings::as_ref(app)

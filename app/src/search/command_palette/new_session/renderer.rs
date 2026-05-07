@@ -8,6 +8,7 @@ use warpui::{
 
 use crate::appearance::Appearance;
 use crate::search::result_renderer::ItemHighlightState;
+use warpui::{Element};
 
 impl NewSessionOption {
     pub(super) fn render(

@@ -23,6 +23,7 @@ use warpui::{
         SavePosition, Stack,
     },
 };
+use warpui::{AppContext};
 
 impl Input {
     /// Renders the terminal mode input when `FeatureFlag::AgentView` is enabled and there is no

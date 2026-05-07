@@ -53,6 +53,7 @@ use warpui::{
         components::{Coords, UiComponent, UiComponentStyles},
     },
 };
+use warpui::{Action, AppContext, Pixels, ViewContext, ViewHandle};
 
 pub const TOGGLE_BUTTON_RIGHT_PADDING: f32 = 5.;
 pub const HEADER_PADDING: f32 = 15.;

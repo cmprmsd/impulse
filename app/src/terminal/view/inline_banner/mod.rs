@@ -1,3 +1,4 @@
+use warpui::{Element};
 //! This module contains logic to render inline banners for various use cases in the Blocklist. An
 //! inline banner is distinct from a typical app banner in that inline banner are rendered within
 //! the Blocklist (between blocks) while app banners are pinned to the top of the window.

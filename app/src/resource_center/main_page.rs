@@ -33,6 +33,7 @@ use super::{
         SECTION_SPACING_BOTTOM,
     },
 };
+use warpui::{AppContext, Entity, EntityId, ModelHandle, TypedActionView, View, ViewContext, ViewHandle, WindowId};
 
 const SEND_SVG_PATH: &str = "bundled/svg/send.svg";
 

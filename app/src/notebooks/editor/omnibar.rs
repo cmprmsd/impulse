@@ -29,6 +29,7 @@ use super::{
     model::{NotebooksEditorModel, RichTextEditorModelEvent},
     view::EditorViewAction,
 };
+use warpui::{AppContext, Element, Entity, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
 
 const OMNIBAR_HEIGHT: f32 = 32.;
 const OMNIBAR_PADDING: f32 = 4.;

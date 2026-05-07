@@ -14,6 +14,7 @@ use warpui::{
         Radius, Rect, SavePosition, Stack, Text, DEFAULT_UI_LINE_HEIGHT_RATIO,
     },
 };
+use warpui::{AppContext, Element, Entity, EntityId, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
 
 const SIDECAR_HORIZONTAL_GAP: f32 = 8.;
 const SIDECAR_POSITION_ID: &str = "model_sidecar_panel";

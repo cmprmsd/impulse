@@ -29,6 +29,7 @@ use warpui::{
         PositioningAxis, Radius, SavePosition, Stack, XAxisAnchor, YAxisAnchor,
     },
 };
+use warpui::{AppContext};
 
 pub(super) const CLOUD_MODE_V2_MAX_WIDTH: f32 = 720.;
 

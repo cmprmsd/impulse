@@ -23,6 +23,7 @@ use crate::{
         focus_state::PaneFocusHandle, pane::view, BackingView, PaneConfiguration, PaneEvent,
     },
 };
+use warpui::{AppContext, Element, Entity, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
 
 pub fn init(app: &mut AppContext) {
     use warpui::keymap::macros::*;

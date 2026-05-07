@@ -26,6 +26,7 @@ use super::{
         wrap_input_with_terminal_padding_and_focus_handler,
     },
 };
+use warpui::{AppContext};
 
 impl Input {
     /// Renders the universal input. This is used when `FeatureFlag::AgentView` is disabled and the

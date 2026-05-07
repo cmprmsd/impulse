@@ -16,6 +16,7 @@ use super::{
     SectionAction, SectionView, CHEVRON_ICON_SIZE, DESCRIPTION_FONT_SIZE, ICON_PADDING,
     ITEM_PADDING_BOTTOM, SECTION_SPACING,
 };
+use warpui::{AppContext, Entity, TypedActionView, View, ViewContext};
 
 #[derive(Default)]
 struct ContentMouseStateHandles {

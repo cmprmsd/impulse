@@ -11,6 +11,7 @@ use crate::{
 };
 
 use super::env_var_collection::{EnvVarCollectionAction, EnvVarCollectionView, VariableRowIndex};
+use warpui::{AppContext};
 
 const PANE_MENU_WIDTH: f32 = 200.;
 

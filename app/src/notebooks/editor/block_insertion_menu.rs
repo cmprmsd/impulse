@@ -32,6 +32,7 @@ use super::{
     view::{EditorViewAction, EditorViewEvent, RichTextEditorView},
 
 };
+use warpui::{AppContext, ViewContext, ViewHandle};
 /// The saved position ID for the block insertion button.
 const BLOCK_INSERT_BUTTON_ID: &str = "notebook_block_insertion_button";
 

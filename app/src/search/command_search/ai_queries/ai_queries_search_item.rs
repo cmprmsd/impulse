@@ -23,6 +23,7 @@ use crate::{
         result_renderer::ItemHighlightState,
     },
 };
+use warpui::{AppContext, Element};
 
 /// Stores data needed to display an AI query search result item in Command Search.
 #[derive(Clone, Debug)]

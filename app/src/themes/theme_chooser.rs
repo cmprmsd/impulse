@@ -35,6 +35,7 @@ use crate::{
 };
 
 use super::theme;
+use warpui::{AppContext, Entity, FocusContext, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
 
 // All units in px
 const THEME_CHOOSER_TITLE: &str = "Themes";

@@ -18,6 +18,7 @@ use warpui::{
         MainAxisSize, MouseStateHandle, ParentElement, Radius, Shrinkable, Text, Wrap,
     },
 };
+use warpui::{AppContext, Element, Entity, TypedActionView, View, ViewContext};
 
 const CONFIRM_MARGIN_TOP: f32 = 16.;
 

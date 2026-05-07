@@ -28,6 +28,7 @@ use super::style::{self, BUTTON_GAP, MODAL_MARGIN};
 use warpui::{
     platform::Cursor, AppContext, Element, Entity, SingletonEntity, TypedActionView, View,
 };
+use warpui::{ViewContext};
 
 #[derive(Default)]
 struct ButtonMouseStateHandles {

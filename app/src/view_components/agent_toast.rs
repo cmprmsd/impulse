@@ -20,6 +20,7 @@ use crate::settings_view::keybindings::{KeybindingChangedEvent, KeybindingChange
 use crate::terminal::view::TerminalAction;
 use crate::util::bindings::keybinding_name_to_keystroke;
 use crate::workspace::{Workspace, WorkspaceAction};
+use warpui::{AppContext, Element, Entity, EntityId, Keystroke, TypedActionView, View, ViewContext};
 
 const AGENT_TOAST_WIDTH: f32 = 260.;
 const AGENT_TOAST_PADDING: f32 = 12.;

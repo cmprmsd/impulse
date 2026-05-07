@@ -22,6 +22,7 @@ use warpui::{Action, ViewHandle};
 use crate::{appearance::Appearance, themes::theme::Fill};
 
 use super::action_button::ActionButton;
+use warpui::{AppContext, Element, Entity, TypedActionView, View, ViewContext};
 
 const TOAST_WIDTH: f32 = 464.;
 const TOAST_CORNER_RADIUS: f32 = 4.;

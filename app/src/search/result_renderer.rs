@@ -12,6 +12,7 @@ use crate::search::item::IconLocation;
 use crate::{appearance::Appearance, themes::theme::Fill};
 
 use super::data_source::QueryResult;
+use warpui::{Action, AppContext, Element, EventContext};
 
 const DETAILS_MIN_WIDTH: f32 = 180.;
 const DETAILS_MAX_WIDTH: f32 = 480.;

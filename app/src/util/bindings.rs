@@ -22,6 +22,7 @@ use warpui::{
     },
 };
 use warpui::{AppContext, SingletonEntity};
+use warpui::{Action};
 
 pub const MAC_MENUS_CONTEXT: DescriptionContext = DescriptionContext::Custom("mac_menus");
 

@@ -23,6 +23,7 @@ use warpui::{
         MainAxisAlignment, MouseStateHandle, ParentElement, Radius, Text,
     },
 };
+use warpui::{AppContext, Element, Entity, TypedActionView, View, ViewContext};
 
 pub enum UpdateModalBodyEvent {
     Cancel,

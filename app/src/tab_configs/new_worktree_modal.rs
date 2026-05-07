@@ -16,6 +16,7 @@ use warpui::{
     },
 
 };
+use warpui::{AppContext, Entity, TypedActionView, View, ViewContext, ViewHandle};
 /// Registers keybindings for the new-worktree modal (ESC to close).
 pub fn init(app: &mut AppContext) {
     use warpui::keymap::macros::*;

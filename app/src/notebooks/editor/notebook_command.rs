@@ -65,6 +65,7 @@ use super::{
     view::EditorViewAction,
     NotebookWorkflow,
 };
+use warpui::{Element, Entity, ModelContext, ModelHandle, ViewHandle, WeakModelHandle, WindowId};
 
 lazy_static! {
     static ref SUPPORTED_LANGUAGES: &'static [&'static str] = &[

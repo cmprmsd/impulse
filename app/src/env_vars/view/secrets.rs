@@ -33,6 +33,7 @@ use crate::{
     view_components::{DismissibleToast, ToastLink},
     workspace::{ToastStack, WorkspaceAction},
 };
+use warpui::{Element, ViewContext};
 
 impl EnvVarCollectionView {
     pub(super) fn handle_external_secrets_dialog_event(

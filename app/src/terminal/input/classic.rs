@@ -32,6 +32,7 @@ use warpui::{
 };
 
 use super::{should_render_prompt_using_editor_decorator_elements, Input, SubshellRenderState};
+use warpui::{AppContext};
 
 impl Input {
     /// Renders the classic input. This is used when the user has 'Honor PS1' enabled in settings,

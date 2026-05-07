@@ -34,6 +34,7 @@ use super::{
         CodeBlockIndex, FormattedTranscriptMessage, MarkdownSegment, TranscriptPartSubType,
     },
 };
+use warpui::{AppContext, Element, Entity, Keystroke, ModelHandle, TypedActionView, View, ViewContext};
 
 const TRANSCRIPT_POSITION_ID: &str = "ai_assistant::transcript";
 

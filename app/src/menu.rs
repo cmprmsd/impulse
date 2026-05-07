@@ -26,6 +26,7 @@ use warpui::{
         Shrinkable, Text,
     },
 };
+use warpui::{Action, AppContext, Entity, TypedActionView, View, ViewContext};
 
 pub const CHEVRON_RIGHT_ALIGN_SVG_PATH: &str = "bundled/svg/chevron-right-align.svg";
 

@@ -11,6 +11,7 @@ use warpui::{
 };
 
 use crate::{terminal::model::terminal_model::ExitReason, ui_components};
+use warpui::{Entity, TypedActionView, View, ViewContext};
 
 const FILE_ISSUE_TEXT: &str = "File issue";
 const MORE_INFO_TEXT: &str = "More info";

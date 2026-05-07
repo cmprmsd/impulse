@@ -16,6 +16,7 @@ use crate::{
 
 use super::{AgentFooterButtonTheme, USE_AGENT_KEYSTROKE};
 use crate::terminal::view::block_banner::WarpificationMode;
+use warpui::{AppContext, Element, Entity, TypedActionView, View, ViewContext, ViewHandle};
 
 /// Footer view rendered for detected subshell/SSH commands, offering both
 /// "Warpify" and "Use agent" buttons in a horizontal row.

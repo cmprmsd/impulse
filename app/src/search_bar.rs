@@ -6,6 +6,7 @@ use warpui::{
         DispatchEventResult, EventHandler, Flex, Icon, ParentElement, Radius, Shrinkable,
     },
 };
+use warpui::{Element, Entity, TypedActionView, View, ViewContext, ViewHandle};
 
 const SEARCH_ICON_PATH: &str = "bundled/svg/search.svg";
 const ICON_SIZE: f32 = 12.;

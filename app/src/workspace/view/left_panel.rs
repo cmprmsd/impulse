@@ -50,6 +50,7 @@ use crate::{
         icons,
     },
 };
+use warpui::{AppContext, Entity, FocusContext, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
 
 #[derive(Default)]
 struct MouseStateHandles {

@@ -18,6 +18,7 @@ use warpui::{
         components::{Coords, UiComponent, UiComponentStyles},
     },
 };
+use warpui::{Action, AppContext, BlurContext, Element, Entity, TypedActionView, View, ViewContext, ViewHandle};
 
 #[cfg(test)]
 #[path = "compact_dropdown_tests.rs"]

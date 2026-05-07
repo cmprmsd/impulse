@@ -41,6 +41,7 @@ use warpui::{
     elements::{CrossAxisAlignment, Text},
     keymap::DescriptionContext,
 };
+use warpui::{AppContext, Element, Entity, Keystroke, SingletonEntity, TypedActionView, View, ViewContext, ViewHandle};
 
 const FONT_DELTA: f32 = 2.;
 const CANCEL_SAVE_BUTTONS_SPACING: f32 = 4.0;

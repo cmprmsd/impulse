@@ -39,6 +39,7 @@ use crate::{
         red_notification_dot::RedNotificationDot,
     },
 };
+use warpui::{AppContext, Element, Entity, TypedActionView, View, ViewContext};
 
 /// A chip displayed inline with the server card title, optionally with a leading icon.
 #[derive(Debug, Clone)]

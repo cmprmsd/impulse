@@ -38,6 +38,7 @@ use super::{
     workflow_view::env_var_selector::{EnvVarSelector, EnvVarSelectorEvent},
     AIWorkflowOrigin, CloudWorkflow,
 };
+use warpui::{AppContext, Element, Entity, EventContext, TypedActionView, View, ViewContext, ViewHandle};
 
 const INFO_BOX_PADDING: f32 = 20.;
 const ARGUMENT_PADDING: f32 = 10.;

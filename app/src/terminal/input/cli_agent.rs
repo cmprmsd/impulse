@@ -20,6 +20,7 @@ use warpui::{
         EventHandler, Flex, Hoverable, ParentElement, SavePosition, Stack,
     },
 };
+use warpui::{AppContext, ViewContext};
 
 impl Input {
     /// Renders the CLI rich input (editor + CLI agent footer).

@@ -28,6 +28,7 @@ use super::{
         has_feature_gated_anonymous_user_reached_workflow_limit,
     },
 };
+use warpui::{ViewHandle};
 
 pub const MIN_SIDEBAR_WIDTH: f32 = 250.;
 pub const MAX_SIDEBAR_WIDTH_RATIO: f32 = 0.75;

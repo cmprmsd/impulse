@@ -12,6 +12,7 @@ use crate::{
     editor::{EditorView, Event, SingleLineEditorOptions, TextOptions},
 };
 use crate::{editor::PropagateAndNoOpNavigationKeys, themes::theme::Fill};
+use warpui::{AppContext, Element, Entity, FocusContext, TypedActionView, View, ViewContext, ViewHandle};
 
 pub struct WordBlockEditorView {
     editor_view: ViewHandle<EditorView>,

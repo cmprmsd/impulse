@@ -37,6 +37,7 @@ use crate::terminal::history::LinkedWorkflowData;
 use crate::terminal::rich_history::{render_ai_query_rich_history, render_rich_history};
 use crate::terminal::HistoryEntry;
 use crate::util::time_format::format_approx_duration_from_now;
+use warpui::{AppContext, Entity, TypedActionView, View, ViewContext};
 
 /// This enum allows the parent view to indicate which type of details panel is shown.
 #[derive(Clone, Debug)]

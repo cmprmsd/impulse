@@ -27,6 +27,7 @@ use warpui::{
     },
 
 };
+use warpui::{AppContext, EntityId, ViewHandle};
 /// Whether the terminal input message bar should be shown.
 ///
 /// The message bar is hidden when AI is disabled, the user has turned it off in settings,

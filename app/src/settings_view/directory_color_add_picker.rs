@@ -20,6 +20,7 @@ use crate::{
         DirectoryTabColor, DirectoryTabColors, TabSettings, TabSettingsChangedEvent,
     },
 };
+use warpui::{AppContext, Element, Entity, TypedActionView, View, ViewContext, ViewHandle};
 
 const ADD_DIRECTORY_LABEL: &str = "+ Add directory…";
 const BUTTON_LABEL: &str = "Add directory color";

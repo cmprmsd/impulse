@@ -15,6 +15,7 @@ use crate::{
         ActionButton, DangerPrimaryTheme, KeystrokeSource, NakedTheme,
     },
 };
+use warpui::{AppContext, Element, Entity, TypedActionView, View, ViewContext, ViewHandle};
 
 pub fn init(app: &mut AppContext) {
     use warpui::keymap::macros::*;

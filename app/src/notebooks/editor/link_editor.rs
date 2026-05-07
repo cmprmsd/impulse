@@ -20,6 +20,7 @@ use crate::{
 };
 
 use super::model::NotebooksEditorModel;
+use warpui::{AppContext, BlurContext, Element, Entity, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
 
 const EDITOR_WIDTH: f32 = 368.;
 const EDITOR_VERTICAL_PADDING: f32 = 12.;

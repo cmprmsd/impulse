@@ -20,6 +20,7 @@ use crate::{
     },
 };
 use crate::{search::item::SearchItem, workflows::CloudWorkflow};
+use warpui::{AppContext, Element};
 
 /// The size of the object type icons, in pixels.
 const ICON_SIZE: f32 = 16.;

@@ -20,6 +20,7 @@ use crate::{
     appearance::Appearance,
     menu::{Event as MenuEvent, Menu, MenuItem, MenuItemFields, MenuVariant},
 };
+use warpui::{Action, AppContext, BlurContext, Entity, TypedActionView, View, ViewContext, ViewHandle};
 
 pub const TOP_MENU_BAR_HEIGHT: f32 = 30.;
 pub const TOP_MENU_BAR_MAX_WIDTH: f32 = 190.;

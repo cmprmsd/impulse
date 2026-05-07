@@ -32,6 +32,7 @@ use crate::view_components::action_button::{ActionButton, ActionButtonTheme, But
 use crate::view_components::alert::{Alert, AlertConfig};
 use crate::workspace::WorkspaceAction;
 use ai::api_keys::{ApiKeyManager, ApiKeyManagerEvent};
+use warpui::{ViewHandle};
 
 struct ManageDefaultsTheme;
 

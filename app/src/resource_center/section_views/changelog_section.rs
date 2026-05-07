@@ -18,6 +18,7 @@ use crate::{
 use crate::{send_telemetry_from_ctx, server::telemetry::TelemetryEvent};
 
 use super::{feature_section::FeatureSection, SectionAction, SectionView};
+use warpui::{AppContext, Entity, ModelHandle, TypedActionView, View, ViewContext};
 
 #[derive(Default)]
 struct ChangelogMouseStateHandles {

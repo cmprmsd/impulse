@@ -15,6 +15,7 @@ use crate::terminal::{
 use std::{collections::HashMap, sync::Arc};
 
 use super::success_block::WarpifySuccessBlock;
+use warpui::{ViewHandle};
 
 /// A unique identifier for a subshell separator.
 pub type SeparatorId = usize;

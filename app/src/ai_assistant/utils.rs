@@ -16,6 +16,7 @@ use warpui::{
 use crate::{appearance::Appearance, ui_components::blended_colors};
 
 use super::{panel::AIAssistantAction, requests::Requests, transcript::CodeBlockMouseStateHandles};
+use warpui::{AppContext, Element, ModelHandle};
 
 const PREPARED_RESPONSE_FONT_SIZE: f32 = 11.;
 const REQUEST_LIMIT_INFO_FONT_SIZE: f32 = 11.;

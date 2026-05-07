@@ -56,6 +56,7 @@ use crate::{
 };
 
 use super::{command_dialog::EnvVarCommandDialog, menus::Menus};
+use warpui::{AppContext, BlurContext, Element, Entity, FocusContext, ModelHandle, TypedActionView, View, ViewContext, ViewHandle, WindowId};
 
 // Universal
 pub(super) const CORE_HORIZONATAL_MARGIN: f32 = 24.;

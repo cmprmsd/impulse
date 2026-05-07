@@ -32,6 +32,7 @@ use super::{
     rich_text_styles,
     view::EditorViewAction,
 };
+use warpui::{AppContext, Element, Entity, ModelContext, ModelHandle};
 
 #[derive(Default)]
 struct MouseStateHandles {

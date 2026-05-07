@@ -24,6 +24,7 @@ use crate::{
 };
 
 use super::model::find::{FindConfig, RegexDFAs};
+use warpui::{AppContext, Element, Entity, TypedActionView, View, ViewContext, ViewHandle};
 
 const FILTER_BLOCK_PLACEHOLDER_TEXT: &str = "Filter block output";
 

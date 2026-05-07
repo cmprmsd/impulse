@@ -33,6 +33,7 @@ use warpui::{
     keymap::{EditableBinding, FixedBinding},
     units::IntoLines,
 };
+use warpui::{AppContext};
 
 pub const TOGGLE_BLOCK_FILTER_KEYBINDING: &str =
     "terminal:toggle_block_filter_on_selected_or_last_block";

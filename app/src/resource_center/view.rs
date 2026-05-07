@@ -29,6 +29,7 @@ use crate::{
     util::links,
     workspace::{WorkspaceAction, PANEL_HEADER_HEIGHT},
 };
+use warpui::{AppContext, Entity, EntityId, FocusContext, ModelHandle, TypedActionView, View, ViewContext, ViewHandle, WindowId};
 
 // Footer icons
 const DOCS_SVG_PATH: &str = "bundled/svg/gitbook-logo.svg";

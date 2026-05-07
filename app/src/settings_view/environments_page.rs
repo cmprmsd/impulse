@@ -63,6 +63,7 @@ use warpui::{
         components::{UiComponent, UiComponentStyles},
     },
 };
+use warpui::{AppContext, Entity, FocusContext, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
 
 mod new_environment_button;
 use new_environment_button::NewEnvironmentButtonView;

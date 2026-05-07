@@ -28,6 +28,7 @@ use crate::{
     },
 
 };
+use warpui::{AppContext, Element, Entity, TypedActionView, View, ViewContext, ViewHandle};
 /// Width of the alias name editor.
 const ALIAS_EDITOR_WIDTH: f32 = 100.;
 

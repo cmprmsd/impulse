@@ -22,6 +22,7 @@ use warpui::{
         Shrinkable, Text, Wrap,
     },
 };
+use warpui::{AppContext, Element, Entity, TypedActionView, View, ViewContext, ViewHandle};
 
 #[derive(Debug, Clone)]
 pub enum ExecutionProfileViewAction {

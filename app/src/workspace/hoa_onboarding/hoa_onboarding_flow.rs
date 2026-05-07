@@ -38,6 +38,7 @@ use settings::Setting;
 
 use super::tab_config_step;
 use super::welcome_banner;
+use warpui::{ViewHandle};
 
 const CALLOUT_WIDTH: f32 = 480.;
 

@@ -22,6 +22,7 @@ use warpui::{
 use warpui::{FocusContext, ViewHandle};
 
 use super::render_util::non_hoverable_participant_avatar;
+use warpui::{AppContext, Element, Entity, TypedActionView, View, ViewContext};
 
 #[derive(Debug, Clone)]
 pub enum HoveredElement {

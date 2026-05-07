@@ -31,6 +31,7 @@ use crate::{
         view::TerminalAction,
     },
 };
+use warpui::{AppContext, Element, Entity, ModelHandle, TypedActionView, View, ViewContext};
 
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub enum TerminalViewZeroStateAction {

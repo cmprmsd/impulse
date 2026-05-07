@@ -16,6 +16,7 @@ use crate::{
         result_renderer::ItemHighlightState,
     },
 };
+use warpui::{AppContext, Element};
 
 const ENV_VAR_COLLECTION_ICON_PATH: &str = "bundled/svg/env-var-collection.svg";
 

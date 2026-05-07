@@ -42,6 +42,7 @@ use warpui::ui_components::components::UiComponent;
 use warpui::{
     AppContext, Entity, FocusContext, SingletonEntity, TypedActionView, View, ViewContext,
 };
+use warpui::{ViewHandle};
 
 const DROPDOWN_BUTTON_WIDTH: f32 = 200.;
 const DROPDOWN_PADDING: f32 = 6.;

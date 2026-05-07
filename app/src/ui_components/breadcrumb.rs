@@ -9,6 +9,7 @@ use warpui::{
 };
 
 use crate::appearance::Appearance;
+use warpui::{AppContext, Element, EventContext};
 
 /// A value which may be rendered as a breadcrumb.
 pub trait Breadcrumb: Debug + 'static {

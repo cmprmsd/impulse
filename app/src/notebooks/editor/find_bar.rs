@@ -37,6 +37,7 @@ use super::{
     model::NotebooksEditorModel,
     view::{EditorViewEvent, RichTextEditorView},
 };
+use warpui::{AppContext, BlurContext, Element, Entity, FocusContext, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
 
 /// View for the find bar within a notebook.
 pub struct FindBar {

@@ -12,6 +12,7 @@ use warpui::{
 };
 
 use super::{BODY_PADDING, HEADER_FONT_SIZE, MODAL_PADDING, TEXT_FONT_SIZE};
+use warpui::{AppContext, Element, Entity, TypedActionView, View, ViewContext};
 
 pub const BUTTON_HEIGHT: f32 = 40.;
 pub const BUTTON_WIDTH: f32 = 352.;

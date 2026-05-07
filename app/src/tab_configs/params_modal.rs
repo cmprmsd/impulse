@@ -28,6 +28,7 @@ use crate::{
         ActionButton, DisabledTheme, KeystrokeSource, NakedTheme, PrimaryTheme,
     },
 };
+use warpui::{AppContext, Element, Entity, FocusContext, TypedActionView, View, ViewContext, ViewHandle};
 
 pub fn init(app: &mut AppContext) {
     app.register_fixed_bindings(vec![

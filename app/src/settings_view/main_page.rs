@@ -49,6 +49,7 @@ use warpui::{fonts::Weight, keymap::ContextPredicate};
 use warpui::{
     Entity, ModelHandle, SingletonEntity, TypedActionView, View, ViewContext, ViewHandle,
 };
+use warpui::{Action, AppContext};
 
 const PHOTO_SIZE: f32 = 40.;
 const REFERRAL_CTA: &str = "Earn rewards by sharing Warp with friends & colleagues";

@@ -73,6 +73,7 @@ use crate::{
 };
 use warp_core::features::FeatureFlag;
 use warpui::ui_components::segmented_control::{LabelConfig, TooltipConfig};
+use warpui::{AppContext, Entity, EntityId, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
 
 pub enum AtContextMenuDisabledReason {
     #[cfg(target_family = "wasm")]

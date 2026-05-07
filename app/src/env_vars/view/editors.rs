@@ -20,6 +20,7 @@ use crate::{
 
 // Metadata labels (name and description)
 };
+use warpui::{AppContext, Element, ViewContext, ViewHandle};
 const LABEL_FONT_SIZE: f32 = 12.;
 const METADATA_SPACING: f32 = 8.;
 const LAST_ROW_ELEMENT_SPACING: f32 = 2.;

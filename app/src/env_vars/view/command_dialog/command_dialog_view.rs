@@ -16,6 +16,7 @@ use crate::editor::{
 };
 
 use super::EnvVarSecretCommand;
+use warpui::{AppContext, Element, Entity, FocusContext, TypedActionView, View, ViewContext, ViewHandle};
 
 const COMMAND_EDITOR_MIN_LINES: f32 = 6.;
 const SPAN_FONT_SIZE: f32 = 16.;

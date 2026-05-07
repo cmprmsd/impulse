@@ -54,6 +54,7 @@ use crate::{
         DismissibleToast,
     },
 };
+use warpui::{AppContext, Element, Entity, TypedActionView, View, ViewContext, ViewHandle};
 
 const DEFAULT_JSON_TEXT: &str = r#"{
     "": {

@@ -16,6 +16,7 @@ use warpui::{
 use crate::{
     terminal::ssh::util::InteractiveSshCommand, ui_components::buttons::icon_button,
 };
+use warpui::{Element, Entity, TypedActionView, View, ViewContext};
 
 pub type FileUploadId = usize;
 

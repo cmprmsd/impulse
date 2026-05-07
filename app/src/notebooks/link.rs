@@ -27,6 +27,7 @@ use crate::{
 };
 
 use super::file::is_markdown_file;
+use warpui::{WindowId};
 
 #[cfg(test)]
 #[path = "link_tests.rs"]

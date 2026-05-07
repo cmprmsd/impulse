@@ -8,6 +8,7 @@ use crate::window_settings::WindowSettings;
 use crate::{
     appearance::Appearance, pane_group::PaneId, terminal::TerminalView, workspace::Workspace,
 };
+use warpui::{WindowId};
 
 #[derive(Copy, Clone, Debug, PartialEq, Eq)]
 /// What composes a pane (i.e. the pane group and the pane itself).

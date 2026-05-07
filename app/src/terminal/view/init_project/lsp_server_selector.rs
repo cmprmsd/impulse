@@ -22,6 +22,7 @@ use warpui::{
 };
 
 use super::{InitProjectBlockAction, InitStepBlock};
+use warpui::{AppContext, Element, ViewContext, ViewHandle};
 
 #[derive(Debug, Clone)]
 pub struct LSPServerInfo {

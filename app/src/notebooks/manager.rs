@@ -24,6 +24,7 @@ use crate::{
 };
 
 use super::{notebook::NotebookView, CloudNotebook};
+use warpui::{WindowId};
 
 #[cfg(test)]
 #[path = "manager_tests.rs"]

@@ -10,6 +10,7 @@ use warpui::{
 use crate::terminal::TerminalView;
 
 use super::SharedSessionActionSource;
+use warpui::{WindowId};
 
 struct SharedSessionState {
     session_id: SessionId,

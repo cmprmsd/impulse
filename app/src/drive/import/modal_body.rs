@@ -28,6 +28,7 @@ use super::{
         expand_dirs, parse_file, FileContent, FileId, FileUploadState, FolderId, UploadResult,
     },
 };
+use warpui::{AppContext, Element, Entity, ModelHandle, TypedActionView, View, ViewContext};
 
 const FILE_PICKER_BUTTON_WIDTH: f32 = 250.;
 const BUTTON_FONT_SIZE: f32 = 14.;

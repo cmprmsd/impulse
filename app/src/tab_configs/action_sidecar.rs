@@ -15,6 +15,7 @@ use crate::{
     appearance::Appearance, settings::ai::DefaultSessionMode, tab_configs::TabConfig,
     terminal::available_shells::AvailableShell, workspace::WorkspaceAction,
 };
+use warpui::{AppContext, Element};
 
 pub(crate) const SIDECAR_WIDTH: f32 = 260.;
 const SIDECAR_PADDING: f32 = 12.;

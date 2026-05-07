@@ -12,6 +12,7 @@ use crate::{
     ui_components::icons::Icon as UiIcon,
     util::time_format::{format_approx_duration_from_now, human_readable_precise_duration},
 };
+use warpui::{AppContext, Element};
 
 /// Vertical spacing between line items in rich history details.
 pub(crate) const DETAILS_PARAGRAPH_SPACING: f32 = 8.;

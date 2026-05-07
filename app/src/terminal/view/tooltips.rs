@@ -21,6 +21,7 @@ use crate::{
         TerminalModel,
     },
 };
+use warpui::{AppContext, Element, EventContext};
 
 cfg_if::cfg_if! {
     if #[cfg(feature = "local_fs")] {
