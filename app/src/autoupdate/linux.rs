@@ -161,6 +161,7 @@ mod appimage {
 }
 
 mod package_manager {
+    use anyhow::bail;
     use markdown_parser::{
         FormattedText, FormattedTextFragment, FormattedTextHeader, FormattedTextLine,
     };

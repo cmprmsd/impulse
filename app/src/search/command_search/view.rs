@@ -1121,6 +1121,7 @@ impl CommandSearchView {
 }
 
 pub mod styles {
+    use lazy_static::lazy_static;
     use warpui::elements::{Border, DropShadow, ScrollbarWidth};
 
     use crate::{appearance::Appearance, themes::theme::Fill};
