@@ -5,3 +5,4 @@ edition = "2021"
 publish.workspace = true
 
 [dependencies]
+anyhow.workspace = true
