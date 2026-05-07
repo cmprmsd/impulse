@@ -1,4 +1,3 @@
-use crate::settings_view::SettingsSection;
 use warpui::keymap::macros::*;
 use super::directory_color_add_picker::{DirectoryColorAddPicker, DirectoryColorAddPickerEvent};
 use super::settings_page::{

@@ -1,4 +1,3 @@
-use crate::settings_view::SettingsSection;
 use super::{
     platform::{
         CreateApiKeyModal, CreateApiKeyModalEvent, CreateApiKeyModalViewState, ExpireApiKeyButton,
