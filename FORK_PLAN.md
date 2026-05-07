@@ -514,31 +514,45 @@ If all seven pass, the fork is functional and Syncthing-ready.
     conversation log. Builds with `cargo build --example agent_demo
     -p ai` and works against OpenRouter / Ollama / `claude` CLI.
   - 101/101 unit tests pass on the `ai` crate.
-- **Phase 0 Track A — substantial progress, not yet complete.** Brought
-  the app crate from ~1000 initial parse errors down to ~880 errors,
-  back up to ~3700 (each parse-fix unmasks deeper issues), then down
-  again with subsequent passes. Concrete deliverables:
+- **Phase 0 Track A — substantial progress, not yet complete.**
+  Iterated the warp app crate from ~8314 errors down to ~4574 over
+  4 rounds of bulk-fix scripts:
   - 4 bulk-fix scripts repaired ~700 files of orphan multi-line
     `use foo::{...};` blocks left by the perl-strip.
-  - `app/src/legacy_stubs.rs` defines ~80 placeholder types covering
+  - `app/src/legacy_stubs.rs` defines ~95 placeholder types covering
     the deleted-cloud surface (SyncId, ServerId,
     CloudObjectTypeAndId, BlocklistAIHistoryModel, TelemetryEvent,
-    UserWorkspaces, RemoteServerManager, ContextChipKind,
-    LaunchConfig, ChannelState, AgentRunEvent, ApiKeyUid, ...).
-    Each is `#[derive(Clone, Debug, Default)]` only — the bodies
-    are hollow; calls are dead at runtime.
-  - 323 files got missing `warpui` imports re-introduced (parsed
-    from cargo's `cannot find type X` errors and matched against
-    a known set of warpui sub-paths).
-  - 130 files had `use` statements pointing at deleted modules
-    (`crate::ai::agent::conversation`, `crate::cloud_object`,
-    `warp_multi_agent_api`, etc.) deleted, taking 297 lines with
-    them.
-  Remaining work: more rounds of the same iteration, plus crate-
-  internal type imports the script doesn't yet know about
-  (`crate::appearance::Appearance`, `crate::terminal::TerminalView`,
-  etc.). This is mechanical but slow because each `cargo check`
-  iteration takes 5–15 minutes.
+    UserWorkspaces, RemoteServerManager, ContextChipKind, ChipValue,
+    LaunchConfig, ChannelState, AgentRunEvent, ApiKeyUid,
+    AIConversationId, ServerConversationToken, AgentViewController,
+    AgentViewState, ConversationStatus, AgentToolbarItemKind,
+    TaskId, ResponseEvent, ...).
+  - 443 files received bulk import additions:
+    `warpui::{ViewContext, AppContext, Element, ...}`,
+    `warpui::{fonts, keymap, platform, elements,
+    ui_components::components}`, `warp_core::send_telemetry_from_ctx`
+    + similar macros, plus crate-internal lookups for `Appearance`,
+    `TerminalView`, `ToastStack`, `PaneGroup`, etc.
+  - 130 + 16 + 147 files had dead-module `use` statements + inline
+    references stripped (top-level use lines and nested branches
+    inside `use crate::{ ... }` blocks).
+  - 30 files had inline path replacements: `crate::cloud_object::*`,
+    `crate::ai::agent::conversation::*`, `crate::auth::*`,
+    `crate::workspaces::*` rewritten to `crate::legacy_stubs::*`.
+  - 92 files had stub imports restored after the dead-branch strip
+    over-reached.
+  Remaining work: ~4574 cargo errors. Top patterns are crate-internal
+  type imports the script doesn't yet enumerate (UiComponentStyles in
+  many file contexts where the existing `use warpui::ui_components::*`
+  doesn't reach, Coords, Lines, Dropdown, Menu, MenuItem, ActionButton
+  in deeply-imported nested mod blocks, plus dozens of cloud-coupled
+  types not yet stubbed: CloudObjectLocation, GenericCloudObject,
+  ServerCloudObject, GenericStringObjectUniqueKey, AmbientAgentViewModel,
+  ShareableLinkError, etc.) — and the macros `id!`,
+  `send_telemetry_from_ctx!` etc. that need import inside specific
+  function/module scopes rather than at file level. Each cargo
+  iteration takes 10–15 minutes; getting to clean compile is
+  realistic in 5–10 more focused sessions of the same iteration.
 - **Phase 0 Track B / Phase 2 wiring — not started.** This is the
   remaining work. See "What's still needed" below.
 
