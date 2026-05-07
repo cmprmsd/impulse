@@ -110,6 +110,9 @@ pub mod remote_server {
         }
     }
 }
+pub mod launch_configs {
+    pub struct LaunchConfig;
+}
 pub mod workspaces {
     pub mod user_workspaces {
         pub use crate::legacy_stubs::{UserWorkspaces, UserWorkspacesEvent};

@@ -7,6 +7,15 @@ pub struct Task {
     pub dependencies: Option<TaskDependencies>,
 }
 
+#[derive(Debug, Clone, Default)]
+pub struct Skill;
+
+impl<T> From<T> for Skill {
+    fn from(_: T) -> Self {
+        Skill
+    }
+}
+
 #[derive(Debug, Clone, Default, PartialEq)]
 pub struct TaskDependencies {
     pub parent_task_id: String,

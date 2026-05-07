@@ -8,6 +8,11 @@ pub mod response_event {
 #[derive(Debug, Clone, Default)]
 pub struct RequestParams;
 
+pub mod review_comment {
+    #[derive(Debug, Clone, Default)]
+    pub struct ReviewComment;
+}
+
 pub mod agent_event {
     #[derive(Debug, Clone, Default)]
     pub struct AgentEvent;

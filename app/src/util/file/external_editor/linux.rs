@@ -11,6 +11,7 @@ use warp_util::path::LineAndColumnArg;
 use warpui::AppContext;
 
 use super::Editor;
+use super::Editor::*;
 
 static INSTALLED_EDITOR_METADATA: OnceLock<HashMap<Editor, EditorMetadata>> = OnceLock::new();
 

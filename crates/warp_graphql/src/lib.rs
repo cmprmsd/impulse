@@ -49,3 +49,15 @@ pub struct Wrapped(pub String);
 impl Wrapped {
     pub fn into_inner(self) -> String { self.0 }
 }
+
+pub mod mcp_gallery_template {
+    #[derive(Debug, Clone, Default)]
+    pub struct Template;
+}
+
+pub mod team {
+    #[derive(Debug, Clone, Copy, PartialEq, Eq)]
+    pub enum MembershipRole {
+        Default,
+    }
+}

@@ -94,7 +94,7 @@ fn resolve_runtime_skills(
             unresolved_references.push(reference.to_string());
             continue;
         };
-        runtime_skills.push(serialize_proto_to_base64(&multi_agent_api::Skill::from(
+        runtime_skills.push(serialize_proto_to_base64(&warp_multi_agent_api::Skill::from(
             skill.clone(),
         )));
     }
