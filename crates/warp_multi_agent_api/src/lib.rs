@@ -12,6 +12,21 @@ pub struct TaskDependencies {
     pub parent_task_id: String,
 }
 
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum AgentType {
+    Default,
+}
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum ToolType {
+    Default,
+}
+
+pub mod message {
+    #[derive(Debug, Clone, Default)]
+    pub struct Message;
+}
+
 pub mod response_event {
     #[derive(Debug, Clone)]
     pub enum Type {

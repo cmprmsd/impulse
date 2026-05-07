@@ -4,6 +4,26 @@ pub mod client_action {}
 pub mod response_event {
     pub mod stream_finished {}
 }
+
+#[derive(Debug, Clone, Default)]
+pub struct RequestParams;
+
+pub mod agent_event {
+    #[derive(Debug, Clone, Default)]
+    pub struct AgentEvent;
+
+    #[derive(Debug, Clone, Default)]
+    pub struct StreamFinished;
+
+    #[derive(Debug, Clone, Default)]
+    pub struct AssistantMessage;
+
+    #[derive(Debug, Clone)]
+    pub enum Type {
+        StreamFinished(StreamFinished),
+        AssistantMessage(AssistantMessage),
+    }
+}
 pub mod message {
     pub mod artifact_event {
         #[derive(Debug, Clone, Default)]

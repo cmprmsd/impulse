@@ -1,9 +1,7 @@
 //! Module for utilities related to editing items in the file tree.
 
-#[cfg(test)]
-#[path = "editing_tests.rs"]
 use crate::send_telemetry_from_ctx;
-// mod tests;  // unresolved
+// #[cfg(test)] #[path = "editing_tests.rs"] mod tests;  // unresolved
 
 use repo_metadata::file_tree_store::FileTreeEntryState;
 use repo_metadata::{FileMetadata, FileTreeEntry};

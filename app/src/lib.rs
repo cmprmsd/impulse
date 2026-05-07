@@ -31,6 +31,9 @@ pub mod server {
         pub mod auth {
             pub struct AuthClient;
         }
+        pub mod ai {
+            pub struct AIClient;
+        }
     }
     pub mod telemetry {
         pub use crate::legacy_stubs::{

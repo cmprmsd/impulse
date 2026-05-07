@@ -7,6 +7,7 @@ pub mod todos {}
 pub mod task {}
 pub mod redaction {}
 pub mod api {}
+pub mod convert {}
 
 pub use action::AIAgentCitation;
 pub use file_locations::{group_file_contexts_for_display, FileLocations};
