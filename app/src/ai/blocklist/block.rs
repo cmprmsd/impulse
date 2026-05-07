@@ -1,6 +1,7 @@
 //! Implementation of "AI blocks" used to render AI queries and outputs in the blocklist.
 
 use crate::legacy_stubs::{AuthStateProvider, CloudModel, SyncId, UserWorkspaces};
+use crate::legacy_stubs::redact_secrets;
 use crate::legacy_stubs::{GenericStringObjectId};
 use crate::legacy_stubs::{AIConversationId, AgentViewController};
 

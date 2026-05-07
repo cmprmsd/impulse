@@ -1,4 +1,5 @@
 use std::borrow::Cow;
+use crate::legacy_stubs::redact_secrets;
 use crate::legacy_stubs::{AIConversationId};
 use std::collections::HashMap;
 use std::path::PathBuf;
