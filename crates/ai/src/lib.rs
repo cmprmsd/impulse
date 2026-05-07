@@ -1,6 +1,8 @@
 pub mod agent;
 pub mod api_keys;
+pub mod conversation;
 pub mod llm_id;
+pub mod model_client;
 
 pub use llm_id::LLMId;
 pub mod diff_validation;
