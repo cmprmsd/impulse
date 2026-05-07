@@ -4,6 +4,7 @@ pub mod api_keys;
 pub mod conversation;
 pub mod llm_id;
 pub mod model_client;
+pub mod provider_settings;
 
 pub use llm_id::LLMId;
 pub mod diff_validation;
