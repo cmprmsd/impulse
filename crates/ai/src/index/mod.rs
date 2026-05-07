@@ -1,7 +1,9 @@
 mod file_outline;
 pub mod locations;
 // Stub for cloud-detached builds; the cloud embedding module was removed.
-pub mod full_source_code_embedding {}
+pub mod full_source_code_embedding {
+    pub mod manager {}
+}
 pub const DEFAULT_SYNC_REQUESTS_PER_MIN: u32 = 600;
 
 #[cfg(feature = "local_fs")]

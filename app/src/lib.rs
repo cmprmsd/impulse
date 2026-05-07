@@ -28,7 +28,9 @@ pub mod server {
         pub use crate::legacy_stubs::{AIApiError, ServerApi, ServerApiProvider};
         pub const FETCH_CHANNEL_VERSIONS_TIMEOUT: std::time::Duration =
             std::time::Duration::from_secs(30);
-        pub mod auth {}
+        pub mod auth {
+            pub struct AuthClient;
+        }
     }
     pub mod telemetry {
         pub use crate::legacy_stubs::{
@@ -84,11 +86,19 @@ pub mod cloud_object {
         pub mod generic_string_model {
             pub use crate::legacy_stubs::GenericStringObjectId;
         }
-        pub mod actions {}
+        pub mod actions {
+            pub enum ObjectActionType {
+                Create,
+                Update,
+                Delete,
+            }
+        }
     }
     pub use crate::legacy_stubs::Space;
 }
-pub mod remote_server {}
+pub mod remote_server {
+    pub mod manager {}
+}
 pub mod server_id_traits {}
 mod autoupdate;
 mod banner;
@@ -247,6 +257,15 @@ pub use persistence::testing as sqlite_testing;
 
 use ::settings::{Setting, ToggleableSetting};
 pub use warp_core::errors::{report_error, report_if_error};
+pub use warp_core::{
+    send_telemetry_from_app_ctx, send_telemetry_from_ctx, send_telemetry_on_executor,
+    send_telemetry_sync_from_app_ctx,
+};
+// send_telemetry_sync_from_ctx isn't in warp_core; provide a no-op stub.
+#[macro_export]
+macro_rules! send_telemetry_sync_from_ctx {
+    ($($arg:tt)*) => { () };
+}
 
 #[cfg(feature = "plugin_host")]
 pub use plugin::{run_plugin_host, PLUGIN_HOST_FLAG};

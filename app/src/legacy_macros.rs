@@ -41,25 +41,10 @@ macro_rules! safe_error {
     ($($arg:tt)+) => { log::error!($($arg)+) };
 }
 
-#[macro_export]
-macro_rules! send_telemetry_from_ctx {
-    ($($arg:tt)*) => { () };
-}
-
-#[macro_export]
-macro_rules! send_telemetry_from_app_ctx {
-    ($($arg:tt)*) => { () };
-}
-
-#[macro_export]
-macro_rules! send_telemetry_on_executor {
-    ($($arg:tt)*) => { () };
-}
-
-#[macro_export]
-macro_rules! send_telemetry_sync_from_app_ctx {
-    ($($arg:tt)*) => { () };
-}
+// send_telemetry_* macros are NOT redefined here — warp_core already
+// exports them with `#[macro_export]`, so the crate-root path
+// `crate::send_telemetry_from_ctx` works. Defining duplicates here
+// caused E0659 ambiguity at every call site.
 
 // id!, eq!, ne! macros are NOT redefined here. The warpui crate
 // (via warpui_core::keymap::macros) re-exports them, and any file
