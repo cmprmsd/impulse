@@ -219,6 +219,7 @@ warp_completer.workspace = true
 warp_core.workspace = true
 warp_editor.workspace = true
 warp_js = { workspace = true, optional = true }
+warp_multi_agent_api.workspace = true
 warp_util.workspace = true
 warpui = { workspace = true, features = ["schema_gen", "settings_value"] }
 voice_input = { workspace = true, optional = true }
