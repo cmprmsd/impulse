@@ -1,3 +1,4 @@
+use crate::settings_view::SettingsSection;
 use warpui::keymap::macros::*;
 use crate::ai::blocklist::BlocklistAIPermissions;
 use crate::ai::execution_profiles::model_menu_items::available_model_menu_items;
@@ -72,7 +73,7 @@ use super::{
 
 };
 use warpui::{Action, AppContext, Element, Entity, TypedActionView, View, ViewContext, ViewHandle};
-use crate::legacy_stubs::{AuthManager, AuthStateProvider, CloudModel, CloudModelEvent, JsonObjectType, ObjectType, SettingsAction, SettingsSection, ToggleSettingActionPair};
+use crate::legacy_stubs::{AuthManager, AuthStateProvider, CloudModel, CloudModelEvent, JsonObjectType, ObjectType, SettingsAction, ToggleSettingActionPair};
 use crate::legacy_stubs::{LoginGatedFeature};
 /// Identifies which subpage of the AI settings the user is viewing.
 /// When `None`, the page shows all widgets (legacy/full view).

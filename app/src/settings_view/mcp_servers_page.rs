@@ -1,3 +1,4 @@
+use crate::settings_view::SettingsSection;
 use std::collections::HashMap;
 use uuid::Uuid;
 use warpui::{

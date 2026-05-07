@@ -1,3 +1,4 @@
+use crate::settings_view::SettingsSection;
 use crate::send_telemetry_from_ctx;
 use std::collections::HashMap;
 
@@ -45,7 +46,7 @@ use warpui::{
 use warpui::{AppContext, Element, Entity, SingletonEntity, TypedActionView, View, ViewContext, ViewHandle};
 use warpui::fonts::{Weight};
 use warpui::ui_components::components::{Coords, UiComponentStyles};
-use crate::legacy_stubs::{SettingsSection, TelemetryEvent};
+use crate::legacy_stubs::{TelemetryEvent};
 
 const FONT_DELTA: f32 = 2.;
 const CANCEL_SAVE_BUTTONS_SPACING: f32 = 4.0;

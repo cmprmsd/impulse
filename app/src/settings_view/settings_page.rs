@@ -54,7 +54,7 @@ use warpui::{
     },
 };
 use warpui::{Action, AppContext, Pixels, ViewContext, ViewHandle};
-use crate::legacy_stubs::{SettingsSection};
+use crate::settings_view::SettingsSection;
 
 pub const TOGGLE_BUTTON_RIGHT_PADDING: f32 = 5.;
 pub const HEADER_PADDING: f32 = 15.;

@@ -1,3 +1,4 @@
+use crate::settings_view::SettingsSection;
 use warpui::keymap::macros::*;
 use crate::default_terminal::DefaultTerminal;
 use crate::gpu_state::{GPUState, GPUStateEvent};

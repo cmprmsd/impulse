@@ -1,3 +1,4 @@
+use crate::settings_view::SettingsSection;
 use std::borrow::Cow;
 use std::cell::RefCell;
 use std::collections::{HashMap, HashSet};
@@ -61,7 +62,7 @@ use super::{
 
 use crate::modal::{Modal, ModalEvent, ModalViewState};
 use warpui::fonts::Weight;
-use crate::legacy_stubs::{SettingsAction, SettingsSection, ToggleSettingActionPair};
+use crate::legacy_stubs::{SettingsAction, ToggleSettingActionPair};
 use crate::legacy_stubs::{SettingsWidget};
 use crate::legacy_stubs::{AuthManager, TelemetryEvent, UserWorkspaces};
 

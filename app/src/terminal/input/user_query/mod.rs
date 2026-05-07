@@ -1,6 +1,6 @@
 //! Inline menu for selecting user queries from a conversation.
 //! Used by the `/fork-from` slash command to let users select which query to fork from.
-use crate::legacy_stubs::{InlineMenuType};
+use crate::terminal::input::inline_menu::InlineMenuType;
 
 mod data_source;
 mod search_item;

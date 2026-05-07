@@ -16,7 +16,7 @@ use warpui::{
     },
 };
 use warpui::{AppContext, Entity, TypedActionView, View, ViewContext, ViewHandle};
-use crate::legacy_stubs::{SettingsSection};
+use crate::settings_view::SettingsSection;
 use crate::legacy_stubs::{AuthStateProvider};
 
 #[derive(Debug, Clone)]

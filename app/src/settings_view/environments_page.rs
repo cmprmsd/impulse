@@ -1,3 +1,4 @@
+use crate::settings_view::SettingsSection;
 use super::{
     agent_assisted_environment_modal::{
         AgentAssistedEnvironmentModal, AgentAssistedEnvironmentModalEvent,
@@ -52,7 +53,7 @@ use warpui::{
     },
 };
 use warpui::{AppContext, Entity, FocusContext, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
-use crate::legacy_stubs::{ServerTimestamp, SettingsSection, UserWorkspaces};
+use crate::legacy_stubs::{ServerTimestamp, UserWorkspaces};
 use crate::workspace::ToastStack;
 use crate::workspace::WorkspaceAction;
 use crate::legacy_stubs::{ClientId, Owner, ServerId, SyncId, UpdateManagerEvent};

@@ -1,3 +1,4 @@
+use crate::settings_view::SettingsSection;
 use std::cell::RefCell;
 use std::collections::HashMap;
 use std::fmt::Display;

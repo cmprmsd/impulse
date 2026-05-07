@@ -1,3 +1,4 @@
+use crate::settings_view::SettingsSection;
 use warpui::keymap::macros::*;
 #[cfg(feature = "local_fs")]
 use super::features::external_editor::ExternalEditorView;
@@ -58,7 +59,7 @@ use warpui::{
     },
 };
 use warpui::{Action, AppContext, Entity, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
-use crate::legacy_stubs::{CodebaseIndexManager, SettingsAction, SettingsSection, TelemetryEvent, ToggleSettingActionPair};
+use crate::legacy_stubs::{CodebaseIndexManager, SettingsAction, TelemetryEvent, ToggleSettingActionPair};
 use crate::legacy_stubs::{EnablementState, LspRepoStatus};
 use crate::legacy_stubs::{TeamUpdateManager, UserWorkspaces};
 

@@ -29,7 +29,7 @@ use warpui::{
     },
 };
 use warpui::{AppContext, Entity, EventContext, FocusContext, TypedActionView, View, ViewContext, ViewHandle};
-use crate::legacy_stubs::{SettingsSection};
+use crate::settings_view::SettingsSection;
 use crate::legacy_stubs::{AuthStateProvider, TelemetryEvent};
 
 const HEADER_FONT_SIZE: f32 = 18.;

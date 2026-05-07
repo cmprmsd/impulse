@@ -1,5 +1,5 @@
 //! Inline plan menu for selecting among multiple AI document plans.
-use crate::legacy_stubs::{InlineMenuType};
+use crate::terminal::input::inline_menu::InlineMenuType;
 mod data_source;
 mod search_item;
 mod view;

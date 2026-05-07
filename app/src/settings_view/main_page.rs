@@ -1,3 +1,4 @@
+use crate::settings_view::SettingsSection;
 use crate::send_telemetry_from_ctx;
 use warpui::keymap::macros::*;
 use super::{

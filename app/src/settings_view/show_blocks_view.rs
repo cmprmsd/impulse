@@ -1,3 +1,4 @@
+use crate::settings_view::SettingsSection;
 use super::{
     settings_page::{
         render_page_title, MatchData, PageType, SettingsPageMeta, SettingsPageViewHandle,
@@ -31,7 +32,7 @@ use warpui::{elements::ScrollbarWidth, fonts::Weight};
 use warpui::{
     AppContext, Element, Entity, SingletonEntity, TypedActionView, View, ViewContext, ViewHandle,
 };
-use crate::legacy_stubs::{AuthStateProvider, SettingsSection};
+use crate::legacy_stubs::{AuthStateProvider, };
 use crate::legacy_stubs::{BlockClient};
 
 const SCROLLBAR_WIDTH: ScrollbarWidth = ScrollbarWidth::Auto;

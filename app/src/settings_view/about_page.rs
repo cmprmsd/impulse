@@ -15,7 +15,7 @@ use warpui::{
     },
 };
 use warpui::{AppContext, Entity, View, ViewContext, ViewHandle};
-use crate::legacy_stubs::{SettingsSection};
+use crate::settings_view::SettingsSection;
 use crate::workspace::WorkspaceAction;
 
 pub struct AboutPageView {
