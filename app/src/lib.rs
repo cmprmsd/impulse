@@ -10,6 +10,8 @@ mod antivirus;
 mod app_menus;
 mod app_services;
 mod app_state;
+#[macro_use]
+pub mod legacy_macros;
 pub mod legacy_stubs;
 mod autoupdate;
 mod banner;
@@ -257,12 +259,9 @@ use crate::util::bindings::is_binding_cross_platform;
 use crate::workspace::{PaneViewLocator, Workspace, WorkspaceAction};
 use warp_logging::LogDestination;
 
-// Re-export the send_telemetry_from_ctx macro at the crate root level
-pub use warp_core::send_telemetry_from_app_ctx;
-pub use warp_core::send_telemetry_from_ctx;
-
-// Re-export the safe logging macros at the crate root level for backwards compatibility
-pub use warp_core::{safe_debug, safe_error, safe_info, safe_warn};
+// (cloud-detach: telemetry / safe-log macros are now defined locally
+// in legacy_macros.rs as no-op or log::* redirects, and re-exported
+// crate-wide via #[macro_use] mod legacy_macros above.)
 
 use crate::antivirus::AntivirusInfo;
 #[cfg(feature = "local_fs")]
