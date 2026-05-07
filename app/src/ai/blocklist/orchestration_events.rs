@@ -1,7 +1,4 @@
-use super::history_model::{
 use crate::legacy_stubs::{TaskId};
-    BlocklistAIHistoryEvent, BlocklistAIHistoryModel, ConversationStatusUpdate,
-};
 use super::telemetry::{
     BlocklistOrchestrationTelemetryEvent, TeamAgentCommunicationFailedEvent,
     TeamAgentCommunicationFailureReason, TeamAgentCommunicationKind,

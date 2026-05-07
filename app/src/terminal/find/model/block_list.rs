@@ -103,13 +103,6 @@ pub(super) fn run_find_on_block_list(
     }
 
     let raw_focused_match_index = (!matches.is_empty()).then_some(0);
-    BlockListFindRun {
-        dfas: Some(dfas),
-        matches,
-        raw_focused_match_index,
-        options,
-        block_sort_direction,
-    }
 }
 
 /// Runs a find operation over blocks yielded by the given `blocks_iter`, appending `BlockListMatches`

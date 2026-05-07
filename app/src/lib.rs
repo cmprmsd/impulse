@@ -1,6 +1,7 @@
-use crate::legacy_stubs::{AuthManager, AuthState, AuthStateProvider, CloseTarget, CloudModel, ObjectAction, PaletteSource, RemoteServerManager, RemoteServerManagerEvent, ServerApiProvider, TeamTesterStatus, TeamUpdateManager, TelemetryEvent, UpdateManager, UserProfiles, UserWorkspaces};
 // Suppress warnings about rustdoc style.
 #![allow(clippy::doc_lazy_continuation)]
+
+use crate::legacy_stubs::{AuthManager, AuthState, AuthStateProvider, CloseTarget, CloudModel, ObjectAction, PaletteSource, RemoteServerManager, RemoteServerManagerEvent, ServerApiProvider, TeamTesterStatus, TeamUpdateManager, TelemetryEvent, UpdateManager, UserProfiles, UserWorkspaces};
 use crate::legacy_stubs::{QueueItem};
 
 mod ai;

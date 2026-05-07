@@ -12,13 +12,7 @@ use std::rc::Rc;
 use std::sync::Arc;
 use warp_core::semantic_selection::SemanticSelection;
 use warp_core::{features::FeatureFlag, ui::Icon};
-use warpui::{
 use warpui::keymap::Keystroke;
-    elements::{
-        get_rich_content_position_id, Border, Clipped, Container, CornerRadius, CrossAxisAlignment,
-        Flex, FormattedTextElement, MouseStateHandle, ParentElement, Radius, SavePosition,
-        SelectableArea, SelectionHandle,
-    },
 };
 
 use crate::{

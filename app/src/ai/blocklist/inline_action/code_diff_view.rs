@@ -31,19 +31,7 @@ use warp_editor::{
 use warp_util::file::FileSaveError;
 use warp_util::path::common_path;
 use warp_util::standardized_path::StandardizedPath;
-use warpui::{
 use warpui::keymap::Keystroke;
-    elements::{
-        new_scrollable::{ScrollableAppearance, SingleAxisConfig},
-        Align, Border, ChildAnchor, ChildView, Clipped, ClippedScrollStateHandle, ConstrainedBox,
-        Container, CornerRadius, CrossAxisAlignment, DispatchEventResult, Empty, EventHandler,
-        Flex, FormattedTextElement, HighlightedHyperlink, Hoverable, MainAxisAlignment,
-        MainAxisSize, MouseStateHandle, NewScrollable, OffsetPositioning, ParentAnchor,
-        ParentElement, ParentOffsetBounds, PositionedElementAnchor, PositionedElementOffsetBounds,
-        Radius, SavePosition, ScrollTarget, ScrollToPositionMode, ScrollbarWidth, Shrinkable,
-        SizeConstraintCondition, SizeConstraintSwitch, Stack, Text,
-    },
-};
 
 use super::malformed_line_heuristics::has_malformed_terminal_correction_signal;
 use crate::view_components::action_button::{ActionButton, NakedTheme};

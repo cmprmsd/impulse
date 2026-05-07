@@ -165,28 +165,6 @@ fn make_ambient_task_with_event_seq(
     last_event_sequence: Option<i64>,
 ) -> crate::legacy_stubs::AmbientAgentTask {
     use chrono::Utc;
-    crate::legacy_stubs::AmbientAgentTask {
-        task_id: "550e8400-e29b-41d4-a716-446655440000".parse().unwrap(),
-        parent_run_id: None,
-        title: "test".to_string(),
-        state: crate::legacy_stubs::AmbientAgentTaskState::Succeeded,
-        prompt: "prompt".to_string(),
-        created_at: Utc::now(),
-        started_at: Some(Utc::now()),
-        updated_at: Utc::now(),
-        status_message: None,
-        source: None,
-        session_id: None,
-        session_link: None,
-        creator: None,
-        conversation_id: None,
-        request_usage: None,
-        agent_config_snapshot: None,
-        artifacts: vec![],
-        is_sandbox_running: false,
-        last_event_sequence,
-        children: vec![],
-    }
 }
 
 fn make_server_metadata_with_harness(
@@ -195,34 +173,6 @@ fn make_server_metadata_with_harness(
     use crate::persistence::model::ConversationUsageMetadata;
     use chrono::Utc;
 
-    crate::legacy_stubs::ServerAIConversationMetadata {
-        title: "test".to_string(),
-        working_directory: None,
-        harness,
-        usage: ConversationUsageMetadata {
-            was_summarized: false,
-            context_window_usage: 0.0,
-            credits_spent: 0.0,
-            credits_spent_for_last_block: None,
-            token_usage: vec![],
-            tool_usage_metadata: Default::default(),
-        },
-        metadata: ServerMetadata {
-            uid: ServerId::default(),
-            revision: Revision::now(),
-            metadata_last_updated_ts: Utc::now().into(),
-            trashed_ts: None,
-            folder_id: None,
-            is_welcome_object: false,
-            creator_uid: None,
-            last_editor_uid: None,
-            current_editor_uid: None,
-        },
-        permissions: ServerPermissions::mock_personal(),
-        ambient_agent_task_id: None,
-        server_conversation_token: ServerConversationToken::new("server-token".to_string()),
-        artifacts: vec![],
-    }
 }
 
 #[test]

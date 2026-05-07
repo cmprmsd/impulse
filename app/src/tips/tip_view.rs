@@ -1,5 +1,4 @@
 use pathfinder_geometry::vector::vec2f;
-use warpui::elements::{
 use warpui::keymap::Keystroke;
     Align, ChildAnchor, ClippedScrollStateHandle, ClippedScrollable, DispatchEventResult,
     EventHandler, Hoverable, Icon, MouseStateHandle, OffsetPositioning, PositionedElementAnchor,

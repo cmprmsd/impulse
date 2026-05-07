@@ -36,12 +36,6 @@ pub(super) fn run_find_on_alt_screen(
         .unwrap_or_default();
     let focused_match_index = (!matches.is_empty()).then_some(0);
 
-    AltScreenFindRun {
-        dfas,
-        matches,
-        focused_match_index,
-        options,
-    }
 }
 
 #[derive(Debug)]
