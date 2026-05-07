@@ -97,7 +97,15 @@ pub mod cloud_object {
     pub use crate::legacy_stubs::Space;
 }
 pub mod remote_server {
-    pub mod manager {}
+    pub mod manager {
+        pub use crate::legacy_stubs::{RemoteServerManager, RemoteServerManagerEvent};
+        #[derive(Debug, Clone)]
+        pub enum RemoteServerInitPhase {
+            Idle,
+            Initializing,
+            Ready,
+        }
+    }
 }
 pub mod server_id_traits {}
 mod autoupdate;
