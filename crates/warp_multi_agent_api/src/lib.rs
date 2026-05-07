@@ -2,8 +2,10 @@
 //! Provides the minimum types still referenced by call sites in `app/src/`
 //! and `crates/persistence/`.
 
-#[derive(Debug, Clone, Default)]
-pub struct Task;
+#[derive(Debug, Clone, Default, PartialEq)]
+pub struct Task {
+    pub dependencies: Vec<String>,
+}
 
 pub mod response_event {
     #[derive(Debug, Clone)]
@@ -39,38 +41,48 @@ pub mod response_event {
         #[derive(Debug, Clone, Default)]
         pub struct ModelTokenUsage {
             pub model_id: String,
-            pub total_tokens: u32,
-            pub token_usage_by_category: HashMap<crate::TokenUsageCategory, u32>,
+            pub total_tokens: i32,
+            pub token_usage_by_category: HashMap<String, i32>,
         }
 
         #[derive(Debug, Clone, Default)]
         pub struct ToolCallStats {
-            pub tool_name: String,
-            pub call_count: u32,
+            pub count: i32,
         }
 
         #[derive(Debug, Clone, Default)]
         pub struct RunCommandStats {
-            pub command: String,
-            pub run_count: u32,
+            pub count: i32,
+            pub command_executed: i32,
         }
 
         #[derive(Debug, Clone, Default)]
         pub struct ApplyFileDiffStats {
-            pub file_path: String,
-            pub diff_count: u32,
+            pub count: i32,
+            pub lines_added: i32,
+            pub lines_removed: i32,
+            pub files_changed: i32,
         }
 
         #[derive(Debug, Clone, Default)]
         pub struct ToolUsageMetadata {
-            pub tool_name: String,
-            pub usage_count: u32,
+            pub run_command_stats: Option<RunCommandStats>,
+            pub read_files_stats: Option<ToolCallStats>,
+            pub search_codebase_stats: Option<ToolCallStats>,
+            pub grep_stats: Option<ToolCallStats>,
+            pub file_glob_stats: Option<ToolCallStats>,
+            pub apply_file_diff_stats: Option<ApplyFileDiffStats>,
+            pub write_to_long_running_shell_command_stats: Option<ToolCallStats>,
+            pub read_shell_command_output_stats: Option<ToolCallStats>,
+            pub read_mcp_resource_stats: Option<ToolCallStats>,
+            pub call_mcp_tool_stats: Option<ToolCallStats>,
+            pub suggest_plan_stats: Option<ToolCallStats>,
+            pub suggest_create_plan_stats: Option<ToolCallStats>,
+            pub use_computer_stats: Option<ToolCallStats>,
         }
     }
 }
 
-#[derive(Debug, Clone, Hash, PartialEq, Eq, Default)]
-pub struct TokenUsageCategory(pub String);
 
 pub mod base_ref {
     #[derive(Debug, Clone)]
