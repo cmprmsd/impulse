@@ -17,6 +17,7 @@ use crate::{
 use itertools::Itertools;
 #[cfg(not(target_family = "wasm"))]
 use warpui::SingletonEntity;
+use crate::{send_telemetry_from_app_ctx};
 
 pub struct CallMCPToolExecutor {
     _active_session: ModelHandle<ActiveSession>,

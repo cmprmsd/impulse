@@ -18,6 +18,7 @@ pub use ai::LLMId;
 use crate::legacy_stubs::{ServerApiProvider, UserWorkspaces};
 use crate::legacy_stubs::{AuthManager, AuthStateProvider};
 use crate::network::NetworkStatus;
+use crate::{report_error};
 
 /// Checks if a user's' API key is being used for the given provider.
 /// Returns `true` if BYO API key is enabled and a key exists for the provider.

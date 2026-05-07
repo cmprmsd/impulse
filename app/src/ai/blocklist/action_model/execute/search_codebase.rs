@@ -24,6 +24,7 @@ use super::{
     read_local_file_context, ActionExecution, AnyActionExecution, ExecuteActionInput,
 };
 use crate::terminal::model::session::active_session::ActiveSession;
+use crate::{send_telemetry_from_ctx};
 
 pub struct SearchCodebaseExecutor {
     active_session: ModelHandle<ActiveSession>,

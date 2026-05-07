@@ -29,6 +29,7 @@ use warpui::{AppContext, Entity, EntityId, ModelContext, SingletonEntity};
 use super::BlocklistAIHistoryModel;
 use crate::legacy_stubs::{AISettings, UserWorkspaces};
 use crate::legacy_stubs::{AgentModeCommandExecutionPredicate};
+use crate::{report_if_error};
 
 /// Whether or not a command can be auto-executed, along with a detailed reason.
 #[derive(Copy, Clone, Debug, Deserialize, Serialize)]

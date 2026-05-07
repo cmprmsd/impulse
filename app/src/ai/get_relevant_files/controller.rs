@@ -24,6 +24,7 @@ use crate::{
     },
 };
 use crate::legacy_stubs::{ServerApiProvider};
+use crate::{report_error, send_telemetry_from_ctx};
 
 #[derive(Debug)]
 pub enum GetRelevantFilesControllerEvent {

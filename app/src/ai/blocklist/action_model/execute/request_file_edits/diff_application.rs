@@ -27,6 +27,7 @@ use super::telemetry::{
     DiffInvalidFileEvent, DiffMatchFailedEvent, MissingLineNumbersEvent,
 };
 use crate::legacy_stubs::{AuthState};
+use crate::{safe_debug, safe_warn, send_telemetry_on_executor};
 
 /// Result of reading a file from disk or a remote server.
 ///
