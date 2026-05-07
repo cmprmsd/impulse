@@ -1,3 +1,4 @@
+use crate::send_telemetry_from_ctx;
 use itertools::Itertools;
 use serde::{Deserialize, Serialize};
 use warpui::{SingletonEntity, ViewContext};

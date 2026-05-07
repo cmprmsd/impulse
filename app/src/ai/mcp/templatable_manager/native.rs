@@ -1,3 +1,4 @@
+use crate::send_telemetry_from_ctx;
 use crate::ai::mcp::file_based_manager::FileBasedMCPManagerEvent;
 use crate::ai::mcp::templatable_manager::oauth::{
     load_credentials_from_secure_storage, write_to_secure_storage, FILE_BASED_MCP_CREDENTIALS_KEY,

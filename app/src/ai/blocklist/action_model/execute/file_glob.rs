@@ -1,3 +1,4 @@
+use crate::send_telemetry_from_app_ctx;
 use std::path::PathBuf;
 use crate::legacy_stubs::{AIConversationId};
 use std::sync::Arc;
