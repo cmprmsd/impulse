@@ -2489,21 +2489,7 @@ impl RootView {
         true
     }
 
-    pub fn open_team_settings_with_email_invite_in_existing_window(
-        &mut self,
-//         arg: &OpenTeamsSettingsModalArgs,
-//         ctx: &mut ViewContext<Self>,
-//     ) -> bool {
-//         if let AuthOnboardingState::Terminal(handle) = &self.auth_onboarding_state {
-//             handle.update(ctx, |workspace, ctx| {
-//                 workspace.show_team_settings_page_with_email_invite(arg.invite_email.as_ref(), ctx)
-//             });
-            return true;
-        } else {
-            log::warn!("Auth not complete before trying to open settings pane");
-        }
-        false
-    }
+    // pub fn open_team_settings_with_email_invite_in_existing_window — removed (cloud detach)
 
     pub fn open_warp_drive_object_in_existing_window(
         &mut self,

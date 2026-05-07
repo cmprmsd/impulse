@@ -13,30 +13,12 @@
 // here to avoid E0659 ambiguity at every call site that has
 // `use warp_core::safe_*;` at file level.
 
-// send_telemetry_* macros: stub them at the crate root via #[macro_export].
-// Files that previously used these via `use warp_core::send_telemetry_*;`
-// must drop those imports to avoid E0659 ambiguity (handled by a sweep
-// in this commit).
-#[macro_export]
-macro_rules! send_telemetry_from_ctx {
-    ($($arg:tt)*) => { () };
-}
+// send_telemetry_* macros: warp_core defines them and lib.rs re-exports them
+// via `pub use warp_core::send_telemetry_*;` so `crate::send_telemetry_*`
+// resolves. Defining duplicates here caused E0659 ambiguity at every file
+// that imported `use warp_core::send_telemetry_*;`.
 
-#[macro_export]
-macro_rules! send_telemetry_from_app_ctx {
-    ($($arg:tt)*) => { () };
-}
-
-#[macro_export]
-macro_rules! send_telemetry_on_executor {
-    ($($arg:tt)*) => { () };
-}
-
-#[macro_export]
-macro_rules! send_telemetry_sync_from_app_ctx {
-    ($($arg:tt)*) => { () };
-}
-
+// `send_telemetry_sync_from_ctx` is the only one not in warp_core; stub it.
 #[macro_export]
 macro_rules! send_telemetry_sync_from_ctx {
     ($($arg:tt)*) => { () };
