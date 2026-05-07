@@ -10,6 +10,7 @@ use crate::terminal::TerminalView;
 use crate::AIExecutionProfilesModel;
 use crate::legacy_stubs::{AmbientAgentTaskId};
 use crate::legacy_stubs::{AIConversationId};
+use crate::legacy_stubs::{ConversationStatus};
 
 pub(crate) struct HiddenChildAgentConversation {
     pub terminal_view: ViewHandle<TerminalView>,

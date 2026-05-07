@@ -12,6 +12,7 @@ use crate::editor::{EditorOptions, EditorView, Event as EditorEvent, TextOptions
 use warpui::{AppContext, Element, Entity, FocusContext, TypedActionView, View, ViewContext, ViewHandle};
 use warpui::fonts::{Weight};
 use warpui::ui_components::components::{Coords};
+use warpui::ui_components::components::{UiComponentStyles};
 
 const PROMPT_INPUT_HEIGHT: f32 = 56.;
 const ICON_MARGIN_LEFT: f32 = 12.;

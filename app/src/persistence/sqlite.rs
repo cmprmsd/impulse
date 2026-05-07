@@ -99,6 +99,7 @@ use crate::legacy_stubs::{AmbientAgentTaskId, AuthStateProvider, ClientId, Cloud
 use crate::legacy_stubs::{GenericStringObjectId};
 use crate::legacy_stubs::{AIConversationId};
 use crate::legacy_stubs::{CloudObjectMetadata, ServerCreationInfo, UserProfileWithUID};
+use crate::legacy_stubs::{Revision};
 
 diesel::define_sql_function! {
     fn json_extract(target: diesel::sql_types::Text, path: diesel::sql_types::Text) -> diesel::sql_types::Text;

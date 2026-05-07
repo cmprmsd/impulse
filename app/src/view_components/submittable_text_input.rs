@@ -13,6 +13,7 @@ use crate::{
 };
 use warpui::{AppContext, Element, Entity, FocusContext, TypedActionView, View, ViewContext, ViewHandle};
 use warpui::ui_components::components::{Coords};
+use warpui::ui_components::components::{UiComponentStyles};
 
 const ENTER_BUTTON_SIZE: f32 = 22.;
 

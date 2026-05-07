@@ -52,6 +52,7 @@ use crate::{
         TerminalModel, TerminalView,
     }};
 use crate::legacy_stubs::{AuthState, UserUid};
+use crate::legacy_stubs::{AuthStateProvider, ServerApiProvider};
 /// The amount of time we will wait to batch consecutive write to pty requests before sending an event to the server.
 const PTY_WRITES_BATCH_THRESHOLD: Duration = if cfg!(test) {
     Duration::from_millis(5)

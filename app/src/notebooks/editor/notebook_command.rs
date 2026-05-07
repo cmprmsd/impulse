@@ -69,6 +69,8 @@ use warpui::{Element, Entity, ModelContext, ModelHandle, ViewHandle, WeakModelHa
 use warpui::elements::{ChildView};
 use crate::legacy_stubs::{ModelAsRef};
 use crate::view_components::dropdown::Dropdown;
+use warpui::fonts::{Properties};
+use crate::view_components::dropdown::Dropdown;
 
 lazy_static! {
     static ref SUPPORTED_LANGUAGES: &'static [&'static str] = &[

@@ -12,6 +12,7 @@ use base64::Engine;
 use session_sharing_protocol::sharer::SessionSourceType;
 use warpui::clipboard::{ClipboardContent, ImageData};
 use warpui::{AppContext, Element, Entity, EntityId, Keystroke, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
+use crate::legacy_stubs::{TelemetryEvent};
 mod warpify_footer;
 
 pub use crate::terminal::CLIAgent;

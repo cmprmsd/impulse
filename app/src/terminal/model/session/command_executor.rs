@@ -1,3 +1,4 @@
+use crate::legacy_stubs::{RemoteServerManager};
 mod in_band_command_executor;
 #[cfg(feature = "local_tty")]
 mod local_command_executor;

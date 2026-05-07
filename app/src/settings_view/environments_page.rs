@@ -56,6 +56,7 @@ use crate::legacy_stubs::{ServerTimestamp, SettingsSection, UserWorkspaces};
 use crate::workspace::ToastStack;
 use crate::workspace::WorkspaceAction;
 use crate::legacy_stubs::{ClientId, Owner, ServerId, SyncId, UpdateManagerEvent};
+use crate::legacy_stubs::{CloudModel, CloudModelEvent, GenericStringObjectFormat, JsonObjectType, ObjectOperation, OperationSuccessType, Space, UpdateManager};
 
 mod new_environment_button;
 use new_environment_button::NewEnvironmentButtonView;

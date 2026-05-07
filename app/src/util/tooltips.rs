@@ -15,6 +15,7 @@ use crate::{
 };
 use warpui::{AppContext, Element, EventContext};
 use warpui::ui_components::components::{Coords};
+use warpui::ui_components::components::{UiComponentStyles};
 /// A link to be shown in a tooltip
 pub struct TooltipLink<OnClick> {
     pub text: String,

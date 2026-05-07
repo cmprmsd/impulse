@@ -45,6 +45,7 @@ use warpui::ui_components::components::{Coords};
 use crate::legacy_stubs::{ServerApiProvider, UserWorkspaces};
 use crate::legacy_stubs::{ChannelState};
 use crate::legacy_stubs::{SyncId};
+use warpui::ui_components::components::{UiComponentStyles};
 
 const SUBMIT_BUTTON_FOCUSED: &str = "SubmitButtonFocused";
 

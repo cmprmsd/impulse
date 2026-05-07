@@ -17,6 +17,7 @@ use warpui::{AppContext, Element, Entity, TypedActionView, View, ViewContext, Vi
 use warpui::{Keystroke};
 use warpui::keymap::{FixedBinding};
 use crate::legacy_stubs::{AIConversationId};
+use warpui::ui_components::components::{UiComponentStyles};
 
 pub fn init(app: &mut AppContext) {
     use warpui::keymap::macros::*;

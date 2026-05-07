@@ -9,6 +9,7 @@ use crate::BlocklistAIHistoryModel;
 
 use super::{ActionExecution, AnyActionExecution, ExecuteActionInput, PreprocessActionInput};
 use crate::legacy_stubs::{AIConversation, CloudConversationData};
+use crate::legacy_stubs::{ServerConversationToken};
 
 pub struct FetchConversationExecutor;
 

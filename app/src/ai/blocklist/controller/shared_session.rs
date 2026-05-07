@@ -19,6 +19,7 @@ use warpui::{Action};
 use crate::legacy_stubs::{ServerApiProvider};
 use crate::legacy_stubs::{BlocklistAIHistoryModel};
 use crate::legacy_stubs::{AIConversationId};
+use crate::legacy_stubs::{ConversationStatus};
 
 #[derive(Default)]
 pub(super) struct SharedSessionState {

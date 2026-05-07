@@ -6,6 +6,7 @@ use crate::search::mixer::{DataSourceRunErrorWrapper, SyncDataSource};
 use fuzzy_match::FuzzyMatchResult;
 use std::collections::HashSet;
 use warpui::{AppContext, Entity, SingletonEntity};
+use crate::legacy_stubs::{ConversationNavigationData};
 
 const MAX_RESULTS: usize = 50;
 /// Minimum fuzzy match score to include a conversation in filtered results.

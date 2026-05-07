@@ -21,6 +21,7 @@ use crate::{notebooks::CloudNotebook, search::item::SearchItem};
 use warpui::{AppContext, Element};
 use warpui::fonts::{Properties, Weight};
 use warpui::ui_components::components::{Coords};
+use warpui::ui_components::components::{UiComponentStyles};
 
 /// The size of the object type icons, in pixels.
 const ICON_SIZE: f32 = 16.;

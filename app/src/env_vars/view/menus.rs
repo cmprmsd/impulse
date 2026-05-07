@@ -12,6 +12,11 @@ use super::env_var_collection::{EnvVarCollectionAction, EnvVarCollectionView, Va
 use warpui::{AppContext};
 use crate::legacy_stubs::{CloudModel, UpdateManager};
 use crate::pane_group::pane::view::PaneHeaderCustomAction;
+use crate::legacy_stubs::{GenericStringObjectFormat, Space};
+use crate::menu::Menu;
+use crate::menu::MenuItem;
+use crate::menu::MenuItemFields;
+use crate::pane_group::pane::PaneEvent;
 
 const PANE_MENU_WIDTH: f32 = 200.;
 

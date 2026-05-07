@@ -50,6 +50,7 @@ use crate::legacy_stubs::{UserWorkspaces};
 use warpui::{Event};
 use crate::pane_group::pane::view::PaneHeaderCustomAction;
 use crate::workspace::WorkspaceAction;
+use crate::legacy_stubs::{TelemetryEvent};
 
 const PADDING: f32 = 30.;
 const INNER_MARGIN: f32 = 20.;

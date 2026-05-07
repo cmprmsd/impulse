@@ -65,6 +65,7 @@ use warpui::ui_components::components::UiComponent;
 use warpui::{AppContext, Element, Entity, EventContext, TypedActionView, View, ViewHandle};
 use warpui::fonts::{Properties, Weight};
 use crate::legacy_stubs::{RemoteServerManager};
+use crate::legacy_stubs::{TelemetryEvent};
 
 mod editing;
 mod render;

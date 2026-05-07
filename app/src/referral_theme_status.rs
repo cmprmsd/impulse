@@ -5,6 +5,7 @@ use crate::{
 use serde::{Deserialize, Serialize};
 use warp_core::user_preferences::GetUserPreferences as _;
 use warpui::{Entity, ModelContext, SingletonEntity};
+use crate::legacy_stubs::{AuthStateProvider};
 
 // Note: The name of this key is from before this model was created. For consistency, it should
 // remain the same value

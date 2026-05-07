@@ -56,6 +56,7 @@ use warpui::ui_components::components::{Coords};
 use crate::legacy_stubs::{TelemetryEvent};
 use crate::workspace::WorkspaceAction;
 use crate::legacy_stubs::{AIConversationId};
+use warpui::ui_components::components::{UiComponentStyles};
 
 #[derive(Default)]
 struct MouseStateHandles {

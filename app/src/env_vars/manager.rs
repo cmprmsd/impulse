@@ -7,6 +7,7 @@ use warpui::{Entity, EntityId, ModelContext, SingletonEntity, WeakViewHandle};
 use warpui::{WindowId};
 use crate::legacy_stubs::{PaneViewLocator};
 use crate::legacy_stubs::{Owner, SyncId, UpdateManagerEvent};
+use crate::legacy_stubs::{CloudModel, ObjectOperation, OperationSuccessType, UpdateManager};
 
 pub struct EnvVarCollectionManager {
     panes_by_hashed_id: HashMap<String, EnvVarCollectionPaneData>,

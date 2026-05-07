@@ -10,6 +10,7 @@ use super::{
     arguments::ArgumentsState,
     modal::{AiAssistState, WorkflowModal, WorkflowModalEvent},
 };
+use crate::legacy_stubs::{AuthStateProvider, TelemetryEvent, UserWorkspaces};
 
 /// Generated command metadata from server.
 #[derive(Debug)]

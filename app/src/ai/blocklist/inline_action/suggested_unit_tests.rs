@@ -32,6 +32,7 @@ use warpui::{AppContext, Element, Entity, FocusContext, TypedActionView, View, V
 use warpui::platform::{Cursor};
 use warpui::ui_components::components::{Coords};
 use crate::legacy_stubs::{TelemetryEvent};
+use warpui::ui_components::components::{UiComponentStyles};
 
 const ACCEPT_LABEL: &str = "Generate tests";
 const CANCEL_LABEL: &str = "Dismiss";

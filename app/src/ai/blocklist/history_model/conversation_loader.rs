@@ -21,6 +21,7 @@ use super::{AIConversationMetadata, BlocklistAIHistoryModel, MAX_HISTORICAL_CONV
 use crate::legacy_stubs::{ServerApiProvider};
 use crate::legacy_stubs::{AIClient};
 use crate::legacy_stubs::{AIConversation, AIConversationId, ServerConversationToken};
+use crate::legacy_stubs::{AIAgentHarness};
 
 /// A conversation transcript from a CLI agent harness (e.g. Claude Code).
 #[derive(Debug, Clone)]

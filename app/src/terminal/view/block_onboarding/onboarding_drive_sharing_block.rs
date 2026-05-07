@@ -19,6 +19,7 @@ use crate::{
     ui_components::icons::Icon,
     workspace::WorkspaceAction};
 use warpui::{AppContext, Element, Entity, View, ViewContext};
+use crate::legacy_stubs::{CloudModel, CloudModelEvent};
 
 /// A rich onboarding block that prompts the user to share a newly-created personal Warp Drive
 /// object.

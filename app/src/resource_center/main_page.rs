@@ -31,6 +31,7 @@ use super::{
     },
 };
 use warpui::{AppContext, Entity, EntityId, ModelHandle, TypedActionView, View, ViewContext, ViewHandle, WindowId};
+use crate::legacy_stubs::{AuthStateProvider, TelemetryEvent};
 
 const SEND_SVG_PATH: &str = "bundled/svg/send.svg";
 

@@ -32,6 +32,7 @@ use super::{
 use warpui::{AppContext, Element, Entity, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
 use warpui::elements::{ChildView};
 use warpui::ui_components::components::{Coords};
+use warpui::ui_components::components::{UiComponentStyles};
 
 const OMNIBAR_HEIGHT: f32 = 32.;
 const OMNIBAR_PADDING: f32 = 4.;

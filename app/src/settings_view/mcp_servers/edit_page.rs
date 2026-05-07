@@ -52,6 +52,7 @@ use warpui::{AppContext, Element, Entity, TypedActionView, View, ViewContext, Vi
 use warpui::platform::{Cursor};
 use crate::GlobalResourceHandlesProvider;
 use crate::workspace::ToastStack;
+use crate::legacy_stubs::{Space, TelemetryEvent};
 
 const DEFAULT_JSON_TEXT: &str = r#"{
     "": {

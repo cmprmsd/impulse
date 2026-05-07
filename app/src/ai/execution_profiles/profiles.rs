@@ -24,6 +24,7 @@ use super::{
 };
 use crate::legacy_stubs::{CloudModelEvent, GenericStringObjectFormat, JsonObjectType, SyncId, UpdateManager, UserWorkspaces};
 use crate::legacy_stubs::{GenericStringObjectId};
+use crate::legacy_stubs::{ClientId};
 
 /// ExecutionProfileId is the identifier that users of the AIExecutionProfilesModel use
 /// to refer back to a specific profile. These are unique across the lifespan of the app.

@@ -14,6 +14,7 @@ use super::{
     workflow_arg_selector::WorkflowArgSelector,
 };
 use crate::legacy_stubs::{Owner, SyncId};
+use crate::legacy_stubs::{CloudModel, UpdateManager};
 
 #[derive(Debug, Clone)]
 pub struct ArgumentEditorRowIndex(pub usize);

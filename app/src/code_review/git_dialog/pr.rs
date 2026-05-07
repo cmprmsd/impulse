@@ -32,6 +32,7 @@ use warp_core::send_telemetry_from_ctx;
 use warpui::{ViewContext};
 use crate::workspace::ToastStack;
 use crate::legacy_stubs::{AIClient};
+use crate::legacy_stubs::{ServerApiProvider};
 
 /// PR-mode sub-actions, dispatched wrapped in `GitDialogAction::Pr`.
 #[derive(Clone, Debug, PartialEq)]

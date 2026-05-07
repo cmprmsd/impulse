@@ -21,6 +21,7 @@ use super::{super::active_notebook_data::ActiveNotebookData, NotebookAction, EDI
 use warpui::{AppContext, Element};
 use warpui::platform::{Cursor};
 use crate::legacy_stubs::{UserProfiles};
+use warpui::ui_components::components::{UiComponentStyles};
 
 /// Component to show details about a notebook:
 /// * Interactive breadcrumbs for its location within Warp Drive

@@ -37,6 +37,7 @@ use warpui::{AppContext, Element, Entity, FocusContext, TypedActionView, View, V
 use warpui::platform::{Cursor};
 use crate::legacy_stubs::{ClientId, CloudModel, CloudModelEvent, GenericStringObjectFormat, JsonObjectType, Owner, Revision, SyncId, UpdateManager, UpdateManagerEvent, UserWorkspaces};
 use crate::legacy_stubs::{GenericStringObjectId};
+use warpui::ui_components::components::{UiComponentStyles};
 
 pub const HEADER_TEXT: &str = "Rules";
 const DESCRIPTION_TEXT: &str = "Rules enhance the agent by providing structured guidelines that help maintain consistency, enforce best practices, and adapt to specific workflows, including codebases or broader tasks.";

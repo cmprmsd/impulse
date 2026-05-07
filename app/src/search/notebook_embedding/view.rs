@@ -23,6 +23,7 @@ use warpui::{AppContext, Element, Entity, FocusContext, ModelHandle, TypedAction
 use warpui::{WeakViewHandle};
 use warpui::elements::{ChildView};
 use crate::legacy_stubs::{Space};
+use warpui::ui_components::components::{UiComponentStyles};
 
 const DEFAULT_PLACEHOLDER_TEXT: &str = "Search for a reference";
 

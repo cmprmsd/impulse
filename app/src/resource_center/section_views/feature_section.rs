@@ -22,6 +22,8 @@ use super::{
 use warpui::{Action, AppContext, Entity, EntityId, ModelHandle, TypedActionView, View, ViewContext, WindowId};
 use warpui::fonts::{Weight};
 use warpui::platform::{Cursor};
+use warpui::ui_components::components::{UiComponentStyles};
+use crate::legacy_stubs::{TelemetryEvent};
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum FeatureSection {

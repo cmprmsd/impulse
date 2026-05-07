@@ -63,6 +63,7 @@ use crate::modal::{Modal, ModalEvent, ModalViewState};
 use warpui::fonts::Weight;
 use crate::legacy_stubs::{SettingsAction, SettingsSection, ToggleSettingActionPair};
 use crate::legacy_stubs::{SettingsWidget};
+use crate::legacy_stubs::{AuthManager, TelemetryEvent, UserWorkspaces};
 
 const FONT_SIZE: f32 = 12.;
 

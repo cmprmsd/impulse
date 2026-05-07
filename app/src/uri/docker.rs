@@ -10,6 +10,7 @@ use warpui::AppContext;
 use crate::root_view::SubshellCommandArg;
 
 use anyhow::{anyhow, Result};
+use crate::legacy_stubs::{TelemetryEvent};
 
 /// String of hex digits meant to represent a Docker container ID.
 #[derive(Debug)]

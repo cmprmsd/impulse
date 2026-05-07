@@ -13,6 +13,8 @@ use crate::{
     settings_view::features_page::render_group,
     terminal::session_settings::*};
 use crate::view_components::dropdown::Dropdown;
+use crate::legacy_stubs::{TelemetryEvent};
+use crate::view_components::dropdown::Dropdown;
 
 #[derive(Clone, Debug)]
 #[allow(clippy::enum_variant_names)]

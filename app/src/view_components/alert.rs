@@ -9,6 +9,7 @@ use warpui::{
 
 use crate::{appearance::Appearance, themes::theme::Fill};
 use warpui::{Element};
+use warpui::ui_components::components::{UiComponentStyles};
 
 const ALERT_CORNER_RADIUS: f32 = 4.;
 const ALERT_VERTICAL_PADDING: f32 = 8.;

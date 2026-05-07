@@ -8,6 +8,7 @@ use crate::{
 
 use super::nodes::{self, FileId};
 use crate::legacy_stubs::{ClientId, Owner, SyncId, UpdateManagerEvent};
+use crate::legacy_stubs::{CloudModel, ObjectOperation, OperationSuccessType, UpdateManager};
 
 pub(super) enum ImportQueueEvent {
     FileCompleted {

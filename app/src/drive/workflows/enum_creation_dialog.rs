@@ -25,6 +25,7 @@ use crate::{
 use warpui::{AppContext, Element, Entity, FocusContext, TypedActionView, View, ViewContext, ViewHandle};
 use crate::legacy_stubs::{ClientId, SyncId};
 use crate::legacy_stubs::{Revision};
+use crate::legacy_stubs::{CloudModel};
 
 const CONTAINER_PADDING: f32 = 16.;
 const CORE_WIDTH: f32 = 400.;

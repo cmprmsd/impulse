@@ -38,6 +38,8 @@ use warpui::fonts::{Weight};
 use warpui::keymap::{FixedBinding};
 use warpui::platform::{Cursor};
 use warpui::fonts::{FamilyId};
+use warpui::ui_components::components::{UiComponentStyles};
+use crate::legacy_stubs::{TelemetryEvent};
 
 // All units in px
 const THEME_CHOOSER_TITLE: &str = "Themes";

@@ -19,6 +19,7 @@ use crate::{
 use warpui::{AppContext, Element, Entity, TypedActionView, View, ViewContext, ViewHandle};
 use warpui::{Keystroke};
 use warpui::keymap::{FixedBinding};
+use warpui::ui_components::components::{UiComponentStyles};
 
 pub(crate) fn init(app: &mut AppContext) {
     use warpui::keymap::macros::*;

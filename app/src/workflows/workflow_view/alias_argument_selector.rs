@@ -17,6 +17,8 @@ use crate::{
 use warpui::{ViewHandle};
 use crate::legacy_stubs::{SyncId};
 use crate::view_components::dropdown::Dropdown;
+use crate::legacy_stubs::{CloudModel};
+use crate::view_components::dropdown::Dropdown;
 /// Width of the argument editor in alias mode.
 pub const ALIAS_ARGUMENT_EDITOR_WIDTH: f32 = 300.;
 const EDITOR_FONT_SIZE: f32 = 14.;

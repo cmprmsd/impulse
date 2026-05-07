@@ -36,6 +36,7 @@ use crate::{
     drive::{cloud_object_styling::warp_drive_icon_color, DriveObjectType},
     ui_components::icons::Icon,
     workflows::{workflow::Workflow, CloudWorkflow, WorkflowId}};
+use crate::legacy_stubs::{CloudModel};
 
 // Spacing for the embedded workflow card.
 const EMBED_WORKFLOW_SPACING: BlockSpacing = BlockSpacing {

@@ -13,6 +13,7 @@ use warpui::{AppContext, Entity, FocusContext, ModelHandle, TypedActionView, Vie
 use warpui::fonts::{Properties, Weight};
 use warpui::keymap::{FixedBinding};
 use warpui::ui_components::components::{UiComponentStyles};
+use warpui::ui_components::components::{Coords};
 
 pub const MODAL_CORNER_RADIUS: Radius = Radius::Pixels(8.);
 pub const MODAL_WIDTH: f32 = 440.;

@@ -10,6 +10,7 @@ use warpui::{
 
 use crate::appearance::Appearance;
 use warpui::{AppContext, Element, EventContext};
+use warpui::ui_components::components::{UiComponentStyles};
 
 /// A value which may be rendered as a breadcrumb.
 pub trait Breadcrumb: Debug + 'static {

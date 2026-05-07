@@ -11,6 +11,7 @@ use crate::terminal::shell::ShellType;
 use crate::{
     ai::agent::AIAgentCitation};
 use markdown_parser::{parse_markdown, FormattedTextLine};
+use crate::legacy_stubs::{CloudModel};
 
 /// Returns true iff the `command` is directly copied from the `document`.
 pub(crate) fn is_command_copied_from_document(

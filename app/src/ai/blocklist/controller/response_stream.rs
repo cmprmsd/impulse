@@ -14,6 +14,7 @@ use crate::{
     },
 };
 use crate::legacy_stubs::{ServerApiProvider};
+use crate::network::NetworkStatus;
 
 #[derive(Debug, Clone, PartialEq, Eq, Hash)]
 pub struct ResponseStreamId(String);

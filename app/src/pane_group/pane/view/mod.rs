@@ -1,5 +1,6 @@
 use warpui::{AppContext, Element, Entity, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
 use warpui::elements::{ChildView};
+use crate::legacy_stubs::{SharingDialogSource};
 pub mod header;
 pub mod header_content;
 

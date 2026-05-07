@@ -74,6 +74,7 @@ use warpui::{
 use warpui::{r#async::Timer, TypedActionView};
 use crate::legacy_stubs::{BlocklistAIHistoryModel};
 use crate::legacy_stubs::{AgentViewController};
+use crate::legacy_stubs::{TelemetryEvent};
 
 pub fn init(app: &mut AppContext) {
     summarization_cancel_dialog::init(app);

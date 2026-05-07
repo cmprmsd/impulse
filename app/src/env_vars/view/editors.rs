@@ -23,6 +23,7 @@ use crate::{
 use warpui::{AppContext, Element, ViewContext, ViewHandle};
 use warpui::fonts::{FamilyId};
 use crate::appearance::Appearance;
+use warpui::ui_components::components::{Coords, UiComponentStyles};
 const LABEL_FONT_SIZE: f32 = 12.;
 const METADATA_SPACING: f32 = 8.;
 const LAST_ROW_ELEMENT_SPACING: f32 = 2.;

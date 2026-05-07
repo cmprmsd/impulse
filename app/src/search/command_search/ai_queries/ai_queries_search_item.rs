@@ -26,6 +26,7 @@ use crate::{
 use warpui::{AppContext, Element};
 use warpui::fonts::{Properties, Weight};
 use warpui::ui_components::components::{Coords};
+use warpui::ui_components::components::{UiComponentStyles};
 
 /// Stores data needed to display an AI query search result item in Command Search.
 #[derive(Clone, Debug)]

@@ -33,6 +33,7 @@ use warpui::{
 use warpui::{AppContext, Element, Entity, FocusContext, TypedActionView, View, ViewContext, ViewHandle};
 use crate::legacy_stubs::{CloudModel, CloudModelEvent, ObjectOperation, OperationSuccessType, Owner, SyncId, TelemetryEvent, UpdateManagerEvent, UserWorkspaces};
 use crate::legacy_stubs::{GenericStringObjectId};
+use crate::legacy_stubs::{UpdateManager};
 
 const HEADER_TEXT: &str = "Suggested rule";
 const MAX_EDITOR_HEIGHT: f32 = 240.;

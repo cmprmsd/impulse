@@ -54,6 +54,7 @@ use crate::pane_group::pane::view::PaneHeaderCustomAction;
 use crate::workspace::ToastStack;
 use crate::legacy_stubs::{ModelAsRef};
 use crate::legacy_stubs::{CloudModelEvent, Owner, ServerId, SyncId};
+use crate::legacy_stubs::{CloudModel, UpdateManager};
 
 // Universal
 pub(super) const CORE_HORIZONATAL_MARGIN: f32 = 24.;

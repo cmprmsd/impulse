@@ -35,6 +35,7 @@ use super::{
 };
 use warpui::{AppContext, Element, ViewContext, ViewHandle};
 use crate::workspace::WorkspaceAction;
+use crate::pane_group::pane::PaneEvent;
 
 const ARGUMENT_INPUT_HEIGHT: f32 = 30.;
 const ARGUMENT_LABEL_TEXT: &str = "Arguments";

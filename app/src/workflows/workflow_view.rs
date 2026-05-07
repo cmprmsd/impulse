@@ -92,6 +92,7 @@ use crate::legacy_stubs::{UserWorkspaces};
 use crate::workspace::ToastStack;
 use crate::workspace::WorkspaceAction;
 use crate::legacy_stubs::{AIClient, AuthState, CloudModelEvent, Owner, Revision, ServerId, SharingDialogSource, SyncId, UpdateManagerEvent, UserUid};
+use crate::legacy_stubs::{AuthStateProvider, ClientId, CloudModel, ObjectOperation, ObjectType, OperationSuccessType, ServerApiProvider, Space, TelemetryEvent, UpdateManager};
 
 mod alias_argument_selector;
 mod alias_bar;

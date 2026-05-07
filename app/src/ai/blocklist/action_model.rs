@@ -12,6 +12,7 @@
 //! example, the input should be hidden if there is a pending AI requested command that requires
 //! action from the user.
 use crate::legacy_stubs::{AIConversationId};
+use crate::legacy_stubs::{ConversationStatus};
 
 mod execute;
 mod preprocess;

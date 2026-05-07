@@ -14,6 +14,7 @@ use crate::{
 };
 use warpui::{AppContext, Element};
 use warpui::ui_components::components::{Coords};
+use warpui::ui_components::components::{UiComponentStyles};
 
 /// Vertical spacing between line items in rich history details.
 pub(crate) const DETAILS_PARAGRAPH_SPACING: f32 = 8.;

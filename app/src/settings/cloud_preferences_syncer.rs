@@ -31,6 +31,7 @@ use super::{
 };
 use crate::legacy_stubs::{UserWorkspaces};
 use crate::legacy_stubs::{AuthState, ClientId, GenericStringObjectId};
+use crate::legacy_stubs::{CloudModel, GenericStringObjectFormat, JsonObjectType, SyncId, UpdateManager, UpdateManagerEvent};
 /// Provides client ids for creating cloud preferences.
 /// We define this as a trait so tests can track what client ids are created and use
 /// them for mocking server responses.

@@ -20,6 +20,8 @@ use crate::{send_telemetry_from_ctx};
 use super::{feature_section::FeatureSection, SectionAction, SectionView};
 use warpui::{AppContext, Entity, ModelHandle, TypedActionView, View, ViewContext};
 use warpui::fonts::{Weight};
+use warpui::ui_components::components::{UiComponentStyles};
+use crate::legacy_stubs::{TelemetryEvent};
 
 #[derive(Default)]
 struct ChangelogMouseStateHandles {

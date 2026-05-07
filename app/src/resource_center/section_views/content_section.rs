@@ -17,6 +17,7 @@ use super::{
     ITEM_PADDING_BOTTOM, SECTION_SPACING,
 };
 use warpui::{AppContext, Entity, TypedActionView, View, ViewContext};
+use warpui::ui_components::components::{UiComponentStyles};
 
 #[derive(Default)]
 struct ContentMouseStateHandles {

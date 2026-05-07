@@ -4,6 +4,7 @@ use settings::{
 use warpui::{AppContext, SingletonEntity};
 
 use crate::{terminal::model::ObfuscateSecrets};
+use crate::legacy_stubs::{UserWorkspaces};
 
 /// How secrets should be displayed in the block list
 #[derive(

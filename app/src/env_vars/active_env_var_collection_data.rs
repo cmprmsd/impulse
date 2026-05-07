@@ -7,6 +7,7 @@ use super::CloudEnvVarCollectionModel;
 use warpui::{AppContext};
 use crate::legacy_stubs::{CloudModel, UpdateManager};
 use crate::legacy_stubs::{CloudModelEvent, Owner, Revision, ServerId, Space, SyncId, UpdateManagerEvent};
+use crate::legacy_stubs::{ClientId, ObjectOperation, OperationSuccessType};
 
 #[derive(Default, Clone)]
 pub enum ActiveEnvVarCollection {

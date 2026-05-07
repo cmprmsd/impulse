@@ -15,6 +15,7 @@ use warpui::{
 
 use super::presence_manager::{Participant, MUTED_AVATAR_BORDER_COLOR, MUTED_PARTICIPANT_COLOR};
 use warpui::{AppContext, Element};
+use warpui::ui_components::components::{UiComponentStyles};
 
 pub fn shared_session_indicator_color(appearance: &Appearance) -> ColorU {
     appearance.theme().terminal_colors().normal.red.into()

@@ -21,6 +21,7 @@ use crate::{
         WorkflowType,
     }};
 use crate::legacy_stubs::{SyncId};
+use crate::legacy_stubs::{ClientId, CloudModel, Space};
 
 mod up_arrow;
 pub(crate) use up_arrow::UpArrowHistoryConfig;

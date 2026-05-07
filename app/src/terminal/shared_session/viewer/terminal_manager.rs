@@ -63,6 +63,7 @@ use crate::view_components::ToastFlavor;
 use crate::{pane_group::TerminalViewResources, terminal::model::session::Sessions};
 use crate::legacy_stubs::{AmbientAgentTaskId, BlocklistAIHistoryModel};
 use crate::legacy_stubs::{AgentViewController};
+use crate::legacy_stubs::{ConversationStatus};
 
 enum NetworkState {
     /// No viewer network is attached yet; deferred cloud-mode viewers start here until the

@@ -10,6 +10,7 @@ use crate::{
     },
 };
 use crate::appearance::Appearance;
+use crate::view_components::action_button::ActionButton;
 
 /// Renders a pending user query block with dimmed text and a "Queued" badge.
 /// Displayed when a follow-up prompt is queued via `/fork-and-compact <prompt>`,

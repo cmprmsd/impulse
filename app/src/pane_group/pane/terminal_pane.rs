@@ -60,6 +60,7 @@ use super::{
     ShareableLinkError, TerminalPaneId,
 };
 use crate::legacy_stubs::{ServerApiProvider};
+use crate::legacy_stubs::{PaneViewLocator};
 
 pub type TerminalPaneView = PaneView<TerminalView>;
 

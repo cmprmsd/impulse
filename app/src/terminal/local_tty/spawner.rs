@@ -15,6 +15,7 @@ use {
     anyhow::{bail, Context},
     std::process::Child,
 };
+use crate::legacy_stubs::{TelemetryEvent};
 /// A handle that can be used to interact with a pty process.
 pub trait PtyHandle: Send + Sync {
     /// Returns the pty's process ID.

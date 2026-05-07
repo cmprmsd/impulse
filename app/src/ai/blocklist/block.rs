@@ -4,6 +4,7 @@ use crate::legacy_stubs::{AuthStateProvider, CloudModel, SyncId, UserWorkspaces}
 use crate::legacy_stubs::{GenericStringObjectId};
 use crate::legacy_stubs::{AIConversationId, AgentViewController};
 use crate::terminal::CustomSecretRegexUpdater::redact_secrets;
+use crate::legacy_stubs::{TelemetryEvent};
 pub mod cli;
 pub mod cli_controller;
 pub mod compact_agent_input;

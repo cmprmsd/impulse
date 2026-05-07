@@ -117,6 +117,7 @@ use warpui::{AppContext, Element, Entity, FocusContext, Keystroke, ModelHandle, 
 use warpui::keymap::{FixedBinding};
 use warpui::platform::{Cursor};
 use warpui::ui_components::components::{Coords};
+use warpui::ui_components::components::{UiComponentStyles};
 
 const REQUESTED_EDIT_CANCEL_LABEL: &str = "Cancel";
 const REQUESTED_EDIT_REFINE_LABEL: &str = "Refine";

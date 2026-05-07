@@ -15,6 +15,7 @@ use crate::{
         },
         TerminalModel,
     }};
+use crate::legacy_stubs::{TelemetryEvent};
 
 cfg_if::cfg_if! {
     if #[cfg(feature = "local_fs")] {

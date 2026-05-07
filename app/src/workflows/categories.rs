@@ -41,6 +41,7 @@ use super::{workflow::Workflow, WorkflowSource};
 use warpui::{AppContext, Entity, TypedActionView, View, ViewContext};
 use warpui::{WeakViewHandle};
 use warpui::fonts::{Properties, Weight};
+use crate::legacy_stubs::{CloudModel, TelemetryEvent, UserWorkspaces};
 
 const SCROLLBAR_WIDTH: ScrollbarWidth = ScrollbarWidth::Auto;
 const DESCRIPTION_MARGIN: f32 = 24.;

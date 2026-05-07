@@ -15,6 +15,7 @@ use warpui::{
     },
 };
 use warpui::{AppContext, Element, Entity, View, ViewContext};
+use crate::legacy_stubs::{UserWorkspaces};
 
 const TITLE_EXISTING_USERS: &str = "We've updated our telemetry policy.";
 const TITLE_NEW_USERS: &str = "Help improve Warp.";

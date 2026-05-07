@@ -36,6 +36,8 @@ use warpui::{AppContext, Element, Entity, Keystroke, ModelHandle, TypedActionVie
 use warpui::{WeakViewHandle};
 use warpui::platform::{Cursor};
 use crate::legacy_stubs::{UserWorkspaces};
+use warpui::ui_components::components::{UiComponentStyles};
+use crate::legacy_stubs::{TelemetryEvent};
 
 const TRANSCRIPT_POSITION_ID: &str = "ai_assistant::transcript";
 

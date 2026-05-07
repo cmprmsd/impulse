@@ -7,6 +7,7 @@ use warpui::{
 use crate::{};
 use crate::legacy_stubs::{CloudObjectTypeAndId, SyncId};
 use crate::legacy_stubs::{CloudModelEvent};
+use crate::legacy_stubs::{CloudModel, GenericStringObjectFormat, JsonObjectType};
 /// A reusable [`View`] for choosing environment variable collections.
 pub struct EnvVarSelector {
     dropdown: ViewHandle<FilterableDropdown<EnvVarSelectorAction>>,
