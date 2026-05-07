@@ -485,14 +485,22 @@ If all seven pass, the fork is functional and Syncthing-ready.
 ## Status
 
 - Audit complete (committed as part of this plan).
-- **Phase 0 — in progress.** This commit lands the bulk cloud-crate
-  detach: 6 cloud crates removed from the workspace
-  (`firebase`, `graphql`, `warp_graphql_schema`, `managed_secrets`,
-  `managed_secrets_wasm`, `warp_server_client`, plus `remote_server`),
-  ~250 cloud-only files deleted from `app/src/`, the proto API
-  (`warp_multi_agent_api`) and AWS Bedrock paths stripped from
-  `crates/ai/`, and `crates/warp_files/` dropped its `Remote` backend.
-  All non-app crates compile clean.
+- **Phase 0 — partial.** Bulk cloud-crate detach landed: 7 cloud crates
+  removed from the workspace (`firebase`, `graphql`,
+  `warp_graphql_schema`, `managed_secrets`, `managed_secrets_wasm`,
+  `warp_server_client`, `remote_server`), ~250 cloud-only files
+  deleted from `app/src/`, the proto API (`warp_multi_agent_api`) and
+  AWS Bedrock paths stripped from `crates/ai/`, and
+  `crates/warp_files/` dropped its `Remote` backend. All non-app
+  crates compile clean.
+- **Phase 2 — foundation landed.**
+  `crates/ai/src/model_client/` (the `ModelClient` trait,
+  `OpenAiCompatibleClient`, `ClaudeCliClient`),
+  `crates/ai/src/conversation/` (JSONL local store), and
+  `crates/ai/src/agent_loop.rs` (minimal `run_turn` wrapper) are in
+  place with 6 unit tests passing. App-side integration (replacing
+  the deleted `app/src/ai/agent/` types and wiring the `ModelClient`
+  through the existing UI) is the next step.
 
   The **app crate (`warp`) does not yet compile**. Two interleaved
   problems remain:

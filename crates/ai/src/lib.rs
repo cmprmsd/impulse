@@ -1,4 +1,5 @@
 pub mod agent;
+pub mod agent_loop;
 pub mod api_keys;
 pub mod conversation;
 pub mod llm_id;
