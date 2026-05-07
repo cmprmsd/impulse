@@ -5,8 +5,6 @@
 //! that we are not able to assert through automated testing.
 //! https://www.notion.so/warpdev/Experiment-Framework-Guide-88954c36a0c3469ea57b427b58249d5f?pvs=4
 
-use crate::legacy_stubs::{AuthStateProvider};
-
 mod block_onboarding_layer;
 mod login_layer;
 mod rendering;
@@ -16,6 +14,7 @@ pub use improved_palette_search_layer::{ImprovedPaletteSearch, IMPROVED_PALETTE_
 pub use login_layer::{AuthFlowInstructions, LOGIN_LAYER};
 use warp_core::user_preferences::GetUserPreferences as _;
 
+use crate::auth::auth_state::AuthStateProvider;
 use crate::channel::{Channel, ChannelState};
 use anyhow::Result;
 use dashmap::DashMap;
@@ -87,8 +86,8 @@ lazy_static! {
         traffic_allocations: HashMap::new(),
         bucket_ranges: Vec::new()
     };
-
 }
+
 /// A range of buckets associated with an experiment group.
 #[derive(Clone)]
 struct BucketRange {
@@ -325,7 +324,7 @@ pub trait Experiment<T: Experiment<T>>: FromStr {
                 let group_assignment = group.variant();
                 // Send synchronously since this we rely on this event to collect experiment data.
                 send_telemetry_sync_from_app_ctx!(
-                    crate::legacy_stubs::TelemetryEvent::ExperimentTriggered {
+                    crate::server::telemetry::TelemetryEvent::ExperimentTriggered {
                         experiment: Self::name(),
                         layer: Self::layer().name(),
                         group_assignment,

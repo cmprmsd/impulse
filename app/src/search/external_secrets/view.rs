@@ -8,10 +8,15 @@ use warpui::{
         Radius, SavePosition, ScrollStateHandle, Scrollable, ScrollableElement, Shrinkable,
         UniformList, UniformListState,
     },
+    presenter::ChildView,
+    ui_components::components::{UiComponent, UiComponentStyles},
+    AppContext, Element, Entity, FocusContext, ModelHandle, SingletonEntity, TypedActionView, View,
+    ViewContext, ViewHandle, WeakViewHandle,
 };
 
 use crate::{
     appearance::Appearance,
+    external_secrets::ExternalSecret,
     search::{
         external_secrets::{
             external_secret_data_source::ExternalSecretDataSource,
@@ -19,13 +24,8 @@ use crate::{
         },
         result_renderer::{QueryResultRenderer, QueryResultRendererStyles},
         search_bar::{SearchBar, SearchBarEvent, SearchBarState, SearchResultOrdering},
-    }};
-}
-use warpui::{AppContext, Element, Entity, FocusContext, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
-use warpui::{WeakViewHandle};
-use warpui::elements::{ChildView};
-use warpui::ui_components::components::{UiComponentStyles};
-use crate::legacy_stubs::{ExternalSecret};
+    },
+};
 
 lazy_static! {
     static ref QUERY_RESULT_RENDERER_STYLES: QueryResultRendererStyles =
@@ -39,8 +39,8 @@ lazy_static! {
             result_vertical_padding: 4.,
             ..Default::default()
         };
-
 }
+
 const DEFAULT_PLACEHOLDER_TEXT: &str = "Search for a secret";
 
 pub struct ExternalSecretsMenu {

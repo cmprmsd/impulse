@@ -18,6 +18,10 @@ use warpui::{
         ScrollableElement, Shrinkable, Stack, UniformList, UniformListState, XAxisAnchor,
         YAxisAnchor,
     },
+    presenter::ChildView,
+    ui_components::components::{UiComponent, UiComponentStyles},
+    AppContext, Element, Entity, FocusContext, ModelHandle, SingletonEntity, TypedActionView, View,
+    ViewContext, ViewHandle, WeakViewHandle,
 };
 
 use crate::{
@@ -25,6 +29,10 @@ use crate::{
         execution_context::WarpAiExecutionContext, GenerateCommandsFromNaturalLanguageError,
     },
     appearance::Appearance,
+    auth::{
+        auth_manager::AuthManager, auth_state::AuthState, auth_view_modal::AuthViewVariant,
+        AuthStateProvider, UserUid,
+    },
     completer::SessionContext,
     drive::settings::WarpDriveSettings,
     search::{
@@ -34,13 +42,16 @@ use crate::{
         QueryFilter,
     },
     send_telemetry_from_ctx,
+    server::{ids::ServerId, server_api::ai::AIClient, telemetry::TelemetryEvent},
     settings::AISettings,
     terminal::{
         input::MenuPositioning,
         model::session::SessionId,
         resizable_data::{ModalType, ResizableData, DEFAULT_UNIVERSAL_SEARCH_WIDTH},
         History, HistoryEvent,
-    }};
+    },
+    workspaces::user_workspaces::UserWorkspaces,
+};
 
 use super::{
     ai_queries::AIQueriesDataSource,
@@ -51,13 +62,6 @@ use super::{
     workflows::{cloud_workflows_data_source, WorkflowsDataSource},
     zero_state::{CommandSearchZeroStateEvent, CommandSearchZeroStateView},
 };
-use warpui::{AppContext, Element, Entity, FocusContext, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
-use warpui::{WeakViewHandle};
-use warpui::elements::{ChildView};
-use crate::legacy_stubs::{UserWorkspaces};
-use crate::legacy_stubs::{AIClient, AuthState, ServerId, UserUid};
-use warpui::ui_components::components::{UiComponentStyles};
-use crate::legacy_stubs::{AuthManager, AuthStateProvider, TelemetryEvent};
 
 const DEFAULT_PLACEHOLDER_TEXT: &str = "Search your history, workflows, and more";
 const PANEL_POSITION_ID: &str = "CommandSearchViewPanel";

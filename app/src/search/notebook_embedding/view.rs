@@ -2,13 +2,14 @@ use std::{collections::HashSet, ops::Range};
 
 use crate::{
     appearance::Appearance,
+    cloud_object::Space,
     search::{
         notebook_embedding::notebooks::CloudNotebooksDataSource,
         notebook_embedding::workflows::CloudWorkflowsDataSource,
         result_renderer::{QueryResultRenderer, QueryResultRendererStyles},
         search_bar::{SearchBar, SearchBarEvent, SearchBarState, SearchResultOrdering},
-    }};
-}
+    },
+};
 use itertools::Itertools;
 use lazy_static::lazy_static;
 use warpui::{
@@ -17,14 +18,13 @@ use warpui::{
         Radius, SavePosition, ScrollStateHandle, Scrollable, ScrollableElement, Shrinkable,
         UniformList, UniformListState,
     },
+    presenter::ChildView,
+    ui_components::components::{UiComponent, UiComponentStyles},
+    AppContext, Element, Entity, FocusContext, ModelHandle, SingletonEntity, TypedActionView, View,
+    ViewContext, ViewHandle, WeakViewHandle,
 };
 
 use super::searcher::{EmbeddingSearchItemAction, EmbeddingSearchMixer};
-use warpui::{AppContext, Element, Entity, FocusContext, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
-use warpui::{WeakViewHandle};
-use warpui::elements::{ChildView};
-use crate::legacy_stubs::{Space};
-use warpui::ui_components::components::{UiComponentStyles};
 
 const DEFAULT_PLACEHOLDER_TEXT: &str = "Search for a reference";
 
@@ -40,8 +40,8 @@ lazy_static! {
             result_vertical_padding: 4.,
             ..Default::default()
         };
-
 }
+
 pub enum EmbeddingSearchEvent {
     ItemSelected {
         payload: Box<EmbeddingSearchItemAction>,
