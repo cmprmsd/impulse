@@ -1,3 +1,4 @@
+use crate::send_telemetry_from_ctx;
 use warpui::{AppContext, Element, Entity, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
 use crate::legacy_stubs::{CodebaseIndexManager};
 mod lsp_server_selector;
@@ -13,7 +14,6 @@ use crate::ai::blocklist::inline_action::inline_action_header::HeaderConfig;
 use crate::ai::blocklist::inline_action::requested_action::RenderableAction;
 use crate::appearance::Appearance;
 use crate::code::lsp_telemetry::{LspEnablementSource, LspTelemetryEvent};
-use crate::send_telemetry_from_ctx;
 use crate::ui_components::icons::Icon;
 use crate::view_components::DismissibleToast;
 use crate::workspace::ToastStack;

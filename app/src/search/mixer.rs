@@ -1,7 +1,7 @@
+use crate::send_telemetry_from_ctx;
 use super::data_source::{Query, QueryResult};
 use crate::debounce::debounce;
 use crate::search::QueryFilter;
-use crate::send_telemetry_from_ctx;
 use async_channel::Sender;
 use async_trait::async_trait;
 use futures_util::stream::AbortHandle;

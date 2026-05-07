@@ -1,3 +1,4 @@
+use crate::send_telemetry_from_ctx;
 use crate::{
     appearance::Appearance,
     send_telemetry_from_ctx,

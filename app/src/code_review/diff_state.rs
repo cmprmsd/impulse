@@ -3,6 +3,7 @@
 //! Some of the code in this module is adapted from GitHub Desktop, which is licensed under the MIT license,
 //! Copyright (c) GitHub, Inc.  See GITHUB-DESKTOP-LICENSE in this directory.
 
+use crate::send_telemetry_from_ctx;
 use anyhow::{anyhow, Result};
 use serde::{Deserialize, Serialize};
 #[cfg(feature = "local_fs")]

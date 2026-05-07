@@ -1,3 +1,4 @@
+use crate::send_telemetry_from_ctx;
 use crate::ai::mcp::templatable::GalleryData;
 use crate::ai::mcp::MCPServerUpdate;
 use crate::modal::Modal;
@@ -60,7 +61,6 @@ use std::{collections::HashMap, path::PathBuf};
 use strum::IntoEnumIterator;
 use uuid::Uuid;
 use warp_core::features::FeatureFlag;
-use warp_core::send_telemetry_from_ctx;
 use warp_core::ui::{appearance::AppearanceEvent, theme::color::internal_colors, Icon};
 use warpui::{
     elements::{

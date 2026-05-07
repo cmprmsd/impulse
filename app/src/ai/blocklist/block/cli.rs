@@ -1,3 +1,4 @@
+use crate::send_telemetry_from_ctx;
 use warpui::keymap::macros::*;
 use parking_lot::{FairMutex, RwLock};
 use crate::legacy_stubs::{AIConversationId, TaskId};
@@ -52,7 +53,6 @@ use crate::ai::blocklist::permissions::is_agent_mode_autonomy_allowed;
 use crate::ai::control_code_parser::{parse_control_codes_from_bytes, ParsedControlCodeOutput};
 use crate::code::editor::view::{CodeEditorEvent, CodeEditorRenderOptions};
 use crate::menu::MenuItemFields;
-use crate::send_telemetry_from_ctx;
 use crate::settings::AISettings;
 use crate::terminal::input::SET_INPUT_MODE_TERMINAL_ACTION_NAME;
 use crate::terminal::model::block::BlockId;

@@ -1,3 +1,4 @@
+use crate::send_telemetry_from_ctx;
 use crate::legacy_stubs::{BlocklistAIHistoryModel};
 use crate::legacy_stubs::{AIConversationId};
 use crate::terminal::model::session::active_session::ActiveSession;
@@ -15,7 +16,6 @@ use ai::diff_validation::AIRequestedCodeDiff;
 use futures::{channel::oneshot, future::BoxFuture, FutureExt};
 use itertools::Itertools;
 use vec1::{vec1, Vec1};
-use warp_core::send_telemetry_from_ctx;
 use warpui::{Entity, EntityId, ModelContext, ModelHandle, SingletonEntity as _, ViewHandle};
 
 use apply_diff_model::ApplyDiffModel;

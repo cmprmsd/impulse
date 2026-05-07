@@ -1,3 +1,4 @@
+use crate::send_telemetry_from_ctx;
 use warpui::keymap::macros::*;
 use super::directory_color_add_picker::{DirectoryColorAddPicker, DirectoryColorAddPickerEvent};
 use super::settings_page::{

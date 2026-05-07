@@ -1,3 +1,4 @@
+use crate::send_telemetry_from_ctx;
 use std::collections::HashSet;
 
 use ai::agent::action_result::{AIAgentActionResultType, RequestComputerUseResult};
@@ -6,7 +7,6 @@ use warpui::{Entity, EntityId, ModelContext, SingletonEntity};
 
 use crate::ai::agent::{AIAgentActionId, AIAgentActionType};
 use crate::ai::blocklist::BlocklistAIHistoryModel;
-use crate::send_telemetry_from_ctx;
 
 use super::{ActionExecution, AnyActionExecution, ExecuteActionInput, PreprocessActionInput};
 use crate::legacy_stubs::{AmbientAgentTaskId, TelemetryEvent};

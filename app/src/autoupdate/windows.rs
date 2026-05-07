@@ -1,3 +1,4 @@
+use crate::send_telemetry_sync_from_app_ctx;
 use anyhow::anyhow;
 use anyhow::{bail, Result};
 use channel_versions::VersionInfo;

@@ -1,3 +1,4 @@
+use crate::send_telemetry_from_ctx;
 use warpui::keymap::macros::*;
 use self::telemetry::SettingsTelemetryEvent;
 use crate::pane_group::focus_state::PaneFocusHandle;
@@ -40,7 +41,6 @@ use std::collections::HashMap;
 use std::path::PathBuf;
 use std::str::FromStr;
 // use teams_page::{TeamsPageView, TeamsPageViewEvent};  // unresolved (cloud detach)
-use warp_core::send_telemetry_from_ctx;
 use warp_core::{
     channel::ChannelState, context_flag::ContextFlag, features::FeatureFlag,
     settings::ToggleableSetting as _, ui::theme::color::internal_colors,

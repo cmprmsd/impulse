@@ -2,6 +2,7 @@
 
 #[cfg(test)]
 #[path = "editing_tests.rs"]
+use crate::send_telemetry_from_ctx;
 mod tests;
 
 use repo_metadata::file_tree_store::FileTreeEntryState;

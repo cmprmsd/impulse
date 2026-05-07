@@ -1,4 +1,5 @@
 // use crate::ai::agent::conversation::AIConversationId;  // unresolved (cloud detach)
+use crate::send_telemetry_from_ctx;
 use crate::ai::agent_management::telemetry::{AgentManagementTelemetryEvent, ArtifactType};
 // use crate::ai::ambient_agents::{  // unresolved (cloud detach)
 //     conversation_output_status_from_conversation, AmbientAgentTaskId, AmbientConversationStatus,
@@ -21,7 +22,6 @@ use warp_core::paths::home_relative_path;
 
 #[cfg(not(target_family = "wasm"))]
 // use crate::ai::ambient_agents::AmbientAgentTask;  // unresolved (cloud detach)
-use warp_core::send_telemetry_from_ctx;
 use warp_core::ui::icons::Icon;
 use warp_core::ui::theme::{AnsiColorIdentifier, Fill};
 use warpui::elements::{

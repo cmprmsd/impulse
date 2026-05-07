@@ -1,3 +1,4 @@
+use crate::send_telemetry_from_ctx;
 use lsp::{HoverContents, LspServerLogLevel, MarkupKind};
 use markdown_parser::{FormattedText, FormattedTextFragment, FormattedTextLine};
 use num_traits::SaturatingSub;
@@ -25,7 +26,6 @@ use crate::editor::InteractionState;
 
 use super::editor::view::{CodeEditorRenderOptions, CodeEditorView};
 use super::lsp_telemetry::LspTelemetryEvent;
-use warp_core::send_telemetry_from_ctx;
 use warpui::{AppContext, Element, ViewContext};
 
 /// A processed diagnostic with its converted offset range.

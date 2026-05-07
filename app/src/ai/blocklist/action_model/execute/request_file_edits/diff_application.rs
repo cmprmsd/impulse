@@ -1,6 +1,7 @@
 //! Module containing helper code to apply suggested diffs from an LLM
 //! to a set of files on the user's filesystem.
 
+use crate::send_telemetry_on_executor;
 use std::{
     collections::{hash_map::Entry, HashMap, HashSet},
     future::Future,

@@ -1,3 +1,4 @@
+use crate::send_telemetry_from_ctx;
 use lazy_static::lazy_static;
 use markdown_parser::{FormattedText, FormattedTextFragment, FormattedTextLine};
 use pathfinder_color::ColorU;

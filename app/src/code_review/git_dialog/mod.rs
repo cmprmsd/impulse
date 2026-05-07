@@ -9,6 +9,7 @@
 //! + confirm async, extend `GitDialogMode`, add the per-mode action and
 //! outcome variant, and wire up dispatch.
 
+use crate::send_telemetry_from_ctx;
 use warpui::keymap::macros::*;
 use std::path::PathBuf;
 
@@ -40,7 +41,6 @@ use crate::{
         DismissibleToast,
     },
 };
-use warp_core::send_telemetry_from_ctx;
 use warpui::{AppContext, Entity, FocusContext, TypedActionView, View, ViewContext, ViewHandle};
 use warpui::keymap::{FixedBinding};
 use warpui::platform::{Cursor};

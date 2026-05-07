@@ -1,3 +1,4 @@
+use crate::send_telemetry_from_ctx;
 use core::fmt;
 use std::collections::HashMap;
 use std::path::PathBuf;

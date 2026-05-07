@@ -1,3 +1,4 @@
+use crate::send_telemetry_from_ctx;
 use crate::code::local_code_editor::LocalCodeEditorView;
 use crate::code_review::code_review_view::CodeReviewView;
 use crate::code_review::telemetry_event::CodeReviewTelemetryEvent;
@@ -7,7 +8,6 @@ use std::ops::Range;
 use string_offset::CharOffset;
 #[cfg(not(target_family = "wasm"))]
 use warp_core::channel::ChannelState;
-use warp_core::send_telemetry_from_ctx;
 #[cfg(not(target_family = "wasm"))]
 use warp_editor::content::find::SearchConfig;
 #[cfg(not(target_family = "wasm"))]

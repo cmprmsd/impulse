@@ -1,3 +1,4 @@
+use crate::send_telemetry_from_app_ctx;
 use super::{ActionExecution, AnyActionExecution, ExecuteActionInput, PreprocessActionInput};
 use crate::terminal::model::session::active_session::ActiveSession;
 use futures::{future::BoxFuture, FutureExt};

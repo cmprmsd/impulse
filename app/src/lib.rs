@@ -257,15 +257,6 @@ pub use persistence::testing as sqlite_testing;
 
 use ::settings::{Setting, ToggleableSetting};
 pub use warp_core::errors::{report_error, report_if_error};
-pub use warp_core::{
-    send_telemetry_from_app_ctx, send_telemetry_from_ctx, send_telemetry_on_executor,
-    send_telemetry_sync_from_app_ctx,
-};
-// send_telemetry_sync_from_ctx isn't in warp_core; provide a no-op stub.
-#[macro_export]
-macro_rules! send_telemetry_sync_from_ctx {
-    ($($arg:tt)*) => { () };
-}
 
 #[cfg(feature = "plugin_host")]
 pub use plugin::{run_plugin_host, PLUGIN_HOST_FLAG};

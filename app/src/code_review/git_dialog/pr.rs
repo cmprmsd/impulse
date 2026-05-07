@@ -4,6 +4,7 @@
 //! with expandable per-file stats. On confirm, spawns `create_pr` and shows
 //! a toast with a clickable "Open PR" link.
 
+use crate::send_telemetry_from_ctx;
 use std::path::Path;
 
 use warp_core::ui::appearance::Appearance;
@@ -28,7 +29,6 @@ use crate::{
         create_pr, get_branch_commit_messages, get_branch_diff_entries, get_diff_for_pr,
         FileChangeEntry, PrInfo,
     }};
-use warp_core::send_telemetry_from_ctx;
 use warpui::{ViewContext};
 use crate::workspace::ToastStack;
 use crate::legacy_stubs::{AIClient};

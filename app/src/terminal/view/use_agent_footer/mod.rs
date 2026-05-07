@@ -4,6 +4,7 @@
 //! offering users the option to bring in the agent. For CLI agent commands (e.g., Claude Code,
 //! Gemini CLI, Codex), it displays a specialized footer with additional functionality.
 
+use crate::send_telemetry_from_ctx;
 use crate::ai::agent::ImageContext;
 use crate::terminal::cli_agent_sessions::{CLIAgentInputEntrypoint, CLIAgentSessionsModel};
 use crate::terminal::shared_session::{SharedSessionActionSource, SharedSessionScrollbackType};

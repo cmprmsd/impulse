@@ -1,3 +1,4 @@
+use crate::send_telemetry_from_ctx;
 use warpui::keymap::macros::*;
 use super::{
     editor_text_colors,
@@ -25,7 +26,6 @@ use log::debug;
 #[cfg(not(target_family = "wasm"))]
 use std::collections::HashMap;
 use url::Url;
-use warp_core::send_telemetry_from_ctx;
 use warp_editor::editor::NavigationKey;
 use warpui::{
     elements::{

@@ -1,5 +1,6 @@
 #![cfg_attr(target_family = "wasm", allow(dead_code, unused_imports))]
 
+use crate::send_telemetry_from_ctx;
 use warpui::keymap::macros::*;
 use warpui::{AppContext, Entity, TypedActionView, View};
 use crate::legacy_stubs::{TelemetryEvent};
@@ -10,7 +11,6 @@ use crate::editor::{
     EditorView, Event as EditorEvent, InteractionState, PropagateAndNoOpNavigationKeys,
     SingleLineEditorOptions, TextOptions,
 };
-use crate::send_telemetry_from_ctx;
 use crate::themes::theme::Fill;
 use crate::ui_components::{blended_colors, icons::Icon};
 use crate::view_components::action_button::{ActionButton, DisabledSecondaryTheme, SecondaryTheme};

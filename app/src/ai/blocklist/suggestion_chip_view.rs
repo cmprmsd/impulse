@@ -1,3 +1,4 @@
+use crate::send_telemetry_from_ctx;
 use crate::ai::agent::{SuggestedAgentModeWorkflow, SuggestedLoggingId, SuggestedRule};
 use crate::ai::facts::CloudAIFactModel;
 use crate::drive::CloudObjectTypeAndId;
@@ -7,7 +8,6 @@ use crate::{
     ai::facts::{AIFact, AIMemory},
     ui_components::{blended_colors, icons::Icon}};
 use pathfinder_color::ColorU;
-use warp_core::send_telemetry_from_ctx;
 use warp_core::ui::appearance::Appearance;
 use warp_core::ui::theme::Fill;
 use warpui::{

@@ -5,6 +5,7 @@
 //! existing branch and publishing a new one (setting upstream). On confirm,
 //! spawns `run_push`.
 
+use crate::send_telemetry_from_ctx;
 use std::collections::HashMap;
 
 use warp_core::ui::appearance::Appearance;
@@ -27,7 +28,6 @@ use crate::{
         telemetry_event::{CodeReviewTelemetryEvent, GitDialogStatus, GitOperationKind},
     },
 };
-use warp_core::send_telemetry_from_ctx;
 use warpui::{ViewContext};
 use warpui::platform::{Cursor};
 use crate::ui_components::icons::Icon;

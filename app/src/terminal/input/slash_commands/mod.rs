@@ -1,3 +1,4 @@
+use crate::send_telemetry_from_ctx;
 use crate::legacy_stubs::{CloudModel, PaletteSource, SyncId};
 use crate::legacy_stubs::{AIConversationId};
 mod cloud_mode_v2_view;
@@ -14,7 +15,6 @@ use std::path::PathBuf;
 
 use ai::skills::SkillReference;
 use warp_core::features::FeatureFlag;
-use warp_core::send_telemetry_from_ctx;
 use warp_core::ui::appearance::Appearance;
 use warp_core::ui::theme::AnsiColorIdentifier;
 #[cfg(feature = "local_fs")]

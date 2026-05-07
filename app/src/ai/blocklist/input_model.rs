@@ -5,8 +5,8 @@
 //! exposes methods for running query autodetection, where an algorithm determines if the current
 //! input contents are an AI query or shell command, which is then used to update the input mode.
 
-use crate::report_if_error;
 use crate::send_telemetry_from_ctx;
+use crate::report_if_error;
 use std::sync::Arc;
 
 use futures::stream::AbortHandle;

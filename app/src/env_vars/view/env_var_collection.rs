@@ -1,3 +1,4 @@
+use crate::send_telemetry_from_ctx;
 use warpui::keymap::macros::*;
 use pathfinder_geometry::vector::{vec2f, Vector2F};
 

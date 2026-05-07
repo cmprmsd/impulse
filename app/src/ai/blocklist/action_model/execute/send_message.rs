@@ -1,4 +1,5 @@
 #[cfg(not(target_family = "wasm"))]
+use crate::send_telemetry_from_ctx;
 use anyhow::anyhow;
 use crate::legacy_stubs::{AIConversationId};
 #[cfg(not(target_family = "wasm"))]
@@ -18,7 +19,6 @@ use crate::ai::blocklist::telemetry::{
     TeamAgentCommunicationTransport, TeamAgentOrchestrationVersion,
 };
 use warp_core::features::FeatureFlag;
-use warp_core::send_telemetry_from_ctx;
 
 use super::{ActionExecution, AnyActionExecution, ExecuteActionInput, PreprocessActionInput};
 use crate::legacy_stubs::{AmbientAgentTaskId, ServerApiProvider};

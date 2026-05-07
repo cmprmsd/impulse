@@ -1,3 +1,5 @@
+use crate::send_telemetry_on_executor;
+use crate::send_telemetry_from_ctx;
 use crate::ai::llms::{LLMPreferences, LLMPreferencesEvent};
 use crate::terminal::model::terminal_model::ExitReason;
 use crate::terminal::shared_session::replay_agent_conversations::reconstruct_response_events_from_conversations;
@@ -66,10 +68,8 @@ use crate::features::FeatureFlag;
 use crate::pane_group::TerminalViewResources;
 use crate::persistence::ModelEvent;
 
-use crate::send_telemetry_on_executor;
 use crate::settings::DebugSettings;
 use crate::settings::{PrivacySettings, SshSettings};
-use warp_core::send_telemetry_from_ctx;
 
 use crate::terminal::model::session::Sessions;
 

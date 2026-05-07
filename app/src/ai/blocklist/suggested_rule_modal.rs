@@ -1,3 +1,4 @@
+use crate::send_telemetry_from_ctx;
 use warpui::keymap::macros::*;
 use crate::ai::agent::SuggestedRule;
 use crate::ai::facts::CloudAIFactModel;
@@ -8,7 +9,6 @@ use crate::editor::{
 };
 use crate::modal::{Modal, ModalEvent};
 use crate::network::NetworkStatus;
-use crate::send_telemetry_from_ctx;
 use crate::view_components::action_button::{ActionButton, PrimaryTheme};
 use crate::{
     ai::facts::{AIFact, AIMemory},

@@ -1,3 +1,4 @@
+use crate::send_telemetry_from_ctx;
 use std::collections::HashSet;
 use std::ops::Deref as _;
 use std::path::PathBuf;
@@ -43,7 +44,6 @@ use crate::search::search_bar::{
     SearchBar, SearchBarEvent, SearchBarState, SearchResultOrdering, SelectionUpdate,
 };
 use crate::search::QueryFilter;
-use crate::send_telemetry_from_ctx;
 use crate::settings::AISettings;
 use crate::terminal::History;
 use crate::themes::theme::WarpTheme;

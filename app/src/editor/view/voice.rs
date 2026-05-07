@@ -1,3 +1,4 @@
+use crate::send_telemetry_from_ctx;
 use super::{EditorAction, EditorView, VoiceTranscriptionOptions};
 use crate::ai::blocklist::InputType;
 use crate::appearance::Appearance;
@@ -10,7 +11,6 @@ use crate::view_components::{FeaturePopup, NewFeaturePopupLabel};
 use crate::workspace::ToastStack;
 use settings::Setting as _;
 use voice_input::{StartListeningError, VoiceInput, VoiceSessionResult};
-use warp_core::send_telemetry_from_ctx;
 use warp_core::ui::theme::color::internal_colors;
 use warp_core::ui::theme::AnsiColorIdentifier;
 use warpui::elements;

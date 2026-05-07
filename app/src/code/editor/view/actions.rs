@@ -1,5 +1,6 @@
 #![cfg_attr(target_family = "wasm", allow(dead_code, unused_imports))]
 
+use crate::send_telemetry_from_ctx;
 use warpui::keymap::macros::*;
 use warp_editor::selection::{TextDirection, TextUnit};
 // Adding this file level gate as some of the code around editability is not used in WASM yet.

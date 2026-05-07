@@ -1,3 +1,4 @@
+use crate::send_telemetry_from_ctx;
 use instant::Instant;
 use std::path::PathBuf;
 use std::sync::Arc;

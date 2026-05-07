@@ -1,5 +1,5 @@
-use crate::appearance::Appearance;
 use crate::send_telemetry_from_ctx;
+use crate::appearance::Appearance;
 use crate::settings::{active_theme_kind, ThemeSettings};
 use crate::themes::theme::{ThemeKind, WarpTheme};
 use crate::user_config;

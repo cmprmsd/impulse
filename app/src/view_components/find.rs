@@ -1,9 +1,9 @@
+use crate::send_telemetry_from_ctx;
 use warpui::keymap::macros::*;
 use crate::appearance::Appearance;
 use crate::editor::{
     EditorView, Event as EditorEvent, PropagateAndNoOpNavigationKeys, SingleLineEditorOptions,
 };
-use crate::send_telemetry_from_ctx;
 use crate::settings::InputModeSettings;
 use crate::ui_components::{blended_colors, icons::Icon};
 use serde::Serialize;

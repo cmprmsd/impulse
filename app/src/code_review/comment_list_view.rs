@@ -1,3 +1,4 @@
+use crate::send_telemetry_from_ctx;
 use std::borrow::Cow;
 
 use crate::code::editor::comment_editor::DEFAULT_COMMENT_MAX_WIDTH;
@@ -10,7 +11,6 @@ use crate::code_review::comments::{
 use crate::code_review::CodeReviewTelemetryEvent;
 use crate::menu::{Event, Menu, MenuItem, MenuItemFields};
 use crate::notebooks::editor::view::{EditorViewEvent, RichTextEditorView};
-use crate::send_telemetry_from_ctx;
 use crate::settings::AISettings;
 use crate::view_components::action_button::{
     ActionButton, ActionButtonTheme, ButtonSize, NakedTheme, SecondaryTheme,

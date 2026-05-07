@@ -1,3 +1,4 @@
+use crate::send_telemetry_from_ctx;
 use crate::report_if_error;
 use crate::legacy_stubs::{AmbientAgentTaskId, AnonymousUserSignupEntrypoint, AuthManager, AuthState, AuthStateProvider, CloseTarget, CloudModel, CodebaseIndexManager, GenericStringObjectFormat, JsonObjectType, ObjectOperation, ObjectType, ObjectUid, OperationSuccessType, Owner, PaletteSource, RemoteServerManager, RemoteServerManagerEvent, ServerApi, ServerApiProvider, ServerId, SharingDialogSource, Space, SyncId, UpdateManager, UpdateManagerEvent, UserWorkspaces};
 use crate::legacy_stubs::{AIConversationId, ServerConversationToken};

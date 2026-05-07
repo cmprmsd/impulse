@@ -2,6 +2,7 @@
 /// and displaying them in a code editor.
 /// It also handles applying an optional diff to the file content that will be applied
 /// when the file is loaded.
+use crate::send_telemetry_from_ctx;
 use warpui::keymap::macros::*;
 use std::{
     ops::Range,
@@ -91,7 +92,6 @@ use super::find_references_view::{FindReferencesView, FindReferencesViewEvent};
 use super::language_server_extension::ProcessedDiagnostic;
 use super::lsp_telemetry::LspTelemetryEvent;
 use super::ImmediateSaveError;
-use warp_core::send_telemetry_from_ctx;
 
 type SaveCallback =
     Box<dyn FnOnce(SaveOutcome, &mut ViewContext<LocalCodeEditorView>) + Send + Sync + 'static>;

@@ -1,3 +1,4 @@
+use crate::send_telemetry_from_ctx;
 use warpui::keymap::macros::*;
 use editing::sort_entries_for_file_tree;
 use itertools::Itertools;
@@ -18,7 +19,6 @@ use warp_util::path::LineAndColumnArg;
 use warp_util::standardized_path::StandardizedPath;
 
 use repo_metadata::repositories::DetectedRepositories;
-use warp_core::send_telemetry_from_ctx;
 use warpui::elements::{
     AcceptedByDropTarget, Align, Clipped, ConstrainedBox, Container, Dismiss, Draggable,
     DraggableState, Empty, FormattedTextElement, MainAxisAlignment, Percentage, Rect, SavePosition,

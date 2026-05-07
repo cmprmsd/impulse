@@ -2,6 +2,7 @@
 //! then on confirm runs `run_commit` and optionally chains `run_push` /
 //! `create_pr` per the selected intent.
 
+use crate::send_telemetry_from_ctx;
 use std::path::Path;
 
 use warp_core::ui::appearance::Appearance;
@@ -37,7 +38,6 @@ use crate::{
         create_pr, get_diff_for_commit_message, get_file_change_entries, run_commit, run_push,
         FileChangeEntry, PrInfo,
     }};
-use warp_core::send_telemetry_from_ctx;
 use warpui::{AppContext, ViewContext, ViewHandle};
 use crate::legacy_stubs::{ServerApiProvider};
 use crate::view_components::action_button::ActionButton;

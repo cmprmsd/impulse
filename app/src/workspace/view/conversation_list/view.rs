@@ -1,3 +1,4 @@
+use crate::send_telemetry_from_ctx;
 use pathfinder_geometry::vector::Vector2F;
 use std::collections::{HashMap, HashSet};
 use std::ops::Range;
@@ -20,7 +21,6 @@ use crate::workspace::view::conversation_list::item::{
 use crate::workspace::ToastStack;
 use crate::workspace::WorkspaceAction;
 use warp_core::features::FeatureFlag;
-use warp_core::send_telemetry_from_ctx;
 use warp_core::ui::Icon;
 
 use super::view_model::{ConversationEntry, ConversationListViewModel};

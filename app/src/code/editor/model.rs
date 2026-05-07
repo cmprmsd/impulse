@@ -1,5 +1,6 @@
 #![cfg_attr(target_family = "wasm", allow(dead_code, unused_imports))]
 
+use crate::send_telemetry_from_ctx;
 use warp_editor::selection::{TextUnit};
 // Adding this file level gate as some of the code around editability is not used in WASM yet.
 
@@ -14,7 +15,6 @@ use std::rc::Rc;
 use std::sync::Arc;
 use std::{cmp, mem};
 use warp_core::platform::SessionPlatform;
-use warp_core::send_telemetry_from_ctx;
 use warp_core::ui::theme::Fill;
 use warp_editor::content::anchor::Anchor;
 use warp_editor::content::edit::EditDelta;

@@ -1,3 +1,4 @@
+use crate::send_telemetry_from_ctx;
 use crate::legacy_stubs::{TaskId};
 use super::telemetry::{
     BlocklistOrchestrationTelemetryEvent, TeamAgentCommunicationFailedEvent,
@@ -10,7 +11,6 @@ use super::telemetry::{
 use std::collections::{HashMap, HashSet};
 use uuid::Uuid;
 use warp_core::features::FeatureFlag;
-use warp_core::send_telemetry_from_ctx;
 use warpui::{Entity, ModelContext, SingletonEntity};
 
 const MAX_RETRY_ATTEMPTS: i32 = 3;

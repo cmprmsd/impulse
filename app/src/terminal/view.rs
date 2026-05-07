@@ -1,5 +1,7 @@
-use warpui::keymap::macros::*;
 use crate::send_telemetry_sync_from_ctx;
+use crate::send_telemetry_on_executor;
+use crate::send_telemetry_from_ctx;
+use warpui::keymap::macros::*;
 mod action;
 mod block_banner;
 pub mod block_onboarding;

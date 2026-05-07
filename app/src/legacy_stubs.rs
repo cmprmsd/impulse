@@ -518,10 +518,10 @@ pub struct CloudConversationData;
 pub struct CloudObjectLocation;
 
 #[derive(Debug, Clone, Default)]
-pub struct GenericCloudObject;
+pub struct GenericCloudObject<I = (), M = ()>(std::marker::PhantomData<(I, M)>);
 
 #[derive(Debug, Clone, Default)]
-pub struct ServerCloudObject;
+pub struct ServerCloudObject<I = (), M = ()>(std::marker::PhantomData<(I, M)>);
 
 #[derive(Debug, Clone, Default)]
 pub struct GenericStringObjectUniqueKey;
@@ -630,7 +630,7 @@ pub struct RenderableOptionConfig;
 pub struct JsonModel;
 
 #[derive(Debug, Clone, Default)]
-pub struct GenericStringModel;
+pub struct GenericStringModel<T = (), S = ()>(std::marker::PhantomData<(T, S)>);
 
 #[derive(Debug, Clone, Default)]
 pub struct ServerTime;

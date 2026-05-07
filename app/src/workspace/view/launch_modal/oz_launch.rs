@@ -1,3 +1,4 @@
+use crate::send_telemetry_from_ctx;
 use super::{CTAButton, CheckboxConfig, LaunchModalEvent, Slide};
 use crate::terminal::view::OnboardingIntention;
 use crate::ui_components::icons::Icon;
@@ -5,7 +6,6 @@ use crate::workspace::action::WorkspaceAction;
 use crate::workspace::view::OnboardingTutorial;
 use asset_macro::bundled_or_fetched_asset;
 use markdown_parser::{FormattedTextFragment, FormattedTextLine};
-use warp_core::send_telemetry_from_ctx;
 use warpui::assets::asset_cache::AssetSource;
 use warpui::{AppContext, SingletonEntity};
 use crate::legacy_stubs::{UserWorkspaces};

@@ -1,3 +1,4 @@
+use crate::send_telemetry_from_ctx;
 use markdown_parser::markdown_parser::RUNNABLE_BLOCK_MARKDOWN_LANG;
 use markdown_parser::CodeBlockText;
 use pathfinder_color::ColorU;

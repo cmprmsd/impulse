@@ -1,3 +1,4 @@
+use crate::send_telemetry_from_ctx;
 use warpui::keymap::macros::*;
 use std::sync::Arc;
 use std::time::Duration;
@@ -30,7 +31,6 @@ use crate::editor::{
 };
 use crate::input_suggestions::{Event as InputSuggestionsEvent, InputSuggestions};
 
-use crate::send_telemetry_from_ctx;
 use crate::terminal::resizable_data::{ModalType, ResizableData, DEFAULT_WARP_AI_WIDTH};
 use crate::ui_components::blended_colors;
 
