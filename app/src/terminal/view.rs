@@ -108,7 +108,7 @@ use crate::util::truncation::truncate_from_end;
 
 // use crate::ai::agent::api::ServerConversationToken;  // unresolved (cloud detach)
 // use crate::ai::agent::redaction::redact_secrets;  // unresolved (cloud detach)
-use crate::ai::agent::todos::popup::{AgentTodosPopupEvent, AgentTodosPopupView};
+// use crate::ai::agent::todos::popup::{AgentTodosPopupEvent, AgentTodosPopupView};  // unresolved (cloud detach)
 use crate::ai::agent::{
     AIAgentPtyWriteMode, AgentReviewCommentBatch, CancellationReason, PassiveSuggestionTrigger,
     ServerOutputId, ShellCommandCompletedTrigger,

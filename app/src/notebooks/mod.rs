@@ -206,7 +206,7 @@ impl CloudModelType for CloudNotebookModel {
 /// This is the notebook_id in the database associated with this notebook.
 #[derive(Clone, Copy, Default, Debug, PartialEq, Eq, Serialize, Deserialize, Hash)]
 pub struct NotebookId(ServerId);
-crate::server_id_traits! { NotebookId, "Notebook" }
+// crate::server_id_traits! { NotebookId, "Notebook" }  // unresolved (cloud detach)
 
 impl From<NotebookId> for SyncId {
     fn from(id: NotebookId) -> Self {

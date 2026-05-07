@@ -21,7 +21,7 @@ use crate::{ workspace::ToastStack};
 use crate::{drive::OpenWarpDriveObjectArgs, view_components::DismissibleToast};
 use crate::{features::FeatureFlag, workspace::active_terminal_in_window};
 
-use crate::settings_view::{OpenTeamsSettingsModalArgs, SettingsSection};
+// use crate::settings_view::{OpenTeamsSettingsModalArgs, SettingsSection};  // unresolved
 use crate::user_config::load_launch_configs;
 use crate::{quake_mode_window_id, quake_mode_window_is_open, send_telemetry_from_app_ctx, ChannelState, OpenPath, };
 use warp_core::safe_info;
@@ -337,7 +337,7 @@ impl UriHost {
                     match settings_sub_page.as_str() {
                         "teams" => {
                             let invite_email = query_string.get("invite").map(|s| s.to_string());
-                            let args = OpenTeamsSettingsModalArgs { invite_email };
+//                             let args = OpenTeamsSettingsModalArgs { invite_email };  // unresolved
                             dispatch_action_in_new_or_existing_window(
                                 primary_window_id,
                                 "root_view:open_team_settings_with_email_invite_in_existing_window",

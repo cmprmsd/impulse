@@ -37,6 +37,7 @@ use warpui::{
 //     completer::SessionContext,
 //     drive::settings::WarpDriveSettings,
 //     search::{
+use crate::search::command_search::searcher::{CommandSearchItemAction, CommandSearchMixer};
 //         command_search::searcher::{CommandSearchItemAction, CommandSearchMixer},
 //         result_renderer::{QueryResultRenderer, QueryResultRendererStyles},
 //         search_bar::{SearchBar, SearchBarEvent, SearchBarState, SearchResultOrdering},

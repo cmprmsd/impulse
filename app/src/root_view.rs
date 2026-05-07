@@ -25,7 +25,7 @@ use crate::settings::QuakeModeSettings;
 use crate::settings::ThemeSettings;
 use crate::settings_view::flags;
 use crate::settings_view::mcp_servers_page::MCPServersSettingsPage;
-use crate::settings_view::OpenTeamsSettingsModalArgs;
+// use crate::settings_view::OpenTeamsSettingsModalArgs;  // unresolved
 use crate::settings_view::SettingsSection;
 use crate::terminal::available_shells::AvailableShell;
 use crate::terminal::general_settings::GeneralSettings;
@@ -935,10 +935,10 @@ fn create_environment_and_run(arg: &CreateEnvironmentArg, ctx: &mut AppContext) 
     ctx.windows().show_window_and_focus_app(window_id);
 }
 fn open_team_settings_with_email_invite_in_new_window(
-    arg: &OpenTeamsSettingsModalArgs,
-    ctx: &mut AppContext,
-) {
-    let root_handle = open_new_window_get_handles(None, ctx).1;
+//     arg: &OpenTeamsSettingsModalArgs,
+//     ctx: &mut AppContext,
+// ) {
+//     let root_handle = open_new_window_get_handles(None, ctx).1;
     root_handle.update(ctx, |root_view, ctx| {
         if let AuthOnboardingState::Terminal(workspace_view_handle) =
             &root_view.auth_onboarding_state
@@ -2491,13 +2491,13 @@ impl RootView {
 
     pub fn open_team_settings_with_email_invite_in_existing_window(
         &mut self,
-        arg: &OpenTeamsSettingsModalArgs,
-        ctx: &mut ViewContext<Self>,
-    ) -> bool {
-        if let AuthOnboardingState::Terminal(handle) = &self.auth_onboarding_state {
-            handle.update(ctx, |workspace, ctx| {
-                workspace.show_team_settings_page_with_email_invite(arg.invite_email.as_ref(), ctx)
-            });
+//         arg: &OpenTeamsSettingsModalArgs,
+//         ctx: &mut ViewContext<Self>,
+//     ) -> bool {
+//         if let AuthOnboardingState::Terminal(handle) = &self.auth_onboarding_state {
+//             handle.update(ctx, |workspace, ctx| {
+//                 workspace.show_team_settings_page_with_email_invite(arg.invite_email.as_ref(), ctx)
+//             });
             return true;
         } else {
             log::warn!("Auth not complete before trying to open settings pane");

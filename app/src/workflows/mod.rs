@@ -133,7 +133,7 @@ impl WorkflowViewMode {
 
 #[derive(Clone, Debug, Copy, PartialEq, Eq, Hash, Default, Serialize, Deserialize)]
 pub struct WorkflowId(ServerId);
-crate::server_id_traits! { WorkflowId, "Workflow" }
+// crate::server_id_traits! { WorkflowId, "Workflow" }  // unresolved (cloud detach)
 
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum AIWorkflowOrigin {

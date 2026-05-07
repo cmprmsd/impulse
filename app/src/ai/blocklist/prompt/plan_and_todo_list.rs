@@ -20,7 +20,6 @@ use crate::{
     ai::{
         agent::{
             icons::todo_list_icon,
-            todos::popup::{AgentTodosPopupEvent, AgentTodosPopupView},
         },
         blocklist::{BlocklistAIContextEvent, BlocklistAIContextModel, BlocklistAIHistoryEvent},
         document::ai_document_model::{

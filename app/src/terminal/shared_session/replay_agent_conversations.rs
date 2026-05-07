@@ -2,7 +2,7 @@ use crate::ai::agent::AIAgentExchange;
 use crate::ai::agent::MessageId;
 // use api::client_action as api_client_action;  // unresolved (cloud detach)
 // use api::response_event as api_response_event;  // unresolved (cloud detach)
-use api::response_event::stream_finished as stream_finished_event;
+// use api::response_event::stream_finished as stream_finished_event;  // unresolved
 use std::collections::HashMap;
 use crate::legacy_stubs::{AIConversation, ResponseEvent, TaskId};
 
