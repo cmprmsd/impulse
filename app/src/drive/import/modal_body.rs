@@ -25,6 +25,7 @@ use super::{
 use warpui::{AppContext, Element, Entity, ModelHandle, TypedActionView, View, ViewContext};
 use crate::workspace::ToastStack;
 use crate::legacy_stubs::{ClientId, Owner, SyncId};
+use crate::legacy_stubs::{ImportQueueArgs};
 
 const FILE_PICKER_BUTTON_WIDTH: f32 = 250.;
 const BUTTON_FONT_SIZE: f32 = 14.;

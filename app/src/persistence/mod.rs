@@ -2,6 +2,7 @@
 
 use crate::legacy_stubs::{CloudObject, CloudObjectMetadata, EnablementState, ObjectAction, ObjectIdType, RevisionAndLastEditor, ServerCreationInfo, ServerExperiment, ServerTimestamp, SyncId, UserProfileWithUID, WorkspaceUid};
 use crate::legacy_stubs::{WorkspaceMetadata};
+use crate::legacy_stubs::{CloudStringObject};
 
 cfg_if::cfg_if! {
     if #[cfg(feature = "local_fs")] {

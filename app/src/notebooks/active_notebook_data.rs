@@ -8,6 +8,7 @@ use super::{CloudNotebookModel, NotebookId};
 use crate::legacy_stubs::{CloudModelEvent, Owner, Space, SyncId, UpdateManagerEvent};
 use crate::legacy_stubs::{ClientId, CloudModel, ObjectOperation, OperationSuccessType, UpdateManager};
 use crate::legacy_stubs::{ContainingObject, ContentEditability};
+use crate::legacy_stubs::{SharingAccessLevel};
 
 #[derive(Default, Clone)]
 pub enum ActiveNotebook {

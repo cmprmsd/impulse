@@ -1,3 +1,4 @@
+use ai::LLMId;
 mod helper;
 mod model_impl;
 

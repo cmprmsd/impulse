@@ -38,6 +38,8 @@ use crate::{
 };
 use warpui::{AppContext, Element, Entity, EntityId, FocusContext, TypedActionView, View, ViewContext};
 use warpui::keymap::{FixedBinding};
+use crate::view_components::action_button::NakedTheme;
+use crate::view_components::action_button::PrimaryTheme;
 /// The vertical padding applied to the env var collection block's content body.
 /// For horizontal padding, use [`INLINE_ACTION_HORIZONTAL_PADDING`] for consistency.
 const ENV_VAR_COLLECTION_BODY_VERTICAL_PADDING: f32 = 16.;

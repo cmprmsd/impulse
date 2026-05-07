@@ -21,6 +21,7 @@ use serde::{Deserialize, Serialize};
 
 use super::cloud_preferences_syncer::CloudPreferencesSyncer;
 use crate::legacy_stubs::{AuthState, AuthStateProvider, CloudModel, ServerApiProvider, UpdateManager};
+use crate::legacy_stubs::{AuthClient};
 
 pub trait RegexDisplayInfo {
     fn pattern(&self) -> &str;

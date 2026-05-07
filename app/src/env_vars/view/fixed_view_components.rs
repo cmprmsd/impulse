@@ -22,6 +22,7 @@ use warpui::{AppContext, Element, ViewContext};
 use crate::appearance::Appearance;
 use crate::ui_components::buttons::icon_button;
 use crate::legacy_stubs::{ContentEditability};
+use crate::legacy_stubs::{SharingAccessLevel};
 
 const VARIABLE_DIVIDER_HEIGHT: f32 = 2.;
 const SECTION_FONT_SIZE: f32 = 16.;

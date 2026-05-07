@@ -16,6 +16,7 @@ use super::{
 };
 use crate::legacy_stubs::{SyncId, UserWorkspaces};
 use crate::legacy_stubs::{ShareableLinkError};
+use crate::pane_group::focus_state::PaneFocusHandle;
 
 pub struct EnvVarCollectionPane {
     view: ViewHandle<PaneView<EnvVarCollectionView>>,

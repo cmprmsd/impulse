@@ -3,6 +3,7 @@ use warpui::ViewContext;
 use crate::{ terminal::view::CodeDiffAction};
 
 use super::TerminalView;
+use crate::legacy_stubs::{InteractionSource};
 
 #[derive(Copy, Clone, Debug)]
 pub enum PromptSuggestionResolution {

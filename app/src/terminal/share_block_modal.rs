@@ -55,6 +55,7 @@ use warpui::elements::{Lines, SizeConstraint};
 use crate::legacy_stubs::{DisplaySetting};
 use crate::ui_components::icons::Icon;
 use crate::legacy_stubs::{PaintContext};
+use crate::legacy_stubs::{BlockClient};
 
 const PADDING: f32 = 30.;
 const INNER_MARGIN: f32 = 20.;

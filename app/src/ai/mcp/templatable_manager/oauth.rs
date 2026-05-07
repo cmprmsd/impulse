@@ -14,6 +14,7 @@ use warpui_extras::secure_storage::AppContextExt as _;
 use super::{MCPServerState, TemplatableMCPServerManager};
 use {crate::ai::mcp::FileBasedMCPManager, warpui::SingletonEntity};
 use crate::legacy_stubs::{StoredCredentials};
+use crate::legacy_stubs::{AuthClient, AuthError};
 
 pub(crate) const TEMPLATABLE_MCP_CREDENTIALS_KEY: &str = "TemplatableMcpCredentials";
 pub(crate) const FILE_BASED_MCP_CREDENTIALS_KEY: &str = "FileBasedMcpCredentials";

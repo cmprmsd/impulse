@@ -17,6 +17,7 @@ use crate::ai::{
 };
 
 use super::{AIBlockModel, AIBlockOutputStatus, OutputStatusUpdateCallback};
+use ai::LLMId;
 
 /// Standard [`AIBlock`] impl for live outputs corresponding to an `OutputStream`.
 pub struct AIBlockModelImpl<V> {

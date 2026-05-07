@@ -51,6 +51,7 @@ use crate::workspace::ToastStack;
 use crate::legacy_stubs::{SyncId};
 use crate::legacy_stubs::{GenericStringObjectFormat, JsonObjectType, TelemetryEvent, UpdateManager};
 use crate::legacy_stubs::{InitiatedBy};
+use crate::legacy_stubs::{ParsedTemplatableMCPServerResult};
 /// Controls the behavior of `spawn_server_impl`.
 enum SpawnMode {
     /// Initial spawn - clears logs and sends telemetry.

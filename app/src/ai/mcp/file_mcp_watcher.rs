@@ -23,6 +23,7 @@ use crate::warp_managed_paths_watcher::{
 };
 use crate::HomeDirectoryWatcher;
 use strum::IntoEnumIterator;
+use crate::legacy_stubs::{ParsedTemplatableMCPServerResult};
 
 static ENV_VAR_REGEX: LazyLock<Regex> =
     LazyLock::new(|| Regex::new(r"\$\{([^}]+)\}").expect("Regex is valid"));

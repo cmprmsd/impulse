@@ -21,6 +21,7 @@ use crate::legacy_stubs::{SharingDialogSource};
 use crate::pane_group::pane::BackingView;
 use crate::legacy_stubs::{ShareableObject};
 use crate::ui_components::buttons::icon_button;
+use crate::legacy_stubs::{SharingDialog};
 
 const UNSHARABLE_CONVERSATION_TOOLTIP: &str =
     "This conversation cannot be shared because it is not \

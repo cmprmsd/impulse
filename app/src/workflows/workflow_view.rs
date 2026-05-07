@@ -94,6 +94,7 @@ use crate::workspace::WorkspaceAction;
 use crate::legacy_stubs::{AIClient, AuthState, CloudModelEvent, Owner, Revision, ServerId, SharingDialogSource, SyncId, UpdateManagerEvent, UserUid};
 use crate::legacy_stubs::{AuthStateProvider, ClientId, CloudModel, ObjectOperation, ObjectType, OperationSuccessType, ServerApiProvider, Space, TelemetryEvent, UpdateManager};
 use crate::legacy_stubs::{ContainingObject};
+use crate::legacy_stubs::{CloudObjectTelemetryMetadata};
 
 mod alias_argument_selector;
 mod alias_bar;

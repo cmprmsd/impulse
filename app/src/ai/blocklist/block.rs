@@ -6,6 +6,7 @@ use crate::legacy_stubs::{AIConversationId, AgentViewController};
 use crate::terminal::CustomSecretRegexUpdater::redact_secrets;
 use crate::legacy_stubs::{TelemetryEvent};
 use crate::legacy_stubs::{AmbientAgentViewModel};
+use crate::legacy_stubs::{InteractionSource};
 pub mod cli;
 pub mod cli_controller;
 pub mod compact_agent_input;

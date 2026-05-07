@@ -9,6 +9,7 @@ use crate::legacy_stubs::{CloudModel, UpdateManager};
 use crate::legacy_stubs::{CloudModelEvent, Owner, Revision, ServerId, Space, SyncId, UpdateManagerEvent};
 use crate::legacy_stubs::{ClientId, ObjectOperation, OperationSuccessType};
 use crate::legacy_stubs::{ContainingObject, ContentEditability};
+use crate::legacy_stubs::{SharingAccessLevel};
 
 #[derive(Default, Clone)]
 pub enum ActiveEnvVarCollection {

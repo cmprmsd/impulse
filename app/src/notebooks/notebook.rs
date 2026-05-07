@@ -95,6 +95,7 @@ use crate::workspace::ToastStack;
 use crate::legacy_stubs::{ModelAsRef};
 use crate::legacy_stubs::{CloudModelEvent, Owner, ServerId, SharingDialogSource, Space, SyncId};
 use crate::legacy_stubs::{ClientId, CloudModel, ObjectType, TelemetryEvent, UpdateManager};
+use crate::legacy_stubs::{CloudObjectTelemetryMetadata};
 
 mod details_bar;
 

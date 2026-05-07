@@ -773,3 +773,91 @@ pub struct VisibleRow;
 
 #[derive(Debug, Clone, Default)]
 pub struct SizeConstraint;
+
+// ---------------------------------------------------------------------------
+// Seventh sweep
+// ---------------------------------------------------------------------------
+
+#[derive(Debug, Clone, Default)]
+pub struct SharingDialog;
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
+pub enum SharingAccessLevel {
+    #[default]
+    Read,
+    Write,
+}
+
+#[derive(Debug, Clone, Default)]
+pub struct ParsedTemplatableMCPServerResult;
+
+#[derive(Debug, Clone, Default)]
+pub struct ImportQueueArgs;
+
+#[derive(Debug, Clone, Default)]
+pub struct CloudStringObject;
+
+#[derive(Debug, Clone, Default)]
+pub struct CloudObjectTelemetryMetadata;
+
+#[derive(Debug, Clone, Default)]
+pub struct BlockClient;
+
+#[derive(Debug, Clone, Default)]
+pub struct AuthError;
+
+#[derive(Debug, Clone, Default)]
+pub struct AuthClient;
+
+#[derive(Debug, Clone, Default)]
+pub struct AttachmentInput;
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
+pub enum InteractionSource {
+    #[default]
+    Default,
+}
+
+pub const GENERIC_STRING_OBJECT_PREFIX: &str = "obj_";
+
+#[derive(Debug, Clone, Default)]
+pub struct CodeReviewModel;
+
+#[derive(Debug, Clone, Default)]
+pub struct GlobalCodeReviewModel;
+
+#[derive(Debug, Clone, Default)]
+pub struct AgentSdkProvider;
+
+#[derive(Debug, Clone, Default)]
+pub struct AgentManagement;
+
+#[derive(Debug, Clone, Default)]
+pub struct AmbientAgentLifecycle;
+
+#[derive(Debug, Clone, Default)]
+pub struct CodebaseIndexingState;
+
+#[derive(Debug, Clone, Default)]
+pub struct AgentMetadata;
+
+#[derive(Debug, Clone, Default)]
+pub struct AgentMessage;
+
+#[derive(Debug, Clone, Default)]
+pub struct AgentTaskState;
+
+#[derive(Debug, Clone, Default)]
+pub struct ConversationOptions;
+
+#[derive(Debug, Clone, Default)]
+pub struct AIInputBlock;
+
+#[derive(Debug, Clone, Default)]
+pub struct AICommandBlock;
+
+#[derive(Debug, Clone, Default)]
+pub struct AIOutput;
+
+#[derive(Debug, Clone, Default)]
+pub struct AIOutputId;
