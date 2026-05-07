@@ -399,3 +399,54 @@ pub struct DriveIndexEvent;
 
 // Maps used in legacy persistence schema (to keep schema parsing).
 pub type EnablementState = String;
+
+// ---------------------------------------------------------------------------
+// More deleted-cloud types found by the second cargo check sweep
+// ---------------------------------------------------------------------------
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Default)]
+pub enum ContextChipKind {
+    #[default]
+    Default,
+}
+
+#[derive(Debug, Clone, Default)]
+pub struct ChipValue;
+
+#[derive(Debug, Clone, Default)]
+pub struct LaunchConfig;
+
+#[derive(Debug, Clone, Default)]
+pub struct AIClient;
+
+#[derive(Debug, Clone)]
+pub enum AgentRunEvent {
+    Default,
+}
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Default)]
+pub enum AgentModeCommandExecutionPredicate {
+    #[default]
+    Default,
+}
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Default, Serialize, Deserialize)]
+pub struct GenericStringObjectId(pub Uuid);
+
+#[derive(Debug, Clone, Default)]
+pub struct ApiKeyUid(pub String);
+
+#[derive(Debug, Clone, Default)]
+pub struct CellType;
+
+#[derive(Debug, Clone, Default)]
+pub struct ChannelState;
+
+impl ChannelState {
+    pub fn server_root_url() -> String {
+        String::new()
+    }
+}
+
+#[derive(Debug, Clone, Default)]
+pub struct PaneViewLocator;
