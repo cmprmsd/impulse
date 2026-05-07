@@ -180,7 +180,7 @@ use child_agent::{apply_hidden_child_agent_task_context, HiddenChildAgentTaskCon
 mod tests;
 
 pub use crate::code_review::CodeReviewPanelArg;
-pub use pane::ai_document_pane::AIDocumentPane;
+// pub use pane::ai_document_pane::AIDocumentPane;  // unresolved (cloud detach)
 pub use pane::ai_fact_pane::AIFactPane;
 pub use pane::code_diff_pane::CodeDiffPane;
 pub use pane::code_pane::CodePane;

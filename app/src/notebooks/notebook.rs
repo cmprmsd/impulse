@@ -1,3 +1,4 @@
+use warp_core::safe_info;
 use crate::send_telemetry_from_ctx;
 use warpui::keymap::macros::*;
 use crate::report_if_error;

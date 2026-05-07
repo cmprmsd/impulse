@@ -1,4 +1,5 @@
 #[cfg(feature = "local_fs")]
+use warp_core::safe_warn;
 use std::io::ErrorKind;
 use std::{
     collections::{
