@@ -18,6 +18,7 @@ use crate::terminal::view::TerminalView;
 use crate::terminal::CLIAgent;
 use crate::ui_components::icon_with_status::IconWithStatusVariant;
 use crate::legacy_stubs::{ConversationStatus};
+use crate::legacy_stubs::{AgentConversationEntry};
 
 /// Returns the agent-icon variant for a live [`TerminalView`], or `None` when the terminal is
 /// not an agent surface (plain terminal / shell / empty conversation).

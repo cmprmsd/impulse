@@ -22,6 +22,7 @@ use super::{
     rich_content::{FindableRichContentHandle, RichContentMatchId},
 
 };
+use crate::legacy_stubs::{FindOptions, GridType};
 /// Runs a find operation on the blocklist using the given `options` and returns a
 /// `BlockListFindRun` with the results.
 ///

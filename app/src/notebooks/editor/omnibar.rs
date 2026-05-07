@@ -34,6 +34,7 @@ use warpui::elements::{ChildView};
 use warpui::ui_components::components::{Coords};
 use warpui::ui_components::components::{UiComponentStyles};
 use warpui::elements::{SizeConstraint};
+use crate::legacy_stubs::{RenderState};
 
 const OMNIBAR_HEIGHT: f32 = 32.;
 const OMNIBAR_PADDING: f32 = 4.;

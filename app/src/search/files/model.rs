@@ -8,6 +8,7 @@ use std::{
     path::{Path, PathBuf},
 };
 use warpui::{AppContext, Entity, ModelContext, SingletonEntity};
+use crate::legacy_stubs::{FuzzyMatchResult};
 
 cfg_if::cfg_if! {
     if #[cfg(feature = "local_fs")] {

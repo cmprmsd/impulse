@@ -107,6 +107,7 @@ use crate::ui_components::icons::Icon;
 use crate::view_components::action_button::{ActionButton, ButtonSize, NakedTheme};
 use crate::legacy_stubs::{SettingsAction};
 use crate::legacy_stubs::{TelemetryEvent};
+use crate::legacy_stubs::{WorkspaceDecorationVisibility};
 
 const FONT_SIZE_INPUT_BOX_WIDTH: f32 = 80.;
 const NOTEBOOK_FONT_SIZE_INPUT_BOX_WIDTH: f32 = 50.;

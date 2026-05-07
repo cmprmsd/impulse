@@ -1,6 +1,7 @@
 use fuzzy_match::match_indices_case_insensitive;
 use warpui::{AppContext, Entity, ModelContext, ModelHandle, SingletonEntity};
 use crate::legacy_stubs::{AgentConversationEntryId};
+use crate::legacy_stubs::{AgentConversationEntry};
 
 pub struct ConversationListViewModelEvent;
 

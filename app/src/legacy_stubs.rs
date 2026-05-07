@@ -861,3 +861,103 @@ pub struct AIOutput;
 
 #[derive(Debug, Clone, Default)]
 pub struct AIOutputId;
+
+// ---------------------------------------------------------------------------
+// Eighth sweep
+// ---------------------------------------------------------------------------
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
+pub enum RenderState {
+    #[default]
+    Default,
+}
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
+pub enum InlineMenuType {
+    #[default]
+    Default,
+}
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
+pub enum GridType {
+    #[default]
+    Default,
+}
+
+#[derive(Debug, Clone, Default)]
+pub struct FuzzyMatchResult;
+
+#[derive(Debug, Clone, Default)]
+pub struct FindOptions;
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
+pub enum ArgumentType {
+    #[default]
+    String,
+}
+
+#[derive(Debug, Clone, Default)]
+pub struct AgentInputFooter;
+
+#[derive(Debug, Clone, Default)]
+pub struct AgentConversationEntry;
+
+#[derive(Debug, Clone, Default)]
+pub struct AIApiError;
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
+pub enum WorkspaceDecorationVisibility {
+    #[default]
+    Default,
+}
+
+#[derive(Debug, Clone, Default)]
+pub struct UploadIntent;
+
+#[derive(Debug, Clone, Default)]
+pub struct UploadId;
+
+#[derive(Debug, Clone, Default)]
+pub struct UnlinkRunArgs;
+
+#[derive(Debug, Clone, Default)]
+pub struct ToolCall;
+
+#[derive(Debug, Clone, Default)]
+pub struct TimedSession;
+
+#[derive(Debug, Clone, Default)]
+pub struct TerminationGracePeriod;
+
+#[derive(Debug, Clone, Default)]
+pub struct StreamFinishedReason;
+
+#[derive(Debug, Clone, Default)]
+pub struct SkillReference;
+
+#[derive(Debug, Clone, Default)]
+pub struct ScheduleArgs;
+
+#[derive(Debug, Clone, Default)]
+pub struct ScheduleAndDispatch;
+
+#[derive(Debug, Clone, Default)]
+pub struct RunWithStartingSnapshot;
+
+#[derive(Debug, Clone, Default)]
+pub struct RunActionArgs;
+
+#[derive(Debug, Clone, Default)]
+pub struct ResumeConversationArgs;
+
+#[derive(Debug, Clone, Default)]
+pub struct RegisterMacroArgs;
+
+#[derive(Debug, Clone, Default)]
+pub struct PrTaskCounts;
+
+#[derive(Debug, Clone, Default)]
+pub struct PathRoot;
+
+#[derive(Debug, Clone, Default)]
+pub struct PassiveSuggestionTrigger;

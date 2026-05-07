@@ -24,6 +24,7 @@ use crate::workflows::CloudWorkflow;
 use crate::legacy_stubs::{Owner, ServerId, SharingDialogSource, Space, SyncId};
 use crate::legacy_stubs::{ClientId, CloudModel, GenericStringObjectFormat, JsonObjectType, UpdateManager};
 use crate::legacy_stubs::{WarpDriveItemId};
+use crate::workflows::WorkflowViewMode;
 
 pub const MIN_SIDEBAR_WIDTH: f32 = 250.;
 pub const MAX_SIDEBAR_WIDTH_RATIO: f32 = 0.75;

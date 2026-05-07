@@ -1,3 +1,4 @@
+use crate::legacy_stubs::{SkillReference};
 #[path = "file_watchers/mod.rs"]
 mod file_watchers;
 use crate::ai::mcp::{McpIntegration, TemplatableMCPServerManager};

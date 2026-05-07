@@ -21,6 +21,7 @@ use super::{
 use crate::legacy_stubs::{SyncId, UserWorkspaces};
 use crate::legacy_stubs::{Space};
 use crate::legacy_stubs::{ShareableLinkError};
+use crate::workflows::WorkflowType;
 
 pub struct NotebookPane {
     view: ViewHandle<PaneView<NotebookView>>,

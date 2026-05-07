@@ -102,6 +102,7 @@ use crate::legacy_stubs::{CloudObjectMetadata, ServerCreationInfo, UserProfileWi
 use crate::legacy_stubs::{Revision};
 use crate::legacy_stubs::CloudModel;
 use crate::legacy_stubs::{CloudStringObject, GENERIC_STRING_OBJECT_PREFIX};
+use crate::persistence::WriterHandles;
 
 diesel::define_sql_function! {
     fn json_extract(target: diesel::sql_types::Text, path: diesel::sql_types::Text) -> diesel::sql_types::Text;

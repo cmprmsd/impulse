@@ -33,6 +33,7 @@ use super::generate_ai_input_suggestions::{
     GenerateAIInputSuggestionsRequest, GenerateAIInputSuggestionsResponseV2, NextCommandContext,
 };
 use crate::legacy_stubs::{ServerApi, UserWorkspaces};
+use crate::legacy_stubs::{AIApiError};
 
 cfg_if::cfg_if! {
     if #[cfg(feature = "local_fs")] {

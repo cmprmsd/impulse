@@ -41,6 +41,7 @@ use warpui::fonts::{FamilyId};
 use warpui::ui_components::components::{UiComponentStyles};
 use crate::legacy_stubs::{TelemetryEvent};
 use crate::appearance::respect_system_theme;
+use pathfinder_geometry::vector::vec2f;
 
 // All units in px
 const THEME_CHOOSER_TITLE: &str = "Themes";

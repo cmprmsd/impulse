@@ -46,6 +46,7 @@ use crate::legacy_stubs::{ServerApiProvider, UserWorkspaces};
 use crate::legacy_stubs::{ChannelState};
 use crate::legacy_stubs::{SyncId};
 use warpui::ui_components::components::{UiComponentStyles};
+use pathfinder_geometry::vector::vec2f;
 
 const SUBMIT_BUTTON_FOCUSED: &str = "SubmitButtonFocused";
 

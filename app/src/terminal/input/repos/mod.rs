@@ -1,4 +1,5 @@
 //! Inline repo switcher menu showing indexed repos with git status.
+use crate::legacy_stubs::{InlineMenuType};
 mod data_source;
 #[cfg(feature = "local_fs")]
 mod search_item;

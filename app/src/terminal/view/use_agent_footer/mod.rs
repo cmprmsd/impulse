@@ -15,6 +15,7 @@ use warpui::keymap::Keystroke;
 use warpui::{AppContext, Element, Entity, EntityId, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
 use crate::legacy_stubs::{TelemetryEvent};
 use crate::legacy_stubs::{CLIAgentType};
+use crate::legacy_stubs::{AgentInputFooter};
 mod warpify_footer;
 
 pub use crate::terminal::CLIAgent;

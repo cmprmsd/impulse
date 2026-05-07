@@ -1,5 +1,6 @@
 use crate::legacy_stubs::{TaskId};
 use crate::legacy_stubs::{ReviewComment};
+use crate::legacy_stubs::{AIApiError};
 pub(crate) mod icons;
 pub(super) mod telemetry;
 pub(super) mod util;

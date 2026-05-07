@@ -9,6 +9,7 @@ use warpui::{WindowId};
 use crate::legacy_stubs::{PaneViewLocator};
 use crate::legacy_stubs::{Owner, SyncId, UpdateManagerEvent};
 use crate::legacy_stubs::{ClientId, CloudModel, ObjectOperation, OperationSuccessType, UpdateManager};
+use crate::workflows::WorkflowViewMode;
 
 pub struct WorkflowManager {
     panes_by_hashed_id: HashMap<String, WorkflowPaneData>,
