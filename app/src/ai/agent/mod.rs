@@ -1,4 +1,5 @@
 use crate::legacy_stubs::{TaskId};
+use crate::legacy_stubs::{ReviewComment};
 pub(crate) mod icons;
 pub(super) mod telemetry;
 pub(super) mod util;

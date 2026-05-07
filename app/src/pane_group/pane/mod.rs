@@ -13,6 +13,7 @@ use crate::legacy_stubs::{SharingDialogSource};
 use crate::terminal::view::TerminalView;
 use crate::menu::MenuItem;
 use crate::legacy_stubs::{ShareableObject};
+use crate::legacy_stubs::{NetworkLogView};
 pub(super) mod ai_fact_pane;
 pub(super) mod code_diff_pane;
 pub(super) mod code_diff_pane_model;

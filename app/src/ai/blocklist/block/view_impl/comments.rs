@@ -9,6 +9,7 @@ use warpui::elements::{
     Expanded, Flex, Hoverable, MouseState, ParentElement, Radius, Text, Wrap, WrapFillEntireRun,
 };
 use warpui::{AppContext, Element, SingletonEntity};
+use crate::legacy_stubs::{ReviewComment};
 
 const COMMENT_CHIP_MAX_HEIGHT: f32 = 200.;
 

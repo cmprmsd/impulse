@@ -4,6 +4,7 @@ use std::path::{Path, PathBuf};
 use serde::{Deserialize, Serialize};
 #[cfg(feature = "local_fs")]
 use toml::Value;
+use crate::legacy_stubs::{PaneTemplateType};
 
 /// Describes a tab config file that failed to parse.
 ///

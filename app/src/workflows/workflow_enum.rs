@@ -4,6 +4,7 @@ use crate::{};
 use crate::legacy_stubs::{QueueItem};
 use crate::legacy_stubs::{GenericStringObjectFormat, GenericStringObjectId, JsonObjectType, Revision};
 use crate::legacy_stubs::{GenericCloudObject, GenericStringObjectUniqueKey, JsonSerializer, ServerCloudObject, StringModel};
+use crate::legacy_stubs::{GenericStringModel, JsonModel};
 /// Data model for a workflow enum, one type of argument that can be inserted into a workflow
 /// A workflow enum can either be static or dynamic, as determined by the type of `EnumVariants` it uses
 ///

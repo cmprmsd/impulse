@@ -12,6 +12,7 @@ use warp_terminal::model::{
 use crate::terminal::{model::grid::Cursor, SizeInfo};
 
 use super::{FullGridClearBehavior, GridHandler};
+use pathfinder_geometry::vector::Vector2F;
 
 impl GridHandler {
     /// Resize terminal to new dimensions.

@@ -43,6 +43,8 @@ use warpui::{Action};
 use crate::legacy_stubs::{ServerApiProvider};
 use crate::legacy_stubs::{ConversationStatus, ServerConversationToken, TaskId};
 use crate::legacy_stubs::CloudConversationData;
+use crate::legacy_stubs::{ServerAIConversationMetadata};
+use crate::ui_components::icons::Icon;
 
 mod conversation_loader;
 pub use conversation_loader::{

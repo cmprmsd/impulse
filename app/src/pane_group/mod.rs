@@ -143,6 +143,7 @@ use crate::legacy_stubs::{AgentConversationEntryId, AmbientAgentTaskId, Anonymou
 use crate::legacy_stubs::{AIConversation, AIConversationId, CloudConversationData, ServerConversationToken};
 use crate::legacy_stubs::{ServerApi};
 use crate::legacy_stubs::{AIAgentHarness};
+use crate::legacy_stubs::{PaneTemplateType};
 
 mod child_agent;
 pub mod focus_state;

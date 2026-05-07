@@ -2,6 +2,7 @@ use crate::legacy_stubs::{AgentModeEntrypoint, AmbientAgentTaskId, AnonymousUser
 use crate::legacy_stubs::{AIConversation, AIConversationId, AgentViewController, ServerConversationToken};
 use crate::terminal::CustomSecretRegexUpdater::redact_secrets;
 use crate::legacy_stubs::{AgentToolbarItemKind, ConversationStatus};
+use crate::ui_components::blended_colors::neutral_2;
 mod action;
 mod block_banner;
 pub mod block_onboarding;

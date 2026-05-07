@@ -26,6 +26,7 @@ use crate::terminal::input::SET_INPUT_MODE_TERMINAL_ACTION_NAME;
 use crate::terminal::model::TerminalModel;
 use crate::terminal::view::init::SELECT_PREVIOUS_BLOCK_ACTION_NAME;
 use crate::util::bindings::keybinding_name_to_keystroke;
+use crate::legacy_stubs::{MessageProvider};
 
 /// Renders contextual hint text at the bottom of the terminal input when `FeatureFlag::AgentView`
 /// is enabled.

@@ -8,6 +8,7 @@ use crate::legacy_stubs::{QueueItem};
 use crate::legacy_stubs::{GenericStringObjectFormat, GenericStringObjectId, JsonObjectType, Revision};
 use crate::legacy_stubs::{GenericCloudObject, GenericStringObjectUniqueKey, JsonSerializer, ServerCloudObject, StringModel, WarpDriveItem};
 use crate::terminal::shell::ShellType;
+use crate::legacy_stubs::{GenericStringModel, JsonModel};
 
 pub mod active_env_var_collection_data;
 pub mod env_var_collection_block;

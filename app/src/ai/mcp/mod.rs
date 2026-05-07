@@ -23,6 +23,7 @@ use crate::legacy_stubs::{QueueItem};
 use crate::legacy_stubs::{GenericStringObjectFormat, GenericStringObjectId, JsonObjectType, Revision};
 use crate::legacy_stubs::{CloudModel};
 use crate::legacy_stubs::{GenericCloudObject, GenericStringObjectUniqueKey, JsonSerializer, ServerCloudObject, StringModel};
+use crate::legacy_stubs::{GenericStringModel, JsonModel};
 
 pub mod manager;
 pub mod templatable_manager;

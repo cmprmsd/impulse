@@ -72,6 +72,7 @@ use warpui::{
         ScrollStateHandle, Shrinkable, Stack,
     },
 };
+use pathfinder_geometry::vector::Vector2F;
 
 mod actions;
 pub use actions::init;

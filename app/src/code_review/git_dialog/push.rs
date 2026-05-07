@@ -30,6 +30,7 @@ use crate::{
 use warp_core::send_telemetry_from_ctx;
 use warpui::{ViewContext};
 use warpui::platform::{Cursor};
+use crate::ui_components::icons::Icon;
 
 /// Push-specific sub-actions, dispatched wrapped in `GitDialogAction::Push`.
 #[derive(Clone, Debug, PartialEq)]

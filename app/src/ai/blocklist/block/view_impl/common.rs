@@ -120,6 +120,7 @@ use warpui::elements::{Highlight, HighlightedRange};
 use warpui::{Action, AppContext, Element, EventContext, View, ViewHandle};
 use crate::legacy_stubs::{UserWorkspaces};
 use crate::terminal::TerminalModel;
+use crate::legacy_stubs::{DetectedLinksState};
 
 pub const STATUS_ICON_SIZE_DELTA: f32 = 4.;
 pub const STATUS_FOOTER_VERTICAL_PADDING: f32 = 4.;

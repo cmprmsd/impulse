@@ -75,6 +75,7 @@ use warpui::{AppContext, Entity, EntityId, ModelHandle, TypedActionView, View, V
 use warpui::ui_components::components::{UiComponentStyles};
 use crate::legacy_stubs::{BlocklistAIHistoryModel, UserWorkspaces};
 use crate::legacy_stubs::{AmbientAgentViewModel};
+use crate::legacy_stubs::{RenderableOptionConfig};
 
 pub enum AtContextMenuDisabledReason {
     #[cfg(target_family = "wasm")]

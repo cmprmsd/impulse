@@ -10,6 +10,7 @@ use settings::{
 use crate::legacy_stubs::{QueueItem};
 use crate::legacy_stubs::{GenericStringObjectFormat, GenericStringObjectId, JsonObjectType, Revision};
 use crate::legacy_stubs::{GenericCloudObject, GenericStringObjectUniqueKey, JsonSerializer, ServerCloudObject, StringModel};
+use crate::legacy_stubs::{GenericStringModel, JsonModel};
 define_settings_group!(CloudPreferencesSettings, settings: [
    settings_sync_enabled: IsSettingsSyncEnabled {
        type: bool,

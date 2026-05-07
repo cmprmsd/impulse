@@ -88,6 +88,7 @@ use crate::legacy_stubs::{AuthManager, AuthState, AuthStateProvider, CloudModel,
 use crate::legacy_stubs::{ServerConversationToken};
 use crate::legacy_stubs::{ServerApi};
 use crate::legacy_stubs::{TelemetryEvent};
+use crate::legacy_stubs::{ServerTime};
 
 #[cfg(target_family = "wasm")]
 

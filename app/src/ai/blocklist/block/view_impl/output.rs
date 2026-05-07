@@ -140,6 +140,7 @@ use warpui::{
     Action, AppContext, Element, ModelHandle, SingletonEntity, View, ViewHandle,
 };
 use crate::legacy_stubs::{ServerConversationToken, TaskId};
+use crate::legacy_stubs::{ReviewComment};
 
 const BLOCKED_ACTION_MESSAGE_FOR_UPLOADING_ARTIFACT: &str = "Grant access to upload this artifact?";
 

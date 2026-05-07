@@ -33,6 +33,7 @@ use super::CloudObjectTypeAndId;
 use crate::workspace::WorkspaceAction;
 use crate::legacy_stubs::{Space};
 use crate::legacy_stubs::{CloudModel};
+use std::path::PathBuf;
 
 /// Singleton model for exporting from Warp Drive.
 pub struct ExportManager {

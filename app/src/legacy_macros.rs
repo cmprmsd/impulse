@@ -79,3 +79,32 @@ macro_rules! send_telemetry_on_executor {
 macro_rules! send_telemetry_sync_from_app_ctx {
     ($($arg:tt)*) => { () };
 }
+
+/// `id!("FooView")` re-export from `warpui::keymap::macros::id`.
+/// Made crate-wide via `#[macro_use]` instead of per-file
+/// `use warpui::keymap::macros::id;` in scope.
+#[macro_export]
+macro_rules! id {
+    ($val:literal) => {
+        warpui::keymap::ContextPredicate::Identifier($val)
+    };
+    ($val:expr) => {
+        warpui::keymap::ContextPredicate::Identifier($val)
+    };
+}
+
+/// `eq!("key", "value")` re-export.
+#[macro_export]
+macro_rules! eq {
+    ($a:literal, $b:literal) => {
+        warpui::keymap::ContextPredicate::Equal($a, $b)
+    };
+}
+
+/// `ne!("key", "value")` re-export.
+#[macro_export]
+macro_rules! ne {
+    ($a:literal, $b:literal) => {
+        warpui::keymap::ContextPredicate::NotEqual($a, $b)
+    };
+}

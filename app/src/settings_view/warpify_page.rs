@@ -43,6 +43,7 @@ use super::{
 use crate::view_components::dropdown::{Dropdown, DropdownItem};
 use warpui::{Action, AppContext, Element, Entity, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
 use crate::legacy_stubs::{SettingsAction, TelemetryEvent, ToggleSettingActionPair, WarpifySettings};
+use crate::legacy_stubs::{SubmittableTextInput};
 
 pub fn init_actions_from_parent_view<T: Action + Clone>(
     app: &mut AppContext,

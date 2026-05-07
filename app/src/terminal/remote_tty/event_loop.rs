@@ -11,6 +11,7 @@ use std::sync::Arc;
 use warpui::{Entity, ModelContext, SingletonEntity};
 use websocket::{Message, Sink, Stream, WebSocket, WebsocketMessage as _};
 use crate::terminal::TerminalModel;
+use crate::legacy_stubs::{SizeInfo};
 
 const CREATE_SESSION_ENDPOINT: &str = "ws://127.0.0.1:3030/create";
 

@@ -47,6 +47,7 @@ use std::{
 };
 use warp_core::channel::ChannelState;
 use warpui::{AppContext, SingletonEntity};
+use std::path::PathBuf;
 
 /// Get raw fds for leader/follower ends of a new PTY.
 fn make_pty(size: winsize) -> Result<(RawFd, RawFd)> {
