@@ -37,7 +37,11 @@ use warp_util::standardized_path::StandardizedPath;
 use warpui::keymap::Keystroke;
 
 use super::malformed_line_heuristics::has_malformed_terminal_correction_signal;
-use crate::view_components::action_button::{ActionButton, NakedTheme};
+use crate::view_components::action_button::{ActionButton, ButtonSize, KeystrokeSource, NakedTheme};
+use crate::view_components::compactible_action_button::{
+    CompactibleActionButton, RenderCompactibleActionButton,
+};
+use crate::ui_components::icons::Icon;
 // use crate::{  // unresolved (cloud detach)
 //     ai::{
 //         agent::{
