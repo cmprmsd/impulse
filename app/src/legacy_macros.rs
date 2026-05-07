@@ -82,14 +82,15 @@ macro_rules! send_telemetry_sync_from_app_ctx {
 
 /// `id!("FooView")` re-export from `warpui::keymap::macros::id`.
 /// Made crate-wide via `#[macro_use]` instead of per-file
-/// `use warpui::keymap::macros::id;` in scope.
+/// `use warpui::keymap::macros::id;` in scope. Uses absolute paths so
+/// callers don't need ContextPredicate in their local scope.
 #[macro_export]
 macro_rules! id {
     ($val:literal) => {
-        warpui::keymap::ContextPredicate::Identifier($val)
+        ::warpui::keymap::ContextPredicate::Identifier($val)
     };
     ($val:expr) => {
-        warpui::keymap::ContextPredicate::Identifier($val)
+        ::warpui::keymap::ContextPredicate::Identifier($val)
     };
 }
 
@@ -97,7 +98,7 @@ macro_rules! id {
 #[macro_export]
 macro_rules! eq {
     ($a:literal, $b:literal) => {
-        warpui::keymap::ContextPredicate::Equal($a, $b)
+        ::warpui::keymap::ContextPredicate::Equal($a, $b)
     };
 }
 
@@ -105,6 +106,6 @@ macro_rules! eq {
 #[macro_export]
 macro_rules! ne {
     ($a:literal, $b:literal) => {
-        warpui::keymap::ContextPredicate::NotEqual($a, $b)
+        ::warpui::keymap::ContextPredicate::NotEqual($a, $b)
     };
 }
