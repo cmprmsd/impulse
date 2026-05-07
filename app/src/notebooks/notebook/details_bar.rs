@@ -10,18 +10,12 @@ use warpui::{
 
 use crate::{
     appearance::Appearance,
-    cloud_object::{
-        breadcrumbs::ContainingObject,
-        model::view::{Editor, EditorState},
-    },
-    drive::sharing::ContentEditability,
     notebooks::{active_notebook_data::Mode, styles},
     ui_components::{
         breadcrumb::{render_breadcrumbs, BreadcrumbState},
         buttons::{accent_icon_button, icon_button},
         icons::Icon,
-    },
-};
+    }};
 
 use super::{super::active_notebook_data::ActiveNotebookData, NotebookAction, EDIT_BUTTON_MARGIN};
 use warpui::{AppContext, Element};

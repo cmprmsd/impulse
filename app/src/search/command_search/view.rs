@@ -25,10 +25,6 @@ use crate::{
         execution_context::WarpAiExecutionContext, GenerateCommandsFromNaturalLanguageError,
     },
     appearance::Appearance,
-    auth::{
-        auth_manager::AuthManager, auth_state::AuthState, auth_view_modal::AuthViewVariant,
-        AuthStateProvider, UserUid,
-    },
     completer::SessionContext,
     drive::settings::WarpDriveSettings,
     search::{
@@ -38,15 +34,13 @@ use crate::{
         QueryFilter,
     },
     send_telemetry_from_ctx,
-    server::{ids::ServerId, server_api::ai::AIClient, telemetry::TelemetryEvent},
     settings::AISettings,
     terminal::{
         input::MenuPositioning,
         model::session::SessionId,
         resizable_data::{ModalType, ResizableData, DEFAULT_UNIVERSAL_SEARCH_WIDTH},
         History, HistoryEvent,
-    },
-};
+    }};
 
 use super::{
     ai_queries::AIQueriesDataSource,

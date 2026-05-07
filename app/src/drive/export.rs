@@ -21,16 +21,13 @@ use warpui::{
 };
 
 use crate::{
-    cloud_object::{model::persistence::CloudModel, Space},
     safe_warn,
     view_components::DismissibleToast,
-    workspace::{active_terminal_in_window, ToastStack},
-};
+    workspace::{active_terminal_in_window, ToastStack}};
 #[cfg(feature = "local_fs")]
 use crate::{
-    notebooks::export_notebook, server::cloud_objects::update_manager::get_duplicate_object_name,
-    view_components::ToastLink, workflows::export_workflow::export_serialize,
-};
+    notebooks::export_notebook,
+    view_components::ToastLink, workflows::export_workflow::export_serialize};
 
 use super::CloudObjectTypeAndId;
 use crate::workspace::WorkspaceAction;

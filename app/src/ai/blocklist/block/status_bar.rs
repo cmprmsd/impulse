@@ -10,25 +10,18 @@ use super::{
     },
 };
 use crate::{
-    ai::agent_tips::AITipModel,
     terminal::{
         input::buffer_model::InputBufferUpdateEvent,
         view::ambient_agent::is_cloud_agent_pre_first_exchange,
-    },
-};
+    }};
 use crate::{
-    ai::blocklist::agent_view::{
-        agent_view_bg_fill, child_agent_status_card::ChildAgentStatusCard, AgentMessageBar,
-        AgentViewController, EphemeralMessageModel,
-    },
     terminal::input::{
         buffer_model::InputBufferModel,
         message_bar::common::render_standard_message_bar,
         message_bar::{Message, MessageItem},
         slash_command_model::SlashCommandModel,
         suggestions_mode_model::InputSuggestionsModeModel,
-    },
-};
+    }};
 
 use crate::{
     ai::{
@@ -51,7 +44,6 @@ use crate::{
         AgentTip,
     },
     send_telemetry_from_app_ctx,
-    server::telemetry::TelemetryEvent,
     settings::{InputModeSettings, InputSettings},
     settings_view::keybindings::KeybindingChangedNotifier,
     terminal::{
@@ -62,8 +54,7 @@ use crate::{
         warpify::render::LEFT_STRIPE_WIDTH,
         TerminalModel, CANCEL_COMMAND_KEYBINDING, TOGGLE_AUTOEXECUTE_MODE_KEYBINDING,
         TOGGLE_HIDE_CLI_RESPONSES_KEYBINDING, TOGGLE_QUEUE_NEXT_PROMPT_KEYBINDING,
-    },
-};
+    }};
 use instant::Instant;
 use parking_lot::FairMutex;
 use pathfinder_color::ColorU;

@@ -1,9 +1,6 @@
 use warpui::{App, SingletonEntity};
 
-use crate::{
-    auth::UserUid,
-    workspaces::user_profiles::{UserProfileWithUID, UserProfiles},
-};
+use crate::{};
 
 use super::editor_display_name;
 

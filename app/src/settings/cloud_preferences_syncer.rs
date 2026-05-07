@@ -14,29 +14,13 @@ use warpui::{Entity, ModelContext, SingletonEntity};
 use warpui_extras::user_preferences::toml_backed::TomlBackedUserPreferences;
 
 use crate::{
-    auth::auth_state::AuthState,
-    cloud_object::{
-        model::{
-            generic_string_model::GenericStringObjectId, json_model::JsonSerializer,
-            persistence::CloudModel,
-        },
-        CloudObjectEventEntrypoint, GenericStringObjectFormat, JsonObjectType,
-    },
     debounce::debounce,
     drive::CloudObjectTypeAndId,
     report_if_error,
-    server::{
-        cloud_objects::update_manager::{
-            GenericStringObjectInput, InitiatedBy, UpdateManager, UpdateManagerEvent,
-        },
-        ids::{ClientId, SyncId},
-        sync_queue::{SyncQueue, SyncQueueEvent},
-    },
     settings::{
         cloud_preferences::{CloudPreference, CloudPreferenceModel, Platform, Preference},
         manager::SettingsManager,
-    },
-};
+    }};
 
 use warp_core::execution_mode::AppExecutionMode;
 

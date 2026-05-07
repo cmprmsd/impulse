@@ -1,10 +1,7 @@
 use std::sync::Arc;
 
 use crate::{
-    auth::AuthStateProvider,
-    safe_info,
-    server::server_api::referral::{ReferralInfo, ReferralsClient},
-};
+    safe_info};
 use serde::{Deserialize, Serialize};
 use warp_core::user_preferences::GetUserPreferences as _;
 use warpui::{Entity, ModelContext, SingletonEntity};

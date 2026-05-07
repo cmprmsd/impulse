@@ -4,7 +4,6 @@ use warpui::{rendering::GPUPowerPreference, AppContext, SingletonEntity};
 use warpui_extras::user_preferences;
 
 use crate::{
-    ai::cloud_agent_settings::CloudAgentSettings,
     appearance,
     banner::BannerState,
     drive::settings::WarpDriveSettings,
@@ -22,8 +21,7 @@ use crate::{
         shared_session::settings::SharedSessionSettings,
         warpify::settings::WarpifySettings,
         BlockListSettings,
-    },
-};
+    }};
 
 use warp_core::semantic_selection::SemanticSelection;
 

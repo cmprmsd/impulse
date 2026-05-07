@@ -9,9 +9,6 @@ use super::{
     },
 };
 use crate::{
-    ai::persisted_workspace::{
-        EnablementState, LspRepoStatus, PersistedWorkspace, PersistedWorkspaceEvent,
-    },
     appearance::Appearance,
     code::lsp_telemetry::{LspControlActionType, LspEnablementSource, LspTelemetryEvent},
     send_telemetry_from_ctx,
@@ -27,12 +24,7 @@ use crate::{
         DismissibleToast,
     },
     workspace::tab_settings::TabSettings,
-    workspace::ToastStack,
-    workspaces::{
-        update_manager::TeamUpdateManager, user_workspaces::UserWorkspaces,
-        workspace::AdminEnablementSetting,
-    },
-};
+    workspace::ToastStack};
 use ai::project_context::model::{ProjectContextModel, ProjectContextModelEvent};
 use ai::workspace::WorkspaceMetadata;
 use lsp::supported_servers::LSPServerType;

@@ -4,13 +4,11 @@ use super::{
 use crate::{
     app_state::{LeafContents, WorkflowPaneSnapshot},
     drive::{items::WarpDriveItemId, OpenWarpDriveObjectSettings},
-    server::ids::SyncId,
     workflows::{
         manager::{WorkflowManager, WorkflowOpenSource},
         workflow_view::{WorkflowView, WorkflowViewEvent},
         WorkflowSelectionSource, WorkflowSource, WorkflowType, WorkflowViewMode,
-    },
-};
+    }};
 use anyhow::Context;
 use std::{collections::HashMap, sync::Arc};
 use url::Url;

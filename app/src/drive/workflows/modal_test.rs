@@ -5,15 +5,10 @@ use std::sync::Arc;
 
 use super::WorkflowModal;
 use crate::{
-    cloud_object::model::persistence::CloudModel,
     editor::PlainTextEditorViewAction as EditorAction,
-    server::server_api::team::MockTeamClient,
-    server::server_api::workspace::MockWorkspaceClient,
-    server::server_api::ServerApiProvider,
     settings_view::keybindings::KeybindingChangedNotifier,
     test_util::settings::initialize_settings_for_tests,
-    workflows::workflow::{Argument, Workflow},
-};
+    workflows::workflow::{Argument, Workflow}};
 
 fn initialize_app(app: &mut App) {
     initialize_settings_for_tests(app);

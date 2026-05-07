@@ -16,15 +16,12 @@ use string_offset::CharOffset;
 use crate::util::color::coloru_with_opacity;
 use crate::workflows::WorkflowType;
 use crate::{
-    ai::blocklist::ai_brand_color, server::ids::SyncId, settings::InputModeSettings,
+    ai::blocklist::ai_brand_color, settings::InputModeSettings,
     terminal::block_list_viewport::InputMode, ui_components::icons,
-    view_components::FilterableDropdownOrientation, workspace::WorkspaceAction,
-};
+    view_components::FilterableDropdownOrientation, workspace::WorkspaceAction};
 use crate::{
-    appearance::Appearance,
-    cloud_object::{model::actions::ObjectActions, CloudObjectMetadataExt},
-};
-use crate::{cloud_object::model::actions::ObjectActionType, terminal::view::TerminalAction};
+    appearance::Appearance};
+use crate::{ terminal::view::TerminalAction};
 use crate::{terminal::input::InputAction, ui_components::buttons::icon_button};
 
 use warpui::color::ColorU;

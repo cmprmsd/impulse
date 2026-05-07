@@ -14,11 +14,6 @@ use warpui::{
 
 use crate::{
     ai::blocklist::block::secret_redaction::find_secrets_in_text_with_levels,
-    cloud_object::{
-        breadcrumbs::ContainingObject,
-        model::persistence::{CloudModel, CloudModelEvent},
-        CloudObjectEventEntrypoint, Owner,
-    },
     drive::{
         items::WarpDriveItemId,
         sharing::{ContentEditability, ShareableObject},
@@ -32,7 +27,6 @@ use crate::{
         CloudEnvVarCollection, CloudEnvVarCollectionModel, EnvVar, EnvVarCollection,
         EnvVarCollectionType, EnvVarValue,
     },
-    external_secrets::SecretManager,
     menu::MenuItem,
     network::{NetworkStatus, NetworkStatusEvent},
     pane_group::{
@@ -40,10 +34,6 @@ use crate::{
     },
     search::external_secrets::view::ExternalSecretsMenu,
     send_telemetry_from_ctx,
-    server::{
-        cloud_objects::update_manager::{FetchSingleObjectOption, UpdateManager},
-        ids::{ServerId, SyncId},
-    },
     terminal::{model::secrets::SecretLevel, safe_mode_settings::get_secret_obfuscation_mode},
     ui_components::{
         breadcrumb::{render_breadcrumbs, BreadcrumbState},
@@ -52,8 +42,7 @@ use crate::{
         menu_button::{
             highlight_icon_button_with_context_menu, icon_button_with_context_menu, MenuDirection,
         },
-    },
-};
+    }};
 
 use super::{command_dialog::EnvVarCommandDialog, menus::Menus};
 use warpui::{AppContext, BlurContext, Element, Entity, FocusContext, ModelHandle, TypedActionView, View, ViewContext, ViewHandle, WindowId};

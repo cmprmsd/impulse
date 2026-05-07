@@ -16,18 +16,12 @@ use warpui::{
     },
 };
 
-use crate::{
-    cloud_object::{
-        model::{persistence::CloudModel, view::CloudViewModel},
-        CloudObject, CloudObjectMetadataExt, Owner,
-    },
-};
+use crate::{};
 
 use crate::workspace::header_toolbar_item::HeaderToolbarItemKind;
 use crate::workspace::tab_settings::TabSettings;
 use crate::{
     appearance::Appearance,
-    cloud_object::Space,
     drive::{
         index::{
             DriveIndexAction, AUTOSCROLL_DETECTION_DISTANCE, AUTOSCROLL_SPEED_MULTIPLIER,
@@ -44,9 +38,8 @@ use crate::{
             highlight_icon_button_with_context_menu_drive, icon_button_with_context_menu_drive,
             MenuDirection,
         },
-    },
-};
-use crate::{cloud_object::CloudObjectLocation, drive::items::WarpDriveItem};
+    }};
+use crate::{ drive::items::WarpDriveItem};
 
 use super::WarpDriveItemId;
 use warpui::{AppContext, Element, ViewHandle};

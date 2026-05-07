@@ -15,16 +15,11 @@ use warpui::{App, ModelHandle};
 use websocket::{Message, WebsocketMessage as _};
 
 use crate::{
-    auth::{auth_manager::AuthManager, AuthStateProvider},
     editor::ReplicaId,
-    server::{
-        server_api::ServerApiProvider, telemetry::context_provider::AppTelemetryContextProvider,
-    },
     terminal::{
         shared_session::{SharedSessionScrollbackType, MAX_BYTES_SHAREABLE},
         TerminalModel,
-    },
-};
+    }};
 
 use super::{Network, PtyBytesBatchStatus, Stage};
 

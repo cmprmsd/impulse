@@ -10,10 +10,8 @@ use crate::{
     appearance::Appearance,
     editor::{EditorView, Event as EditorEvent, SingleLineEditorOptions, TextOptions},
     report_if_error, send_telemetry_from_ctx,
-    server::telemetry::TelemetryEvent,
     settings_view::features_page::render_group,
-    terminal::session_settings::*,
-};
+    terminal::session_settings::*};
 
 #[derive(Clone, Debug)]
 #[allow(clippy::enum_variant_names)]

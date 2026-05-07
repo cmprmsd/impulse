@@ -3,7 +3,6 @@ use super::{
     settings_page::{render_input_list, InputListItem},
 };
 use crate::{
-    ai::ambient_agents::telemetry::CloudAgentTelemetryEvent,
     ai::{
         ambient_agents::github_auth_notifier::{GitHubAuthEvent, GitHubAuthNotifier},
         cloud_environments::{AmbientAgentEnvironment, GithubRepo},
@@ -14,14 +13,12 @@ use crate::{
         TextOptions,
     },
     root_view::CreateEnvironmentArg,
-    server::ids::SyncId,
     ui_components::{buttons::icon_button, icons::Icon},
     view_components::{
         action_button::{ActionButton, DangerSecondaryTheme, PrimaryTheme},
         render_warning_box, SubmittableTextInput, SubmittableTextInputEvent,
         WarningBoxButtonConfig, WarningBoxConfig,
-    },
-};
+    }};
 use instant::{Duration, Instant};
 use log::debug;
 #[cfg(not(target_family = "wasm"))]

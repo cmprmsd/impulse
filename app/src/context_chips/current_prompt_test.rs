@@ -20,7 +20,6 @@ use crate::code_review::git_status_update::{GitRepoStatusModel, GitStatusMetadat
 #[cfg(windows)]
 use crate::system::SystemInfo;
 use crate::{
-    auth::{auth_manager::AuthManager, AuthStateProvider},
     context_chips::{
         context_chip::{ChipFingerprintInput, Environment},
         prompt::Prompt,
@@ -28,9 +27,6 @@ use crate::{
     },
     features::FeatureFlag,
     menu::MenuItem,
-    server::{
-        server_api::ServerApiProvider, telemetry::context_provider::AppTelemetryContextProvider,
-    },
     settings::WarpPromptSeparator,
     terminal::{
         model::{
@@ -41,8 +37,7 @@ use crate::{
         shell::Shell,
         view::PromptPosition,
         History,
-    },
-};
+    }};
 #[cfg(feature = "local_fs")]
 use repo_metadata::DirectoryWatcher;
 use warp_completer::completer::{CommandExitStatus, CommandOutput};

@@ -8,9 +8,7 @@ use crate::{
     appearance::Appearance,
     channel::{Channel, ChannelState},
     menu::{Event as MenuEvent, Event, Menu, MenuItem, MenuItemFields},
-    server::{block::Block, server_api::block::BlockClient},
-    view_components::ToastFlavor,
-};
+    view_components::ToastFlavor};
 use anyhow::Result;
 use chrono::{DateTime, FixedOffset, Local};
 use pathfinder_geometry::vector::vec2f;

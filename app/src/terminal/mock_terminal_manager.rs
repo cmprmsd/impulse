@@ -136,12 +136,10 @@ mod testing {
     use warpui::{platform::WindowStyle, App, Element, SingletonEntity};
 
     use crate::{
-        server::server_api::ServerApiProvider,
         terminal::{
             shell::{ShellName, ShellType},
             ShellLaunchState,
-        },
-    };
+        }};
 
     use super::*;
 

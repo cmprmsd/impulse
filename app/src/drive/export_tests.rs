@@ -11,12 +11,7 @@ use tempfile::TempDir;
 use warp_util::path::ShellFamily;
 use warpui::{AddSingletonModel, App, SingletonEntity, WindowId};
 
-use crate::{
-    cloud_object::{
-        model::persistence::CloudModel, CloudObjectMetadata, CloudObjectPermissions, ObjectIdType,
-        ObjectType, Space,
-    },
-};
+use crate::{};
 
 use super::{safe_filename, ExportEvent, ExportId, ExportManager};
 

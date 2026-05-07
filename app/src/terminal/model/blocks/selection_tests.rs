@@ -2,7 +2,6 @@ use float_cmp::assert_approx_eq;
 use warpui::App;
 
 use crate::{
-    ai::blocklist::agent_view::AgentViewState,
     terminal::{
         event_listener::ChannelEventListener,
         model::{
@@ -13,8 +12,7 @@ use crate::{
             },
             test_utils,
         },
-    },
-};
+    }};
 
 use super::*;
 

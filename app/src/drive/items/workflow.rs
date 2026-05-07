@@ -7,12 +7,7 @@ use warpui::{
 };
 
 use crate::{
-    appearance::Appearance,
-    cloud_object::{
-        model::actions::{ObjectActionType, ObjectActions},
-        CloudObjectMetadata,
-    },
-};
+    appearance::Appearance};
 
 use super::{WarpDriveItem, WarpDriveItemId};
 use crate::legacy_stubs::{CloudObjectTypeAndId, DriveObjectType};

@@ -16,10 +16,6 @@ use warpui::{
 };
 
 use crate::{
-    ai::blocklist::agent_view::{
-        AgentViewController, AgentViewControllerEvent, ENTER_AGENT_VIEW_NEW_CONVERSATION_KEYSTROKE,
-        ENTER_CLOUD_AGENT_VIEW_NEW_CONVERSATION_KEYSTROKE,
-    },
     appearance::Appearance,
     settings::{AISettings, AISettingsChangedEvent, InputModeSettings},
     terminal::{
@@ -29,8 +25,7 @@ use crate::{
         model_events::{ModelEvent, ModelEventDispatcher},
         settings::{TerminalSettings, TerminalSettingsChangedEvent},
         view::TerminalAction,
-    },
-};
+    }};
 use warpui::{AppContext, Element, Entity, ModelHandle, TypedActionView, View, ViewContext};
 use crate::workspace::WorkspaceAction;
 

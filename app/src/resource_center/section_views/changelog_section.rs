@@ -15,7 +15,7 @@ use crate::{
     themes::theme::Fill,
     ui_components::icons,
 };
-use crate::{send_telemetry_from_ctx, server::telemetry::TelemetryEvent};
+use crate::{send_telemetry_from_ctx};
 
 use super::{feature_section::FeatureSection, SectionAction, SectionView};
 use warpui::{AppContext, Entity, ModelHandle, TypedActionView, View, ViewContext};

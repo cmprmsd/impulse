@@ -3,23 +3,13 @@ use warpui::{platform::WindowStyle, App};
 
 use crate::{
     ai::blocklist::BlocklistAIHistoryModel,
-    auth::{auth_manager::AuthManager, AuthStateProvider},
-    cloud_object::{
-        model::{persistence::CloudModel, view::CloudViewModel},
-        Space,
-    },
     drive::index::DriveIndexSection,
     network::NetworkStatus,
-    server::{
-        cloud_objects::update_manager::UpdateManager, server_api::ServerApiProvider,
-        sync_queue::SyncQueue, telemetry::context_provider::AppTelemetryContextProvider,
-    },
     settings_view::keybindings::KeybindingChangedNotifier,
     terminal::{
         resizable_data::ResizableData,
         shared_session::permissions_manager::SessionPermissionsManager,
-    },
-};
+    }};
 
 use super::DrivePanel;
 

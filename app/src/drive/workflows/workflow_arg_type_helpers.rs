@@ -3,14 +3,11 @@ use std::collections::HashMap;
 use warpui::{AppContext, SingletonEntity, ViewHandle};
 
 use crate::{
-    cloud_object::{model::persistence::CloudModel, CloudObjectEventEntrypoint, Owner},
     editor::EditorView,
-    server::{cloud_objects::update_manager::UpdateManager, ids::SyncId},
     workflows::{
         workflow::{Argument, ArgumentType},
         workflow_enum::WorkflowEnum,
-    },
-};
+    }};
 
 use super::{
     enum_creation_dialog::{EnumCreationDialog, WorkflowEnumData},

@@ -55,11 +55,9 @@ use crate::util::openable_file_type::{
 use crate::{
     appearance::Appearance,
     menu::{Menu, MenuItem, MenuItemFields},
-    server::telemetry::TelemetryEvent,
     ui_components::icons::Icon,
     view_components::DismissibleToast,
-    workspace::ToastStack,
-};
+    workspace::ToastStack};
 use warp_core::features::FeatureFlag;
 use warp_core::ui::theme::{color::internal_colors, Fill};
 use warp_core::HostId;

@@ -8,14 +8,12 @@ use repo_metadata::repositories::DetectedRepositories;
 use warpui::{Entity, ModelContext, SingletonEntity as _};
 
 use crate::{
-    ai::persisted_workspace::PersistedWorkspace,
     settings::CodeSettings,
     terminal::view::init_project::{
         lsp_server_selector::LSPServerInfo, CodebaseIndexingResult, CreateEnvironmentResult,
         InitActionResult, LanguageServersResult, ProjectScopedRulesResult, FILES_TO_CHECK,
         LINKABLE_FILES,
-    },
-};
+    }};
 use crate::legacy_stubs::{CodebaseIndexManager, UserWorkspaces};
 
 const INIT_STEP_COUNT: usize = enum_iterator::cardinality::<InitStepKind>();

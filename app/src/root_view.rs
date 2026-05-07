@@ -45,15 +45,9 @@ use crate::{
     autoupdate::{RequestType, UpdateReady},
     changelog_model::ChangelogRequestType,
     pane_group::{NewTerminalOptions, PanesLayout},
-    send_telemetry_from_ctx,
-    server::{server_api::ServerTime, telemetry::TelemetryEvent},
-};
+    send_telemetry_from_ctx};
 use crate::{
-    auth::auth_override_warning_modal::{AuthOverrideWarningModal, AuthOverrideWarningModalEvent},
-    auth::auth_view_modal::{AuthView, AuthViewVariant},
-    server::server_api::ServerApi,
-    workspace::{view::OnboardingTutorial, PaneViewLocator, Workspace, WorkspaceRegistry},
-};
+    workspace::{view::OnboardingTutorial, PaneViewLocator, Workspace, WorkspaceRegistry}};
 use crate::{features::FeatureFlag, ChannelState};
 use crate::{send_telemetry_from_app_ctx, GlobalResourceHandles, GlobalResourceHandlesProvider};
 use anyhow::Result;

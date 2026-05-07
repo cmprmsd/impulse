@@ -13,14 +13,8 @@ use super::{
 };
 use crate::{
     appearance::Appearance,
-    auth::AuthStateProvider,
     editor::{EditorView, Event as EditorEvent, SingleLineEditorOptions, TextOptions},
-    safe_info, send_telemetry_from_ctx,
-    server::{
-        server_api::referral::{ReferralInfo, ReferralsClient},
-        telemetry::TelemetryEvent,
-    },
-};
+    safe_info, send_telemetry_from_ctx};
 use warpui::{
     clipboard::ClipboardContent,
     elements::{

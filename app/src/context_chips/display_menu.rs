@@ -7,19 +7,15 @@ use instant::Instant;
 use pathfinder_geometry::vector::vec2f;
 
 use crate::{
-    ai::cloud_environments::CloudAmbientAgentEnvironment,
-    cloud_object::model::generic_string_model::StringModel,
     editor::{
         EditorOptions, EditorView, Event as EditorEvent, PropagateAndNoOpNavigationKeys,
         TextOptions,
     },
-    server::ids::{ClientId, HashableId, ServerId, SyncId},
     ui_components::icons::Icon,
     view_components::copyable_text_field::{
         render_copyable_text_field, CopyButtonPlacement, CopyableTextFieldConfig,
         COPY_FEEDBACK_DURATION,
-    },
-};
+    }};
 use fuzzy_match::{match_indices_case_insensitive, FuzzyMatchResult};
 use warp_core::ui::theme::color::internal_colors;
 use warp_core::ui::{appearance::Appearance, builder::MIN_FONT_SIZE, theme::Fill};

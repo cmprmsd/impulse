@@ -34,13 +34,8 @@ use crate::{
         },
     },
     banner::{Banner, BannerTextContent},
-    cloud_object::{CloudObject, Space},
     code::editor::view::{CodeEditorRenderOptions, CodeEditorView},
     persistence::ModelEvent,
-    server::{
-        cloud_objects::update_manager::InitiatedBy,
-        telemetry::{MCPTemplateCreationSource, TelemetryEvent},
-    },
     settings_view::mcp_servers::{
         destructive_mcp_confirmation_dialog::{
             DestructiveMCPConfirmationDialog, DestructiveMCPConfirmationDialogEvent,
@@ -52,8 +47,7 @@ use crate::{
     view_components::{
         action_button::{ActionButton, DangerNakedTheme, DangerSecondaryTheme, PrimaryTheme},
         DismissibleToast,
-    },
-};
+    }};
 use warpui::{AppContext, Element, Entity, TypedActionView, View, ViewContext, ViewHandle};
 use warpui::platform::{Cursor};
 use crate::GlobalResourceHandlesProvider;

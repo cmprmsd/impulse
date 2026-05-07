@@ -2,12 +2,7 @@ use std::collections::HashMap;
 
 use anyhow::{anyhow, bail};
 use oauth2::{RefreshToken, TokenResponse as _};
-use rmcp::transport::{
-    auth::{
-        AuthClient, AuthorizationManager, CredentialStore, InMemoryCredentialStore,
-        OAuthClientConfig, OAuthState, OAuthTokenResponse, StoredCredentials,
-    },
-};
+use rmcp::transport::{};
 use serde::de::DeserializeOwned;
 use serde::{Deserialize, Serialize};
 use url::Url;

@@ -9,14 +9,11 @@ use warpui::{
 };
 
 use crate::{
-    cloud_object::model::persistence::CloudModel,
     drive::workflows::enum_creation_dialog::WorkflowEnumData,
     editor::{
         EditOrigin, EditorView, Event as EditorEvent, PropagateAndNoOpNavigationKeys,
         SingleLineEditorOptions, TextOptions,
-    },
-
-};
+    }};
 use warpui::{ViewHandle};
 use crate::legacy_stubs::{SyncId};
 /// Width of the argument editor in alias mode.

@@ -14,12 +14,10 @@ use warpui::{
 };
 
 use crate::{
-    drive::sharing::{ContentEditability, SharingAccessLevel},
     env_vars::{
         active_env_var_collection_data::TrashStatus,
         view::env_var_collection::{EnvVarCollectionAction, EnvVarCollectionView},
-    },
-};
+    }};
 use warpui::{AppContext, Element, ViewContext};
 use crate::appearance::Appearance;
 

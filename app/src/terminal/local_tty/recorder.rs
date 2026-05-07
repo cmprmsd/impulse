@@ -1,6 +1,4 @@
-use crate::{
-    auth::auth_state::AuthState, send_telemetry_on_executor, server::telemetry::TelemetryEvent,
-};
+use crate::{ send_telemetry_on_executor};
 use async_broadcast::Receiver;
 use futures_lite::StreamExt;
 use instant::{Duration, Instant};

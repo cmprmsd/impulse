@@ -6,14 +6,7 @@ use warpui::{
 
 use crate::{
     ai::facts::{view::AIFactPage, AIMemory},
-    cloud_object::{model::persistence::CloudModel, Space},
-    integration_testing::view_getters::workspace_view,
-    server::{
-        cloud_objects::update_manager::UpdateManager,
-        ids::{ClientId, SyncId},
-    },
-
-};
+    integration_testing::view_getters::workspace_view};
 /// Create a personal rule and save its sync ID into the step data.
 pub fn create_a_personal_rule(
     key: impl Into<String>,

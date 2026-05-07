@@ -27,10 +27,6 @@ use crate::{
         FileBasedMCPManager, MCPGalleryManager, MCPProvider, TemplatableMCPServerInstallation,
     },
     appearance::Appearance,
-    cloud_object::{
-        model::persistence::{CloudModel, CloudModelEvent},
-        GenericStringObjectFormat, JsonObjectType,
-    },
     drive::CloudObjectTypeAndId,
     editor::{EditorView, PropagateAndNoOpNavigationKeys, SingleLineEditorOptions, TextOptions},
     pane_group::Direction,
@@ -42,8 +38,7 @@ use crate::{
         style,
         update_modal::{UpdateModalBody, UpdateModalBodyEvent},
         ServerCardItemId,
-    },
-};
+    }};
 use markdown_parser::{FormattedText, FormattedTextFragment, FormattedTextLine};
 use settings::ToggleableSetting as _;
 use std::cmp::Ordering;

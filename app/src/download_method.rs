@@ -1,8 +1,5 @@
 use crate::{
-    auth::auth_state::AuthState,
-    send_telemetry_on_executor,
-    server::telemetry::{DownloadSource, TelemetryEvent},
-};
+    send_telemetry_on_executor};
 use std::sync::Arc;
 use warpui::r#async::executor::Background;
 

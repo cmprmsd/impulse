@@ -43,19 +43,12 @@ use crate::ui_components::buttons::icon_button;
 use crate::view_components::{Dropdown, DropdownItem};
 use crate::{
     appearance::Appearance,
-    auth::auth_manager::AuthManager,
     channel::ChannelState,
     report_if_error, send_telemetry_from_ctx,
-    server::telemetry::TelemetryEvent,
     settings::{AISettings, PrivacySettings},
     terminal::safe_mode_settings::{SafeModeEnabled, SafeModeSettings},
     ui_components::icons::Icon,
-    util::links::PRIVACY_POLICY_URL,
-    workspaces::{
-        user_workspaces::UserWorkspaces,
-        workspace::{AdminEnablementSetting, CustomerType, UgcCollectionEnablementSetting},
-    },
-};
+    util::links::PRIVACY_POLICY_URL};
 
 use super::{
     flags,

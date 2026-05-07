@@ -17,15 +17,13 @@ use warpui::{
 
 use crate::{
     appearance::Appearance,
-    cloud_object::{model::persistence::CloudModel, ObjectIdType, Space},
     drive::CloudObjectTypeAndId,
     menu::{self, Menu, MenuItemFields},
     notebooks::telemetry::EmbeddedObjectInfo,
     search::notebook_embedding::{
         searcher::EmbeddingSearchItemAction,
         view::{EmbeddingSearchEvent, EmbeddingSearchMenu},
-    },
-};
+    }};
 
 use super::{
     embedded_item::EmbeddedWorkflow,

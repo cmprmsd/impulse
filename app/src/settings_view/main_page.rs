@@ -10,13 +10,9 @@ use crate::autoupdate::{self, AutoupdateStage, AutoupdateState};
 use crate::send_telemetry_from_ctx;
 use crate::{
     appearance::Appearance,
-    auth::{auth_state::AuthState, auth_view_modal::AuthViewVariant},
     report_if_error,
-    settings::cloud_preferences::CloudPreferencesSettings,
-};
-use crate::{auth::auth_manager::AuthManager, server::ids::ServerId};
-use crate::{auth::auth_manager::LoginGatedFeature, workspaces::workspace::CustomerType};
-use crate::{workspace::WorkspaceAction, workspaces::update_manager::TeamUpdateManager};
+    settings::cloud_preferences::CloudPreferencesSettings};
+use crate::{workspace::WorkspaceAction};
 use ::settings::{Setting, ToggleableSetting};
 use lazy_static::lazy_static;
 use pathfinder_color::ColorU;

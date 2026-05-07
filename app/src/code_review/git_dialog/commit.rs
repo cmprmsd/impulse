@@ -32,13 +32,11 @@ use crate::{
         EditorOptions, EditorView, Event as EditorEvent, InteractionState,
         PropagateAndNoOpNavigationKeys, TextOptions,
     },
-    server::server_api::ServerApiProvider,
     ui_components::icons::Icon,
     util::git::{
         create_pr, get_diff_for_commit_message, get_file_change_entries, run_commit, run_push,
         FileChangeEntry, PrInfo,
-    },
-};
+    }};
 use warp_core::send_telemetry_from_ctx;
 use warpui::{AppContext, ViewContext, ViewHandle};
 

@@ -13,8 +13,7 @@ use warpui::{
 };
 
 use crate::{
-    appearance::Appearance, editor::EditorView, server::ids::SyncId, ui_components::blended_colors,
-};
+    appearance::Appearance, editor::EditorView, ui_components::blended_colors};
 
 use super::{index::DriveIndexAction, DriveObjectType};
 use warpui::{AppContext, Element, ViewHandle};

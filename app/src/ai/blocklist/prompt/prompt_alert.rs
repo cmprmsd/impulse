@@ -9,15 +9,11 @@ use warpui::{
 
 use crate::{
     ai::{blocklist::error_color, AIRequestUsageModel},
-    auth::AuthStateProvider,
     network::NetworkStatus,
-    server::ids::ServerId,
     settings::PrivacySettings,
     settings_view::SettingsSection,
     ui_components::icons::Icon,
-    workspace::WorkspaceAction,
-    workspaces::user_workspaces::UserWorkspaces,
-};
+    workspace::WorkspaceAction};
 use ai::api_keys::ApiKeyManager;
 use warpui::{AppContext, Element, Entity, TypedActionView, View, ViewContext};
 

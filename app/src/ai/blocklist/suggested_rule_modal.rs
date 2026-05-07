@@ -11,9 +11,7 @@ use crate::send_telemetry_from_ctx;
 use crate::view_components::action_button::{ActionButton, PrimaryTheme};
 use crate::{
     ai::facts::{AIFact, AIMemory},
-    server::cloud_objects::update_manager::UpdateManager,
-    ui_components::blended_colors,
-};
+    ui_components::blended_colors};
 use pathfinder_geometry::vector::vec2f;
 use warp_core::ui::appearance::Appearance;
 use warp_editor::editor::NavigationKey;

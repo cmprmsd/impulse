@@ -11,15 +11,13 @@ use warpui::{
 };
 
 use crate::{
-    ai::persisted_workspace::{PersistedWorkspace, PersistedWorkspaceEvent},
     appearance::Appearance,
     ui_components::icons,
     view_components::action_button::{ActionButton, SecondaryTheme},
     view_components::{DropdownItem, FilterableDropdown},
     workspace::tab_settings::{
         DirectoryTabColor, DirectoryTabColors, TabSettings, TabSettingsChangedEvent,
-    },
-};
+    }};
 use warpui::{AppContext, Element, Entity, TypedActionView, View, ViewContext, ViewHandle};
 use warpui::platform::{Cursor};
 use crate::legacy_stubs::{CodebaseIndexManager};

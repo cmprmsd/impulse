@@ -12,18 +12,13 @@ use warpui::{platform::WindowStyle, App, SingletonEntity, View};
 
 use crate::terminal::keys::TerminalKeybindings;
 use crate::{
-    auth::{auth_manager::AuthManager, AuthStateProvider},
-    cloud_object::model::persistence::CloudModel,
     notebooks::{editor::keys::NotebookKeybindings, file::is_markdown_file},
     search::files::model::FileSearchModel,
-    server::server_api::ServerApiProvider,
     settings_view::keybindings::KeybindingChangedNotifier,
     terminal::model::session::Session,
     test_util::settings::initialize_settings_for_tests,
     workspace::ActiveSession,
-    workspaces::user_workspaces::UserWorkspaces,
-    GlobalResourceHandles, GlobalResourceHandlesProvider,
-};
+    GlobalResourceHandles, GlobalResourceHandlesProvider};
 
 use crate::notebooks::context_menu::MenuSource;
 

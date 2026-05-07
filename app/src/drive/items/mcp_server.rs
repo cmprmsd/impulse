@@ -2,10 +2,8 @@ use super::{WarpDriveItem, WarpDriveItemId};
 use crate::{
     ai::mcp::CloudMCPServer,
     appearance::Appearance,
-    cloud_object::CloudObjectMetadata,
     drive::{index::DriveIndexAction, CloudObjectTypeAndId, DriveObjectType},
-    themes::theme::Fill,
-};
+    themes::theme::Fill};
 use warpui::{elements::MouseStateHandle, AppContext, Element};
 
 #[derive(Clone)]

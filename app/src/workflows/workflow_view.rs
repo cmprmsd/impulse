@@ -15,15 +15,6 @@ use url::Url;
 use crate::{
     ai::{blocklist::secret_redaction::find_secrets_in_text, AIRequestUsageModel},
     appearance::Appearance,
-    auth::{auth_state::AuthState, AuthStateProvider, UserUid},
-    cloud_object::{
-        breadcrumbs::ContainingObject,
-        model::{
-            persistence::{CloudModel, CloudModelEvent},
-            view::CloudViewModel,
-        },
-        CloudObject, CloudObjectEventEntrypoint, ObjectType, Owner, Revision, Space,
-    },
     drive::{
         cloud_object_styling::warp_drive_icon_color,
         drive_helpers::has_feature_gated_anonymous_user_reached_workflow_limit,
@@ -49,18 +40,6 @@ use crate::{
         focus_state::PaneFocusHandle, pane::view, BackingView, PaneConfiguration, PaneEvent,
     },
     send_telemetry_from_ctx,
-    server::{
-        cloud_objects::update_manager::{
-            FetchSingleObjectOption, ObjectOperation, OperationSuccessType, UpdateManager,
-            UpdateManagerEvent,
-        },
-        ids::{ClientId, ServerId, SyncId},
-        server_api::{ai::AIClient, ServerApiProvider},
-        telemetry::{
-            CloudObjectTelemetryMetadata, SharingDialogSource, TelemetryCloudObjectType,
-            TelemetryEvent,
-        },
-    },
     settings::{
         app_installation_detection::{UserAppInstallDetectionSettings, UserAppInstallStatus},
         AISettings,
@@ -77,8 +56,7 @@ use crate::{
     workflows::{
         workflow::{Argument, Workflow},
         CloudWorkflow,
-    },
-};
+    }};
 
 use warp_core::{context_flag::ContextFlag, settings::Setting, ui::theme::AnsiColorIdentifier};
 use warp_editor::editor::NavigationKey;

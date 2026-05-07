@@ -39,12 +39,7 @@ use warpui::{
 use websocket::{Message, Sink, Stream, WebsocketMessage as _};
 
 use crate::{
-    auth::{auth_state::AuthState, AuthStateProvider, UserUid},
     editor::{CrdtOperation, ReplicaId},
-    server::{
-        server_api::{auth::AuthClient, ServerApiProvider},
-        telemetry::telemetry_context,
-    },
     terminal::{
         event_listener::ChannelEventListener,
         model::block::BlockId,
@@ -55,9 +50,7 @@ use crate::{
             EventNumber, SELECTION_THROTTLE_PERIOD,
         },
         TerminalModel, TerminalView,
-    },
-
-};
+    }};
 /// The amount of time we will wait to batch consecutive write to pty requests before sending an event to the server.
 const PTY_WRITES_BATCH_THRESHOLD: Duration = if cfg!(test) {
     Duration::from_millis(5)

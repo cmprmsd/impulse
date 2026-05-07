@@ -6,10 +6,8 @@ use warpui::{
 
 use crate::{
     appearance::Appearance,
-    server::ids::SyncId,
     ui_components::dialog::{dialog_styles, Dialog},
-    view_components::action_button::{ActionButton, DangerPrimaryTheme, NakedTheme},
-};
+    view_components::action_button::{ActionButton, DangerPrimaryTheme, NakedTheme}};
 
 const DIALOG_WIDTH: f32 = 450.;
 

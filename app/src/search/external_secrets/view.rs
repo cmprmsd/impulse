@@ -12,7 +12,6 @@ use warpui::{
 
 use crate::{
     appearance::Appearance,
-    external_secrets::ExternalSecret,
     search::{
         external_secrets::{
             external_secret_data_source::ExternalSecretDataSource,
@@ -20,8 +19,7 @@ use crate::{
         },
         result_renderer::{QueryResultRenderer, QueryResultRendererStyles},
         search_bar::{SearchBar, SearchBarEvent, SearchBarState, SearchResultOrdering},
-    },
-};
+    }};
 use warpui::{AppContext, Element, Entity, FocusContext, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
 use warpui::{WeakViewHandle};
 use warpui::elements::{ChildView};

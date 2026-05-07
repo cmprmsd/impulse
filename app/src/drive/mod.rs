@@ -22,12 +22,7 @@ use serde::{Deserialize, Serialize};
 use warp_core::user_preferences::GetUserPreferences as _;
 use warpui::AppContext;
 
-use crate::{
-    cloud_object::{
-        model::view::{CloudViewModel, UpdateTimestamp},
-        CloudObject, GenericStringObjectFormat, ObjectIdType, ObjectType,
-    },
-};
+use crate::{};
 
 type SortByComparator<'a> = dyn FnMut(&&dyn CloudObject, &&dyn CloudObject) -> Ordering + 'a;
 

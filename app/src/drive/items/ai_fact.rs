@@ -8,10 +8,8 @@ use warpui::{
 use crate::{
     ai::facts::{AIFact, AIMemory, CloudAIFact},
     appearance::Appearance,
-    cloud_object::CloudObjectMetadata,
     drive::{index::DriveIndexAction, CloudObjectTypeAndId, DriveObjectType},
-    themes::theme::Fill,
-};
+    themes::theme::Fill};
 
 use super::{WarpDriveItem, WarpDriveItemId};
 

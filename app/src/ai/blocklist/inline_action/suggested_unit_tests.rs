@@ -19,7 +19,6 @@ use crate::{
         },
     },
     send_telemetry_from_ctx,
-    server::telemetry::ToggleCodeSuggestionsSettingSource,
     settings::AISettings,
     ui_components::{blended_colors, icons::Icon},
     view_components::{
@@ -28,8 +27,7 @@ use crate::{
             render_compact_and_regular_button_rows, CompactibleActionButton,
             MEDIUM_SIZE_SWITCH_THRESHOLD,
         },
-    },
-};
+    }};
 use warpui::{AppContext, Element, Entity, FocusContext, TypedActionView, View, ViewContext};
 use warpui::platform::{Cursor};
 use warpui::ui_components::components::{Coords};

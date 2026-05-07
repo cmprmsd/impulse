@@ -2,10 +2,8 @@ use warpui::{elements::MouseStateHandle, AppContext, Element};
 
 use crate::{
     appearance::Appearance,
-    cloud_object::{CloudObjectMetadata, Space},
     themes::theme::Fill,
-    ui_components::icons::Icon,
-};
+    ui_components::icons::Icon};
 
 use super::{
     cloud_object_styling::warp_drive_icon_color,

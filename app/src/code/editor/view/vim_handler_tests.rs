@@ -3,14 +3,11 @@ use crate::notebooks::editor::keys::NotebookKeybindings;
 use crate::workspace::ActiveSession;
 use crate::{
     code::editor::view::{CodeEditorView, CodeEditorViewAction},
-    server::server_api::{team::MockTeamClient, workspace::MockWorkspaceClient},
     settings::AppEditorSettings,
     settings_view::keybindings::KeybindingChangedNotifier,
     test_util::settings::initialize_settings_for_tests,
     vim_registers::VimRegisters,
-    workspace::sync_inputs::SyncedInputState,
-    workspaces::user_workspaces::UserWorkspaces,
-};
+    workspace::sync_inputs::SyncedInputState};
 use std::sync::Arc;
 use unindent::Unindent;
 use vim::vim::{MotionType, VimMode};

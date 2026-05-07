@@ -14,12 +14,10 @@ use warpui::{
 };
 
 use crate::{
-    cloud_object::model::persistence::{CloudModel, CloudModelEvent},
     drive::CloudObjectTypeAndId,
     terminal::view::telemetry::SharingDialogSource,
     ui_components::icons::Icon,
-    workspace::WorkspaceAction,
-};
+    workspace::WorkspaceAction};
 use warpui::{AppContext, Element, Entity, View, ViewContext};
 
 /// A rich onboarding block that prompts the user to share a newly-created personal Warp Drive

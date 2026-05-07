@@ -23,14 +23,9 @@ use crate::{
         logs, templatable::CloudTemplatableMCPServer, templatable_installation::VariableValue,
         MCPServer, StaticEnvVar, TemplatableMCPServerInstallation, TransportType,
     },
-    cloud_object::{GenericStringObjectFormat, JsonObjectType},
     drive::CloudObjectTypeAndId,
     persistence::ModelEvent,
-    send_telemetry_from_ctx,
-    server::{
-        cloud_objects::update_manager::UpdateManager, ids::SyncId, telemetry::TelemetryEvent,
-    },
-};
+    send_telemetry_from_ctx};
 use async_compat::CompatExt as _;
 use cfg_if::cfg_if;
 use futures::FutureExt as _;

@@ -11,13 +11,7 @@ use warpui::{AppContext, Entity, ModelContext, SingletonEntity};
 use crate::{
     ai::{RequestLimitInfo, RequestUsageInfo},
     ai_assistant::utils::{AssistantTranscriptPart, TranscriptPartSubType},
-    auth::AuthStateProvider,
-    send_telemetry_from_ctx,
-    server::{
-        server_api::{ai::AIClient, ServerApi},
-        telemetry::{TelemetryEvent, WarpAIRequestResult},
-    },
-};
+    send_telemetry_from_ctx};
 
 use super::{
     execution_context::WarpAiExecutionContext,

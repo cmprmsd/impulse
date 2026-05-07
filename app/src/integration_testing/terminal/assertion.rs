@@ -11,7 +11,6 @@ use warpui::{
 };
 
 use crate::{
-    ai::blocklist::agent_view::AgentViewState,
     integration_testing::view_getters::{
         single_input_view_for_tab, single_terminal_view, single_terminal_view_for_tab,
         terminal_view,
@@ -26,8 +25,7 @@ use crate::{
         model::{blocks::BlockFilter, terminal_model::BlockIndex},
         view::TerminalViewState,
         History,
-    },
-};
+    }};
 
 use super::util::ExpectedOutput;
 

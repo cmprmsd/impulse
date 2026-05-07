@@ -1,12 +1,6 @@
 use warpui::{SingletonEntity, ViewContext};
 
-use crate::{
-    auth::{auth_manager::AuthManager, AuthStateProvider},
-    cloud_object::{
-        model::persistence::CloudModel, GenericStringObjectFormat, JsonObjectType, ObjectType,
-        Space,
-    },
-};
+use crate::{};
 
 pub fn has_feature_gated_anonymous_user_reached_notebook_limit<V: warpui::View>(
     ctx: &mut ViewContext<V>,

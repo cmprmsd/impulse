@@ -138,9 +138,7 @@ use crate::workspace::{
     self, CommandSearchOptions, PaneViewLocator, TabBarLocation, WorkspaceAction,
 };
 use crate::{
-    server::server_api::ServerApi,
-    terminal::{TerminalManager, TerminalModel, TerminalView},
-};
+    terminal::{TerminalManager, TerminalModel, TerminalView}};
 use crate::legacy_stubs::{AgentConversationEntryId, AmbientAgentTaskId, AnonymousUserSignupEntrypoint, AuthManager, AuthStateProvider, ObjectUid, PaletteSource, ServerApiProvider, SharingDialogSource, Space, SyncId, TelemetryEvent};
 use crate::legacy_stubs::{AIConversation, AIConversationId, CloudConversationData, ServerConversationToken};
 

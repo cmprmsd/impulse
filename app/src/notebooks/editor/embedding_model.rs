@@ -16,13 +16,11 @@ use warpui::{
 
 use crate::{
     appearance::Appearance,
-    cloud_object::{model::persistence::CloudModel, CloudObject},
     completer::SessionAgnosticContext,
     notebooks::{
         styles::block_footer_action_button,
         telemetry::{ActionEntrypoint, BlockInfo},
-    },
-};
+    }};
 
 use super::{
     embedded_item::EmbeddedWorkflow,

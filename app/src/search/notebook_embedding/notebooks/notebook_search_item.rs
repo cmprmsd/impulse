@@ -9,7 +9,6 @@ use warpui::{
 use crate::search::result_renderer::ItemHighlightState;
 use crate::{
     appearance::Appearance,
-    cloud_object::CloudObject,
     drive::{cloud_object_styling::warp_drive_icon_color, DriveObjectType},
     search::{
         item::IconLocation,
@@ -17,8 +16,7 @@ use crate::{
             embedded_fuzzy_match::FuzzyMatchEmbeddedObjectResult,
             searcher::EmbeddingSearchItemAction, view::styles,
         },
-    },
-};
+    }};
 use crate::{notebooks::CloudNotebook, search::item::SearchItem};
 use warpui::{AppContext, Element};
 use warpui::fonts::{Properties, Weight};

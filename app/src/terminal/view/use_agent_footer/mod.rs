@@ -51,7 +51,6 @@ use warpui::{
 use crate::{
     ai::blocklist::{agent_view::agent_view_bg_fill, block::cli_controller::CLISubagentEvent},
     cmd_or_ctrl_shift,
-    server::telemetry::{CLIAgentType, CLISubagentControlState, TelemetryEvent},
     settings::{
         AISettings, AISettingsChangedEvent, CompiledCommandsForCodingAgentToolbar,
         InputModeSettings,
@@ -64,8 +63,7 @@ use crate::{
     ui_components::{blended_colors, icons::Icon},
     view_components::action_button::{
         ActionButton, ActionButtonTheme, ButtonSize, KeystrokeSource, TooltipAlignment,
-    },
-};
+    }};
 
 use warp_terminal::model::escape_sequences::{BRACKETED_PASTE_END, BRACKETED_PASTE_START};
 

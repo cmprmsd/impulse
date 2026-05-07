@@ -18,12 +18,10 @@ use warpui::{
 };
 
 use crate::{
-    cloud_object::{model::persistence::CloudModel, Revision},
     editor::{
         EditorOptions, EditorView, Event, PropagateAndNoOpNavigationKeys, SingleLineEditorOptions,
         TextOptions,
-    },
-};
+    }};
 use warpui::{AppContext, Element, Entity, FocusContext, TypedActionView, View, ViewContext, ViewHandle};
 use crate::legacy_stubs::{ClientId, SyncId};
 

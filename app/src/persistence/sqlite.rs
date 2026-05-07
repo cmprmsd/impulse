@@ -88,17 +88,11 @@ use crate::{
         AppState, BranchSnapshot, CodePaneSnapShot, CodePaneTabSnapshot, LeafContents,
         LeafSnapshot, NotebookPaneSnapshot, PaneFlex, PaneNodeSnapshot, SplitDirection,
         TabSnapshot, TerminalPaneSnapshot, WindowSnapshot,
-    },
-    workspaces::user_profiles::UserProfileWithUID,
-};
+    }};
 use crate::{
-    cloud_object::{CloudObjectMetadata, NumInFlightRequests, Revision, ServerCreationInfo},
-    notebooks::CloudNotebookModel,
-};
+    notebooks::CloudNotebookModel};
 use crate::{
-    cloud_object::{CloudObjectPermissions, CloudObjectStatuses, CloudObjectSyncStatus},
-    workflows::CloudWorkflowModel,
-};
+    workflows::CloudWorkflowModel};
 use crate::{report_error, report_if_error, safe_info, send_telemetry_from_app_ctx};
 use lsp::supported_servers::LSPServerType;
 use crate::legacy_stubs::{AmbientAgentTaskId, AuthStateProvider, ClientId, CloudObject, EnablementState, JsonObjectType, ObjectAction, ObjectIdType, ObjectType, Owner, RevisionAndLastEditor, ServerExperiment, ServerId, ServerTimestamp, SyncId, TelemetryEvent, UserUid, WorkspaceMetadata, WorkspaceUid};

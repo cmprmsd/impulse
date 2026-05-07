@@ -3,7 +3,7 @@ use crate::persistence::ModelEvent;
 use crate::terminal::alt_screen_reporting::AltScreenReporting;
 use crate::terminal::general_settings::GeneralSettings;
 use crate::workspace::cross_window_tab_drag::CrossWindowTabDrag;
-use crate::{app_state::get_app_state, server::server_api::ServerApiProvider};
+use crate::{app_state::get_app_state};
 use ::settings::ToggleableSetting;
 use warp_core::execution_mode::AppExecutionMode;
 

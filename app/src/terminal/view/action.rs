@@ -25,7 +25,6 @@ use crate::terminal::view::passive_suggestions::PromptSuggestionResolution;
 use crate::terminal::view::RichContentSecretTooltipInfo;
 use crate::workflows::workflow::Workflow;
 use crate::{
-    server::ids::SyncId,
     terminal::{
         block_list_element::{
             BlockHoverAction, BlockListMenuSource, BlockSelectAction, BlockTextSelectAction,
@@ -38,8 +37,7 @@ use crate::{
             terminal_model::{BlockIndex, WithinModel},
             SecretHandle,
         },
-    },
-};
+    }};
 
 use super::inline_banner::{
     AnonymousUserLoginBannerAction, AwsBedrockLoginBannerAction, AwsCliNotInstalledBannerAction,

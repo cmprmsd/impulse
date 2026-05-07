@@ -3,13 +3,8 @@ use serde::{Deserialize, Serialize};
 use warpui::{SingletonEntity, ViewContext};
 
 use crate::{
-    ai::AIRequestUsageModel,
-    auth::AuthStateProvider,
     send_telemetry_from_ctx,
-    server::telemetry::TelemetryEvent,
-    workflows::workflow::{Argument, Workflow},
-    workspaces::user_workspaces::UserWorkspaces,
-};
+    workflows::workflow::{Argument, Workflow}};
 
 use super::{
     arguments::ArgumentsState,

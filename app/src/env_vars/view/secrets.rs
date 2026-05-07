@@ -20,13 +20,10 @@ use super::env_var_collection::{
 };
 
 use crate::{
-    drive::sharing::ContentEditability,
     env_vars::{active_env_var_collection_data::SavingStatus, EnvVarValue},
-    external_secrets::{ExternalSecretManager, SecretManager},
     search::external_secrets::{
         searcher::ExternalSecretSearchItemAction, view::ExternalSecretsMenuEvent,
-    },
-};
+    }};
 #[cfg(all(not(target_family = "wasm"), feature = "local_tty"))]
 use crate::{
     terminal::local_shell::LocalShellState,

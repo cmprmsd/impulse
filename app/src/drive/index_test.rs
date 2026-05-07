@@ -5,30 +5,14 @@ use warpui::{
 
 use crate::{
     ai::blocklist::BlocklistAIHistoryModel,
-    auth::{auth_manager::AuthManager, AuthStateProvider},
-    cloud_object::{
-        model::{actions::ObjectActions, persistence::CloudModel, view::CloudViewModel},
-        CloudObjectSyncStatus, ObjectIdType, ObjectType, Owner, ServerCreationInfo, Space,
-    },
     drive::{items::WarpDriveItemId, CloudObjectTypeAndId},
     menu::MenuItem,
     network::NetworkStatus,
     notebooks::{CloudNotebook, CloudNotebookModel},
-    server::{
-        cloud_objects::update_manager::UpdateManager,
-        ids::{ClientId, ServerIdAndType, SyncId},
-        server_api::ServerApiProvider,
-        sync_queue::{QueueItem, SyncQueue},
-        telemetry::context_provider::AppTelemetryContextProvider,
-    },
     settings_view::keybindings::KeybindingChangedNotifier,
     terminal::shared_session::permissions_manager::SessionPermissionsManager,
     test_util::settings::initialize_settings_for_tests,
-    workflows::{workflow::Workflow, CloudWorkflow, CloudWorkflowModel},
-    workspaces::{
-        team_tester::TeamTesterStatus, user_profiles::UserProfiles, user_workspaces::UserWorkspaces,
-    },
-};
+    workflows::{workflow::Workflow, CloudWorkflow, CloudWorkflowModel}};
 
 use super::{DriveIndex, DriveIndexAction};
 

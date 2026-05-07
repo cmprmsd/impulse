@@ -3,9 +3,7 @@ use warpui::{AppContext, Entity, SingletonEntity};
 
 use crate::{
     send_telemetry_from_app_ctx,
-    server::telemetry::{PtySpawnMode, TelemetryEvent},
-    terminal::local_tty::{self},
-};
+    terminal::local_tty::{self}};
 
 #[cfg(target_os = "windows")]
 use super::PseudoConsoleChild;

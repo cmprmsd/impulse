@@ -10,10 +10,6 @@ use warp_core::{
 use warpui::{AppContext, ModelContext, SingletonEntity};
 
 use crate::{
-    cloud_object::{
-        model::persistence::{CloudModel, CloudModelEvent},
-        CloudObject as _,
-    },
 
 define_settings_group!(WorkflowAliases, settings: [
     aliases: Aliases {
@@ -24,8 +20,7 @@ define_settings_group!(WorkflowAliases, settings: [
         private: true,
         storage_key: "WorkflowAliases",
     }
-]);
-};
+]);};
 
 #[derive(Debug, PartialEq, Serialize, Deserialize, Clone, schemars::JsonSchema, SettingsValue)]
 #[schemars(description = "A shortcut alias for a Warp Drive workflow.")]

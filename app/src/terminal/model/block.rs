@@ -20,9 +20,7 @@ use super::{bootstrap::BootstrapStage, find::RegexDFAs};
 use warp_terminal::model::{KeyboardModes, KeyboardModesApplyBehavior};
 
 use crate::{
-    ai::agent::redaction::redact_secrets,
     context_chips::prompt_snapshot::PromptSnapshot,
-    server::{block::DisplaySetting, ids::SyncId},
     terminal::{
         block_filter::BlockFilterQuery,
         block_list_element::GridType,
@@ -45,8 +43,7 @@ use crate::{
         shell::ShellType,
         view::WithinBlockBanner,
         BlockPadding, ShellHost, SizeInfo,
-    },
-};
+    }};
 
 use chrono::{DateTime, Duration, FixedOffset, Local};
 use hex;

@@ -8,14 +8,11 @@ use warpui::{
 };
 
 use crate::{
-    cloud_object::model::{generic_string_model::GenericStringObjectId, persistence::CloudModel},
     integration_testing::{
         cloud_object::assert_metadata_revision,
         terminal::util::ExpectedOutput,
         view_getters::{notebook_view, terminal_view},
-    },
-
-};
+    }};
 /// Asserts that the notebook in the given pane has the expected Markdown content.
 pub fn assert_notebook_contents(
     tab_index: usize,

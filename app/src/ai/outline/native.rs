@@ -18,13 +18,11 @@ use settings::Setting as _;
 use warpui::{Entity, ModelContext, ModelHandle, SingletonEntity};
 
 use crate::{
-    ai::persisted_workspace::all_working_directories,
     safe_info, safe_warn, send_telemetry_from_ctx,
     settings::{
         AISettings, AISettingsChangedEvent, CodeSettings, CodeSettingsChangedEvent, InputSettings,
         InputSettingsChangedEvent,
-    },
-};
+    }};
 
 use super::OutlineStatus;
 use crate::legacy_stubs::{TelemetryEvent, UserWorkspaces};

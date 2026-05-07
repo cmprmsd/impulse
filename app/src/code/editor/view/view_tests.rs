@@ -8,16 +8,12 @@ use warpui::{
 };
 
 use crate::{
-    cloud_object::model::persistence::CloudModel,
     editor::InteractionState,
     notebooks::editor::keys::NotebookKeybindings,
-    server::server_api::{team::MockTeamClient, workspace::MockWorkspaceClient},
     settings_view::keybindings::KeybindingChangedNotifier,
     test_util::settings::initialize_settings_for_tests,
     vim_registers::VimRegisters,
-    workspace::{sync_inputs::SyncedInputState, ActiveSession},
-    workspaces::user_workspaces::UserWorkspaces,
-};
+    workspace::{sync_inputs::SyncedInputState, ActiveSession}};
 
 use super::{CodeEditorRenderOptions, CodeEditorView, CodeEditorViewAction};
 use warp_util::user_input::UserInput;

@@ -11,21 +11,12 @@ use crate::pane_group::focus_state::{PaneFocusHandle, PaneGroupFocusState};
 use crate::pane_group::{BackingView as _, PaneId};
 use crate::terminal::keys::TerminalKeybindings;
 use crate::{
-    cloud_object::model::{persistence::CloudModel, view::CloudViewModel},
     editor::InteractionState,
     network::NetworkStatus,
     notebooks::{editor::keys::NotebookKeybindings, notebook::NotebookView},
-    server::{
-        cloud_objects::update_manager::UpdateManager, server_api::ServerApiProvider,
-        sync_queue::SyncQueue,
-    },
     settings_view::keybindings::KeybindingChangedNotifier,
     test_util::settings::initialize_settings_for_tests,
-    workspace::ActiveSession,
-    workspaces::{
-        team_tester::TeamTesterStatus, user_profiles::UserProfiles, user_workspaces::UserWorkspaces,
-    },
-};
+    workspace::ActiveSession};
 
 fn initialize_app(app: &mut App) {
     initialize_settings_for_tests(app);

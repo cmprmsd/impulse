@@ -8,18 +8,8 @@ use warpui::{
 
 use crate::{
     ai::{document::ai_document_model::AIDocumentId, facts::CloudAIFactModel},
-    cloud_object::{
-        model::{persistence::CloudModel, view::CloudViewModel},
-        CloudObjectEventEntrypoint, GenericStringObjectFormat, JsonObjectType, Owner, Space,
-    },
     env_vars::{manager::EnvVarCollectionSource, CloudEnvVarCollection},
-    notebooks::{manager::NotebookSource, CloudNotebook},
-    server::{
-        cloud_objects::update_manager::{InitiatedBy, UpdateManager},
-        ids::{ClientId, ServerId, SyncId},
-        telemetry::SharingDialogSource,
-    },
-};
+    notebooks::{manager::NotebookSource, CloudNotebook}};
 
 use super::{
     drive_helpers::{

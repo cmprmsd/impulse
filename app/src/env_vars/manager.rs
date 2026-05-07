@@ -1,15 +1,7 @@
 use crate::{
-    cloud_object::{model::persistence::CloudModel, Owner},
     env_vars::view::env_var_collection::EnvVarCollectionView,
     pane_group::{EnvVarCollectionPane, PaneContent},
-    safe_warn,
-    server::{
-        cloud_objects::update_manager::{
-            ObjectOperation, OperationSuccessType, UpdateManager, UpdateManagerEvent,
-        },
-        ids::SyncId,
-    },
-};
+    safe_warn};
 use std::collections::{hash_map::Entry, HashMap};
 use warpui::{Entity, EntityId, ModelContext, SingletonEntity, WeakViewHandle};
 use warpui::{WindowId};

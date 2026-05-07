@@ -12,9 +12,7 @@ use warpui::{
 use crate::{
     autoupdate::{self},
     channel::{Channel, ChannelState},
-    features::{FeatureFlag, PREVIEW_FLAGS},
-    server::server_api::ServerApi,
-};
+    features::{FeatureFlag, PREVIEW_FLAGS}};
 
 pub struct ChangelogModel {
     pub changelog: ChangelogState,

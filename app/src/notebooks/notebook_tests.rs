@@ -12,19 +12,6 @@ use warpui::{
 };
 
 use crate::{
-    auth::{
-        auth_manager::AuthManager,
-        user::{TEST_USER_EMAIL, TEST_USER_UID},
-        AuthStateProvider, UserUid,
-    },
-    cloud_object::{
-        model::{
-            actions::ObjectActions,
-            persistence::CloudModel,
-            view::{CloudViewModel, Editor, EditorState},
-        },
-        Owner, Revision, ServerCloudObject, ServerMetadata, ServerNotebook, ServerPermissions,
-    },
     drive::OpenWarpDriveObjectSettings,
     editor::{DisplayPoint, EditorAction, InteractionState, SelectAction},
     network::NetworkStatus,
@@ -38,24 +25,11 @@ use crate::{
     },
     pane_group::PaneEvent,
     search::files::model::FileSearchModel,
-    server::{
-        cloud_objects::update_manager::{InitialLoadResponse, UpdateManager},
-        ids::{ClientId, SyncId::ServerId},
-        server_api::ServerApiProvider,
-        sync_queue::{QueueItem, SyncQueue, SyncQueueEvent},
-        telemetry::context_provider::AppTelemetryContextProvider,
-    },
     settings_view::keybindings::KeybindingChangedNotifier,
     terminal::keys::TerminalKeybindings,
     test_util::settings::initialize_settings_for_tests,
     workflows::{workflow::Workflow, WorkflowSource, WorkflowType},
-    workspace::ActiveSession,
-    workspaces::{
-        team_tester::TeamTesterStatus,
-        user_profiles::{UserProfileWithUID, UserProfiles},
-        user_workspaces::UserWorkspaces,
-    },
-};
+    workspace::ActiveSession};
 
 use super::{NotebookEvent, NotebookView, EDIT_WINDOW_DURATION, SAVE_PERIOD};
 

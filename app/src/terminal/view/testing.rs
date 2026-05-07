@@ -44,12 +44,10 @@ impl TerminalView {
         use warpui::units::{IntoPixels as _, Pixels};
 
         use crate::{
-            server::server_api::ServerApiProvider,
             terminal::{
                 event_listener::ChannelEventListener, model::block::BlockSize, BlockPadding,
             },
-            themes::default_themes::dark_theme,
-        };
+            themes::default_themes::dark_theme};
         let size_info = SizeInfo::new(
             vec2f(7., 10.5),
             1.0.into_pixels(),

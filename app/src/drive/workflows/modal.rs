@@ -28,11 +28,6 @@ use warpui::{
 
 use crate::{
     appearance::Appearance,
-    cloud_object::{
-        breadcrumbs::{ContainingObject, ContainingObjectKind},
-        model::persistence::{CloudModel, CloudModelEvent},
-        CloudObject, CloudObjectEventEntrypoint, ObjectType, Owner, Revision,
-    },
     drive::{
         cloud_object_styling::warp_drive_icon_color, items::WarpDriveItemId, CloudObjectTypeAndId,
         DriveObjectType,
@@ -44,11 +39,6 @@ use crate::{
     },
     menu::{Event, Menu, MenuItem, MenuItemFields},
     network::NetworkStatus,
-    server::{
-        cloud_objects::update_manager::UpdateManager,
-        ids::{ClientId, ServerId, SyncId},
-        server_api::ai::AIClient,
-    },
     themes::theme::AnsiColorIdentifier,
     ui_components::{
         blended_colors,
@@ -61,8 +51,7 @@ use crate::{
     workflows::{
         workflow::{Argument, Workflow},
         CloudWorkflow,
-    },
-};
+    }};
 
 use super::arguments::ArgumentsState;
 use super::enum_creation_dialog::{EnumCreationDialog, EnumCreationDialogEvent, WorkflowEnumData};

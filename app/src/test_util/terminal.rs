@@ -33,16 +33,10 @@ use crate::workspace::{OneTimeModalModel, WorkspaceRegistry};
 use crate::AgentNotificationsModel;
 use crate::{
     ai::{blocklist::BlocklistAIHistoryModel, AIRequestUsageModel},
-    cloud_object::model::persistence::CloudModel,
     context_chips::prompt::Prompt,
     experiments,
     network::NetworkStatus,
     search::files::model::FileSearchModel,
-    server::{
-        cloud_objects::{listener::Listener, update_manager::UpdateManager},
-        server_api::ServerApiProvider,
-        sync_queue::SyncQueue,
-    },
     settings::PrivacySettings,
     settings_view::keybindings::KeybindingChangedNotifier,
     system::SystemInfo,
@@ -52,12 +46,7 @@ use crate::{
         resizable_data::ResizableData, History, TerminalView,
     },
     workflows::local_workflows::LocalWorkflows,
-    workspace::{sync_inputs::SyncedInputState, ActiveSession},
-    workspaces::{
-        team_tester::TeamTesterStatus, update_manager::TeamUpdateManager,
-        user_workspaces::UserWorkspaces,
-    },
-};
+    workspace::{sync_inputs::SyncedInputState, ActiveSession}};
 use repo_metadata::watcher::DirectoryWatcher;
 use warp_core::features::FeatureFlag;
 

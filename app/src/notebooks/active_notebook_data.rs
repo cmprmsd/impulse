@@ -2,23 +2,7 @@ use warpui::{AppContext, Entity, ModelContext, SingletonEntity};
 
 use crate::{
     ai::document::ai_document_model::AIDocumentId,
-    cloud_object::{
-        breadcrumbs::ContainingObject,
-        model::{
-            persistence::{CloudModel, CloudModelEvent},
-            view::{CloudViewModel, Editor, EditorState},
-        },
-        CloudObject, Owner, Space,
-    },
-    drive::sharing::{ContentEditability, SharingAccessLevel},
-    notebooks::CloudNotebook,
-    server::{
-        cloud_objects::update_manager::{
-            ObjectOperation, OperationSuccessType, UpdateManager, UpdateManagerEvent,
-        },
-        ids::{ClientId, SyncId},
-    },
-};
+    notebooks::CloudNotebook};
 
 use super::{CloudNotebookModel, NotebookId};
 

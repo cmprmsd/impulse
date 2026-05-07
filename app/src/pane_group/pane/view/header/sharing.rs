@@ -14,12 +14,7 @@ use warpui::{
 use warp_core::ui::theme::Fill;
 use warpui::elements::ConstrainedBox;
 
-use crate::{
-    drive::sharing::{
-        dialog::{SharingDialog, SharingDialogEvent},
-        ContentEditability, ShareableObject,
-    },
-};
+use crate::{};
 
 use super::{Event, OpenOverlay, PaneHeader, PaneHeaderAction};
 use crate::legacy_stubs::{SharingDialogSource};

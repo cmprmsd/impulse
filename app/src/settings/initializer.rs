@@ -5,13 +5,11 @@ use warpui::{Entity, ModelContext, SingletonEntity};
 
 use crate::settings::{AISettings, FontSettings, ThinkingDisplayMode};
 use crate::{
-    auth::auth_state::AuthState,
     report_if_error,
     settings::input::InputBoxType,
     settings::{InputSettings, PrivacySettings, ThemeSettings},
     terminal::session_settings::SessionSettings,
-    themes::theme::ThemeKind,
-};
+    themes::theme::ThemeKind};
 
 pub struct SettingsInitializer;
 

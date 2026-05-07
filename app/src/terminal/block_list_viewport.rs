@@ -11,10 +11,8 @@ use warpui::{
 };
 
 use crate::{
-    ai::blocklist::agent_view::AgentViewDisplayMode,
-    terminal::{input::inline_menu::InlineMenuPositioner, model::index::Point as IndexPoint},
-};
-use crate::{ai::blocklist::agent_view::AgentViewState, terminal::model::blocks::RichContentItem};
+    terminal::{input::inline_menu::InlineMenuPositioner, model::index::Point as IndexPoint}};
+use crate::{ terminal::model::blocks::RichContentItem};
 
 use super::{
     block_list_element::{

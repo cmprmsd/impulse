@@ -6,21 +6,6 @@ use crate::{
         facts::{AIFact, AIMemory},
     },
     appearance::Appearance,
-    auth::{
-        auth_manager::{AuthManager, LoginGatedFeature},
-        auth_state::AuthState,
-        auth_view_modal::AuthViewVariant,
-        AuthStateProvider,
-    },
-    cloud_object::{
-        model::{
-            persistence::{CloudModel, CloudModelEvent},
-            view::{CloudViewModel, CloudViewModelEvent, UpdateTimestamp},
-        },
-        CloudObject, CloudObjectEventEntrypoint, CloudObjectLocation, CloudObjectSyncStatus,
-        GenericCloudObject, GenericStringObjectFormat, JsonObjectType, NumInFlightRequests,
-        ObjectType, Space,
-    },
     editor::{EditorView, Event as EditorEvent, SingleLineEditorOptions},
     env_vars::CloudEnvVarCollection,
     features::FeatureFlag,
@@ -28,12 +13,6 @@ use crate::{
     network::NetworkStatus,
     notebooks::CloudNotebookModel,
     report_if_error, send_telemetry_from_ctx,
-    server::{
-        cloud_objects::update_manager::{FetchSingleObjectOption, UpdateManager},
-        ids::{ClientId, ObjectUid, ServerId, SyncId},
-        sync_queue::SyncQueue,
-        telemetry::{AnonymousUserSignupEntrypoint, SharingDialogSource, TelemetryEvent},
-    },
     settings::app_installation_detection::{UserAppInstallDetectionSettings, UserAppInstallStatus},
     ui_components::{
         blended_colors,
@@ -44,11 +23,7 @@ use crate::{
     util::{color::coloru_with_opacity, sync::Condition},
     view_components::{Dropdown, DropdownItem},
     workflows::{CloudWorkflow, WorkflowViewMode},
-    workspace::active_terminal_in_window,
-    workspaces::{
-        update_manager::TeamUpdateManager, user_workspaces::UserWorkspaces, workspace::WorkspaceUid,
-    },
-};
+    workspace::active_terminal_in_window};
 
 use super::{
     cloud_object_naming_dialog::CloudObjectNamingDialog,

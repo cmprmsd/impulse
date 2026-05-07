@@ -208,9 +208,7 @@ use crate::PrivacySettings;
 use crate::{
     ai::agent::{AIAgentInput, ServerOutputId},
     send_telemetry_from_ctx,
-    server::telemetry::TelemetryEvent,
-    settings::AISettings,
-};
+    settings::AISettings};
 
 use super::controller::ClientIdentifiers;
 use super::ResponseStreamId;

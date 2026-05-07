@@ -5,9 +5,7 @@ use crate::view_components::action_button::{ActionButton, ActionButtonTheme, Sec
 use crate::TelemetryEvent;
 use crate::{
     ai::facts::{AIFact, AIMemory},
-    server::{cloud_objects::update_manager::UpdateManager, ids::ClientId},
-    ui_components::{blended_colors, icons::Icon},
-};
+    ui_components::{blended_colors, icons::Icon}};
 use pathfinder_color::ColorU;
 use warp_core::send_telemetry_from_ctx;
 use warp_core::ui::appearance::Appearance;

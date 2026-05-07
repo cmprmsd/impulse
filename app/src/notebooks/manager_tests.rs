@@ -7,31 +7,18 @@ use warpui::{
 
 use crate::{
     ai::blocklist::BlocklistAIHistoryModel,
-    auth::{auth_manager::AuthManager, AuthStateProvider},
-    cloud_object::{
-        model::{actions::ObjectActions, persistence::CloudModel, view::CloudViewModel},
-        Owner,
-    },
     network::NetworkStatus,
     notebooks::{editor::keys::NotebookKeybindings, notebook::NotebookView},
     pane_group::NotebookPane,
     persistence::ModelEvent,
     search::files::model::FileSearchModel,
-    server::{
-        cloud_objects::update_manager::UpdateManager, server_api::ServerApiProvider,
-        sync_queue::SyncQueue, telemetry::context_provider::AppTelemetryContextProvider,
-    },
     settings::PrivacySettings,
     settings_view::keybindings::KeybindingChangedNotifier,
     terminal::{
         keys::TerminalKeybindings, shared_session::permissions_manager::SessionPermissionsManager,
     },
     test_util::settings::initialize_settings_for_tests,
-    workspace::ActiveSession,
-    workspaces::{
-        team_tester::TeamTesterStatus, user_profiles::UserProfiles, user_workspaces::UserWorkspaces,
-    },
-};
+    workspace::ActiveSession};
 
 use super::NotebookManager;
 

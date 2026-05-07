@@ -93,7 +93,6 @@ use crate::{
         BackingView, PaneEvent,
     },
     send_telemetry_from_ctx,
-    server::telemetry::{AgentModeCodeFileNavigationSource, ToggleCodeSuggestionsSettingSource},
     settings::AISettings,
     terminal::{input::SET_INPUT_MODE_AGENT_ACTION_NAME, ShellLaunchData},
     ui_components::{blended_colors, icons::Icon},
@@ -109,8 +108,7 @@ use crate::{
         DismissibleToast,
     },
     workspace::ToastStack,
-    TelemetryEvent,
-};
+    TelemetryEvent};
 use ai::diff_validation::{
     fuzzy_match_diffs, fuzzy_match_v4a_diffs, parse_line_numbers, DiffDelta, DiffType, ParsedDiff,
     SearchAndReplace, V4AHunk,

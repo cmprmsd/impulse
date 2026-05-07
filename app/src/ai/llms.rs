@@ -8,12 +8,7 @@ use warp_core::ui::icons::Icon;
 use warp_core::user_preferences::GetUserPreferences;
 use warpui::{AppContext, Entity, EntityId, ModelContext, SingletonEntity};
 
-use crate::{
-    auth::{
-        auth_manager::{AuthManager, AuthManagerEvent},
-        AuthStateProvider,
-    },
-};
+use crate::{};
 
 use ai::api_keys::{ApiKeyManager, ApiKeyManagerEvent};
 

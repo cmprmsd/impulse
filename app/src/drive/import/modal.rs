@@ -1,10 +1,6 @@
 use crate::{
     appearance::Appearance,
-    cloud_object::{model::persistence::CloudModel, CloudObject, Owner},
-    server::{ids::SyncId, sync_queue::SyncQueue},
-    themes::theme::WarpTheme,
-    workspaces::user_workspaces::UserWorkspaces,
-};
+    themes::theme::WarpTheme};
 use pathfinder_geometry::vector::vec2f;
 use warp_core::ui::theme::Fill;
 use warpui::{

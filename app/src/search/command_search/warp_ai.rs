@@ -1,6 +1,5 @@
 use super::workflows::{WorkflowIdentity, WorkflowSearchItem};
 use crate::{
-    ai::AIRequestUsageModel,
     ai_assistant::{
         execution_context::WarpAiExecutionContext, GenerateCommandsFromNaturalLanguageError,
         AI_ASSISTANT_LOGO_COLOR,
@@ -17,8 +16,7 @@ use crate::{
         },
         result_renderer::ItemHighlightState,
         workflows::fuzzy_match::FuzzyMatchWorkflowResult,
-    },
-};
+    }};
 
 use async_trait::async_trait;
 use itertools::Itertools;

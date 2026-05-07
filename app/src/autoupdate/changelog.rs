@@ -5,9 +5,7 @@ use channel_versions::{Changelog, ChannelVersions};
 use rand::{distributions::Alphanumeric, thread_rng, Rng as _};
 
 use crate::{
-    channel::{Channel, ChannelState},
-    server::server_api::ServerApi,
-};
+    channel::{Channel, ChannelState}};
 
 use super::channel_versions::fetch_channel_versions;
 use super::release_assets_directory_url;

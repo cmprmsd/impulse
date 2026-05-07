@@ -7,17 +7,7 @@ use uuid::Uuid;
 use warp_core::ui::appearance::Appearance;
 use warpui::{AppContext, SingletonEntity as _};
 
-use crate::{
-    cloud_object::{
-        model::{
-            generic_string_model::{GenericStringModel, GenericStringObjectId, StringModel},
-            json_model::{JsonModel, JsonSerializer},
-            persistence::CloudModel,
-        },
-        GenericCloudObject, GenericStringObjectFormat, GenericStringObjectUniqueKey,
-        JsonObjectType, Revision, ServerCloudObject, UniquePer,
-    },
-};
+use crate::{};
 use crate::legacy_stubs::{SyncId};
 use crate::legacy_stubs::{QueueItem};
 

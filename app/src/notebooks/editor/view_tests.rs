@@ -30,10 +30,8 @@ use crate::terminal::keys::TerminalKeybindings;
 use crate::test_util::settings::initialize_settings_for_tests;
 use crate::workspace::ActiveSession;
 use crate::UserWorkspaces;
-use crate::{
-    cloud_object::model::persistence::CloudModel, search::files::model::FileSearchModel,
-    GlobalResourceHandles, GlobalResourceHandlesProvider,
-};
+use crate::{ search::files::model::FileSearchModel,
+    GlobalResourceHandles, GlobalResourceHandlesProvider};
 
 /// Container for a [`RichTextEditorView`] in unit tests.
 struct TestView {

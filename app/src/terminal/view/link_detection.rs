@@ -6,7 +6,6 @@ use warpui::{platform::Cursor, ViewContext};
 
 use crate::{
     send_telemetry_from_ctx,
-    server::telemetry::{LinkOpenMethod, TelemetryEvent},
     terminal::{
         model::{
             grid::grid_handler::Link,
@@ -15,8 +14,7 @@ use crate::{
             RespectObfuscatedSecrets,
         },
         TerminalModel,
-    },
-};
+    }};
 
 cfg_if::cfg_if! {
     if #[cfg(feature = "local_fs")] {

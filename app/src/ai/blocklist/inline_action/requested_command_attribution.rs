@@ -9,8 +9,7 @@ use crate::env_vars::EnvVarValue;
 use crate::notebooks::CloudNotebookModel;
 use crate::terminal::shell::ShellType;
 use crate::{
-    ai::agent::AIAgentCitation, cloud_object::model::persistence::CloudModel,
-};
+    ai::agent::AIAgentCitation};
 use markdown_parser::{parse_markdown, FormattedTextLine};
 
 /// Returns true iff the `command` is directly copied from the `document`.

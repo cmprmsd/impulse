@@ -8,15 +8,9 @@ use warpui::{
 };
 
 use crate::{
-    cloud_object::{model::persistence::CloudModel, CloudObjectEventEntrypoint, Space},
     drive::OpenWarpDriveObjectSettings,
     integration_testing::view_getters::{notebook_view, workspace_view},
-    notebooks::manager::NotebookSource,
-    server::{
-        cloud_objects::update_manager::UpdateManager,
-        ids::{ClientId, SyncId},
-    },
-};
+    notebooks::manager::NotebookSource};
 
 fn notebook_editor(
     app: &App,

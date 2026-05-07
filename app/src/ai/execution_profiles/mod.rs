@@ -2,19 +2,10 @@ use std::path::PathBuf;
 
 use crate::settings::AISettings;
 use crate::{
-    cloud_object::{
-        model::{
-            generic_string_model::{GenericStringModel, GenericStringObjectId, StringModel},
-            json_model::{JsonModel, JsonSerializer},
-        },
-        GenericCloudObject, GenericStringObjectFormat, GenericStringObjectUniqueKey,
-        JsonObjectType, Revision, ServerCloudObject,
-    },
     settings::{
         AgentModeCommandExecutionPredicate, DEFAULT_COMMAND_EXECUTION_ALLOWLIST,
         DEFAULT_COMMAND_EXECUTION_DENYLIST,
-    },
-};
+    }};
 use serde::{Deserialize, Serialize};
 use warp_core::channel::ChannelState;
 use warp_core::features::FeatureFlag;

@@ -1,8 +1,6 @@
 use super::*;
 use crate::{
-    ai::request_usage_model::{RequestLimitInfo, RequestLimitRefreshDuration},
-    test_util::settings::initialize_settings_for_tests,
-};
+    test_util::settings::initialize_settings_for_tests};
 use chrono::Utc;
 use warpui::{App, SingletonEntity};
 

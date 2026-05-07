@@ -2,23 +2,14 @@ use warp_core::ui::appearance::Appearance;
 use warpui::{platform::WindowStyle, App, ViewHandle};
 
 use crate::{
-    cloud_object::model::{actions::ObjectActions, persistence::CloudModel, view::CloudViewModel},
     env_vars::{
         active_env_var_collection_data::SavingStatus,
         view::env_var_collection::EnvVarCollectionView,
     },
     network::NetworkStatus,
-    server::{
-        cloud_objects::update_manager::UpdateManager, server_api::ServerApiProvider,
-        sync_queue::SyncQueue,
-    },
     settings_view::keybindings::KeybindingChangedNotifier,
     test_util::settings::initialize_settings_for_tests,
-    workspace::ActiveSession,
-    workspaces::{
-        team_tester::TeamTesterStatus, user_profiles::UserProfiles, user_workspaces::UserWorkspaces,
-    },
-};
+    workspace::ActiveSession};
 
 fn initialize_app(app: &mut App) {
     initialize_settings_for_tests(app);

@@ -27,24 +27,15 @@ use crate::{
         skills::SkillManager,
         AIRequestUsageModel,
     },
-    auth::auth_manager::AuthManager,
     changelog_model::ChangelogModel,
-    cloud_object::model::persistence::CloudModel,
     context_chips::prompt::Prompt,
     experiments,
     network::NetworkStatus,
     notebooks::{
         editor::keys::NotebookKeybindings, manager::NotebookManager, notebook::NotebookView,
     },
-    pricing::PricingInfoModel,
     resource_center::TipsCompleted,
     search::files::model::FileSearchModel,
-    server::{
-        cloud_objects::{listener::Listener, update_manager::UpdateManager},
-        server_api::ServerApiProvider,
-        sync_queue::SyncQueue,
-        telemetry::context_provider::AppTelemetryContextProvider,
-    },
     settings::PrivacySettings,
     settings_view::keybindings::KeybindingChangedNotifier,
     suggestions::ignored_suggestions_model::IgnoredSuggestionsModel,
@@ -64,12 +55,7 @@ use crate::{
     workflows::local_workflows::LocalWorkflows,
     workspace::{
         sync_inputs::SyncedInputState, ActiveSession, OneTimeModalModel, WorkspaceRegistry,
-    },
-    workspaces::{
-        team_tester::TeamTesterStatus, update_manager::TeamUpdateManager,
-        user_profiles::UserProfiles, user_workspaces::UserWorkspaces,
-    },
-};
+    }};
 #[cfg(feature = "local_fs")]
 use repo_metadata::RepoMetadataModel;
 use repo_metadata::{repositories::DetectedRepositories, watcher::DirectoryWatcher};

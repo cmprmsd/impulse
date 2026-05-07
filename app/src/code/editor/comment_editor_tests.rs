@@ -12,13 +12,10 @@ use repo_metadata::RepoMetadataModel;
 
 use crate::{
     appearance::Appearance,
-    auth::AuthStateProvider,
-    cloud_object::model::persistence::CloudModel,
     notebooks::{
         editor::keys::NotebookKeybindings,
         link::{NotebookLinks, SessionSource},
-    },
-};
+    }};
 
 struct TestView {
     editor: ViewHandle<RichTextEditorView>,

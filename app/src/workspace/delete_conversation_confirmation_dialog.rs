@@ -8,13 +8,11 @@ use warpui::{
 };
 
 use crate::{
-    ai::agent::conversation::AIConversationId,
     appearance::Appearance,
     ui_components::dialog::{dialog_styles, Dialog},
     view_components::action_button::{
         ActionButton, DangerPrimaryTheme, KeystrokeSource, NakedTheme,
-    },
-};
+    }};
 use warpui::{AppContext, Element, Entity, TypedActionView, View, ViewContext, ViewHandle};
 use warpui::{Keystroke};
 use warpui::keymap::{FixedBinding};

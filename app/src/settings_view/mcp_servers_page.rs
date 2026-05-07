@@ -12,9 +12,7 @@ use crate::{
         TemplatableMCPServer, TemplatableMCPServerInstallation, TemplatableMCPServerManager,
     },
     appearance::Appearance,
-    cloud_object::Space,
     modal::{Modal, ModalViewState},
-    server::cloud_objects::update_manager::InitiatedBy,
     settings_view::{
         mcp_servers::{
             edit_page::{MCPServersEditPageView, MCPServersEditPageViewEvent},
@@ -24,9 +22,7 @@ use crate::{
         },
         settings_page::{MatchData, PageType, SettingsPageMeta, SettingsWidget},
         SettingsSection,
-    },
-
-};
+    }};
 use crate::workspace::ToastStack;
 /// Describes where an MCP install request originated.
 ///

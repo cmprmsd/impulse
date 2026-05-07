@@ -61,15 +61,13 @@ use crate::{
         link::{LinkTarget, NotebookLinks, ResolveError},
         telemetry::{ActionEntrypoint, BlockInfo, EmbeddedObjectInfo, SelectionMode},
     },
-    server::ids::SyncId,
     settings::{AppEditorSettings, FontSettings, SelectionSettings},
     terminal::{grid_renderer::URL_COLOR, links::directly_open_link_keybinding_string},
     ui_components::icons::ICON_DIMENSIONS,
     util::{
         bindings::CustomAction,
         tooltips::{render_tooltip, should_show_open_in_warp_link, TooltipLink, TooltipRedaction},
-    },
-};
+    }};
 
 #[cfg(feature = "local_fs")]
 use crate::util::link_detection::{detect_file_paths, get_word_range_at_offset, DetectedLinkType};

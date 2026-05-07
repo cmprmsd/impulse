@@ -16,21 +16,10 @@ use super::{
     },
 };
 use crate::{
-    ai::cloud_environments::{self, CloudAmbientAgentEnvironment},
     appearance::Appearance,
-    cloud_object::{
-        model::persistence::{CloudModel, CloudModelEvent},
-        CloudObjectLocation, GenericStringObjectFormat, JsonObjectType, Owner, Space,
-    },
     drive::CloudObjectTypeAndId,
     editor::{EditorView, PropagateAndNoOpNavigationKeys, SingleLineEditorOptions, TextOptions},
     root_view::CreateEnvironmentArg,
-    server::{
-        cloud_objects::update_manager::{
-            ObjectOperation, OperationSuccessType, UpdateManager, UpdateManagerEvent,
-        },
-        ids::{ClientId, ServerId, SyncId},
-    },
     terminal::view::init_environment::mode_selector::{
         EnvironmentSetupMode, EnvironmentSetupModeSelector, EnvironmentSetupModeSelectorEvent,
     },
@@ -40,8 +29,7 @@ use crate::{
     view_components::{
         render_copyable_text_field, CopyButtonPlacement, CopyableTextFieldConfig, DismissibleToast,
         COPY_FEEDBACK_DURATION,
-    },
-};
+    }};
 use instant::Instant;
 use pathfinder_geometry::vector::vec2f;
 use std::collections::HashMap;

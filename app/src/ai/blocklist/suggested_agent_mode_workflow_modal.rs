@@ -2,13 +2,11 @@ use crate::{
     ai::agent::SuggestedAgentModeWorkflow,
     modal::{Modal, ModalEvent},
     pane_group::PaneEvent,
-    server::ids::SyncId,
     ui_components::blended_colors,
     workflows::{
         workflow_view::{WorkflowView, WorkflowViewEvent},
         WorkflowSelectionSource, WorkflowSource, WorkflowType,
-    },
-};
+    }};
 use pathfinder_geometry::vector::vec2f;
 use std::{collections::HashMap, default::Default, sync::Arc};
 use warp_core::{send_telemetry_from_ctx, ui::appearance::Appearance};

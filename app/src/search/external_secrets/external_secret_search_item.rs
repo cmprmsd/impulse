@@ -9,9 +9,7 @@ use crate::search::item::SearchItem;
 use crate::search::result_renderer::ItemHighlightState;
 use crate::{
     appearance::Appearance,
-    external_secrets::{ExternalSecret, ExternalSecretManager},
-    search::{external_secrets::view::styles, item::IconLocation},
-};
+    search::{external_secrets::view::styles, item::IconLocation}};
 
 use super::{
     external_secret_fuzzy_match::FuzzyMatchExternalSecretResult,

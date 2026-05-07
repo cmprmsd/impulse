@@ -23,13 +23,11 @@ use crate::{
         },
         telemetry_event::{CodeReviewTelemetryEvent, GitDialogStatus, GitOperationKind},
     },
-    server::server_api::{ai::AIClient, ServerApiProvider},
     ui_components::icons::Icon,
     util::git::{
         create_pr, get_branch_commit_messages, get_branch_diff_entries, get_diff_for_pr,
         FileChangeEntry, PrInfo,
-    },
-};
+    }};
 use warp_core::send_telemetry_from_ctx;
 use warpui::{ViewContext};
 use crate::workspace::ToastStack;

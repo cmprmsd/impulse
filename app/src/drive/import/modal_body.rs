@@ -14,13 +14,7 @@ use warpui::{
 };
 
 use crate::{
-    appearance::Appearance,
-    cloud_object::Owner,
-    server::{
-        ids::{ClientId, SyncId},
-        sync_queue::SyncQueue,
-    },
-};
+    appearance::Appearance};
 
 use super::{
     modal::BODY_HEIGHT,

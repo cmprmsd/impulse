@@ -24,7 +24,6 @@ use crate::{
         execution_profiles::profiles::AIExecutionProfilesModel,
     },
     appearance::Appearance,
-    cloud_object::{model::persistence::CloudModel, CloudObjectEventEntrypoint, Owner},
     drive::folders::CloudFolder,
     notebooks::{
         editor::{
@@ -33,18 +32,11 @@ use crate::{
         },
         post_process_notebook, CloudNotebookModel, NotebookId,
     },
-    server::{
-        cloud_objects::update_manager::{
-            InitiatedBy, ObjectOperation, OperationSuccessType, UpdateManager, UpdateManagerEvent,
-        },
-        ids::{ClientId, ServerId, SyncId},
-    },
     settings::FontSettings,
     terminal::{
         model::session::{active_session::ActiveSession, Session},
         TerminalView,
-    },
-};
+    }};
 use ai::agent::orchestration_config::{OrchestrationConfig, OrchestrationConfigStatus};
 use ai::diff_validation::DiffDelta;
 use warp_editor::{model::RichTextEditorModel, render::model::RichTextStyles};

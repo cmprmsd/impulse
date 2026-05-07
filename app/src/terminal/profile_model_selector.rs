@@ -37,14 +37,12 @@ use crate::{
         },
     },
     appearance::Appearance,
-    cloud_object::model::generic_string_model::StringModel,
     context_chips::{
         display_chip::{udi_font_size, udi_icon_size},
         spacing,
     },
     menu::{Event as MenuEvent, Menu, MenuItem, MenuItemFields},
     settings_view::SettingsSection,
-    terminal::view::ambient_agent::AmbientAgentViewModel,
     terminal::{
         input::{MenuPositioning, MenuPositioningProvider},
         TerminalModel,
@@ -53,8 +51,7 @@ use crate::{
     view_components::{
         action_button::{ActionButton, ActionButtonTheme, ButtonSize, SecondaryTheme},
         FeaturePopup, NewFeaturePopupEvent, NewFeaturePopupLabel,
-    },
-};
+    }};
 
 use warp_core::ui::theme::{color::internal_colors, Fill};
 use warp_core::{

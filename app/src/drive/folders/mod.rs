@@ -5,18 +5,7 @@ use super::items::WarpDriveItem;
 use super::CloudObjectTypeAndId;
 use crate::{
     appearance::Appearance,
-    cloud_object::{
-        CloudModelType, CloudObjectEventEntrypoint, CreateCloudObjectResult, CreateObjectRequest,
-        GenericCloudObject, GenericServerObject, ObjectType, Revision, ServerCloudObject, Space,
-        UpdateCloudObjectResult,
-    },
-    persistence::ModelEvent,
-    server::{
-        ids::{ServerId, SyncId},
-        server_api::object::ObjectClient,
-        sync_queue::{QueueItem, SerializedModel},
-    },
-};
+    persistence::ModelEvent};
 use anyhow::Result;
 use async_trait::async_trait;
 use crate::legacy_stubs::{FolderId};

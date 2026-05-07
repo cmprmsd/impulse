@@ -16,7 +16,7 @@ use crate::user_config::WarpConfig;
 use crate::util::bindings::{self, trigger_to_keystroke, CustomAction};
 use crate::util::links;
 use crate::workspace::sync_inputs::SyncedInputState;
-use crate::{auth, report_if_error};
+use crate::{ report_if_error};
 use ai::workspace::WorkspaceMetadata;
 use csv::Writer;
 use enclose::enclose;

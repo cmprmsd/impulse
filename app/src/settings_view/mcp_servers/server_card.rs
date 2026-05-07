@@ -30,15 +30,13 @@ use crate::{
         templatable::CloudTemplatableMCPServer, MCPServerState, TemplatableMCPServerManager,
     },
     appearance::Appearance,
-    cloud_object::CloudObject,
     settings_view::mcp_servers::{style, ServerCardItemId},
     ui_components::{
         avatar::{Avatar, AvatarContent, StatusElementTypes},
         blended_colors,
         buttons::icon_button,
         red_notification_dot::RedNotificationDot,
-    },
-};
+    }};
 use warpui::{AppContext, Element, Entity, TypedActionView, View, ViewContext};
 
 /// A chip displayed inline with the server card title, optionally with a leading icon.

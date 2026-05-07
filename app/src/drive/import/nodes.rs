@@ -23,9 +23,8 @@ use warpui::{
 };
 
 use crate::{
-    appearance::Appearance, notebooks::file::is_markdown_file, server::ids::ClientId,
-    themes::theme::Fill, ui_components::icons::Icon,
-};
+    appearance::Appearance, notebooks::file::is_markdown_file,
+    themes::theme::Fill, ui_components::icons::Icon};
 
 use super::modal_body::{ImportModalBodyAction, BASE_INDENT, IMPORT_FONT_SIZE, INDENT_MARGIN};
 use warpui::{Element};

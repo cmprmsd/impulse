@@ -2,11 +2,6 @@ use crate::{
     appearance::Appearance,
     editor::{EditorView, Event as EditorEvent, SingleLineEditorOptions, TextOptions},
     send_telemetry_from_ctx,
-    server::{
-        block::{Block as ServerBlock, DisplaySetting},
-        server_api::block::BlockClient,
-        telemetry::TelemetryEvent,
-    },
     settings::{EnforceMinimumContrast, FontSettings, FontSettingsChangedEvent, PrivacySettings},
     settings_view::SettingsSection,
     terminal::{
@@ -15,8 +10,7 @@ use crate::{
         model::{terminal_model::BlockIndex, ObfuscateSecrets},
         safe_mode_settings::get_secret_obfuscation_mode,
         TerminalModel,
-    },
-};
+    }};
 
 use super::grid_renderer::CellGlyphCache;
 use super::model::grid::RespectDisplayedOutput;

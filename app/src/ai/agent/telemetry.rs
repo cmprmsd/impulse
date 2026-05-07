@@ -4,9 +4,7 @@ use warpui::{AppContext, SingletonEntity};
 use crate::ai::llms::LLMId;
 use crate::CloudModel;
 use crate::{
-    server::telemetry::AgentModeCitation as CitationForTelemetry,
-    terminal::view::block_onboarding::onboarding_agentic_suggestions_block::OnboardingChipType,
-};
+    terminal::view::block_onboarding::onboarding_agentic_suggestions_block::OnboardingChipType};
 
 use super::AIAgentCitation;
 use crate::legacy_stubs::{AIConversationId};

@@ -8,11 +8,9 @@ use warpui::{
 };
 
 use crate::{
-    ai::persisted_workspace::{PersistedWorkspace, PersistedWorkspaceEvent},
     appearance::Appearance,
     tab_configs::PickerStyle,
-    view_components::{DropdownItem, FilterableDropdown},
-};
+    view_components::{DropdownItem, FilterableDropdown}};
 
 const DEFAULT_DROPDOWN_WIDTH: f32 = 380.;
 

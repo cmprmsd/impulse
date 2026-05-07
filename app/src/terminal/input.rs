@@ -126,10 +126,6 @@ use crate::{
     ai_assistant::execution_context::WarpAiExecutionContext,
     appearance::{Appearance, AppearanceEvent},
     channel::{Channel, ChannelState},
-    cloud_object::{
-        model::{actions::ObjectActionType, persistence::CloudModel, view::CloudViewModel},
-        CloudObject, Space,
-    },
     cmd_or_ctrl_shift,
     code_review::diff_state::DiffMode,
     completer::SessionContext,
@@ -170,16 +166,6 @@ use crate::{
         QueryFilter,
     },
     send_telemetry_from_ctx,
-    server::{
-        cloud_objects::update_manager::UpdateManager,
-        ids::SyncId,
-        server_api::ServerApi,
-        telemetry::{
-            AICommandSearchEntrypoint, AgentModeAutoDetectionFalsePositivePayload,
-            AgentModeAutoDetectionSettingOrigin, AnonymousUserSignupEntrypoint, CommandXRayTrigger,
-            EnvVarTelemetryMetadata, TelemetryEvent, WorkflowTelemetryMetadata,
-        },
-    },
     session_management::SessionNavigationPromptElements,
     settings::{
         AISettings, AISettingsChangedEvent, AliasExpansionSettings, AppEditorSettings,
@@ -217,9 +203,7 @@ use crate::{
         ForkedConversationDestination, InitContent, RestoreConversationLayout, ToastStack,
         WorkspaceAction,
     },
-    workspaces::user_workspaces::{UserWorkspaces, UserWorkspacesEvent},
-    AgentModeEntrypoint, ServerApiProvider,
-};
+    AgentModeEntrypoint, ServerApiProvider};
 
 use ai::skills::SkillReference;
 use base64::Engine as _;

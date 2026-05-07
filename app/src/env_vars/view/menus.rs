@@ -3,12 +3,10 @@ use warp_core::context_flag::ContextFlag;
 use warpui::{keymap::Trigger, SingletonEntity, ViewContext, ViewHandle};
 
 use crate::{
-    cloud_object::{CloudObject, GenericStringObjectFormat, Space},
     drive::{
         drive_helpers::has_feature_gated_anonymous_user_reached_env_var_limit,
         export::ExportManager, CloudObjectTypeAndId,
-    },
-};
+    }};
 
 use super::env_var_collection::{EnvVarCollectionAction, EnvVarCollectionView, VariableRowIndex};
 use warpui::{AppContext};

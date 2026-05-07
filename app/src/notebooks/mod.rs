@@ -20,22 +20,11 @@ use warpui::AppContext;
 use crate::{
     ai::document::ai_document_model::AIDocumentId,
     appearance::Appearance,
-    cloud_object::{
-        CloudModelType, CloudObjectEventEntrypoint, CreateCloudObjectResult, CreateObjectRequest,
-        GenericCloudObject, GenericServerObject, ObjectType, Owner, Revision, ServerCloudObject,
-        UpdateCloudObjectResult,
-    },
     drive::{
         items::{notebook::WarpDriveNotebook, WarpDriveItem},
         CloudObjectTypeAndId,
     },
-    persistence::ModelEvent,
-    server::{
-        ids::{ServerId, SyncId},
-        server_api::object::ObjectClient,
-        sync_queue::{QueueItem, SerializedModel},
-    },
-};
+    persistence::ModelEvent};
 
 /// Serialized representation of a notebook for sync queue
 /// The AIDocumentID and ConversationID are stored here to avoid polluting the

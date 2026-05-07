@@ -25,9 +25,7 @@ use crate::{
 };
 use crate::{appearance::AppearanceManager, send_telemetry_from_ctx};
 use crate::{editor::EditorView, resource_center::TipsCompleted};
-use crate::{
-    server::telemetry::TelemetryEvent, ui_components::window_focus_dimming::WindowFocusDimming,
-};
+use crate::{ ui_components::window_focus_dimming::WindowFocusDimming};
 use crate::{
     themes::theme::WarpThemeConfig,
     ui_components::buttons::{close_button, icon_button},

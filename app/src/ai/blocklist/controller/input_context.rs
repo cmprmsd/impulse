@@ -18,18 +18,10 @@ use crate::{
         facts::CloudAIFactModel,
         skills::list_skills_if_changed,
     },
-    cloud_object::{
-        model::{
-            generic_string_model::{CloudStringObject, GenericStringObjectId},
-            persistence::CloudModel,
-        },
-        GenericCloudObject, GenericStringObjectFormat, JsonObjectType, ObjectType,
-    },
     terminal::{
         model::{block::BlockId, session::active_session::ActiveSession},
         TerminalView,
-    },
-};
+    }};
 use crate::legacy_stubs::{CodebaseIndexManager};
 
 lazy_static! {

@@ -8,20 +8,9 @@ use warpui::{
 };
 
 use crate::{
-    cloud_object::{
-        model::persistence::{CloudModel, CloudModelEvent},
-        Owner,
-    },
     drive::OpenWarpDriveObjectSettings,
     pane_group::{NotebookPane, PaneContent},
-    safe_debug, safe_warn,
-    server::{
-        cloud_objects::update_manager::{
-            ObjectOperation, OperationSuccessType, UpdateManager, UpdateManagerEvent,
-        },
-        ids::SyncId,
-    },
-};
+    safe_debug, safe_warn};
 
 use super::{notebook::NotebookView, CloudNotebook};
 use warpui::{WindowId};

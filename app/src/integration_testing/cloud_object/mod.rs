@@ -7,10 +7,7 @@ use std::future::Future;
 use std::pin::Pin;
 use warpui::{App, SingletonEntity};
 
-use crate::{
-    cloud_object::{model::persistence::CloudModel, Space},
-    server::cloud_objects::update_manager::UpdateManager,
-};
+use crate::{};
 
 /// Clears the cloud model of all non-welcome objects in the user's personal space.
 /// Returns a future that resolves when the cloud model is cleared.

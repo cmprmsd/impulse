@@ -38,14 +38,6 @@ use crate::{
         document::ai_document_model::AIDocumentId,
     },
     appearance::Appearance,
-    cloud_object::{
-        grab_edit_access_modal::{GrabEditAccessModal, GrabEditAccessModalEvent},
-        model::{
-            persistence::{CloudModel, CloudModelEvent, UpdateSource},
-            view::{Editor, EditorState},
-        },
-        CloudObject, CloudObjectEventEntrypoint, ObjectType, Owner, Space,
-    },
     cmd_or_ctrl_shift,
     drive::{
         drive_helpers::has_feature_gated_anonymous_user_reached_notebook_limit,
@@ -69,20 +61,11 @@ use crate::{
         BackingView, PaneConfiguration, PaneEvent,
     },
     report_if_error, safe_info, send_telemetry_from_ctx,
-    server::{
-        cloud_objects::update_manager::{FetchSingleObjectOption, UpdateManager},
-        ids::{ClientId, ServerId, SyncId},
-        telemetry::{
-            CloudObjectTelemetryMetadata, NotebookActionEvent, NotebookTelemetryMetadata,
-            SharingDialogSource, TelemetryCloudObjectType, TelemetryEvent,
-        },
-    },
     settings::{
         app_installation_detection::{UserAppInstallDetectionSettings, UserAppInstallStatus},
         decrease_notebook_font_size, increase_notebook_font_size, FontSettings,
         FontSettingsChangedEvent, NotebookFontSize,
-    },
-};
+    }};
 
 use self::details_bar::DetailsBar;
 

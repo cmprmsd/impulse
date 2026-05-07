@@ -7,16 +7,12 @@ use warpui::{
 
 use crate::{
     ai::blocklist::BlocklistAIHistoryModel,
-    auth::AuthStateProvider,
-    cloud_object::model::persistence::CloudModel,
     menu::MenuItemFields,
     pane_group::{focus_state::PaneFocusHandle, BackingView, PaneConfiguration, PaneId, PaneView},
-    server::server_api::{object::MockObjectClient, ServerApiProvider},
     settings_view::keybindings::KeybindingChangedNotifier,
     terminal::shared_session::permissions_manager::SessionPermissionsManager,
     test_util::settings::initialize_settings_for_tests,
-    NetworkStatus, SyncQueue, TeamTesterStatus, UpdateManager, UserProfiles, UserWorkspaces,
-};
+    NetworkStatus, SyncQueue, TeamTesterStatus, UpdateManager, UserProfiles, UserWorkspaces};
 
 use super::{Event, OpenOverlay};
 

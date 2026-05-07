@@ -4,7 +4,7 @@ use super::{
         SettingsPageViewHandle, SettingsWidget,
     },
 };
-use crate::{appearance::Appearance, auth::AuthStateProvider, drive::settings::WarpDriveSettings};
+use crate::{appearance::Appearance, drive::settings::WarpDriveSettings};
 use warp_core::{features::FeatureFlag, report_if_error, settings::ToggleableSetting as _};
 use warpui::{
     elements::{Container, Element, Flex, MouseStateHandle, ParentElement, Shrinkable, Text},

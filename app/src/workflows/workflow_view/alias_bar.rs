@@ -21,13 +21,10 @@ use warpui::{
 };
 
 use crate::{
-    cloud_object::{model::persistence::CloudModel, CloudObject},
     editor::{
         EditOrigin, EditorView, Event as EditorEvent, PropagateAndNoOpNavigationKeys,
         SingleLineEditorOptions, TextOptions, ValidInputType,
-    },
-
-};
+    }};
 use warpui::{AppContext, Element, Entity, TypedActionView, View, ViewContext, ViewHandle};
 use crate::legacy_stubs::{SyncId};
 /// Width of the alias name editor.

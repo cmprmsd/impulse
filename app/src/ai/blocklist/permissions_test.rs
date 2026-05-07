@@ -25,17 +25,9 @@ use crate::{
         },
         mcp::templatable_manager::TemplatableMCPServerManager,
     },
-    auth::AuthStateProvider,
-    cloud_object::model::persistence::CloudModel,
     network::NetworkStatus,
-    server::{cloud_objects::update_manager::UpdateManager, sync_queue::SyncQueue},
     settings::{AgentModeCommandExecutionPredicate, PrivacySettings},
-    test_util::settings::initialize_settings_for_tests_with_mode,
-    workspaces::{
-        team_tester::TeamTesterStatus, user_workspaces::UserWorkspaces,
-        workspace::SandboxedAgentSettings,
-    },
-};
+    test_util::settings::initialize_settings_for_tests_with_mode};
 
 use super::{BlocklistAIHistoryModel, BlocklistAIPermissions};
 

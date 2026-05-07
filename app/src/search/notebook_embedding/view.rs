@@ -2,14 +2,12 @@ use std::{collections::HashSet, ops::Range};
 
 use crate::{
     appearance::Appearance,
-    cloud_object::Space,
     search::{
         notebook_embedding::notebooks::CloudNotebooksDataSource,
         notebook_embedding::workflows::CloudWorkflowsDataSource,
         result_renderer::{QueryResultRenderer, QueryResultRendererStyles},
         search_bar::{SearchBar, SearchBarEvent, SearchBarState, SearchResultOrdering},
-    },
-};
+    }};
 use itertools::Itertools;
 use lazy_static::lazy_static;
 use warpui::{

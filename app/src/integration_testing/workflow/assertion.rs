@@ -6,9 +6,7 @@ use warpui::{
 
 use crate::{
     integration_testing::{cloud_object::assert_metadata_revision, view_getters::workflow_view},
-    server::ids::SyncId,
-    workflows::{workflow_view::WorkflowView, CloudWorkflowModel, WorkflowId},
-};
+    workflows::{workflow_view::WorkflowView, CloudWorkflowModel, WorkflowId}};
 
 /// Asserts metadata exists for the workflow with the given key and that the revision in that
 /// metadata matches the given expected revision.

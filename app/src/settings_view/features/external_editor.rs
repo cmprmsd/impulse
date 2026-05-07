@@ -11,7 +11,6 @@ use warpui::{
 use crate::{
     appearance::Appearance,
     report_if_error, send_telemetry_from_ctx,
-    server::telemetry::TelemetryEvent,
     settings_view::settings_page::{
         render_body_item, render_dropdown_item, AdditionalInfo, LocalOnlyIconState, ToggleState,
     },
@@ -21,8 +20,7 @@ use crate::{
             PreferMarkdownViewer, PreferTabbedEditorView,
         },
         EditorSettings, SUPPORTED_EDITORS,
-    },
-};
+    }};
 
 const TABBED_FILE_VIEWER_TOGGLE_HEADER: &str = "Group files into single editor pane";
 const TABBED_FILE_VIEWER_TOGGLE_DESCRIPTION: &str = "When this setting is on, any files opened in the same tab will be automatically grouped into a single editor pane.";

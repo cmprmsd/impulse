@@ -2,9 +2,7 @@ use crate::{
     settings_view::SettingsSection,
     terminal::view::TerminalAction,
     ui_components::{buttons::icon_button, icons::Icon},
-    workspaces::{user_workspaces::UserWorkspaces, workspace::UgcCollectionEnablementSetting},
-    Appearance, FeatureFlag, WorkspaceAction,
-};
+    Appearance, FeatureFlag, WorkspaceAction};
 use warpui::{
     elements::{
         ConstrainedBox, Container, CrossAxisAlignment, Flex, MainAxisAlignment, MainAxisSize,

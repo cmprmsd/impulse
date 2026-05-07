@@ -2,15 +2,13 @@ use std::{collections::HashMap, pin::pin, time::Duration};
 
 use super::*;
 use crate::{
-    ai::blocklist::agent_view::AgentViewState,
     terminal::model::{
         ansi::{Attr, Handler},
         cell::Flags,
         header_grid::PromptEndPoint,
         session::SessionInfo,
         test_utils::{create_test_block_with_grids, TestBlockBuilder},
-    },
-};
+    }};
 use float_cmp::assert_approx_eq;
 use futures_lite::stream::StreamExt;
 

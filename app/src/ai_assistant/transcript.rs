@@ -20,9 +20,7 @@ use warpui::{BlurContext, FocusContext};
 use crate::{
     appearance::Appearance,
     send_telemetry_from_ctx,
-    server::telemetry::{SaveAsWorkflowModalSource, TelemetryEvent, WarpAIActionType},
-    ui_components::blended_colors,
-};
+    ui_components::blended_colors};
 
 use super::panel::HEADER_HEIGHT;
 use super::{

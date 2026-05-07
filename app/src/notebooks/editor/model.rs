@@ -16,11 +16,9 @@ use warpui::{
 };
 
 use crate::{
-    cloud_object::model::persistence::{CloudModel, CloudModelEvent},
     debounce::debounce,
     editor::InteractionState,
-    notebooks::telemetry::BlockInfo,
-};
+    notebooks::telemetry::BlockInfo};
 use crate::{
     notebooks::editor::interaction_state_model::InteractionStateModelEvent,
     terminal::ShellLaunchData,

@@ -7,11 +7,9 @@ use warpui::{
 
 use crate::{
     appearance::Appearance,
-    cloud_object::CloudObjectMetadata,
     drive::{index::DriveIndexAction, CloudObjectTypeAndId, DriveObjectType},
     notebooks::CloudNotebook,
-    themes::theme::Fill,
-};
+    themes::theme::Fill};
 
 use super::{WarpDriveItem, WarpDriveItemId};
 
