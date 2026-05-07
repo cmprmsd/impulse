@@ -41,8 +41,8 @@ impl PendingPreprocessedActions {
         let Some(current_index) = self.0.iter().position(|batch| batch.id == preprocess_id) else {
             log::warn!("Action not found in list of preprocessed actions");
             return vec![];
-        };
 
+        };
         // Check if there are any pending actions before the current one
         let has_pending_before = self
             .0

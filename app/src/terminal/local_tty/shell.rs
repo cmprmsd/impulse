@@ -209,8 +209,8 @@ impl ShellStarter {
                 } else {
                     log::warn!("Did not find valid binaries when attempting to load fallback shell (not bash, fish, or zsh).");
                     return None;
-                };
 
+                };
                 Some(ShellStarterSource::Fallback {
                     unsupported_shell,
                     starter: DirectShellStarter {
@@ -233,8 +233,8 @@ impl ShellStarter {
                     // TODO(PLAT-807): Consider adding Command Prompt as a fallback shell.
                     log::warn!("Did not find valid binaries when attempting to load fallback shell (not PowerShell or WSL).");
                     return None;
-                };
 
+                };
                 Some(ShellStarterSource::UserDefault(DirectShellStarter {
                     args: arguments_for_session_spawning_command(
                         resolved_default_shell_path.as_path().to_string_lossy().as_ref(),
@@ -478,8 +478,8 @@ impl WslShellStarter {
         } else {
             log::warn!("The shell {shell_path:#} is not yet supported in WSL");
             return None;
-        };
 
+        };
         let args =
             wsl_arguments_for_session_spawning_command(distribution, &shell_path, shell_type);
 

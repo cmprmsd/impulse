@@ -16,8 +16,8 @@ lazy_static! {
             BucketRange::new(AuthFlowInstructions::Experiment, 250..500),
         ]
     };
-}
 
+}
 const AUTH_FLOW_INSTRUCTIONS_CONTROL: &str = "Control";
 const AUTH_FLOW_INSTRUCTIONS_EXPERIMENT: &str = "AuthFlowInstructionsExperiment";
 

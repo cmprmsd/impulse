@@ -40,8 +40,8 @@ impl RequestComputerUseExecutor {
         let ExecuteActionInput { action, .. } = input;
         let AIAgentActionType::RequestComputerUse(_) = &action.action else {
             return false;
-        };
 
+        };
         // Check profile permission
         let permission = crate::ai::blocklist::BlocklistAIPermissions::as_ref(ctx)
             .get_computer_use_setting(ctx, Some(self.terminal_view_id));
@@ -66,8 +66,8 @@ impl RequestComputerUseExecutor {
         } = input;
         let AIAgentActionType::RequestComputerUse(request) = &action.action else {
             return ActionExecution::InvalidAction;
-        };
 
+        };
         // If we're executing, that implies that computer use has been approved.
         let is_autoexecuted = self.autoexecuted_actions.remove(&action.id);
         let server_conversation_id = BlocklistAIHistoryModel::as_ref(ctx)

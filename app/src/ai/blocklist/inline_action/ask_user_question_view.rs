@@ -247,8 +247,8 @@ impl AskUserQuestionEditingState {
     fn update_current_draft(&mut self, update: impl FnOnce(&mut QuestionDraft)) {
         let Some(slot) = self.drafts.get_mut(self.current_question_index) else {
             return;
-        };
 
+        };
         // Store unanswered questions as a distinct state instead of an empty draft so later logic
         // can tell the difference between "no answer yet" and "there is answer state to render".
         let mut draft = match std::mem::take(slot) {
@@ -389,8 +389,8 @@ impl AskUserQuestionSession {
     fn current(&self) -> Option<AskUserQuestionCurrent<'_>> {
         let AskUserQuestionState::Editing(editing) = &self.state else {
             return None;
-        };
 
+        };
         Some(AskUserQuestionCurrent {
             question: self.questions.get(editing.current_question_index())?,
             draft: editing.current_draft(),
@@ -457,12 +457,12 @@ impl AskUserQuestionSession {
             )
         }) else {
             return AskUserQuestionEffect::Noop;
-        };
 
+        };
         let Some(editing) = self.editing_state_mut() else {
             return AskUserQuestionEffect::Noop;
-        };
 
+        };
         let mut should_auto_advance_after_toggle = false;
         editing.update_current_draft(|draft| {
             if is_multi_select {
@@ -504,12 +504,12 @@ impl AskUserQuestionSession {
             .map(|current| current.question.is_multiselect())
         else {
             return AskUserQuestionEffect::Noop;
-        };
 
+        };
         let Some(editing) = self.editing_state_mut() else {
             return AskUserQuestionEffect::Noop;
-        };
 
+        };
         editing.update_current_draft(|draft| {
             if !is_multi_select {
                 draft.selected_option_indices.clear();
@@ -530,8 +530,8 @@ impl AskUserQuestionSession {
         };
         let Some(editing) = self.editing_state_mut() else {
             return AskUserQuestionEffect::Noop;
-        };
 
+        };
         editing.update_current_draft(|draft| {
             draft.other_text = text;
             draft.is_other_input_active = false;
@@ -590,8 +590,8 @@ impl AskUserQuestionSession {
             )
         }) else {
             return AskUserQuestionEffect::Noop;
-        };
 
+        };
         if supports_other && highlighted_index == Some(option_count) {
             return self.open_other_input();
         }
@@ -685,8 +685,8 @@ impl AskUserQuestionSession {
             return AskUserQuestionAnswerItem::Skipped {
                 question_id: question.question_id.clone(),
             };
-        };
 
+        };
         let selected_options = match &question.question_type {
             AskUserQuestionType::MultipleChoice { options, .. } => draft
                 .selected_option_indices
@@ -902,8 +902,8 @@ impl AskUserQuestionView {
     ) -> Vec<NumberShortcutButtonBuilder> {
         let Some(current) = current else {
             return Vec::new();
-        };
 
+        };
         match &current.question.question_type {
             AskUserQuestionType::MultipleChoice {
                 options,

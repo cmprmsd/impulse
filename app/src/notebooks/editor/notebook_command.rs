@@ -287,8 +287,8 @@ impl NotebookCommand {
         let code_block_type = self.code_block_type(ctx);
         let Some(buffer_text) = self.command(ctx) else {
             return;
-        };
 
+        };
         match code_block_type {
             CodeBlockType::Shell => {
                 let completion_context =
@@ -308,8 +308,8 @@ impl NotebookCommand {
             CodeBlockType::Code { lang } => {
                 let Some((syntax_set, syntax_theme)) = self.syntax_config.clone() else {
                     return;
-                };
 
+                };
                 self.syntax_highlighting_handle = Some(ctx.spawn(
                     parse_code_into_style_ranges(buffer_text, lang, syntax_set, syntax_theme),
                     |notebook_command, result, ctx| {
@@ -327,8 +327,8 @@ impl NotebookCommand {
     ) {
         let Some(highlight_result) = highlight_result else {
             return;
-        };
 
+        };
         self.maybe_apply_highlighting(
             CachedHighlightKey {
                 buffer_content: highlight_result.origin_text,
@@ -384,8 +384,8 @@ impl NotebookCommand {
     ) {
         let Some(buffer_text) = self.command(ctx) else {
             return;
-        };
 
+        };
         // If the command text has changed from when we parsed it, discard the parsing result.
         if buffer_text != key.buffer_content {
             return;
@@ -393,8 +393,8 @@ impl NotebookCommand {
 
         let Some(block_start) = self.start_offset(ctx) else {
             return;
-        };
 
+        };
         // If the text range is no longer a code block, do not try to highlight it.
         if !matches!(
             self.content
@@ -449,8 +449,8 @@ impl NotebookCommand {
 
                 let Some(start_offset) = self.start_offset(ctx) else {
                     return;
-                };
 
+                };
                 if !matches!(
                     self.content
                         .as_ref(ctx)
@@ -462,8 +462,8 @@ impl NotebookCommand {
 
                 let Some(end_offset) = self.end_offset(ctx) else {
                     return;
-                };
 
+                };
                 // If the replacement range overlaps with command block range, regenerate the highlight.
                 if start_offset <= replacement_offset.end && end_offset >= replacement_offset.start
                 {

@@ -601,8 +601,8 @@ impl InitStepBlock {
 
         let Some(step) = step else {
             return Empty::new().finish();
-        };
 
+        };
         match &step.status {
             InitStepStatus::Pending => {
                 // Should not happen for codebase context (computed sync)
@@ -615,8 +615,8 @@ impl InitStepBlock {
                 } = &self.state
                 else {
                     return Empty::new().finish();
-                };
 
+                };
                 RenderableAction::new_with_element(
                     Container::new(ChildView::new(action_view).finish())
                         .with_background(appearance.theme().surface_1())
@@ -653,12 +653,12 @@ impl InitStepBlock {
     ) -> Box<dyn Element> {
         let InitActionResult::CodebaseContext(indexing_result) = result else {
             return Empty::new().finish();
-        };
 
+        };
         let StepState::CodebaseContext { mouse_states, .. } = &self.state else {
             return Empty::new().finish();
-        };
 
+        };
         match indexing_result {
             CodebaseIndexingResult::Accepted => {
                 RenderableAction::new("Codebase index started", app)
@@ -697,8 +697,8 @@ impl InitStepBlock {
 
         let Some(step) = step else {
             return Empty::new().finish();
-        };
 
+        };
         match &step.status {
             InitStepStatus::Pending => {
                 // Still loading LSP detection
@@ -750,8 +750,8 @@ impl InitStepBlock {
         } = &self.state
         else {
             return Empty::new().finish();
-        };
 
+        };
         lsp_server_selector::render_lsp_selector_block(
             action_view,
             repo_path,
@@ -771,8 +771,8 @@ impl InitStepBlock {
     ) -> Box<dyn Element> {
         let InitActionResult::LanguageServers(lsp_result) = result else {
             return Empty::new().finish();
-        };
 
+        };
         match lsp_result {
             LanguageServersResult::Accepted {
                 enabled_servers,
@@ -804,8 +804,8 @@ impl InitStepBlock {
 
         let Some(step) = step else {
             return Empty::new().finish();
-        };
 
+        };
         match &step.status {
             InitStepStatus::Pending => Empty::new().finish(),
             InitStepStatus::Ready(_) => {
@@ -843,8 +843,8 @@ impl InitStepBlock {
 
         let Some(step) = step else {
             return Empty::new().finish();
-        };
 
+        };
         match &step.status {
             InitStepStatus::Pending => Empty::new().finish(),
             InitStepStatus::Ready(_) => {
@@ -882,8 +882,8 @@ impl InitStepBlock {
     ) -> Box<dyn Element> {
         let InitActionResult::CreateEnvironment(env_result) = result else {
             return Empty::new().finish();
-        };
 
+        };
         match env_result {
             CreateEnvironmentResult::Created => {
                 Self::render_success_completion("Environment created", app)
@@ -901,12 +901,12 @@ impl InitStepBlock {
     ) -> Box<dyn Element> {
         let InitActionResult::ProjectScopedRules(rules_result) = result else {
             return Empty::new().finish();
-        };
 
+        };
         let StepState::ProjectRules { mouse_states, .. } = &self.state else {
             return Empty::new().finish();
-        };
 
+        };
         let appearance = Appearance::as_ref(app);
 
         let init_completed = self.model.as_ref(app).is_completed();

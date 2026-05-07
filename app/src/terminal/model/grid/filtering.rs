@@ -75,8 +75,8 @@ impl FilterState {
         else {
             log::error!("Could not find replacement start when updating dirty matches");
             return;
-        };
 
+        };
         let Some(replace_end) = self
             .matches
             .iter()
@@ -84,8 +84,8 @@ impl FilterState {
         else {
             log::error!("Could not find replacement end when updating dirty matches");
             return;
-        };
 
+        };
         let replace_range = if replace_start <= replace_end {
             replace_start..(replace_end + 1)
         } else {
@@ -449,8 +449,8 @@ impl GridHandler {
 
         let Some(dirty_cells_range) = self.dirty_cells_range() else {
             return;
-        };
 
+        };
         let dirty_lines_start = self.line_search_left(*dirty_cells_range.start());
         let dirty_lines_end = self.line_search_right(*dirty_cells_range.end());
 
@@ -720,8 +720,8 @@ impl GridHandler {
         else {
             log::error!("Could not find replacement end when updating dirty filtered lines.");
             return Vec::new();
-        };
 
+        };
         let replace_start_idx = self.adjust_replace_start_idx(
             dirty_range.clone(),
             displayed_rows,

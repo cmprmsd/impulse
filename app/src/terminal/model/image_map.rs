@@ -80,8 +80,8 @@ impl ImageMap {
             for (image_id, placement_id) in images_to_evict.iter() {
                 let Some(image_type) = self.image_type_by_image_id.get(image_id) else {
                     continue;
-                };
 
+                };
                 if !image_types_to_evict.contains(image_type) {
                     continue;
                 }
@@ -217,8 +217,8 @@ impl ImageMap {
         for (image_id, placement_id) in images_to_evict {
             let Some(image_type) = self.image_type_by_image_id.get(&image_id) else {
                 continue;
-            };
 
+            };
             if !image_types_to_evict.contains(image_type) {
                 continue;
             }

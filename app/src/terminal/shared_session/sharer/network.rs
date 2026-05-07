@@ -453,8 +453,8 @@ impl Network {
     ) {
         let Some(sharer_id) = self.sharer_id.clone() else {
             return;
-        };
 
+        };
         // Set the right block ID. The block IDs that we call this function
         // with are monotonically increasing.
         if block_id != &self.next_buffer_seq_no.0 {
@@ -685,8 +685,8 @@ impl Network {
         else {
             log::error!("This channel does not support session-sharing.");
             return;
-        };
 
+        };
         let auth_client = ServerApiProvider::as_ref(ctx).get_auth_client();
         let auth_state = AuthStateProvider::as_ref(ctx).get().clone();
         let abort_handle = ctx

@@ -427,8 +427,8 @@ impl<V: EditorView> EditorWrapper<V> {
         // draw one full-width rect per group.
         let Some(gutter_elements) = &self.gutter_elements else {
             return;
-        };
 
+        };
         struct Group {
             start_y: f32,
             end_y: f32,
@@ -448,8 +448,8 @@ impl<V: EditorView> EditorWrapper<V> {
                     vec2f(wrapper_size.x(), group.end_y - group.start_y),
                 ))
                 .with_background(group.overlay);
-        };
 
+        };
         for element in gutter_elements.iter() {
             let is_remove = matches!(
                 element.element_type,
@@ -467,8 +467,8 @@ impl<V: EditorView> EditorWrapper<V> {
             let Some(overlay) = element.overlay else {
                 flush(&mut group);
                 continue;
-            };
 
+            };
             let current_range = element.line.line_range().clone();
             let start_y = element.offset.as_f32();
             let end_y = start_y + element.height;
@@ -575,8 +575,8 @@ impl<V: EditorView> EditorWrapper<V> {
         };
         let Some(blocks) = self.editor.blocks() else {
             return Some(Vec::new());
-        };
 
+        };
         let mut elements = Vec::new();
         let model = self.model().as_ref(app);
         let hovered_range = self.state_handle.hovered_diff_hunk.lock();
@@ -588,8 +588,8 @@ impl<V: EditorView> EditorWrapper<V> {
         for (block_idx, block) in blocks.iter().enumerate() {
             let Some(line_count) = model.start_line_index(&**block) else {
                 continue;
-            };
 
+            };
             // For lens element, we need to use use the content offset - scroll top instead of the render model's viewport
             // offset since we are only rendering a section of the editor.
             let offset = match &self.editor {
@@ -801,8 +801,8 @@ impl<V: EditorView> EditorWrapper<V> {
 
             let Some(height) = model.first_line_height(&**block) else {
                 continue;
-            };
 
+            };
             // Check if this line is part of any diff hunk when diff hunks are expanded and hovered
             let is_diff_line = self.diff_hunks_are_expanded() && diff_hunk.is_some();
 
@@ -1567,8 +1567,8 @@ impl<V: EditorView> Element for EditorWrapper<V> {
             .or_else(|| self.element_origin.map(|origin| origin.z_index()))
         else {
             return false;
-        };
 
+        };
         // Then, dispatch events to gutter elements that are in the hovered range
         // This is important for Hoverable elements like the plus button
         let mut gutter_handled = false;

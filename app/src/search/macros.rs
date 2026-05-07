@@ -12,8 +12,8 @@ macro_rules! data_from_owned_value {
     ($value:expr, $t:ty) => {
         <$t as $crate::search::searcher::FromOwnedValue>::from_owned_value($value)
     };
-}
 
+}
 #[macro_export]
 macro_rules! get_factor_or_default {
     ($factor:expr) => {

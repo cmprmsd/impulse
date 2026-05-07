@@ -49,8 +49,8 @@ impl PromptSuggestionExecutor {
         } = input.action
         else {
             return ActionExecution::InvalidAction;
-        };
 
+        };
         if FeatureFlag::PromptSuggestionsViaMAA.is_enabled() {
             if let SuggestPromptRequest::PromptSuggestion { prompt, label } = request {
                 ctx.emit(PromptSuggestionExecutorEvent::NewPromptSuggestion {

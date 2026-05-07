@@ -105,8 +105,8 @@ impl DataSource {
                 let Some(cloud_object) = CloudModel::as_ref(ctx).get_by_uid(&server_id.uid())
                 else {
                     return;
-                };
 
+                };
                 // Ensure the index is updated with the new server ID (any operations using old client ID will fail
                 // when reading from the CloudModel once the object is synced).
                 self.searcher
@@ -495,7 +495,7 @@ impl WarpDriveSearcher for FuzzyWarpDriveSearcher {
                         && cloud_workflow.model().data.is_command_workflow()
                 {
                     return None;
-                };
+                }
                 FuzzyMatchWorkflowResult::try_match(
                     query,
                     &cloud_workflow.model().data,

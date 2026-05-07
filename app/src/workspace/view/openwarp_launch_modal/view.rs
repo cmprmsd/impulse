@@ -249,8 +249,8 @@ impl OpenWarpLaunchModal {
             return Text::new(item.description, appearance.ui_font_family(), 14.)
                 .with_color(PhenomenonStyle::modal_feature_description_text())
                 .finish();
-        };
 
+        };
         // Build a formatted description with an inline hyperlink and inline code.
         let (before, after) = item
             .description

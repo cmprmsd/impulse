@@ -1817,8 +1817,8 @@ impl AppearanceSettingsPageView {
         let user_input = self.line_height_editor.as_ref(ctx).buffer_text(ctx);
         let Ok(new_line_height) = user_input.parse::<f32>() else {
             return;
-        };
 
+        };
         let appearance = Appearance::as_ref(ctx);
         let current_line_height = appearance.ui_builder().line_height_ratio();
 
@@ -4867,8 +4867,8 @@ impl SettingsWidget for DirectoryTabColorsWidget {
             let Some(dot_mouse_states) = view.color_picker_dot_states.get(idx).cloned() else {
                 log::error!("Missing color picker dot states for directory index {idx}");
                 continue;
-            };
 
+            };
             let friendly_path = user_friendly_path(&dir_path, home_dir.as_deref()).to_string();
             let path_label = Shrinkable::new(
                 1.,

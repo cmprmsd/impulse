@@ -46,8 +46,8 @@ impl OneTimeModalModel {
         ctx.subscribe_to_model(&AuthManager::handle(ctx), |_, event, ctx| {
             let AuthManagerEvent::AuthComplete = event else {
                 return;
-            };
 
+            };
             let auth_state = crate::legacy_stubs::AuthStateProvider::as_ref(ctx).get().clone();
             let is_existing_user = auth_state.is_onboarded().unwrap_or_default();
             if is_existing_user {
@@ -344,13 +344,13 @@ impl OneTimeModalModel {
         let user_workspaces = UserWorkspaces::as_ref(ctx);
         let Some(current_team) = user_workspaces.current_team() else {
             return false;
-        };
 
+        };
         // Check if user is admin of the team
         let Some(user_email) = auth_state.user_email() else {
             return false;
-        };
 
+        };
         if !current_team.has_admin_permissions(&user_email) {
             return false;
         }

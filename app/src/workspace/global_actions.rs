@@ -144,8 +144,8 @@ fn save_app(_: &(), ctx: &mut AppContext) {
         .clone()
     else {
         return;
-    };
 
+    };
     // Only compute the app state if we're definitely going to use it.
     let app_state = get_app_state(ctx);
     let event = ModelEvent::Snapshot(app_state);

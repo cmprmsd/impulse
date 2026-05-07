@@ -48,8 +48,8 @@ macro_rules! delegate {
             }
         }
     };
-}
 
+}
 /// Any methods which write responses back to the shell process cannot have double delegation, since
 /// that would result in extra responses being sent back to the shell.
 macro_rules! delegate_with_writer {
@@ -69,8 +69,8 @@ macro_rules! delegate_with_writer {
             }
         }
     };
-}
 
+}
 #[derive(Copy, Clone, Debug, PartialEq)]
 pub(super) enum CommandStartPoint {
     /// NOTE: this should ideally have a `has_extra_leading_newline` field which tracks a leading newline in the case of a

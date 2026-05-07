@@ -426,8 +426,8 @@ impl<'a> WarpDriveRow<'a> {
     ) -> Option<Box<dyn Element>> {
         let WarpDriveItemId::Object(object_id) = self.item.warp_drive_id() else {
             return None;
-        };
 
+        };
         if CloudViewModel::as_ref(app).object_space(&object_id.uid(), app) != Some(Space::Shared) {
             return None;
         }

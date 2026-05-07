@@ -1013,7 +1013,7 @@ impl EditorModel {
 
             if let Err(error) = buffer.unindent(row_ranges, ctx) {
                 log::error!("error unindenting text: {error}");
-            };
+            }
         });
     }
 
@@ -1138,7 +1138,7 @@ impl EditorModel {
                     if let Err(error) = buffer.edit(offset_ranges.iter().cloned(), *completion, ctx)
                     {
                         log::error!("error inserting text: {error}");
-                    };
+                    }
                 });
                 self.consecutive_autocomplete_insertion_edits_counter += 1;
                 return;
@@ -1171,7 +1171,7 @@ impl EditorModel {
                 ctx,
             ) {
                 log::error!("error inserting text: {error}");
-            };
+            }
         });
 
         let char_count = text.chars().count() as isize;
@@ -1296,7 +1296,7 @@ impl EditorModel {
                     ctx,
                 ) {
                     log::error!("error inserting text: {error}");
-                };
+                }
                 text_added_offset += styled_text.text().chars().count();
             }
         });
@@ -1329,8 +1329,8 @@ impl EditorModel {
                         text_added_offset
                     );
                     return None;
-                };
 
+                };
                 let mut selection = LocalSelection {
                     selection: Selection::single_cursor(end),
                     clamp_direction: Default::default(),
@@ -1977,7 +1977,7 @@ impl EditorModel {
         self.buffer_handle().update(ctx, |buffer, ctx| {
             if let Err(error) = buffer.edit(Some(0.into()..buffer.len()), "", ctx) {
                 log::error!("error clearing text: {error}");
-            };
+            }
         });
         self.clear_selections(ctx);
     }
@@ -1994,7 +1994,7 @@ impl EditorModel {
         self.buffer_handle().update(ctx, |buffer, ctx| {
             if let Err(error) = buffer.edit(Some(0.into()..n), text, ctx) {
                 log::error!("error replacing first n chars: {error}");
-            };
+            }
         });
     }
 
@@ -2012,7 +2012,7 @@ impl EditorModel {
             let start = len.saturating_sub(&n);
             if let Err(error) = buffer.edit(Some(start..len), text, ctx) {
                 log::error!("error replacing last n chars: {error}");
-            };
+            }
         });
     }
 
@@ -3011,8 +3011,8 @@ impl EditorModel {
                 ctx,
             ) {
                 log::error!("error inserting text: {error}");
-            };
 
+            }
             // Inserting the autocompleted characters. Because the buffer has
             // changed due to the insertion of user-typed characters, we need to
             // shift the insertion range by its index here.
@@ -3026,7 +3026,7 @@ impl EditorModel {
                 ctx,
             ) {
                 log::error!("error inserting text: {error}");
-            };
+            }
         });
 
         let buffer = self.buffer(ctx);

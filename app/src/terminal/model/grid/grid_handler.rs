@@ -95,7 +95,6 @@ lazy_static! {
     /// result in invalid URLs, but we don't halt detection if we find them.
     /// See https://datatracker.ietf.org/doc/html/rfc3986 for more details.
     static ref URL_SEPARATORS: HashSet<char> = HashSet::from([' ', '<', '>', '"', '{', '}', '|', '\\', '^', '`']);
-}
 
 /// Represents a range of cells with information on their combined content and total
 /// cell width.
@@ -748,6 +747,7 @@ impl GridHandler {
             // part of a url.
             if current_point == original_point && !link_changed {
                 return None;
+            }
             // Passed the hovered point and link hasn't changed -- break because all the later
             // urls will not include the point.
             } else if passed_point && !link_changed {
@@ -901,8 +901,8 @@ impl GridHandler {
                 // If the cell doesn't exist for some reason, then we can break and
                 // return a partially constructed string.
                 break;
-            };
 
+            };
             // Skip over cells until next tab-stop once a tab was found.
             if tab_mode {
                 if self.ansi_handler_state.tabs[col] {
@@ -1773,8 +1773,8 @@ impl GridHandler {
                 cursor.move_forward();
             } else {
                 cursor.move_backward();
-            };
 
+            }
             // Break if there are no more cells
             let cursor_item = match cursor.current_item() {
                 Some(item) => item,

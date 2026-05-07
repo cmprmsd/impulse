@@ -8,6 +8,7 @@ use crate::{
         result_renderer::{QueryResultRenderer, QueryResultRendererStyles},
         search_bar::{SearchBar, SearchBarEvent, SearchBarState, SearchResultOrdering},
     }};
+}
 use itertools::Itertools;
 use lazy_static::lazy_static;
 use warpui::{
@@ -39,8 +40,8 @@ lazy_static! {
             result_vertical_padding: 4.,
             ..Default::default()
         };
-}
 
+}
 pub enum EmbeddingSearchEvent {
     ItemSelected {
         payload: Box<EmbeddingSearchItemAction>,

@@ -436,8 +436,8 @@ impl BlockList {
     pub fn update_selection(&mut self, point: BlockListPoint, side: Side) {
         let Some(mut selection) = self.selection.take() else {
             return;
-        };
 
+        };
         let block_anchor = BlockAnchor::new(point, side);
 
         selection.tail = block_anchor;

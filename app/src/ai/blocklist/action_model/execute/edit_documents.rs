@@ -42,8 +42,8 @@ impl EditDocumentsExecutor {
         } = action
         else {
             return ActionExecution::<EditDocumentsResult>::InvalidAction;
-        };
 
+        };
         let model = AIDocumentModel::handle(ctx);
 
         let mut updated_documents = Vec::new();

@@ -39,8 +39,8 @@ impl ReadDocumentsExecutor {
         } = action
         else {
             return ActionExecution::<ReadDocumentsResult>::InvalidAction;
-        };
 
+        };
         // Access the model synchronously before the async block
         let model = AIDocumentModel::handle(ctx);
         let documents: Vec<DocumentContext> = document_ids

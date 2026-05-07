@@ -1293,8 +1293,8 @@ impl Workspace {
     fn finish_pane_rename(&mut self, ctx: &mut ViewContext<Self>) {
         let Some(locator) = self.current_workspace_state.pane_being_renamed() else {
             return;
-        };
 
+        };
         self.current_workspace_state.clear_pane_being_renamed();
         let title = self.pane_rename_editor.as_ref(ctx).buffer_text(ctx);
         self.set_custom_pane_name(locator, title, ctx);
@@ -3206,8 +3206,8 @@ impl Workspace {
                 let history_model = BlocklistAIHistoryModel::as_ref(ctx);
                 let Some(conversation) = history_model.conversation(conversation_id) else {
                     return;
-                };
 
+                };
                 let Some(latest_query) = conversation
                     .latest_user_query()
                     .map(|latest_query| latest_query.to_owned())
@@ -3926,8 +3926,8 @@ impl Workspace {
         else {
             self.load_cloud_conversation_into_new_transcript_viewer(server_token, ctx);
             return;
-        };
 
+        };
         // Check whether the conversation was started/is owned by by the current user.
         let user_id = AuthStateProvider::as_ref(ctx).get().user_id();
         let server_metadata = history.get_server_conversation_metadata(&conversation_id);
@@ -4006,8 +4006,8 @@ impl Workspace {
                         view.add_ephemeral_toast(new_toast, ctx);
                     });
                     return;
-                };
 
+                };
                 // Update the pane group with the loaded conversation
                 new_pane_group.update(ctx, |pane_group, ctx| {
                     pane_group
@@ -4098,13 +4098,13 @@ impl Workspace {
         // Get the pane group for the specified tab
         let Some(pane_group) = self.tabs.get(tab_index).map(|tab| tab.pane_group.clone()) else {
             return;
-        };
 
+        };
         // Get the focused terminal view in that tab
         let Some(terminal_view) = pane_group.as_ref(ctx).focused_session_view(ctx) else {
             return;
-        };
 
+        };
         // Copy the shared session link from that terminal view
         terminal_view.update(ctx, |view, ctx| {
             view.copy_shared_session_link(SharedSessionActionSource::Tab, ctx);
@@ -5048,8 +5048,8 @@ impl Workspace {
                 self.tabs.len()
             );
             return;
-        };
 
+        };
         if self.current_workspace_state.is_tab_being_renamed() {
             self.current_workspace_state.clear_tab_being_renamed();
             self.clear_tab_name_editor(ctx);
@@ -5144,8 +5144,8 @@ impl Workspace {
 
         let Some(cwd) = cwd else {
             return;
-        };
 
+        };
         let cwd_path = Path::new(&cwd);
         let color = TabSettings::as_ref(ctx)
             .directory_tab_colors
@@ -5232,8 +5232,8 @@ impl Workspace {
         else {
             log::warn!("Tried to rename pane in a missing tab");
             return;
-        };
 
+        };
         let Some(title) = tab
             .pane_group
             .as_ref(ctx)
@@ -5256,8 +5256,8 @@ impl Workspace {
         else {
             log::warn!("Tried to rename a missing pane");
             return;
-        };
 
+        };
         tab.pane_group.update(ctx, |pane_group, ctx| {
             pane_group.focus_pane_by_id(locator.pane_id, ctx);
         });
@@ -6842,8 +6842,8 @@ impl Workspace {
     fn open_warp_drive_object_in_new_pane(&mut self, uid: &ObjectUid, ctx: &mut ViewContext<Self>) {
         let Some(object) = CloudModel::as_ref(ctx).get_by_uid(uid) else {
             return;
-        };
 
+        };
         let sync_id = object.sync_id();
         match object.object_type() {
             ObjectType::Notebook => {
@@ -7244,8 +7244,8 @@ impl Workspace {
         let Some(view) = self.active_session_view(ctx) else {
             log::warn!("No active terminal view session when trying to attach path as context");
             return;
-        };
 
+        };
         view.update(ctx, |terminal_view, ctx| {
             terminal_view.attach_path_as_context(&path, ctx);
         });
@@ -7255,13 +7255,13 @@ impl Workspace {
         let Some(input_handle) = self.get_active_input_view_handle(ctx) else {
             log::warn!("No active input view when trying to cd to directory");
             return;
-        };
 
+        };
         let Some(path_str) = path.to_str() else {
             log::warn!("Could not convert path to string for cd command");
             return;
-        };
 
+        };
         let cd_command = format!("cd {}", shell_words::quote(path_str));
         input_handle.update(ctx, |input_view, ctx| {
             input_view.replace_buffer_content(&cd_command, ctx);
@@ -8800,8 +8800,8 @@ impl Workspace {
             app.element_position_by_id_at_last_frame(self.window_id, anchor_label)
         else {
             return false;
-        };
 
+        };
         let gap = 4.0;
 
         let would_overflow_right = anchor_rect.max_x() + gap + sidecar_width >= window.size().x();
@@ -8844,8 +8844,8 @@ impl Workspace {
         // sidecar) or is on a non-hoverable element. Keep current state.
         let Some(hovered_index) = hovered_index else {
             return;
-        };
 
+        };
         // Check what the hovered item is by reading its label.
         let hovered_label = self.new_session_dropdown_menu.read(ctx, |menu, _| {
             menu.items().get(hovered_index).and_then(|item| match item {
@@ -8865,8 +8865,8 @@ impl Workspace {
                 ctx.notify();
             }
             return;
-        };
 
+        };
         match label.as_str() {
             "New worktree config" => {
                 self.tab_config_action_sidecar_item = None;
@@ -9034,8 +9034,8 @@ impl Workspace {
     fn complete_pending_session_config_replacement(&mut self, ctx: &mut ViewContext<Self>) {
         let Some(pending) = self.pending_session_config_replacement.take() else {
             return;
-        };
 
+        };
         self.remove_tab_by_pane_group_id(pending.old_pane_group_id, ctx);
     }
 
@@ -9636,7 +9636,7 @@ impl Workspace {
                         log::error!(
                             "Failed to set should_confirm_close_session setting to false: {e}"
                         );
-                    };
+                    }
                 }
                 match *open_confirmation_source {
                     OpenDialogSource::CloseTab { tab_index } => {
@@ -10153,8 +10153,8 @@ impl Workspace {
         let Some(tab_data) = self.tabs.get(index) else {
             debug_assert!(false, "Tried to remove a tab with an invalid index");
             return;
-        };
 
+        };
         // If the vertical-tabs detail sidecar is anchored to this tab's pane group, clear it.
         // Otherwise it will try to position itself against a pane row that is about to disappear
         // (either because the tab is being removed from `self.tabs`, or because we're about to
@@ -11113,8 +11113,8 @@ impl Workspace {
                     Ok(paths) => {
                         let Some(path) = paths.into_iter().next() else {
                             return;
-                        };
 
+                        };
                         if let Some(handle) = ctx.handle().upgrade(ctx) {
                             handle.update(ctx, |workspace, ctx| {
                                 workspace.handle_open_repository(&path, ctx);
@@ -11342,8 +11342,8 @@ impl Workspace {
                     toast_stack.add_ephemeral_toast(toast, window_id, ctx);
                 });
                 return;
-            };
 
+            };
             terminal_view_for_closure.update(ctx, |terminal_view, ctx| {
                 // Unset the loading status
                 terminal_view
@@ -11401,8 +11401,8 @@ impl Workspace {
                     });
                 }
                 return;
-            };
 
+            };
             // Replace the loading pane with real terminal
             if let Some(pane_group) = ctx.view_with_id::<PaneGroup>(window_id, pane_group_id) {
                 pane_group.update(ctx, |pane_group, ctx| {
@@ -11472,8 +11472,8 @@ impl Workspace {
                     workspace.close_tab(tab_index, true, false, ctx);
                 }
                 return;
-            };
 
+            };
             // Find the tab with this pane_group_id and replace its loading pane
             if let Some(tab_pane_group) = workspace
                 .tabs
@@ -11577,8 +11577,8 @@ impl Workspace {
                     toast_stack.add_ephemeral_toast(toast, window_id, ctx);
                 });
                 return;
-            };
 
+            };
             let history_model = BlocklistAIHistoryModel::handle(ctx);
             let fork_result = history_model.update(ctx, |history_model, ctx| {
                 if let Some(fork_from) = fork_from_exchange {
@@ -11863,8 +11863,8 @@ impl Workspace {
             .active_session_view(ctx)
         else {
             return;
-        };
 
+        };
         terminal_view.update(ctx, |terminal, ctx| {
             terminal.ai_controller().update(ctx, |controller, ctx| {
                 controller
@@ -12465,8 +12465,8 @@ impl Workspace {
                 let Some(workflow) = CloudModel::as_ref(ctx).get_workflow(id) else {
                     log::warn!("Tried to execute workflow for id {id:?} but it does not exist");
                     return;
-                };
 
+                };
                 self.run_cloud_workflow_in_active_input(
                     workflow.clone(),
                     WorkflowSelectionSource::CommandPalette,
@@ -12479,8 +12479,8 @@ impl Workspace {
                 else {
                     log::warn!("Tried to execute EVC for id {id:?} but it does not exist");
                     return;
-                };
 
+                };
                 self.invoke_environment_variables(env_var_collection.clone(), false, ctx);
             }
             CommandPaletteEvent::OpenNotebook { id } => self.open_notebook(
@@ -12975,8 +12975,8 @@ impl Workspace {
                 toast_stack.add_ephemeral_toast(toast, window_id, ctx);
             });
             return;
-        };
 
+        };
         let ai_client = ServerApiProvider::as_ref(ctx).get_ai_client();
         let source_conversation_id = source_token.as_str().to_string();
         ctx.spawn(
@@ -13069,8 +13069,8 @@ impl Workspace {
                 toast_stack.add_ephemeral_toast(toast, window_id, ctx);
             });
             return;
-        };
 
+        };
         if let Some(prompt) = initial_prompt.as_deref().filter(|p| !p.is_empty()) {
             new_pane_view.update(ctx, |terminal_view, view_ctx| {
                 terminal_view.input().update(view_ctx, |input, input_ctx| {
@@ -13569,8 +13569,8 @@ impl Workspace {
                 else {
                     log::warn!("Could not find tab to focus pane");
                     return;
-                };
 
+                };
                 self.activate_tab(tab_index_to_focus, ctx);
 
                 // TODO(CODE-266): This should focus the correct pane in the tab,
@@ -14011,8 +14011,8 @@ impl Workspace {
                         pane_group.hide_pane_for_move(*pane_id, ctx)
                     });
                     return;
-                };
 
+                }
                 if let Some(pane) = pane_group.update(ctx, |pane_group, ctx| {
                     pane_group.remove_pane_for_move(pane_id, ctx)
                 }) {
@@ -14508,8 +14508,8 @@ impl Workspace {
                 input_handle.update(ctx, |input, ctx| {
                     input.close_input_suggestions(false, ctx);
                 });
-            };
 
+            }
             self.current_workspace_state.is_command_search_open = true;
             self.command_search_view.update(ctx, |view, ctx| {
                 view.reset_state(
@@ -14854,8 +14854,8 @@ impl Workspace {
                 toast_stack.add_ephemeral_toast(toast, window_id, ctx);
             });
             return;
-        };
 
+        };
         // Check if the plan's conversation is already selected in the target terminal before
         // attaching as context. This is to stop users from reattaching plans to conversations that already
         // have them in context.
@@ -14998,8 +14998,8 @@ impl Workspace {
         else {
             log::error!("Could not get terminal view handle when attempting to open LSP logs.");
             return;
-        };
 
+        };
         terminal_view_handle.update(ctx, |terminal, ctx| {
             let shell_family = terminal.shell_family(ctx);
             let tail_command = tail_command_for_shell(shell_family, log_path);
@@ -15016,8 +15016,8 @@ impl Workspace {
             self.focus_terminal_input(None, TerminalSessionFallbackBehavior::OpenIfNeeded, ctx)
         else {
             return;
-        };
 
+        };
         let prefix = CLIAgentSessionsModel::as_ref(ctx)
             .session(terminal_view_handle.id())
             .map(|session| session.agent.skill_command_prefix())
@@ -15349,8 +15349,8 @@ impl Workspace {
     ) {
         let UpdateManagerEvent::ObjectOperationComplete { result } = event else {
             return;
-        };
 
+        };
         let cloud_model = CloudModel::as_ref(ctx);
 
         let object_id = result
@@ -15942,8 +15942,8 @@ impl Workspace {
             .position(|zoom| *zoom == current_zoom)
         else {
             return;
-        };
 
+        };
         let next_index = if increase {
             (current_index + 1).min(crate::window_settings::ZoomLevel::VALUES.len() - 1)
         } else {
@@ -16247,16 +16247,16 @@ impl Workspace {
                 else {
                     log::error!("No active terminal view after adding tab for Codex session");
                     return;
-                };
 
+                };
                 let Some(codex_model_id) = LLMPreferences::as_ref(ctx)
                     .get_preferred_codex_model()
                     .map(|info| info.id.clone())
                 else {
                     log::error!("No preferred codex model found");
                     return;
-                };
 
+                };
                 // Set codex as the model for the default profile and make the default profile active.
                 AIExecutionProfilesModel::handle(ctx).update(ctx, |profiles, ctx| {
                     let default_profile_id = profiles.default_profile_id();
@@ -16298,8 +16298,8 @@ impl Workspace {
 
         let Some(manager) = plugin_manager_for(agent) else {
             return;
-        };
 
+        };
         let instructions = match kind {
             PluginModalKind::Install => manager.install_instructions(),
             PluginModalKind::Update => manager.update_instructions(),
@@ -16393,8 +16393,8 @@ impl Workspace {
         else {
             log::error!("No active terminal view after adding tab for Linear issue work");
             return;
-        };
 
+        };
         let prompt = args.prompt.clone();
         terminal_view.update(ctx, |terminal_view, ctx| {
             terminal_view.enter_agent_view_for_new_conversation(
@@ -17972,8 +17972,8 @@ impl Workspace {
     fn maybe_render_traffic_lights(&self, stack: &mut Stack, app: &AppContext) {
         let Some(traffic_light_data) = traffic_light_data(app, self.window_id) else {
             return;
-        };
 
+        };
         let appearance = Appearance::as_ref(app);
         let fullscreen_state = app
             .windows()
@@ -21666,8 +21666,8 @@ impl TypedActionView for Workspace {
                     .active_session_view(ctx)
                 else {
                     return;
-                };
 
+                };
                 terminal_view.update(ctx, |terminal, ctx| {
                     terminal.send_user_query_after_next_conversation_finished(
                         prompt.clone(),
@@ -23639,8 +23639,8 @@ impl Workspace {
 
         let Some(window_bounds) = ctx.window_bounds(&window_id) else {
             return self.tabs.len();
-        };
 
+        };
         // Pre-compute the bounding rects of the tab bar / vertical tabs panel
         // so we can defensively reject `tab_position_<index>` cache entries
         // that don't lie within either of them. This guards
@@ -23744,8 +23744,8 @@ impl Workspace {
                 "adopt_transferred_pane_group missing placeholder tab"
             );
             return;
-        };
 
+        };
         // Swap the placeholder's pane group with the real one, then tear down
         // the placeholder so its terminals are properly detached.
         let placeholder_pane_group =
@@ -23842,8 +23842,8 @@ impl Workspace {
                     drag.reset_to_floating();
                 });
                 return;
-            };
 
+            };
             let result = CrossWindowTabDrag::handle(ctx).update(ctx, |drag, ctx| {
                 drag.execute_handoff_back_to_caller(
                     target,
@@ -24045,8 +24045,8 @@ impl Workspace {
                     self.get_tab_transfer_info_for_attach(current_index, ctx)
                 else {
                     return;
-                };
 
+                };
                 let preview_window_id = crate::root_view::create_transferred_window(
                     transferred_tab,
                     source_window_id,
@@ -24345,8 +24345,8 @@ fn compute_default_panel_widths(
 fn set_opencode_warp_plugin(new_entry: &str) -> String {
     let Some(home) = dirs::home_dir() else {
         return "Failed to determine home directory".to_string();
-    };
 
+    };
     let config_dir = home.join(".config/opencode");
     let config_path = config_dir.join("opencode.json");
 
@@ -24372,8 +24372,8 @@ fn set_opencode_warp_plugin(new_entry: &str) -> String {
 
     let Some(plugins) = plugins else {
         return "opencode.json has unexpected structure (plugin is not an array)".to_string();
-    };
 
+    };
     // Remove any existing opencode-warp entries
     plugins.retain(|entry| {
         let s = entry.as_str().unwrap_or("");

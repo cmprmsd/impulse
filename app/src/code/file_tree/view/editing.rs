@@ -155,8 +155,8 @@ impl FileTreeView {
     pub(super) fn commit_pending_edit(&mut self, ctx: &mut ViewContext<Self>) {
         let Some(pending_edit) = self.pending_edit.take() else {
             return;
-        };
 
+        };
         let file_tree_id = pending_edit.id.clone();
 
         let buffer_content = self.editor_view.as_ref(ctx).buffer_text(ctx);
@@ -172,8 +172,8 @@ impl FileTreeView {
                     };
                     let Some(item) = root_dir.items.get_mut(file_tree_id.index) else {
                         return;
-                    };
 
+                    };
                     if let FileTreeItem::File { metadata, .. } = item {
                         let mut new_std = (*metadata.path).clone();
                         new_std.set_file_name(&buffer_content);
@@ -268,16 +268,16 @@ impl FileTreeView {
     fn insert_entry(root_entry: &mut FileTreeEntry, child_entry: FileTreeEntryState) {
         let Some(parent) = child_entry.path().parent() else {
             return;
-        };
 
+        };
         root_entry.insert_child_state(&parent, child_entry);
     }
 
     pub(super) fn handle_pending_edit(&mut self, ctx: &mut ViewContext<Self>) {
         if self.pending_edit.is_none() {
             return;
-        };
 
+        }
         let editor_contents = self.editor_view.as_ref(ctx).buffer_text(ctx);
         // If the editor is empty and the editor was dismissed, cancel the editor.
         // Otherwise commit the editor. This matches VSCode's behavior.

@@ -987,8 +987,8 @@ impl<'a> ViewportState<'a> {
         let Some(block) = self.block_list.block_at(block_index) else {
             log::warn!("Could not find block when adjusting scroll after filter");
             return self.scroll_position;
-        };
 
+        };
         // The top of block is always in the same position before and after filtering.
         let top_of_block = self.top_of_block_in_lines(block_index);
         let top_of_output_grid = top_of_block + block.output_grid_offset().into_lines();
@@ -1039,8 +1039,8 @@ impl<'a> ViewportState<'a> {
             let Some(prev_first_visible_original_row) = prev_first_visible_original_row else {
                 log::warn!("No previous row in viewport found from before filtering");
                 return self.scroll_position;
-            };
 
+            };
             if let Some(new_first_displayed_row) = block
                 .output_grid()
                 .grid_handler()

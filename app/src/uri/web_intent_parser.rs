@@ -205,8 +205,8 @@ fn set_context_flags_from_url(url: Url) {
             };
             let Ok(bool_value) = value.parse::<bool>() else {
                 continue;
-            };
 
+            };
             flag.set(bool_value);
         }
     }
@@ -218,8 +218,8 @@ pub fn current_web_intent() -> Option<WebIntent> {
     let Some(current_url) = parse_current_url() else {
         log::warn!("Unable to parse the current url");
         return None;
-    };
 
+    };
     WebIntent::try_from_url(&current_url).ok()
 }
 
@@ -235,7 +235,7 @@ pub fn set_context_flags_from_current_url() {
     let Some(current_url) = parse_current_url() else {
         log::warn!("Unable to parse the current url");
         return;
-    };
 
+    };
     set_context_flags_from_url(current_url);
 }

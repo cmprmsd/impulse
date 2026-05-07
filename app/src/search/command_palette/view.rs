@@ -390,8 +390,8 @@ impl View {
     pub fn is_mode_enabled(&self, mode: PaletteMode, app: &AppContext) -> bool {
         let Some(active_query_filter) = self.active_query_filter(app) else {
             return false;
-        };
 
+        };
         matches!(
             (mode, active_query_filter),
             (PaletteMode::Command, QueryFilter::Actions)
@@ -585,8 +585,8 @@ impl View {
 
         let Some((viewport_bounds, position_size)) = list_bounds.zip(item_bounds) else {
             return;
-        };
 
+        };
         // If the selected index is contained within the viewport, there is no need to change the
         // scroll position.
         if viewport_bounds.contains_rect(position_size) {
@@ -799,7 +799,7 @@ impl View {
             CommandPaletteItemAction::AcceptBinding { binding } => {
                 if let Some(action) = binding.action.as_deref() {
                     self.dispatch_typed_action_on_view(action, ctx);
-                };
+                }
             }
             CommandPaletteItemAction::NavigateToSession {
                 pane_view_locator,

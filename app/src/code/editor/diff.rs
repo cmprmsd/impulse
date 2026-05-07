@@ -561,8 +561,8 @@ impl DiffModel {
 
         let Some(base_text) = self.base.clone() else {
             return;
-        };
 
+        };
         let handle = ctx
             .spawn(
                 async move { Self::compute_diff_internal(&base_text, &new).await },
@@ -602,8 +602,8 @@ impl DiffModel {
     ) {
         let Some(base_text) = self.base.clone() else {
             return;
-        };
 
+        };
         ctx.spawn(
             async move {
                 let new = new.to_format();
@@ -727,8 +727,8 @@ fn coalesce_replacements<'a>(
     for (&new_index, old_range) in deletion_mapping.iter() {
         let Some((new_range, change)) = change_mapping.get_key_value(&new_index) else {
             continue;
-        };
 
+        };
         if new_range.start != new_index {
             continue;
         }

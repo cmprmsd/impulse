@@ -1,3 +1,13 @@
+use crate::ai::active_agent_views_model::ActiveAgentViewsModel;
+use crate::ai::agent::api::ServerConversationToken;
+use crate::ai::agent::conversation::{AIAgentHarness, AIConversation, AIConversationId};
+use crate::ai::agent_conversations_model::{
+    AgentConversationsModel, AgentConversationsModelEvent, ConversationOrTask,
+};
+use crate::ai::ai_document_view::AIDocumentView;
+use crate::ai::ambient_agents::AmbientAgentTaskId;
+use crate::ai::blocklist::agent_view::AgentViewEntryOrigin;
+use crate::ai::blocklist::history_model::CloudConversationData;
 use crate::ai::blocklist::inline_action::code_diff_view::CodeDiffView;
 use crate::ai::blocklist::suggested_agent_mode_workflow_modal::SuggestedAgentModeWorkflowAndId;
 use crate::ai::blocklist::suggested_rule_modal::SuggestedRuleAndId;
@@ -5,6 +15,11 @@ use crate::ai::blocklist::{BlocklistAIHistoryModel, InputConfig};
 use crate::ai::document::ai_document_model::{AIDocumentId, AIDocumentModel, AIDocumentVersion};
 use crate::ai::execution_profiles::profiles::{AIExecutionProfilesModel, ClientProfileId};
 use crate::ai::llms::LLMId;
+use crate::ai::restored_conversations::RestoredAgentConversations;
+use crate::auth::auth_manager::AuthManager;
+use crate::auth::auth_view_modal::AuthViewVariant;
+use crate::auth::AuthStateProvider;
+use crate::cloud_object::Space;
 #[cfg(feature = "local_fs")]
 use crate::code::editor_management::CodeSource;
 use crate::code::view::CodeViewAction;
@@ -18,6 +33,8 @@ use crate::pane_group::pane::welcome_pane::WelcomePane;
 use crate::pane_group::pane::ActionOrigin;
 use crate::quit_warning::UnsavedStateSummary;
 #[cfg(target_family = "wasm")]
+use crate::server::cloud_objects::update_manager::UpdateManager;
+use crate::server::server_api::ServerApiProvider;
 use crate::settings::{AISettings, DefaultSessionMode, PaneSettings};
 use crate::settings_view::SettingsSection;
 use crate::shell_indicator::ShellIndicatorType;
@@ -27,6 +44,7 @@ use crate::terminal::cli_agent_sessions::plugin_manager::PluginModalKind;
 use crate::terminal::view::inline_banner::{
     ZeroStatePromptSuggestionTriggeredFrom, ZeroStatePromptSuggestionType,
 };
+use crate::terminal::view::load_ai_conversation::RestoredAIConversation;
 use crate::undo_close::UndoCloseStack;
 use crate::undo_close::UndoCloseStackEvent;
 #[cfg(target_family = "wasm")]
@@ -97,10 +115,15 @@ use crate::code::view::CodeView;
 use crate::drive::items::WarpDriveItemId;
 use crate::drive::{CloudObjectTypeAndId, OpenWarpDriveObjectArgs};
 use crate::features::FeatureFlag;
+use crate::launch_configs::launch_config::{self, PaneMode, PaneTemplateType};
 use crate::persistence::ModelEvent;
 use crate::report_if_error;
 use crate::resource_center::{
     mark_feature_used_and_write_to_user_defaults, Tip, TipAction, TipsCompleted,
+};
+use crate::server::ids::{ObjectUid, SyncId};
+use crate::server::telemetry::{
+    AnonymousUserSignupEntrypoint, PaletteSource, SharingDialogSource, TelemetryEvent,
 };
 use crate::session_management::SessionNavigationData;
 use crate::settings_view::mcp_servers_page::MCPServersSettingsPage;
@@ -138,12 +161,9 @@ use crate::workspace::{
     self, CommandSearchOptions, PaneViewLocator, TabBarLocation, WorkspaceAction,
 };
 use crate::{
-    terminal::{TerminalManager, TerminalModel, TerminalView}};
-use crate::legacy_stubs::{AgentConversationEntryId, AmbientAgentTaskId, AnonymousUserSignupEntrypoint, AuthManager, AuthStateProvider, ObjectUid, PaletteSource, ServerApiProvider, SharingDialogSource, Space, SyncId, TelemetryEvent};
-use crate::legacy_stubs::{AIConversation, AIConversationId, CloudConversationData, ServerConversationToken};
-use crate::legacy_stubs::{ServerApi};
-use crate::legacy_stubs::{AIAgentHarness};
-use crate::legacy_stubs::{PaneTemplateType};
+    server::server_api::ServerApi,
+    terminal::{TerminalManager, TerminalModel, TerminalView},
+};
 
 mod child_agent;
 pub mod focus_state;
@@ -1798,14 +1818,9 @@ impl PaneGroup {
                 });
 
                 let restore_kind = match &task_data {
-                    Some((task_id, Some(_))) => {
-                        match AgentConversationsModel::resolve_open_action(
-                            AgentConversationNavigationSubject::Entry(
-                                AgentConversationEntryId::AmbientRun(*task_id),
-                            ),
-                            None,
-                            ctx,
-                        ) {
+                    Some((_, Some(task))) => {
+                        let item = ConversationOrTask::Task(task);
+                        match item.get_open_action(None, ctx) {
                             Some(WorkspaceAction::OpenAmbientAgentSession {
                                 session_id, ..
                             }) => AmbientRestoreKind::SharedSession { session_id },
@@ -2140,15 +2155,6 @@ impl PaneGroup {
         self.panes_of::<TerminalPane>()
             .any(|pane| pane.terminal_view(ctx).id() == terminal_view_id)
     }
-
-    /// Returns the [`PaneId`] of the terminal pane whose persistent UUID matches
-    /// the given bytes, or `None` if no such pane exists in this group.
-    pub fn find_terminal_pane_by_session_uuid(&self, uuid: &[u8]) -> Option<PaneId> {
-        self.panes_of::<TerminalPane>()
-            .find(|pane| pane.session_uuid() == uuid && !self.is_pane_hidden_for_close(pane.id()))
-            .map(|pane| pane.id())
-    }
-
     /// Iterate over the code editors in this pane group.
     pub fn code_panes<'a>(
         &'a self,
@@ -3325,13 +3331,8 @@ impl PaneGroup {
                 continue;
             };
 
-            match AgentConversationsModel::resolve_open_action(
-                AgentConversationNavigationSubject::Entry(AgentConversationEntryId::AmbientRun(
-                    task.task_id,
-                )),
-                None,
-                ctx,
-            ) {
+            let item = ConversationOrTask::Task(&task);
+            match item.get_open_action(None, ctx) {
                 Some(WorkspaceAction::OpenAmbientAgentSession {
                     session_id,
                     task_id: _,

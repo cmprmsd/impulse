@@ -255,7 +255,7 @@ impl WarpifyState {
             .and_then(|state| state.auto_warpify_abort_handle.take())
         {
             abort_handle.abort();
-        };
+        }
     }
 
     pub fn add_ssh_warpify_timeout_handle(&mut self, spawned_future_handle: SpawnedFutureHandle) {
@@ -271,7 +271,7 @@ impl WarpifyState {
             .and_then(|state| state.ssh_warpify_timeout_handle.take())
         {
             handle.abort();
-        };
+        }
     }
 
     pub fn collapse_ssh_block(&mut self, ctx: &mut ViewContext<TerminalView>) -> bool {
@@ -412,7 +412,7 @@ impl WarpifyState {
         }
         if let Some(state) = self.pending_state.take() {
             return self.on_warpified_session_complete(state, ctx);
-        };
+        }
         None
     }
 }

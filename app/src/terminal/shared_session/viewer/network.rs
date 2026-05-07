@@ -811,8 +811,8 @@ impl Network {
     ) {
         let Some(viewer_id) = self.id.clone() else {
             return;
-        };
 
+        };
         // Set the right block ID. The block IDs that we call this function
         // with are monotonically increasing.
         if block_id != &self.next_buffer_seq_no.0 {
@@ -844,8 +844,8 @@ impl Network {
     pub fn send_write_to_pty(&mut self) {
         let Some(viewer_id) = self.id.clone() else {
             return;
-        };
 
+        };
         if let PtyBytesBatchStatus::Batching {
             accumulated,
             abort_handle,

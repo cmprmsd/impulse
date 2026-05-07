@@ -1,3 +1,4 @@
+use crate::ai::blocklist::agent_view::{agent_view_bg_fill, AgentViewState};
 use crate::ai::blocklist::{ai_brand_color, ATTACH_AS_AGENT_MODE_CONTEXT_TEXT};
 use crate::ai_assistant::{AI_ASSISTANT_SVG_PATH, ASK_AI_ASSISTANT_TEXT};
 use crate::appearance::Appearance;
@@ -94,10 +95,6 @@ use crate::terminal::warpify::SubshellSource;
 use crate::terminal::model::escape_sequences::{
     maybe_kitty_keyboard_escape_sequence, KeystrokeWithDetails, ToEscapeSequence,
 };
-use crate::legacy_stubs::{AgentViewState};
-use crate::ui_components::blended_colors::neutral_2;
-use crate::ui_components::blended_colors::neutral_2;
-use crate::ui_components::blended_colors::neutral_2;
 
 /// The number of pixels at the bottom of padding where selection scrolling is performed.
 const BOTTOM_VERTICAL_MARGIN: f32 = 10.0;

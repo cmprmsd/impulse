@@ -142,8 +142,8 @@ impl MCPGalleryManager {
                     gallery_template.gallery_item_id
                 );
                 continue;
-            };
 
+            };
             let json_template = JsonTemplate {
                 json: gallery_template.json_template.json,
                 variables: gallery_template
@@ -171,8 +171,8 @@ impl MCPGalleryManager {
             else {
                 log::debug!("Failed to parse template for gallery item {}", uuid);
                 continue;
-            };
 
+            };
             gallery_items.insert(uuid, gallery_item);
             templatable_mcp_servers.insert(uuid, templatable_mcp_server);
         }

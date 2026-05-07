@@ -59,8 +59,8 @@ impl ReadMCPResourceExecutor {
             } = input
             else {
                 return false;
-            };
 
+            };
             BlocklistAIPermissions::as_ref(ctx).can_read_mcp_resource(
                 server_id.as_ref(),
                 name.as_str(),
@@ -97,8 +97,8 @@ impl ReadMCPResourceExecutor {
             } = action
             else {
                 return ActionExecution::InvalidAction;
-            };
 
+            };
             let templatable_mcp_client = TemplatableMCPServerManager::as_ref(ctx);
 
             let resource = match uri {
@@ -114,8 +114,8 @@ impl ReadMCPResourceExecutor {
                 return ActionExecution::Sync(AIAgentActionResultType::ReadMCPResource(
                     ReadMCPResourceResult::Error("MCP server resource not found".to_owned()),
                 ));
-            };
 
+            };
             let uri = resource.uri.clone();
 
             let Some(reconnecting_peer) = templatable_mcp_client.server_with_resource(resource)
@@ -123,8 +123,8 @@ impl ReadMCPResourceExecutor {
                 return ActionExecution::Sync(AIAgentActionResultType::ReadMCPResource(
                     ReadMCPResourceResult::Error("MCP server for resource not found".to_owned()),
                 ));
-            };
 
+            };
             ActionExecution::new_async(
                 async move {
                     reconnecting_peer

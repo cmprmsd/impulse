@@ -45,8 +45,8 @@ fn comment_chip(
             review_comment.id
         );
         return Empty::new().finish();
-    };
 
+    };
     let comment_chip = Hoverable::new(
         comment_element_state.header_toggle_mouse_state.clone(),
         |state| {

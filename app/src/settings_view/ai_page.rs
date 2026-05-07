@@ -1634,8 +1634,8 @@ impl AISettingsPageView {
             self.context_window_slider_state.reset_offset();
             ctx.notify();
             return;
-        };
 
+        };
         let formatted = value.to_string();
         let should_update = if force {
             true
@@ -4025,8 +4025,8 @@ impl SettingsWidget for AgentsWidget {
                     .with_margin_bottom(8.)
                     .finish(),
             ]);
-        };
 
+        }
         column.finish()
     }
 }

@@ -62,8 +62,8 @@ impl UploadArtifactExecutor {
             } = input
             else {
                 return false;
-            };
 
+            };
             let resolved_path = self.resolve_path(&request.file_path, ctx);
             BlocklistAIPermissions::as_ref(ctx)
                 .can_read_files_with_conversation(
@@ -100,8 +100,8 @@ impl UploadArtifactExecutor {
             } = action
             else {
                 return ActionExecution::<()>::InvalidAction.into();
-            };
 
+            };
             let resolved_path = self.resolve_path(&request.file_path, ctx);
             let server_conversation_token = BlocklistAIHistoryModel::as_ref(ctx)
                 .conversation(&conversation_id)
@@ -115,8 +115,8 @@ impl UploadArtifactExecutor {
                     ),
                 ))
                 .into();
-            };
 
+            };
             BlocklistAIPermissions::handle(ctx).update(ctx, |model, _ctx| {
                 model.add_temporary_file_read_permissions(conversation_id, [resolved_path.clone()]);
             });

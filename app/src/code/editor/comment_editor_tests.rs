@@ -17,6 +17,7 @@ use crate::{
         link::{NotebookLinks, SessionSource},
     }};
 
+}
 struct TestView {
     editor: ViewHandle<RichTextEditorView>,
 }
@@ -28,7 +29,6 @@ enum CommentEditorMode {
 
 impl Entity for TestView {
     type Event = ();
-}
 
 impl View for TestView {
     fn ui_name() -> &'static str {

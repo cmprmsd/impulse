@@ -49,8 +49,8 @@ pub fn sync_current_codebase_index() -> TestStep {
                     "Failed to canonicalize repo path: {}",
                     cwd.display()
                 ));
-            };
 
+            };
             // Kick off codebase indexing at the current directory.
             app.update_model(&CodebaseIndexManager::handle(app), |manager, ctx| {
                 manager.index_directory(canonicalized_path.clone(), ctx);

@@ -71,8 +71,8 @@ impl TerminalView {
     ) {
         let Some(focus_handle) = &self.focus_handle else {
             return;
-        };
 
+        };
         if focus_handle.is_affected(event) {
             self.on_pane_state_change(ctx);
         }
@@ -871,8 +871,8 @@ impl TerminalView {
     fn render_shared_session_header_content(&self, app: &AppContext) -> Option<Box<dyn Element>> {
         let Some(shared_session) = &self.shared_session else {
             return None;
-        };
 
+        };
         let presence_manager = shared_session.presence_manager();
         let role = presence_manager.as_ref(app).role();
 
@@ -983,8 +983,8 @@ impl TerminalView {
                 return Some(ConversationStatus::InProgress);
             }
             return None;
-        };
 
+        };
         if long_running || cloud_setup {
             return Some(ConversationStatus::InProgress);
         }

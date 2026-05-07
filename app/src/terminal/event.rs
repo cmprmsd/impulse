@@ -341,21 +341,21 @@ impl ExecutedExecutorCommandEvent {
 
         let Some(before_first_semicolon) = payload_initial_split.next() else {
             return Err(ParseGeneratorOutputError::Corrupted);
-        };
 
+        };
         let Some(after_first_semicolon) = payload_initial_split.next() else {
             return Err(ParseGeneratorOutputError::Corrupted);
-        };
 
+        };
         let mut payload_final_split = after_first_semicolon.rsplitn(2, |&byte| byte == b';');
         let Some(after_final_semicolon) = payload_final_split.next() else {
             return Err(ParseGeneratorOutputError::Corrupted);
-        };
 
+        };
         let Some(payload_middle) = payload_final_split.next() else {
             return Err(ParseGeneratorOutputError::Corrupted);
-        };
 
+        };
         let command_id = String::from_utf8(before_first_semicolon.to_vec())
             .map_err(ParseGeneratorOutputError::Utf8DecodingFailure)?;
 

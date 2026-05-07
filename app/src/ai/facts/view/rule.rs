@@ -916,7 +916,7 @@ impl View for RuleView {
             col.add_child(self.render_zero_state(appearance));
         } else {
             col.add_child(self.render_body(appearance, filtered_rules, app));
-        };
+        }
         col.finish()
     }
 }

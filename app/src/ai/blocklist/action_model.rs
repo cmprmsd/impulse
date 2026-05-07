@@ -479,8 +479,8 @@ impl BlocklistAIActionModel {
                 .cloned()
             else {
                 return;
-            };
 
+            };
             if let Some(current_phase) = self.action_execution_phase(conversation_id) {
                 if !self.can_start_action_in_current_phase(
                     &front_action,
@@ -496,8 +496,8 @@ impl BlocklistAIActionModel {
                 self.start_pending_action_by_id(&front_action.id, conversation_id, false, ctx)
             else {
                 return;
-            };
 
+            };
             if matches!(
                 result,
                 StartedAction::Async {
@@ -783,8 +783,8 @@ impl BlocklistAIActionModel {
             .map(|action| action.id.clone())
         else {
             return;
-        };
 
+        };
         if self
             .start_pending_action_by_id(&pending_action_id, conversation_id, true, ctx)
             .is_some_and(|result| matches!(result, StartedAction::Sync))
@@ -1109,8 +1109,8 @@ impl BlocklistAIActionModel {
     ) -> Vec<AIAgentAction> {
         let Some(pending_actions) = self.pending_actions.get_mut(&conversation_id) else {
             return Vec::new();
-        };
 
+        };
         let mut to_drain = Vec::new();
         let mut i = 0;
         while i < pending_actions.len() {
@@ -1222,8 +1222,8 @@ impl BlocklistAIActionModel {
         let Some(conversation_id) = found_conversation_id else {
             debug_assert!(false, "Expected action to be requested command.");
             return;
-        };
 
+        };
         self.execute_action(action_id, conversation_id, ctx);
     }
 

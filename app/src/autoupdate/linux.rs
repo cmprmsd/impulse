@@ -87,8 +87,8 @@ mod appimage {
         // Compute the URL where we can download the new release.
         let Some(appimage_name) = option_env!("APPIMAGE_NAME") else {
             bail!("APPIMAGE_NAME environment variable was not set at compile time!");
-        };
 
+        };
         let url = format!(
             "{}/{}",
             release_assets_directory_url(ChannelState::channel(), &version_info.version),
@@ -624,8 +624,8 @@ fn is_pacman_signing_key_installed() -> bool {
 
     let Ok(stdout) = std::str::from_utf8(&output.stdout) else {
         return false;
-    };
 
+    };
     // Parse the expiry timestamp from the pub: line (field 7, 1-indexed).
     let Some(expiry_field) = stdout
         .lines()
@@ -634,8 +634,8 @@ fn is_pacman_signing_key_installed() -> bool {
     else {
         // Couldn't find pub line, try to refresh.
         return false;
-    };
 
+    };
     // An empty field or "0" means the key has no expiration date.
     if expiry_field.is_empty() || expiry_field == "0" {
         return true;
@@ -644,8 +644,8 @@ fn is_pacman_signing_key_installed() -> bool {
     let Ok(expiry_timestamp) = expiry_field.parse::<i64>() else {
         // Couldn't parse expiry, try to refresh.
         return false;
-    };
 
+    };
     // If the key expires within 60 days, consider it as needing refresh.
     let sixty_days_from_now = chrono::Utc::now() + chrono::Duration::days(60);
     expiry_timestamp > sixty_days_from_now.timestamp()

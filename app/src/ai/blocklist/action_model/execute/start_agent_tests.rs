@@ -57,8 +57,8 @@ fn execute_returns_error_when_child_startup_is_blocked_before_initialization() {
         } = execution
         else {
             panic!("expected async execution");
-        };
 
+        };
         let child_conversation_id = history_model.update(&mut app, |history_model, ctx| {
             history_model.start_new_child_conversation(
                 terminal_view_id,
@@ -145,8 +145,8 @@ fn execute_returns_detailed_error_when_child_startup_fails_before_initialization
         } = execution
         else {
             panic!("expected async execution");
-        };
 
+        };
         let child_conversation_id = history_model.update(&mut app, |history_model, ctx| {
             history_model.start_new_child_conversation(
                 terminal_view_id,
@@ -210,8 +210,8 @@ fn execute_returns_error_when_local_harness_child_requires_orchestration_v2() {
 
         let AnyActionExecution::Sync(result) = execution else {
             panic!("expected sync execution");
-        };
 
+        };
         assert!(matches!(
             result,
             AIAgentActionResultType::StartAgent(StartAgentResult::Error { error, version })
@@ -247,8 +247,8 @@ fn execute_rejects_invalid_local_harness_names_before_pane_creation() {
 
         let AnyActionExecution::Sync(result) = execution else {
             panic!("expected sync execution");
-        };
 
+        };
         assert!(matches!(
             result,
             AIAgentActionResultType::StartAgent(StartAgentResult::Error { error, version })
@@ -284,8 +284,8 @@ fn execute_returns_error_when_local_harness_child_missing_parent_run_id() {
 
         let AnyActionExecution::Sync(result) = execution else {
             panic!("expected sync execution");
-        };
 
+        };
         assert!(matches!(
             result,
             AIAgentActionResultType::StartAgent(StartAgentResult::Error { error, version })
@@ -401,8 +401,8 @@ fn parallel_pendings_each_resolve_independently_via_recorded_child_id() {
         ) = (exec_a, exec_b)
         else {
             panic!("expected async executions");
-        };
 
+        };
         let child_a = history_model.update(&mut app, |history_model, ctx| {
             history_model.start_new_child_conversation(
                 terminal_view_id,
@@ -495,8 +495,8 @@ fn execute_returns_error_when_remote_opencode_harness_is_requested() {
 
         let AnyActionExecution::Sync(result) = execution else {
             panic!("expected sync execution");
-        };
 
+        };
         assert!(matches!(
             result,
             AIAgentActionResultType::StartAgent(StartAgentResult::Error { error, version })

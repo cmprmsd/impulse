@@ -68,8 +68,8 @@ impl PendingResponseStreams {
             else {
                 log::warn!("Could not find conversation for stream {stream_id:?}, cannot cancel");
                 return false;
-            };
 
+            };
             stream.update(ctx, |stream, ctx| {
                 stream.cancel(reason, conversation_id, ctx)
             });
@@ -88,8 +88,8 @@ impl PendingResponseStreams {
         let history_model = BlocklistAIHistoryModel::as_ref(ctx);
         let Some(conversation) = history_model.conversation(&conversation_id) else {
             return false;
-        };
 
+        };
         let streams_to_cancel = self
             .streams
             .extract_if(|stream_id, _| conversation.is_processing_response_stream(stream_id))

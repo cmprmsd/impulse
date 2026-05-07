@@ -33,8 +33,8 @@ lazy_static::lazy_static! {
     /// When a python interpreter is ready for user input,
     /// the '>>>' prompt is displayed at the end of the REPL.
     pub static ref PYTHON_PROMPT_READY: Regex = Regex::new(">>> $").expect("python prompt regex should not fail to compile");
-}
 
+}
 pub fn validate_block_output<T>(
     expected_output: &T,
     tab_idx: usize,

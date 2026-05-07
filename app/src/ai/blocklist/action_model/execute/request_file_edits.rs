@@ -86,8 +86,8 @@ impl RequestFileEditsExecutor {
         } = input
         else {
             return false;
-        };
 
+        };
         let paths: Vec<PathBuf> = file_edits
             .iter()
             .filter_map(|edit| edit.file().map(PathBuf::from))
@@ -148,13 +148,13 @@ impl RequestFileEditsExecutor {
         } = input
         else {
             return ActionExecution::InvalidAction;
-        };
 
+        };
         let Some(diff_view) = self.diff_views.get(id) else {
             log::warn!("Tried to execute a RequestFileEdits action without a diff view");
             return ActionExecution::NotReady;
-        };
 
+        };
         // If diff application failed, early exit.
         if let Some(errors) = self.diff_application_failures.remove(id) {
             return ActionExecution::Sync(AIAgentActionResultType::RequestFileEdits(
@@ -190,8 +190,8 @@ impl RequestFileEditsExecutor {
             } => {
                 let Some(result_tx) = result_tx.take() else {
                     return;
-                };
 
+                };
                 // If saving any file failed, report it as an error to the LLM. Other files may
                 // have saved successfully, but we're ignoring this edge case for now.
                 if !save_errors.is_empty() {
@@ -289,8 +289,8 @@ impl RequestFileEditsExecutor {
         } = input.action
         else {
             return futures::future::ready(()).boxed();
-        };
 
+        };
         let ai_identifiers = self
             .generate_ai_identifiers(&input.conversation_id, id, ctx)
             .unwrap_or_else(|| AIIdentifiers {
@@ -349,8 +349,8 @@ impl RequestFileEditsExecutor {
                 "Tried to apply diffs for a RequestFileEdits action without a corresponding diff view"
             );
             return;
-        };
 
+        };
         let applied_diffs = match applied_diffs {
             Ok(diffs) if !diffs.is_empty() => diffs,
             Ok(_) => {

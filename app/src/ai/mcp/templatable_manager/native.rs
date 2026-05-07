@@ -665,8 +665,8 @@ impl TemplatableMCPServerManager {
 
             self.change_server_state(installation_uuid, MCPServerState::FailedToStart, ctx);
             return;
-        };
 
+        };
         self.spawn_server_impl(
             installation,
             SpawnMode::Initial {
@@ -757,8 +757,8 @@ impl TemplatableMCPServerManager {
                     );
                 }
                 return;
-            };
 
+            };
             // Prepend our PATH to the static env vars, in case the user has
             // specified a custom PATH in the MCP server settings.
             cli_server.static_env_vars.insert(
@@ -1173,8 +1173,8 @@ impl TemplatableMCPServerManager {
         let Some(installation) = self.get_installed_server(&installation_uuid) else {
             log::error!("Could not find installed server {installation_uuid}");
             return updates.to_vec();
-        };
 
+        };
         let installed_template = &installation.templatable_mcp_server().template;
 
         let mut templates_to_keep: std::collections::HashMap<JsonTemplate, usize> =
@@ -1592,8 +1592,8 @@ impl TemplatableMCPServerManager {
                 Err("Installation not found".to_string()),
             );
             return;
-        };
 
+        };
         self.spawn_server_impl(installation, SpawnMode::Reconnect, ctx);
     }
 

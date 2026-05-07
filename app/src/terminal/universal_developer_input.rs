@@ -1057,8 +1057,8 @@ fn agent_mode_tooltip_subtext(terminal_keybindings: &TerminalKeybindings) -> Str
     let keybinding = terminal_keybindings.set_input_mode_agent_keybinding();
     let Some(keybinding) = keybinding else {
         return AGENT_MODE_TOOLTIP_PREFIX.into();
-    };
 
+    };
     format!("{keybinding} or {AGENT_MODE_TOOLTIP_PREFIX}")
 }
 
@@ -1066,8 +1066,8 @@ fn terminal_mode_tooltip_subtext(terminal_keybindings: &TerminalKeybindings) -> 
     let keybinding = terminal_keybindings.set_input_mode_terminal_keybinding();
     let Some(keybinding) = keybinding else {
         return TERMINAL_MODE_TOOLTIP_PREFIX.into();
-    };
 
+    };
     format!("{keybinding} or {TERMINAL_MODE_TOOLTIP_PREFIX}")
 }
 

@@ -18,7 +18,7 @@ pub fn convert_script_to_one_line(script: &str) -> String {
             Regex::new("(; ?|\\{|do|then|else|in)\n").expect("invalid regex");
         static ref REMOVE_COMMENTS_REGEX: Regex = Regex::new(r"(?m)^ *#.*").expect("invalid regex");
         static ref REMOVE_LEADING_NEWLINES: Regex = Regex::new(r"^\n*").expect("invalid regex");
-    };
+    }
     let script = REMOVE_COMMENTS_REGEX.replace_all(script, "");
     let script = REMOVE_LEADING_NEWLINES.replace_all(&script, "");
     let script = EXTRA_SPACES_REGEX.replace_all(&script, "\n");
@@ -44,8 +44,8 @@ pub fn check_ssh_login_state(block_output: &str) -> SshLoginState {
     lazy_static! {
         // Common final prompt characters followed by a space.
         static ref PROMPT_REGEX: Regex = Regex::new(r"[$#%>❯│⟫»▶λ→] $").expect("invalid regex");
-    };
 
+    }
     let mut last_line = None;
 
     for line in block_output.lines() {
@@ -220,8 +220,8 @@ pub fn parse_interactive_ssh_command(command: &str) -> Option<InteractiveSshComm
 fn parse_ssh_command_tokens(command: &str) -> Option<Vec<String>> {
     let Ok(tokens) = shell_words::split(command) else {
         return None;
-    };
 
+    };
     // Cases: "", "ls", "ssh-add-key"
     if tokens.is_empty() || tokens[0] != "ssh" {
         return None;

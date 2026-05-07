@@ -2259,8 +2259,8 @@ impl TerminalModel {
     pub fn check_for_end_of_ssh_login(&mut self, confirmation_check: bool) {
         let Some(mut ssh_login_state) = self.notify_on_end_of_ssh_login.clone() else {
             return;
-        };
 
+        };
         // Only check for the end of ssh login if it was specifically enabled for the current active block.
         let active_block = self.block_list().active_block();
         if &ssh_login_state.block_id != active_block.id() {
@@ -3326,8 +3326,8 @@ impl ansi::Handler for TerminalModel {
                 };
                 let Some(image_size) = image_type.image_size() else {
                     return;
-                };
 
+                };
                 pending.metadata.image_size = image_size.to_f32();
 
                 self.handle_completed_iterm_image(pending);
@@ -3402,8 +3402,8 @@ impl ansi::Handler for TerminalModel {
         let IsReceivingKittyActionData::Yes { mut pending } = is_receiving_kitty_image_data else {
             log::warn!("Received 'end_kitty_action_receiving' while not expecting to read kitty image chunks.");
             return;
-        };
 
+        };
         let message_id = pending.control_data.image_id;
         let verbosity = pending.control_data.verbosity;
 

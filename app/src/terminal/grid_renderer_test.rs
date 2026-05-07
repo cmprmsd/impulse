@@ -201,7 +201,7 @@ fn test_calculate_background_bounds() {
                     ),
                 ]
             );
-        };
+        }
     assert_multi_row_selection_bounds(30, 80, 32, 40); // 3 lines
     assert_multi_row_selection_bounds(40, 60, 43, 10); // 4 lines
     assert_multi_row_selection_bounds(50, 140, 59, 20); // 10 lines

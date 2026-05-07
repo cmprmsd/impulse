@@ -158,8 +158,8 @@ pub fn save_enum<V>(
 {
     let Some(variants) = enum_data.new_data.clone() else {
         return;
-    };
 
+    };
     let workflow_enum = WorkflowEnum {
         name: enum_data.name.clone(),
         is_shared: true,

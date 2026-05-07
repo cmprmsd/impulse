@@ -112,8 +112,8 @@ impl AltScreenFindRun {
     pub(super) fn rerun(mut self, alt_screen: &AltScreen) -> Self {
         let Some(dfas) = self.dfas.as_ref() else {
             return self;
-        };
 
+        };
         let new_matches = alt_screen.find(dfas);
         self.matches = new_matches;
 

@@ -14,6 +14,7 @@ pub fn initialize_settings_for_tests_with_mode(
     is_sandboxed: bool,
 ) {
     use crate::{
+        ai::cloud_agent_settings::CloudAgentSettings,
         drive::settings::WarpDriveSettings,
         search::command_search::settings::CommandSearchSettings,
         settings::{
@@ -32,6 +33,11 @@ pub fn initialize_settings_for_tests_with_mode(
             shared_session::settings::SharedSessionSettings, warpify::settings::WarpifySettings,
             BlockListSettings,
         },
+        undo_close::UndoCloseSettings,
+        user_config::WarpConfig,
+        window_settings::WindowSettings,
+        workspace::tab_settings::TabSettings,
+    };
     use warp_core::{execution_mode::AppExecutionMode, semantic_selection::SemanticSelection};
     app.add_singleton_model(|ctx| AppExecutionMode::new(mode, is_sandboxed, ctx));
 
@@ -100,4 +106,5 @@ pub fn initialize_settings_for_tests_with_mode(
 
         // Add settings models that are backed by secure storage, not user preferences.
         ctx.add_singleton_model(ai::api_keys::ApiKeyManager::new);
-    });}
+    });
+}

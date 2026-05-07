@@ -137,8 +137,8 @@ impl Input {
 
         let Some(highlighted_prefix_len) = highlighted_prefix_len else {
             return false;
-        };
 
+        };
         let theme = Appearance::as_ref(ctx).theme();
         let color = theme.ansi_fg_magenta();
         self.editor.update(ctx, |editor, ctx| {
@@ -312,8 +312,8 @@ impl Input {
     ) {
         let Some(parsed_tokens_snapshot) = &self.last_parsed_tokens else {
             return;
-        };
 
+        };
         let mut ranges = vec![];
         for token_data in &parsed_tokens_snapshot.parsed_tokens {
             if token_data.token_description.is_none()
@@ -354,8 +354,8 @@ impl Input {
     ) {
         let Some(parsed_tokens_snapshot) = &self.last_parsed_tokens else {
             return;
-        };
 
+        };
         let mut ranges: HashMap<SuggestionTypeName, Vec<Range<ByteOffset>>> = HashMap::new();
         for token_data in &parsed_tokens_snapshot.parsed_tokens {
             if let Some(description) = &token_data.token_description {

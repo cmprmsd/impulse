@@ -56,8 +56,8 @@ impl OpenedFilesModel {
         // Convert absolute file path to relative path from repo root
         let Ok(relative_file_path) = file_path.strip_prefix(&repo_path) else {
             return;
-        };
 
+        };
         self.opened_files
             .entry(repo_path.clone())
             .or_default()

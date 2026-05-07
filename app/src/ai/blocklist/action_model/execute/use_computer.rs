@@ -21,8 +21,8 @@ impl UseComputerExecutor {
         let ExecuteActionInput { action, .. } = input;
         let AIAgentActionType::UseComputer(_) = &action.action else {
             return false;
-        };
 
+        };
         // We unconditionally return true here because this action is only executed by
         // the computer use subagent, which cannot begin without the user approving it via
         // a `RequestComputerUse` action, and the approval extends to all computer use
@@ -38,8 +38,8 @@ impl UseComputerExecutor {
         let ExecuteActionInput { action, .. } = input;
         let AIAgentActionType::UseComputer(request) = &action.action else {
             return ActionExecution::InvalidAction;
-        };
 
+        };
         let actions = request.actions.clone();
         let screenshot_params = request.screenshot_params;
         ActionExecution::new_async(

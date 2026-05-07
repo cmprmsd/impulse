@@ -35,8 +35,8 @@ fn initialize_app(app: &mut App) {
     app.add_singleton_model(|_| BlocklistAIHistoryModel::new_for_test());
     #[cfg(feature = "voice_input")]
     app.add_singleton_model(voice_input::VoiceInput::new);
-}
 
+}
 #[test]
 fn test_warp_drive_sections_with_no_team() {
     App::test(Assets, |mut app| async move {

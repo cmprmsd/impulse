@@ -176,8 +176,8 @@ fn should_keep_detail_sidecar_visible_for_mouse_position(
     let Some(sidecar_rect) = sidecar_rect else {
         safe_triangle.update_position(position);
         return true;
-    };
 
+    };
     if sidecar_rect.contains_point(position) {
         safe_triangle.update_position(position);
         return true;
@@ -517,8 +517,8 @@ impl VerticalTabsDetailHoverState {
             .expect("vertical tabs detail overlay lock poisoned");
         let Some(active_target) = overlay_state.active_target else {
             return false;
-        };
 
+        };
         let row_rect = app.element_position_by_id_at_last_frame(
             self.window_id,
             vtab_pane_row_position_id(

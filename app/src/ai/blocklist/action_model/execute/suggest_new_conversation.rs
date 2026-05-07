@@ -48,8 +48,8 @@ impl SuggestNewConversationExecutor {
         } = input.action
         else {
             return ActionExecution::InvalidAction;
-        };
 
+        };
         let message_id = message_id.clone();
         let receiver = self.suggest_new_conversation_result_rx.clone().1;
         ActionExecution::new_async(async move { receiver.recv().await }, move |result, _ctx| {

@@ -273,8 +273,8 @@ impl CodeManager {
 
         let CodeSource::AIAction { id } = source else {
             return;
-        };
 
+        };
         ctx.emit(CodeManagerEvent::EditCompleted { action_id: id })
     }
 }

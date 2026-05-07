@@ -29,8 +29,8 @@ fn initialize_app(app: &mut App) {
     app.add_singleton_model(|_| KeybindingChangedNotifier::mock());
     #[cfg(feature = "voice_input")]
     app.add_singleton_model(voice_input::VoiceInput::new);
-}
 
+}
 #[test]
 fn test_render_view() {
     App::test((), |mut app| async move {

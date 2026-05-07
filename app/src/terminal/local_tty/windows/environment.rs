@@ -210,8 +210,8 @@ fn add_local_machine_env(env: &mut BTreeMap<OsString, EnvEntry>) {
     else {
         log::warn!("Unable to fetch SYS env");
         return;
-    };
 
+    };
     for (name, value) in sys_env
         .enum_values()
         .filter_map(Result::ok)
@@ -240,8 +240,8 @@ fn add_user_env(env: &mut BTreeMap<OsString, EnvEntry>) {
     let Ok(sys_env) = RegKey::predef(HKEY_CURRENT_USER).open_subkey("Environment") else {
         log::warn!("Unable to fetch USER env");
         return;
-    };
 
+    };
     for (name, value) in sys_env.enum_values().filter_map(Result::ok) {
         let Ok(value) = reg_value_to_string(&value, &name) else {
             safe_info!(

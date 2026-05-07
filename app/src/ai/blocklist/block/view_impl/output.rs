@@ -1876,8 +1876,8 @@ fn maybe_render_edit_document(
     }) = agent_action_results
     else {
         return None;
-    };
 
+    };
     let document = updated_documents.first()?;
     let action = CreateOrEditDocumentAction::new(
         document.document_id,
@@ -1915,8 +1915,8 @@ fn maybe_render_create_document(
     }) = agent_action_results
     else {
         return None;
-    };
 
+    };
     let document = created_documents.first()?;
     let action = CreateOrEditDocumentAction::new(
         document.document_id,
@@ -3228,8 +3228,8 @@ fn render_response_footer(props: Props, app: &AppContext) -> Option<Box<dyn Elem
 fn render_usage_button(props: Props, app: &AppContext) -> Box<dyn Element> {
     let Some(conversation) = props.model.conversation(app) else {
         return Empty::new().finish();
-    };
 
+    };
     // If this conversation has no usage metadata (e.g. a forked conversation from
     // mid-way through a prior conversation where the server did not send
     // ConversationUsageMetadata), avoid rendering the usage button entirely.

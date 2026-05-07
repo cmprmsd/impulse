@@ -205,8 +205,8 @@ impl EnvVarCommandDialog {
 
         if is_save && self.should_disable_save(app) {
             button = button.disabled();
-        };
 
+        }
         button
             .build()
             .on_click(move |ctx, _, _| ctx.dispatch_typed_action(action.clone()))

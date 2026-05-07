@@ -49,8 +49,8 @@ lazy_static::lazy_static! {
             ..Default::default()
         };
 
-}
 
+}
 /// Returns the `Border` for both the search results panel and details panel.
 pub fn panel_border(appearance: &Appearance) -> Border {
     Border::all(1.).with_border_fill(appearance.theme().outline())

@@ -271,8 +271,8 @@ impl AgentAssistedEnvironmentModal {
     fn add_repo(&mut self, index: usize, ctx: &mut ViewContext<Self>) {
         let Some(entry) = self.available_repos.get(index) else {
             return;
-        };
 
+        };
         self.add_repo_path(entry.path.clone(), ctx);
     }
 

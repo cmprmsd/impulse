@@ -854,8 +854,8 @@ impl EditorElement {
 
             if cursor_display_type == CursorDisplayType::Underline {
                 cursor_rect.set_origin_y(cursor_rect.origin_y() + view_snapshot.font_size);
-            };
 
+            }
             ctx.scene
                 .draw_rect_with_hit_recording(cursor_rect)
                 .with_background(cursor.color)
@@ -983,8 +983,8 @@ impl EditorElement {
             } else {
                 log::warn!("Failed to access selections data with replica id");
                 continue;
-            };
 
+            };
             // Only attempt to draw the selection if both the start and end points exist.
             // There shouldn't be a case where we don't, but it's better to be safe.
             if let (Some(start), Some(end)) = (start, end) {
@@ -1091,8 +1091,8 @@ impl EditorElement {
                     for row in visible_selection_range {
                         let Some(line_layout) = layout.frame_layouts.get_line(row as usize) else {
                             continue;
-                        };
 
+                        };
                         let selection_to_draw = match &marked_text_state {
                             MarkedTextState::Active { selected_range }
                                 if !selected_range.is_empty() =>
@@ -2036,13 +2036,13 @@ impl Element for EditorElement {
                     .to_soft_wrap_point(display_point, ClampDirection::Down)
                 else {
                     continue;
-                };
 
+                };
                 let row = soft_wrap_point.row();
                 let Some(line) = &layout.frame_layouts.get_line(row as usize) else {
                     continue;
-                };
 
+                };
                 // `content_origin` is the origin of the first visible row.
                 let relative_row = row as f32 - first_visible_row as f32;
                 let y_offset = relative_row * line_height;
@@ -2076,8 +2076,8 @@ impl Element for EditorElement {
     ) -> bool {
         let Some(z_index) = self.z_index() else {
             return false;
-        };
 
+        };
         // These icons have tooltips in overlay layers, so they need to be dispatched before checking event.at_z_index below.
         // This is because event.at_z_index will filter the event due to the overlay layer above.
         if let Some(icon) = &mut self.autosuggestion_shortcut_icon {
@@ -2113,8 +2113,8 @@ impl Element for EditorElement {
 
         let Some(event_at_z_index) = event.at_z_index(z_index, ctx) else {
             return false;
-        };
 
+        };
         let events_to_propagate_on = matches!(
             event_at_z_index,
             Event::MouseMoved { .. }

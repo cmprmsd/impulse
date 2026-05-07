@@ -219,8 +219,8 @@ impl GrepExecutor {
         } = input
         else {
             return false;
-        };
 
+        };
         let current_working_directory = self
             .active_session
             .as_ref(ctx)
@@ -251,8 +251,8 @@ impl GrepExecutor {
         } = input.action
         else {
             return ActionExecution::InvalidAction;
-        };
 
+        };
         let shell_launch_data = self.active_session.as_ref(ctx).shell_launch_data(ctx);
         let shell_type = self.active_session.as_ref(ctx).shell_type(ctx);
         let current_working_directory = self
@@ -361,8 +361,8 @@ async fn run_grep(
     }
     let Some(session) = session else {
         return Err(GrepError::new("No session provided to grep".to_string()));
-    };
 
+    };
     let is_file = is_file_path(&absolute_path, &session).await;
     let execute_directory = if is_file {
         // If path is a file, use its parent directory as the execution directory.

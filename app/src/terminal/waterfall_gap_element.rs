@@ -261,8 +261,8 @@ impl Element for WaterfallGapElement {
                 }) => self.scroll_internal(*position, *delta, *precise, ctx),
                 _ => false,
             };
-        };
 
+        }
         handled
     }
 }

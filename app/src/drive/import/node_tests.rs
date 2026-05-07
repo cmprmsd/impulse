@@ -39,6 +39,7 @@ fn mock_tree() -> FileUploadState {
 
     let state = FileUploadState {
 
+    }
     assert_eq!(state.debug_print(), "(top_folder(second_level), top_level)");
     state
 }

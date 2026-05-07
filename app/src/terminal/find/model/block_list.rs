@@ -56,8 +56,8 @@ pub(super) fn run_find_on_block_list(
             matches: vec![],
             raw_focused_match_index: None,
         };
-    };
 
+    };
     let mut matches = vec![];
 
     // If find in block is enabled, find matches in selected blocks only
@@ -495,8 +495,8 @@ impl BlockListFindRun {
     ) -> Self {
         let Some(dfas) = self.dfas.as_ref() else {
             return self;
-        };
 
+        };
         // Remember the currently focused match so we can relocate it after splicing.
         let old_focused_match = self
             .raw_focused_match_index
@@ -635,8 +635,8 @@ fn update_matches_for_filtered_block<'a>(
             }
         });
         return;
-    };
 
+    };
     match block_sort_direction {
         BlockSortDirection::MostRecentLast => {
             let mut current_find_match = matches.next();

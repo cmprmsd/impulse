@@ -7,7 +7,10 @@ use super::{
         MatchData, PageType, SettingsPageMeta, SettingsPageViewHandle, SettingsWidget,
         CONTENT_FONT_SIZE, SUBHEADER_FONT_SIZE,
     },
+    SettingsSection,
 };
+use crate::auth::AuthStateProvider;
+use crate::server::{ids::ApiKeyUid, server_api::auth::AuthClient};
 use crate::util::truncation::truncate_from_end;
 use crate::{
     appearance::Appearance,
@@ -30,10 +33,8 @@ use warpui::{
         button::ButtonVariant,
         components::{Coords, UiComponent, UiComponentStyles},
     },
+    AppContext, Entity, SingletonEntity, TypedActionView, View, ViewContext, ViewHandle,
 };
-use warpui::{AppContext, Entity, TypedActionView, View, ViewContext, ViewHandle};
-use crate::legacy_stubs::{AuthStateProvider, SettingsSection};
-use crate::legacy_stubs::{ApiKeyUid};
 
 const MODAL_WIDTH: f32 = 460.;
 const MODAL_HEIGHT: f32 = 320.;
@@ -69,7 +70,7 @@ impl PlatformPageView {
         }
 
         // Build and send the GraphQL query
-        let server_api = crate::legacy_stubs::ServerApiProvider::as_ref(ctx).get();
+        let server_api = crate::server::server_api::ServerApiProvider::as_ref(ctx).get();
 
         ctx.spawn(
             async move { server_api.list_api_keys().await },

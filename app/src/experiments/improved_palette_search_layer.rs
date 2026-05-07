@@ -17,8 +17,8 @@ lazy_static! {
             BucketRange::new(ImprovedPaletteSearch::Experiment, 0..1000),
         ]
     };
-}
 
+}
 /// An experiment to test the difference between the original search and improved full text search
 #[derive(Debug)]
 pub enum ImprovedPaletteSearch {

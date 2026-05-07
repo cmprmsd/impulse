@@ -66,8 +66,8 @@ pub fn check_recency(
             return AssertionOutcome::failure(
                 "First item in command palette is not a session".to_string(),
             );
-        };
 
+        };
         let ItemSummary::Session {
             pane_view_locator: previous_session,
         } = second_item
@@ -75,8 +75,8 @@ pub fn check_recency(
             return AssertionOutcome::failure(
                 "second item in command palette is not a session".to_string(),
             );
-        };
 
+        };
         match recency_test {
             RecentSession::First => {
                 async_assert!(

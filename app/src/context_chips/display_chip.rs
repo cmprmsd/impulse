@@ -554,8 +554,8 @@ impl DisplayChip {
                         else {
                             log::warn!("MenuAction event should contain ActionItem action item");
                             return;
-                        };
 
+                        };
                         ctx.emit(PromptDisplayChipEvent::TryExecuteCommand(
                             format_git_branch_command(&git_branch.name()),
                         ));
@@ -1117,8 +1117,8 @@ impl DisplayChip {
     ) -> Option<Box<dyn Element>> {
         let Some(line_changes_info) = line_changes_info else {
             return None;
-        };
 
+        };
         if self.is_shared_session_viewer {
             return None;
         }

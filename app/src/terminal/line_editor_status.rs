@@ -70,12 +70,12 @@ impl LineEditorStatus {
         let Some(active_session_id) = self.model_event_dispatcher.as_ref(ctx).active_session_id()
         else {
             return;
-        };
 
+        };
         let Some(active_session) = self.sessions.as_ref(ctx).get(active_session_id) else {
             return;
-        };
 
+        };
         let is_active_session_zsh = active_session.shell().shell_type() == ShellType::Zsh;
         match event {
             ModelEvent::Handler(AnsiHandlerEvent::Precmd) => {

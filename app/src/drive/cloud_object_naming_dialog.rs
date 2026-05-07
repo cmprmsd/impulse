@@ -10,15 +10,15 @@ use warpui::{
         button::ButtonVariant,
         components::{Coords, UiComponent, UiComponentStyles},
     },
+    AppContext, Element, ViewHandle,
 };
 
+use crate::cloud_object::Space;
 use crate::{
-    appearance::Appearance, editor::EditorView, ui_components::blended_colors};
+    appearance::Appearance, editor::EditorView, server::ids::SyncId, ui_components::blended_colors,
+};
 
 use super::{index::DriveIndexAction, DriveObjectType};
-use warpui::{AppContext, Element, ViewHandle};
-use crate::legacy_stubs::{Space};
-use crate::legacy_stubs::{SyncId};
 
 const DIALOG_PADDING: f32 = 24.;
 const INPUT_MARGIN_TOP: f32 = 16.;

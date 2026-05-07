@@ -17,8 +17,8 @@ macro_rules! assert_cell_char_eq {
         let row = $grid.row($row).expect("row should exist");
         assert_eq!(row[$col].c, $expected);
     };
-}
 
+}
 #[test]
 fn test_grid_scroll_down() {
     // this simulates the alt-screen with 5 rows

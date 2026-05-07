@@ -56,8 +56,8 @@ pub fn subshell_bootstrap_success_block_bytes(
         get_subshell_bootstrap_success_block_path(shell_type)
     else {
         return ("".into(), false);
-    };
 
+    };
     let templated_subshell_bootstrap_success_block_output_bytes = ASSETS
         .get(subshell_bootstrap_success_block_path)
         .unwrap_or_else(|_| {

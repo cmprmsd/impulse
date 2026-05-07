@@ -669,8 +669,8 @@ impl UpdateEnvironmentForm {
 
         let Some(index) = self.github_dropdown_state.selected_index else {
             return;
-        };
 
+        };
         self.github_dropdown_state
             .scroll_state
             .scroll_to_position(ScrollTarget {
@@ -1361,8 +1361,8 @@ impl UpdateEnvironmentForm {
     fn suggest_image(&mut self, ctx: &mut ViewContext<Self>) {
         let Some(key) = self.selected_repos_key() else {
             return;
-        };
 
+        };
         // Don't start a new request if we're already loading for this key
         let is_generating = matches!(&self.suggest_image_state, SuggestImageState::Loading { key: loading_key } if loading_key == &key);
         if is_generating {
@@ -2354,8 +2354,8 @@ impl UpdateEnvironmentForm {
         {
             let Some(app_install_link) = &self.github_dropdown_state.app_install_link else {
                 return helper;
-            };
 
+            };
             // "Missing a repo? Configure access on GitHub" text with link
             let install_link = app_install_link.clone();
 
@@ -2736,8 +2736,8 @@ impl UpdateEnvironmentForm {
     ) -> String {
         let Ok(mut url) = Url::parse(base_auth_url) else {
             return base_auth_url.to_string();
-        };
 
+        };
         let scheme_for_next = std::env::var("WARP_OAUTH_NEXT_SCHEME")
             .ok()
             .filter(|value| !value.is_empty())

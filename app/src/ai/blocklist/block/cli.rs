@@ -495,8 +495,8 @@ impl CLISubagentView {
     fn execute_pending_action(&mut self, ctx: &mut ViewContext<Self>) {
         let Some(blocked_action) = self.model.blocked_action(&self.action_model, ctx) else {
             return;
-        };
 
+        };
         self.action_model.update(ctx, |action_model, ctx| {
             action_model.execute_next_action_for_user(self.conversation_id, ctx);
         });
@@ -562,8 +562,8 @@ impl CLISubagentView {
     fn reject_blocked_action(&mut self, should_user_take_over: bool, ctx: &mut ViewContext<Self>) {
         let Some(blocked_action) = self.model.blocked_action(&self.action_model, ctx) else {
             return;
-        };
 
+        };
         self.action_model.update(ctx, |action_model, ctx| {
             action_model.cancel_action_with_id(
                 self.conversation_id,
@@ -964,8 +964,8 @@ impl View for CLISubagentView {
         let terminal_model = self.terminal_model.lock();
         let Some(block) = terminal_model.block_list().block_with_id(&self.block_id) else {
             return Empty::new().finish();
-        };
 
+        };
         if !block.is_agent_monitoring() || block.is_eligible_for_agent_handoff() {
             return Empty::new().finish();
         }

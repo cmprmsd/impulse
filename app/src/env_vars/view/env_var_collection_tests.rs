@@ -11,6 +11,7 @@ use crate::{
     test_util::settings::initialize_settings_for_tests,
     workspace::ActiveSession};
 
+}
 fn initialize_app(app: &mut App) {
     initialize_settings_for_tests(app);
 
@@ -34,7 +35,6 @@ fn initialize_app(app: &mut App) {
 
     #[cfg(feature = "voice_input")]
     app.add_singleton_model(voice_input::VoiceInput::new);
-}
 
 fn create_env_var_collection_view(app: &mut App) -> ViewHandle<EnvVarCollectionView> {
     initialize_app(app);

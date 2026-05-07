@@ -188,8 +188,8 @@ fn execute_returns_async_and_resolves_on_complete() {
         } = execution
         else {
             panic!("expected async execution");
-        };
 
+        };
         executor.update(&mut app, |executor, _| {
             executor.complete(vec![AskUserQuestionAnswerItem::Skipped {
                 question_id: "q1".to_string(),
@@ -232,8 +232,8 @@ fn cancel_resolves_as_cancelled() {
         } = execution
         else {
             panic!("expected async execution");
-        };
 
+        };
         executor.update(&mut app, |executor, _| {
             executor.cancel();
         });

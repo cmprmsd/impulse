@@ -113,8 +113,8 @@ pub fn assert_subshell_is_bootstrapped(tab_index: usize, pane_index: usize) -> T
                     .map(|(success_block_index, block)| (success_block_index, block.content_type))
                 else {
                     return AssertionOutcome::failure("No rich content block found!".to_owned());
-                };
 
+                };
                 match rich_content_type {
                     Some(RichContentType::WarpifySuccessBlock) => {}
                     _ => {

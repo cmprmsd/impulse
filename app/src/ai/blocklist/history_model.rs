@@ -471,8 +471,8 @@ impl BlocklistAIHistoryModel {
     ) {
         let Some(conversation) = self.conversations_by_id.get_mut(&conversation_id) else {
             return;
-        };
 
+        };
         // Drop the old entry only if it still points at the given conversation_id,
         // so we don't wrongly remove an entry that's been remapped.
         if let Some(old_token) = conversation.server_conversation_token().cloned() {
@@ -1104,8 +1104,8 @@ impl BlocklistAIHistoryModel {
             .clone()
         else {
             return Err(anyhow!("No sqlite sender available."));
-        };
 
+        };
         // We preserve reverted action IDs. Orphaned IDs (for actions not in fork) are harmless.
         // The reverted states are only copied to the new conversation if the revert happened before the user clicked fork,
         // but regardless of when the revert happened relative to the fork point.
@@ -1257,8 +1257,8 @@ impl BlocklistAIHistoryModel {
             .clone()
         else {
             return Err(anyhow!("No sqlite sender available."));
-        };
 
+        };
         // We preserve reverted action IDs. Orphaned IDs (for actions not in fork) are harmless.
         // The reverted states are only copied to the new conversation if the revert happened before the user clicked fork,
         // but regardless of when the revert happened relative to the fork point.
@@ -1878,8 +1878,8 @@ impl BlocklistAIHistoryModel {
     ) {
         let Some(conversation) = self.conversations_by_id.get_mut(conversation_id) else {
             return;
-        };
 
+        };
         conversation.toggle_autoexecute_override();
         conversation.write_updated_conversation_state(ctx);
         ctx.emit(BlocklistAIHistoryEvent::UpdatedAutoexecuteOverride { terminal_view_id });

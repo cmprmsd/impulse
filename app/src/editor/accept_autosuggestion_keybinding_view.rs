@@ -46,8 +46,8 @@ lazy_static! {
         ctrl: true,
         ..Default::default()
     };
-}
 
+}
 pub struct AcceptAutosuggestionKeybinding {
     is_menu_open: bool,
     select_keybinding_menu: ViewHandle<Menu<AcceptAutosuggestionKeybindingAction>>,

@@ -384,8 +384,8 @@ impl RequestedCommandView {
                         else {
                             log::info!("Got finished action event without result: {action_id}.");
                             return;
-                        };
 
+                        };
                         // Else, we only care if the finished action is the original requested command.
                         if *action_id != me.action_id {
                             return;

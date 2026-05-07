@@ -168,8 +168,8 @@ impl CodeSymbolCache {
         // If the cache was invalidated between chunks, signal the caller with usize::MAX.
         let Some(cached) = self.symbol_cache.get_mut().get(repo_path) else {
             return (usize::MAX, Vec::new());
-        };
 
+        };
         let symbols = &cached.symbols;
         if cursor >= symbols.len() {
             return (symbols.len(), Vec::new());
@@ -202,8 +202,8 @@ impl CodeSymbolCache {
             })
         else {
             return HashSet::new();
-        };
 
+        };
         FileSearchModel::as_ref(app)
             .get_git_changed_files(&git_repo_path)
             .unwrap_or_default()
@@ -281,8 +281,8 @@ impl AsyncDataSource for CodeCursorDataSource {
 
             let Some((repo_path, total, git_changed_files)) = init else {
                 return Ok(Vec::new());
-            };
 
+            };
             // We can't actually perform the search off of the main thread
             // (because we don't have access to the code data we need for searching).
             // Instead, we dispatch small search chunks to the main thread so it

@@ -281,8 +281,8 @@ pub struct HistoryEntry {
 fn serialized_block_is_agent_executed(block: &SerializedBlock) -> bool {
     let Some(ai_metadata) = block.ai_metadata.as_ref() else {
         return false;
-    };
 
+    };
     serde_json::from_str::<SerializedAIMetadata>(ai_metadata)
         .ok()
         .map(AgentInteractionMetadata::from)
@@ -796,13 +796,13 @@ impl History {
                         "history_file_commands should be set if ReadHistoryFileState is Done."
                     );
                     return;
-                };
 
+                };
                 let Some(session_commands) = self.session_commands.get_mut(shell_host) else {
                     log::warn!("session_commands should be set if ReadHistoryFileState is Done.");
                     return;
-                };
 
+                };
                 let skip_indices = &mut self.session_skip_indices;
                 let mut last_index = 0;
                 for (idx, h) in history_file_commands
@@ -855,8 +855,8 @@ impl History {
         let Some(skip_indices) = self.session_skip_indices.get(&session_id) else {
             log::warn!("Skip indices for session {session_id:?} are empty.");
             return None;
-        };
 
+        };
         let Some(histfile_commands) = self.history_file_commands.get(shell_host) else {
             log::warn!("Histfile commands for session {session_id:?} are empty.");
             return None;

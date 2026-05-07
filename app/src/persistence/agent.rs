@@ -161,8 +161,8 @@ pub(crate) fn read_agent_conversation_by_id(
 
     let Some(conversation_record) = maybe_record else {
         return Ok(None);
-    };
 
+    };
     let task_records: Vec<AgentTaskRecord> = schema::agent_tasks::table
         .filter(tasks_dsl::conversation_id.eq(conversation_id_str))
         .select(AgentTaskRecord::as_select())

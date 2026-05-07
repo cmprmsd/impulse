@@ -55,8 +55,8 @@ impl CreateDocumentsExecutor {
         } = action
         else {
             return ActionExecution::<CreateDocumentsResult>::InvalidAction;
-        };
 
+        };
         // Access the model synchronously before the async block
         let model = AIDocumentModel::handle(ctx);
 

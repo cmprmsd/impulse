@@ -3546,8 +3546,8 @@ pub(crate) fn render_scrollable_collapsible_content(
     } = state.expansion_state
     else {
         return None;
-    };
 
+    };
     let message_id_str: &str = message_id;
     let bottom_id = format!("ai_collapsible_bottom_{message_id_str}");
     let content_with_anchor = Flex::column()

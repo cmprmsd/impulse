@@ -1009,7 +1009,7 @@ fn test_insert() {
                         expected_cardinality.as_keymap_context_value()
                     );
                 });
-            };
+            }
         let assert_selected_text_eq = |app: &mut App, expected_text: Option<String>| {
             terminal.update(app, |view, ctx| {
                 let semantic_selection = SemanticSelection::as_ref(ctx);
@@ -1018,8 +1018,8 @@ fn test_insert() {
                     model.selection_to_string(semantic_selection, false, ctx);
                 assert_eq!(context_selected_text, expected_text);
             });
-        };
 
+        };
         // Shell Mode: Nothing selected
         terminal.update(&mut app, |view, ctx| {
             view.focus_terminal(ctx);

@@ -269,8 +269,8 @@ impl SuggestionChipView {
     ) {
         let UpdateManagerEvent::ObjectOperationComplete { result } = event else {
             return;
-        };
 
+        };
         if let (ObjectOperation::Create { .. }, OperationSuccessType::Success) =
             (&result.operation, &result.success_type)
         {

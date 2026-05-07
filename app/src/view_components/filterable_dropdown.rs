@@ -646,7 +646,7 @@ where
                             item.display_text.to_lowercase().contains(&filter_query);
                         if item.display_text == current_label && item_matches_filter {
                             current_label_not_visible = false;
-                        };
+                        }
                         item_matches_filter
                     })
                     .map(|item| item.into()),

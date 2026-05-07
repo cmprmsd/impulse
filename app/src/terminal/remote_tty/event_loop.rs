@@ -97,8 +97,8 @@ impl EventLoop {
                 let Some(bytes) = message.binary() else {
                     log::error!("Received non binary message");
                     return;
-                };
 
+                };
                 event_loop.process_pty_bytes(bytes);
             },
             |_, _| {},
@@ -121,7 +121,7 @@ impl EventLoop {
                         EventLoopMessage::Input(bytes) => {
                             if let Err(e) = sink.send(Message::new_binary(bytes.to_vec())).await {
                                 log::error!("Failed to send message to network-backed PTY {e:?}");
-                            };
+                            }
                         }
                         EventLoopMessage::Resize(size_info) => {
                             let size_change = WindowSizeChange {
@@ -134,14 +134,14 @@ impl EventLoop {
                             let Ok(serialized) = serde_json::to_string(&size_change) else {
                                 log::error!("Error serializing window size change info");
                                 continue;
-                            };
 
+                            };
                             // Sending as a `Text` message implies that this is a
                             // control channel message. The SSH proxy server should
                             // make this distinction.
                             if let Err(e) = sink.send(Message::new_text(serialized)).await {
                                 log::error!("Failed to send message to network-backed PTY {e:?}");
-                            };
+                            }
                         }
                         // TODO(alokedesai): Implement shutdown on the network backed PTY.
                         EventLoopMessage::Shutdown | EventLoopMessage::ChildExited => {}

@@ -636,7 +636,7 @@ impl RightPanelView {
                 view.on_open(Some(repo_path.clone()), ctx);
             });
             self.recompute_terminal_availability(ctx);
-        };
+        }
         ctx.notify();
     }
 
@@ -768,8 +768,8 @@ impl RightPanelView {
                     Shrinkable::new(1.0, CodeReviewView::render_loading_state(appearance)).finish(),
                 )
                 .finish();
-        };
 
+        };
         let selected_repo_path = state
             .selected_repo_path
             .as_ref()
@@ -801,8 +801,8 @@ impl RightPanelView {
                 .with_child(simple_header)
                 .with_child(Shrinkable::new(1.0, no_repo_body).finish())
                 .finish();
-        };
 
+        };
         let current_code_review_view = self.active_pane_group.as_ref().and_then(|pane_group| {
             let pane_group_id = pane_group.id();
             self.working_directories_model
@@ -1205,8 +1205,8 @@ impl RightPanelView {
                 view.handle_review_submission_result(ReviewSubmissionResult::Error, ctx);
             });
             return;
-        };
 
+        };
         let ai_enabled = AISettings::as_ref(ctx).is_any_ai_enabled(ctx);
         let chosen = self.find_review_terminal(pane_group, repo_path, ai_enabled, ctx);
 
@@ -1216,8 +1216,8 @@ impl RightPanelView {
                 view.handle_review_submission_result(ReviewSubmissionResult::Error, ctx);
             });
             return;
-        };
 
+        };
         let comment_count = comments.comments.len();
         let file_count = comments
             .comments
@@ -1362,8 +1362,8 @@ impl RightPanelView {
                 Self::log_code_review_debug_state(debug_state);
             }
             return;
-        };
 
+        };
         let pane_group_id = pane_group.id();
         let visible_pane_ids = pane_group.read(ctx, |pane_group, _| pane_group.visible_pane_ids());
         let focused_pane_id =
@@ -1412,8 +1412,8 @@ impl RightPanelView {
                     pane_id.pane_type(),
                 );
                 continue;
-            };
 
+            };
             let terminal_id = terminal_view.id();
             let terminal_status = Self::review_terminal_status(
                 &terminal_view,
@@ -1535,23 +1535,23 @@ impl RightPanelView {
     pub fn recompute_terminal_availability(&self, ctx: &mut ViewContext<Self>) {
         let Some(code_review_view) = self.get_active_code_review_view(ctx) else {
             return;
-        };
 
+        };
         let repo_path = code_review_view.read(ctx, |view, _| view.repo_path().cloned());
         let Some(repo_path) = repo_path else {
             code_review_view.update(ctx, |view, ctx| {
                 view.set_review_destination(ReviewDestination::None, ctx);
             });
             return;
-        };
 
+        };
         let Some(pane_group) = &self.active_pane_group else {
             code_review_view.update(ctx, |view, ctx| {
                 view.set_review_destination(ReviewDestination::None, ctx);
             });
             return;
-        };
 
+        };
         let ai_enabled = AISettings::as_ref(ctx).is_any_ai_enabled(ctx);
         let destination = self
             .find_review_terminal(pane_group, &repo_path, ai_enabled, ctx)
@@ -1605,8 +1605,8 @@ impl RightPanelView {
                 working_directories_model.get_terminal_id_for_root_path(pane_group_id, repo_path)
             else {
                 return;
-            };
 
+            };
             if working_directories_model
                 .most_recent_repositories_for_pane_group(pane_group_id)
                 .is_some_and(|mut repos| repos.contains(repo_path))

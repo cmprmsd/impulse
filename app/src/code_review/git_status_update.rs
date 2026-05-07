@@ -95,8 +95,8 @@ impl GitStatusUpdateModel {
                 "No watched repository found for path: {}",
                 repo_path.display()
             );
-        };
 
+        };
         let handle = ctx
             .add_model(|ctx| GitRepoStatusModel::new(repo_path_buf.clone(), repository_model, ctx));
 

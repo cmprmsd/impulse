@@ -64,8 +64,8 @@ pub enum AgentOnboardingVersion {
         has_project: bool,
         intention: OnboardingIntention,
     },
-}
 
+}
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum OnboardingVersion {
     Legacy,

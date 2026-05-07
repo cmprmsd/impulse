@@ -14,7 +14,7 @@ fn test_cursor() {
                 .current_item()
                 .expect("cursor location should be valid");
             assert_eq!(&cell($c), item.cell());
-        };
+        }
     }
 
     let mut grid = GridHandler::new_for_test(5, 5);

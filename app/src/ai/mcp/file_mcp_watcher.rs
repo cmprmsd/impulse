@@ -242,8 +242,8 @@ impl FileMCPWatcher {
             DetectedRepositories::as_ref(ctx).get_watched_repo_for_path(&repo_path, ctx)
         else {
             return;
-        };
 
+        };
         let start = repo_handle.update(ctx, |repo, ctx| {
             repo.start_watching(
                 Box::new(FileMCPSubscriber {
@@ -289,8 +289,8 @@ impl FileMCPWatcher {
             warp_util::standardized_path::StandardizedPath::from_local_canonicalized(subdir_path)
         else {
             return;
-        };
 
+        };
         let repo_handle = match DirectoryWatcher::handle(ctx)
             .update(ctx, |watcher, ctx| watcher.add_directory(std_path, ctx))
         {
@@ -344,8 +344,8 @@ impl FileMCPWatcher {
         let HomeDirectoryWatcherEvent::HomeFilesChanged(fs_event) = event;
         let Some(home_dir) = dirs::home_dir() else {
             return;
-        };
 
+        };
         for provider in MCPProvider::iter() {
             if provider == MCPProvider::Warp {
                 continue;
@@ -357,8 +357,8 @@ impl FileMCPWatcher {
                     // add/delete/move of the config file here.
                     let Some(config_path) = home_config_file_path(provider) else {
                         continue;
-                    };
 
+                    };
                     let was_deleted = fs_event.deleted.contains(&config_path)
                         || fs_event.moved.values().any(|v| v == &config_path);
                     if was_deleted {

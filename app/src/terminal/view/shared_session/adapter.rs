@@ -324,8 +324,8 @@ impl Adapter {
                 .map(|v| v.block_selection_mouse_state_handle.clone())
             else {
                 continue;
-            };
 
+            };
             avatars.insert(
                 viewer.id().clone(),
                 participant_avatar_for_selected_block(

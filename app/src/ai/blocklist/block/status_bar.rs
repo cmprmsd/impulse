@@ -1,5 +1,4 @@
 use std::{collections::HashSet, sync::Arc, time::Duration};
-use crate::legacy_stubs::{AIConversationId};
 
 use super::{
     cli_controller::{CLISubagentController, CLISubagentEvent, UserTakeOverReason},
@@ -11,23 +10,33 @@ use super::{
     },
 };
 use crate::{
+    ai::agent_tips::AITipModel,
     terminal::{
         input::buffer_model::InputBufferUpdateEvent,
         view::ambient_agent::is_cloud_agent_pre_first_exchange,
-    }};
+    },
+};
 use crate::{
+    ai::blocklist::agent_view::{
+        agent_view_bg_fill, child_agent_status_card::ChildAgentStatusCard, AgentMessageBar,
+        AgentViewController, EphemeralMessageModel,
+    },
     terminal::input::{
         buffer_model::InputBufferModel,
         message_bar::common::render_standard_message_bar,
         message_bar::{Message, MessageItem},
         slash_command_model::SlashCommandModel,
         suggestions_mode_model::InputSuggestionsModeModel,
-    }};
+    },
+};
+use warp_multi_agent_api as api;
 
 use crate::{
     ai::{
-        agent::{ icons, AIAgentExchangeId, AIAgentOutput,
-            AIAgentOutputMessageType, CancellationReason, SummarizationType},
+        agent::{
+            conversation::AIConversationId, icons, AIAgentExchangeId, AIAgentOutput,
+            AIAgentOutputMessageType, CancellationReason, SummarizationType,
+        },
         blocklist::{
             agent_view::shortcuts::AgentShortcutViewModel,
             ai_brand_color,
@@ -43,6 +52,7 @@ use crate::{
         AgentTip,
     },
     send_telemetry_from_app_ctx,
+    server::telemetry::TelemetryEvent,
     settings::{InputModeSettings, InputSettings},
     settings_view::keybindings::KeybindingChangedNotifier,
     terminal::{
@@ -53,7 +63,10 @@ use crate::{
         warpify::render::LEFT_STRIPE_WIDTH,
         TerminalModel, CANCEL_COMMAND_KEYBINDING, TOGGLE_AUTOEXECUTE_MODE_KEYBINDING,
         TOGGLE_HIDE_CLI_RESPONSES_KEYBINDING, TOGGLE_QUEUE_NEXT_PROMPT_KEYBINDING,
-    }};
+    },
+    util::bindings::keybinding_name_to_keystroke,
+    BlocklistAIHistoryModel,
+};
 use instant::Instant;
 use parking_lot::FairMutex;
 use pathfinder_color::ColorU;
@@ -71,14 +84,6 @@ use warpui::{
     ViewHandle,
 };
 use warpui::{r#async::Timer, TypedActionView};
-use crate::legacy_stubs::{BlocklistAIHistoryModel};
-use crate::legacy_stubs::{AgentViewController};
-use crate::legacy_stubs::{TelemetryEvent};
-use crate::util::bindings::keybinding_name_to_keystroke;
-use crate::ui_components::blended_colors::neutral_2;
-use crate::ui_components::blended_colors::neutral_2;
-use crate::legacy_stubs::{EphemeralMessageModel};
-use crate::ui_components::blended_colors::neutral_2;
 
 pub fn init(app: &mut AppContext) {
     summarization_cancel_dialog::init(app);
@@ -991,6 +996,7 @@ fn latest_model_used_before_exchange<V: View>(
 }
 
 fn render_agent_tip(tip: &AgentTip, app: &AppContext) -> Box<dyn Element> {
+    use crate::ai::agent_tips::AITip;
     use markdown_parser::{FormattedTextFragment, FormattedTextLine};
     use warpui::text_layout::ClipConfig;
 
@@ -1148,11 +1154,9 @@ impl View for BlocklistAIStatusBar {
                     .ambient_agent_view_model
                     .as_ref()
                     .is_some_and(|ambient_agent_view_model| {
-                        let terminal_model = self.terminal_model.lock();
                         is_cloud_agent_pre_first_exchange(
                             Some(ambient_agent_view_model),
                             &self.agent_view_controller,
-                            &terminal_model,
                             app,
                         )
                     })

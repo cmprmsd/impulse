@@ -624,8 +624,8 @@ impl<A: InlineMenuAction, T: 'static + Send + Sync> InlineMenuView<A, T> {
         }
         let Some(selected_idx) = self.selected_idx else {
             return;
-        };
 
+        };
         self.state_handles.uniform_list.scroll_to(
             if self
                 .positioner
@@ -756,8 +756,8 @@ impl<A: InlineMenuAction, T: 'static + Send + Sync> InlineMenuView<A, T> {
                 let is_active = idx == active_tab_index;
                 let Some(mouse_state) = model.tab_mouse_states().get(idx).cloned() else {
                     continue;
-                };
 
+                };
                 let mut button = appearance
                     .ui_builder()
                     .button(ButtonVariant::Text, mouse_state)

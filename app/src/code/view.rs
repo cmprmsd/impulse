@@ -743,8 +743,8 @@ impl CodeView {
     ) {
         let Some(tab) = self.tab_group.get(tab_index) else {
             return;
-        };
 
+        };
         let position = ScrollPosition::LineAndColumn(line_col);
         tab.editor_view.update(ctx, |editor, ctx| {
             editor.set_pending_scroll(position, ctx);

@@ -468,8 +468,8 @@ impl UriHost {
                         uuid_hex.len()
                     );
                     return;
-                };
 
+                };
                 let result = WorkspaceRegistry::as_ref(ctx)
                     .all_workspaces(ctx)
                     .iter()
@@ -792,13 +792,13 @@ impl Action {
                 let Some(window_id) = window_id else {
                     log::warn!("unable to determine window for open repo action");
                     return;
-                };
 
+                };
                 let Some(mut workspaces) = ctx.views_of_type::<Workspace>(window_id) else {
                     log::warn!("no workspace found in window {window_id} for open repo action");
                     return;
-                };
 
+                };
                 if let Some(workspace) = workspaces.pop() {
                     workspace.update(ctx, |workspace, ctx| {
                         workspace
@@ -815,15 +815,15 @@ impl Action {
                 let Some(window_id) = window_id else {
                     log::warn!("unable to determine window for cloud agent setup action");
                     return;
-                };
 
+                };
                 let Some(mut workspaces) = ctx.views_of_type::<Workspace>(window_id) else {
                     log::warn!(
                         "no workspace found in window {window_id} for cloud agent setup action"
                     );
                     return;
-                };
 
+                };
                 if let Some(workspace) = workspaces.pop() {
                     workspace.update(ctx, |workspace, ctx| {
                         workspace.handle_action(&WorkspaceAction::OpenCloudAgentSetupGuide, ctx);
@@ -843,15 +843,15 @@ impl Action {
                         "unable to determine window for new cloud agent conversation action"
                     );
                     return;
-                };
 
+                };
                 let Some(mut workspaces) = ctx.views_of_type::<Workspace>(window_id) else {
                     log::warn!(
                         "no workspace found in window {window_id} for new cloud agent conversation action"
                     );
                     return;
-                };
 
+                };
                 if let Some(workspace) = workspaces.pop() {
                     workspace.update(ctx, |workspace, ctx| {
                         workspace.handle_action(&WorkspaceAction::AddAmbientAgentTab, ctx);
@@ -869,15 +869,15 @@ impl Action {
                 let Some(window_id) = window_id else {
                     log::warn!("unable to determine window for new agent conversation action");
                     return;
-                };
 
+                };
                 let Some(workspace) = WorkspaceRegistry::as_ref(ctx).get(window_id, ctx) else {
                     log::warn!(
                         "no workspace found in window {window_id} for new agent conversation action"
                     );
                     return;
-                };
 
+                };
                 workspace.update(ctx, |workspace, ctx| {
                     workspace.handle_action(&WorkspaceAction::AddAgentTab, ctx);
                 });
@@ -1321,8 +1321,8 @@ fn find_cloud_mode_terminal_in_workspace(
 
         let Some(ambient_terminal_id) = ambient_terminal_id else {
             continue;
-        };
 
+        };
         let has_environment_management_pane = pane_group
             .pane_ids()
             .any(|pane_id| pane_id.is_environment_management_pane());

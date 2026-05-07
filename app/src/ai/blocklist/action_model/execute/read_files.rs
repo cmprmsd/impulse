@@ -47,8 +47,8 @@ impl ReadFilesExecutor {
         } = input
         else {
             return false;
-        };
 
+        };
         // TODO: figure out how to avoid constructing the full paths in `should_execute`
         // and then again in `execute`, and then again on every render.
         let current_working_directory = self
@@ -93,8 +93,8 @@ impl ReadFilesExecutor {
         } = action
         else {
             return ActionExecution::InvalidAction;
-        };
 
+        };
         BlocklistAIPermissions::handle(ctx).update(ctx, |model, _ctx| {
             model.add_temporary_file_read_permissions(
                 conversation_id,

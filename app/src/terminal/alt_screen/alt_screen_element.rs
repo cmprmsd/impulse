@@ -854,8 +854,8 @@ impl Element for AltScreenElement {
         let Some(event_at_z_index) = event.at_z_index(z_index, ctx) else {
             // Only proceed if there's a relevant event at this z-index.
             return false;
-        };
 
+        };
         match event_at_z_index {
             Event::KeyDown {
                 keystroke,

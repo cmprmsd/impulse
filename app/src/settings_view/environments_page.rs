@@ -600,16 +600,16 @@ impl EnvironmentsPageView {
     ) {
         let UpdateManagerEvent::ObjectOperationComplete { result } = event else {
             return;
-        };
 
+        };
         // Check if this is a successful update for our pending save
         if let (ObjectOperation::Update, OperationSuccessType::Success) =
             (&result.operation, &result.success_type)
         {
             let Some(server_id) = &result.server_id else {
                 return;
-            };
 
+            };
             let should_handle = self
                 .pending_save_env_id
                 .is_some_and(|pending_env_id| server_id.uid() == pending_env_id.uid());
@@ -665,8 +665,8 @@ impl EnvironmentsPageView {
                 (self.pending_share_server_id, result.server_id)
             else {
                 return;
-            };
 
+            };
             if pending_server_id != result_server_id {
                 return;
             }
@@ -750,8 +750,8 @@ impl EnvironmentsPageView {
                         ctx,
                     );
                     return;
-                };
 
+                };
                 // Create via UpdateManager
                 UpdateManager::handle(ctx).update(ctx, |update_manager, ctx| {
                     update_manager.create_ambient_agent_environment(
@@ -777,8 +777,8 @@ impl EnvironmentsPageView {
                         ctx,
                     );
                     return;
-                };
 
+                };
                 // Get the revision from the existing environment
                 let revision = existing_env.metadata.revision.clone();
 
@@ -946,16 +946,16 @@ impl TypedActionView for EnvironmentsPageView {
                         ctx,
                     );
                     return;
-                };
 
+                };
                 let SyncId::ServerId(server_id) = *env_id else {
                     self.show_error_toast(
                         "Unable to share environment: environment is not yet synced.".to_string(),
                         ctx,
                     );
                     return;
-                };
 
+                };
                 self.pending_share_server_id = Some(server_id);
 
                 UpdateManager::handle(ctx).update(ctx, |update_manager, ctx| {
@@ -1129,8 +1129,8 @@ impl EnvironmentsPageWidget {
                         (None, Some(_)) => std::cmp::Ordering::Greater,
                         (None, None) => std::cmp::Ordering::Equal,
                     });
-                };
 
+                };
                 sort_by_last_edited_desc(&mut personal_environments);
                 sort_by_last_edited_desc(&mut team_environments);
 

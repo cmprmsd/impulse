@@ -857,8 +857,8 @@ fn test_toggle_autoexecute_override_persists_updated_conversation_state() {
         } = event
         else {
             panic!("expected UpdateMultiAgentConversation event");
-        };
 
+        };
         assert_eq!(persisted_conversation_id, conversation_id.to_string());
         assert_eq!(
             conversation_data.autoexecute_override,
@@ -897,8 +897,8 @@ fn test_update_event_sequence_persists_updated_conversation_state() {
         } = event
         else {
             panic!("expected UpdateMultiAgentConversation event");
-        };
 
+        };
         assert_eq!(persisted_conversation_id, conversation_id.to_string());
         assert_eq!(conversation_data.last_event_sequence, Some(42));
 

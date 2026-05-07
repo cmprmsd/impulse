@@ -250,8 +250,8 @@ impl StartAgentExecutor {
         } = input.action
         else {
             return ActionExecution::InvalidAction;
-        };
 
+        };
         let prompt = prompt.clone();
         let version = *version;
         let parent_conversation_id = input.conversation_id;
@@ -288,8 +288,8 @@ impl StartAgentExecutor {
                             version,
                         },
                     ));
-                };
 
+                };
                 if !FeatureFlag::OrchestrationV2.is_enabled() {
                     return ActionExecution::Sync(AIAgentActionResultType::StartAgent(
                         StartAgentResult::Error {
@@ -312,8 +312,8 @@ impl StartAgentExecutor {
                             version,
                         },
                     ));
-                };
 
+                };
                 (
                     StartAgentExecutionMode::Local {
                         harness_type: Some(harness.to_string()),
@@ -375,8 +375,8 @@ impl StartAgentExecutor {
                             version,
                         },
                     ));
-                };
 
+                };
                 (
                     StartAgentExecutionMode::Remote {
                         environment_id,

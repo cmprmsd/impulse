@@ -312,8 +312,8 @@ async fn check_openable_in_warp(
 
                 let Some(file_type) = is_file_openable_in_warp(relative_path) else {
                     continue;
-                };
 
+                };
                 let resolved = working_directory.as_ref().map_or_else(
                     || relative_path.to_path_buf(),
                     |cwd| cwd.join(relative_path),

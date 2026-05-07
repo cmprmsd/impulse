@@ -219,8 +219,8 @@ impl OnboardingAgenticSuggestionsBlock {
     fn can_start_new_am_block(&self, ctx: &AppContext) -> bool {
         let Some(terminal_view) = self.terminal_view.upgrade(ctx) else {
             return false;
-        };
 
+        };
         let model = terminal_view.as_ref(ctx).model.lock();
         terminal_view.as_ref(ctx).is_input_box_visible(&model, ctx)
     }
@@ -551,8 +551,8 @@ impl OnboardingAgenticSuggestionsBlock {
                         button_content = button_content.with_border(
                             Border::all(1.0).with_border_fill(internal_colors::neutral_1(theme)),
                         );
-                    };
 
+                    }
                     ConstrainedBox::new(button_content.finish())
                         .with_width(ONBOARDING_BOX_WIDTH)
                         .with_min_height(ONBOARDING_BOX_HEIGHT)

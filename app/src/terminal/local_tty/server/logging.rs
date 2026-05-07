@@ -42,8 +42,8 @@ impl RemoteLogger {
                             "Log message sending channel closed; terminating logging thread."
                         );
                         return;
-                    };
 
+                    };
                     let socket_fd_lock = socket_fd.lock();
                     'inner: loop {
                         if let Err(err) =

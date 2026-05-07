@@ -560,8 +560,8 @@ impl ParseableConfig for ITermProfile {
             .into_dictionary()
         else {
             return Err(ConfigError::MalformattedFileError(path));
-        };
 
+        };
         if dict
             .remove("LoadPrefsFromCustomFolder")
             .and_then(|value| value.as_boolean())
@@ -594,8 +594,8 @@ impl ParseableConfig for ITermProfile {
             .and_then(|guid| guid.into_string())
         else {
             return Err(ConfigError::MalformattedFileError(path));
-        };
 
+        };
         let Some(profiles) = dict
             .remove("New Bookmarks")
             .and_then(|profiles| profiles.into_array())
@@ -607,8 +607,8 @@ impl ParseableConfig for ITermProfile {
             })
         else {
             return Err(ConfigError::MalformattedFileError(path));
-        };
 
+        };
         // Get candidate hotkey windows.
         let hotkey_windows = profiles
             .iter()

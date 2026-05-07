@@ -12,7 +12,15 @@ use std::rc::Rc;
 use std::sync::Arc;
 use warp_core::semantic_selection::SemanticSelection;
 use warp_core::{features::FeatureFlag, ui::Icon};
-use warpui::keymap::Keystroke;
+use warpui::{
+    elements::{
+        get_rich_content_position_id, Border, Clipped, Container, CornerRadius, CrossAxisAlignment,
+        Flex, FormattedTextElement, MouseStateHandle, ParentElement, Radius, SavePosition,
+        SelectableArea, SelectionHandle,
+    },
+    keymap::{FixedBinding, Keystroke},
+    AppContext, Element, Entity, EntityId, FocusContext, SingletonEntity, TypedActionView, View,
+    ViewContext,
 };
 
 use crate::{
@@ -28,12 +36,10 @@ use crate::{
         block_list_element::BlockListMenuSource, block_list_viewport::InputMode,
         view::TerminalAction,
     },
-
+    ui_components::blended_colors,
+    view_components::action_button::{ButtonSize, KeystrokeSource, NakedTheme, PrimaryTheme},
 };
-use warpui::{AppContext, Element, Entity, EntityId, FocusContext, TypedActionView, View, ViewContext};
-use warpui::keymap::{FixedBinding};
-use crate::view_components::action_button::NakedTheme;
-use crate::view_components::action_button::PrimaryTheme;
+
 /// The vertical padding applied to the env var collection block's content body.
 /// For horizontal padding, use [`INLINE_ACTION_HORIZONTAL_PADDING`] for consistency.
 const ENV_VAR_COLLECTION_BODY_VERTICAL_PADDING: f32 = 16.;

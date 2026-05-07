@@ -20,6 +20,7 @@ use crate::{
         result_renderer::{QueryResultRenderer, QueryResultRendererStyles},
         search_bar::{SearchBar, SearchBarEvent, SearchBarState, SearchResultOrdering},
     }};
+}
 use warpui::{AppContext, Element, Entity, FocusContext, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
 use warpui::{WeakViewHandle};
 use warpui::elements::{ChildView};
@@ -38,8 +39,8 @@ lazy_static! {
             result_vertical_padding: 4.,
             ..Default::default()
         };
-}
 
+}
 const DEFAULT_PLACEHOLDER_TEXT: &str = "Search for a secret";
 
 pub struct ExternalSecretsMenu {

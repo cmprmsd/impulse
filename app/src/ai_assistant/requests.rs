@@ -38,8 +38,8 @@ pub enum RequestStatus {
         /// A handle to abort the request if desired.
         abort_handle: AbortHandle,
     },
-}
 
+}
 fn cache_request_limit_info(request_limit_info: RequestLimitInfo, app_mut: &mut AppContext) {
     if let Ok(serialized) = serde_json::to_string(&request_limit_info) {
         let _ = app_mut

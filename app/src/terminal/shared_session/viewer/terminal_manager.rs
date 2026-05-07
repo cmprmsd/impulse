@@ -111,8 +111,8 @@ impl TerminalManager {
             build_selected_conversation_update(agent_view_controller, ai_context_model, ctx)
         else {
             return;
-        };
 
+        };
         Self::send_input_context_update_to_current_network(
             guard,
             model,
@@ -587,8 +587,8 @@ impl TerminalManager {
 
                             let Some(view) = weak_view_for_auto.upgrade(ctx) else {
                                 return;
-                            };
 
+                            };
                             let auto_approve = view
                                 .as_ref(ctx)
                                 .ai_context_model()
@@ -721,8 +721,8 @@ impl TerminalManager {
                 }
                 let Some(view) = weak_view_handle.upgrade(ctx) else {
                     return;
-                };
 
+                };
                 let ambient_task_id: Option<AmbientAgentTaskId> = match &source_type {
                     SessionSourceType::AmbientAgent { task_id } => {
                         task_id.as_deref().and_then(|s| s.parse().ok())
@@ -924,8 +924,8 @@ impl TerminalManager {
             NetworkEvent::ParticipantListUpdated(participant_list) => {
                 let Some(view) = weak_view_handle.upgrade(ctx) else {
                     return;
-                };
 
+                };
                 // A change to our role may have originated from the server,
                 // make sure that our own state changes if it does.
                 view.update(ctx, |view, ctx| {
@@ -936,8 +936,8 @@ impl TerminalManager {
                     presence_manager.update(ctx, |presence_manager, ctx| {
                         presence_manager.update_participants(*participant_list.clone(), ctx)
                     });
-                };
 
+                }
                 if let Some(session_id) = view.as_ref(ctx).shared_session_id().cloned() {
                     SessionPermissionsManager::handle(ctx).update(
                         ctx,
@@ -955,8 +955,8 @@ impl TerminalManager {
             NetworkEvent::ParticipantPresenceUpdated(update) => {
                 let Some(view) = weak_view_handle.upgrade(ctx) else {
                     return;
-                };
 
+                };
                 view.update(ctx, |view, ctx| {
                     view.on_participant_presence_updated(update, ctx);
                 });
@@ -964,8 +964,8 @@ impl TerminalManager {
             NetworkEvent::ReconnectedSuccessfully => {
                 let Some(view) = weak_view_handle.upgrade(ctx) else {
                     return;
-                };
 
+                };
                 view.update(ctx, |view, ctx| {
                     view.on_shared_session_reconnection_status_changed(false, ctx)
                 });
@@ -977,8 +977,8 @@ impl TerminalManager {
             } => {
                 let Some(view) = weak_view_handle.upgrade(ctx) else {
                     return;
-                };
 
+                };
                 view.update(ctx, |view, ctx| {
                     view.maybe_show_role_changed_toast(participant_id, *reason, *role, ctx);
                     view.on_participant_role_changed(participant_id, *role, ctx);
@@ -990,8 +990,8 @@ impl TerminalManager {
             } => {
                 let Some(view) = weak_view_handle.upgrade(ctx) else {
                     return;
-                };
 
+                };
                 view.update(ctx, |view, ctx| {
                     // In cloud-mode startup (before the first exchange), shared-session input
                     // sync reflects environment setup commands. Skip applying remote edits so
@@ -1017,8 +1017,8 @@ impl TerminalManager {
             NetworkEvent::RoleRequestInFlight(role_request_id) => {
                 let Some(view) = weak_view_handle.upgrade(ctx) else {
                     return;
-                };
 
+                };
                 view.update(ctx, |view, ctx| {
                     view.on_shared_session_viewer_role_request_in_flight(
                         role_request_id.clone(),
@@ -1029,8 +1029,8 @@ impl TerminalManager {
             NetworkEvent::RoleRequestResponse(role_request_response) => {
                 let Some(view) = weak_view_handle.upgrade(ctx) else {
                     return;
-                };
 
+                };
                 view.update(ctx, |view, ctx| {
                     view.on_shared_session_role_request_response(
                         role_request_response.clone(),
@@ -1297,8 +1297,8 @@ impl TerminalManager {
     ) {
         let Some(view) = weak_view_handle.upgrade(ctx) else {
             return;
-        };
 
+        };
         let terminal_view_id = view.id();
         apply_selected_agent_model_update(terminal_view_id, selected_model, guard, ctx);
     }
@@ -1392,8 +1392,8 @@ impl TerminalManager {
                 else {
                     log::warn!("Got a TerminalViewEvent::ExecuteCommand in viewer::TerminalManager where the source was not SharedSession");
                     return;
-                };
 
+                };
                 // If the block ID has become stale by the time we get here,
                 // we don't need to send this update to the server.
                 if model.lock().block_list().active_block_id() != block_id {

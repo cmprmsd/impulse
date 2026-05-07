@@ -4,7 +4,6 @@ use warp_core::ui::theme::color::internal_colors;
 use warp_core::ui::Icon;
 use warp_editor::editor::NavigationKey;
 use warpui::keymap::Keystroke;
-};
 
 use crate::{
     appearance::Appearance,

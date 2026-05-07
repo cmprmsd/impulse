@@ -149,8 +149,8 @@ impl SendMessageToAgentExecutor {
         } = input.action
         else {
             return ActionExecution::<()>::InvalidAction.into();
-        };
 
+        };
         let conversation_id = input.conversation_id;
         let addresses = addresses.clone();
         let subject = subject.clone();

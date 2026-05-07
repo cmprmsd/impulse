@@ -489,8 +489,8 @@ impl PresenceManager {
                 existing_participant.info = info;
                 existing_participant.role = Some(viewer.role);
                 continue;
-            };
 
+            }
             // Otherwise, pick an available color and add them.
             let color = get_available_color(&self.chosen_colors);
             self.chosen_colors.insert(color);

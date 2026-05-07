@@ -268,8 +268,8 @@ impl NumberShortcutButtons {
         };
         let Some(position_id) = self.selected_button_position_id() else {
             return;
-        };
 
+        };
         scroll_state.scroll_to_position(ScrollTarget {
             position_id,
             mode: ScrollToPositionMode::FullyIntoView,
@@ -295,8 +295,8 @@ impl NumberShortcutButtons {
     fn activate_button_at(&self, index: usize, ctx: &mut ViewContext<Self>) {
         let Some(builder) = self.button_builders.get(index) else {
             return;
-        };
 
+        };
         (builder.on_click)(ctx);
     }
 }

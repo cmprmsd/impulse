@@ -59,8 +59,8 @@ impl CallMCPToolExecutor {
             } = input
             else {
                 return false;
-            };
 
+            };
             BlocklistAIPermissions::as_ref(ctx).can_call_mcp_tool(
                 server_id.as_ref(),
                 name.as_str(),
@@ -96,8 +96,8 @@ impl CallMCPToolExecutor {
             } = input.action
             else {
                 return ActionExecution::InvalidAction;
-            };
 
+            };
             let name_owned = name.to_owned();
             let name_clone = name_owned.clone();
 
@@ -105,8 +105,8 @@ impl CallMCPToolExecutor {
                 return ActionExecution::Sync(AIAgentActionResultType::CallMCPTool(
                     CallMCPToolResult::Error("MCP server tool input not an object".to_owned()),
                 ));
-            };
 
+            };
             // Prefer the templatable server over the legacy server if both exist.
             // It is possible for both to exist in some tricky race conditions, but in those cases
             // we shouldn't care about the legacy servers.
@@ -135,8 +135,8 @@ impl CallMCPToolExecutor {
                 return ActionExecution::Sync(AIAgentActionResultType::CallMCPTool(
                     CallMCPToolResult::Error("MCP server for tool not found".to_owned()),
                 ));
-            };
 
+            };
             let name_owned_inner = name_owned.clone();
             ActionExecution::new_async(
                 async move {
@@ -178,8 +178,8 @@ pub(crate) fn coerce_integer_args(
 ) {
     let Some(properties) = input_schema.get("properties").and_then(|p| p.as_object()) else {
         return;
-    };
 
+    };
     for (key, prop_def) in properties {
         let is_integer = prop_def.get("type").and_then(|t| t.as_str()) == Some("integer");
         if !is_integer {

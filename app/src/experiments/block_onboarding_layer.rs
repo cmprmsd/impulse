@@ -17,8 +17,8 @@ lazy_static! {
             BucketRange::new(BlockOnboarding::VariantTwo, 633..1000),
         ]
     };
-}
 
+}
 /// An experiment to test block onboarding's impact on user activation.
 #[derive(Debug)]
 pub enum BlockOnboarding {

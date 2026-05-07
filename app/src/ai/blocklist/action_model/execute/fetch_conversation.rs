@@ -34,8 +34,8 @@ impl FetchConversationExecutor {
         let ExecuteActionInput { action, .. } = input;
         let AIAgentActionType::FetchConversation { conversation_id } = &action.action else {
             return ActionExecution::<Option<CloudConversationData>>::InvalidAction;
-        };
 
+        };
         let conversation_id = conversation_id.clone();
         let server_token = ServerConversationToken::new(conversation_id.clone());
 
@@ -74,8 +74,8 @@ fn materialize_conversation(
         return AIAgentActionResultType::FetchConversation(FetchConversationResult::Error(
             format!("Failed to load conversation {server_conversation_id}"),
         ));
-    };
 
+    };
     let tasks: Vec<warp_multi_agent_api::Task> = conversation
         .all_tasks()
         .filter_map(|task| task.source().cloned())

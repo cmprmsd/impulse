@@ -476,8 +476,8 @@ fn to_resolved_skill(skill_path: PathBuf, parsed: ParsedSkill) -> ResolvedSkill 
 fn instructions_body(skill: &ParsedSkill) -> String {
     let Some(line_range) = &skill.line_range else {
         return skill.content.clone();
-    };
 
+    };
     // line_range is 1-indexed, end-exclusive.
     let start = line_range.start.saturating_sub(1);
     let end = line_range.end.saturating_sub(1);
@@ -503,8 +503,8 @@ fn best_match_by_directory_precedence(
     let Some(root) = root else {
         matches.sort();
         return matches.into_iter().next();
-    };
 
+    };
     matches.sort_by(|a, b| {
         let a_rank = directory_precedence_rank(root, a);
         let b_rank = directory_precedence_rank(root, b);

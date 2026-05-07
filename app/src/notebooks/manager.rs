@@ -66,8 +66,8 @@ pub enum NotebookSource {
         owner: Owner,
         initial_folder_id: Option<SyncId>,
     },
-}
 
+}
 impl NotebookManager {
     /// Create a new [`NotebookManager`] singleton.
     pub fn new(cached_notebooks: Vec<CloudNotebook>, ctx: &mut ModelContext<Self>) -> Self {
@@ -214,8 +214,8 @@ impl NotebookManager {
         let Some(notebook_id) = pane.notebook_view(ctx).as_ref(ctx).notebook_id(ctx) else {
             log::warn!("Notebook pane has no notebook ID");
             return;
-        };
 
+        };
         let entry = self.panes_by_hashed_id.entry(notebook_id.uid());
         if let Entry::Vacant(entry) = entry {
             entry.insert(NotebookPaneData {
@@ -240,8 +240,8 @@ impl NotebookManager {
         let Some(notebook_id) = pane.notebook_view(ctx).as_ref(ctx).notebook_id(ctx) else {
             log::warn!("Notebook pane has no notebook ID");
             return;
-        };
 
+        };
         // If a notebook pane is restored, the notebook may have been reopened in the meantime. In
         // that case, don't let closing the original pane clear out the new pane.
         if let Entry::Occupied(entry) = self.panes_by_hashed_id.entry(notebook_id.uid()) {
@@ -264,8 +264,8 @@ impl NotebookManager {
             Some(model.get_notebook(&notebook_id)?.clone())
         }) else {
             return;
-        };
 
+        };
         if let Some(NotebookRawTextStatus::ParseInFlight(abort_handle)) =
             self.raw_text_by_hashed_id.get(&notebook_id.uid())
         {
@@ -288,8 +288,8 @@ impl NotebookManager {
     ) {
         let UpdateManagerEvent::ObjectOperationComplete { result } = event else {
             return;
-        };
 
+        };
         if !matches!(&result.success_type, OperationSuccessType::Success) {
             return;
         }
@@ -303,8 +303,8 @@ impl NotebookManager {
             };
             let Some(client_id) = result.client_id else {
                 return;
-            };
 
+            };
             if let Some(mut pane) = self.panes_by_hashed_id.remove(&client_id.to_string()) {
                 pane.notebook_id = SyncId::ServerId(server_id);
                 self.panes_by_hashed_id

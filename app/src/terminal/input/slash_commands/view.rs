@@ -211,8 +211,8 @@ impl InlineSlashCommandView {
             .map(ToOwned::to_owned)
         else {
             return;
-        };
 
+        };
         self.mixer.update(ctx, move |mixer, ctx| {
             if mixer.current_query().is_some_and(|q| q.text == filter) {
                 return;

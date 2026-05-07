@@ -168,7 +168,6 @@ fn initialize_app(app: &mut App) {
     app.add_singleton_model(|_| GitHubAuthNotifier::new());
     app.add_singleton_model(AgentConversationsModel::new);
     app.add_singleton_model(crate::legacy_stubs::RemoteServerManager::new);
-}
 
 struct MockOptions {
     layout: PanesLayout,
@@ -1419,6 +1418,7 @@ fn test_pane_focus_does_not_have_an_infinite_event_loop() {
                     let active_block = model.block_list().active_block();
                     if active_block.bootstrap_stage() != crate::terminal::model::bootstrap::BootstrapStage::PostBootstrapPrecmd ||
                         active_block.is_active_and_long_running() {
+                        }
                         all_terminals_bootstrapped = false;
                     }
                 }, ctx);

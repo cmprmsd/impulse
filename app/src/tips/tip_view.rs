@@ -1,5 +1,5 @@
 use pathfinder_geometry::vector::vec2f;
-use warpui::keymap::Keystroke;
+use warpui::elements::{
     Align, ChildAnchor, ClippedScrollStateHandle, ClippedScrollable, DispatchEventResult,
     EventHandler, Hoverable, Icon, MouseStateHandle, OffsetPositioning, PositionedElementAnchor,
     PositionedElementOffsetBounds, Radius, ScrollbarWidth, Stack,
@@ -11,6 +11,10 @@ use warpui::{
         Border, ConstrainedBox, Container, CornerRadius, CrossAxisAlignment, Element, Flex,
         ParentElement, Shrinkable,
     },
+    fonts::Weight,
+    keymap::Keystroke,
+    ui_components::components::{UiComponent, UiComponentStyles},
+    AppContext, Entity, TypedActionView, View,
 };
 use warpui::{keymap::FixedBinding, ViewContext};
 use warpui::{Action, BlurContext, EntityId, ModelHandle, SingletonEntity, WindowId};
@@ -21,9 +25,6 @@ use crate::themes::theme::{Blend, Fill};
 use crate::util::bindings::trigger_to_keystroke;
 
 use super::WELCOME_TIP_FEATURE_LENGTH;
-use warpui::{AppContext, Entity, TypedActionView, View};
-use warpui::fonts::{Weight};
-use warpui::ui_components::components::{UiComponentStyles};
 
 const CHECK_MARK_WIDTH: f32 = 20.;
 const TIP_VIEW_WIDTH: f32 = 250.;

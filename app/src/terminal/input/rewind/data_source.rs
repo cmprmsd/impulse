@@ -95,8 +95,8 @@ impl SyncDataSource for RewindDataSource {
         let history_model = BlocklistAIHistoryModel::as_ref(app);
         let Some(conversation) = history_model.conversation(&self.conversation_id) else {
             return Ok(vec![]);
-        };
 
+        };
         let all_exchanges = conversation.root_task_exchanges().collect_vec();
 
         // Find indices of exchanges with user queries

@@ -158,8 +158,8 @@ impl TerminalView {
         else {
             log::warn!("Pane stack not available, cannot create docker sandbox session");
             return;
-        };
 
+        };
         let resources = TerminalViewResources {
             tips_completed: self.tips_completed.clone(),
             server_api: ServerApiProvider::as_ref(ctx).get(),

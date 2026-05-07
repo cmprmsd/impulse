@@ -54,8 +54,8 @@ fn propagate_parent_agent_settings(
             "Could not find parent terminal view for pane {parent_pane_id:?}; child will use default AI profile"
         );
         return;
-    };
 
+    };
     let parent_view_id = parent_terminal_view.id();
     let parent_profile_id = *AIExecutionProfilesModel::as_ref(ctx)
         .active_profile(Some(parent_view_id), ctx)
@@ -108,8 +108,8 @@ pub(crate) fn create_hidden_child_agent_conversation(
         log::error!("Failed to get terminal view for new StartAgent pane");
         group.discard_pane(new_pane_id.into(), ctx);
         return None;
-    };
 
+    };
     let terminal_view_id = new_terminal_view.id();
     propagate_parent_agent_settings(group, parent_pane_id, terminal_view_id, ctx);
     if let Some(task_context) = task_context.as_ref() {
@@ -182,8 +182,8 @@ pub(crate) fn create_error_child_agent_conversation(
             "Failed to surface local child harness error for parent conversation {parent_conversation_id:?}: {error_message}"
         );
         return;
-    };
 
+    };
     if let Some(terminal_view) = terminal_view {
         terminal_view.update(ctx, |terminal_view, ctx| {
             terminal_view.enter_agent_view(

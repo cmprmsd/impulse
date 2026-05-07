@@ -148,13 +148,13 @@ impl super::WarpConfig {
 
         if !has_name(file_name.trim()) {
             return Err(anyhow!("File name is empty"));
-        };
 
+        }
         let path = crate::user_config::launch_configs_dir().join(&file_name);
         if path.exists() {
             return Err(anyhow!("File already exists"));
-        };
 
+        }
         let file = crate::util::file::create_file(path)?;
         let mut writer = io::BufWriter::new(file);
         writer.write_all(LAUNCH_CONFIG_COMMENT.as_bytes())?;

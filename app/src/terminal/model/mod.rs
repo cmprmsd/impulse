@@ -11,8 +11,8 @@ macro_rules! assert_lines_approx_eq {
             warpui::units::IntoLines::into_lines($expected)
         )
     }};
-}
 
+}
 pub mod alt_screen;
 pub mod ansi;
 pub mod block;

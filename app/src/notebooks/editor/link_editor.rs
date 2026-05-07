@@ -258,8 +258,8 @@ impl View for LinkEditor {
         // Disable the link button if either of the editors are empty.
         if !self.is_valid(app) {
             link_button = link_button.disabled();
-        };
 
+        }
         editors.add_child(
             link_button
                 .with_style(UiComponentStyles {

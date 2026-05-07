@@ -481,8 +481,8 @@ async fn read_bundled_skills(skills_dir: &Path) -> HashMap<String, ParsedSkill> 
 
     let Ok(mut entries) = async_fs::read_dir(skills_dir).await else {
         return skills;
-    };
 
+    };
     while let Ok(Some(entry)) = entries.try_next().await {
         let entry_path = entry.path();
         if !entry_path.is_dir() {
@@ -508,8 +508,8 @@ async fn read_bundled_skills(skills_dir: &Path) -> HashMap<String, ParsedSkill> 
                 full: ("Could not resolve bundled skill ID from {}, skipping skill", skill.path.display())
             );
             continue;
-        };
 
+        };
         // Apply variable substitution to the skill content.
         skill.content = handlebars::render_template(&skill.content, &context);
         skills.insert(skill_id.to_owned(), skill);

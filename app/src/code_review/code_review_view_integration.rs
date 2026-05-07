@@ -23,8 +23,8 @@ impl CodeReviewView {
     ) -> Option<CodeReviewVisibleAnchorForTest> {
         let CodeReviewViewState::Loaded(state) = self.state() else {
             return None;
-        };
 
+        };
         let file_index = self.viewported_list_state.get_scroll_index();
         let (_, file_state) = state.file_states.get_index(file_index)?;
         let editor_state = file_state.editor_state.as_ref()?;
@@ -75,8 +75,8 @@ impl CodeReviewView {
     ) -> bool {
         let CodeReviewViewState::Loaded(state) = self.state() else {
             return false;
-        };
 
+        };
         let Some(editor_index) = state
             .file_states
             .iter()
@@ -90,8 +90,8 @@ impl CodeReviewView {
             .and_then(|(_, file_state)| file_state.editor_state.as_ref())
         else {
             return false;
-        };
 
+        };
         let editor = editor_state.editor().clone();
         let line_number = LineCount::from(line_number);
         let line = EditorLineLocation::Current {
@@ -133,8 +133,8 @@ impl CodeReviewView {
     pub fn scroll_to_header_for_test(&mut self, path: &Path, ctx: &mut ViewContext<Self>) -> bool {
         let CodeReviewViewState::Loaded(state) = self.state() else {
             return false;
-        };
 
+        };
         let Some(editor_index) = state
             .file_states
             .iter()
@@ -148,8 +148,8 @@ impl CodeReviewView {
             .and_then(|(_, file_state)| file_state.editor_state.as_ref())
         else {
             return false;
-        };
 
+        };
         let editor = editor_state.editor().clone();
 
         // Scroll to 10px into the header (FILE_HEADER_HEIGHT is 41px)
@@ -169,8 +169,8 @@ impl CodeReviewView {
     pub fn scroll_to_footer_for_test(&mut self, path: &Path, ctx: &mut ViewContext<Self>) -> bool {
         let CodeReviewViewState::Loaded(state) = self.state() else {
             return false;
-        };
 
+        };
         let Some(editor_index) = state
             .file_states
             .iter()
@@ -184,8 +184,8 @@ impl CodeReviewView {
             .and_then(|(_, file_state)| file_state.editor_state.as_ref())
         else {
             return false;
-        };
 
+        };
         let editor = editor_state.editor().clone();
 
         let content_height = editor
@@ -223,8 +223,8 @@ impl CodeReviewView {
     ) -> bool {
         let CodeReviewViewState::Loaded(state) = self.state() else {
             return false;
-        };
 
+        };
         let Some(editor_index) = state
             .file_states
             .iter()
@@ -238,8 +238,8 @@ impl CodeReviewView {
             .and_then(|(_, file_state)| file_state.editor_state.as_ref())
         else {
             return false;
-        };
 
+        };
         let editor = editor_state.editor().clone();
         let editor_model_handle = editor.as_ref(ctx).editor().as_ref(ctx).model.clone();
 
@@ -284,8 +284,8 @@ impl CodeReviewView {
 
         let Some(offset_in_editor) = found_offset else {
             return false;
-        };
 
+        };
         self.viewported_list_state.scroll_to_with_offset(
             editor_index,
             Pixels::new(FILE_HEADER_HEIGHT) + offset_in_editor,
@@ -313,16 +313,16 @@ impl CodeReviewView {
 
         let CodeReviewViewState::Loaded(state) = self.state() else {
             return "unknown".to_string();
-        };
 
+        };
         let Some((_, file_state)) = state.file_states.get_index(file_index) else {
             return "unknown".to_string();
-        };
 
+        };
         let Some(editor_state) = &file_state.editor_state else {
             return "unknown".to_string();
-        };
 
+        };
         let editor_model = editor_state
             .editor
             .as_ref(ctx)

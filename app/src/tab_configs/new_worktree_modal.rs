@@ -25,8 +25,8 @@ pub fn init(app: &mut AppContext) {
         NewWorktreeModalAction::Escape,
         id!("NewWorktreeModal"),
     )]);
-}
 
+}
 use warp_core::ui::theme::color::internal_colors;
 
 use crate::{
@@ -258,8 +258,8 @@ impl NewWorktreeModal {
 
         let Some(repo) = repo else {
             return;
-        };
 
+        };
         let branch = self
             .selected_branch
             .clone()
@@ -267,8 +267,8 @@ impl NewWorktreeModal {
 
         let Some(branch) = branch else {
             return;
-        };
 
+        };
         let worktree_branch_name = if self.autogenerate_branch_name {
             None
         } else {

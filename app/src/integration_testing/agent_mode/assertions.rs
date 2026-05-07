@@ -153,8 +153,8 @@ pub fn assert_todo_operation(
                         return AssertionOutcome::failure(
                             "Exchange output has no todo operations".to_owned(),
                         );
-                    };
 
+                    }
                     // Run assertion against all todo operations
                     for todo_operation in &todo_operations {
                         if assertion(todo_operation) {
@@ -468,8 +468,8 @@ pub fn assert_todo_list(
             };
             let Some(todo_list) = conversation.active_todo_list() else {
                 return AssertionOutcome::failure("No todo list".to_owned());
-            };
 
+            };
             if assertion(todo_list) {
                 AssertionOutcome::Success
             } else {
@@ -743,8 +743,8 @@ pub fn assert_llm_judge_whole_conversation_passes(
                 return AssertionOutcome::immediate_failure(
                     "Failed to get conversation".to_owned(),
                 );
-            };
 
+            };
             let judge = LLMJudge::new(judge_config.clone());
             let result = judge.judge(conversation);
             match result {
@@ -901,8 +901,8 @@ fn get_exchange_todo_operations(
         return Err(AssertionOutcome::failure(
             "Exchange is not finished".to_owned(),
         ));
-    };
 
+    };
     // Once the output is finished, we make plain assertions to immediately fail the test on failure, instead
     // of waiting for something to change.
     match finished_output {
@@ -940,8 +940,8 @@ fn get_exchange_output(
         return Err(AssertionOutcome::failure(
             "Exchange is not finished".to_owned(),
         ));
-    };
 
+    };
     // Once the output is finished, we make plain assertions to immediately fail the test on failure, instead
     // of waiting for something to change.
     match finished_output {
@@ -1032,7 +1032,7 @@ fn get_exchange_index_from_conversation(
                 return Err(AssertionOutcome::immediate_failure(format!(
                     "Exchange at index {exchange_index} does not exist and task is done"
                 )));
-            };
+            }
             // Otherwise, async assertion to wait for the exchange to be created.
             Err(AssertionOutcome::failure(format!(
                 "Failed to get exchange at index {exchange_index}"
@@ -1081,8 +1081,8 @@ pub fn assert_conversation_was_summarized() -> AssertionCallback {
         BlocklistAIHistoryModel::handle(app).update(app, |history_model, _| {
             let Some(conversation) = history_model.active_conversation(terminal_view.id()) else {
                 return AssertionOutcome::failure("No active conversation".to_owned());
-            };
 
+            };
             if conversation.was_summarized() {
                 AssertionOutcome::Success
             } else {
@@ -1121,8 +1121,8 @@ pub fn assert_no_md_file_edits() -> AssertionCallback {
         BlocklistAIHistoryModel::handle(app).update(app, |history_model, _| {
             let Some(conversation) = history_model.active_conversation(terminal_view.id()) else {
                 return AssertionOutcome::failure("No active conversation".to_owned());
-            };
 
+            };
             // Check all exchanges for file edit requests to .md files
             for exchange in conversation.all_exchanges() {
                 if let AIAgentOutputStatus::Finished {

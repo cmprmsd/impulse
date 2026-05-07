@@ -21,8 +21,8 @@ fn is_skill_file_valid_paths() {
     let Some(home_dir) = dirs::home_dir() else {
         eprintln!("Skipping test: home directory not available");
         return;
-    };
 
+    };
     let path = home_dir
         .join("repos")
         .join("project")
@@ -58,8 +58,8 @@ fn is_skill_file_invalid_provider() {
     let Some(home_dir) = dirs::home_dir() else {
         eprintln!("Skipping test: home directory not available");
         return;
-    };
 
+    };
     let path = home_dir
         .join("repos")
         .join("project")
@@ -82,8 +82,8 @@ fn is_skill_file_invalid_format() {
     let Some(home_dir) = dirs::home_dir() else {
         eprintln!("Skipping test: home directory not available");
         return;
-    };
 
+    };
     // Missing SKILL.md at the end
     let path = home_dir
         .join("repos")
@@ -219,8 +219,8 @@ fn extract_skill_parent_directory_returns_none_for_non_skill() {
     let Some(home_dir) = dirs::home_dir() else {
         eprintln!("Skipping test: home directory not available");
         return;
-    };
 
+    };
     // Not a SKILL.md file
     let path = home_dir
         .join("repo")
@@ -262,8 +262,8 @@ fn is_home_skill_directory_true_for_home_skill_dir() {
     let Some(home_dir) = dirs::home_dir() else {
         eprintln!("Skipping test: home directory not available");
         return;
-    };
 
+    };
     // ~/.agents/skills/skill-name
     let path = home_dir.join(".agents").join("skills").join("my-skill");
     assert!(is_home_skill_directory(&path));
@@ -278,8 +278,8 @@ fn is_home_skill_directory_false_for_project_skill_dir() {
     let Some(home_dir) = dirs::home_dir() else {
         eprintln!("Skipping test: home directory not available");
         return;
-    };
 
+    };
     // ~/repos/project/.agents/skills/my-skill is a project skill dir, not home
     let path = home_dir
         .join("repos")
@@ -295,8 +295,8 @@ fn is_home_skill_directory_false_for_provider_path_itself() {
     let Some(home_dir) = dirs::home_dir() else {
         eprintln!("Skipping test: home directory not available");
         return;
-    };
 
+    };
     // ~/.agents/skills is the provider path, not a skill directory
     let path = home_dir.join(".agents").join("skills");
     assert!(!is_home_skill_directory(&path));
@@ -307,8 +307,8 @@ fn is_home_skill_directory_false_for_arbitrary_path() {
     let Some(home_dir) = dirs::home_dir() else {
         eprintln!("Skipping test: home directory not available");
         return;
-    };
 
+    };
     let path = home_dir.join("some").join("random").join("dir");
     assert!(!is_home_skill_directory(&path));
 }
@@ -322,8 +322,8 @@ fn is_home_provider_path_true_for_known_providers() {
     let Some(home_dir) = dirs::home_dir() else {
         eprintln!("Skipping test: home directory not available");
         return;
-    };
 
+    };
     let path = home_dir.join(".agents").join("skills");
     assert!(is_home_provider_path(&path));
 
@@ -353,8 +353,8 @@ fn extract_skill_parent_directory_returns_home_dir_for_warp_home_skill() {
     let Some(warp_home_skills_dir) = warp_core::paths::warp_home_skills_dir() else {
         eprintln!("Skipping test: Warp home skills directory not available");
         return;
-    };
 
+    };
     let skill_path = warp_home_skills_dir.join("test-skill").join("SKILL.md");
     let result = extract_skill_parent_directory(&skill_path);
     assert_eq!(result.ok(), Some(home_dir));
@@ -365,8 +365,8 @@ fn is_home_provider_path_false_for_unknown_provider() {
     let Some(home_dir) = dirs::home_dir() else {
         eprintln!("Skipping test: home directory not available");
         return;
-    };
 
+    };
     let path = home_dir.join(".garbage").join("skills");
     assert!(!is_home_provider_path(&path));
 }
@@ -376,8 +376,8 @@ fn is_home_provider_path_false_for_project_provider() {
     let Some(home_dir) = dirs::home_dir() else {
         eprintln!("Skipping test: home directory not available");
         return;
-    };
 
+    };
     // Project-level provider path, not home
     let path = home_dir
         .join("repos")
@@ -392,8 +392,8 @@ fn is_home_provider_path_false_for_partial_path() {
     let Some(home_dir) = dirs::home_dir() else {
         eprintln!("Skipping test: home directory not available");
         return;
-    };
 
+    };
     // Just the provider directory, not the skills subdirectory
     let path = home_dir.join(".agents");
     assert!(!is_home_provider_path(&path));

@@ -54,8 +54,8 @@ pub fn is_warp_default_terminal() -> bool {
 
         let Some(warp_bundle_id) = get_warp_bundle_id() else {
             return false;
-        };
 
+        };
         let handler_string = CFString::wrap_under_create_rule(handler);
         let current_handler = handler_string.to_string();
 

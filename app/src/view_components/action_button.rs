@@ -553,8 +553,8 @@ impl ActionButton {
     fn maybe_render_tooltip(&self, appearance: &Appearance, app: &AppContext, stack: &mut Stack) {
         let Some(tooltip) = self.tooltip.clone() else {
             return;
-        };
 
+        };
         let tooltip_element = if let Some(tooltip_sublabel) = self.tooltip_sublabel.clone() {
             appearance
                 .ui_builder()

@@ -40,8 +40,8 @@ struct TestView {
 
 impl Entity for TestView {
     type Event = ();
-}
 
+}
 impl View for TestView {
     fn ui_name() -> &'static str {
         "TestView"

@@ -3,12 +3,6 @@
 //!
 //! The `BlocklistAIController` orchestrates state updates and service calls to power the
 //! Agent Mode UI.
-
-use crate::legacy_stubs::{AmbientAgentTaskId, CloudModel, ServerApiProvider, TeamUpdateManager, TelemetryEvent, UserWorkspaces};
-use crate::legacy_stubs::{AIConversationId};
-use crate::legacy_stubs::{AIConversation, ServerConversationToken, TaskId};
-use crate::legacy_stubs::{ConversationStatus};
-use warp_terminal::shell::ShellLaunchData;
 pub mod input_context;
 mod pending_response_streams;
 pub mod response_stream;
@@ -18,7 +12,7 @@ use input_context::{input_context_for_request, parse_context_attachments};
 pub use slash_command::*;
 
 use self::response_stream::{ResponseStream, ResponseStreamEvent};
-use crate::legacy_stubs::AgentViewState;
+use super::agent_view::AgentViewEntryOrigin;
 use super::ResponseStreamId;
 use super::{
     action_model::{BlocklistAIActionEvent, BlocklistAIActionModel},
@@ -28,28 +22,40 @@ use super::{
     input_model::InputConfig,
     BlocklistAIInputModel, InputType,
 };
+use crate::ai::agent::api::{self, ServerConversationToken};
+use crate::ai::agent::conversation::{AIConversation, ConversationStatus};
+use crate::ai::agent::task::TaskId;
 use crate::ai::agent::{
     AIAgentActionResult, CancellationReason, PassiveSuggestionResultType, PassiveSuggestionTrigger,
     PassiveSuggestionTriggerType, RunningCommand,
 };
 use crate::ai::agent::{DocumentContentAttachmentSource, FileContext};
 #[cfg(not(target_family = "wasm"))]
+use crate::ai::agent_sdk::ClaudeHarness;
+use crate::ai::ambient_agents::AmbientAgentTaskId;
 use crate::ai::document::ai_document_model::{
     AIDocumentId, AIDocumentModel, AIDocumentUserEditStatus,
 };
 use crate::ai::llms::LLMId;
 use crate::ai::{
-    agent::{ extract_user_query_mode, AIAgentActionResultType,
+    agent::{
+        conversation::AIConversationId, extract_user_query_mode, AIAgentActionResultType,
         AIAgentAttachment, AIAgentContext, AIAgentExchangeId, AIAgentInput, AIAgentOutputStatus,
         AIIdentifiers, EntrypointType, FinishedAIAgentOutput, RenderableAIError, RequestCost,
-        RequestMetadata, StaticQueryType, UserQueryMode},
+        RequestMetadata, StaticQueryType, UserQueryMode,
+    },
+    llms::LLMPreferences,
+    AIRequestUsageModel,
 };
+use crate::cloud_object::model::persistence::CloudModel;
 use crate::features::FeatureFlag;
 use crate::global_resource_handles::GlobalResourceHandlesProvider;
 use crate::network::NetworkStatus;
 use crate::notebooks::editor::model::FileLinkResolutionContext;
 use crate::persistence::ModelEvent;
+use crate::server::server_api::AIApiError;
 #[cfg(not(target_family = "wasm"))]
+use crate::server::server_api::ServerApiProvider;
 use crate::terminal::model::block::{
     formatted_terminal_contents_for_input, BlockId, CURSOR_MARKER,
 };
@@ -57,8 +63,11 @@ use crate::terminal::view::inline_banner::ZeroStatePromptSuggestionType;
 use crate::terminal::{
     model::session::{active_session::ActiveSession, SessionType},
     model::terminal_model::TerminalModel,
+    ShellLaunchData,
 };
-use crate::send_telemetry_from_ctx;
+use crate::workspaces::update_manager::TeamUpdateManager;
+use crate::workspaces::user_workspaces::UserWorkspaces;
+use crate::{send_telemetry_from_ctx, server::telemetry::TelemetryEvent};
 use anyhow::anyhow;
 use chrono::{DateTime, Local};
 use itertools::Itertools;
@@ -71,6 +80,7 @@ use std::path::PathBuf;
 use std::sync::Arc;
 use std::time::Duration;
 use warp_core::assertions::safe_assert;
+use warp_multi_agent_api::{message, Task, ToolType};
 use warpui::r#async::{SpawnedFutureHandle, Timer};
 
 use super::orchestration_event_streamer::{
@@ -1412,7 +1422,7 @@ impl BlocklistAIController {
         }
 
         BlocklistAIHistoryModel::handle(ctx).update(ctx, |history, ctx| {
-            history.mark_active_conversation_id(conversation_id, self.terminal_view_id, ctx);
+            history.set_active_conversation_id(conversation_id, self.terminal_view_id, ctx);
         });
 
         if !FeatureFlag::AgentView.is_enabled() && trigger == FollowUpTrigger::Auto {
@@ -2322,8 +2332,8 @@ impl BlocklistAIController {
             stream_id: response_stream_id.clone(),
         });
         if !is_passive_request {
-            history_model.update(ctx, |history_model, ctx| {
-                history_model.mark_active_conversation_id(
+            BlocklistAIHistoryModel::handle(ctx).update(ctx, |history_model, ctx| {
+                history_model.set_active_conversation_id(
                     conversation_data.id,
                     self.terminal_view_id,
                     ctx,
@@ -2889,6 +2899,7 @@ impl BlocklistAIController {
                 });
             }
             Some(warp_multi_agent_api::response_event::stream_finished::Reason::InvalidApiKey(details)) => {
+                use warp_multi_agent_api::LlmProvider;
                 let is_aws_bedrock = details
                     .provider
                     .try_into()

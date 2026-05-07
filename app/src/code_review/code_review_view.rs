@@ -675,8 +675,8 @@ impl RepositoryState {
             mem::replace(&mut self.state, CodeReviewViewState::None)
         else {
             unreachable!("state was verified as Loaded");
-        };
 
+        };
         Some(loaded_state)
     }
 
@@ -970,8 +970,8 @@ impl CodeReviewView {
             server_type.or_else(|| lsp::LanguageId::from_path(path).map(|id| id.server_type()));
         let Some(server_type) = server_type else {
             return;
-        };
 
+        };
         let repo_root = PersistedWorkspace::as_ref(ctx)
             .root_for_workspace(path)
             .map(|p| p.to_path_buf())
@@ -983,8 +983,8 @@ impl CodeReviewView {
 
         let Some(repo_root) = repo_root else {
             return;
-        };
 
+        };
         PersistedWorkspace::handle(ctx).update(ctx, |workspace, _ctx| {
             workspace.enable_lsp_server_for_path(&repo_root, server_type);
         });
@@ -1011,8 +1011,8 @@ impl CodeReviewView {
             server_type.or_else(|| lsp::LanguageId::from_path(path).map(|id| id.server_type()));
         let Some(server_type) = server_type else {
             return;
-        };
 
+        };
         let repo_root = PersistedWorkspace::as_ref(ctx)
             .root_for_workspace(path)
             .map(|p| p.to_path_buf())
@@ -1024,8 +1024,8 @@ impl CodeReviewView {
 
         let Some(repo_root) = repo_root else {
             return;
-        };
 
+        };
         PersistedWorkspace::handle(ctx).update(ctx, |workspace, ctx| {
             workspace.execute_lsp_task(
                 LspTask::Install {
@@ -1165,19 +1165,19 @@ impl CodeReviewView {
     fn update_editor_comment_markers(&mut self, ctx: &mut ViewContext<Self>) {
         let CodeReviewViewState::Loaded(state) = self.state() else {
             return;
-        };
 
+        };
         let Some(repo_path) = self.repo_path().cloned() else {
             return;
-        };
 
+        };
         let editor_file_paths = state.editor_absolute_file_paths(&repo_path);
 
         let Some(model) = self.active_comment_model.as_ref() else {
             self.clear_comment_locations(&editor_file_paths, ctx);
             return;
-        };
 
+        };
         let comments_by_file = self.collect_comments_by_file(model, &editor_file_paths, ctx);
 
         for (editor, file_path) in editor_file_paths {
@@ -1499,8 +1499,8 @@ impl CodeReviewView {
     fn update_maximize_button(&mut self, ctx: &mut ViewContext<Self>) {
         let Some(focus_handle) = &self.focus_handle else {
             return;
-        };
 
+        };
         let is_maximized = focus_handle.is_maximized(ctx);
         let (icon, tooltip) = if is_maximized {
             (Icon::Minimize, "Restore")
@@ -1620,8 +1620,8 @@ impl CodeReviewView {
     pub(crate) fn build_diff_targets(&self, ctx: &ViewContext<Self>) -> Vec<DiffTarget> {
         let Some(repo) = self.active_repo.as_ref() else {
             return Vec::new();
-        };
 
+        };
         let (current_mode, current_branch_name) = self.diff_state_model.read(ctx, |model, _| {
             (model.diff_mode(), model.get_current_branch_name())
         });
@@ -1811,16 +1811,16 @@ impl CodeReviewView {
     fn update_search_decorations(&mut self, ctx: &mut ViewContext<Self>) {
         let CodeReviewViewState::Loaded(state) = self.state() else {
             return;
-        };
 
+        };
         let mut matches_by_editor = self.find_model.as_ref(ctx).matches_by_editor();
         let selected_match = self.find_model.as_ref(ctx).selected_match_info();
 
         for file_state in state.file_states.values() {
             let Some(editor_state) = &file_state.editor_state else {
                 continue;
-            };
 
+            };
             let editor_id = editor_state.editor.id();
             let ranges = matches_by_editor.remove(&editor_id).unwrap_or_default();
             let selected_range_index = selected_match
@@ -1924,8 +1924,8 @@ impl CodeReviewView {
         let Some(comment) = self.get_comment_by_id(*comment_id, ctx) else {
             log::error!("Couldn't find code review comment by ID");
             return;
-        };
 
+        };
         let CodeReviewViewState::Loaded(state) = self.state() else {
             return;
         };
@@ -1939,16 +1939,16 @@ impl CodeReviewView {
                 else {
                     log::warn!("Couldn't find editor for file: {absolute_file_path:?}");
                     return;
-                };
 
+                };
                 let Some(editor_state) = &file_state.editor_state.as_ref() else {
                     log::error!(
                         "CodeReviewView could not fetch editor for file {:?}",
                         file_state.file_diff.file_path
                     );
                     return;
-                };
 
+                };
                 editor_state.editor().update(ctx, |local_editor, ctx| {
                     local_editor.editor().update(ctx, |editor, ctx| {
                         editor.open_existing_comment(
@@ -1986,8 +1986,8 @@ impl CodeReviewView {
                 log::warn!("CodeReviewView couldn't find code review comment by ID");
             }
             return;
-        };
 
+        };
         self.comment_list_view.update(ctx, |comment_list, ctx| {
             comment_list.scroll_to_comment(*comment_id, ctx);
         });
@@ -1995,8 +1995,8 @@ impl CodeReviewView {
         let CodeReviewViewState::Loaded(state) = &self.state() else {
             self.pending_jump_to_comment = Some(*comment_id);
             return;
-        };
 
+        };
         match &comment.target {
             AttachedReviewCommentTarget::Line {
                 absolute_file_path, ..
@@ -2006,8 +2006,8 @@ impl CodeReviewView {
                 else {
                     log::warn!("Couldn't find editor for file: {absolute_file_path:?}");
                     return;
-                };
 
+                };
                 if let AttachedReviewCommentTarget::Line { line, .. } = &comment.target {
                     self.scroll_to_line(editor_index, line, 0.0, ctx);
                 } else {
@@ -2053,8 +2053,8 @@ impl CodeReviewView {
     ) {
         let CodeReviewViewState::Loaded(state) = self.state() else {
             return;
-        };
 
+        };
         let Some(editor_state) = state
             .file_states
             .get_index(editor_index)
@@ -2063,8 +2063,8 @@ impl CodeReviewView {
         else {
             log::warn!("No editor state found for index {editor_index}");
             return;
-        };
 
+        };
         let (start_offset, end_offset) = editor_state
             .editor
             .as_ref(ctx)
@@ -2079,12 +2079,12 @@ impl CodeReviewView {
     fn scroll_to_selected_match(&mut self, ctx: &mut ViewContext<Self>) {
         let CodeReviewViewState::Loaded(state) = self.state() else {
             return;
-        };
 
+        };
         let Some(selected_match_info) = self.find_model.as_ref(ctx).selected_match_info() else {
             return;
-        };
 
+        };
         let Some(editor_index) = state.file_states.values().position(|file_state| {
             file_state
                 .editor_state
@@ -2093,8 +2093,8 @@ impl CodeReviewView {
                 .unwrap_or(false)
         }) else {
             return;
-        };
 
+        };
         // Buffer is 3 times the editor line height
         let buffer = Appearance::as_ref(ctx).monospace_font_size()
             * CODE_REVIEW_EDITOR_LINE_HEIGHT_RATIO
@@ -2154,8 +2154,8 @@ impl CodeReviewView {
             {
                 let CodeReviewViewState::Loaded(state) = self.state() else {
                     return;
-                };
 
+                };
                 ctx.subscribe_to_view(
                     &state.file_states[editor_index]
                         .editor_state
@@ -2166,14 +2166,14 @@ impl CodeReviewView {
                         if let LocalCodeEditorEvent::ViewportUpdated = event {
                             let Some(pending) = view.pending_precise_scroll.take() else {
                                 return;
-                            };
 
+                            };
                             let CodeReviewViewState::Loaded(state) = view.state() else {
                                 // Put it back if we're not in the right state yet.
                                 view.pending_precise_scroll = Some(pending);
                                 return;
-                            };
 
+                            };
                             let firing_editor_index =
                                 state.file_states.values().position(|file_state| {
                                     file_state
@@ -2239,8 +2239,8 @@ impl CodeReviewView {
     ) -> Option<(Pixels, Pixels)> {
         let CodeReviewViewState::Loaded(state) = self.state() else {
             return None;
-        };
 
+        };
         let render_state = state
             .file_states
             .get_index(editor_index)
@@ -2324,8 +2324,8 @@ impl CodeReviewView {
     ) {
         let CodeReviewViewState::Loaded(state) = self.state() else {
             return;
-        };
 
+        };
         let Some(editor_state) = state
             .file_states
             .get_index(editor_index)
@@ -2333,8 +2333,8 @@ impl CodeReviewView {
             .and_then(|fs| fs.editor_state.as_ref())
         else {
             return;
-        };
 
+        };
         editor_state.editor.update(ctx, |local_editor, ctx| {
             local_editor.editor().update(ctx, |editor, ctx| {
                 editor
@@ -2695,12 +2695,12 @@ impl CodeReviewView {
             .get_stats_for_current_mode()
         else {
             return;
-        };
 
+        };
         let Some(CodeReviewViewState::Loaded(loaded_state)) = self.state_mut() else {
             return;
-        };
 
+        };
         loaded_state.total_additions = diff_stats.total_additions;
         loaded_state.total_deletions = diff_stats.total_deletions;
         loaded_state.files_changed = diff_stats.files_changed;
@@ -2716,8 +2716,8 @@ impl CodeReviewView {
     ) {
         if self.active_repo.is_none() {
             return;
-        };
 
+        }
         match self.diff_state(ctx) {
             DiffState::Loading => {
                 if let Some(repo) = self.active_repo.as_mut() {
@@ -2756,8 +2756,8 @@ impl CodeReviewView {
         let Some(diff_data) = diff_data else {
             log::warn!("Trying to reload diff but there is no git diff base");
             return;
-        };
 
+        };
         // Deallocate global buffers that are going to be invalidated.
         if let Some(repo) = self.active_repo.as_mut() {
             repo.state = CodeReviewViewState::None;
@@ -2993,8 +2993,8 @@ impl CodeReviewView {
         };
         let Some((_, file_state)) = diff_state.get_index(index) else {
             return Empty::new().finish();
-        };
 
+        };
         self.render_file_diff(file_state, index, scroll_offset, appearance, app)
     }
 
@@ -3019,8 +3019,8 @@ impl CodeReviewView {
     ) {
         let Some(model) = self.active_comment_model.clone() else {
             return;
-        };
 
+        };
         let is_existing = model.read(ctx, |batch, _| {
             batch.get_review_comment_by_id(comment.id).is_some()
         });
@@ -3607,12 +3607,12 @@ impl CodeReviewView {
     fn mark_editor_loaded_for_file(&mut self, file_path: &Path, ctx: &mut ViewContext<Self>) {
         let Some(repo) = self.active_repo.as_mut() else {
             return;
-        };
 
+        };
         let CodeReviewViewState::Loaded(loaded_state) = &mut repo.state else {
             return;
-        };
 
+        };
         if let Some(file_state) = loaded_state.file_states.get_mut(file_path) {
             if let Some(editor_state) = &mut file_state.editor_state {
                 editor_state.set_loaded();
@@ -3631,12 +3631,12 @@ impl CodeReviewView {
     fn all_editors_loaded(&self) -> bool {
         let Some(repo) = self.active_repo.as_ref() else {
             return true;
-        };
 
+        };
         let CodeReviewViewState::Loaded(loaded_state) = &repo.state else {
             return true;
-        };
 
+        };
         // Check if all editors with editor_state are loaded
         loaded_state
             .file_states
@@ -3752,8 +3752,8 @@ impl CodeReviewView {
                 if comment.target.absolute_file_path().is_none() {
                     // General comments pass through unchanged.
                     return comment;
-                };
 
+                }
                 let matching_editor = match &comment.target {
                     AttachedReviewCommentTarget::Line {
                         absolute_file_path, ..
@@ -3772,8 +3772,8 @@ impl CodeReviewView {
                         comment.outdated = true;
                     }
                     return comment;
-                };
 
+                };
                 let AttachedReviewCommentTarget::Line {
                     absolute_file_path,
                     line,
@@ -3782,8 +3782,8 @@ impl CodeReviewView {
                 else {
                     // File-level comments with matching editors pass through unchanged.
                     return comment;
-                };
 
+                };
                 let (new_location, new_content, used_fallback) =
                     editor_view.update(ctx, |local_editor, ctx| {
                         local_editor.editor().update(ctx, |editor, ctx| {
@@ -3821,18 +3821,18 @@ impl CodeReviewView {
         let Some(model) = &self.active_comment_model else {
             log::error!("Failed to relocate PR comments: CodeReviewView diff state not loaded",);
             return;
-        };
 
+        };
         let Some(repo_path) = self.repo_path() else {
             log::error!("Failed to relocate PR comments: CodeReviewView has no repo path");
             return;
-        };
 
+        };
         let CodeReviewViewState::Loaded(state) = self.state() else {
             log::warn!("Failed to relocate PR comments: CodeReviewView diff state not loaded");
             return;
-        };
 
+        };
         let mut comments = model.update(ctx, |batch, _| batch.take_comments());
         let pending_imported = model.update(ctx, |batch, _| {
             batch.take_pending_imported_comments_for_branch(diff_mode)
@@ -4552,8 +4552,8 @@ impl CodeReviewView {
     fn handle_submit_review_with_comments(&mut self, ctx: &mut ViewContext<Self>) {
         let Some(model) = self.active_comment_model.as_ref() else {
             return;
-        };
 
+        };
         let review_comments = model.read(ctx, |batch, _| batch.clone());
 
         let active_comments: Vec<_> = review_comments
@@ -4570,8 +4570,8 @@ impl CodeReviewView {
         let Some(repo_path) = self.repo_path().cloned() else {
             log::warn!("No active repo path for submitting review");
             return;
-        };
 
+        };
         let active_batch = ReviewCommentBatch::from_comments(active_comments);
         let diff_set = self.collect_diff_set(&active_batch);
         let agent_comment_batch = AgentReviewCommentBatch {
@@ -5699,8 +5699,8 @@ impl CodeReviewView {
                     .into(),
             )
             .finish();
-        };
 
+        };
         let is_discard_all = matches!(
             self.discard_dialog_state.operation_type,
             DiscardOperationType::AllUncommittedChanges
@@ -7333,8 +7333,8 @@ impl TypedActionView for CodeReviewView {
                 let (file_index, now_expanded, chevron_button) = {
                     let Some(repo) = self.active_repo.as_mut() else {
                         return;
-                    };
 
+                    };
                     if let CodeReviewViewState::Loaded(state) = &mut repo.state {
                         if let Some(index) = state.file_states.get_index_of(path) {
                             let file = &mut state.file_states[index];
@@ -7834,8 +7834,8 @@ impl ShowCommentEditorProvider for ShowCommentEditor {
             &self.comment_list_save_position_id,
         ) else {
             return false;
-        };
 
+        };
         comment_list_view_position.contains_point(editor_line_location.upper_right())
             || comment_list_view_position.contains_point(editor_line_location.lower_left())
     }

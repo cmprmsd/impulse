@@ -139,8 +139,8 @@ async fn proxy_requests_to_plugin_runners(
         else {
             log::warn!("No plugin runner found for request {request:?}");
             continue;
-        };
 
+        };
         executor
             .spawn(async move {
                 let (runner_response_tx, runner_response_rx) = oneshot::channel();

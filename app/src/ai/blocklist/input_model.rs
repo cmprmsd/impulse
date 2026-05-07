@@ -638,8 +638,8 @@ impl BlocklistAIInputModel {
             // We don't know enough (anything) to be able to change the input type one way or
             // another.
             return;
-        };
 
+        };
         let denylist: Vec<&str> = AISettings::as_ref(ctx)
             .autodetection_command_denylist
             .value()

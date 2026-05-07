@@ -600,8 +600,8 @@ fn test_clear_selection_after_insert() {
                 let selection = blocks.selection();
                 assert_eq!(selection.is_some(), expect_selections);
             });
-        };
 
+        };
         // Shell Mode: Insert some text into the input box - this should clear the terminal selection!
         select_text(&mut app);
         user_insert(&mut app, "bar");

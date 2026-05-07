@@ -343,8 +343,8 @@ fn test_lifecycle_event_type_from_proto_includes_cancelled_and_blocked() {
     } = &blocked.detail
     else {
         panic!("expected lifecycle event");
-    };
 
+    };
     let Some(api::agent_event::Event::LifecycleEvent(cancelled_lifecycle)) = &cancelled_event.event
     else {
         panic!("expected lifecycle event payload");
@@ -352,8 +352,8 @@ fn test_lifecycle_event_type_from_proto_includes_cancelled_and_blocked() {
     let Some(api::agent_event::Event::LifecycleEvent(blocked_lifecycle)) = &blocked_event.event
     else {
         panic!("expected lifecycle event payload");
-    };
 
+    };
     assert_eq!(
         lifecycle_event_type_from_proto(cancelled_lifecycle),
         api::LifecycleEventType::Cancelled

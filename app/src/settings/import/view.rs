@@ -566,8 +566,8 @@ impl SettingsImportView {
                     "Attempted to write preferences from an invalid terminal type and profile."
                 );
                 return;
-            };
 
+            };
             KeysSettings::handle(ctx).update(ctx, |keys_settings, ctx| {
                 if let Some(extra_meta_keys) = config.option_as_meta.importable_value() {
                     report_if_error!(keys_settings
@@ -872,8 +872,8 @@ impl SettingsImportView {
             let Some(config) = model.config(terminal_type_and_profile) else {
                 log::error!("Could not find config for terminal {terminal_type_and_profile:?}");
                 return Default::default();
-            };
 
+            };
             config
                 .valid_setting_types()
                 .into_iter()

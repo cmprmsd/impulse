@@ -38,8 +38,8 @@ use crate::legacy_stubs::{JsonSerializer};
 /// them for mocking server responses.
 pub trait ClientIdProvider {
     fn next_client_id(&self) -> ClientId;
-}
 
+}
 struct DefaultClientIdProvider;
 impl ClientIdProvider for DefaultClientIdProvider {
     fn next_client_id(&self) -> ClientId {
@@ -679,8 +679,8 @@ impl CloudPreferencesSyncer {
                     "No local value set for preference with storage key {storage_key}. Skipping cloud sync."
                 );
                 continue;
-            };
 
+            };
             let Some(supported_platforms) =
                 SettingsManager::as_ref(ctx).supported_platforms_for_storage_key(storage_key)
             else {
@@ -688,8 +688,8 @@ impl CloudPreferencesSyncer {
                     "No supported platforms found for preference with storage key {storage_key}. Skipping cloud sync."
                 );
                 continue;
-            };
 
+            };
             if !supported_platforms.matches_current_platform() {
                 log::debug!(
                     "Preference with storage key {storage_key} is not supported on the current platform. Skipping cloud sync."
@@ -805,8 +805,8 @@ impl CloudPreferencesSyncer {
         let Some(personal_drive) = UserWorkspaces::as_ref(ctx).personal_drive(ctx) else {
             log::warn!("Unable to create cloud preferences due to unset personal drive");
             return;
-        };
 
+        };
         // Preferences don't yet exist in the cloud, so create them.
         // Note that there is a potential race condition here with the same storage key being created
         // on different clients at the same time. The server handles this and will only accept the first
@@ -864,8 +864,8 @@ impl CloudPreferencesSyncer {
                     pref to match cloud pref"
                 );
                 return;
-            };
 
+            };
             if !supported_platforms.matches_current_platform() {
                 log::debug!(
                     "Preference with storage key {storage_key} is not supported on the current \

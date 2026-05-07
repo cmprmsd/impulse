@@ -19,9 +19,17 @@ use pathfinder_geometry::vector::Vector2F;
 use std::cell::RefCell;
 use warp_core::ui::{appearance::Appearance, theme::Fill};
 use warp_editor::render::element::VerticalExpansionBehavior;
-use warpui::keymap::Keystroke;
+use warpui::{
+    elements::{
+        Border, ChildView, Clipped, ConstrainedBox, Container, CornerRadius, CrossAxisAlignment,
+        Flex, MainAxisAlignment, MainAxisSize, ParentElement, Radius, Shrinkable, Text,
+    },
+    keymap::Keystroke,
+    text_layout::ClipConfig,
+    units::Pixels,
+    AppContext, Element, Entity, FocusContext, ModelHandle, SingletonEntity, TypedActionView, View,
+    ViewContext, ViewHandle,
 };
-use warpui::{AppContext, Element, Entity, FocusContext, ModelHandle, Pixels, TypedActionView, View, ViewContext, ViewHandle};
 
 /// Default width of the comment editor, in pixels.
 pub(crate) const DEFAULT_COMMENT_MAX_WIDTH: f32 = 750.0;

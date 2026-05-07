@@ -369,8 +369,8 @@ pub fn render_item(props: ItemProps<'_>, app: &AppContext) -> Box<dyn Element> {
             let Some(parent_bounds) = ctx.element_position_by_id(&list_position_id) else {
                 log::warn!("Could not retrieve the position of the conversation list for overflow menu display.");
                 return;
-            };
 
+            };
             let offset = position - parent_bounds.origin();
             ctx.dispatch_typed_action(ConversationListViewAction::ToggleOverflowMenu {
                 conversation_id,

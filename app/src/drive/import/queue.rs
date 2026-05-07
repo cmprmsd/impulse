@@ -3,13 +3,19 @@ use std::collections::HashMap;
 use warpui::{Entity, ModelContext, SingletonEntity};
 
 use crate::{
+    cloud_object::{model::persistence::CloudModel, CloudObjectEventEntrypoint, Owner},
     drive::folders::FolderId,
-    notebooks::CloudNotebookModel};
+    notebooks::CloudNotebookModel,
+    server::{
+        cloud_objects::update_manager::{
+            InitiatedBy, ObjectOperation, OperationSuccessType, UpdateManager, UpdateManagerEvent,
+        },
+        ids::{ClientId, SyncId},
+    },
+    workflows::{workflow::Workflow, workflow_enum::WorkflowEnum},
+};
 
 use super::nodes::{self, FileId};
-use crate::legacy_stubs::{ClientId, Owner, SyncId, UpdateManagerEvent};
-use crate::legacy_stubs::{CloudModel, ObjectOperation, OperationSuccessType, UpdateManager};
-use crate::workflows::workflow::Workflow;
 
 pub(super) enum ImportQueueEvent {
     FileCompleted {

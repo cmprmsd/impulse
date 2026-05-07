@@ -371,8 +371,8 @@ impl<T: Action + Clone> SearchMixer<T> {
         };
         let Some(query) = self.query.clone() else {
             return;
-        };
 
+        };
         // Clear the latest run error, if any, because we're about to run a new query.
         registered_source.latest_run_error = None;
 

@@ -48,15 +48,15 @@ impl GridHandler {
     fn mark_matching_secrets(&mut self, secret_handle: &SecretHandle, is_obfuscated: IsObfuscated) {
         let Some(secret) = self.secrets.get_by_handle(secret_handle) else {
             return;
-        };
 
+        };
         let secret_plaintext = self.generate_secret_plaintext(secret.range());
         let Some(matching_secret_handles) =
             self.secrets_in_plaintext.get(secret_plaintext.as_str())
         else {
             return;
-        };
 
+        };
         for secret_handle in matching_secret_handles.iter() {
             if let Err(e) = self.secrets.set_is_obfuscated(secret_handle, is_obfuscated) {
                 log::warn!("Unable to obfuscate secret: {e:?}");
@@ -169,8 +169,8 @@ impl GridHandler {
             self.dirty_cells_range().map(RangeInclusive::into_inner)
         else {
             return;
-        };
 
+        };
         // Expand both the start and end points to word boundaries. The range of dirty cells is not
         // guaranteed to be at a word boundary, in which case we would incorrectly omit secrets that
         // start before the range or end after the range.

@@ -170,8 +170,8 @@ pub fn render_never_warpify_ssh_link(
 ) -> Option<Box<dyn Element>> {
     let Some(ssh_host) = ssh_host else {
         return None;
-    };
 
+    };
     let settings = WarpifySettings::handle(app);
     if settings.as_ref(app).is_ssh_host_denylisted(ssh_host) {
         // Should only happen if user manually attempts to Warpify a denylisted host.

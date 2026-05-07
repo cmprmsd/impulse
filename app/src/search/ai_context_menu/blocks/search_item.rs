@@ -21,8 +21,8 @@ use warp_core::command::ExitCode;
 fn time_ago_string(timestamp: Option<&DateTime<Local>>) -> String {
     let Some(timestamp) = timestamp else {
         return "Just now".to_string();
-    };
 
+    };
     let now = Local::now();
     let duration = now.signed_duration_since(*timestamp);
 

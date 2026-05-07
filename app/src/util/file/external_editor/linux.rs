@@ -50,8 +50,8 @@ impl EditorMetadata {
 
         let Some(exec) = entry.exec() else {
             return Err(DesktopExecError::NoExec);
-        };
 
+        };
         // Doing all the calculations here to get owned versions of data fields,
         // so we can drop entry
         let exec = exec.to_string();

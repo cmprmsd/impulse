@@ -180,8 +180,8 @@ impl ThemeCreatorBody {
                     ctx,
                 );
                 return;
-            };
 
+            };
             let dir = user_config::themes_dir();
 
             theme_options.set_path(dir.join(format!("{theme_name}.{image_extension}")));

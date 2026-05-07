@@ -219,8 +219,8 @@ impl BlocklistAIHistoryModel {
         else {
             log::warn!("No metadata found for conversation {conversation_id}");
             return box_future(futures::future::ready(None));
-        };
 
+        };
         if metadata.has_local_data {
             // Load from local database synchronously
             let result = self
@@ -517,8 +517,8 @@ impl BlocklistAIHistoryModel {
                             Some(warp_multi_agent_api::message::Message::ToolCall(tool_call))  => {
                                 let Some(tool) = &tool_call.tool else {
                                     return None;
-                                };
 
+                                };
                                 if let warp_multi_agent_api::message::tool_call::Tool::ApplyFileDiffs(diff_suggestion) = tool {
                                     Some(diff_suggestion.summary.clone())
                                 } else {

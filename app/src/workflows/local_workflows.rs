@@ -65,8 +65,8 @@ impl LocalWorkflows {
         self.global_workflows.iter().filter(move |workflow| {
             let Some(top_level_commands) = top_level_commands.as_ref() else {
                 return true;
-            };
 
+            };
             if let Some(first_token) = workflow
                 .command()
                 .and_then(|command| command.split_ascii_whitespace().next())

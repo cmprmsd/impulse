@@ -234,8 +234,8 @@ impl EmbeddedItem for EmbeddedWorkflow {
             }
         }) else {
             return Box::new(BrokenBlockEmbedding::new(width, base_text_style.font_size));
-        };
 
+        };
         let command_text_style = &text_layout.rich_text_styles().embedding_text;
 
         let title_style =

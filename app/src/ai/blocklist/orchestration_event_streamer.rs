@@ -493,8 +493,8 @@ impl OrchestrationEventStreamer {
         };
         let Some(exchange) = conversation.exchange_with_id(exchange_id) else {
             return;
-        };
 
+        };
         // Check if the exchange output contains any of the messages we're
         // waiting to confirm.
         let mut confirmed_ids = Vec::new();
@@ -643,15 +643,15 @@ impl OrchestrationEventStreamer {
             let Some(run_id) = run_id else {
                 self.reevaluate_eligibility(conv_id, ctx);
                 continue;
-            };
 
+            };
             let Ok(task_id) = run_id.parse::<crate::legacy_stubs::AmbientAgentTaskId>()
             else {
                 log::warn!("could not parse run_id {run_id:?} for {conv_id:?}");
                 self.reevaluate_eligibility(conv_id, ctx);
                 continue;
-            };
 
+            };
             self.spawn_restore_fetch(conv_id, task_id, cursor, ctx);
         }
     }
@@ -702,8 +702,8 @@ impl OrchestrationEventStreamer {
                 {
                     let Some(stream) = self.streams.get_mut(&conv_id) else {
                         return;
-                    };
 
+                    };
                     // Reset the retry counter on success.
                     stream.restore_fetch_failures = 0;
                     stream.harness = agent_task_harness(&task).or(stream.harness);
@@ -956,8 +956,8 @@ impl OrchestrationEventStreamer {
     ) {
         let Some(run_id) = self.self_run_id(conversation_id, ctx) else {
             return;
-        };
 
+        };
         let local_cursor = self
             .streams
             .get(&conversation_id)
@@ -1176,8 +1176,8 @@ impl OrchestrationEventStreamer {
             cursor = stream.event_cursor;
             let Some(sse) = stream.sse_connection.as_mut() else {
                 return;
-            };
 
+            };
             while let Ok(Some(item)) = sse.event_receiver.try_next() {
                 // Deduplicate: discard events at or below the cursor.
                 if item.event.sequence > cursor {
@@ -1320,8 +1320,8 @@ async fn resolve_dormant_claude_wake_cursor(
 ) -> i64 {
     let Ok(task_id) = run_id.parse::<AmbientAgentTaskId>() else {
         return local_cursor;
-    };
 
+    };
     match ai_client.get_ambient_agent_task(&task_id).await {
         Ok(task) => local_cursor.max(task.last_event_sequence.unwrap_or(0)),
         Err(err) => {

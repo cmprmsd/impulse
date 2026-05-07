@@ -256,8 +256,8 @@ impl AIDocumentModel {
         let Some(owner) = Self::get_plan_owner(ctx) else {
             log::warn!("Failed to get owner while saving AI Document to Warp Drive. Skipping");
             return false;
-        };
 
+        };
         let Some(plan_folder_id) = self.get_or_create_plan_folder(owner, ctx).into_server() else {
             // Plan folder is still being created (has ClientId only).
             // If we save using the ClientId as the parent folder, the document
@@ -271,8 +271,8 @@ impl AIDocumentModel {
                 document.sync_id = Some(SyncId::ClientId(client_id));
             }
             return true;
-        };
 
+        };
         self.create_notebook_in_plan_folder(id, &title, &content, owner, plan_folder_id, ctx);
         ctx.emit(AIDocumentModelEvent::DocumentSaveStatusUpdated(id));
         true
@@ -304,8 +304,8 @@ impl AIDocumentModel {
         }
         let (Some(client_id), Some(server_id)) = (result.client_id, result.server_id) else {
             return;
-        };
 
+        };
         // If we're waiting on a Plans folder to complete creation, ensure the Plans folder exists
         // (creating it if needed) and if it has a ServerId, process the pending document queue.
         //
@@ -337,8 +337,8 @@ impl AIDocumentModel {
             .find(|(_, doc)| doc.sync_id.and_then(|id| id.into_client()) == Some(client_id))
         else {
             return;
-        };
 
+        };
         let conversation_id = doc.conversation_id;
         let ai_document_id = *doc_id;
         doc.sync_id = Some(SyncId::ServerId(server_id));
@@ -508,8 +508,8 @@ impl AIDocumentModel {
     ) {
         let Some(doc) = self.documents.get_mut(id) else {
             return;
-        };
 
+        };
         doc.title = new_title.to_owned();
         let editor_handle = doc.editor.clone();
         editor_handle.update(ctx, |editor, editor_ctx| {
@@ -755,8 +755,8 @@ impl AIDocumentModel {
                 ctx,
             );
             return;
-        };
 
+        };
         let current_content = doc.editor.as_ref(ctx).markdown_unescaped(ctx);
         if current_content == persisted_content {
             log::info!(
@@ -921,8 +921,8 @@ impl AIDocumentModel {
         // Update the sync status of a document by checking if it exists in Warp Drive.
         let Some(doc) = self.documents.get(&id) else {
             return;
-        };
 
+        };
         if doc.sync_id.is_some() {
             return;
         }

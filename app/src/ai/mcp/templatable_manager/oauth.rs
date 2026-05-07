@@ -309,8 +309,8 @@ pub async fn make_authenticated_client(
         return Err(AuthError::InternalError(
             "OAuth state is not in the expected state".to_string(),
         ));
-    };
 
+    };
     // With DCR (Dynamic Client Registration), we don't pass in explicit scopes; they are specified
     // during dynamic registration.
     //
@@ -447,8 +447,8 @@ impl TemplatableMCPServerManager {
 
         let Some(state) = query_params.get("state") else {
             bail!("Missing 'state' parameter in OAuth callback");
-        };
 
+        };
         let code = query_params.get("code");
         let error = query_params.get("error");
 
@@ -466,12 +466,12 @@ impl TemplatableMCPServerManager {
 
         let Some(&server_uuid) = self.pending_oauth_csrf.get(state.as_ref() as &str) else {
             bail!("No active OAuth flow found for state={state}");
-        };
 
+        };
         let Some(server_info) = self.spawned_servers.get(&server_uuid) else {
             bail!("No spawned server found for uuid={server_uuid}");
-        };
 
+        };
         warpui::r#async::block_on(server_info.oauth_result_tx.send(result)).map_err(|_| {
             anyhow!("Failed to send OAuth result to server {server_uuid} - receiver dropped")
         })?;

@@ -1314,8 +1314,8 @@ impl NotebooksEditorModel {
             ctx.emit(RichTextEditorModelEvent::SwitchedSelectionMode {
                 new_mode: TelemetrySelectionMode::Command,
             });
-        };
 
+        }
         ctx.notify();
     }
 

@@ -1243,8 +1243,8 @@ impl RichTextAction<CodeEditorView> for CodeEditorViewAction {
         let mut actions_to_dispatch = vec![];
         let Some(view) = view.upgrade(ctx) else {
             return actions_to_dispatch;
-        };
 
+        };
         if view.as_ref(ctx).is_selecting {
             actions_to_dispatch.push(CodeEditorViewAction::SelectionEnd);
         } else if cmd {

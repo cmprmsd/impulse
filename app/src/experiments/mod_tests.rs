@@ -17,8 +17,8 @@ lazy_static! {
             BucketRange::new(FooExperiment::Experiment, 550..600),
         ],
     };
-}
 
+}
 const TEST_EXPERIMENT_CONTROL: &str = "Control";
 const TEST_EXPERIMENT_EXPERIMENT: &str = "Experiment";
 

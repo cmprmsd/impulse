@@ -70,8 +70,8 @@ pub fn assert_code_review_anchor(
                 return AssertionOutcome::failure(
                     "expected a visible code review anchor but none was available".to_string(),
                 );
-            };
 
+            };
             assert_anchor(
                 &anchor,
                 expected_file_path.as_path(),
@@ -115,8 +115,8 @@ pub fn assert_code_review_line_text(
                     "expected code review line {line_number} for {:?} to be available",
                     expected_file_path
                 ));
-            };
 
+            };
             if line_text != expected_text {
                 return AssertionOutcome::failure(format!(
                     "expected line {line_number} in {:?} to be {expected_text:?}, got {line_text:?}",

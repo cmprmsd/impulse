@@ -73,8 +73,8 @@ impl Element for TerminalSizeElement {
         let handled_by_child = self.child.dispatch_event(event, ctx, app);
         let Some(z_index) = self.z_index() else {
             return false;
-        };
 
+        };
         if !handled_by_child {
             if let Some(event_at_z_index) = event.at_z_index(z_index, ctx) {
                 match event_at_z_index {
@@ -109,8 +109,8 @@ impl TerminalSizeElement {
     fn mouse_position_is_in_bounds(&self, position: Vector2F) -> bool {
         let Some(bounds) = self.bounds() else {
             return false;
-        };
 
+        };
         bounds.contains_point(position)
     }
 }

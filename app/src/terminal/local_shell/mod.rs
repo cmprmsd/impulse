@@ -149,8 +149,8 @@ impl LocalShellState {
         let LocalShellState::Loaded(local_shell) = self else {
             // Not loaded - return immediately with None
             return futures::future::ready(None).boxed();
-        };
 
+        };
         match &mut local_shell.interactive_env_state {
             InteractiveEnvState::Ready(path) => {
                 // Already captured - return immediately with cached value

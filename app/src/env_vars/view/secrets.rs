@@ -86,8 +86,8 @@ impl EnvVarCollectionView {
 
             let Some(local_shell_state) = local_shell.local_shell_info() else {
                 return;
-            };
 
+            };
             let shell_type = local_shell_state.get_shell_type();
             let shell_path = local_shell_state.get_shell_path().clone();
             let path_env_var = local_shell_state.get_path_env_var().clone();

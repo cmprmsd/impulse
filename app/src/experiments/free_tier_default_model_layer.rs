@@ -17,8 +17,8 @@ lazy_static! {
             BucketRange::new(FreeTierDefaultModel::AutoOpen, 500..1000),
         ]
     };
-}
 
+}
 /// 50/50 A/B test of the default model surfaced to free-tier users in the
 /// pre-signup onboarding ("configure oz") model picker.
 #[derive(Debug)]

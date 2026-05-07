@@ -471,8 +471,8 @@ impl NextCommandModel {
                             false,
                             next_command_context,
                         );
-                    };
 
+                    };
                     // At this point we know we're generating a partial suggestion with a prefix.
                     // First, return the most recent command with a matching prefix run in the same pwd
                     // (if exists, otherwise just most recent command anywhere with matching prefix).
@@ -481,9 +481,9 @@ impl NextCommandModel {
                             return (
                                 Ok(GenerateAIInputSuggestionsResponseV2 {
                                     commands: vec![reverse_chronological_command.command.clone()],
-                                ai_queries: vec![],
-                                most_likely_action: reverse_chronological_command.command,
-                            }),
+                                    ai_queries: vec![],
+                                    most_likely_action: reverse_chronological_command.command,
+                                }),
                             request,
                             false,
                             start_ts_ms,
@@ -529,9 +529,9 @@ impl NextCommandModel {
                                 return (
                                     Ok(GenerateAIInputSuggestionsResponseV2 {
                                         commands: vec![autosuggestion.clone()],
-                                    ai_queries: vec![],
-                                    most_likely_action: autosuggestion,
-                                }),
+                                        ai_queries: vec![],
+                                        most_likely_action: autosuggestion,
+                                    }),
                                 request,
                                 false,
                                     start_ts_ms,
@@ -716,8 +716,8 @@ async fn is_arg_valid(
                 let Ok(completion_result) = completions_future.with_timeout(ARG_GENERATOR_VALIDATION_TIMEOUT).await else {
                     log::debug!("Generator validation for arg `{}` in command `{}` timed out - assuming it's valid", arg.value().as_str(), full_command);
                     return true;
-                };
 
+                };
                 let Some(completion_result) = completion_result else {
                     return true;
                 };
@@ -759,8 +759,8 @@ pub async fn is_command_valid(
 
     let Some(classified_command) = classified_command else {
         return true;
-    };
 
+    };
     // We assume the command is valid on parse error because
     // 1. Our completion specs are not always comprehensive (unknown args/options cause parse error)
     // 2. Our parsing logic has some bugs that need to be investigated (INT-816)

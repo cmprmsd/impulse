@@ -109,12 +109,12 @@ fn has_terminal_for_workspace(root: &Path, app: &AppContext) -> bool {
             for terminal in terminals {
                 let Some(pwd) = terminal.as_ref(app).pwd_if_local(app) else {
                     continue;
-                };
 
+                };
                 let Ok(cwd) = PathBuf::from(pwd).canonicalize() else {
                     continue;
-                };
 
+                };
                 if cwd.starts_with(root) {
                     return true;
                 }
@@ -137,8 +137,8 @@ fn has_open_file_for_workspace(root: &Path, app: &AppContext) -> bool {
 
                 let Some(path) = editor_ref.file_path() else {
                     continue;
-                };
 
+                };
                 if path.starts_with(root) {
                     return true;
                 }

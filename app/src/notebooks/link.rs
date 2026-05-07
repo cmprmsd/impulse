@@ -13,6 +13,7 @@ use url::Url;
 use warp_util::path::{CleanPathResult, LineAndColumnArg};
 use warpui::{
     r#async::SpawnedFutureHandle, AppContext, Entity, ModelContext, ModelHandle, SingletonEntity,
+    WindowId,
 };
 
 #[cfg(feature = "local_fs")]
@@ -27,7 +28,6 @@ use crate::{
 };
 
 use super::file::is_markdown_file;
-use warpui::{WindowId};
 
 #[cfg(test)]
 #[path = "link_tests.rs"]

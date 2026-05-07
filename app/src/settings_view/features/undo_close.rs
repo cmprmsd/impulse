@@ -226,8 +226,8 @@ impl TypedActionView for UndoCloseView {
                 let Some(grace_period) = Self::parse_grace_period(&grace_period_secs) else {
                     self.is_grace_period_valid = false;
                     return;
-                };
 
+                };
                 self.is_grace_period_valid = true;
                 UndoCloseSettings::handle(ctx).update(ctx, |settings, ctx| {
                     report_if_error!(settings.grace_period.set_value(grace_period, ctx));

@@ -87,8 +87,8 @@ lazy_static! {
         traffic_allocations: HashMap::new(),
         bucket_ranges: Vec::new()
     };
-}
 
+}
 /// A range of buckets associated with an experiment group.
 #[derive(Clone)]
 struct BucketRange {

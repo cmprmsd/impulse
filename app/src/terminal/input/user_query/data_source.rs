@@ -43,8 +43,8 @@ impl SyncDataSource for UserQueryDataSource {
         let history_model = BlocklistAIHistoryModel::as_ref(app);
         let Some(conversation) = history_model.conversation(&self.conversation_id) else {
             return Ok(vec![]);
-        };
 
+        };
         let search_query = query.text.trim().to_lowercase();
         if search_query.is_empty() {
             // With no search, we just return all queries in chronological order (oldest first).

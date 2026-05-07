@@ -133,8 +133,8 @@ impl UserOwnedBlock {
             hoverable = hoverable.on_click(move |ctx, _, _| {
                 ctx.dispatch_typed_action(ShowBlocksAction::OverflowClick(index));
             });
-        };
 
+        }
         SavePosition::new(
             hoverable.finish(),
             format!("show_blocks_view:overflow_{index}").as_str(),

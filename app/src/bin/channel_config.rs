@@ -20,8 +20,8 @@ macro_rules! path_concat {
     ($path:expr, $file:expr) => {
         concat!($path, "/", $file)
     };
-}
 
+}
 #[macro_export]
 macro_rules! load_config {
     ($channel:expr) => {{

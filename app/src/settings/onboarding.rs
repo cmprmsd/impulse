@@ -160,8 +160,8 @@ fn apply_agent_settings(agent_settings: &AgentDevelopmentSettings, app: &mut App
         // If autonomy is None, the workspace enforces autonomy settings, so skip setting them.
         let Some(autonomy) = agent_settings.autonomy else {
             return;
-        };
 
+        };
         let permissions = action_permissions_for_onboarding_autonomy(autonomy);
 
         // Only set permissions that are not enforced by the workspace

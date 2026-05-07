@@ -31,8 +31,8 @@ lazy_static::lazy_static! {
             user: (*USER_FORMATTED_MESSAGE).clone(),
             assistant: default_assistant_transcript_part((*ASSISTANT_FORMATTED_MESSAGE).clone())
         };
-}
 
+}
 #[test]
 fn test_formatted_transcript_message_first_code_block() {
     assert_eq!(

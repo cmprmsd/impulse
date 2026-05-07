@@ -612,15 +612,15 @@ impl DisplayChipMenu {
     ) -> EnvironmentSidecarSide {
         let Some(window) = app.windows().platform_window(self.window_id) else {
             return EnvironmentSidecarSide::Left;
-        };
 
+        };
         // Anchor is the currently selected/hovered row.
         let Some(anchor_rect) =
             app.element_position_by_id_at_last_frame(self.window_id, position_id)
         else {
             return EnvironmentSidecarSide::Left;
-        };
 
+        };
         let gap = ENV_SIDE_CAR_HORIZONTAL_GAP;
         let window_width = window.size().x();
 

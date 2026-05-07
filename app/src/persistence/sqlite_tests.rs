@@ -324,8 +324,8 @@ fn test_sqlite_round_trips_code_pane_with_multiple_tabs() {
     }) = &restored_tab.root
     else {
         panic!("Expected code pane leaf");
-    };
 
+    };
     assert_eq!(tabs.len(), 3);
     assert_eq!(*active_tab_index, 1);
     assert_eq!(tabs[0].path, Some(PathBuf::from("/tmp/main.rs")));

@@ -130,8 +130,8 @@ fn same_system(
     // We're not crossing a system boundary, so return true.
     let Some(old_launch_data) = old_session_launch_data else {
         return true;
-    };
 
+    };
     let wsl_distro = new_session_shell(chosen_shell, ctx).wsl_distro();
     match old_launch_data {
         ShellLaunchData::WSL { distro: old_distro } => {

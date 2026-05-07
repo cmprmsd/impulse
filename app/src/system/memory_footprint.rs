@@ -63,8 +63,8 @@ mod platform {
     pub fn memory_breakdown() -> serde_json::Value {
         let Some(info) = query_task_vm_info() else {
             return serde_json::json!({});
-        };
 
+        };
         // Copy fields out of the packed struct into locals to avoid
         // unaligned references (task_vm_info is repr(C, packed(4))).
         let total_footprint = info.phys_footprint;

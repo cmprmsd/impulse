@@ -72,8 +72,8 @@ impl BlocklistAIController {
             ctx,
         ) else {
             return;
-        };
 
+        };
         if BlocklistAIHistoryModel::as_ref(ctx).is_conversation_live(conversation_id) {
             self.cancel_conversation_progress(
                 conversation_id,
@@ -290,8 +290,8 @@ impl BlocklistAIController {
         let Some(stream_id) = self.shared_session_state.current_response_id.clone() else {
             log::warn!("Received shared session client actions with no active response stream id.");
             return;
-        };
 
+        };
         let Some(conversation_id) =
             BlocklistAIHistoryModel::as_ref(ctx).conversation_for_response_stream(&stream_id)
         else {
@@ -299,8 +299,8 @@ impl BlocklistAIController {
                 "No conversation ID for shared session response stream with id={stream_id:?}"
             );
             return;
-        };
 
+        };
         self.update_directory_context_from_client_actions(&actions, ctx);
         let history_model = BlocklistAIHistoryModel::handle(ctx);
         history_model.update(ctx, |history_model, ctx| {
@@ -319,8 +319,8 @@ impl BlocklistAIController {
         let Some(conversation) = history_model.as_ref(ctx).conversation(&conversation_id) else {
             log::error!("Failed to find conversation with id: {conversation_id:?}");
             return;
-        };
 
+        };
         let new_action_results_to_apply = conversation
             .new_exchange_ids_for_response(&stream_id)
             .filter_map(|exchange_id| conversation.exchange_with_id(exchange_id))
@@ -414,14 +414,14 @@ impl BlocklistAIController {
                 "No conversation ID for shared session response stream with id={stream_id:?}"
             );
             return;
-        };
 
+        };
         let history_model = BlocklistAIHistoryModel::handle(ctx);
         let Some(conversation) = history_model.as_ref(ctx).conversation(&conversation_id) else {
             log::error!("Failed to find conversation with id: {conversation_id:?}");
             return;
-        };
 
+        };
         // Queue actions for viewer UI in view-only mode
         let mut actions_to_queue = vec![];
         let mut did_exchange_contain_user_query = false;
@@ -711,8 +711,8 @@ impl BlocklistAIController {
                 ctx,
             );
             return;
-        };
 
+        };
         let ai_client = ServerApiProvider::as_ref(ctx).get_ai_client();
         let server_api = ServerApiProvider::as_ref(ctx).get();
         let attachment_ids: Vec<String> = file_downloads.iter().map(|(id, _)| id.clone()).collect();
@@ -837,8 +837,8 @@ impl BlocklistAIController {
                 else {
                     log::error!("Failed to get conversation id for shared session prompt");
                     return;
-                };
 
+                };
                 self.send_user_query_in_conversation_with_attachments(
                     prompt,
                     conversation_id,

@@ -21,8 +21,8 @@ pub fn command_at_cursor_has_common_package_installer_prefix(
         ByteOffset::from(at_index),
     ) else {
         return false;
-    };
 
+    };
     let mut segment_text = cmd.joined_by_space();
 
     // If alias auto-expansion is disabled, expand the first token internally using the session alias map.

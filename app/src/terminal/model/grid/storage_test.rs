@@ -13,7 +13,6 @@ fn with_capacity() {
     assert_eq!(storage.len, 3);
     assert_eq!(storage.bottom_row, 0);
     assert_eq!(storage.visible_lines, 3);
-}
 
 #[test]
 fn testing_grid_to_raw_storage_indexing() {
@@ -27,6 +26,7 @@ fn testing_grid_to_raw_storage_indexing() {
             }
         }
 
+    }
     let mut storage = Storage::with_capacity(10, 1, false);
     assert_index_mapping!(
         storage,

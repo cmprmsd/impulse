@@ -275,8 +275,8 @@ impl SearcherReaderWrapper {
             // Assume the reader is built on the first write operation, if building-on-construction fails.
             // Therefore, if the reader is not set, return an empty vector.
             return Ok(vec![]);
-        };
 
+        };
         let searcher = reader.searcher();
 
         // Build a collection of subqueries to combine in a boolean query.
@@ -354,8 +354,8 @@ impl SearcherReaderWrapper {
                     let OwnedValue::Str(field_value) = retrieved_doc.get_first(*field)?.into()
                     else {
                         return None;
-                    };
 
+                    };
                     let snippet_generator =
                         SnippetGenerator::create(&searcher, &bool_query, *field).ok()?;
                     let snippet = snippet_generator.snippet_from_doc(&retrieved_doc);
@@ -934,8 +934,8 @@ impl TokenStream for CustomTokenStream<'_> {
         self.token.position = self.token.position.wrapping_add(1);
         let Some((offset_from, token)) = self.tokens_iter.next() else {
             return false;
-        };
 
+        };
         let offset_to = offset_from + token.len();
         self.token.offset_from = offset_from;
         self.token.offset_to = offset_to;

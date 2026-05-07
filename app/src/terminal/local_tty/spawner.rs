@@ -28,8 +28,8 @@ pub trait PtyHandle: Send + Sync {
 
     /// Kills the pty process and waits for its successful termination.
     fn kill(&mut self) -> Result<()>;
-}
 
+}
 /// A handle for a pty that is a direct child of the current process.
 #[cfg(unix)]
 struct DirectPtyHandle {

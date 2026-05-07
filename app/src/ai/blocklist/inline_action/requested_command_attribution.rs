@@ -61,8 +61,8 @@ fn is_command_copied_from_warp_drive_object(
 fn is_command_copied_from_notebook(command: &str, notebook: &CloudNotebookModel) -> bool {
     let Ok(md) = parse_markdown(notebook.data.as_str()) else {
         return false;
-    };
 
+    };
     for line in md.lines {
         if let FormattedTextLine::CodeBlock(code) = line {
             if command == code.code.trim() {

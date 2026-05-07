@@ -133,8 +133,8 @@ impl TerminalView {
     ) -> bool {
         let Some(current_user_uid) = self.auth_state.user_id().map(|uid| uid.as_string()) else {
             return false;
-        };
 
+        };
         AgentConversationsModel::as_ref(ctx)
             .get_task_data(&task_id)
             .and_then(|task| task.creator.map(|creator| creator.uid))
@@ -188,8 +188,8 @@ impl TerminalView {
             } => {
                 let Some(shared_session) = self.shared_session.as_mut() else {
                     return;
-                };
 
+                };
                 // Ensure we're updating a viewer's role to a different one
                 let viewer_role = shared_session
                     .presence_manager()
@@ -425,8 +425,8 @@ impl TerminalView {
                 .map(|fh| fh.is_in_split_pane(ctx))
                 .unwrap_or(false);
             self.set_show_pane_accent_border(show_accent_border, ctx);
-        };
 
+        }
         ctx.emit(Event::OpenShareSessionModal { open_source });
     }
 
@@ -836,8 +836,8 @@ impl TerminalView {
         let Some(ambient_agent_view_model) = self.ambient_agent_view_model.as_ref() else {
             self.show_error_toast("Couldn't continue this cloud task.".to_string(), ctx);
             return;
-        };
 
+        };
         if ambient_agent_view_model.as_ref(ctx).task_id() != Some(task_id) {
             self.show_error_toast("Couldn't continue this cloud task.".to_string(), ctx);
             return;
@@ -900,8 +900,8 @@ impl TerminalView {
     fn set_inactivity_timer_to_show_warning(&mut self, ctx: &mut ViewContext<Self>) {
         let Some(sharer) = self.shared_session_sharer_mut() else {
             return;
-        };
 
+        };
         // After the second interval of inactivity, we display a warning modal
         let inactivity_period = SharedSessionSettings::as_ref(ctx)
             .inactivity_period_between_revoking_roles_and_warning();
@@ -916,8 +916,8 @@ impl TerminalView {
     fn revoke_roles_on_inactivity_period_expired(&mut self, ctx: &mut ViewContext<Self>) {
         let Some(shared_session) = self.shared_session.as_mut() else {
             return;
-        };
 
+        };
         // Ensure executors exist
         let num_executors = shared_session.presence_manager().read(ctx, |manager, _| {
             manager
@@ -960,8 +960,8 @@ impl TerminalView {
 
         let Some(sharer) = self.shared_session_sharer_mut() else {
             return;
-        };
 
+        };
         // Ignore timer resets from throttled activity when warning modal is open.
         // User must explicitly close modal to continue the session.
         if sharer.is_inactivity_warning_modal_open {
@@ -1045,8 +1045,8 @@ impl TerminalView {
         let Some(shared_session) = self.shared_session.as_mut() else {
             log::warn!("Received presence manager event for a session that isn't shared");
             return;
-        };
 
+        };
         match event {
             // TODO(suraj): improve the diff approach.
             PresenceManagerEvent::ParticipantListUpdated => {
@@ -1165,8 +1165,8 @@ impl TerminalView {
             .and_then(|pm| pm.as_ref(ctx).get_participant(participant_id))
         else {
             return;
-        };
 
+        };
         // If we the participant has block(s) selected, scroll to the block where the avatar is.
         // Otherwise, if the participant has block text selected, scroll so the cursor is in view.
         if let Some(block_index) = {
@@ -1235,8 +1235,8 @@ impl TerminalView {
         let status = self.model.lock().shared_session_status().clone();
         let SharedSessionStatus::ActiveViewer { role } = status else {
             return;
-        };
 
+        };
         if let Some(viewer) = self.shared_session_viewer_mut() {
             viewer.open_role_change_menu(role, ctx);
         }
@@ -1443,8 +1443,8 @@ impl TerminalView {
             .or_else(|| manager.ended_session_id(&ctx.view_id()))
         else {
             return;
-        };
 
+        };
         ctx.clipboard()
             .write(ClipboardContent::plain_text(join_link(&session_id)));
 
@@ -1600,8 +1600,8 @@ impl TerminalView {
         let self_id = presence_manager.id();
         let Some(existing_role) = presence_manager.role() else {
             return;
-        };
 
+        };
         let Some(new_role) = participant_list
             .present_viewers
             .iter()
@@ -1610,8 +1610,8 @@ impl TerminalView {
         else {
             log::warn!("Could not find new role for viewer {self_id:?} in participant list");
             return;
-        };
 
+        };
         if existing_role != new_role {
             self.on_self_role_updated(new_role, ctx);
         }

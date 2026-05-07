@@ -3,7 +3,6 @@ use std::path::PathBuf;
 use pathfinder_geometry::vector::vec2f;
 use warp_core::ui::theme::Fill;
 use warpui::keymap::Keystroke;
-};
 
 use crate::{
     appearance::Appearance,

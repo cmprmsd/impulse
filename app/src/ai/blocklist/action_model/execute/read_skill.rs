@@ -36,8 +36,8 @@ impl ReadSkillExecutor {
         let AIAgentActionType::ReadSkill(ReadSkillRequest { skill: skill_ref }) = &action.action
         else {
             return ActionExecution::<ReadSkillResult>::InvalidAction;
-        };
 
+        };
         match SkillManager::as_ref(ctx).skill_by_reference(skill_ref) {
             Some(skill) => {
                 send_telemetry_from_ctx!(

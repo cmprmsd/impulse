@@ -499,8 +499,8 @@ impl CodeEditorView {
     fn show_find_bar(&mut self, ctx: &mut ViewContext<Self>) {
         let Some(find_bar) = &self.find_bar else {
             return;
-        };
 
+        };
         // Pre-populate the search field with the currently selected text if it's a single line
         let should_populate_query = self.model.as_ref(ctx).selection_is_single_range(ctx);
 
@@ -943,8 +943,8 @@ impl CodeEditorView {
     fn handle_find_event(&mut self, event: &FindViewEvent, ctx: &mut ViewContext<Self>) {
         let Some(find_bar) = &self.find_bar else {
             return;
-        };
 
+        };
         match event {
             FindViewEvent::CloseFindBar => {
                 // If vim mode is enabled and there is a selected search match, move the cursor
@@ -1322,8 +1322,8 @@ impl CodeEditorView {
     pub fn is_focused(&self, app: &AppContext) -> bool {
         let Some(handle) = self.self_handle.upgrade(app) else {
             return false;
-        };
 
+        };
         // If our window is not active, we don't have user focus, even if we're focused within the app.
         if app.windows().state().active_window != Some(handle.window_id(app)) {
             return false;

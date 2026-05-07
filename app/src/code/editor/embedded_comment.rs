@@ -58,8 +58,8 @@ impl EmbeddedItem for EmbeddedCommentSpace {
                 "EmbeddedComment can't layout missing comment editor for comment ID {:?}",
                 self.id_string
             );
-        };
 
+        }
         let size = comment_editor
             .and_then(|editor| editor.read(app, |editor, _ctx| editor.get_laid_out_size()))
             .unwrap_or_else(|| {
@@ -206,8 +206,8 @@ pub(super) fn comment_embedded_item_conversion(
     else {
         log::error!("Unable to deserialize embedded comment window ID");
         return None;
-    };
 
+    };
     let comment_id = CommentId::from_uuid(
         Uuid::from_str(&comment_uuid)
             .inspect_err(|e| {

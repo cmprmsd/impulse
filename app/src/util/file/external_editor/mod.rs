@@ -210,8 +210,8 @@ pub fn generate_editor_command(
     };
     let Some(editor_name) = editor else {
         return format!("{editor_cmd} {quoted_path}");
-    };
 
+    };
     let editor_base = std::path::Path::new(editor_name)
         .file_name()
         .and_then(|name| name.to_str())

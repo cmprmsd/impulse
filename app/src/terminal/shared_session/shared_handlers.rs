@@ -67,8 +67,8 @@ pub(crate) fn apply_input_mode_update(
 ) {
     let Some(view) = weak_view_handle.upgrade(ctx) else {
         return;
-    };
 
+    };
     // When AgentView is enabled, we only apply input mode updates when in an active agent view.
     // Outside of agent view, input mode changes are not relevant.
     if FeatureFlag::AgentView.is_enabled() {
@@ -108,8 +108,8 @@ pub(crate) fn apply_auto_approve_agent_actions_update(
 ) {
     let Some(view) = weak_view_handle.upgrade(ctx) else {
         return;
-    };
 
+    };
     view.update(ctx, |view, ctx| {
         let ai_context_model = view.ai_context_model().clone();
         ai_context_model.update(ctx, |context_model, ctx| {
@@ -136,8 +136,8 @@ pub(crate) fn apply_selected_conversation_update(
 ) {
     let Some(view) = weak_view_handle.upgrade(ctx) else {
         return;
-    };
 
+    };
     // In shared ambient agent sessions, we can temporarily receive "none/new" selected_conversation
     // updates (e.g. before a server conversation token exists).
     //

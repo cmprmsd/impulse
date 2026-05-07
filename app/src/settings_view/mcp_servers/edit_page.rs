@@ -706,7 +706,7 @@ impl MCPServersEditPageView {
                     })
                 {
                     log::error!("Error persisting MCP server env vars to database: {e:?}");
-                };
+                }
             }
         }
     }

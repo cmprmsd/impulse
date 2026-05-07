@@ -453,8 +453,8 @@ fn run_initial_sync_test(is_onboarded: bool) {
                 &mut server_api,
                 expected_num_other_settings_client_ids,
             ));
-        };
 
+        }
         all_client_ids.append(&mut expect_sync_server_stored_privacy_settings(
             &mut server_api,
         ));

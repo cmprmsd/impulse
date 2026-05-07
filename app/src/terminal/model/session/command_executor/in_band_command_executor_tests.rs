@@ -369,8 +369,8 @@ fn test_commands_are_cleared_if_execute_command_future_is_aborted() {
             execute_test_command(executor_clone.clone(), "echo foo", assert_failed).await;
             execute_test_command(executor_clone.clone(), "echo bar", assert_failed).await;
             execute_test_command(executor_clone.clone(), "echo baz", assert_failed).await;
-        };
 
+        }
         let (handle, registration) = AbortHandle::new_pair();
         let execute_command_future =
             task_executor.spawn(Abortable::new(execute_commands_future, registration));

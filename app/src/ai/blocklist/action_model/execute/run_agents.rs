@@ -8,6 +8,7 @@ use std::time::Duration;
 use ai::agent::action::{RunAgentsAgentRunConfig, RunAgentsExecutionMode, RunAgentsRequest};
 use ai::agent::action_result::{
     RunAgentsAgentOutcome, RunAgentsAgentOutcomeKind, RunAgentsLaunchedExecutionMode,
+    RunAgentsResult,
 };
 use ai::skills::SkillReference;
 use futures::{future::BoxFuture, FutureExt};
@@ -15,13 +16,13 @@ use warpui::{Entity, ModelContext, ModelHandle};
 
 use super::start_agent::{StartAgentExecutor, StartAgentOutcome};
 use super::{ActionExecution, AnyActionExecution, ExecuteActionInput, PreprocessActionInput};
+use crate::ai::agent::conversation::AIConversationId;
 use crate::ai::agent::{
     AIAgentAction, AIAgentActionId, AIAgentActionResultType, AIAgentActionType,
+    StartAgentExecutionMode,
 };
 use crate::ai::blocklist::BlocklistAIHistoryModel;
 use warpui::SingletonEntity;
-use crate::legacy_stubs::{AIConversationId};
-use crate::legacy_stubs::{StartAgentExecutionMode};
 
 /// Per-child spawn timeout. If a child agent doesn't report back within
 /// this window (e.g. binary not found, server error), the slot is failed

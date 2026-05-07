@@ -1375,8 +1375,8 @@ impl ExecutionProfileEditorView {
             self.context_window_slider_state.reset_offset();
             ctx.notify();
             return;
-        };
 
+        };
         let formatted = value.separate_with_commas();
         let should_update = if force {
             true

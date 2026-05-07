@@ -5,14 +5,22 @@ use super::{
         MatchData, PageType, SettingsPageMeta, SettingsPageViewHandle, SettingsWidget, ToggleState,
         HEADER_PADDING,
     },
+    SettingsAction, SettingsSection, ToggleSettingActionPair,
 };
+use crate::auth::{AuthStateProvider, UserUid};
 use crate::autoupdate::{self, AutoupdateStage, AutoupdateState};
 use crate::send_telemetry_from_ctx;
+use crate::workspaces::user_workspaces::UserWorkspaces;
 use crate::{
     appearance::Appearance,
+    auth::{auth_state::AuthState, auth_view_modal::AuthViewVariant},
     report_if_error,
-    settings::cloud_preferences::CloudPreferencesSettings};
-use crate::{workspace::WorkspaceAction};
+    settings::cloud_preferences::CloudPreferencesSettings,
+    TelemetryEvent,
+};
+use crate::{auth::auth_manager::AuthManager, server::ids::ServerId};
+use crate::{auth::auth_manager::LoginGatedFeature, workspaces::workspace::CustomerType};
+use crate::{workspace::WorkspaceAction, workspaces::update_manager::TeamUpdateManager};
 use ::settings::{Setting, ToggleableSetting};
 use lazy_static::lazy_static;
 use pathfinder_color::ColorU;
@@ -33,6 +41,7 @@ use warpui::{
         Align, ConstrainedBox, Container, CornerRadius, CrossAxisAlignment, Element, Flex,
         MouseStateHandle, ParentElement, Radius, Shrinkable, Text,
     },
+    Action, AppContext,
 };
 use warpui::{
     elements::{CacheOption, Image},
@@ -45,11 +54,6 @@ use warpui::{fonts::Weight, keymap::ContextPredicate};
 use warpui::{
     Entity, ModelHandle, SingletonEntity, TypedActionView, View, ViewContext, ViewHandle,
 };
-use warpui::{Action, AppContext};
-use crate::legacy_stubs::{AuthStateProvider, SettingsAction, SettingsSection, TelemetryEvent, ToggleSettingActionPair, UserUid, UserWorkspaces};
-use crate::legacy_stubs::{AuthState, ServerId};
-use crate::legacy_stubs::{AuthManager, TeamUpdateManager};
-use crate::legacy_stubs::{LoginGatedFeature};
 
 const PHOTO_SIZE: f32 = 40.;
 const REFERRAL_CTA: &str = "Earn rewards by sharing Warp with friends & colleagues";

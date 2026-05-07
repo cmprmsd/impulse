@@ -3,6 +3,7 @@ use crate::ai::mcp::MCPServerUpdate;
 use crate::modal::Modal;
 use crate::modal::ModalEvent;
 use crate::modal::ModalViewState;
+use crate::server::telemetry::{MCPTemplateInstallationSource, TelemetryEvent};
 use crate::settings::{AISettings, AISettingsChangedEvent};
 use crate::settings_view::mcp_servers_page::InstallOrigin;
 use crate::settings_view::settings_page::{
@@ -16,6 +17,9 @@ use crate::ToastStack;
 use crate::ai::mcp::{
     // Import events for file-based manager and watcher conditionally
     // since their WASM variants don't export events.
+    file_based_manager::FileBasedMCPManagerEvent,
+    FileMCPWatcher,
+    FileMCPWatcherEvent,
 };
 
 use crate::{
@@ -27,6 +31,10 @@ use crate::{
         FileBasedMCPManager, MCPGalleryManager, MCPProvider, TemplatableMCPServerInstallation,
     },
     appearance::Appearance,
+    cloud_object::{
+        model::persistence::{CloudModel, CloudModelEvent},
+        GenericStringObjectFormat, JsonObjectType,
+    },
     drive::CloudObjectTypeAndId,
     editor::{EditorView, PropagateAndNoOpNavigationKeys, SingleLineEditorOptions, TextOptions},
     pane_group::Direction,
@@ -38,7 +46,13 @@ use crate::{
         style,
         update_modal::{UpdateModalBody, UpdateModalBodyEvent},
         ServerCardItemId,
-    }};
+    },
+    ui_components::blended_colors,
+    view_components::action_button::{ActionButton, NakedTheme},
+    workflows::local_workflows::tail_command_for_shell,
+    workspace::Workspace,
+    workspaces::user_workspaces::UserWorkspaces,
+};
 use markdown_parser::{FormattedText, FormattedTextFragment, FormattedTextLine};
 use settings::ToggleableSetting as _;
 use std::cmp::Ordering;
@@ -58,13 +72,8 @@ use warpui::{
         components::{Coords, UiComponent, UiComponentStyles},
         switch::SwitchStateHandle,
     },
+    AppContext, Element, Entity, SingletonEntity, TypedActionView, View, ViewContext, ViewHandle,
 };
-use warpui::{AppContext, Element, Entity, TypedActionView, View, ViewContext, ViewHandle};
-use crate::legacy_stubs::{TelemetryEvent, UserWorkspaces};
-use crate::workspace::Workspace;
-use crate::legacy_stubs::{CloudModel, CloudModelEvent, GenericStringObjectFormat, JsonObjectType};
-use crate::view_components::action_button::ActionButton;
-use crate::view_components::action_button::NakedTheme;
 
 const DESCRIPTION_TEXT: &str = "Add MCP servers to extend the Warp Agent's capabilities. MCP servers expose data sources or tools to agents through a standardized interface, essentially acting like plugins. Add a custom server, or use the presets to get started with popular servers. You can also find team servers that have been shared with you here. ";
 

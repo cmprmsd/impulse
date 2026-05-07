@@ -150,8 +150,8 @@ impl CodeReviewFindModel {
     ) {
         let Some(results) = &self.results else {
             return;
-        };
 
+        };
         if results.is_empty() {
             return;
         }
