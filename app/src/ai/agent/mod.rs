@@ -2128,52 +2128,14 @@ impl From<CurrentHead> for warp_multi_agent_api::CurrentRef {
     }
 }
 
-impl From<CurrentHead> for diff_hunk_api::Current {
-    fn from(value: CurrentHead) -> Self {
-        match value {
-            CurrentHead::BranchName(name) => diff_hunk_api::Current::CurrentBranchName(name),
-            CurrentHead::HeadlessCommitSha(sha) => {
-                diff_hunk_api::Current::CurrentHeadlessCommitSha(sha)
-            }
-        }
-    }
-}
+// Removed cloud-coupled From impls for diff_hunk_api / warp_multi_agent_api types
+// (those crates were deleted during the cloud strip).
 
 #[derive(Clone, Debug, PartialEq, Eq, Serialize, Deserialize)]
 pub enum DiffBase {
     BranchName(String),
     HeadlessCommitSha(String),
     UncommittedChanges,
-}
-
-impl From<DiffBase> for warp_multi_agent_api::BaseRef {
-    fn from(value: DiffBase) -> Self {
-        Self {
-            r#ref: Some(match value {
-                DiffBase::BranchName(name) => warp_multi_agent_api::base_ref::Ref::BranchName(name),
-                DiffBase::HeadlessCommitSha(sha) => {
-                    warp_multi_agent_api::base_ref::Ref::HeadlessCommitSha(sha)
-                }
-                DiffBase::UncommittedChanges => {
-                    warp_multi_agent_api::base_ref::Ref::UncommittedChanges(())
-                }
-            }),
-        }
-    }
-}
-
-impl From<DiffBase> for diff_hunk_api::Base {
-    fn from(value: DiffBase) -> Self {
-        match value {
-            DiffBase::BranchName(branch_name) => diff_hunk_api::Base::BaseBranchName(branch_name),
-            DiffBase::HeadlessCommitSha(sha) => diff_hunk_api::Base::BaseHeadlessCommitSha(sha),
-            DiffBase::UncommittedChanges =>
-            {
-                #[warn(clippy::unit_arg)]
-                diff_hunk_api::Base::UncommittedChanges(())
-            }
-        }
-    }
 }
 
 /// A simplified diff hunk for use in DiffSet attachments
@@ -2183,21 +2145,6 @@ pub struct DiffSetHunk {
     pub diff_content: String,
     pub lines_added: u32,
     pub lines_removed: u32,
-}
-
-impl DiffSetHunk {
-    pub fn convert_to_api(self, file_path: String) -> warp_multi_agent_api::diff_set::DiffHunk {
-        warp_multi_agent_api::diff_set::DiffHunk {
-            file_path,
-            line_range: Some(warp_multi_agent_api::FileContentLineRange {
-                start: self.line_range.start.as_usize() as u32,
-                end: self.line_range.end.as_usize() as u32,
-            }),
-            diff_content: self.diff_content,
-            lines_added: self.lines_added,
-            lines_removed: self.lines_removed,
-        }
-    }
 }
 
 #[derive(Clone, Debug, PartialEq, Eq, Serialize, Deserialize)]

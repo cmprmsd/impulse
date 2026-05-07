@@ -287,8 +287,19 @@ pub use warp_core::errors::{report_error, report_if_error};
 // resolve from inside the warp app crate.
 pub use warp_core::{
     safe_debug, safe_error, safe_info, safe_warn, send_telemetry_from_app_ctx,
-    send_telemetry_from_ctx, send_telemetry_on_executor, send_telemetry_sync_from_app_ctx,
+    send_telemetry_from_ctx,
 };
+
+// `send_telemetry_on_executor` / `send_telemetry_sync_from_app_ctx` aren't in
+// warp_core; provide local no-op stubs so `crate::*` and `send_*!()` resolve.
+#[macro_export]
+macro_rules! send_telemetry_on_executor {
+    ($($arg:tt)*) => { () };
+}
+#[macro_export]
+macro_rules! send_telemetry_sync_from_app_ctx {
+    ($($arg:tt)*) => { () };
+}
 
 #[cfg(feature = "plugin_host")]
 pub use plugin::{run_plugin_host, PLUGIN_HOST_FLAG};
