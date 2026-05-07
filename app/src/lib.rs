@@ -107,6 +107,23 @@ pub mod remote_server {
         }
     }
 }
+pub mod workspaces {
+    pub mod user_workspaces {
+        pub use crate::legacy_stubs::{UserWorkspaces, UserWorkspacesEvent};
+    }
+    pub mod update_manager {
+        pub use crate::legacy_stubs::TeamUpdateManager;
+    }
+    pub mod team {
+        pub use crate::legacy_stubs::Team;
+    }
+    pub mod team_tester {
+        pub use crate::legacy_stubs::TeamTesterStatus;
+    }
+    pub mod workspace {
+        pub use crate::legacy_stubs::{CustomerType, Workspace};
+    }
+}
 pub mod server_id_traits {}
 mod autoupdate;
 mod banner;

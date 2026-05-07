@@ -26,7 +26,7 @@ use crate::terminal::shared_session::SharedSessionStatus;
 use crate::view_components::compactible_action_button::{
     CompactibleActionButton, RenderCompactibleActionButton, SMALL_SIZE_SWITCH_THRESHOLD,
 };
-use crate::AIAgentTodoList;
+use ;
 
 #[allow(unused_imports)]
 use std::path::{Component, Path, PathBuf};

@@ -305,6 +305,24 @@ pub enum OperationSuccessType {
 #[derive(Debug, Clone, Default)]
 pub struct UserWorkspaces;
 
+#[derive(Debug, Clone)]
+pub enum UserWorkspacesEvent {
+    Updated,
+}
+
+#[derive(Debug, Clone, Default)]
+pub struct Team;
+
+#[derive(Debug, Clone, Default)]
+pub struct Workspace;
+
+#[derive(Debug, Clone, Default)]
+pub enum CustomerType {
+    #[default]
+    Personal,
+    Team,
+}
+
 #[derive(Debug, Clone, Default)]
 pub struct WorkspaceMetadata;
 
