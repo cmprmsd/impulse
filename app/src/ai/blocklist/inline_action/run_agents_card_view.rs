@@ -3,6 +3,7 @@
 //! Each card is a `View` keyed by `AIAgentActionId`, embedded by
 //! `AIBlock` via `ChildView`. Keybindings and Accept dispatch live on
 //! the view; only `RejectRequested` flows back to the parent.
+use warpui::keymap::macros::*;
 use ai::agent::action::{RunAgentsAgentRunConfig, RunAgentsExecutionMode, RunAgentsRequest};
 use ai::agent::action_result::{RunAgentsAgentOutcomeKind, RunAgentsResult};
 use ai::agent::orchestration_config::{

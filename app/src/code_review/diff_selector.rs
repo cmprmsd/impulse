@@ -1,5 +1,6 @@
 //! Trigger button + [`CodeReviewDiffMenu`] overlay for picking the diff
 //! target in the code review header.
+use warpui::keymap::macros::*;
 use pathfinder_geometry::vector::vec2f;
 use warp_core::ui::theme::Fill;
 use warpui::{

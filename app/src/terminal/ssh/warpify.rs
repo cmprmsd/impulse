@@ -1,3 +1,4 @@
+use warpui::keymap::macros::*;
 use asset_macro::bundled_asset;
 use markdown_parser::{FormattedText, FormattedTextFragment, FormattedTextLine};
 use warp_core::ui::theme::WarpTheme;

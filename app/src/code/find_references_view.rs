@@ -3,6 +3,7 @@
 //! This module provides a hover card that shows all references to a symbol
 //! as a flat list with file info, line numbers, and syntax-highlighted code snippets.
 
+use warpui::keymap::macros::*;
 use std::{collections::HashMap, path::PathBuf};
 
 use lsp::ReferenceLocation;

@@ -1,3 +1,4 @@
+use warpui::keymap::macros::*;
 use itertools::Itertools;
 use warp_core::ui::theme::Fill;
 

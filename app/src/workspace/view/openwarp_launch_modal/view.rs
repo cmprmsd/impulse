@@ -1,3 +1,4 @@
+use warpui::keymap::macros::*;
 use markdown_parser::{
     FormattedText, FormattedTextFragment, FormattedTextLine, FormattedTextStyles, Hyperlink,
 };

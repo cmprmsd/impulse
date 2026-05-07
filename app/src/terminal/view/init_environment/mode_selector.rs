@@ -1,3 +1,4 @@
+use warpui::keymap::macros::*;
 use crate::appearance::Appearance;
 use crate::ui_components::icons::Icon;
 use pathfinder_color::ColorU;

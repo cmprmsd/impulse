@@ -1,3 +1,4 @@
+use warpui::keymap::macros::*;
 use crate::{
     ai::agent::SuggestedAgentModeWorkflow,
     modal::{Modal, ModalEvent},

@@ -1,3 +1,4 @@
+use warpui::keymap::macros::*;
 use super::{
     flags,
     settings_page::{

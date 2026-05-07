@@ -1,3 +1,4 @@
+use warpui::keymap::macros::*;
 use std::{collections::HashSet, sync::Arc, time::Duration};
 use crate::legacy_stubs::{AIConversationId, TaskId};
 

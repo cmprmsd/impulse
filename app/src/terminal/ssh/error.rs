@@ -1,3 +1,4 @@
+use warpui::keymap::macros::*;
 use crate::appearance::Appearance;
 use crate::terminal::model::ansi::WarpificationUnavailableReason;
 use crate::terminal::warpify;

@@ -1,3 +1,4 @@
+use warpui::keymap::macros::*;
 use crate::report_if_error;
 use crate::legacy_stubs::{PaletteSource};
 use crate::legacy_stubs::{AIConversationId, AgentViewController};

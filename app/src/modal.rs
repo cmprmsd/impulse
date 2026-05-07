@@ -1,3 +1,4 @@
+use warpui::keymap::macros::*;
 use crate::ui_components::blended_colors;
 use crate::{appearance::Appearance, themes::theme::Fill, ui_components::icons};
 use pathfinder_geometry::vector::vec2f;

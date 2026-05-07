@@ -1,3 +1,4 @@
+use warpui::keymap::macros::*;
 use std::{
     mem,
     path::{Path, PathBuf},

@@ -9,6 +9,7 @@
 //! + confirm async, extend `GitDialogMode`, add the per-mode action and
 //! outcome variant, and wire up dispatch.
 
+use warpui::keymap::macros::*;
 use std::path::PathBuf;
 
 use pathfinder_geometry::vector::vec2f;

@@ -1,3 +1,4 @@
+use warpui::keymap::macros::*;
 use parking_lot::{FairMutex, RwLock};
 use crate::legacy_stubs::{AIConversationId, TaskId};
 use pathfinder_color::ColorU;

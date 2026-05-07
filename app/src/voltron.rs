@@ -13,6 +13,7 @@
 //!
 //!
 
+use warpui::keymap::macros::*;
 use crate::appearance::Appearance;
 use crate::editor::EditorView;
 use crate::editor::{

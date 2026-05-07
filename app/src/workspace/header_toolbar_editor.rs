@@ -1,3 +1,4 @@
+use warpui::keymap::macros::*;
 use warpui::keymap::FixedBinding;
 
 use warpui::{AppContext, Element, Entity, SingletonEntity, TypedActionView, View, ViewContext};

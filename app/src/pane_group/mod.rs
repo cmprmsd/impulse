@@ -7,6 +7,7 @@
 // use crate::ai::ai_document_view::AIDocumentView;  // unresolved (cloud detach)
 // use crate::ai::ambient_agents::AmbientAgentTaskId;  // unresolved (cloud detach)
 // use crate::ai::blocklist::agent_view::AgentViewEntryOrigin;  // unresolved (cloud detach)
+use warpui::keymap::macros::*;
 use crate::ai::blocklist::history_model::CloudConversationData;
 use crate::ai::blocklist::inline_action::code_diff_view::CodeDiffView;
 use crate::ai::blocklist::suggested_agent_mode_workflow_modal::SuggestedAgentModeWorkflowAndId;

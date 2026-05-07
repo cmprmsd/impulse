@@ -1,3 +1,4 @@
+use warpui::keymap::macros::*;
 use warp_core::bundled_asset;
 use std::rc::Rc;
 

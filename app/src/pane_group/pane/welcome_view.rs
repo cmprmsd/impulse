@@ -1,3 +1,4 @@
+use warpui::keymap::macros::*;
 use std::collections::HashMap;
 use std::path::PathBuf;
 use std::sync::Arc;

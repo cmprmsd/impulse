@@ -1,3 +1,4 @@
+use warpui::keymap::macros::*;
 use crate::{
     appearance::Appearance,
     editor::{EditorView, Event as EditorEvent, SingleLineEditorOptions, TextOptions},

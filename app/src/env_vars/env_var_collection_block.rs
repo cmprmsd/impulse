@@ -1,3 +1,4 @@
+use warpui::keymap::macros::*;
 use crate::{
     ai::agent::icons::{yellow_running_icon, yellow_stop_icon},
     view_components::compactible_action_button::{

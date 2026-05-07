@@ -1,3 +1,4 @@
+use warpui::keymap::macros::*;
 use pathfinder_geometry::vector::vec2f;
 use crate::legacy_stubs::{AIConversationId};
 use warp_core::ui::{color::coloru_with_opacity, theme::Fill};

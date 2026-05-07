@@ -1,3 +1,4 @@
+use warpui::keymap::macros::*;
 use crate::send_telemetry_sync_from_ctx;
 mod action;
 mod block_banner;

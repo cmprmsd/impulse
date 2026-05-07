@@ -1,3 +1,4 @@
+use warpui::keymap::macros::*;
 use crate::legacy_stubs::{AgentModeEntrypoint, PaletteSource};
 mod action;
 mod active_session;

@@ -1,3 +1,4 @@
+use warpui::keymap::macros::*;
 #[cfg(target_family = "wasm")]
 use crate::uri::web_intent_parser::open_url_on_desktop;
 use crate::{

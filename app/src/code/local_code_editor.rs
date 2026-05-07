@@ -2,6 +2,7 @@
 /// and displaying them in a code editor.
 /// It also handles applying an optional diff to the file content that will be applied
 /// when the file is loaded.
+use warpui::keymap::macros::*;
 use std::{
     ops::Range,
     path::{Path, PathBuf},

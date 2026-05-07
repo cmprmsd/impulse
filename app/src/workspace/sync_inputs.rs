@@ -1,3 +1,4 @@
+use warpui::keymap::macros::*;
 use std::collections::{HashMap, HashSet};
 
 use warpui::{keymap::EditableBinding, AppContext, Entity, EntityId, SingletonEntity, WindowId};
