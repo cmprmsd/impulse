@@ -27,6 +27,7 @@ use crate::{
     },
 
 };
+use crate::workspace::ToastStack;
 /// Describes where an MCP install request originated.
 ///
 /// Used to decide whether an install request is allowed to bypass the

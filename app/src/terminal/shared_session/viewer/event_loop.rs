@@ -17,6 +17,7 @@ use crate::terminal::shared_session::{decode_scrollback, SharedSessionStatus};
 use crate::terminal::{TerminalModel, TerminalView};
 
 use std::collections::HashMap;
+use crate::legacy_stubs::{BlocklistAIHistoryModel};
 
 /// If we end up buffering more than this many events,
 /// this is an indication that we're too far ahead and

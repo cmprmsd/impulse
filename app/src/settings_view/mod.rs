@@ -60,6 +60,9 @@ use warpui::{Action, AppContext, Entity, ModelHandle, SingletonEntity, TypedActi
 use warpui::fonts::{Properties, Weight};
 use warpui::keymap::{FixedBinding};
 use crate::legacy_stubs::{AISettings, ServerApiProvider};
+use crate::pane_group::pane::view::PaneHeaderCustomAction;
+use crate::GlobalResourceHandlesProvider;
+use crate::workspace::WorkspaceAction;
 
 mod about_page;
 mod admin_actions;

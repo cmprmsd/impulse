@@ -10,6 +10,7 @@ use crate::{
 
 use super::rich_content::RichContentMetadata;
 use crate::legacy_stubs::{AuthStateProvider};
+use crate::terminal::view::TerminalView;
 
 impl TerminalView {
     pub(super) fn pending_user_query_conversation_id(&self) -> Option<AIConversationId> {

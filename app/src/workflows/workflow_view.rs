@@ -111,6 +111,8 @@ use super::{
 #[cfg(target_family = "wasm")]
 use crate::uri::web_intent_parser::open_url_on_desktop;
 use crate::legacy_stubs::{UserWorkspaces};
+use crate::workspace::ToastStack;
+use crate::workspace::WorkspaceAction;
 
 mod alias_argument_selector;
 mod alias_bar;

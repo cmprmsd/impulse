@@ -2,6 +2,7 @@ use warp_core::features::FeatureFlag;
 use warpui::{AppContext, EntityId, SingletonEntity};
 
 use crate::legacy_stubs::{ServerApiProvider};
+use crate::legacy_stubs::{BlocklistAIHistoryModel};
 
 /// Delete a conversation from the blocklist, local storage, and the cloud.
 pub fn delete_conversation(

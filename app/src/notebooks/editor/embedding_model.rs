@@ -34,6 +34,8 @@ use super::{
 };
 use warpui::{AppContext, Element, Entity, ModelContext, ModelHandle};
 use warpui::platform::{Cursor};
+use crate::workflows::CloudWorkflow;
+use crate::pane_group::pane::view::PaneHeaderCustomAction;
 
 #[derive(Default)]
 struct MouseStateHandles {

@@ -24,6 +24,11 @@ use crate::{
     },
 };
 use warpui::{AppContext, Element, Entity, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
+use crate::pane_group::pane::view::PaneHeaderCustomAction;
+use crate::terminal::view::TerminalView;
+use crate::workspace::ToastStack;
+use crate::workspace::Workspace;
+use crate::workspace::WorkspaceAction;
 
 pub fn init(app: &mut AppContext) {
     use warpui::keymap::macros::*;

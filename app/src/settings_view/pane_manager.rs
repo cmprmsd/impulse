@@ -6,6 +6,7 @@ use std::collections::HashMap;
 use warpui::{Entity, EntityId, ModelContext, SingletonEntity, ViewHandle, WindowId};
 
 use super::SettingsView;
+use crate::legacy_stubs::{PaneViewLocator};
 struct SettingsPaneData {
     locator: Option<PaneViewLocator>,
     settings_view: ViewHandle<SettingsView>,

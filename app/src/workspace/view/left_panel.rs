@@ -54,6 +54,7 @@ use warpui::{WeakViewHandle};
 use warpui::platform::{Cursor};
 use warpui::ui_components::components::{Coords};
 use crate::legacy_stubs::{TelemetryEvent};
+use crate::workspace::WorkspaceAction;
 
 #[derive(Default)]
 struct MouseStateHandles {

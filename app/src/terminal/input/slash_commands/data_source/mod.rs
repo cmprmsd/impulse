@@ -1,4 +1,5 @@
 use crate::legacy_stubs::{AISettings, UserWorkspaces};
+use crate::terminal::model::session::active_session::ActiveSession;
 mod saved_prompts;
 mod zero_state;
 

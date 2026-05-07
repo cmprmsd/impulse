@@ -8,6 +8,7 @@ use crate::terminal::shell::ShellType;
 use super::{
     context_chip::{GeneratorContext, ShellCommand, ShellCommandGenerator},
 };
+use crate::legacy_stubs::{ChipValue};
 
 #[cfg(test)]
 #[path = "builtins_tests.rs"]

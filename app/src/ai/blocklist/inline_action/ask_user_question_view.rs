@@ -55,6 +55,7 @@ use crate::{
     },
 };
 use warpui::{AppContext, Element, Entity, FocusContext, ModelHandle, Pixels, TypedActionView, View, ViewContext, ViewHandle};
+use crate::appearance::Appearance;
 
 const ASK_USER_QUESTION_ACTIVE: &str = "AskUserQuestionActive";
 

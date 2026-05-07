@@ -22,6 +22,7 @@ use crate::ui_components::icons::Icon;
 use warpui::{AppContext, Element, Entity, FocusContext, TypedActionView, View, ViewContext, ViewHandle};
 use warpui::platform::{Cursor};
 use crate::legacy_stubs::{CloudModel, Revision, SyncId};
+use crate::legacy_stubs::{GenericStringObjectId};
 
 const RULE_NAME_PLACEHOLDER_TEXT: &str = "e.g. Rust rules";
 const RULE_DESCRIPTION_PLACEHOLDER_TEXT: &str = "e.g. Never use unwrap in Rust";

@@ -51,6 +51,8 @@ use super::{
 
 };
 use crate::legacy_stubs::{AISettings, AuthStateProvider, ClientId, CloudModel, CloudModelEvent, ServerId, Space, UserWorkspaces};
+use crate::GlobalResourceHandlesProvider;
+use crate::workspace::ToastStack;
 /// Controls the behavior of `spawn_server_impl`.
 enum SpawnMode {
     /// Initial spawn - clears logs and sends telemetry.

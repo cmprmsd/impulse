@@ -19,6 +19,7 @@
 //! ```
 
 use crate::legacy_stubs::{CloudModel};
+use crate::legacy_stubs::{BlocklistAIHistoryModel};
 
 pub(super) mod common;
 pub use common::FindContext;

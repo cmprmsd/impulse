@@ -33,6 +33,7 @@ use warpui::{
 };
 use warpui::{AppContext, Entity, TypedActionView, View, ViewContext, ViewHandle};
 use crate::legacy_stubs::{AuthStateProvider, SettingsSection};
+use crate::legacy_stubs::{ApiKeyUid};
 
 const MODAL_WIDTH: f32 = 460.;
 const MODAL_HEIGHT: f32 = 320.;

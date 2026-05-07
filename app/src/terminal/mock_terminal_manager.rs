@@ -13,6 +13,8 @@ use crate::{
 use super::{
     event_listener::ChannelEventListener, model::session::Sessions,
 };
+use crate::terminal::TerminalModel;
+use crate::terminal::view::TerminalView;
 
 pub struct MockTerminalManager {
     model: Arc<FairMutex<TerminalModel>>,

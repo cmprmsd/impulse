@@ -14,6 +14,7 @@ use crate::{
 use std::collections::{hash_map::Entry, HashMap};
 use warpui::{Entity, EntityId, ModelContext, SingletonEntity};
 use warpui::{WindowId};
+use crate::legacy_stubs::{PaneViewLocator};
 
 pub struct WorkflowManager {
     panes_by_hashed_id: HashMap<String, WorkflowPaneData>,

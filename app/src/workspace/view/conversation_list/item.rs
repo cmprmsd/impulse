@@ -25,6 +25,7 @@ use warpui::platform::Cursor;
 use warpui::text_layout::TextStyle;
 use warpui::ui_components::components::{UiComponent, UiComponentStyles};
 use warpui::{AppContext, SingletonEntity, ViewHandle};
+use crate::legacy_stubs::{AgentConversationEntryId};
 
 /// Maximum length for tooltip text before truncation
 const MAX_TOOLTIP_LENGTH: usize = 80;

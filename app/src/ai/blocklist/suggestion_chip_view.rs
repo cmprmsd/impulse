@@ -20,6 +20,7 @@ use warpui::{
 use super::suggested_agent_mode_workflow_modal::SuggestedAgentModeWorkflowAndId;
 use super::suggested_rule_modal::SuggestedRuleAndId;
 use crate::legacy_stubs::{CloudModel, CloudModelEvent, ObjectOperation, OperationSuccessType, SyncId, UpdateManagerEvent};
+use crate::legacy_stubs::{GenericStringObjectId};
 
 const MAX_CHIP_WIDTH: f32 = 316.;
 

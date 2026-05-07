@@ -53,6 +53,9 @@ use warpui::{
 };
 use warpui::{AppContext, Entity, EventContext, FocusContext, Pixels, TypedActionView, View, ViewContext, ViewHandle};
 use crate::legacy_stubs::{UserWorkspaces};
+use warpui::{Event};
+use crate::pane_group::pane::view::PaneHeaderCustomAction;
+use crate::workspace::WorkspaceAction;
 
 const PADDING: f32 = 30.;
 const INNER_MARGIN: f32 = 20.;

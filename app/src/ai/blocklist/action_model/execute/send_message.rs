@@ -23,6 +23,7 @@ use warp_core::send_telemetry_from_ctx;
 
 use super::{ActionExecution, AnyActionExecution, ExecuteActionInput, PreprocessActionInput};
 use crate::legacy_stubs::{AmbientAgentTaskId, ServerApiProvider};
+use crate::legacy_stubs::{BlocklistAIHistoryModel};
 
 #[cfg(not(target_family = "wasm"))]
 const SEND_AGENT_MESSAGE_TIMEOUT: Duration = Duration::from_secs(15);

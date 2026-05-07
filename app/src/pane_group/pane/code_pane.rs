@@ -12,6 +12,7 @@ use crate::{
 use super::{
     DetachType, PaneConfiguration, PaneContent, PaneId, PaneView, ShareableLink, ShareableLinkError,
 };
+use crate::pane_group::PaneGroup;
 
 pub struct CodePane {
     view: ViewHandle<PaneView<CodeView>>,

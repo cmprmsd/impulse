@@ -44,6 +44,7 @@ use warpui::{
     ViewContext, ViewHandle, WindowId,
 };
 use crate::legacy_stubs::{AgentConversationEntryId, SharingDialogSource};
+use crate::legacy_stubs::{BlocklistAIHistoryModel};
 
 const VIEW_ALL_LABEL: &str = "View all";
 /// Maximum number of past items to show before the user toggles "view all".

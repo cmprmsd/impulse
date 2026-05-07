@@ -23,6 +23,7 @@ use crate::{
 use super::{
     read_local_file_context, ActionExecution, AnyActionExecution, ExecuteActionInput,
 };
+use crate::terminal::model::session::active_session::ActiveSession;
 
 pub struct SearchCodebaseExecutor {
     active_session: ModelHandle<ActiveSession>,

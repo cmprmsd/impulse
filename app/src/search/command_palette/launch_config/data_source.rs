@@ -7,6 +7,7 @@ use fuzzy_match::match_indices_case_insensitive;
 use std::collections::HashMap;
 use std::sync::Arc;
 use warpui::{AppContext, Entity, ModelContext, SingletonEntity};
+use crate::legacy_stubs::{LaunchConfig};
 
 /// Datasource that searches against `LaunchConfig`s.
 pub struct DataSource {

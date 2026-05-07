@@ -13,6 +13,7 @@ use crate::{
 
 };
 use crate::legacy_stubs::{CloseTarget, TelemetryEvent};
+use crate::workspace::Workspace;
 /// Scope of what's being quit/closed.
 #[derive(Clone)]
 enum QuitScope<'a> {

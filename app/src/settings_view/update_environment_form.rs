@@ -46,6 +46,7 @@ use warpui::keymap::{FixedBinding};
 use warpui::platform::{Cursor};
 use warpui::ui_components::components::{Coords};
 use crate::legacy_stubs::{ServerApiProvider, UserWorkspaces};
+use crate::legacy_stubs::{ChannelState};
 
 const SUBMIT_BUTTON_FOCUSED: &str = "SubmitButtonFocused";
 

@@ -107,6 +107,8 @@ use super::{
 };
 use warpui::{AppContext, BlurContext, Element, Entity, FocusContext, ModelHandle, TypedActionView, View, ViewContext, ViewHandle, WindowId};
 use crate::legacy_stubs::{UserWorkspaces};
+use crate::pane_group::pane::view::PaneHeaderCustomAction;
+use crate::workspace::ToastStack;
 
 mod details_bar;
 

@@ -12,6 +12,7 @@ use walkdir::{DirEntry, WalkDir};
 use crate::tab_configs::{TabConfig, TabConfigError};
 use crate::themes::theme::{ThemeKind, WarpTheme, WarpThemeConfig};
 use crate::workflows::workflow::Workflow;
+use crate::legacy_stubs::{LaunchConfig};
 
 const CONFIG_FILE_SUFFIXES: &[&str] = &[".yaml", ".yml"];
 const TOML_CONFIG_FILE_SUFFIX: &str = ".toml";

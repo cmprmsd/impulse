@@ -9,6 +9,7 @@ use crate::ai::{
 };
 
 use super::{ActionExecution, AnyActionExecution, ExecuteActionInput, PreprocessActionInput};
+use crate::ai::document::ai_document_model::AIDocumentModel;
 
 pub struct ReadDocumentsExecutor;
 

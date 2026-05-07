@@ -51,6 +51,7 @@ use super::{
     ASK_AI_ASSISTANT_TEXT, PROMPT_CHARACTER_LIMIT,
 };
 use crate::legacy_stubs::{ServerApi, TelemetryEvent, UserWorkspaces};
+use crate::legacy_stubs::{AIClient};
 
 const INFO_ICON_SVG_PATH: &str = "bundled/svg/info.svg";
 pub const HEXAGON_ALERT_SVG_PATH: &str = "bundled/svg/alert-hexagon.svg";

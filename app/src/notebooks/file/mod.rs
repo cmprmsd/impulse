@@ -63,6 +63,7 @@ use warp_util::file::FileId;
 
 pub use crate::util::openable_file_type::is_markdown_file;
 use warpui::{AppContext, Element, Entity, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
+use crate::terminal::model::session::active_session::ActiveSession;
 
 /// Display mode for markdown files shown via the header segmented control.
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]

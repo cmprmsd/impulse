@@ -45,6 +45,7 @@ use warpui::keymap::{FixedBinding};
 use warpui::platform::{Cursor};
 use warpui::ui_components::components::{Coords};
 use crate::legacy_stubs::{UserWorkspaces};
+use crate::workspace::ToastStack;
 
 pub(crate) mod commit;
 pub(crate) mod pr;

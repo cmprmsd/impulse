@@ -21,6 +21,7 @@ use crate::{
     },
 };
 use warpui::{AppContext, Element, ViewContext};
+use crate::appearance::Appearance;
 
 const VARIABLE_DIVIDER_HEIGHT: f32 = 2.;
 const SECTION_FONT_SIZE: f32 = 16.;

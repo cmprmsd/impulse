@@ -8,6 +8,7 @@ use warp_terminal::model::grid::{
 use crate::terminal::model::index::Point;
 
 use super::{grid_handler::GridHandler, CursorDirection, CursorState, Dimensions as _};
+use crate::legacy_stubs::{CellType};
 
 /// The set of possible grapheme cursor wrapping behaviors.
 #[derive(PartialEq)]

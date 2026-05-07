@@ -15,6 +15,7 @@ use shell_words::quote as shell_quote;
 use uuid::Uuid;
 use warp_cli::agent::Harness;
 use crate::legacy_stubs::{AmbientAgentTaskId};
+use crate::legacy_stubs::{AIClient};
 
 #[derive(Clone)]
 pub(super) struct PreparedLocalHarnessLaunch {

@@ -15,6 +15,7 @@ use crate::{
 };
 
 use super::{ActionExecution, AnyActionExecution, ExecuteActionInput, PreprocessActionInput};
+use crate::terminal::model::session::active_session::ActiveSession;
 
 pub struct CreateDocumentsExecutor {
     active_session: ModelHandle<ActiveSession>,

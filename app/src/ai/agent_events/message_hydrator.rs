@@ -9,6 +9,7 @@ use warpui::r#async::Timer;
 
 use crate::ai::agent::ReceivedMessageInput;
 use crate::legacy_stubs::{AmbientAgentTaskId, ServerApi};
+use crate::legacy_stubs::{AIClient, AgentRunEvent};
 
 pub(crate) const DEFAULT_AGENT_MESSAGE_FETCH_TIMEOUT: Duration = Duration::from_secs(5);
 

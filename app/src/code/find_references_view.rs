@@ -35,6 +35,7 @@ use warp_editor::{
 use warpui::{AppContext, Element, Entity, TypedActionView, View, ViewContext, ViewHandle};
 use warpui::keymap::{FixedBinding};
 use warpui::platform::{Cursor};
+use warpui::elements::{Align};
 
 /// Maximum height for the find references card.
 pub const FIND_REFERENCES_CARD_MAX_HEIGHT: f32 = 300.;

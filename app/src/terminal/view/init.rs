@@ -34,6 +34,9 @@ use warpui::{
     units::IntoLines,
 };
 use warpui::{AppContext};
+use crate::pane_group::pane::view::PaneHeaderCustomAction;
+use crate::terminal::TerminalAction;
+use crate::terminal::view::TerminalView;
 
 pub const TOGGLE_BLOCK_FILTER_KEYBINDING: &str =
     "terminal:toggle_block_filter_on_selected_or_last_block";

@@ -22,6 +22,7 @@ use warpui::{
     AppContext, Element, Entity, SingletonEntity, TypedActionView, View, ViewContext,
 };
 use warpui::{BlurContext, FocusContext};
+use warpui::elements::{MouseStateHandle};
 
 pub const WHY_INSTALL_TMUX_URL: &str =
     "https://docs.warp.dev/terminal/warpify/ssh#why-do-i-need-tmux-on-the-remote-machine";

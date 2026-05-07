@@ -1,4 +1,6 @@
 use warpui::{AppContext, Element, EventContext, ModelHandle, Pixels};
+use warpui::{Event};
+use warpui::fonts::{FamilyId};
 mod gutter_button;
 pub use gutter_button::{AddAsContextButton, CommentButton, RevertHunkButton};
 

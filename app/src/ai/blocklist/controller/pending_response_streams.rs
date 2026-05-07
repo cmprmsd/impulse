@@ -11,6 +11,7 @@ use super::{
     response_stream::{ResponseStream, ResponseStreamId},
 };
 use crate::legacy_stubs::{BlocklistAIHistoryModel};
+use crate::ai::blocklist::BlocklistAIController;
 
 pub(super) struct PendingResponseStreams {
     streams: HashMap<ResponseStreamId, ModelHandle<ResponseStream>>,

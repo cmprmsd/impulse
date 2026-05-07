@@ -12,6 +12,7 @@ use crate::ai::{
 use crate::notebooks::post_process_notebook;
 
 use super::{ActionExecution, AnyActionExecution, ExecuteActionInput, PreprocessActionInput};
+use crate::ai::document::ai_document_model::AIDocumentModel;
 
 pub struct EditDocumentsExecutor;
 

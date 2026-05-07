@@ -37,6 +37,7 @@ use crate::{
 use git2::Repository as GitRepository;
 use warpui::{AppContext, Entity, TypedActionView, View, ViewContext, ViewHandle};
 use crate::legacy_stubs::{CodebaseIndexManager};
+use crate::workspace::ToastStack;
 
 #[cfg(all(feature = "local_fs", not(target_family = "wasm")))]
 

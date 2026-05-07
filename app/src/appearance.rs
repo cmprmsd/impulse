@@ -3,6 +3,7 @@ use warpui::{
     fonts::FamilyId, AddSingletonModel, AppContext, AssetProvider, Entity, ModelContext,
 };
 use warpui::{SingletonEntity};
+use crate::ASSETS;
 
 #[cfg(target_os = "macos")]
 mod macos_app_icon {

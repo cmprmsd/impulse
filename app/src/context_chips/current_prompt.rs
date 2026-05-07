@@ -50,6 +50,7 @@ use warpui::{
 };
 use warpui::{Entity, ModelAsRef, ModelContext, ModelHandle, SingletonEntity};
 use warpui::{AppContext, ViewHandle};
+use crate::legacy_stubs::{ChipValue, ContextChipKind};
 
 #[cfg(test)]
 #[path = "current_prompt_test.rs"]

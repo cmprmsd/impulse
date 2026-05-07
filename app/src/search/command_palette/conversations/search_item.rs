@@ -23,6 +23,7 @@ use warpui::fonts::{Properties, Weight};
 use warpui::ui_components::button::ButtonTooltipPosition;
 use warpui::ui_components::components::{UiComponent, UiComponentStyles};
 use warpui::{AppContext, Element, Gradient, SingletonEntity};
+use crate::legacy_stubs::{BlocklistAIHistoryModel};
 
 /// Information about which action to take once the conversation item is accepted.
 #[derive(Debug)]

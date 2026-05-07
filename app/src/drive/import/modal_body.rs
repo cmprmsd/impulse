@@ -29,6 +29,7 @@ use super::{
     },
 };
 use warpui::{AppContext, Element, Entity, ModelHandle, TypedActionView, View, ViewContext};
+use crate::workspace::ToastStack;
 
 const FILE_PICKER_BUTTON_WIDTH: f32 = 250.;
 const BUTTON_FONT_SIZE: f32 = 14.;

@@ -29,6 +29,7 @@ use crate::{
 
 use super::WithContentItemSpacing;
 use warpui::{AppContext, Element};
+use crate::appearance::Appearance;
 
 pub(super) fn render_todos(
     id: &MessageId,

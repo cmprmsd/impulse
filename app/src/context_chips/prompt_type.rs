@@ -14,6 +14,7 @@ use super::{
     current_prompt::CurrentPrompt, prompt_snapshot::PromptSnapshot, ChipResult, ChipValue,
 
 };
+use crate::legacy_stubs::{ContextChipKind};
 /// The type of warp prompt being used
 #[derive(Clone)]
 pub enum PromptType {

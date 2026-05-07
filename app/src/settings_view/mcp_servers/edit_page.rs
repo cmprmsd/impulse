@@ -56,6 +56,8 @@ use crate::{
 };
 use warpui::{AppContext, Element, Entity, TypedActionView, View, ViewContext, ViewHandle};
 use warpui::platform::{Cursor};
+use crate::GlobalResourceHandlesProvider;
+use crate::workspace::ToastStack;
 
 const DEFAULT_JSON_TEXT: &str = r#"{
     "": {

@@ -39,6 +39,7 @@ use warpui::{AppContext, Entity, FocusContext, ModelHandle, TypedActionView, Vie
 use warpui::fonts::{Weight};
 use warpui::keymap::{FixedBinding};
 use warpui::platform::{Cursor};
+use warpui::fonts::{FamilyId};
 
 // All units in px
 const THEME_CHOOSER_TITLE: &str = "Themes";

@@ -30,6 +30,7 @@ use warpui::{
     elements::{ConstrainedBox, Container, Text},
     AppContext, Element, SingletonEntity,
 };
+use crate::legacy_stubs::{AIClient};
 
 const OPEN_WARP_AI_ITEM_BODY_TEXT: &str = "Ask Warp AI for command suggestions";
 const TRANSLATE_WITH_WARP_AI_ITEM_BODY_TEXT: &str = "Translate into shell command using Warp AI";

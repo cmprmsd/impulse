@@ -42,6 +42,7 @@ use warpui::{
     },
 };
 use warpui::{AppContext, Element, Entity, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
+use crate::appearance::Appearance;
 
 const MODEL_MENU_WIDTH: f32 = 250.;
 

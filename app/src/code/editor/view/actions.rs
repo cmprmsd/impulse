@@ -37,6 +37,7 @@ use warpui::{
     units::Pixels,
     AppContext, TypedActionView, ViewContext, WeakViewHandle,
 };
+use crate::pane_group::pane::view::PaneHeaderCustomAction;
 
 /// Limit the keybindings that conflict with the Agent Mode embedded editor.
 const NON_EDITABLE_KEYMAP_CONTEXT: &str = "NonEditableKeymapContext";

@@ -1,4 +1,5 @@
 use crate::legacy_stubs::{BlocklistAIHistoryModel};
+use crate::terminal::model::session::active_session::ActiveSession;
 mod apply_diff_model;
 mod diff_application;
 mod telemetry;

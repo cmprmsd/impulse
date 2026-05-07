@@ -50,6 +50,7 @@ use warpui::text_layout::ClipConfig;
 use warpui::ui_components::components::{Coords, UiComponent, UiComponentStyles};
 use warpui::ui_components::text_input::TextInput;
 use warpui::{AppContext, SingletonEntity, ViewHandle};
+use crate::legacy_stubs::{LaunchConfig};
 
 pub const TAB_BAR_BORDER_HEIGHT: f32 = 1.0;
 const TAB_INDICATOR_HEIGHT: f32 = 14.0;

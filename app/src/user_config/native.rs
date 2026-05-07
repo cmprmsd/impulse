@@ -23,6 +23,7 @@ use super::util::{
 use super::{
     launch_configs_dir, tab_configs_dir, themes_dir, workflows_dir, WarpConfigUpdateEvent,
 };
+use crate::legacy_stubs::{LaunchConfig};
 
 impl super::WarpConfig {
     pub fn new(ctx: &mut ModelContext<Self>) -> Self {

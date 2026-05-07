@@ -1,4 +1,5 @@
 use crate::legacy_stubs::{AmbientAgentTaskId, AnonymousUserSignupEntrypoint, AuthManager, AuthState, AuthStateProvider, CloseTarget, CloudModel, CodebaseIndexManager, GenericStringObjectFormat, JsonObjectType, ObjectOperation, ObjectType, ObjectUid, OperationSuccessType, Owner, PaletteSource, RemoteServerManager, RemoteServerManagerEvent, ServerApi, ServerApiProvider, ServerId, SharingDialogSource, Space, SyncId, UpdateManager, UpdateManagerEvent, UserWorkspaces};
+use crate::legacy_stubs::{AIClient};
 mod build_plan_migration_modal;
 pub(crate) mod cloud_agent_capacity_modal;
 pub(crate) mod codex_modal;

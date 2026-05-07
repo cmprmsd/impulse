@@ -13,6 +13,7 @@ use crate::{
 };
 use crate::{editor::PropagateAndNoOpNavigationKeys, themes::theme::Fill};
 use warpui::{AppContext, Element, Entity, FocusContext, TypedActionView, View, ViewContext, ViewHandle};
+use warpui::fonts::{FamilyId};
 
 pub struct WordBlockEditorView {
     editor_view: ViewHandle<EditorView>,

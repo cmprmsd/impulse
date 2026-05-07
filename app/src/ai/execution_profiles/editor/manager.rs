@@ -5,6 +5,7 @@ use crate::{
     ai::execution_profiles::profiles::ClientProfileId,
     pane_group::{ExecutionProfileEditorPane, PaneContent},
 };
+use crate::legacy_stubs::{PaneViewLocator};
 
 /// Manages execution profile editor panes across different windows and profiles.
 ///

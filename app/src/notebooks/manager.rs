@@ -25,6 +25,7 @@ use crate::{
 
 use super::{notebook::NotebookView, CloudNotebook};
 use warpui::{WindowId};
+use crate::legacy_stubs::{PaneViewLocator};
 
 #[cfg(test)]
 #[path = "manager_tests.rs"]

@@ -14,6 +14,7 @@ use crate::appearance::Appearance;
 use crate::search::result_renderer::ItemHighlightState;
 use crate::themes::theme::Fill;
 use warpui::{Element};
+use crate::legacy_stubs::{LaunchConfig};
 
 impl LaunchConfig {
     /// Renders a [`LaunchConfig`] using a [`StylesProvider`]. Any character indices of the launch
