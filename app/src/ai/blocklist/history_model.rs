@@ -44,6 +44,8 @@ use crate::persistence::{database_file_path, establish_ro_connection};
 use super::controller::response_stream::ResponseStreamId;
 use super::persistence::{PersistedAIInput, PersistedAIInputType};
 use super::RequestInput;
+use warpui::{Action};
+use crate::legacy_stubs::{ServerApiProvider};
 
 mod conversation_loader;
 pub use conversation_loader::{

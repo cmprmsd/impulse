@@ -7,6 +7,7 @@ use futures::future::Either;
 use futures::StreamExt;
 use instant::Instant;
 use warpui::r#async::Timer;
+use crate::legacy_stubs::{ServerApi};
 
 
 pub(crate) const DEFAULT_AGENT_EVENT_RECONNECT_BACKOFF_STEPS: &[u64] = &[1, 2, 5, 10];

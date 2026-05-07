@@ -115,6 +115,7 @@ use {
     crate::terminal::model::terminal_model::BlockIndex,
     crate::terminal::session_settings::NotificationsMode, nix::sys::termios::LocalFlags,
 };
+use crate::legacy_stubs::{AuthState, AuthStateProvider, ServerApiProvider, TelemetryEvent};
 
 type PtyController = writeable_pty::PtyController<mio_channel::Sender<Message>>;
 type RemoteServerController =

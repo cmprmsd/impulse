@@ -10,6 +10,7 @@ use crate::terminal::input::prompts::{AcceptPrompt, PromptsMenuDataSource};
 use crate::terminal::input::suggestions_mode_model::{
     InputSuggestionsModeEvent, InputSuggestionsModeModel,
 };
+use crate::legacy_stubs::{SyncId};
 
 #[derive(Debug, Clone)]
 pub enum InlinePromptsMenuEvent {

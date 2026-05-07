@@ -12,6 +12,7 @@ use crate::{
     appearance::Appearance,
     ui_components::dialog::{dialog_styles, Dialog},
 };
+use warpui::{AppContext, Element, Entity, TypedActionView, View, ViewContext};
 
 const CANCEL_TEXT: &str = "Cancel";
 

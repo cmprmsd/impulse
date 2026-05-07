@@ -13,6 +13,7 @@ use crate::{
         AIIdentifiers, CancellationReason,
     },
 };
+use crate::legacy_stubs::{ServerApiProvider};
 
 #[derive(Debug, Clone, PartialEq, Eq, Hash)]
 pub struct ResponseStreamId(String);

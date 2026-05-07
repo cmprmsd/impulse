@@ -10,6 +10,7 @@ use crate::ai::llms::LLMPreferences;
 use crate::pane_group::{PaneGroup, PaneId};
 use crate::terminal::TerminalView;
 use crate::AIExecutionProfilesModel;
+use crate::legacy_stubs::{AmbientAgentTaskId};
 
 pub(crate) struct HiddenChildAgentConversation {
     pub terminal_view: ViewHandle<TerminalView>,

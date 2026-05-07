@@ -18,6 +18,7 @@ use crate::terminal::input::inline_menu::{
 };
 use crate::terminal::input::message_bar::Message;
 use crate::workflows::CloudWorkflow;
+use crate::legacy_stubs::{CloudModel, SyncId};
 
 #[derive(Clone, Debug)]
 pub struct AcceptPrompt {

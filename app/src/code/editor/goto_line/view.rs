@@ -1,5 +1,7 @@
 #![cfg_attr(target_family = "wasm", allow(dead_code, unused_imports))]
 
+use warpui::{AppContext, Element, Entity, FocusContext, TypedActionView, View, ViewContext, ViewHandle};
+
 use crate::appearance::Appearance;
 use crate::code::editor::find::view::{FIND_BAR_PADDING, FIND_EDITOR_BORDER_RADIUS};
 use crate::editor::{

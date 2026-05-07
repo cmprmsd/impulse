@@ -11,6 +11,7 @@ use crate::search::data_source::{Query, QueryResult};
 use crate::search::mixer::{BoxFuture, DataSourceRunErrorWrapper};
 
 use super::NotebookSearchItem;
+use crate::legacy_stubs::{CloudModel, SyncId};
 
 pub(crate) struct NotebookMatchCandidate {
     id: SyncId,

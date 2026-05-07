@@ -1,4 +1,6 @@
 #![cfg_attr(target_family = "wasm", allow(dead_code, unused_imports))]
+
+use warpui::{AppContext, Element, Entity, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
 // Adding this file level gate as some of the code around editability is not used in WASM yet.
 
 use warp_core::ui::{appearance::Appearance, theme::Fill};

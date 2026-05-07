@@ -11,6 +11,9 @@ use warpui::{
         MouseStateHandle, ParentElement as _, Radius, Text,
     },
 };
+use warpui::{AppContext, Element, Entity, FocusContext, TypedActionView, View, ViewContext, ViewHandle};
+use warpui::fonts::{Properties, Weight};
+use warpui::platform::{Cursor};
 
 const ICON_MARGIN_LEFT: f32 = 12.;
 const ICON_MARGIN_RIGHT: f32 = 8.;

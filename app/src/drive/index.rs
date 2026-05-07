@@ -101,6 +101,7 @@ use warpui::{
     AppContext, BlurContext, Element, Entity, ModelHandle, SingletonEntity, TypedActionView,
     UpdateView, View, ViewContext, ViewHandle, WindowId,
 };
+use crate::legacy_stubs::{CloudObjectTypeAndId, DriveObjectType};
 
 const WARP_DRIVE_TITLE: &str = "Warp Drive";
 

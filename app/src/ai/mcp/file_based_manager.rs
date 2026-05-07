@@ -15,6 +15,7 @@ use crate::{
     },
 
 };
+use crate::legacy_stubs::{AISettings};
 /// Singleton model to manage file-based MCP servers.
 #[derive(Default)]
 pub struct FileBasedMCPManager {

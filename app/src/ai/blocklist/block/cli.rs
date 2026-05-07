@@ -107,6 +107,8 @@ use super::{
     },
     EmbeddedCodeEditorView, SecretRedactionState,
 };
+use warpui::{AppContext, Element, Entity, EntityId, Keystroke, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
+use crate::legacy_stubs::{BlocklistAIHistoryModel, TelemetryEvent};
 const MENU_WIDTH: f32 = 200.0;
 const MAX_HEIGHT: f32 = 320.0;
 const AVATAR_RIGHT_MARGIN: f32 = 8.;

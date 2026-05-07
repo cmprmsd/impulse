@@ -12,6 +12,7 @@ use crate::{
     report_if_error, send_telemetry_from_app_ctx,
 
 };
+use crate::legacy_stubs::{CloseTarget, TelemetryEvent};
 /// Scope of what's being quit/closed.
 #[derive(Clone)]
 enum QuitScope<'a> {

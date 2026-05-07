@@ -1,5 +1,6 @@
 use crate::code_review::diff_state::DiffMode;
 use crate::search::mixer::SearchMixer;
+use crate::legacy_stubs::{ObjectType};
 
 pub type AIContextMenuMixer = SearchMixer<AIContextMenuSearchableAction>;
 

@@ -91,6 +91,7 @@ use warpui::{
     AppContext, Element, Entity, TypedActionView, View, ViewContext, ViewHandle, WindowId,
 };
 use warpui::{FocusContext, NextNewWindowsHasThisWindowsBoundsUponClose};
+use crate::legacy_stubs::{AuthManager, AuthState, AuthStateProvider, CloudModel, GenericStringObjectFormat, JsonObjectType, ObjectType, ServerApiProvider, SyncId, TeamTesterStatus, TeamUpdateManager, UpdateManager, UserWorkspaces};
 
 #[cfg(target_family = "wasm")]
 

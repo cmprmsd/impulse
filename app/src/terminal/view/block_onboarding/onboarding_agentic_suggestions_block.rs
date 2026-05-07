@@ -35,6 +35,8 @@ use warpui::{
     },
 };
 use warpui::{AppContext, Element, Entity, ModelHandle, View, ViewContext};
+use warpui::platform::{Cursor};
+use crate::legacy_stubs::{BlocklistAIHistoryModel};
 
 const ONBOARDING_BOX_WIDTH: f32 = 210.;
 const ONBOARDING_BOX_HEIGHT: f32 = 140.;

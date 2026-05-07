@@ -10,6 +10,7 @@ use crate::search::data_source::{Query, QueryResult};
 use crate::search::mixer::{DataSourceRunErrorWrapper, SyncDataSource};
 
 use super::workflow_search_item::WorkflowSearchItem;
+use crate::legacy_stubs::{CloudModel, Space};
 
 pub struct CloudWorkflowsDataSource {
     /// The space containing the object we are embedding into.

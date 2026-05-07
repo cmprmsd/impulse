@@ -8,6 +8,7 @@ use warpui::{
     elements::{Highlight, Text},
     AppContext, SingletonEntity,
 };
+use crate::legacy_stubs::{SyncId};
 
 #[derive(Clone, Debug)]
 /// Result of fuzzy matching a [`Notebook`].

@@ -1,4 +1,5 @@
 use warpui::{AppContext, Element, Entity, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
+use warpui::elements::{ChildView};
 pub mod header;
 pub mod header_content;
 

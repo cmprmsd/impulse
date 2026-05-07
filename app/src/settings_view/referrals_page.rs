@@ -35,6 +35,7 @@ use warpui::{
     },
 };
 use warpui::{AppContext, Entity, EventContext, FocusContext, TypedActionView, View, ViewContext, ViewHandle};
+use crate::legacy_stubs::{SettingsSection};
 
 const HEADER_FONT_SIZE: f32 = 18.;
 const HEADER_MARGIN_BOTTOM: f32 = 32.;

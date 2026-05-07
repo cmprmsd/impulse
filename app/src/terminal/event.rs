@@ -20,6 +20,7 @@ use super::model::ansi::{FinishUpdateValue, WarpificationUnavailableReason};
 use super::model::block::BlockId;
 use super::model::session::{SessionId, SessionInfo};
 use super::model::terminal_model::{BlockIndex, ExitReason, TmuxInstallationState};
+use crate::legacy_stubs::{SyncId};
 
 
 #[derive(Clone)]

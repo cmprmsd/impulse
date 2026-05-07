@@ -11,6 +11,7 @@ use crate::{
 };
 
 use super::AIBlockModel;
+use crate::legacy_stubs::{BlocklistAIHistoryModel};
 
 // Helper methods for accessing data on an impl of `AIBlockModel`.
 //

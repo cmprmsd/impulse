@@ -33,6 +33,7 @@ use super::{
     view::EditorViewAction,
 };
 use warpui::{AppContext, Element, Entity, ModelContext, ModelHandle};
+use warpui::platform::{Cursor};
 
 #[derive(Default)]
 struct MouseStateHandles {

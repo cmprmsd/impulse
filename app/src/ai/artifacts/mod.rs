@@ -15,6 +15,7 @@ use crate::notebooks::NotebookId;
 use crate::view_components::DismissibleToast;
 use crate::workspace::ToastStack;
 use crate::workspace::WorkspaceAction;
+use crate::legacy_stubs::{ServerApiProvider};
 
 pub mod buttons;
 pub use buttons::{ArtifactButtonsRow, ArtifactButtonsRowEvent};

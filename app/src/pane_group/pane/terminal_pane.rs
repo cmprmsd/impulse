@@ -61,6 +61,7 @@ use super::{
     DetachType, PaneConfiguration, PaneContent, PaneId, PaneStackEvent, PaneView, ShareableLink,
     ShareableLinkError, TerminalPaneId,
 };
+use crate::legacy_stubs::{ServerApiProvider};
 
 pub type TerminalPaneView = PaneView<TerminalView>;
 

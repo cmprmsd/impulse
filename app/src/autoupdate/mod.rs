@@ -1,3 +1,5 @@
+use warpui::{AppContext};
+use crate::legacy_stubs::{ServerApi, TelemetryEvent};
 mod changelog;
 mod channel_versions;
 #[cfg(target_os = "linux")]

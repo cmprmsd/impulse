@@ -3,6 +3,8 @@
 //! Currently there is no way to share a session from wasm.
 #![cfg_attr(target_family = "wasm", allow(dead_code))]
 
+use crate::legacy_stubs::{AuthStateProvider, ServerApiProvider, UpstreamMessage, UserUid};
+
 use crate::editor::ReplicaId;
 use crate::terminal::shared_session::network::heartbeat::{Event as HeartbeatEvent, Heartbeat};
 use crate::terminal::shared_session::{connect_endpoint, max_session_size};

@@ -29,6 +29,9 @@ use crate::{
     },
 };
 use warpui::fonts::{Properties, Weight};
+use warpui::{AppContext, Element, Entity, EntityId, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
+use warpui::platform::{Cursor};
+use crate::legacy_stubs::{BlocklistAIHistoryModel};
 
 const TODO_BUTTON_SAVE_POSITION_ID: &str = "plan_and_todo_list::todo_button";
 

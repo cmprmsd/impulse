@@ -68,6 +68,8 @@ use crate::view_components::compactible_split_action_button::CompactibleSplitAct
 use crate::{cmd_or_ctrl_shift, settings::InputModeSettings, ui_components::blended_colors};
 
 use super::inline_action_icons::{self, icon_size};
+use warpui::{AppContext, Element, Entity, Keystroke, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
+use warpui::keymap::{FixedBinding};
 
 /// The vertical padding applied to the requested command row's content body.
 /// For horizontal padding, use [`INLINE_ACTION_HORIZONTAL_PADDING`] for consistency.

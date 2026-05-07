@@ -50,6 +50,7 @@ use crate::themes::theme::WarpTheme;
 use crate::ui_components::icons::Icon;
 use crate::workflows::{WorkflowSelectionSource, WorkflowSource, WorkflowType};
 use crate::workspace::WorkspaceAction;
+use crate::legacy_stubs::{CloudModel, SyncId, TelemetryEvent};
 
 /// Position ID for the command palette list.
 const PALETTE_LIST_SAVE_POSITION_ID: &str = "welcome_palette:list";

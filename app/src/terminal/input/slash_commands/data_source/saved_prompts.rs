@@ -14,6 +14,7 @@ use crate::settings::AISettings;
 use crate::workflows::CloudWorkflowModel;
 
 use super::{AcceptSlashCommandOrSavedPrompt, InlineItem};
+use crate::legacy_stubs::{CloudModel, SyncId};
 
 pub(super) struct SavedPromptCandidate {
     pub(super) id: SyncId,

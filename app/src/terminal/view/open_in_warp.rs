@@ -34,6 +34,7 @@ use warp_completer::{
 };
 
 use super::{Event, InlineBannerItem, InlineBannerType, TerminalView};
+use crate::legacy_stubs::{OpenableFileType};
 
 #[cfg(test)]
 #[path = "open_in_warp_tests.rs"]

@@ -69,6 +69,8 @@ use warp_core::ui::icons::Icon;
 
 use crate::ai::persisted_workspace::{PersistedWorkspace, PersistedWorkspaceEvent};
 use crate::workspace::WorkspaceAction;
+use warpui::{AppContext, Element, Entity, TypedActionView, View, ViewContext, ViewHandle, WindowId};
+use crate::legacy_stubs::{AISettings};
 
 const DROP_SHADOW_COLOR: ColorU = ColorU {
     r: 0,

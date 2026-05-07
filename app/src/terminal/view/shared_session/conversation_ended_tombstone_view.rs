@@ -27,6 +27,7 @@ use warpui::{
     AppContext, Element, Entity, EntityId, SingletonEntity, TypedActionView, View, ViewContext,
 };
 use warpui::{ViewHandle};
+use crate::legacy_stubs::{AmbientAgentTaskId, ServerApiProvider, SyncId};
 
 #[cfg(not(target_family = "wasm"))]
 

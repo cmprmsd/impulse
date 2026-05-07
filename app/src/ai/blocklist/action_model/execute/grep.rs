@@ -34,6 +34,7 @@ use super::{
     get_server_output_id, is_file_path, is_git_repository, ActionExecution, AnyActionExecution,
     ExecuteActionInput, PreprocessActionInput,
 };
+use crate::legacy_stubs::{TelemetryEvent};
 
 const GREP_TIMEOUT: Duration = Duration::from_secs(10);
 const NON_ZERO_EXIT_CODE_ERROR: &str = "Grep command exited with non-zero exit code";

@@ -115,6 +115,10 @@ use ai::diff_validation::{
     fuzzy_match_diffs, fuzzy_match_v4a_diffs, parse_line_numbers, DiffDelta, DiffType, ParsedDiff,
     SearchAndReplace, V4AHunk,
 };
+use warpui::{AppContext, Element, Entity, FocusContext, Keystroke, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
+use warpui::keymap::{FixedBinding};
+use warpui::platform::{Cursor};
+use warpui::ui_components::components::{Coords};
 
 const REQUESTED_EDIT_CANCEL_LABEL: &str = "Cancel";
 const REQUESTED_EDIT_REFINE_LABEL: &str = "Refine";

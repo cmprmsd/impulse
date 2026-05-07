@@ -20,6 +20,7 @@ use crate::themes::theme::AnsiColorIdentifier;
 use crate::workspace::view::left_panel::ToolPanelView;
 use crate::workspace::WorkspaceRegistry;
 use warpui::SingletonEntity as _;
+use crate::legacy_stubs::{AmbientAgentTaskId, SyncId};
 
 #[derive(Debug, Clone, PartialEq)]
 pub struct AppState {

@@ -13,6 +13,7 @@ use super::{
     settings_page::{MatchData, NAV_ITEM_LEFT_MARGIN},
 
 };
+use crate::legacy_stubs::{SettingsSection};
 /// The font size for subpage items inside an umbrella.
 const SUBPAGE_FONT_SIZE: f32 = 10.;
 

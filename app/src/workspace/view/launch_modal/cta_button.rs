@@ -1,6 +1,7 @@
 use super::Slide;
 use std::rc::Rc;
 use warpui::ViewContext;
+use crate::legacy_stubs::{TelemetryEvent};
 
 /// A callback function for custom CTA button actions.
 type CustomCallback<S> = Rc<dyn Fn(&mut ViewContext<super::LaunchModal<S>>)>;

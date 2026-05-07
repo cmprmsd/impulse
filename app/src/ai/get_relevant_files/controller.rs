@@ -23,6 +23,7 @@ use crate::{
         outline::{OutlineStatus, RepoOutlines},
     },
 };
+use crate::legacy_stubs::{ServerApiProvider};
 
 #[derive(Debug)]
 pub enum GetRelevantFilesControllerEvent {

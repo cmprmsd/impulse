@@ -8,6 +8,7 @@ use warpui::{
 
 use crate::appearance::Appearance;
 use warpui::{AppContext, Element, Entity, TypedActionView, View, ViewContext};
+use crate::legacy_stubs::{ServerId, UserUid};
 
 pub struct TransferOwnershipConfirmationModal {
     cancel_mouse_state: MouseStateHandle,

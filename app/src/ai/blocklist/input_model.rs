@@ -39,6 +39,7 @@ use crate::{
 };
 
 use super::telemetry_banner::should_collect_ai_ugc_telemetry;
+use crate::legacy_stubs::{TelemetryEvent};
 
 /// Cutoff score for deciding an user input matches a history command entry.
 const HISTORY_ENTRY_MATCH_CUTOFF: f32 = 0.9;

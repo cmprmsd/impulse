@@ -117,6 +117,8 @@ use warp_editor::content::{
 use warp_util::path::to_relative_path;
 use warpui::elements::shimmering_text::ShimmeringTextStateHandle;
 use warpui::elements::{Highlight, HighlightedRange};
+use warpui::{Action, AppContext, Element, EventContext, View, ViewHandle};
+use crate::legacy_stubs::{UserWorkspaces};
 
 pub const STATUS_ICON_SIZE_DELTA: f32 = 4.;
 pub const STATUS_FOOTER_VERTICAL_PADDING: f32 = 4.;

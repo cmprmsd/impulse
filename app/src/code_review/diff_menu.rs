@@ -23,6 +23,10 @@ use crate::{
         TextOptions,
     },
 };
+use warpui::{AppContext, Entity, FocusContext, TypedActionView, View, ViewContext, ViewHandle};
+use warpui::fonts::{Properties, Weight};
+use warpui::keymap::{FixedBinding};
+use warpui::ui_components::components::{Coords};
 
 const MENU_WIDTH: f32 = 280.;
 const MENU_MAX_LIST_HEIGHT: f32 = 200.;

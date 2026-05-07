@@ -13,6 +13,7 @@ use crate::settings::AISettings;
 use crate::workflows::{CloudWorkflowModel, WorkflowSource};
 
 use super::WorkflowSearchItem;
+use crate::legacy_stubs::{CloudModel, SyncId, UserWorkspaces};
 
 pub(crate) struct WorkflowMatchCandidate {
     pub id: SyncId,

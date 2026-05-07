@@ -54,6 +54,8 @@ use super::{
     },
 };
 use crate::workspace::view::TOGGLE_RIGHT_PANEL_BINDING_NAME;
+use warpui::{AppContext, Element, Entity, EntityId, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
+use warpui::fonts::{Properties, Weight};
 
 /// Helper function to render git diff stats content (file icon or +- icons, file count, bullet, +/- counts)
 /// Used by both the context chips and the AI control panel

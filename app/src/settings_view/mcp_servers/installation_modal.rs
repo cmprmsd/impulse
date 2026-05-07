@@ -35,6 +35,7 @@ use warp_core::ui::{
     color::coloru_with_opacity, external_product_icon::ExternalProductIcon, icons::Icon,
 };
 use warpui::{AppContext, Element, Entity, FocusContext, TypedActionView, View, ViewHandle};
+use warpui::platform::{Cursor};
 
 pub enum InstallationModalBodyEvent {
     Cancel,

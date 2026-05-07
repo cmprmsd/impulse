@@ -51,6 +51,10 @@ use crate::{
     },
 };
 use warpui::{AppContext, Entity, FocusContext, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
+use warpui::{WeakViewHandle};
+use warpui::platform::{Cursor};
+use warpui::ui_components::components::{Coords};
+use crate::legacy_stubs::{TelemetryEvent};
 
 #[derive(Default)]
 struct MouseStateHandles {

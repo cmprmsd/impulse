@@ -1,3 +1,4 @@
+use crate::legacy_stubs::{PaletteSource};
 mod agent;
 pub mod buffer_model;
 mod classic;

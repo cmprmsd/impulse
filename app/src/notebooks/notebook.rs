@@ -106,6 +106,7 @@ use super::{
     CloudNotebookModel, NotebookId, NotebookLocation,
 };
 use warpui::{AppContext, BlurContext, Element, Entity, FocusContext, ModelHandle, TypedActionView, View, ViewContext, ViewHandle, WindowId};
+use crate::legacy_stubs::{UserWorkspaces};
 
 mod details_bar;
 

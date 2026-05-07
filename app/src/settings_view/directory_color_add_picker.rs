@@ -21,6 +21,8 @@ use crate::{
     },
 };
 use warpui::{AppContext, Element, Entity, TypedActionView, View, ViewContext, ViewHandle};
+use warpui::platform::{Cursor};
+use crate::legacy_stubs::{CodebaseIndexManager};
 
 const ADD_DIRECTORY_LABEL: &str = "+ Add directory…";
 const BUTTON_LABEL: &str = "Add directory color";

@@ -40,6 +40,11 @@ use crate::{
     },
 };
 use warp_core::send_telemetry_from_ctx;
+use warpui::{AppContext, Entity, FocusContext, TypedActionView, View, ViewContext, ViewHandle};
+use warpui::keymap::{FixedBinding};
+use warpui::platform::{Cursor};
+use warpui::ui_components::components::{Coords};
+use crate::legacy_stubs::{UserWorkspaces};
 
 pub(crate) mod commit;
 pub(crate) mod pr;

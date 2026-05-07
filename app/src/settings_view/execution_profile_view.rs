@@ -23,6 +23,7 @@ use warpui::{
     },
 };
 use warpui::{AppContext, Element, Entity, TypedActionView, View, ViewContext, ViewHandle};
+use warpui::fonts::{Properties, Weight};
 
 #[derive(Debug, Clone)]
 pub enum ExecutionProfileViewAction {

@@ -18,6 +18,8 @@ use crate::ai::blocklist::agent_view::AgentViewEntryOrigin;
 use crate::ai::blocklist::history_model::BlocklistAIHistoryModel;
 use crate::terminal::model::block::BlockId;
 use warpui::{AppContext, ModelContext, SingletonEntity};
+use warpui::{Action};
+use crate::legacy_stubs::{ServerApiProvider};
 
 #[derive(Default)]
 pub(super) struct SharedSessionState {

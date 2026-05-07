@@ -11,6 +11,7 @@ use crate::settings::AISettings;
 use crate::terminal::input::slash_commands::{
     AcceptSlashCommandOrSavedPrompt, InlineItem, SlashCommandDataSource,
 };
+use crate::legacy_stubs::{CloudModel};
 
 pub struct ZeroStateDataSource {
     slash_command_data_source: ModelHandle<SlashCommandDataSource>,

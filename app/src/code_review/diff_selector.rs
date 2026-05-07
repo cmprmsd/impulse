@@ -27,6 +27,7 @@ use crate::{
     },
 
 };
+use warpui::{AppContext, Entity, FocusContext, TypedActionView, View, ViewContext, ViewHandle};
 /// A single selectable target in the diff selector menu.
 #[derive(Debug, Clone)]
 pub struct DiffTarget {

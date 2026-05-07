@@ -19,6 +19,9 @@ use warpui::{
     },
 };
 use warpui::{AppContext, Element, Entity, TypedActionView, View, ViewContext};
+use warpui::fonts::{Weight};
+use warpui::platform::{Cursor};
+use crate::legacy_stubs::{TelemetryEvent};
 
 const CONFIRM_MARGIN_TOP: f32 = 16.;
 

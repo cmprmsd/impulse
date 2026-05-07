@@ -1,3 +1,4 @@
+use crate::legacy_stubs::{BlocklistAIHistoryModel};
 mod apply_diff_model;
 mod diff_application;
 mod telemetry;

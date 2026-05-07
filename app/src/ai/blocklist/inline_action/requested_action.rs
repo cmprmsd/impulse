@@ -39,6 +39,9 @@ use crate::ai::blocklist::inline_action::inline_action_header::{
 };
 use crate::ai::blocklist::inline_action::inline_action_icons::icon_size;
 use crate::ui_components::blended_colors;
+use warpui::{AppContext, Element, EventContext, Keystroke};
+use warpui::platform::{Cursor};
+use warpui::ui_components::components::{UiComponentStyles};
 
 const REQUESTED_ACTION_CANCEL_LABEL: &str = "Cancel";
 const REQUESTED_ACTION_RUN_LABEL: &str = "Run";

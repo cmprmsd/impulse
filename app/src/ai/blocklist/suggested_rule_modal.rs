@@ -32,6 +32,8 @@ use warpui::{
         ParentElement, Radius, ScrollbarWidth,
     },
 };
+use warpui::{AppContext, Element, Entity, FocusContext, TypedActionView, View, ViewContext, ViewHandle};
+use crate::legacy_stubs::{CloudModel, CloudModelEvent, ObjectOperation, OperationSuccessType, Owner, SyncId, TelemetryEvent, UpdateManagerEvent, UserWorkspaces};
 
 const HEADER_TEXT: &str = "Suggested rule";
 const MAX_EDITOR_HEIGHT: f32 = 240.;

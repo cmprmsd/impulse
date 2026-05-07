@@ -10,6 +10,9 @@ use crate::editor::EditorView;
 
 use super::EnvironmentsPageAction;
 use warpui::{AppContext, BlurContext, Element, Entity, FocusContext, TypedActionView, View, ViewContext, ViewHandle};
+use warpui::{WeakViewHandle};
+use warpui::fonts::{Properties, Weight};
+use warpui::platform::{Cursor};
 
 pub struct NewEnvironmentButtonView {
     trigger_mouse_state: MouseStateHandle,

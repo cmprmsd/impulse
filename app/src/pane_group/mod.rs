@@ -146,6 +146,7 @@ use crate::{
     server::server_api::ServerApi,
     terminal::{TerminalManager, TerminalModel, TerminalView},
 };
+use crate::legacy_stubs::{AgentConversationEntryId, AmbientAgentTaskId, AnonymousUserSignupEntrypoint, AuthManager, AuthStateProvider, ObjectUid, PaletteSource, ServerApiProvider, SharingDialogSource, Space, SyncId, TelemetryEvent};
 
 mod child_agent;
 pub mod focus_state;

@@ -7,6 +7,7 @@ use warpui::{
 
 use crate::{appearance::Appearance, ui_components::icons::Icon};
 use warpui::{AppContext, Element, Entity, TypedActionView, View, ViewContext};
+use warpui::platform::{Cursor};
 
 pub enum NewFeaturePopupLabel {
     /// A static label.

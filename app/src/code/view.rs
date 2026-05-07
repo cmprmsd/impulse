@@ -72,6 +72,8 @@ use super::{
 };
 
 use crate::{send_telemetry_from_ctx, TelemetryEvent};
+use warpui::{AppContext, Element, Entity, ModelHandle, TypedActionView, View, ViewContext, ViewHandle, WindowId};
+use warpui::fonts::{Properties, Weight};
 
 type SaveCallback =
     Box<dyn FnOnce(SaveOutcome, &mut CodeView, &mut ViewContext<CodeView>) + Send + Sync + 'static>;

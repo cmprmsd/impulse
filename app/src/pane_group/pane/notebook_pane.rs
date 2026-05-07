@@ -20,6 +20,7 @@ use super::{
     view::PaneView,
     DetachType, PaneConfiguration, PaneContent, PaneGroup, PaneId, ShareableLink,
 };
+use crate::legacy_stubs::{SyncId, UserWorkspaces};
 
 pub struct NotebookPane {
     view: ViewHandle<PaneView<NotebookView>>,

@@ -23,6 +23,8 @@ use crate::{
     },
 };
 use warpui::{AppContext, Element, Entity, FocusContext, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
+use warpui::{WeakViewHandle};
+use warpui::elements::{ChildView};
 
 lazy_static! {
     static ref QUERY_RESULT_RENDERER_STYLES: QueryResultRendererStyles =

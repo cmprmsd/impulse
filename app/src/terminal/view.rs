@@ -1,3 +1,4 @@
+use crate::legacy_stubs::{AgentModeEntrypoint, AmbientAgentTaskId, AnonymousUserSignupEntrypoint, AuthManager, AuthState, AuthStateProvider, CloudModel, CodebaseIndexManager, GenericStringObjectFormat, JsonObjectType, ObjectUid, PaletteSource, RemoteServerInitPhase, RemoteServerManager, RemoteServerManagerEvent, ServerApi, SharingDialogSource, SyncId, TelemetryEvent, UpdateManager, UserUid, UserWorkspaces};
 mod action;
 mod block_banner;
 pub mod block_onboarding;

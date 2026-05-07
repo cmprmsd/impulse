@@ -2,6 +2,7 @@ use itertools::Itertools;
 use serde::{Deserialize, Serialize};
 use view::command_dialog::EnvVarSecretCommand;
 use warp_util::path::ShellFamily;
+use crate::legacy_stubs::{CloudObjectTypeAndId, SyncId};
 
 pub mod active_env_var_collection_data;
 pub mod env_var_collection_block;

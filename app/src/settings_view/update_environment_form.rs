@@ -41,6 +41,11 @@ use warpui::{
     },
 };
 use warpui::{AppContext, Entity, FocusContext, TypedActionView, View, ViewContext, ViewHandle};
+use warpui::fonts::{Properties, Weight};
+use warpui::keymap::{FixedBinding};
+use warpui::platform::{Cursor};
+use warpui::ui_components::components::{Coords};
+use crate::legacy_stubs::{ServerApiProvider, UserWorkspaces};
 
 const SUBMIT_BUTTON_FOCUSED: &str = "SubmitButtonFocused";
 

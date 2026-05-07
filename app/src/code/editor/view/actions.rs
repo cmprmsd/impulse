@@ -1,4 +1,6 @@
 #![cfg_attr(target_family = "wasm", allow(dead_code, unused_imports))]
+
+use warpui::{TextDirection, TextUnit};
 // Adding this file level gate as some of the code around editability is not used in WASM yet.
 
 use crate::code::editor::{

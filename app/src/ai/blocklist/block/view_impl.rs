@@ -18,6 +18,8 @@
 //! —————————————————————————————————
 //! ```
 
+use crate::legacy_stubs::{CloudModel};
+
 pub(super) mod common;
 pub use common::FindContext;
 mod comments;

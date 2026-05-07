@@ -22,6 +22,8 @@ use super::{
     ELLIPSE_SVG_PATH, ICON_PADDING, ITEM_PADDING_BOTTOM, SCROLLBAR_OFFSET, SECTION_SPACING,
 };
 use warpui::{Action, AppContext, Entity, EntityId, ModelHandle, TypedActionView, View, ViewContext, WindowId};
+use warpui::fonts::{Weight};
+use warpui::platform::{Cursor};
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum FeatureSection {

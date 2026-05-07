@@ -22,6 +22,7 @@ use crate::ui_components::buttons::icon_button;
 use crate::{ai::agent::ProgrammingLanguage, ui_components::buttons::icon_button_with_color};
 use crate::{appearance::Appearance, ui_components::icons::Icon};
 use std::path::Path;
+use warpui::{AppContext, Element};
 
 const CODE_BLOCK_CORNER_RADIUS: f32 = 8.0;
 

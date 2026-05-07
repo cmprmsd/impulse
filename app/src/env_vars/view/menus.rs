@@ -12,6 +12,7 @@ use crate::{
 
 use super::env_var_collection::{EnvVarCollectionAction, EnvVarCollectionView, VariableRowIndex};
 use warpui::{AppContext};
+use crate::legacy_stubs::{CloudModel, UpdateManager};
 
 const PANE_MENU_WIDTH: f32 = 200.;
 

@@ -8,6 +8,7 @@ use markdown_parser::{FormattedTextFragment, FormattedTextLine};
 use warp_core::send_telemetry_from_ctx;
 use warpui::assets::asset_cache::AssetSource;
 use warpui::{AppContext, SingletonEntity};
+use crate::legacy_stubs::{UserWorkspaces};
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash)]
 pub enum OzLaunchSlide {

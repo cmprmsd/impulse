@@ -7,6 +7,7 @@ use warpui::elements::MouseStateHandle;
 use warpui::ui_components::components::UiComponent;
 use warpui::ui_components::components::UiComponentStyles;
 use warpui::Element;
+use crate::legacy_stubs::{CloudModel};
 
 /// The Tabs trait provides common functionality for an enum to be used as a tabs menu UI component.
 /// It requires the trait-user to implement action_on_click() and label().

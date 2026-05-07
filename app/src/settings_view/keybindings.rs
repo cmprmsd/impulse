@@ -42,6 +42,9 @@ use warpui::{
     keymap::DescriptionContext,
 };
 use warpui::{AppContext, Element, Entity, Keystroke, SingletonEntity, TypedActionView, View, ViewContext, ViewHandle};
+use warpui::fonts::{Weight};
+use warpui::ui_components::components::{Coords, UiComponentStyles};
+use crate::legacy_stubs::{SettingsSection, TelemetryEvent};
 
 const FONT_DELTA: f32 = 2.;
 const CANCEL_SAVE_BUTTONS_SPACING: f32 = 4.0;

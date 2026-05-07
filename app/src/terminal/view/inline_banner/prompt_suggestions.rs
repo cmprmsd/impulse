@@ -35,6 +35,7 @@ use warp_core::ui::theme::color::internal_colors::{neutral_2, neutral_3};
 use crate::ui_components::icons::Icon as WarpUIIcon;
 
 use crate::ai::agent::{PassiveSuggestionTrigger, StaticQueryType};
+use crate::legacy_stubs::{ServerId};
 
 const INLINE_BANNER_SPACING: f32 = 8.;
 const INLINE_BANNER_BUTTON_PADDING: f32 = 8.;

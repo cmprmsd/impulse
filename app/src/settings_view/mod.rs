@@ -57,6 +57,9 @@ use warpui::{
     },
 };
 use warpui::{Action, AppContext, Entity, ModelHandle, SingletonEntity, TypedActionView, View, ViewContext, ViewHandle};
+use warpui::fonts::{Properties, Weight};
+use warpui::keymap::{FixedBinding};
+use crate::legacy_stubs::{AISettings, ServerApiProvider};
 
 mod about_page;
 mod admin_actions;

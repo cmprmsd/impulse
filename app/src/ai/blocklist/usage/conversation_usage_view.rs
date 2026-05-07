@@ -16,6 +16,7 @@ use warpui::{
         MouseStateHandle, ParentElement, Radius, Text,
     },
 };
+use warpui::{AppContext, Element, Entity, TypedActionView, View, ViewContext};
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum DisplayMode {

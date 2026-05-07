@@ -52,6 +52,7 @@ use warpui::{
     },
 };
 use warpui::{AppContext, Entity, EventContext, FocusContext, Pixels, TypedActionView, View, ViewContext, ViewHandle};
+use crate::legacy_stubs::{UserWorkspaces};
 
 const PADDING: f32 = 30.;
 const INNER_MARGIN: f32 = 20.;

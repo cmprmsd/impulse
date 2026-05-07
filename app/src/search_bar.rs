@@ -7,6 +7,7 @@ use warpui::{
     },
 };
 use warpui::{Element, Entity, TypedActionView, View, ViewContext, ViewHandle};
+use warpui::ui_components::components::{UiComponentStyles};
 
 const SEARCH_ICON_PATH: &str = "bundled/svg/search.svg";
 const ICON_SIZE: f32 = 12.;

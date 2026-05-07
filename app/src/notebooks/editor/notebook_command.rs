@@ -66,6 +66,7 @@ use super::{
     NotebookWorkflow,
 };
 use warpui::{Element, Entity, ModelContext, ModelHandle, ViewHandle, WeakModelHandle, WindowId};
+use warpui::elements::{ChildView};
 
 lazy_static! {
     static ref SUPPORTED_LANGUAGES: &'static [&'static str] = &[

@@ -8,6 +8,7 @@ use warpui::{
     },
 };
 use warpui::{Element};
+use warpui::ui_components::components::{UiComponentStyles};
 
 pub struct RedNotificationDot {}
 

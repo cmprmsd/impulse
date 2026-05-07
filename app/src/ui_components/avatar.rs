@@ -10,6 +10,7 @@ use warp_core::ui::{external_product_icon::ExternalProductIcon, icons::Icon};
 
 use pathfinder_geometry::vector::vec2f;
 use warpui::elements::{ChildAnchor, OffsetPositioning, ParentAnchor, ParentOffsetBounds, Stack};
+use warpui::ui_components::components::{UiComponent, UiComponentStyles};
 
 pub enum AvatarContent {
     /// Rendered as capital initial of the given display name.

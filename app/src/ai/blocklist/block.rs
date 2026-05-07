@@ -1,4 +1,6 @@
 //! Implementation of "AI blocks" used to render AI queries and outputs in the blocklist.
+
+use crate::legacy_stubs::{AuthStateProvider, CloudModel, SyncId, UserWorkspaces};
 pub mod cli;
 pub mod cli_controller;
 pub mod compact_agent_input;

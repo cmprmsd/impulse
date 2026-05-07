@@ -81,6 +81,7 @@ use warpui::{
     ViewHandle,
 };
 use warpui::{r#async::Timer, TypedActionView};
+use crate::legacy_stubs::{BlocklistAIHistoryModel};
 
 pub fn init(app: &mut AppContext) {
     summarization_cancel_dialog::init(app);

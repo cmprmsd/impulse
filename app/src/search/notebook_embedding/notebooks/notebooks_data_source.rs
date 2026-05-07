@@ -10,6 +10,7 @@ use crate::search::data_source::{Query, QueryResult};
 use crate::search::mixer::{DataSourceRunErrorWrapper, SyncDataSource};
 
 use super::notebook_search_item::NotebookSearchItem;
+use crate::legacy_stubs::{CloudModel, Space};
 
 pub struct CloudNotebooksDataSource {
     /// The space containing the object we are embedding into.

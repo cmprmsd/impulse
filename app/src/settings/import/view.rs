@@ -35,6 +35,7 @@ use crate::{
 
 use super::config::{QuakeModeWindow, ThemeType};
 use warpui::{Element, Entity, ModelContext, ModelHandle, TypedActionView, View, ViewContext};
+use crate::legacy_stubs::{TelemetryEvent};
 
 // UI does not scale, so we set a fixed size for all text.
 const FONT_SIZE: f32 = 14.;

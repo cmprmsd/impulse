@@ -15,6 +15,7 @@ use anyhow::Context;
 use std::{collections::HashMap, sync::Arc};
 use url::Url;
 use warpui::{AppContext, ModelHandle, SingletonEntity, ViewContext, ViewHandle};
+use crate::legacy_stubs::{UserWorkspaces};
 
 pub struct WorkflowPane {
     view: ViewHandle<PaneView<WorkflowView>>,

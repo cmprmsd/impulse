@@ -54,6 +54,7 @@ use super::{
 };
 
 pub use onboarding::OnboardingIntention;
+use crate::legacy_stubs::{PaletteSource};
 
 /// Version of the agent onboarding flow (non-legacy).
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]

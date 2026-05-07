@@ -18,6 +18,7 @@ use crate::{
         JsonObjectType, Revision, ServerCloudObject, UniquePer,
     },
 };
+use crate::legacy_stubs::{SyncId};
 
 const UNIQUENESS_KEY_PREFIX: &str = "templatable_mcp_server";
 

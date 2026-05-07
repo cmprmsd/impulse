@@ -21,6 +21,7 @@ use warpui::{
     },
 };
 use warpui::{AppContext, ViewContext};
+use warpui::elements::{ChildView};
 
 impl Input {
     /// Renders the CLI rich input (editor + CLI agent footer).

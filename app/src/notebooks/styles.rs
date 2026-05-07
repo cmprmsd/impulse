@@ -14,6 +14,7 @@ use crate::{
     ui_components::{buttons::icon_button, icons::Icon},
 };
 use warpui::{Element, Pixels};
+use warpui::platform::{Cursor};
 
 /// Multiplier of the notebook font size for the title. At the default size, this
 /// is 20px.

@@ -26,6 +26,7 @@ use crate::editor::InteractionState;
 use super::editor::view::{CodeEditorRenderOptions, CodeEditorView};
 use super::lsp_telemetry::LspTelemetryEvent;
 use warp_core::send_telemetry_from_ctx;
+use warpui::{AppContext, Element, ViewContext};
 
 /// A processed diagnostic with its converted offset range.
 /// Stored on LocalCodeEditorView and used for both decoration and hover display.

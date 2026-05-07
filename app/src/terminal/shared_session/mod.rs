@@ -15,6 +15,7 @@ use super::{
     model::{block::SerializedBlock, terminal_model::BlockIndex},
     GridType, TerminalModel,
 };
+use crate::legacy_stubs::{UserWorkspaces};
 
 pub mod ai_agent;
 pub mod manager;

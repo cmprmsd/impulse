@@ -27,6 +27,7 @@ use warpui::{
 use warpui::{presenter::ChildView, ViewContext, ViewHandle};
 use warpui::{FocusContext, ModelHandle};
 use warpui::{AppContext, Entity, TypedActionView, View};
+use crate::legacy_stubs::{TelemetryEvent};
 
 pub const FIND_BAR_WIDTH: f32 = 500.;
 const ICON_PADDING: f32 = 4.;

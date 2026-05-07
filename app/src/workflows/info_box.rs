@@ -39,6 +39,8 @@ use super::{
     AIWorkflowOrigin, CloudWorkflow,
 };
 use warpui::{AppContext, Element, Entity, EventContext, TypedActionView, View, ViewContext, ViewHandle};
+use warpui::fonts::{Properties, Weight};
+use warpui::elements::{ChildView};
 
 const INFO_BOX_PADDING: f32 = 20.;
 const ARGUMENT_PADDING: f32 = 10.;

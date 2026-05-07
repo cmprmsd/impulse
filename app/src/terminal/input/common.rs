@@ -28,6 +28,9 @@ use warpui::{
 
 };
 use warpui::{AppContext, EntityId, ViewHandle};
+use warpui::fonts::{Weight};
+use warpui::elements::{ChildView};
+use crate::legacy_stubs::{UserWorkspaces};
 /// Whether the terminal input message bar should be shown.
 ///
 /// The message bar is hidden when AI is disabled, the user has turned it off in settings,

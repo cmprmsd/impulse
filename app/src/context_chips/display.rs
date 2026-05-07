@@ -27,6 +27,7 @@ use super::{
     prompt_type::PromptType,
     ChipResult, ContextChipKind,
 };
+use warpui::{AppContext, Entity, EntityId, FocusContext, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
 
 /// Enum introduced to abstract over the different row types we use for the prompt display,
 /// between the non-UDI and UDI cases.

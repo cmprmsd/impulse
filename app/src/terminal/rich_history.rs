@@ -13,6 +13,7 @@ use crate::{
     util::time_format::{format_approx_duration_from_now, human_readable_precise_duration},
 };
 use warpui::{AppContext, Element};
+use warpui::ui_components::components::{Coords};
 
 /// Vertical spacing between line items in rich history details.
 pub(crate) const DETAILS_PARAGRAPH_SPACING: f32 = 8.;

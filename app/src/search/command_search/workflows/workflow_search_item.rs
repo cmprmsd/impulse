@@ -17,6 +17,8 @@ use crate::ui_components::icons::Icon;
 use crate::workflows::workflow::Workflow;
 use crate::workflows::{CloudWorkflowModel, WorkflowSource, WorkflowType};
 use warpui::{AppContext, Element};
+use warpui::fonts::{Properties, Weight};
+use crate::legacy_stubs::{SyncId};
 
 /// Holds workflow data for a `WorkflowSearchItem`, used to read workflow fields
 /// during rendering and to produce an `AcceptedWorkflow` payload on selection.

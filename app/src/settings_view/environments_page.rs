@@ -64,6 +64,7 @@ use warpui::{
     },
 };
 use warpui::{AppContext, Entity, FocusContext, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
+use crate::legacy_stubs::{ServerTimestamp, SettingsSection, UserWorkspaces};
 
 mod new_environment_button;
 use new_environment_button::NewEnvironmentButtonView;

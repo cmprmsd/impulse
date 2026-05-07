@@ -22,6 +22,8 @@ use warpui::{
 
 use super::searcher::{EmbeddingSearchItemAction, EmbeddingSearchMixer};
 use warpui::{AppContext, Element, Entity, FocusContext, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
+use warpui::{WeakViewHandle};
+use warpui::elements::{ChildView};
 
 const DEFAULT_PLACEHOLDER_TEXT: &str = "Search for a reference";
 

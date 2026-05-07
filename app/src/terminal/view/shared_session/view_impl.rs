@@ -69,6 +69,7 @@ use super::viewer::Viewer;
 #[cfg(not(target_family = "wasm"))]
 use super::ConversationEndedTombstoneEvent;
 use super::ConversationEndedTombstoneView;
+use crate::legacy_stubs::{AmbientAgentTaskId, SharingDialogSource, UserUid};
 
 impl TerminalView {
     pub fn sharer_session_kind(&self) -> Option<&Kind> {

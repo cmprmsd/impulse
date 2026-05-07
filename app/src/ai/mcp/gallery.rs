@@ -6,6 +6,7 @@ use crate::ai::mcp::templatable::{
 use chrono::DateTime;
 use uuid::Uuid;
 use warpui::{Entity, ModelContext, SingletonEntity};
+use crate::legacy_stubs::{UpdateManager, UpdateManagerEvent};
 
 #[derive(Clone, Debug)]
 pub struct GalleryMCPServer {

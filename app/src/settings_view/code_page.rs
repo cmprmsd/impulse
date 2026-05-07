@@ -65,6 +65,7 @@ use warpui::{
     },
 };
 use warpui::{Action, AppContext, Entity, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
+use crate::legacy_stubs::{CodebaseIndexManager, SettingsAction, SettingsSection, TelemetryEvent, ToggleSettingActionPair};
 
 const MAIN_SECTION_MARGIN: f32 = 12.;
 const SUB_SECTION_MARGIN: f32 = 8.;

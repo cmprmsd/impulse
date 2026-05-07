@@ -2,6 +2,7 @@ use crate::env_vars::CloudEnvVarCollection;
 use crate::search::mixer::SearchMixer;
 use crate::terminal::history::LinkedWorkflowData;
 use crate::workflows::{WorkflowSource, WorkflowType};
+use crate::legacy_stubs::{SyncId};
 
 pub type CommandSearchMixer = SearchMixer<CommandSearchItemAction>;
 

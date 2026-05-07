@@ -14,6 +14,7 @@ use super::{
     render_inline_block_list_banner, InlineBannerButtonState, InlineBannerCloseButton,
     InlineBannerContent, InlineBannerStyle, InlineBannerTextButton, InlineBannerTextButtonFont,
 };
+use crate::legacy_stubs::{OpenableFileType};
 
 #[derive(Clone, Copy, Debug)]
 pub enum OpenInWarpBannerAction {

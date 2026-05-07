@@ -51,6 +51,7 @@ use super::{
     super::telemetry::SelectionMode as TelemetrySelectionMode, embedding_model::NotebookEmbed,
     interaction_state_model::InteractionStateModel, notebook_command::NotebookCommand,
 };
+use warpui::{TextDirection, TextUnit};
 
 const DEBOUNCED_RESIZE_PERIOD: Duration = Duration::from_millis(5);
 

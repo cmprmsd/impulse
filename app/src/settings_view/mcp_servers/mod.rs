@@ -4,6 +4,7 @@ use std::{
 };
 
 use uuid::Uuid;
+use crate::legacy_stubs::{ObjectUid};
 
 
 pub mod destructive_mcp_confirmation_dialog;

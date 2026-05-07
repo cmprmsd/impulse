@@ -27,6 +27,9 @@ use warpui::{
     },
 };
 use warpui::{Action, AppContext, Entity, TypedActionView, View, ViewContext};
+use warpui::fonts::{Properties};
+use warpui::keymap::{FixedBinding};
+use warpui::platform::{Cursor};
 
 pub const CHEVRON_RIGHT_ALIGN_SVG_PATH: &str = "bundled/svg/chevron-right-align.svg";
 

@@ -65,6 +65,7 @@ use warpui::{
     },
 };
 use warpui::{AppContext, Element, Entity, TypedActionView, View, ViewContext, ViewHandle};
+use crate::legacy_stubs::{TelemetryEvent, UserWorkspaces};
 
 const DESCRIPTION_TEXT: &str = "Add MCP servers to extend the Warp Agent's capabilities. MCP servers expose data sources or tools to agents through a standardized interface, essentially acting like plugins. Add a custom server, or use the presets to get started with popular servers. You can also find team servers that have been shared with you here. ";
 

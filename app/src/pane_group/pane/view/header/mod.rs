@@ -35,6 +35,8 @@ use warpui::{
 
 use super::PaneDropTargetData;
 use warpui::{AppContext, Element, Entity, EntityId, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
+use warpui::elements::{ChildView};
+use crate::legacy_stubs::{SharingDialogSource};
 
 mod sharing;
 

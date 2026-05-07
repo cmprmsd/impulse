@@ -1,3 +1,4 @@
+use crate::legacy_stubs::{AISettings, UserWorkspaces};
 mod saved_prompts;
 mod zero_state;
 

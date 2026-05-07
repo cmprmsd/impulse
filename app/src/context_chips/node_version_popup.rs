@@ -17,6 +17,9 @@ use crate::terminal::model_events::{ModelEvent, ModelEventDispatcher};
 use crate::ui_components::blended_colors;
 use crate::ui_components::icons;
 use crate::view_components::action_button::{ActionButton, SecondaryTheme};
+use warpui::{AppContext, Element, Entity, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
+use warpui::fonts::{Properties};
+use warpui::keymap::{FixedBinding};
 
 const MENU_WIDTH: f32 = 300.0;
 const MENU_MAX_HEIGHT: f32 = 260.0;

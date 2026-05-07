@@ -26,6 +26,8 @@ use parking_lot::FairMutex;
 use warp_core::features::FeatureFlag;
 use warpui::r#async::SpawnedFutureHandle;
 use warpui::{Entity, EntityId, ModelContext, ModelHandle, SingletonEntity};
+use warpui::{Action};
+use crate::legacy_stubs::{AuthStateProvider, ServerApiProvider, UserWorkspaces};
 
 cfg_if::cfg_if! {
     if #[cfg(feature = "local_fs")] {

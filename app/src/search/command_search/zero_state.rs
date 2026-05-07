@@ -16,6 +16,7 @@ use crate::search::FilterChipRenderer;
 use crate::search::QueryFilter;
 use crate::settings::{AISettings, AISettingsChangedEvent};
 use warpui::{AppContext, Element, Entity, TypedActionView, View, ViewContext};
+use warpui::platform::{Cursor};
 
 lazy_static! {
     /// Map of sample queries to the [`QueryFilter`]s they employ.

@@ -30,6 +30,7 @@ use crate::{
         TerminalView,
     },
 };
+use crate::legacy_stubs::{CodebaseIndexManager};
 
 lazy_static! {
     // Regex to match <block:[block_id]> patterns

@@ -29,6 +29,10 @@ use crate::{
     },
 };
 use warpui::{AppContext, Element, Entity, FocusContext, TypedActionView, View, ViewContext, ViewHandle};
+use warpui::{Keystroke};
+use warpui::fonts::{Properties, Weight};
+use warpui::keymap::{FixedBinding};
+use warpui::platform::{Cursor};
 
 pub fn init(app: &mut AppContext) {
     app.register_fixed_bindings(vec![

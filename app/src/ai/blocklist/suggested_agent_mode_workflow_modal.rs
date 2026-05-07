@@ -18,6 +18,11 @@ use warpui::{
         PositionedElementOffsetBounds,
     },
 };
+use warpui::{AppContext, Element, Entity, TypedActionView, View, ViewContext, ViewHandle};
+use warpui::fonts::{Weight};
+use warpui::keymap::{FixedBinding};
+use warpui::elements::{ChildView};
+use crate::legacy_stubs::{TelemetryEvent, UserWorkspaces};
 
 const SUGGESTED_PROMPT_MODAL_HEADER: &str = "Prompt";
 

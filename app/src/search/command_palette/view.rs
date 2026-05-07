@@ -51,6 +51,7 @@ use warpui::{
 
 use super::super::palette_styles as styles;
 use super::CommandPaletteMixer;
+use crate::legacy_stubs::{SyncId, TelemetryEvent};
 
 lazy_static! {
     /// Set of hardcoded action names that we want to show in the command palette zero state.

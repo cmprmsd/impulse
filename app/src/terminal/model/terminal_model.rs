@@ -86,6 +86,7 @@ use warpui::assets::asset_cache::Asset;
 use warpui::image_cache::ImageType;
 use warpui::r#async::executor::Background;
 use warpui::AppContext;
+use crate::legacy_stubs::{AmbientAgentTaskId};
 
 /// Max size of the window title stack.
 const TITLE_STACK_MAX_DEPTH: usize = 4096;

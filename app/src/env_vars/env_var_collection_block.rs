@@ -36,6 +36,7 @@ use crate::{
 
 };
 use warpui::{AppContext, Element, Entity, EntityId, FocusContext, Keystroke, TypedActionView, View, ViewContext};
+use warpui::keymap::{FixedBinding};
 /// The vertical padding applied to the env var collection block's content body.
 /// For horizontal padding, use [`INLINE_ACTION_HORIZONTAL_PADDING`] for consistency.
 const ENV_VAR_COLLECTION_BODY_VERTICAL_PADDING: f32 = 16.;

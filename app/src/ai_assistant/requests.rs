@@ -24,6 +24,7 @@ use super::{
     utils::{markdown_segments_from_text, FormattedTranscriptMessage, TranscriptPart},
 };
 use anyhow::Result;
+use crate::legacy_stubs::{UserWorkspaces};
 
 /// The key for the corresponding entry in UserDefaults.
 /// Not wiring through Settings for now since this data is only needed by the panel view.

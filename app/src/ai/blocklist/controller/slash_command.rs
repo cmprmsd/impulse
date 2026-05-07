@@ -17,6 +17,7 @@ use super::{
     input_context_for_request, parse_context_attachments, BlocklistAIController,
     BlocklistAIControllerEvent, RequestInput,
 };
+use crate::legacy_stubs::{BlocklistAIHistoryModel};
 
 pub enum SlashCommandRequest {
     CreateNewProject {

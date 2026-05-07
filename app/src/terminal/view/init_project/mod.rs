@@ -1,4 +1,5 @@
 use warpui::{AppContext, Element, Entity, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
+use crate::legacy_stubs::{CodebaseIndexManager};
 mod lsp_server_selector;
 pub mod model;
 

@@ -27,6 +27,7 @@ use crate::{
 };
 
 use super::OutlineStatus;
+use crate::legacy_stubs::{TelemetryEvent, UserWorkspaces};
 
 /// State for a repository outline, containing both the repository handle and the outline status.
 #[derive(Debug)]

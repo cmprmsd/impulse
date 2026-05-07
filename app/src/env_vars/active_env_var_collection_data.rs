@@ -18,6 +18,7 @@ use warpui::{Entity, ModelContext, SingletonEntity};
 
 use super::CloudEnvVarCollectionModel;
 use warpui::{AppContext};
+use crate::legacy_stubs::{CloudModel, UpdateManager};
 
 #[derive(Default, Clone)]
 pub enum ActiveEnvVarCollection {

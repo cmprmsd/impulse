@@ -17,6 +17,8 @@ use crate::{
 };
 
 use super::{index::DriveIndexAction, DriveObjectType};
+use warpui::{AppContext, Element, ViewHandle};
+use crate::legacy_stubs::{Space};
 
 const DIALOG_PADDING: f32 = 24.;
 const INPUT_MARGIN_TOP: f32 = 16.;

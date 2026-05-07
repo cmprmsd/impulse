@@ -28,6 +28,7 @@ use warp_core::features::FeatureFlag;
 use serde::{de::Deserializer, Deserialize, Serialize};
 use strum::IntoEnumIterator;
 use strum_macros::EnumIter;
+use crate::legacy_stubs::{AuthStateProvider, UserWorkspaces};
 
 pub enum FocusedTerminalInfoEvent {
     TerminalInfoUpdated,

@@ -6,6 +6,7 @@ use warpui::{
     elements::{CacheOption, Icon, Image},
 
 };
+use warpui::{Element};
 /// Returns a special icon for the given file path, if any.
 pub fn icon_from_file_path(path: &str, appearance: &Appearance) -> Option<Box<dyn Element>> {
     let theme = appearance.theme();

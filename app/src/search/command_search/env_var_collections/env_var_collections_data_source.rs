@@ -7,6 +7,7 @@ use crate::search::command_search::searcher::CommandSearchItemAction;
 use crate::search::data_source::{Query, QueryResult};
 use crate::search::env_var_collections::fuzzy_match::FuzzyMatchEnvVarCollectionResult;
 use crate::search::mixer::{DataSourceRunErrorWrapper, SyncDataSource};
+use crate::legacy_stubs::{CloudModel};
 
 pub struct EnvVarCollectionDataSource {}
 

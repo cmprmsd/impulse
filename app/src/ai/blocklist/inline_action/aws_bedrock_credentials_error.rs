@@ -19,6 +19,7 @@ use crate::view_components::action_button::{ActionButton, ButtonSize, NakedTheme
 
 use super::inline_action_icons::icon_size;
 use crate::ai::blocklist::view_util::error_color;
+use warpui::{ViewHandle};
 
 #[derive(Clone, Debug)]
 pub enum AwsBedrockCredentialsErrorAction {

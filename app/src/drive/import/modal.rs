@@ -24,6 +24,7 @@ use warpui::{
 
 use super::modal_body::{ImportModalBody, ImportModalBodyAction, ImportModalBodyEvent};
 use warpui::{AppContext, Element, Entity, TypedActionView, View, ViewContext};
+use warpui::{ViewHandle};
 
 const CLOSE_BUTTON_SIZE: f32 = 24.;
 const HEADER_FONT_SIZE: f32 = 16.;

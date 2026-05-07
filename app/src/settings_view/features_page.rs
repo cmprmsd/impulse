@@ -106,6 +106,7 @@ use warpui::{
     Action, AppContext, DisplayIdx, Entity, EventContext, ModelHandle, SingletonEntity, Tracked,
     TypedActionView, View, ViewContext, ViewHandle, WindowId,
 };
+use crate::legacy_stubs::{TelemetryEvent};
 
 cfg_if::cfg_if! {
     if #[cfg(target_os = "macos")] {

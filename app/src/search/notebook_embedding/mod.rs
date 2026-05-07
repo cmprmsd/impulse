@@ -1,3 +1,4 @@
+use crate::legacy_stubs::{Owner, Space};
 
 mod embedded_fuzzy_match;
 mod notebooks;

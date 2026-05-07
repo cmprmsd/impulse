@@ -16,6 +16,7 @@ use crate::{
         LINKABLE_FILES,
     },
 };
+use crate::legacy_stubs::{CodebaseIndexManager, UserWorkspaces};
 
 const INIT_STEP_COUNT: usize = enum_iterator::cardinality::<InitStepKind>();
 

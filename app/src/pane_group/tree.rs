@@ -20,6 +20,7 @@ use crate::pane_group::{get_minimum_pane_size, DraggedBorder, PaneGroupAction};
 use crate::themes::theme::WarpTheme;
 use warp_core::features::FeatureFlag;
 use warpui::{EntityId, ViewContext};
+use warpui::platform::{Cursor};
 
 #[cfg(test)]
 #[path = "tree_tests.rs"]

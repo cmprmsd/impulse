@@ -25,6 +25,7 @@ use warpui::{
         Flex, MainAxisAlignment, MainAxisSize, ParentElement, Radius, Shrinkable, Text,
     },
 };
+use warpui::{AppContext, Element, Entity, FocusContext, Keystroke, ModelHandle, Pixels, TypedActionView, View, ViewContext, ViewHandle};
 
 /// Default width of the comment editor, in pixels.
 pub(crate) const DEFAULT_COMMENT_MAX_WIDTH: f32 = 750.0;

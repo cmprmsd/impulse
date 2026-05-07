@@ -22,6 +22,7 @@ use super::display_chip::{chip_container, udi_font_size};
 use super::spacing;
 use super::{ChipAvailability, ChipValue, ContextChipKind};
 use pathfinder_geometry::vector::vec2f;
+use warpui::{Element};
 
 /// Styling consts.
 const CORNER_RADIUS_PIXELS: f32 = 4.;

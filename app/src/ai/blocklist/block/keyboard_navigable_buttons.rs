@@ -15,6 +15,7 @@ use warpui::{
 use crate::ui_components::icons::Icon;
 
 use super::numbered_button::render_recommended_badge;
+use warpui::{AppContext, Element, Entity, TypedActionView, View, ViewContext};
 
 const MARGIN_BETWEEN_BUTTONS: f32 = 4.;
 const HAS_OPTIONS: &str = "HasOptions";

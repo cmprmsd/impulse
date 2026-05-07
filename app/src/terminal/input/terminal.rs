@@ -24,6 +24,7 @@ use warpui::{
     },
 };
 use warpui::{AppContext};
+use warpui::elements::{ChildView};
 
 impl Input {
     /// Renders the terminal mode input when `FeatureFlag::AgentView` is enabled and there is no

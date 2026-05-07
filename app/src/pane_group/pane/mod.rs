@@ -8,6 +8,8 @@
 //! The [`PaneContent`] interface requires implementers to maintain a [`PaneId`] for their pane.
 //! The [`PaneId`] must be created via a [`PaneView<BackingView>`]. The [`PaneId`] is consequently
 //! used to render a [`PaneView`] which internally renders the pane, including the [`BackingView`].
+
+use crate::legacy_stubs::{SharingDialogSource};
 pub(super) mod ai_fact_pane;
 pub(super) mod code_diff_pane;
 pub(super) mod code_diff_pane_model;

@@ -14,6 +14,7 @@ use crate::terminal::model_events::{ModelEvent, ModelEventDispatcher};
 use crate::{send_telemetry_from_ctx, TelemetryEvent};
 
 use super::pty_controller::{EventLoopSender, PtyController};
+use crate::legacy_stubs::{AuthStateProvider, RemoteServerManager, RemoteServerManagerEvent, ServerApiProvider};
 
 /// Per-SSH-init state machine. Encoding the state as an enum makes invalid
 /// transitions unrepresentable and ensures the `SessionInfo` stash cannot be

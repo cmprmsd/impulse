@@ -1,3 +1,4 @@
+use crate::legacy_stubs::{AuthManager, AuthState, AuthStateProvider, CloseTarget, CloudModel, ObjectAction, PaletteSource, RemoteServerManager, RemoteServerManagerEvent, ServerApiProvider, TeamTesterStatus, TeamUpdateManager, TelemetryEvent, UpdateManager, UserProfiles, UserWorkspaces};
 // Suppress warnings about rustdoc style.
 #![allow(clippy::doc_lazy_continuation)]
 
@@ -8,6 +9,7 @@ mod antivirus;
 mod app_menus;
 mod app_services;
 mod app_state;
+pub mod legacy_stubs;
 mod autoupdate;
 mod banner;
 mod changelog_model;

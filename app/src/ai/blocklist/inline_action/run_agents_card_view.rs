@@ -50,6 +50,7 @@ use crate::view_components::compactible_action_button::{
 use crate::view_components::compactible_split_action_button::CompactibleSplitActionButton;
 use crate::view_components::dropdown::DropdownEvent;
 use crate::view_components::FilterableDropdownEvent;
+use warpui::{ViewHandle};
 
 const RUN_AGENTS_CARD_TITLE: &str = "Can I add additional agents to this task?";
 

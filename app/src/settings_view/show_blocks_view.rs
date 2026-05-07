@@ -33,6 +33,7 @@ use warpui::{elements::ScrollbarWidth, fonts::Weight};
 use warpui::{
     AppContext, Element, Entity, SingletonEntity, TypedActionView, View, ViewContext, ViewHandle,
 };
+use crate::legacy_stubs::{AuthStateProvider, SettingsSection};
 
 const SCROLLBAR_WIDTH: ScrollbarWidth = ScrollbarWidth::Auto;
 

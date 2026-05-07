@@ -24,6 +24,7 @@ use warpui::{
     },
 };
 use warpui::{AppContext, Element, Entity, TypedActionView, View, ViewContext};
+use warpui::platform::{Cursor};
 
 pub enum UpdateModalBodyEvent {
     Cancel,

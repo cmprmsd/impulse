@@ -25,6 +25,7 @@ use crate::{
 use pathfinder_color::ColorU;
 
 use super::common::{render_query_text, render_user_avatar, FindContext};
+use warpui::{AppContext, Element};
 
 /// Data required to render the AI block query component.
 #[derive(Copy, Clone, Debug)]

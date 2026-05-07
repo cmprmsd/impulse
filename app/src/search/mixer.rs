@@ -13,6 +13,7 @@ use std::sync::Arc;
 use std::time::Duration;
 use warpui::r#async::Timer;
 use warpui::{Action, AppContext, Entity, ModelContext};
+use crate::legacy_stubs::{TelemetryEvent};
 
 /// Maximum time to wait for matching data sources to return results before showing
 /// partial results.

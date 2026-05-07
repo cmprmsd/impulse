@@ -64,6 +64,7 @@ use crate::terminal::view::ExecuteCommandEvent;
 use crate::terminal::{Event as TerminalViewEvent, TerminalModel, TerminalView};
 use crate::view_components::ToastFlavor;
 use crate::{pane_group::TerminalViewResources, terminal::model::session::Sessions};
+use crate::legacy_stubs::{AmbientAgentTaskId, BlocklistAIHistoryModel};
 
 enum NetworkState {
     /// No viewer network is attached yet; deferred cloud-mode viewers start here until the

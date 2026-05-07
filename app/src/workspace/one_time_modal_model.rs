@@ -8,6 +8,7 @@ use crate::terminal::general_settings::GeneralSettings;
 use settings::Setting as _;
 use warp_core::features::FeatureFlag;
 use warpui::{Entity, ModelContext, SingletonEntity, WindowId};
+use crate::legacy_stubs::{AuthManager, UserWorkspaces};
 
 /// A generic model for managing one-time modals that should be shown to users only once.
 ///

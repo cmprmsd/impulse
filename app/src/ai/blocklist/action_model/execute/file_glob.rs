@@ -24,6 +24,7 @@ use crate::{
     },
 };
 use warp_core::features::FeatureFlag;
+use crate::legacy_stubs::{TelemetryEvent};
 
 const FILE_GLOB_TIMEOUT: Duration = Duration::from_secs(10);
 

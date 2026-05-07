@@ -23,6 +23,9 @@ use crate::{
     util::bindings::keybinding_name_to_keystroke,
 };
 use warpui::{AppContext, BlurContext, Element, Entity, EventContext, FocusContext, Keystroke, TypedActionView, View, ViewContext};
+use warpui::fonts::{Properties, Weight};
+use warpui::platform::{Cursor};
+use warpui::ui_components::components::{Coords, UiComponentStyles};
 
 /// Maximum width of a tooltip before it soft-wraps.
 const TOOLTIP_MAX_WIDTH: f32 = 300.;

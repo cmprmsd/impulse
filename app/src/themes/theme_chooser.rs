@@ -36,6 +36,9 @@ use crate::{
 
 use super::theme;
 use warpui::{AppContext, Entity, FocusContext, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
+use warpui::fonts::{Weight};
+use warpui::keymap::{FixedBinding};
+use warpui::platform::{Cursor};
 
 // All units in px
 const THEME_CHOOSER_TITLE: &str = "Themes";

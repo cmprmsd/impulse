@@ -45,6 +45,7 @@ use warpui::{
     AppContext, BlurContext, Entity, EntityId, ModelHandle, SingletonEntity, TypedActionView, View,
     ViewContext, ViewHandle, WindowId,
 };
+use crate::legacy_stubs::{AgentConversationEntryId, SharingDialogSource};
 
 const VIEW_ALL_LABEL: &str = "View all";
 /// Maximum number of past items to show before the user toggles "view all".

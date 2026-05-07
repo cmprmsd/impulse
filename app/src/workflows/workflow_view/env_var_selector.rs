@@ -11,6 +11,7 @@ use crate::{
     },
 
 };
+use crate::legacy_stubs::{CloudObjectTypeAndId, SyncId};
 /// A reusable [`View`] for choosing environment variable collections.
 pub struct EnvVarSelector {
     dropdown: ViewHandle<FilterableDropdown<EnvVarSelectorAction>>,

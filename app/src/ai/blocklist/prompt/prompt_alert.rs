@@ -19,6 +19,7 @@ use crate::{
     workspaces::user_workspaces::UserWorkspaces,
 };
 use ai::api_keys::ApiKeyManager;
+use warpui::{AppContext, Element, Entity, TypedActionView, View, ViewContext};
 
 const ANONYMOUS_USER_REQUEST_LIMIT_SOFT_GATE_PERCENTAGE: f32 = 0.5;
 

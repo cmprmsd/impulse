@@ -28,6 +28,7 @@ use warpui::elements::OffsetPositioning;
 use warpui::elements::ParentAnchor;
 use warpui::elements::ParentOffsetBounds;
 use warpui::elements::Stack;
+use warpui::{AppContext, Element, EntityId, EventContext};
 
 const PROVIDER_BUTTON_ICON_SIZE: f32 = 14.;
 const PROVIDER_BUTTON_ICON_TEXT_GAP: f32 = 8.;

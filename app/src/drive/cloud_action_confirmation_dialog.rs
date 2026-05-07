@@ -15,6 +15,7 @@ use crate::{
         dialog::{dialog_styles, Dialog},
     },
 };
+use warpui::{AppContext, Element, Entity, TypedActionView, View, ViewContext};
 
 const BUTTON_PADDING: f32 = 12.;
 const BUTTON_FONT_SIZE: f32 = 14.;

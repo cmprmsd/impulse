@@ -50,6 +50,7 @@ use super::{
     AskAIType, AI_ASSISTANT_FEATURE_NAME, AI_ASSISTANT_LOGO_COLOR, AI_ASSISTANT_SVG_PATH,
     ASK_AI_ASSISTANT_TEXT, PROMPT_CHARACTER_LIMIT,
 };
+use crate::legacy_stubs::{ServerApi, TelemetryEvent, UserWorkspaces};
 
 const INFO_ICON_SVG_PATH: &str = "bundled/svg/info.svg";
 pub const HEXAGON_ALERT_SVG_PATH: &str = "bundled/svg/alert-hexagon.svg";

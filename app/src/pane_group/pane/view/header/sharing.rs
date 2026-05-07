@@ -22,6 +22,7 @@ use crate::{
 };
 
 use super::{Event, OpenOverlay, PaneHeader, PaneHeaderAction};
+use crate::legacy_stubs::{SharingDialogSource};
 
 const UNSHARABLE_CONVERSATION_TOOLTIP: &str =
     "This conversation cannot be shared because it is not \

@@ -1,4 +1,7 @@
 #![cfg_attr(target_family = "wasm", allow(dead_code, unused_imports))]
+
+use warpui::{AppContext, Entity, TypedActionView, View};
+use crate::legacy_stubs::{TelemetryEvent};
 // Adding this file level gate as some of the code around editability is not used in WASM yet.
 
 use crate::appearance::Appearance;

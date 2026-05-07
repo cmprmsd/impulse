@@ -17,6 +17,7 @@ use crate::ui_components::{
 };
 
 use warpui::fonts::Weight;
+use warpui::{AppContext, Element, Entity, TypedActionView, View, ViewContext};
 
 pub fn init(app: &mut AppContext) {
     use warpui::keymap::macros::*;

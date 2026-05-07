@@ -87,6 +87,7 @@ use super::{
     rich_text_styles, BlockType, NotebookWorkflow,
 };
 use warpui::{AppContext, BlurContext, Element, Entity, FocusContext, ModelHandle, Pixels, TypedActionView, View, ViewContext, ViewHandle};
+use warpui::{TextDirection, TextUnit, WeakViewHandle};
 
 #[cfg(test)]
 #[path = "view_tests.rs"]

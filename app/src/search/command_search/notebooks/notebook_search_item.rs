@@ -15,6 +15,8 @@ use crate::search::item::SearchItem;
 use crate::search::notebooks::fuzzy_match::render_notebook_matched_content_with_highlight;
 use crate::search::result_renderer::ItemHighlightState;
 use warpui::{AppContext, Element};
+use warpui::fonts::{Properties, Weight};
+use crate::legacy_stubs::{SyncId};
 
 const CONTENT_WEIGHT: f64 = 0.4;
 const NAME_WEIGHT: f64 = 0.6;

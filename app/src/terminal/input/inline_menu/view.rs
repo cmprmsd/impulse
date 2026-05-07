@@ -51,6 +51,7 @@ use crate::terminal::input::suggestions_mode_model::{
     InputSuggestionsModeEvent, InputSuggestionsModeModel,
 };
 use crate::terminal::{self, input};
+use warpui::{WeakViewHandle};
 
 /// Events emitted by InlineMenuView.
 #[derive(Debug, Clone)]

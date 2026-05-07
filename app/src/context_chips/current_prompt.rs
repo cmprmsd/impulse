@@ -49,6 +49,7 @@ use warpui::{
     r#async::{SpawnedFutureHandle, Timer},
 };
 use warpui::{Entity, ModelAsRef, ModelContext, ModelHandle, SingletonEntity};
+use warpui::{AppContext, ViewHandle};
 
 #[cfg(test)]
 #[path = "current_prompt_test.rs"]

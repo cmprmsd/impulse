@@ -34,6 +34,7 @@ use serde_json::json;
 use warp_core::features::FeatureFlag;
 use warpui::r#async::{FutureExt as AsyncFutureExt, SpawnedFutureHandle, Timer};
 use warpui::{Entity, EntityId, ModelContext, ModelHandle, SingletonEntity};
+use crate::legacy_stubs::{ServerApiProvider, UserWorkspaces};
 
 const NUM_TOP_BLOCK_LINES: usize = 100;
 const NUM_BOTTOM_BLOCK_LINES: usize = 200;

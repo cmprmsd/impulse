@@ -14,6 +14,7 @@ use warpui::{
 };
 
 use super::compact_agent_input::CompactAgentInput;
+use warpui::{AppContext, Element, ViewHandle};
 
 fn render_number_badge(
     number: usize,

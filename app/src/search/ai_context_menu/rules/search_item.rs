@@ -12,6 +12,7 @@ use warpui::elements::{
 };
 use warpui::fonts::{Properties, Weight};
 use warpui::{AppContext, Element, SingletonEntity};
+use crate::legacy_stubs::{GenericStringObjectFormat, JsonObjectType, ObjectType};
 
 const MAX_COMBINED_LENGTH: usize = 55;
 

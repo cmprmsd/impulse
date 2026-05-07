@@ -50,6 +50,7 @@ use warpui::{
     Entity, ModelHandle, SingletonEntity, TypedActionView, View, ViewContext, ViewHandle,
 };
 use warpui::{Action, AppContext};
+use crate::legacy_stubs::{AuthStateProvider, SettingsAction, SettingsSection, TelemetryEvent, ToggleSettingActionPair, UserUid, UserWorkspaces};
 
 const PHOTO_SIZE: f32 = 40.;
 const REFERRAL_CTA: &str = "Earn rewards by sharing Warp with friends & colleagues";

@@ -27,6 +27,7 @@ use crate::{
         TerminalModel,
     },
 };
+use crate::legacy_stubs::{BlocklistAIHistoryModel, TelemetryEvent};
 
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
 pub enum UserTakeOverReason {

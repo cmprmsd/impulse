@@ -16,6 +16,8 @@ use crate::ai::blocklist::inline_action::inline_action_header::{
 };
 use crate::ai::blocklist::inline_action::inline_action_icons::icon_size;
 use crate::ai::document::ai_document_model::{AIDocumentId, AIDocumentModel, AIDocumentVersion};
+use warpui::{AppContext, Element};
+use warpui::platform::{Cursor};
 
 pub struct CreateOrEditDocumentAction {
     document_id: AIDocumentId,

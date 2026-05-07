@@ -57,6 +57,9 @@ use crate::{
 
 use super::{command_dialog::EnvVarCommandDialog, menus::Menus};
 use warpui::{AppContext, BlurContext, Element, Entity, FocusContext, ModelHandle, TypedActionView, View, ViewContext, ViewHandle, WindowId};
+use warpui::platform::{Cursor};
+use warpui::elements::{ChildView};
+use crate::legacy_stubs::{CloudObjectTypeAndId, TelemetryEvent};
 
 // Universal
 pub(super) const CORE_HORIZONATAL_MARGIN: f32 = 24.;

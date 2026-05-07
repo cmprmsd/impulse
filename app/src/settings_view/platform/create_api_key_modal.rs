@@ -22,6 +22,7 @@ use warpui::ui_components::segmented_control::{
 use warpui::{
     AppContext, Element, Entity, SingletonEntity, TypedActionView, View, ViewContext, ViewHandle,
 };
+use crate::legacy_stubs::{UserWorkspaces};
 
 const LABEL_FONT_SIZE: f32 = 14.;
 const INPUT_WIDTH: f32 = 428.; // 460px - (2 * 16px) padding

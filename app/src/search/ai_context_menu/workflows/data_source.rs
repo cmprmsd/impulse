@@ -4,6 +4,7 @@ use crate::search::data_source::{Query, QueryResult};
 use crate::search::mixer::{DataSourceRunErrorWrapper, SyncDataSource};
 use fuzzy_match::FuzzyMatchResult;
 use warpui::{AppContext, SingletonEntity};
+use crate::legacy_stubs::{CloudModel, UserWorkspaces};
 
 const MAX_RESULTS: usize = 50;
 /// Base score for zero-state results. Each item gets an additional bonus based on

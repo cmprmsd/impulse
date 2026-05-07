@@ -50,6 +50,7 @@ use super::{
     MCPServerState, SpawnedServerInfo, TemplatableMCPServerInfo, TemplatableMCPServerManager,
 
 };
+use crate::legacy_stubs::{AISettings, AuthStateProvider, ClientId, CloudModel, CloudModelEvent, ServerId, Space, UserWorkspaces};
 /// Controls the behavior of `spawn_server_impl`.
 enum SpawnMode {
     /// Initial spawn - clears logs and sends telemetry.

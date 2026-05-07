@@ -45,6 +45,7 @@ use crate::terminal::{find::TerminalFindModel, ShellLaunchData};
 use crate::util::link_detection::{
     detect_links, DetectedLinkType, DetectedLinksState, LinkLocation,
 };
+use warpui::{AppContext, Entity, ModelHandle, TypedActionView, View, ViewContext};
 
 pub enum SearchCodebaseViewEvent {
     OpenLinkTooltip {

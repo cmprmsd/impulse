@@ -40,6 +40,7 @@ use super::{
 
 use super::utils::{BLOCKS_KEYBINDINGS, INPUT_EDITOR_KEYBINDINGS, TERMINAL_KEYBINDINGS};
 use warpui::{AppContext, Entity, Keystroke, TypedActionView, View, ViewContext, ViewHandle};
+use warpui::ui_components::components::{UiComponentStyles};
 
 const KEYBINDINGS_PAGE_SHORTCUT: &str = "workspace:toggle_keybindings_page";
 const LINK_WIDTH: f32 = 30.;

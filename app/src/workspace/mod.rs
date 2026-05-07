@@ -1,3 +1,4 @@
+use crate::legacy_stubs::{AgentModeEntrypoint, PaletteSource};
 mod action;
 mod active_session;
 pub mod bonus_grant_notification_model;

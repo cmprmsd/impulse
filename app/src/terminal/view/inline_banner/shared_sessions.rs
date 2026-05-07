@@ -9,6 +9,7 @@ use warpui::{
 
 use crate::appearance::Appearance;
 use warpui::{Element};
+use warpui::fonts::{Properties, Weight};
 
 fn render_inline_shared_session_banner(
     is_active: bool,

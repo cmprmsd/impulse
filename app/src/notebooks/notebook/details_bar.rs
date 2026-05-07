@@ -25,6 +25,8 @@ use crate::{
 
 use super::{super::active_notebook_data::ActiveNotebookData, NotebookAction, EDIT_BUTTON_MARGIN};
 use warpui::{AppContext, Element};
+use warpui::platform::{Cursor};
+use crate::legacy_stubs::{UserProfiles};
 
 /// Component to show details about a notebook:
 /// * Interactive breadcrumbs for its location within Warp Drive

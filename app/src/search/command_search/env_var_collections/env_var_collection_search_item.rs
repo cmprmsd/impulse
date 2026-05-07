@@ -17,6 +17,7 @@ use crate::{
     },
 };
 use warpui::{AppContext, Element};
+use warpui::fonts::{Properties, Weight};
 
 const ENV_VAR_COLLECTION_ICON_PATH: &str = "bundled/svg/env-var-collection.svg";
 

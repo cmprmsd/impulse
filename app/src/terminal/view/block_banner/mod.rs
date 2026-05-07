@@ -1,4 +1,3 @@
-use warpui::{Element};
 //! "Block banners" are banners that render _inside_ a block, or its snackbar header. Currently it
 //! will only render inside the active block, though that constraint can be relaxed with a bit more
 //! work. The most important constraint that makes these different from other UI components is that
@@ -6,6 +5,8 @@ use warpui::{Element};
 //! to efficiently viewport them: that the block height can be calculated based on Block state alone
 //! without a LayoutContext. Use the exported BLOCK_BANNER_HEIGHT const when the banner height
 //! needs to be taken into account.
+
+use warpui::{Element};
 
 mod warpify;
 

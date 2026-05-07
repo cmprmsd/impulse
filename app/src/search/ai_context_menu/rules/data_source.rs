@@ -5,6 +5,7 @@ use crate::search::data_source::{Query, QueryResult};
 use crate::search::mixer::{DataSourceRunErrorWrapper, SyncDataSource};
 use fuzzy_match::FuzzyMatchResult;
 use warpui::{AppContext, Entity, SingletonEntity};
+use crate::legacy_stubs::{CloudModel};
 
 const MAX_RESULTS: usize = 50;
 const ZERO_STATE_BASE_SCORE: i64 = 1000;

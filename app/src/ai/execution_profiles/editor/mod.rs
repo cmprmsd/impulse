@@ -41,6 +41,7 @@ use warpui::{
         PartialClickableElement, ScrollbarWidth, Text,
     },
 };
+use warpui::{AppContext, Element, Entity, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};
 
 const MODEL_MENU_WIDTH: f32 = 250.;
 

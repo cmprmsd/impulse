@@ -23,6 +23,7 @@ use std::time::Duration;
 use warp_core::features::FeatureFlag;
 use warpui::{elements::MouseStateHandle, ModelHandle, ViewContext, ViewHandle};
 use warpui::{AppContext, Element};
+use crate::legacy_stubs::{UserUid};
 
 /// The kind of shared session this is.
 pub enum Kind {

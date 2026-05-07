@@ -21,6 +21,7 @@ use warp_core::features::FeatureFlag;
 use warpui::{AppContext, SingletonEntity};
 
 use super::llms::{LLMContextWindow, LLMId, LLMPreferences};
+use crate::legacy_stubs::{UserWorkspaces};
 
 pub const PROFILE_NAME_MAX_LENGTH: usize = 50;
 

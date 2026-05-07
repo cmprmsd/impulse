@@ -31,6 +31,7 @@ use crate::{
     },
 };
 use warp_core::send_telemetry_from_ctx;
+use warpui::{ViewContext};
 
 /// PR-mode sub-actions, dispatched wrapped in `GitDialogAction::Pr`.
 #[derive(Clone, Debug, PartialEq)]

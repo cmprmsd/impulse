@@ -45,6 +45,7 @@ use super::{
     manager::SettingsEvent,
 
 };
+use crate::legacy_stubs::{UserWorkspaces};
 /// Provides client ids for creating cloud preferences.
 /// We define this as a trait so tests can track what client ids are created and use
 /// them for mocking server responses.

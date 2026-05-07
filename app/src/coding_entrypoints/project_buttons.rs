@@ -15,6 +15,9 @@ use warpui::{
 };
 
 use crate::util::bindings::{keybinding_name_to_display_string, BindingGroup, CustomAction};
+use warpui::{AppContext, Element, Entity, TypedActionView, View, ViewContext};
+use warpui::fonts::{Weight};
+use warpui::platform::{Cursor};
 
 const BUTTON_MIN_WIDTH: f32 = 149.;
 

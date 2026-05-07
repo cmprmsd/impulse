@@ -41,6 +41,8 @@ use warpui::ui_components::components::{UiComponent, UiComponentStyles};
 
 use super::{workflow::Workflow, WorkflowSource};
 use warpui::{AppContext, Entity, TypedActionView, View, ViewContext};
+use warpui::{WeakViewHandle};
+use warpui::fonts::{Properties, Weight};
 
 const SCROLLBAR_WIDTH: ScrollbarWidth = ScrollbarWidth::Auto;
 const DESCRIPTION_MARGIN: f32 = 24.;

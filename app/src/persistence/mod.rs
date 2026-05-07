@@ -1,5 +1,7 @@
 #![cfg_attr(not(feature = "local_fs"), allow(dead_code))]
 
+use crate::legacy_stubs::{CloudObject, CloudObjectMetadata, EnablementState, ObjectAction, ObjectIdType, RevisionAndLastEditor, ServerCreationInfo, ServerExperiment, ServerTimestamp, SyncId, UserProfileWithUID, WorkspaceUid};
+
 cfg_if::cfg_if! {
     if #[cfg(feature = "local_fs")] {
         pub mod agent;

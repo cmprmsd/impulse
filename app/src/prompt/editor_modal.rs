@@ -35,6 +35,7 @@ use warpui::elements::{
     CrossAxisAlignment, Empty, Flex, Hoverable, MainAxisAlignment, MainAxisSize, MouseStateHandle,
     OffsetPositioning, ParentAnchor, ParentElement, ParentOffsetBounds, Radius, Stack,
 };
+use crate::legacy_stubs::{TelemetryEvent};
 
 const MODAL_WIDTH: f32 = 700.;
 const BORDER_WIDTH: f32 = 1.;

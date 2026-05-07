@@ -64,6 +64,9 @@ use warp_core::features::FeatureFlag;
 use warp_core::ui::theme::{color::internal_colors, Fill};
 use warp_core::HostId;
 use warpui::ui_components::components::UiComponent;
+use warpui::{AppContext, Element, Entity, EventContext, TypedActionView, View, ViewHandle};
+use warpui::fonts::{Properties, Weight};
+use crate::legacy_stubs::{RemoteServerManager};
 
 mod editing;
 mod render;

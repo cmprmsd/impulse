@@ -27,6 +27,7 @@ use warp_util::path::EscapeChar;
 use warpui::{AppContext, Entity, EntityId, ModelContext, SingletonEntity};
 
 use super::BlocklistAIHistoryModel;
+use crate::legacy_stubs::{AISettings, UserWorkspaces};
 
 /// Whether or not a command can be auto-executed, along with a detailed reason.
 #[derive(Copy, Clone, Debug, Deserialize, Serialize)]

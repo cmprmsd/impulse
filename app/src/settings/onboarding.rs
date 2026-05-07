@@ -10,6 +10,7 @@ use onboarding::{SelectedSettings, SessionDefault, UICustomizationSettings};
 use settings::Setting as _;
 use warp_core::features::FeatureFlag;
 use warpui::{AppContext, SingletonEntity as _};
+use crate::legacy_stubs::{UserWorkspaces};
 
 /// Applies onboarding settings based on the user's selected mode.
 pub fn apply_onboarding_settings(selected_settings: &SelectedSettings, app: &mut AppContext) {

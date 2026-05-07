@@ -40,6 +40,7 @@ use crate::{
     },
 };
 use warp_core::send_telemetry_from_ctx;
+use warpui::{AppContext, ViewContext, ViewHandle};
 
 /// What should happen after a successful commit.
 #[allow(clippy::enum_variant_names)] // `Commit` prefix is intentional: describes the always-present first stage.

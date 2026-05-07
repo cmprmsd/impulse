@@ -13,6 +13,7 @@ use warpui::{
         text::Span,
     },
 };
+use warpui::{AppContext, Element, Entity, TypedActionView, View, ViewContext};
 
 type ItemLabelFn<T> = Box<dyn Fn(&T, &AppContext) -> Span>;
 

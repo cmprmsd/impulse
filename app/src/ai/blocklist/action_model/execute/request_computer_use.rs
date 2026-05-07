@@ -9,6 +9,7 @@ use crate::ai::blocklist::BlocklistAIHistoryModel;
 use crate::send_telemetry_from_ctx;
 
 use super::{ActionExecution, AnyActionExecution, ExecuteActionInput, PreprocessActionInput};
+use crate::legacy_stubs::{AmbientAgentTaskId, TelemetryEvent};
 
 pub struct RequestComputerUseExecutor {
     terminal_view_id: EntityId,

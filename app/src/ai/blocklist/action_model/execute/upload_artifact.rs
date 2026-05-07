@@ -1,5 +1,6 @@
 #[cfg(not(target_family = "wasm"))]
 use std::path::PathBuf;
+use crate::legacy_stubs::{ServerApiProvider};
 
 #[cfg(test)]
 #[path = "upload_artifact_tests.rs"]

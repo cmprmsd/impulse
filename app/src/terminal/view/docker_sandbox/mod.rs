@@ -33,6 +33,7 @@ use warp_cli::agent::Harness;
 use warpui::r#async::FutureExt;
 
 use super::TerminalView;
+use crate::legacy_stubs::{ServerApiProvider, ServerId, SyncId, UpdateManager};
 
 /// Default base Docker image used for newly created sandbox shells.
 ///

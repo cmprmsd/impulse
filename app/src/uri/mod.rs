@@ -1,3 +1,4 @@
+use crate::legacy_stubs::{ServerId, TelemetryEvent};
 mod docker;
 pub mod parse_url_paths;
 pub mod web_intent_parser;

@@ -1,4 +1,7 @@
 #![cfg_attr(target_family = "wasm", allow(dead_code, unused_imports))]
+
+use warpui::{AppContext, BlurContext, Element, Entity, FocusContext, Keystroke, ModelHandle, Pixels, View, ViewContext, ViewHandle, WeakViewHandle, WindowId};
+use warpui::platform::{Cursor};
 // Adding this file level gate as some of the code around editability is not used in WASM yet.
 
 use crate::code::editor::{

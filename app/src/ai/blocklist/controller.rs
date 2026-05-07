@@ -3,6 +3,8 @@
 //!
 //! The `BlocklistAIController` orchestrates state updates and service calls to power the
 //! Agent Mode UI.
+
+use crate::legacy_stubs::{AmbientAgentTaskId, CloudModel, ServerApiProvider, TeamUpdateManager, TelemetryEvent, UserWorkspaces};
 pub mod input_context;
 mod pending_response_streams;
 pub mod response_stream;

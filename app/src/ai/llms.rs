@@ -20,6 +20,7 @@ use ai::api_keys::{ApiKeyManager, ApiKeyManagerEvent};
 use super::execution_profiles::profiles::AIExecutionProfilesModel;
 
 pub use ai::LLMId;
+use crate::legacy_stubs::{ServerApiProvider, UserWorkspaces};
 
 /// Checks if a user's' API key is being used for the given provider.
 /// Returns `true` if BYO API key is enabled and a key exists for the provider.

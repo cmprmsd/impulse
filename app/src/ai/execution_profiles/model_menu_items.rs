@@ -9,6 +9,8 @@ use warpui::{
         Shrinkable, Text,
     },
 };
+use warpui::{Action, AppContext};
+use warpui::fonts::{Properties};
 
 pub fn is_auto(llm: &LLMInfo) -> bool {
     llm.display_name.to_lowercase().contains("auto")

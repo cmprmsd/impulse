@@ -19,6 +19,7 @@ use warpui::{
 
 use crate::{appearance::Appearance, ui_components::icons::Icon};
 use pathfinder_geometry::vector::Vector2F;
+use warpui::{Action, AppContext, Element, Entity, EventContext, TypedActionView, View, ViewContext};
 
 const CLOSE_BUTTON_DIAMETER: f32 = 20.;
 const INNER_MARGIN: f32 = 12.;

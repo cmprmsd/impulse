@@ -35,6 +35,9 @@ use super::{
     },
 };
 use warpui::{AppContext, Element, Entity, Keystroke, ModelHandle, TypedActionView, View, ViewContext};
+use warpui::{WeakViewHandle};
+use warpui::platform::{Cursor};
+use crate::legacy_stubs::{UserWorkspaces};
 
 const TRANSCRIPT_POSITION_ID: &str = "ai_assistant::transcript";
 

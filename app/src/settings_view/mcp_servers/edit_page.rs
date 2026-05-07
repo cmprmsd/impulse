@@ -55,6 +55,7 @@ use crate::{
     },
 };
 use warpui::{AppContext, Element, Entity, TypedActionView, View, ViewContext, ViewHandle};
+use warpui::platform::{Cursor};
 
 const DEFAULT_JSON_TEXT: &str = r#"{
     "": {

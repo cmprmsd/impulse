@@ -4,6 +4,7 @@ use serde::{Deserialize, Serialize};
 use warp_core::context_flag::ContextFlag;
 use warp_core::features::FeatureFlag;
 use warpui::{AppContext, SingletonEntity};
+use crate::legacy_stubs::{ObjectType, Revision, ServerId, SyncId};
 
 pub mod categories;
 use anyhow::Result;

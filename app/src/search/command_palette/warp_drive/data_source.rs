@@ -15,6 +15,7 @@ use crate::settings::AISettings;
 use crate::workflows::CloudWorkflow;
 use std::collections::HashMap;
 use warpui::{AppContext, Entity, ModelContext, SingletonEntity};
+use crate::legacy_stubs::{CloudModel, CloudModelEvent, CloudObject, GenericStringObjectFormat, JsonObjectType, ObjectType, ObjectUid, SyncId};
 
 /// Datasource that searches against all Warp Drive objects
 pub struct DataSource {

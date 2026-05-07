@@ -32,6 +32,9 @@ use crate::editor::InteractionState;
 use warp_editor::{
     content::buffer::InitialBufferState, render::element::VerticalExpansionBehavior,
 };
+use warpui::{AppContext, Element, Entity, TypedActionView, View, ViewContext, ViewHandle};
+use warpui::keymap::{FixedBinding};
+use warpui::platform::{Cursor};
 
 /// Maximum height for the find references card.
 pub const FIND_REFERENCES_CARD_MAX_HEIGHT: f32 = 300.;

@@ -1,3 +1,4 @@
+use crate::legacy_stubs::{HashedSqliteId, ObjectUid, ServerId, SyncId};
 pub mod cloud_action_confirmation_dialog;
 mod cloud_object_naming_dialog;
 pub mod cloud_object_styling;

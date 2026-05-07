@@ -19,6 +19,8 @@ use crate::{
         RenderCompactibleActionButton,
     },
 };
+use warpui::{AppContext, Element, EventContext};
+use warpui::platform::{Cursor};
 
 /// Same padding constants as the original for consistency
 pub const INLINE_ACTION_HORIZONTAL_PADDING: f32 = 16.;

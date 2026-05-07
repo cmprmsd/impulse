@@ -30,6 +30,7 @@ use crate::{
 };
 
 use super::WithContentItemSpacing;
+use warpui::{AppContext, Element};
 
 pub(super) fn render_todos(
     id: &MessageId,

@@ -17,6 +17,8 @@ use warpui::elements::ChildView;
 use warpui::{SingletonEntity, ViewHandle};
 
 use super::{AIFact, CloudAIFact, CloudAIFactModel};
+use warpui::{AppContext, Element, Entity, FocusContext, ModelHandle, TypedActionView, View, ViewContext};
+use crate::legacy_stubs::{GenericStringObjectFormat, JsonObjectType, SyncId};
 
 pub mod rule;
 pub mod rule_editor;

@@ -18,6 +18,8 @@ use crate::{
 };
 use crate::{search::command_search::searcher::CommandSearchItemAction, terminal::HistoryEntry};
 use warpui::{AppContext, Element};
+use warpui::fonts::{Properties, Weight};
+use warpui::ui_components::components::{Coords};
 
 const COMMAND_METADATA_LEFT_MARGIN_FROM_METADATA: f32 = 8.;
 

@@ -9,6 +9,8 @@ use warpui::{
 use super::numbered_button::{
     build_inline_input_content, build_numbered_button, build_text_button_content,
 };
+use warpui::{AppContext, Entity, TypedActionView, View, ViewContext, ViewHandle, WeakViewHandle};
+use warpui::keymap::{FixedBinding};
 
 const MARGIN_BETWEEN_BUTTONS: f32 = 4.;
 const NUMBER_SELECT_ENABLED: &str = "NumberSelectEnabled";

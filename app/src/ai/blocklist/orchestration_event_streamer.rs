@@ -24,6 +24,7 @@ use warpui::r#async::{SpawnedFutureHandle, Timer};
 use warpui::{
     Entity, EntityId, GetSingletonModelHandle, ModelContext, SingletonEntity, UpdateModel,
 };
+use crate::legacy_stubs::{AmbientAgentTaskId, ServerApi, ServerApiProvider};
 
 /// Backoff schedule (seconds) for the post-restore
 /// `get_ambient_agent_task` retry: 1s, 2s, 5s, then 10s max.

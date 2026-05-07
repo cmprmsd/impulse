@@ -9,6 +9,7 @@ use strum_macros::IntoStaticStr;
 use warp_util::path::LineAndColumnArg;
 use warpui::keymap::BindingId;
 use warpui::{EntityId, WindowId};
+use crate::legacy_stubs::{SyncId};
 
 pub type CommandPaletteMixer = SearchMixer<CommandPaletteItemAction>;
 

@@ -1,5 +1,7 @@
 #![allow(warnings)]
 
+use crate::legacy_stubs::{AuthStateProvider, UserWorkspaces};
+
 use std::cmp::Ordering;
 use std::collections::{HashMap, HashSet};
 use std::sync::Arc;

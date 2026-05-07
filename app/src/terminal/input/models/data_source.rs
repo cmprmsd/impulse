@@ -39,6 +39,7 @@ use super::model_spec_scores::{
     render_model_spec_header, render_model_spec_scores, CostRow, ModelSpecScoresLayout,
     MODEL_SPECS_DESCRIPTION, MODEL_SPECS_TITLE, REASONING_LEVEL_DESCRIPTION, REASONING_LEVEL_TITLE,
 };
+use crate::legacy_stubs::{AuthStateProvider, UserWorkspaces};
 
 #[derive(Clone, Debug)]
 pub struct AcceptModel {
