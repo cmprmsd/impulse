@@ -493,7 +493,8 @@ If all seven pass, the fork is functional and Syncthing-ready.
   AWS Bedrock paths stripped from `crates/ai/`, and
   `crates/warp_files/` dropped its `Remote` backend. All non-app
   crates compile clean.
-- **Phase 2 — foundation landed.** All in `crates/ai/`, all unit-tested:
+- **Phase 2 — foundation landed and runnable.** All in `crates/ai/`,
+  all unit-tested:
   - `model_client/` — `ModelClient` trait,
     `OpenAiCompatibleClient` (POST `/v1/chat/completions`, SSE,
     multi-chunk tool-call argument buffering),
@@ -508,9 +509,20 @@ If all seven pass, the fork is functional and Syncthing-ready.
   - `provider_settings.rs` — `AiProvider {OpenAiCompatible | ClaudeCli}`
     with JSON serde, `build_client(&provider, &keys) ->
     Arc<dyn ModelClient>` factory, `ApiKeyRef` resolver.
+  - `examples/agent_demo.rs` — runnable end-to-end demo. Reads
+    provider config from env vars, runs a turn, writes the JSONL
+    conversation log. Builds with `cargo build --example agent_demo
+    -p ai` and works against OpenRouter / Ollama / `claude` CLI.
   - 101/101 unit tests pass on the `ai` crate.
-- **Phase 0 app-crate compile + Phase 2 wiring — not started.**
-  See "What's still needed" below.
+- **Phase 0 Track A — bulk syntax cleanup mostly done.** The bulk
+  `use foo::{...};` repair scripts plus hand-fixes brought the app
+  crate from ~1000 syntax errors at the start of cleanup down to
+  semantic errors only. Subsequent unmasking found ~8000 missing-
+  type errors — symptoms of the same broken-import problem in
+  files my detectors couldn't disambiguate. Not the productive
+  direction.
+- **Phase 0 Track B / Phase 2 wiring — not started.** This is the
+  remaining work. See "What's still needed" below.
 
   The **app crate (`warp`) does not yet compile**. Two interleaved
   problems remain:
@@ -610,19 +622,44 @@ plus many under `app/src/ai/blocklist/`,
 
 ### Recommended order
 
-1. Track A on a clean branch from the current HEAD: hand-fix orphan
-   `use` blocks until `cargo check -p warp` is silent or only
-   showing missing-symbol errors (not parse errors).
-2. Track B step 1 (re-export module) — small, mechanical.
-3. Track B step 2 (BlocklistAIHistoryModel rewrite) — the largest
-   single piece of work; ~1 day for a focused engineer.
-4. Track B steps 3-5 (settings UI, AppState slot, call-site
-   rewrites) in any order; each is small.
+The honest read after a long session iterating on Track A: the
+remaining errors in the app crate are dominated by **missing
+imports** (`ViewContext`, `AppContext`, `Element`, etc. plus
+deleted-cloud-types like `BlocklistAIHistoryModel`,
+`ServerConversationToken`, `AmbientAgentTaskId`, ...) rather than
+parse errors. The plan-time estimate of "Track A is mechanical and
+fast" was wrong — it's mechanical but slow because each file's
+broken import block is subtly different. A clean approach for the
+next session:
 
-Once those land, the agent UI works end-to-end against either an
-OpenAI-compatible endpoint or the user's `claude` CLI. Phase 1
-(local-folder Drive replacement) is still pending and is independent
-of Phase 2.
+1. **Pick a target subset.** The app's `app/src/{auth,server,
+   cloud_object,workspaces,billing,external_secrets,launch_configs,
+   pricing,usage,remote_server}` are *gone*. The agent system
+   (`app/src/ai/agent`, `app/src/ai/blocklist`,
+   `app/src/ai/agent_sdk`-style files) is still partially in tree
+   but mostly orphaned. Decide whether to delete those subtrees
+   wholesale and rebuild a minimal local-agent UI on top of the
+   Phase 2 foundation, or keep them and stub the missing types.
+2. **If keeping/stubbing:** add a single file
+   `app/src/ai/agent/legacy_stubs.rs` that defines all the
+   referenced types as bare structs/enums with `#[derive(Clone,
+   Debug, Default)]`. List drawn from `cargo check -p warp 2>&1 |
+   grep -oE 'cannot find type \`[A-Z][a-zA-Z]*\`' | sort | uniq -c |
+   sort -rn`. Wire into `agent/mod.rs`. ~1 day.
+3. **If deleting:** wholesale-delete `app/src/ai/agent/` and
+   `app/src/ai/blocklist/` and all the cloud-coupled UI under
+   `app/src/{drive,notebooks,workflows}` that won't have backends
+   until Phase 1, then build a minimal new
+   `app/src/local_agent/panel.rs` that shows a chat input + scrolling
+   transcript using the Phase 2 `ConversationStore` + `run_turn`.
+   ~3-5 days but ends with a usable terminal.
+4. Either way, the demo binary at `crates/ai/examples/agent_demo.rs`
+   is the smoke test for the underlying Phase 2 backend; whatever
+   the app integration looks like, it should produce equivalent
+   JSONL on disk.
+
+Phase 1 (local-folder Drive replacement) is still pending and is
+independent of Phase 2.
 
 The intended branch for the work is `claude/audit-warp-terminal-lNAJT`;
 each phase's sub-commits should land here in the order above. Any future
