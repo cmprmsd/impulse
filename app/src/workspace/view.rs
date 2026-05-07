@@ -183,9 +183,6 @@ use repo_metadata::RemoteRepositoryIdentifier;
 #[cfg(target_family = "wasm")]
 use url::Url;
 
-    SharedObjectsCreationDeniedModal, SharedObjectsCreationDeniedModalEvent,
-};
-
 #[cfg(target_family = "wasm")]
 use crate::wasm_nux_dialog::WasmNUXDialog;
 
@@ -204,8 +201,6 @@ use crate::autoupdate::{
 use crate::banner::BannerState;
 use crate::changelog_model::{ChangelogModel, ChangelogRequestType, Event as ChangelogEvent};
 use crate::channel::Channel;
-    CloudObject, GenericStringObjectFormat, JsonObjectType, ObjectType, Owner, Space,
-};
 use crate::context_chips::ChipRuntimeCapabilities;
 use crate::drive::import::modal::{ImportModal, ImportModalEvent};
 use crate::drive::workflows::arguments::ArgumentsState;
@@ -247,13 +242,6 @@ use crate::search::command_search::searcher::{
     AcceptedHistoryItem, AcceptedWorkflow, CommandSearchItemAction,
 };
 use crate::search::command_search::view::{CommandSearchEvent, CommandSearchView};
-    ObjectOperation, OperationSuccessType, UpdateManager, UpdateManagerEvent,
-};
-    AddTabWithShellSource, AnonymousUserSignupEntrypoint, CloseTarget, EnvVarTelemetryMetadata,
-    FileTreeSource, KnowledgePaneEntrypoint, LaunchConfigUiLocation,
-    MCPServerCollectionPaneEntrypoint, OpenedWarpAISource, SharingDialogSource, TierLimitHitEvent,
-    WarpDriveSource,
-};
 use crate::session_management::{SessionNavigationData, SessionSource, TabNavigationData};
 use crate::settings::{
     active_theme_kind, respect_system_theme, AccessibilitySettings, AliasExpansionSettings,
