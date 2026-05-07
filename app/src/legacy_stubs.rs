@@ -979,3 +979,7 @@ pub struct PathRoot;
 
 #[derive(Debug, Clone, Default)]
 pub struct PassiveSuggestionTrigger;
+
+#[derive(Debug, Clone, Default)]
+pub struct MCPServerTelemetryError;
+

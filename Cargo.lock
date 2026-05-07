@@ -481,6 +481,10 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "080e9890a082662b09c1ad45f567faeeb47f22b5fb23895fbe1e651e718e25ca"
 
 [[package]]
+name = "api"
+version = "0.0.0"
+
+[[package]]
 name = "app-installation-detection"
 version = "0.1.0"
 dependencies = [
@@ -10429,6 +10433,10 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "2b15c43186be67a4fd63bee50d0303afffcef381492ebe2c5d87f324e1b8815c"
 
 [[package]]
+name = "remote_server"
+version = "0.0.0"
+
+[[package]]
 name = "rend"
 version = "0.4.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -13883,6 +13891,7 @@ dependencies = [
  "aho-corasick",
  "ai",
  "anyhow",
+ "api",
  "app-installation-detection",
  "arrayvec",
  "asset_cache",
@@ -14041,6 +14050,7 @@ dependencies = [
  "rayon",
  "regex",
  "regex-automata",
+ "remote_server",
  "repo_metadata",
  "reqwest",
  "reqwest-eventsource",
