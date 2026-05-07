@@ -482,13 +482,51 @@ After Phase 3:
 
 If all seven pass, the fork is functional and Syncthing-ready.
 
-## Status (as of this commit)
+## Status
 
-- Audit complete; this plan is the deliverable.
-- Phase 0 — not started.
+- Audit complete (committed as part of this plan).
+- **Phase 0 — in progress.** This commit lands the bulk cloud-crate
+  detach: 6 cloud crates removed from the workspace
+  (`firebase`, `graphql`, `warp_graphql_schema`, `managed_secrets`,
+  `managed_secrets_wasm`, `warp_server_client`, plus `remote_server`),
+  ~250 cloud-only files deleted from `app/src/`, the proto API
+  (`warp_multi_agent_api`) and AWS Bedrock paths stripped from
+  `crates/ai/`, and `crates/warp_files/` dropped its `Remote` backend.
+  All non-app crates compile clean.
+
+  The **app crate (`warp`) does not yet compile** because the
+  `app/src/ai/agent/` subsystem is intrinsically built on the deleted
+  hosted-agent proto API and its types are referenced by ~140 files
+  throughout `app/src/ai/`. Replacing that subsystem with a local
+  agent loop is Phase 2 work; until that lands, the app crate stays
+  red.
 - Phase 1 — not started.
 - Phase 2 — not started.
 - Phase 3 — not started.
+
+### What's still needed for a clean Phase 0 compile
+
+The remaining surgery is in `app/src/ai/` (and its dependents):
+
+- `app/src/ai/agent/mod.rs` (3,077 lines) defines types like
+  `AIAgentExchange`, `AIAgent...`, `CancellationReason`,
+  `MessageId`, `AIConversationId`, `ServerOutputId`,
+  `ServerConversationToken`, etc. that are referenced from ~140 other
+  files. The file itself is essentially a thin layer around the
+  proto API.
+- `app/src/ai/blocklist/history_model.rs` and related blocklist
+  files reference `crate::ai::agent::api::*`, `task::*`, and
+  `conversation::*` (all deleted).
+- The `BlocklistAIHistoryModel` (used in `lib.rs`, `tab.rs`, ~100
+  call sites) wraps the cloud conversation persistence layer and
+  needs to be replaced with the local
+  `~/WarpData/ai_conversations/{uid}.jsonl` model from Phase 1/2.
+
+The recommended next step is to begin Phase 2 work: define the new
+`ModelClient` trait and a minimal local conversation model in
+`crates/ai/`, then re-stub the app-side types so the build comes
+back green. Once Phase 2 lands a working agent loop, the Phase 0
+checkpoint becomes a clean compile.
 
 The intended branch for the work is `claude/audit-warp-terminal-lNAJT`;
 each phase's sub-commits should land here in the order above. Any future

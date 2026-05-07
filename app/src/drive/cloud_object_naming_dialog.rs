@@ -13,7 +13,6 @@ use warpui::{
     AppContext, Element, ViewHandle,
 };
 
-use crate::cloud_object::Space;
 use crate::{
     appearance::Appearance, editor::EditorView, server::ids::SyncId, ui_components::blended_colors,
 };

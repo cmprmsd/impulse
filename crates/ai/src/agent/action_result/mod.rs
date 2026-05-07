@@ -1,11 +1,8 @@
-mod convert;
-
 use std::{fmt::Display, ops::Range, time::SystemTime};
 
 use itertools::Itertools as _;
 use serde::{Deserialize, Serialize};
 use warp_core::command::ExitCode;
-use warp_multi_agent_api::apply_file_diffs_result::success::UpdatedFileContent;
 use warp_terminal::model::BlockId;
 
 use crate::{
@@ -654,22 +651,6 @@ impl Display for UpdatedFileContext {
             "user_edited {}, file {}",
             self.was_edited_by_user, self.file_context
         )
-    }
-}
-
-impl From<UpdatedFileContext> for Vec<UpdatedFileContent> {
-    fn from(value: UpdatedFileContext) -> Self {
-        // Note: This method only makes sense for FileContexts that have a string content.
-        // TODO: How do we gracefully fail binary files here?
-        let file_content: Vec<warp_multi_agent_api::FileContent> = value.file_context.into();
-
-        file_content
-            .into_iter()
-            .map(|content| UpdatedFileContent {
-                was_edited_by_user: value.was_edited_by_user,
-                file: Some(content),
-            })
-            .collect()
     }
 }
 

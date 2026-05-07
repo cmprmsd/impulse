@@ -1,4 +1,3 @@
-use crate::server::telemetry::ImageProtocol;
 use crate::terminal::model::session::Sessions;
 
 use crate::terminal::event::{
@@ -12,7 +11,6 @@ use async_channel::Receiver;
 use instant::Instant;
 use std::sync::Arc;
 
-use crate::remote_server::manager::RemoteServerManager;
 use warpui::SingletonEntity;
 use warpui::{Entity, ModelContext, ModelHandle};
 

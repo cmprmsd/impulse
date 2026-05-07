@@ -1,6 +1,3 @@
-use crate::cloud_object::model::generic_string_model::GenericStringObjectId;
-use crate::cloud_object::model::persistence::{CloudModel, CloudModelEvent};
-use crate::cloud_object::{
     CloudObject, GenericStringObjectFormat, JsonObjectType, Owner, Revision,
 };
 use crate::drive::CloudObjectTypeAndId;
@@ -10,9 +7,6 @@ use crate::editor::{
 };
 use crate::network::NetworkStatus;
 use crate::search_bar::SearchBar;
-use crate::server::cloud_objects::update_manager::{UpdateManager, UpdateManagerEvent};
-use crate::server::ids::{ClientId, SyncId};
-use crate::server::sync_queue::SyncQueue;
 use crate::settings::{AISettings, AISettingsChangedEvent};
 use crate::ui_components::icons::Icon;
 use crate::view_components::{
@@ -20,7 +14,6 @@ use crate::view_components::{
     DismissibleToast,
 };
 use crate::workspace::ToastStack;
-use crate::workspaces::user_workspaces::UserWorkspaces;
 use ai::project_context::model::{ProjectContextModel, ProjectContextModelEvent};
 use markdown_parser::{
     weight::CustomWeight, FormattedText, FormattedTextFragment, FormattedTextLine,

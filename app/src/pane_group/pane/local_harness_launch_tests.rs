@@ -8,8 +8,6 @@ use super::{
     build_local_opencode_child_command, local_child_task_config, normalize_local_child_harness,
     prepare_local_harness_child_launch, validate_local_harness_shell,
 };
-use crate::ai::ambient_agents::task::HarnessConfig;
-use crate::server::server_api::ai::MockAIClient;
 use crate::terminal::shell::ShellType;
 
 struct EnvVarGuard {

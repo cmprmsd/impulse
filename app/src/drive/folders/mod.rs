@@ -3,7 +3,6 @@ use std::sync::Arc;
 use super::items::folder::WarpDriveFolder;
 use super::items::WarpDriveItem;
 use super::CloudObjectTypeAndId;
-use crate::server::cloud_objects::update_manager::InitiatedBy;
 use crate::{
     appearance::Appearance,
     cloud_object::{
@@ -22,7 +21,6 @@ use anyhow::Result;
 use async_trait::async_trait;
 
 // Re-exported from warp_server_client.
-pub use warp_server_client::ids::FolderId;
 
 /// The model for a `CloudFolder`.
 #[derive(Clone, Debug, PartialEq)]

@@ -6,7 +6,6 @@ use warpui::App;
 use super::*;
 use crate::ai::agent::conversation::AIConversationId;
 use crate::appearance::Appearance;
-use crate::cloud_object::model::persistence::CloudModel;
 use crate::test_util::settings::initialize_settings_for_tests;
 
 fn initialize_app_for_ai_document_tests(app: &mut App) {

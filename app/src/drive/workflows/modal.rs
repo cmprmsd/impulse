@@ -28,7 +28,6 @@ use warpui::{
     ViewHandle,
 };
 
-use crate::auth::UserUid;
 use crate::{
     appearance::Appearance,
     cloud_object::{

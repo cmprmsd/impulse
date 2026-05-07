@@ -422,7 +422,6 @@ impl Requests {
 #[cfg(test)]
 impl Requests {
     pub fn new_with_transcript(transcript: Vec<TranscriptPart>) -> Self {
-        use crate::server::server_api::ServerApiProvider;
 
         Self {
             server_api: ServerApiProvider::new_for_test().get(),

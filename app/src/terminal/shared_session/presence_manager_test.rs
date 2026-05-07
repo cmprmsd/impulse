@@ -1,4 +1,3 @@
-use crate::auth::UserUid;
 use crate::terminal::model::ansi::{CommandFinishedValue, Handler};
 use crate::terminal::model::blocks::BlockList;
 use crate::terminal::model::test_utils::TestBlockListBuilder;

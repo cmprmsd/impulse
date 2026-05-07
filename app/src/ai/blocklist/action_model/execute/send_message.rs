@@ -13,7 +13,6 @@ use crate::ai::agent::{
     conversation::AIConversationId, AIAgentAction, AIAgentActionResultType, AIAgentActionType,
     SendMessageToAgentResult,
 };
-use crate::ai::ambient_agents::AmbientAgentTaskId;
 use crate::ai::blocklist::history_model::BlocklistAIHistoryModel;
 use crate::ai::blocklist::orchestration_events::{OrchestrationEventService, SendMessageResult};
 use crate::ai::blocklist::telemetry::{
@@ -21,8 +20,6 @@ use crate::ai::blocklist::telemetry::{
     TeamAgentCommunicationFailureReason, TeamAgentCommunicationKind,
     TeamAgentCommunicationTransport, TeamAgentOrchestrationVersion,
 };
-use crate::server::server_api::ai::{SendAgentMessageRequest, SendAgentMessageResponse};
-use crate::server::server_api::ServerApiProvider;
 use warp_core::features::FeatureFlag;
 use warp_core::send_telemetry_from_ctx;
 

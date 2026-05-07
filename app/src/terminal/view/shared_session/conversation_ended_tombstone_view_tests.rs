@@ -1,10 +1,8 @@
 use chrono::{Duration, Utc};
 use warp_cli::agent::Harness;
 
-use crate::ai::ambient_agents::task::{
     AgentConfigSnapshot, HarnessConfig, RequestUsage, TaskCreatorInfo,
 };
-use crate::ai::ambient_agents::{AmbientAgentTask, AmbientAgentTaskState};
 use crate::ai::artifacts::Artifact;
 use crate::ai::blocklist::format_credits;
 use crate::util::time_format::human_readable_precise_duration;

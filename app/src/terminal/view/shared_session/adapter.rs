@@ -3,7 +3,6 @@
 use super::sharer::Sharer;
 use super::viewer::Viewer;
 
-use crate::auth::UserUid;
 use crate::banner::{Banner, BannerTextContent};
 use crate::terminal::shared_session::render_util::{
     participant_avatar_for_selected_block, ParticipantAvatarParams,

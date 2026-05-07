@@ -21,7 +21,6 @@ use crate::ai::llms::{
     is_using_api_key_for_provider, DisableReason, LLMId, LLMInfo, LLMPreferences, LLMProvider,
     LLMSpec,
 };
-use crate::auth::AuthStateProvider;
 use crate::features::FeatureFlag;
 use crate::search::data_source::{Query, QueryFilter, QueryResult};
 use crate::search::mixer::DataSourceRunErrorWrapper;
@@ -34,7 +33,6 @@ use crate::terminal::input::inline_menu::{
 use crate::terminal::input::inline_menu::{styles as inline_styles, DetailsRenderConfig};
 use crate::terminal::input::message_bar::{Message, MessageItem};
 use crate::workspace::WorkspaceAction;
-use crate::workspaces::user_workspaces::UserWorkspaces;
 use warpui::keymap::Keystroke;
 use warpui::platform::OperatingSystem;
 

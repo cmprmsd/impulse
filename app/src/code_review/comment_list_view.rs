@@ -1,6 +1,5 @@
 use std::borrow::Cow;
 
-use crate::ai::AIRequestUsageModel;
 use crate::code::editor::comment_editor::DEFAULT_COMMENT_MAX_WIDTH;
 use crate::code::editor::view::{CodeEditorEvent, CodeEditorView};
 use crate::code_review::comment_rendering::CommentViewCard;

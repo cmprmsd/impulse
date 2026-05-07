@@ -8,7 +8,6 @@ use futures::stream::{self, BoxStream};
 use futures::StreamExt;
 
 use super::*;
-use crate::server::server_api::ai::AgentRunEvent;
 
 const ZERO_BACKOFF_STEPS: &[u64] = &[0];
 

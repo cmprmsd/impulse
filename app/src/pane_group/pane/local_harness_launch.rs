@@ -10,7 +10,6 @@ use crate::ai::{
     },
     ambient_agents::{task::HarnessConfig, AgentConfigSnapshot, AmbientAgentTaskId},
 };
-use crate::server::server_api::ai::AIClient;
 use crate::terminal::cli_agent_sessions::plugin_manager::plugin_manager_for;
 use crate::terminal::shell::ShellType;
 use shell_words::quote as shell_quote;

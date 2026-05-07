@@ -3,7 +3,6 @@ use crate::ai::agent::task::TaskId;
 use crate::ai::agent::{
     AIAgentExchange, AIAgentExchangeId, AIAgentInput, AIAgentOutputStatus, UserQueryMode,
 };
-use crate::ai::ambient_agents::AmbientAgentTaskId;
 use chrono::Local;
 use parking_lot::FairMutex;
 use std::any::Any;
@@ -31,7 +30,6 @@ use crate::editor::{AutosuggestionLocation, AutosuggestionType};
 use crate::features::FeatureFlag;
 use crate::pane_group::focus_state::PaneGroupFocusState;
 use crate::pane_group::{pane::PaneStack, BackingView, TerminalPaneId};
-use crate::server::server_api::ai::SpawnAgentRequest;
 use crate::settings::import::model::ImportedConfigModel;
 use crate::settings::{AISettings, AppEditorSettings, WarpPromptSeparator};
 use crate::terminal::alt_screen::should_intercept_mouse;

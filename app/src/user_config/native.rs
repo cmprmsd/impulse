@@ -9,7 +9,6 @@ use repo_metadata::RepositoryUpdate;
 use warpui::{ModelContext, SingletonEntity};
 
 use crate::features::FeatureFlag;
-use crate::launch_configs::launch_config::LaunchConfig;
 use crate::tab_configs::{TabConfig, TabConfigError};
 use crate::themes::theme::WarpThemeConfig;
 use crate::warp_managed_paths_watcher::{

@@ -31,8 +31,6 @@ use crate::ai::agent::{
 };
 use crate::ai::agent::{DocumentContentAttachmentSource, FileContext};
 #[cfg(not(target_family = "wasm"))]
-use crate::ai::agent_sdk::ClaudeHarness;
-use crate::ai::ambient_agents::AmbientAgentTaskId;
 use crate::ai::document::ai_document_model::{
     AIDocumentId, AIDocumentModel, AIDocumentUserEditStatus,
 };
@@ -47,15 +45,12 @@ use crate::ai::{
     llms::LLMPreferences,
     AIRequestUsageModel,
 };
-use crate::cloud_object::model::persistence::CloudModel;
 use crate::features::FeatureFlag;
 use crate::global_resource_handles::GlobalResourceHandlesProvider;
 use crate::network::NetworkStatus;
 use crate::notebooks::editor::model::FileLinkResolutionContext;
 use crate::persistence::ModelEvent;
-use crate::server::server_api::AIApiError;
 #[cfg(not(target_family = "wasm"))]
-use crate::server::server_api::ServerApiProvider;
 use crate::terminal::model::block::{
     formatted_terminal_contents_for_input, BlockId, CURSOR_MARKER,
 };
@@ -65,8 +60,6 @@ use crate::terminal::{
     model::terminal_model::TerminalModel,
     ShellLaunchData,
 };
-use crate::workspaces::update_manager::TeamUpdateManager;
-use crate::workspaces::user_workspaces::UserWorkspaces;
 use crate::{send_telemetry_from_ctx, server::telemetry::TelemetryEvent};
 use anyhow::anyhow;
 use chrono::{DateTime, Local};
@@ -80,7 +73,6 @@ use std::path::PathBuf;
 use std::sync::Arc;
 use std::time::Duration;
 use warp_core::assertions::safe_assert;
-use warp_multi_agent_api::{message, Task, ToolType};
 use warpui::r#async::{SpawnedFutureHandle, Timer};
 
 use super::orchestration_event_streamer::{
@@ -2899,7 +2891,6 @@ impl BlocklistAIController {
                 });
             }
             Some(warp_multi_agent_api::response_event::stream_finished::Reason::InvalidApiKey(details)) => {
-                use warp_multi_agent_api::LlmProvider;
                 let is_aws_bedrock = details
                     .provider
                     .try_into()

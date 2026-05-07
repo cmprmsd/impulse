@@ -5,31 +5,16 @@ use settings::manager::SettingsManager;
 use warpui::{App, SingletonEntity};
 
 use crate::ai::facts::{AIFact, AIMemory, CloudAIFactModel};
-use crate::auth::AuthStateProvider;
-use crate::cloud_object::model::generic_string_model::GenericStringModel;
-use crate::cloud_object::model::persistence::CloudModel;
-use crate::cloud_object::model::view::CloudViewModel;
-use crate::cloud_object::{
     GenericServerObject, Owner, Revision, ServerMetadata, ServerPermissions,
 };
 use crate::notebooks::manager::NotebookManager;
 use crate::search::ai_context_menu::rules::data_source::RulesDataSource;
 use crate::search::data_source::Query;
 use crate::search::mixer::SyncDataSource;
-use crate::server::cloud_objects::update_manager::UpdateManager;
-use crate::server::ids::{ServerId, SyncId};
-use crate::server::server_api::ServerApiProvider;
-use crate::server::sync_queue::SyncQueue;
 use crate::settings::AISettings;
 use crate::system::SystemStats;
-use crate::workspaces::team_tester::TeamTesterStatus;
-use crate::workspaces::user_profiles::UserProfiles;
-use crate::workspaces::user_workspaces::UserWorkspaces;
 use crate::NetworkStatus;
 
-use crate::server::server_api::object::MockObjectClient;
-use crate::server::server_api::team::MockTeamClient;
-use crate::server::server_api::workspace::MockWorkspaceClient;
 
 type ServerAIFact = GenericServerObject<
     crate::cloud_object::model::generic_string_model::GenericStringObjectId,

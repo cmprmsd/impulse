@@ -12,10 +12,7 @@ use crate::ai::agent::{
 use crate::ai::blocklist::{BlocklistAIHistoryModel, BlocklistAIPermissions};
 use crate::ai::execution_profiles::{profiles::AIExecutionProfilesModel, ActionPermission};
 use crate::ai::mcp::templatable_manager::TemplatableMCPServerManager;
-use crate::auth::AuthStateProvider;
-use crate::cloud_object::model::persistence::CloudModel;
 use crate::network::NetworkStatus;
-use crate::server::{cloud_objects::update_manager::UpdateManager, sync_queue::SyncQueue};
 use crate::terminal::event::BlockMetadataReceivedEvent;
 use crate::terminal::model::block::BlockMetadata;
 use crate::terminal::model::session::active_session::ActiveSession;
@@ -25,7 +22,6 @@ use crate::terminal::model_events::{ModelEvent, ModelEventDispatcher};
 use crate::terminal::shell::ShellType;
 use crate::terminal::ShellLaunchData;
 use crate::test_util::settings::initialize_settings_for_tests;
-use crate::workspaces::{team_tester::TeamTesterStatus, user_workspaces::UserWorkspaces};
 use crate::LaunchMode;
 
 use super::*;

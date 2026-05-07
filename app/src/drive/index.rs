@@ -74,7 +74,6 @@ use super::{
     CloudObjectTypeAndId, DriveObjectType, DriveSortOrder,
 };
 use crate::drive::panel::DrivePanelAction;
-use crate::server::cloud_objects::update_manager::InitiatedBy;
 use futures::Future;
 use itertools::Itertools;
 use pathfinder_color::ColorU;

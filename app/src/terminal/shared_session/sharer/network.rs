@@ -3,7 +3,6 @@
 //! Currently there is no way to share a session from wasm.
 #![cfg_attr(target_family = "wasm", allow(dead_code))]
 
-use crate::auth::{AuthStateProvider, UserUid};
 use crate::editor::ReplicaId;
 use crate::terminal::shared_session::network::heartbeat::{Event as HeartbeatEvent, Heartbeat};
 use crate::terminal::shared_session::{connect_endpoint, max_session_size};
@@ -42,7 +41,6 @@ use warpui::{Entity, ModelContext, ModelHandle, RequestState, RetryOption, Singl
 use websocket::{Message, Sink, Stream, WebSocket, WebsocketMessage as _};
 
 use crate::editor::CrdtOperation;
-use crate::server::server_api::ServerApiProvider;
 use crate::terminal::model::block::BlockId;
 use crate::terminal::shared_session::{
     EventNumber, SharedSessionScrollbackType, SELECTION_THROTTLE_PERIOD,

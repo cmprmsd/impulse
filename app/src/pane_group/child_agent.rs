@@ -1,6 +1,5 @@
 use std::{collections::HashMap, ffi::OsString, path::PathBuf};
 
-use crate::ai::ambient_agents::AmbientAgentTaskId;
 use crate::ai::attachment_utils::attachments_download_dir;
 use warpui::{EntityId, SingletonEntity, ViewContext, ViewHandle};
 

@@ -1,7 +1,4 @@
-use crate::auth::auth_state::AuthStateProvider;
-use crate::remote_server::auth_context::server_api_auth_context;
 use instant::Instant;
-use remote_server::auth::RemoteServerAuthContext;
 use std::path::PathBuf;
 use std::sync::Arc;
 use warp_core::SessionId;
@@ -11,14 +8,10 @@ use settings::Setting;
 
 use crate::terminal::warpify::settings::{SshExtensionInstallMode, WarpifySettings};
 
-use crate::remote_server::manager::{RemoteServerManager, RemoteServerManagerEvent};
-use crate::remote_server::ssh_transport::SshTransport;
-use crate::server::server_api::ServerApiProvider;
 use crate::settings::PrivacySettings;
 use crate::terminal::model::session::{IsLegacySSHSession, SessionInfo};
 use crate::terminal::model_events::{ModelEvent, ModelEventDispatcher};
 use crate::{send_telemetry_from_ctx, TelemetryEvent};
-use remote_server::setup::{
     PreinstallCheckResult, PreinstallStatus, RemoteLibc, RemotePlatform, UnsupportedReason,
 };
 

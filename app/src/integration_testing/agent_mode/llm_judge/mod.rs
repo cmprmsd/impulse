@@ -4,7 +4,6 @@ use anyhow::Result;
 use llm_generate::LLMGenerateRequest;
 use reqwest::blocking::Client;
 use serde::Deserialize;
-use warp_multi_agent_api::{
     apply_file_diffs_result::success::UpdatedFileContent, message, Message,
 };
 
@@ -71,7 +70,6 @@ impl LLMJudge {
 /// Filter out tool call result contents while preserving structure and success/error status
 pub fn filter_tool_call_result(result: &message::ToolCallResult) -> message::ToolCallResult {
     use message::tool_call_result::Result as ToolResult;
-    use warp_multi_agent_api::*;
 
     let filtered_result = match &result.result {
         Some(ToolResult::RunShellCommand(cmd_result)) =>

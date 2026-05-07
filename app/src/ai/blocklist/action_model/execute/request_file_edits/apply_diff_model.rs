@@ -16,7 +16,6 @@ use warpui::{Entity, ModelContext, ModelHandle, SingletonEntity as _};
 
 use crate::ai::agent::{AIIdentifiers, FileEdit};
 use crate::ai::blocklist::SessionContext;
-use crate::auth::AuthStateProvider;
 use crate::terminal::model::session::active_session::ActiveSession;
 
 use super::diff_application::{apply_edits, DiffApplicationError, FileReadResult};

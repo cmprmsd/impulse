@@ -21,8 +21,6 @@ use crate::ai::predict::generate_am_query_suggestions::{
 use crate::ai_assistant::execution_context::WarpAiExecutionContext;
 use crate::network::NetworkStatus;
 use crate::report_error;
-use crate::server::server_api::ServerApiProvider;
-use crate::server::telemetry::PromptSuggestionFallbackReason;
 use crate::settings::AISettings;
 use crate::terminal::event::{BlockType, UserBlockCompleted};
 use crate::terminal::model::block::BlockId;
@@ -30,7 +28,6 @@ use crate::terminal::model::session::{active_session::ActiveSession, SessionType
 use crate::terminal::model::terminal_model::TerminalModel;
 use crate::terminal::model_events::{ModelEvent, ModelEventDispatcher};
 use crate::terminal::view::{AgentModePromptSuggestion, PromptSuggestion};
-use crate::workspaces::user_workspaces::UserWorkspaces;
 use chrono::Utc;
 use parking_lot::FairMutex;
 use serde_json::json;

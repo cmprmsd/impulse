@@ -1,4 +1,3 @@
-use crate::server::telemetry::CLIAgentType;
 use crate::view_components::find::FindDirection;
 use crate::{code_review::diff_state::DiffMode, features::FeatureFlag};
 use serde::Serialize;

@@ -29,7 +29,6 @@ use crate::{
         suggestions_mode_model::InputSuggestionsModeModel,
     },
 };
-use warp_multi_agent_api as api;
 
 use crate::{
     ai::{
@@ -996,7 +995,6 @@ fn latest_model_used_before_exchange<V: View>(
 }
 
 fn render_agent_tip(tip: &AgentTip, app: &AppContext) -> Box<dyn Element> {
-    use crate::ai::agent_tips::AITip;
     use markdown_parser::{FormattedTextFragment, FormattedTextLine};
     use warpui::text_layout::ClipConfig;
 

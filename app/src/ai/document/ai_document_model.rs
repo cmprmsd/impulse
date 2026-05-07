@@ -14,8 +14,6 @@ use uuid::Uuid;
 use warpui::{AppContext, Entity, EntityId, ModelContext, ModelHandle, SingletonEntity, WindowId};
 
 use crate::ai::ai_document_view::DEFAULT_PLANNING_DOCUMENT_TITLE;
-use crate::auth::auth_state::AuthStateProvider;
-use crate::cloud_object::CloudObject;
 use crate::global_resource_handles::GlobalResourceHandlesProvider;
 use crate::persistence::ModelEvent;
 use crate::{
@@ -51,7 +49,6 @@ use crate::{
 use ai::agent::orchestration_config::{OrchestrationConfig, OrchestrationConfigStatus};
 use ai::diff_validation::DiffDelta;
 use warp_editor::{model::RichTextEditorModel, render::model::RichTextStyles};
-use warp_multi_agent_api as maa_api;
 use warpui::color::ColorU;
 
 /// The frequency at which we check for modifications and save the AI document to the server.

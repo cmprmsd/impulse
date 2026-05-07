@@ -30,12 +30,8 @@ use crate::editor::{
 use crate::input_suggestions::{Event as InputSuggestionsEvent, InputSuggestions};
 
 use crate::send_telemetry_from_ctx;
-use crate::server::server_api::ai::AIClient;
-use crate::server::server_api::ServerApi;
-use crate::server::telemetry::{TelemetryEvent, WarpAIActionType};
 use crate::terminal::resizable_data::{ModalType, ResizableData, DEFAULT_WARP_AI_WIDTH};
 use crate::ui_components::blended_colors;
-use crate::workspaces::user_workspaces::UserWorkspaces;
 
 use crate::ui_components::buttons::icon_button;
 use crate::workspace::{ActiveSession, TAB_BAR_HEIGHT};

@@ -71,7 +71,6 @@ use super::TextLocation;
 use crate::ai::blocklist::block::view_impl::comments::address_comment_chips;
 use crate::ai::blocklist::block::{DetectedLinksState, RICH_CONTENT_LINK_FIRST_CHAR_POSITION_ID};
 use crate::ai::blocklist::history_model::BlocklistAIHistoryModel;
-use crate::cloud_object::model::persistence::CloudModel;
 
 use crate::settings_view::SettingsSection;
 use crate::terminal::block_list_element::BlockListMenuSource;

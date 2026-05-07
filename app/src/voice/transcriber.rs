@@ -3,7 +3,6 @@ use std::sync::Arc;
 use async_trait::async_trait;
 use warpui::{Entity, SingletonEntity};
 
-use crate::server::server_api::TranscribeError;
 
 /// Interface for transcribing voice input.
 #[cfg_attr(not(target_family = "wasm"), async_trait)]

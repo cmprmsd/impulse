@@ -8,11 +8,8 @@ use std::path::PathBuf;
 
 use indexmap::IndexMap;
 
-use crate::ai::request_usage_model::RequestLimitInfo;
-use crate::auth::AuthStateProvider;
 use crate::report_if_error;
 use crate::terminal::CLIAgent;
-use crate::workspaces::user_workspaces::UserWorkspaces;
 use cfg_if::cfg_if;
 use chrono::{DateTime, Utc};
 use lazy_static::lazy_static;

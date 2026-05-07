@@ -23,7 +23,6 @@ use warpui::{
 };
 use warpui::{BlurContext, FocusContext};
 
-use crate::workspaces::user_workspaces::UserWorkspaces;
 use crate::{
     appearance::Appearance,
     send_telemetry_from_ctx,

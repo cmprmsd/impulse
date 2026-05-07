@@ -56,7 +56,6 @@ use crate::search::ai_context_menu::mixer::AIContextMenuSearchableAction;
 use crate::search::ai_context_menu::view::{
     AIContextMenu, AIContextMenuCategory, AIContextMenuEvent,
 };
-use crate::server::telemetry::TelemetryEvent;
 use crate::settings_view::flags;
 use crate::suggestions::ignored_suggestions_model::{IgnoredSuggestionsModel, SuggestionType};
 use crate::ui_components::buttons::icon_button;
@@ -2989,7 +2988,6 @@ impl EditorView {
 
         #[cfg(feature = "voice_input")]
         {
-            use crate::workspaces::user_workspaces::UserWorkspaces;
 
             ctx.subscribe_to_model(&UserWorkspaces::handle(ctx), |me, _handle, _event, ctx| {
                 me.update_voice_transcription_options(Self::voice_options(ctx), ctx);

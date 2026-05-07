@@ -20,15 +20,8 @@ use crate::ai::mcp::{
 
 use crate::ai::mcp::parsing::resolve_json;
 use crate::ai::mcp::TemplatableMCPServer;
-use crate::auth::AuthStateProvider;
-use crate::cloud_object::model::persistence::{CloudModel, CloudModelEvent};
-use crate::cloud_object::{CloudObject, CloudObjectLocation, CloudObjectMetadataExt, Space};
-use crate::server::cloud_objects::update_manager::InitiatedBy;
-use crate::server::ids::{ClientId, ServerId};
-use crate::server::telemetry::{
     MCPServerModel, MCPServerTelemetryTransportType, MCPTemplateCreationSource,
 };
-use crate::workspaces::user_workspaces::UserWorkspaces;
 use crate::{
     ai::mcp::{
         logs, templatable::CloudTemplatableMCPServer, templatable_installation::VariableValue,

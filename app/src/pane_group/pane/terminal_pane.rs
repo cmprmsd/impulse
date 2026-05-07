@@ -6,7 +6,6 @@ use std::{collections::HashMap, sync::mpsc::SyncSender};
 use base64::{engine::general_purpose::STANDARD as BASE64_STANDARD, Engine as _};
 use url::Url;
 use warp_cli::agent::Harness;
-use warp_multi_agent_api as multi_agent_api;
 
 use warpui::{
     AppContext, EntityId, ModelHandle, SingletonEntity, ViewContext, ViewHandle, WindowId,
@@ -56,7 +55,6 @@ use crate::{
 #[cfg(feature = "local_fs")]
 use crate::ai::blocklist::BlocklistAIHistoryEvent;
 #[cfg(not(target_family = "wasm"))]
-use crate::server::server_api::ServerApiProvider;
 
 use warp_core::execution_mode::AppExecutionMode;
 

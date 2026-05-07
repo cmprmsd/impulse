@@ -248,7 +248,6 @@ impl SharedSessionScrollbackType {
 
 #[cfg(not(test))]
 pub fn max_session_size(ctx: &AppContext) -> Byte {
-    use crate::workspaces::user_workspaces::UserWorkspaces;
     use warpui::SingletonEntity;
 
     UserWorkspaces::as_ref(ctx)

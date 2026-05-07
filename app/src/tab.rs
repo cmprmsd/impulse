@@ -5,7 +5,6 @@ use crate::appearance::Appearance;
 /// the rendering and management of tabs in general.
 use crate::editor::EditorView;
 use crate::features::FeatureFlag;
-use crate::launch_configs::launch_config::LaunchConfig;
 use crate::menu::{MenuAction, MenuItem, MenuItemFields};
 use crate::pane_group::{PaneGroup, PaneId};
 use crate::terminal::model::terminal_model::ConversationTranscriptViewerStatus;

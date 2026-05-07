@@ -1,12 +1,9 @@
 //! This module contains model, controller, and view logic for Blocklist AI.
 mod action_model;
-pub mod agent_view;
 pub mod block;
 pub mod code_block;
 mod context_model;
 mod controller;
-#[cfg(feature = "local_fs")]
-pub(crate) mod handoff;
 pub(crate) mod orchestration_event_streamer;
 pub(crate) mod orchestration_events;
 mod passive_suggestions;

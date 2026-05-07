@@ -1,5 +1,4 @@
 use super::{derive_agent_attribution_toggle_state, AgentAttributionToggleState};
-use crate::workspaces::workspace::AdminEnablementSetting;
 
 #[test]
 fn respect_user_setting_returns_user_pref_unlocked() {

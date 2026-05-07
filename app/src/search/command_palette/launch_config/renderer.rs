@@ -12,7 +12,6 @@ use warpui::{
 };
 
 use crate::appearance::Appearance;
-use crate::launch_configs::launch_config::LaunchConfig;
 use crate::search::result_renderer::ItemHighlightState;
 use crate::themes::theme::Fill;
 

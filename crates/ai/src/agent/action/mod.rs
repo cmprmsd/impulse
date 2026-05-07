@@ -1,5 +1,3 @@
-mod convert;
-
 use std::{fmt::Display, ops::Range, path::PathBuf, time::Duration};
 
 use itertools::Itertools as _;
@@ -21,13 +19,31 @@ use crate::{
             TransferShellCommandControlToUserResult, UploadArtifactResult, UseComputerResult,
             WriteToLongRunningShellCommandResult,
         },
-        AIAgentCitation, FileLocations,
+        FileLocations,
     },
     diff_validation::ParsedDiff,
     document::AIDocumentId,
     skills::SkillReference,
 };
-pub use warp_multi_agent_api::LifecycleEventType;
+
+/// Lifecycle event type for AI agent actions. Local replacement for the
+/// removed `warp_multi_agent_api::LifecycleEventType` from the proprietary
+/// hosted-agent protobuf API.
+#[derive(Debug, Clone, Copy, Eq, PartialEq, Serialize, Deserialize)]
+pub enum LifecycleEventType {
+    Started,
+    Completed,
+    Failed,
+    Cancelled,
+}
+
+/// Placeholder for the removed `AIAgentCitation` type that previously came from
+/// `crates/ai/src/agent/citation.rs`. The hosted-agent backend produced
+/// citations; for the local fork we keep the field in place but populate it
+/// with empty values until a future replacement client (Phase 2/3) supplies
+/// citation data of its own.
+#[derive(Debug, Clone, Eq, PartialEq, Serialize, Deserialize, Default)]
+pub struct AIAgentCitation;
 
 #[derive(Debug, Clone, Eq, PartialEq, EnumDiscriminants)]
 pub enum AIAgentActionType {

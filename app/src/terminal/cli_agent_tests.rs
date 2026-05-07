@@ -17,12 +17,6 @@ use crate::code::editor::line::EditorLineLocation;
 use crate::code_review::comments::{
     AttachedReviewComment, AttachedReviewCommentTarget, CommentOrigin, LineDiffContent,
 };
-use crate::server::ids::ServerId;
-use crate::server::server_api::team::MockTeamClient;
-use crate::server::server_api::workspace::MockWorkspaceClient;
-use crate::workspaces::team::Team;
-use crate::workspaces::user_workspaces::UserWorkspaces;
-use crate::workspaces::workspace::Workspace;
 
 /// Helper to build an alias map from pairs.
 fn aliases(pairs: &[(&str, &str)]) -> HashMap<SmolStr, String> {

@@ -1,14 +1,4 @@
-pub(crate) mod conversation;
-pub(crate) mod conversation_yaml;
-pub(crate) mod todos;
-
-pub(crate) mod api;
-pub(crate) mod comment;
 pub(crate) mod icons;
-pub(crate) mod linearization;
-pub(crate) mod redaction;
-pub(crate) mod task;
-mod task_store;
 pub(super) mod telemetry;
 pub(super) mod util;
 
@@ -16,8 +6,6 @@ pub(super) mod util;
 pub use ai::agent::{action::*, action_result::*, AIAgentCitation, FileLocations};
 use warp_core::features::FeatureFlag;
 
-#[cfg(test)]
-mod suggestion_test;
 use crate::ai::block_context::BlockContext;
 use crate::ai::blocklist::block::view_impl::output::are_all_text_sections_empty;
 use crate::ai::skills::SkillDescriptor;
@@ -26,12 +14,9 @@ use crate::code_review::comments::{
     AttachedReviewComment as CodeReviewComment, ReviewCommentBatch,
 };
 use crate::search::slash_command_menu::static_commands::commands;
-use crate::server::server_api::AIApiError;
 use ai::agent::orchestration_config::{OrchestrationConfig, OrchestrationConfigStatus};
 use ai::skills::ParsedSkill;
 use chrono::{DateTime, Local, TimeDelta};
-use comment::ReviewComment;
-use task::TaskId;
 pub use telemetry::AIIdentifiers;
 
 use warp_editor::render::model::LineCount;
@@ -43,9 +28,7 @@ use std::ops::{AddAssign, Deref, DerefMut, Range};
 use std::sync::Arc;
 use std::time::Duration;
 use uuid::Uuid;
-use warp_multi_agent_api::{diff_hunk as diff_hunk_api, AgentEvent, AgentType};
 
-pub use self::api::{MaybeAIAgentOutputMessage, MessageToAIAgentOutputMessageError};
 use crate::ai_assistant::execution_context::WarpAiExecutionContext;
 use crate::terminal::model::block::BlockId;
 use crate::terminal::shell::ShellType;

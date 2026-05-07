@@ -10,9 +10,6 @@ use warp_core::ui::appearance::Appearance;
 use warp_files::FileModel;
 use warpui::{platform::WindowStyle, App, SingletonEntity, View};
 
-use crate::server::server_api::team::MockTeamClient;
-use crate::server::server_api::workspace::MockWorkspaceClient;
-use crate::server::telemetry::context_provider::AppTelemetryContextProvider;
 use crate::terminal::keys::TerminalKeybindings;
 use crate::{
     auth::{auth_manager::AuthManager, AuthStateProvider},

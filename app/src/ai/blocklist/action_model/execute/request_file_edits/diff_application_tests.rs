@@ -9,7 +9,6 @@ use warpui::App;
 
 use crate::ai::agent::{AIIdentifiers, FileEdit};
 use crate::ai::blocklist::SessionContext;
-use crate::auth::auth_state::AuthState;
 
 use super::*;
 

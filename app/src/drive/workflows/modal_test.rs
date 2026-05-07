@@ -4,7 +4,6 @@ use warpui::{platform::WindowStyle, App, SingletonEntity, ViewHandle};
 use std::sync::Arc;
 
 use super::WorkflowModal;
-use crate::auth::AuthStateProvider;
 use crate::{
     cloud_object::model::persistence::CloudModel,
     editor::PlainTextEditorViewAction as EditorAction,

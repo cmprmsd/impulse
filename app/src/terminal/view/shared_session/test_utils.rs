@@ -3,10 +3,8 @@ use session_sharing_protocol::sharer::SessionSourceType;
 use warpui::platform::WindowStyle;
 use warpui::{App, SingletonEntity, ViewHandle};
 
-use crate::auth::UserUid;
 use crate::editor::ReplicaId;
 use crate::pane_group::PaneGroup;
-use crate::server::server_api::ServerApiProvider;
 use crate::terminal::shared_session::manager::Manager;
 use crate::terminal::TerminalView;
 use crate::test_util::terminal::initialize_app_for_terminal_view;

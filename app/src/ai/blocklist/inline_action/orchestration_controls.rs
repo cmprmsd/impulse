@@ -24,9 +24,7 @@ use warp_core::channel::{Channel, ChannelState};
 use warp_core::ui::color::blend::Blend;
 use warp_core::ui::theme::Fill;
 
-use crate::ai::cloud_environments::CloudAmbientAgentEnvironment;
 use crate::ai::execution_profiles::model_menu_items::available_model_menu_items;
-use crate::ai::harness_display;
 use crate::appearance::Appearance;
 use crate::menu::{MenuItem, MenuItemFields};
 use crate::ui_components::blended_colors;

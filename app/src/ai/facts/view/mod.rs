@@ -1,12 +1,9 @@
-use crate::cloud_object::{
     CloudObject, CloudObjectSyncStatus, GenericStringObjectFormat, JsonObjectType,
 };
 use crate::drive::CloudObjectTypeAndId;
 use crate::network::NetworkStatus;
 use crate::pane_group::focus_state::PaneFocusHandle;
 use crate::pane_group::{pane::view, BackingView, PaneConfiguration, PaneEvent};
-use crate::server::ids::SyncId;
-use crate::server::sync_queue::SyncQueue;
 use std::path::PathBuf;
 use warp_core::ui::appearance::Appearance;
 use warpui::{

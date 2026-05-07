@@ -28,7 +28,6 @@ use super::model::grid::RespectDisplayedOutput;
 use crate::ai::generate_block_title::api::GenerateBlockTitleRequest;
 use crate::editor::EditOrigin;
 use crate::settings::AISettings;
-use crate::workspaces::user_workspaces::UserWorkspaces;
 use anyhow::Result;
 use parking_lot::FairMutex;
 use pathfinder_geometry::{

@@ -1,7 +1,6 @@
 use std::sync::Arc;
 use std::time::Duration;
 
-use crate::ai::ambient_agents::AmbientAgentTaskId;
 use anyhow::{anyhow, Context, Result};
 #[cfg(not(target_family = "wasm"))]
 use futures::future::Either;
@@ -9,8 +8,6 @@ use futures::future::Either;
 use warpui::r#async::Timer;
 
 use crate::ai::agent::ReceivedMessageInput;
-use crate::server::server_api::ai::{AIClient, AgentRunEvent, ReadAgentMessageResponse};
-use crate::server::server_api::ServerApi;
 
 pub(crate) const DEFAULT_AGENT_MESSAGE_FETCH_TIMEOUT: Duration = Duration::from_secs(5);
 

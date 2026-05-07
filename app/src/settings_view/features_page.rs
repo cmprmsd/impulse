@@ -37,7 +37,6 @@ use crate::editor::{
 use crate::search::command_search::settings::{
     CommandSearchSettings, ShowGlobalWorkflowsInUniversalSearch,
 };
-use crate::server::telemetry::TelemetryEvent;
 use crate::settings::ai::AISettings;
 use crate::settings::{
     AISettingsChangedEvent, ScrollSettingsChangedEvent, ShowChangelogAfterUpdate,

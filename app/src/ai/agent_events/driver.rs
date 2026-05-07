@@ -8,8 +8,6 @@ use futures::StreamExt;
 use instant::Instant;
 use warpui::r#async::Timer;
 
-use crate::server::server_api::ai::AgentRunEvent;
-use crate::server::server_api::ServerApi;
 
 pub(crate) const DEFAULT_AGENT_EVENT_RECONNECT_BACKOFF_STEPS: &[u64] = &[1, 2, 5, 10];
 pub(crate) const DEFAULT_AGENT_EVENT_PROACTIVE_RECONNECT: Duration = Duration::from_secs(14 * 60);

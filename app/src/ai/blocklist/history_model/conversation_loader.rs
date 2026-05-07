@@ -20,8 +20,6 @@ use crate::ai::agent::conversation::{
 };
 use crate::ai::agent::task::Task;
 use crate::persistence::model::{AgentConversation, AgentConversationData};
-use crate::server::server_api::ai::AIClient;
-use crate::server::server_api::ServerApiProvider;
 use crate::terminal::model::block::SerializedBlock;
 
 #[cfg(feature = "local_fs")]

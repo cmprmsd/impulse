@@ -1,13 +1,11 @@
 use itertools::Itertools;
 use warpui::{AppContext, SingletonEntity};
 
-use crate::cloud_object::{CloudObject, Space};
 use crate::search::notebook_embedding::embedded_fuzzy_match::FuzzyMatchEmbeddedObjectResult;
 use crate::search::notebook_embedding::is_embed_accessible;
 use crate::search::notebook_embedding::searcher::EmbeddingSearchItemAction;
 use crate::workflows::CloudWorkflow;
 
-use crate::cloud_object::model::persistence::CloudModel;
 use crate::search::data_source::{Query, QueryResult};
 use crate::search::mixer::{DataSourceRunErrorWrapper, SyncDataSource};
 

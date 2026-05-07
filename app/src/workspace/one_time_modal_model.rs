@@ -1,6 +1,4 @@
 use super::hoa_onboarding;
-use crate::auth::auth_manager::AuthManagerEvent;
-use crate::auth::AuthManager;
 use crate::channel::{Channel, ChannelState};
 use crate::settings::cloud_preferences_syncer::{
     CloudPreferencesSyncer, CloudPreferencesSyncerEvent,
@@ -36,7 +34,6 @@ impl OneTimeModalModel {
         ctx.subscribe_to_model(
             &crate::workspaces::user_workspaces::UserWorkspaces::handle(ctx),
             |me, event, ctx| {
-                use crate::workspaces::user_workspaces::UserWorkspacesEvent;
                 if let UserWorkspacesEvent::SunsettedToBuildDataUpdated = event {
                     // When sunsetted_to_build_ts is updated, check if we should show the modal
                     me.check_and_trigger_build_plan_migration_modal(ctx);
@@ -325,7 +322,6 @@ impl OneTimeModalModel {
         &mut self,
         ctx: &mut ModelContext<Self>,
     ) -> bool {
-        use crate::workspaces::user_workspaces::UserWorkspaces;
 
         // Check if already dismissed
         let general_settings = GeneralSettings::as_ref(ctx);

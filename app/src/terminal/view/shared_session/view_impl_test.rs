@@ -2,11 +2,7 @@ use pathfinder_geometry::vector::vec2f;
 use session_sharing_protocol::sharer::SessionSourceType;
 
 use crate::ai::agent::conversation::ConversationStatus;
-use crate::ai::agent_conversations_model::{AgentConversationsModel, AgentRunDisplayStatus};
-use crate::ai::ambient_agents::task::TaskCreatorInfo;
-use crate::ai::ambient_agents::{AgentSource, AmbientAgentTask, AmbientAgentTaskState};
 use crate::ai::blocklist::history_model::BlocklistAIHistoryModel;
-use crate::auth::user::TEST_USER_UID;
 use warpui::platform::WindowStyle;
 use warpui::{App, ViewHandle};
 

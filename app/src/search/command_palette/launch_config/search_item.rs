@@ -1,4 +1,3 @@
-use crate::launch_configs::launch_config::LaunchConfig;
 use crate::{appearance::Appearance, ui_components::icons::Icon};
 use fuzzy_match::FuzzyMatchResult;
 
