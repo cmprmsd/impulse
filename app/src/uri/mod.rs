@@ -1,4 +1,3 @@
-use crate::send_telemetry_from_app_ctx;
 use crate::legacy_stubs::{ServerId, TelemetryEvent};
 use crate::legacy_stubs::{LaunchConfig};
 use crate::legacy_stubs::{ServerConversationToken};

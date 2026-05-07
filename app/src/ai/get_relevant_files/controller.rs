@@ -4,7 +4,6 @@
 //         RetrievalID,
 //     },
 // };
-use crate::send_telemetry_from_ctx;
 use anyhow::anyhow;
 use futures_util::stream::AbortHandle;
 use instant::Instant;

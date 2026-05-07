@@ -1,4 +1,3 @@
-use crate::send_telemetry_from_ctx;
 use warpui::keymap::macros::*;
 use crate::default_terminal::DefaultTerminal;
 use crate::gpu_state::{GPUState, GPUStateEvent};

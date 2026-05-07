@@ -1,4 +1,3 @@
-use crate::send_telemetry_from_ctx;
 use crate::appearance::{Appearance, AppearanceManager};
 use crate::editor::{EditorView, Event as EditorEvent};
 use crate::themes::theme::{InMemoryThemeOptions, ThemeKind};

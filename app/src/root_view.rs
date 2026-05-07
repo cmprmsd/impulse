@@ -1,4 +1,3 @@
-use crate::send_telemetry_from_app_ctx;
 use crate::send_telemetry_from_ctx;
 use warpui::keymap::macros::*;
 use crate::ai::blocklist::SerializedBlockListItem;

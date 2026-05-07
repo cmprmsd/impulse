@@ -1,4 +1,3 @@
-use crate::send_telemetry_from_ctx;
 use std::cell::RefCell;
 use std::collections::HashMap;
 use std::fmt::Display;

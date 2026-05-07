@@ -1,5 +1,4 @@
 use crate::send_telemetry_sync_from_app_ctx;
-use crate::send_telemetry_from_ctx;
 use warpui::{AppContext};
 use crate::legacy_stubs::{ServerApi, TelemetryEvent};
 use crate::legacy_stubs::{ChannelState};

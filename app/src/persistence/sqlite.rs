@@ -1,4 +1,3 @@
-use crate::send_telemetry_from_app_ctx;
 use std::collections::HashSet;
 use std::ffi::OsString;
 use std::path::Path;

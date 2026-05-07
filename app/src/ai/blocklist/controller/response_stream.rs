@@ -1,4 +1,3 @@
-use crate::send_telemetry_from_ctx;
 use std::{cell::RefCell, rc::Rc};
 use crate::legacy_stubs::{AIConversationId};
 

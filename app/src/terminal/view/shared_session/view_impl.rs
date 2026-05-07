@@ -1,6 +1,5 @@
 //! [`TerminalView`]-specific implementation for shared sessions.
 
-use crate::send_telemetry_from_ctx;
 use crate::ai::blocklist::BlocklistAIHistoryModel;
 use crate::context_chips::ContextChipKind;
 use crate::editor::{InteractionState, ReplicaId};

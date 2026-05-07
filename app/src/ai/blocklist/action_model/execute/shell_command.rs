@@ -1,4 +1,3 @@
-use crate::send_telemetry_from_ctx;
 use std::collections::HashMap;
 use std::sync::Arc;
 use std::time::Duration;
