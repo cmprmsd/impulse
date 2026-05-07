@@ -10,8 +10,8 @@ pub struct Task {
 #[derive(Debug, Clone, Default)]
 pub struct Skill;
 
-impl<T> From<T> for Skill {
-    fn from(_: T) -> Self {
+impl Skill {
+    pub fn from<T>(_: T) -> Self {
         Skill
     }
 }
