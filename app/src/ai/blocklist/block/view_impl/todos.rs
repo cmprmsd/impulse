@@ -30,6 +30,7 @@ use crate::{
 use super::WithContentItemSpacing;
 use warpui::{AppContext, Element};
 use crate::appearance::Appearance;
+use crate::legacy_stubs::{AIConversation};
 
 pub(super) fn render_todos(
     id: &MessageId,

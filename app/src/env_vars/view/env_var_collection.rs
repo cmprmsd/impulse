@@ -63,6 +63,7 @@ use crate::legacy_stubs::{CloudObjectTypeAndId, TelemetryEvent};
 use crate::appearance::Appearance;
 use crate::pane_group::pane::view::PaneHeaderCustomAction;
 use crate::workspace::ToastStack;
+use crate::legacy_stubs::{ModelAsRef};
 
 // Universal
 pub(super) const CORE_HORIZONATAL_MARGIN: f32 = 24.;

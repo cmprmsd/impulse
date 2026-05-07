@@ -6,6 +6,7 @@ use warpui::elements::{ConstrainedBox, Container, CornerRadius, Radius};
 use warpui::Element;
 
 use crate::ui_components::icons::Icon;
+use crate::legacy_stubs::{ConversationStatus};
 
 /// Padding around the status icon
 pub const STATUS_ELEMENT_PADDING: f32 = 2.;

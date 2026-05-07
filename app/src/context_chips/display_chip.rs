@@ -16,7 +16,6 @@ use crate::settings_view::keybindings::{KeybindingChangedEvent, KeybindingChange
 use crate::terminal::cli_agent_sessions::CLIAgentSessionsModel;
 use crate::terminal::input::{MenuPositioning, MenuPositioningProvider};
 use crate::terminal::model_events::ModelEventDispatcher;
-use crate::terminal::view::ambient_agent::AmbientAgentViewModel;
 use crate::ui_components::blended_colors;
 use crate::ui_components::icons::Icon;
 use crate::util::bindings::keybinding_name_to_display_string;
@@ -57,6 +56,7 @@ use warpui::{AppContext, Element, Entity, EntityId, ModelHandle, TypedActionView
 use warpui::fonts::{Properties, Weight};
 use warpui::fonts::{FamilyId};
 use crate::legacy_stubs::{ContextChipKind};
+use crate::legacy_stubs::{AgentViewController};
 
 /// Helper function to render git diff stats content (file icon or +- icons, file count, bullet, +/- counts)
 /// Used by both the context chips and the AI control panel

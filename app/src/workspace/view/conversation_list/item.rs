@@ -1,6 +1,5 @@
 use crate::ai::conversation_status_ui::{render_status_element, STATUS_ELEMENT_PADDING};
 use crate::appearance::Appearance;
-use crate::drive::sharing::dialog::SharingDialog;
 use crate::menu::Menu;
 use crate::ui_components::agent_icon::agent_conversation_entry_icon_variant;
 use crate::ui_components::icon_with_status::render_icon_with_status;

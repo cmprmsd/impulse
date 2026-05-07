@@ -8,6 +8,7 @@ use crate::ai::agent::AIAgentActionType;
 use crate::BlocklistAIHistoryModel;
 
 use super::{ActionExecution, AnyActionExecution, ExecuteActionInput, PreprocessActionInput};
+use crate::legacy_stubs::{AIConversation, CloudConversationData};
 
 pub struct FetchConversationExecutor;
 

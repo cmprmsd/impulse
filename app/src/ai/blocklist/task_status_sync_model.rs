@@ -10,6 +10,7 @@ use std::sync::Arc;
 use warpui::{Entity, EntityId, ModelContext, SingletonEntity};
 use crate::legacy_stubs::{AmbientAgentTaskId, ServerApiProvider};
 use crate::legacy_stubs::{AIClient};
+use crate::legacy_stubs::{AIConversation, AIConversationId};
 
 /// Listens for conversation status changes and CLI agent session status
 /// changes, then reports the corresponding task state to the server via

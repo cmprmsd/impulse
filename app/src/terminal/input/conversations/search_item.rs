@@ -19,6 +19,7 @@ use crate::search::{ItemHighlightState, SearchItem};
 use crate::terminal::input::conversations::AcceptConversation;
 use crate::terminal::input::inline_menu::styles as inline_styles;
 use crate::util::time_format::format_approx_duration_from_now_utc;
+use crate::legacy_stubs::{ConversationNavigationData, ConversationStatus};
 
 /// Search item for rendering a conversation in the inline conversation menu.
 #[derive(Debug, Clone)]

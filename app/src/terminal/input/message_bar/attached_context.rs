@@ -10,6 +10,7 @@ use crate::terminal::input::message_bar::{
 };
 use crate::terminal::input::InputAction;
 use crate::terminal::model::TerminalModel;
+use crate::legacy_stubs::{AgentViewController};
 
 /// Trait for message args that can provide attached context information.
 /// Exposes the required dependencies for attached context message producers.

@@ -14,6 +14,7 @@ use crate::terminal::input::suggestions_mode_model::{
 };
 use crate::terminal::model::session::active_session::ActiveSession;
 use warpui::EntityId;
+use crate::legacy_stubs::{AgentViewController};
 
 #[derive(Debug, Clone)]
 pub enum InlineSkillSelectorEvent {

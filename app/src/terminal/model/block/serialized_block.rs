@@ -15,6 +15,7 @@ use serde_bytes_repr::{ByteFmtDeserializer, ByteFmtSerializer};
 use warp_core::command::ExitCode;
 
 use super::AgentInteractionMetadata;
+use crate::legacy_stubs::{AIConversationId, TaskId};
 
 /// Serialization-stable representation of [`AgentViewVisibility`].
 ///

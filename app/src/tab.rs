@@ -51,6 +51,7 @@ use warpui::ui_components::components::{Coords, UiComponent, UiComponentStyles};
 use warpui::ui_components::text_input::TextInput;
 use warpui::{AppContext, SingletonEntity, ViewHandle};
 use crate::legacy_stubs::{LaunchConfig};
+use crate::legacy_stubs::{ConversationStatus};
 
 pub const TAB_BAR_BORDER_HEIGHT: f32 = 1.0;
 const TAB_INDICATOR_HEIGHT: f32 = 14.0;

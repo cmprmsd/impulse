@@ -10,6 +10,7 @@ use warpui::keymap::BindingId;
 use warpui::{EntityId, WindowId};
 use crate::legacy_stubs::{SyncId};
 use crate::legacy_stubs::{LaunchConfig};
+use crate::legacy_stubs::{AIConversationId};
 
 pub type CommandPaletteMixer = SearchMixer<CommandPaletteItemAction>;
 

@@ -17,6 +17,7 @@ use warpui::prelude::{Align, CrossAxisAlignment, Flex, MainAxisAlignment, MainAx
 use warpui::scene::{CornerRadius, Radius};
 use warpui::text_layout::ClipConfig;
 use warpui::{AppContext, Element, SingletonEntity};
+use crate::legacy_stubs::{AIConversationId, ConversationStatus};
 
 #[derive(Debug, Clone)]
 pub struct InlineHistoryItem {

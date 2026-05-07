@@ -12,6 +12,7 @@ use crate::terminal::input::suggestions_mode_model::{
     InputSuggestionsModeEvent, InputSuggestionsModeModel,
 };
 use crate::terminal::input::user_query::data_source::{SelectUserQuery, UserQueryDataSource};
+use crate::legacy_stubs::{AIConversationId, AgentViewController};
 
 /// Events emitted by UserQueryMenuView.
 #[derive(Debug, Clone)]

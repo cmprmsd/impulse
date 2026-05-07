@@ -1,5 +1,6 @@
 //! Inline conversation menu for selecting AI conversations, enabled
 //! when `FeatureFlag::AgentView` is enabled.
+use crate::legacy_stubs::{ConversationNavigationData};
 mod data_source;
 mod search_item;
 mod view;

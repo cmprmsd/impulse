@@ -94,6 +94,7 @@ use crate::terminal::warpify::SubshellSource;
 use crate::terminal::model::escape_sequences::{
     maybe_kitty_keyboard_escape_sequence, KeystrokeWithDetails, ToEscapeSequence,
 };
+use crate::legacy_stubs::{AgentViewState};
 
 /// The number of pixels at the bottom of padding where selection scrolling is performed.
 const BOTTOM_VERTICAL_MARGIN: f32 = 10.0;

@@ -10,6 +10,7 @@ use warpui::elements::{
 
 use crate::terminal::CLIAgent;
 use crate::themes::theme::Fill as ThemeFill;
+use crate::legacy_stubs::{ConversationStatus};
 
 /// Background color used for the Oz agent's circle when it is running in an ambient (cloud)
 /// run. Matches the Oz brand purple used in the cloud-mode design spec.

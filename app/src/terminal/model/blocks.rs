@@ -1,3 +1,4 @@
+use crate::legacy_stubs::{AgentViewState};
 mod selection;
 
 use crate::ai::agent::{conversation::AIConversationId, AIAgentActionId};

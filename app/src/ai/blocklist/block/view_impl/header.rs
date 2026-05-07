@@ -26,6 +26,7 @@ use crate::ui_components::icons::Icon;
 use crate::view_components::action_button::ActionButton;
 use warpui::elements::Icon as ElementIcon;
 use warpui::{AppContext, Element, ViewHandle};
+use crate::legacy_stubs::{AIConversationId};
 
 /// Data required to render the AI block header.
 pub(super) struct Props<'a> {

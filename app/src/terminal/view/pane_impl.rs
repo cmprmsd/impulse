@@ -5,7 +5,6 @@ use super::shared_session::adapter::Kind as SharedSessionKind;
 use super::{Event, PaneConfiguration, TerminalAction, TerminalViewState, Viewer};
 use crate::ai::blocklist::BlocklistAIHistoryModel;
 use crate::appearance::Appearance;
-use crate::drive::sharing::ShareableObject;
 use crate::features::FeatureFlag;
 use crate::menu::{MenuItem, MenuItemFields};
 use crate::pane_group::focus_state::{PaneFocusHandle, PaneGroupFocusEvent, PaneGroupFocusState};
@@ -44,6 +43,7 @@ use warpui::ui_components::components::UiComponent;
 use warpui::ui_components::components::UiComponentStyles;
 use warpui::WeakModelHandle;
 use warpui::{AppContext, Element, ModelHandle, SingletonEntity, TypedActionView, ViewContext};
+use crate::legacy_stubs::{AIConversation, ConversationStatus};
 
 /// Total size of the agent icon-with-status component rendered in the pane header.
 /// Sub-components (circle, badge, cloud) are derived inside `render_icon_with_status`.

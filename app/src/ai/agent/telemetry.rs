@@ -9,6 +9,7 @@ use crate::{
 };
 
 use super::AIAgentCitation;
+use crate::legacy_stubs::{AIConversationId};
 
 pub trait ForTelemetry {
     type Output;

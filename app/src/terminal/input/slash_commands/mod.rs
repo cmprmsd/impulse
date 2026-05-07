@@ -1,4 +1,5 @@
 use crate::legacy_stubs::{CloudModel, PaletteSource, SyncId};
+use crate::legacy_stubs::{AIConversationId};
 mod cloud_mode_v2_view;
 mod data_source;
 mod search_item;

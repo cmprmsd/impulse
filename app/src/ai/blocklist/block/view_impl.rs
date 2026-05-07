@@ -59,7 +59,6 @@ use crate::appearance::Appearance;
 use crate::settings::{AISettings, InputModeSettings, InputSettings};
 use crate::terminal::model::blocks::{BlockHeightItem, RemovableBlocklistItem, RichContentItem};
 use crate::terminal::model::rich_content::RichContentType;
-use crate::terminal::view::ambient_agent::is_cloud_agent_pre_first_exchange;
 use crate::terminal::TerminalView;
 use crate::util::truncation::truncate_from_end;
 

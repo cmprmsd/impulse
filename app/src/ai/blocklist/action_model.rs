@@ -11,6 +11,7 @@
 //! Action state also has indirect implications for various parts of the terminal UI -- for
 //! example, the input should be hidden if there is a pending AI requested command that requires
 //! action from the user.
+use crate::legacy_stubs::{AIConversationId};
 
 mod execute;
 mod preprocess;

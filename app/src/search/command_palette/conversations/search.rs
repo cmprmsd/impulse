@@ -5,6 +5,7 @@ use crate::search::data_source::QueryResult;
 use crate::search::SyncDataSource;
 use fuzzy_match::match_indices_case_insensitive;
 use warpui::AppContext;
+use crate::legacy_stubs::{ConversationNavigationData};
 
 /// A conversation that was fuzzy matched against a search term.
 #[derive(Debug)]

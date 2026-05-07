@@ -24,6 +24,7 @@ use warpui::ui_components::button::ButtonTooltipPosition;
 use warpui::ui_components::components::{UiComponent, UiComponentStyles};
 use warpui::{AppContext, Element, Gradient, SingletonEntity};
 use crate::legacy_stubs::{BlocklistAIHistoryModel};
+use crate::legacy_stubs::{AIConversationId};
 
 /// Information about which action to take once the conversation item is accepted.
 #[derive(Debug)]

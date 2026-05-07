@@ -153,16 +153,6 @@ fn new_command_executor_for_local_tty_session(
     use warpui::SingletonEntity as _;
     use wsl_command_executor::WslCommandExecutor;
 
-    use crate::{
-        features::FeatureFlag,
-        remote_server::manager::RemoteServerManager,
-        settings::DebugSettings,
-        terminal::{
-            available_shells::AvailableShells,
-            model::session::{BootstrapSessionType, ShellLaunchData},
-            shell::ShellType,
-        },
-    };
 
     use super::IsLegacySSHSession;
 

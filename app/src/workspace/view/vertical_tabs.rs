@@ -1,3 +1,4 @@
+use crate::legacy_stubs::{ConversationStatus};
 pub mod telemetry;
 
 use crate::ai::conversation_status_ui::render_status_element;

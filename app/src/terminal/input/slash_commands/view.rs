@@ -21,6 +21,7 @@ use crate::terminal::input::suggestions_mode_model::{
     InputSuggestionsModeEvent, InputSuggestionsModeModel,
 };
 use crate::legacy_stubs::{SyncId};
+use crate::legacy_stubs::{AgentViewController};
 
 lazy_static! {
     static ref SLASH_COMMAND_FILTERS: HashSet<QueryFilter> =

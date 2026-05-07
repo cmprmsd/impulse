@@ -1,6 +1,7 @@
 use anyhow::Result;
 use base64::{engine::general_purpose::STANDARD_NO_PAD, Engine as _};
 use prost::Message;
+use crate::legacy_stubs::{ResponseEvent};
 
 /// Decodes a serialized response event string by base64-decoding
 /// and then decoding the protobuf payload into a ResponseEvent.

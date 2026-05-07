@@ -29,6 +29,7 @@ use strum_macros::EnumIter;
 use warp_core::ui::appearance::Appearance;
 use warp_core::ui::Icon;
 use crate::legacy_stubs::{SyncId};
+use crate::legacy_stubs::{QueueItem};
 
 pub mod manager;
 pub mod templatable_manager;

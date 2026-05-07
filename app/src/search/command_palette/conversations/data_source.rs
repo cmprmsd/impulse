@@ -13,6 +13,7 @@ use crate::workspace::Workspace;
 use itertools::Itertools;
 use std::collections::HashMap;
 use warpui::{AppContext, Entity};
+use crate::legacy_stubs::{AIConversation, AIConversationId, ConversationNavigationData};
 
 /// Sections for grouping conversations in the command palette.
 #[derive(Debug, PartialEq, Eq, Hash)]

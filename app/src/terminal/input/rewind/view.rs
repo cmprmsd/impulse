@@ -12,6 +12,7 @@ use crate::terminal::input::rewind::data_source::{RewindDataSource, SelectRewind
 use crate::terminal::input::suggestions_mode_model::{
     InputSuggestionsModeEvent, InputSuggestionsModeModel,
 };
+use crate::legacy_stubs::{AIConversationId, AgentViewController};
 
 /// Events emitted by RewindMenuView.
 #[derive(Debug, Clone)]

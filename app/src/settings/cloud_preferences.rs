@@ -16,6 +16,7 @@ use crate::{
 use settings::{
     macros::define_settings_group, RespectUserSyncSetting, SupportedPlatforms, SyncToCloud,
 };
+use crate::legacy_stubs::{QueueItem};
 define_settings_group!(CloudPreferencesSettings, settings: [
    settings_sync_enabled: IsSettingsSyncEnabled {
        type: bool,

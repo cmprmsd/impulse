@@ -57,12 +57,12 @@ use super::network::{
     control_action_failure_reason_string, session_ended_reason_string,
     viewer_removed_reason_string, write_to_pty_failure_reason_string, Network, NetworkEvent,
 };
-use crate::terminal::view::ambient_agent::is_cloud_agent_pre_first_exchange;
 use crate::terminal::view::ExecuteCommandEvent;
 use crate::terminal::{Event as TerminalViewEvent, TerminalModel, TerminalView};
 use crate::view_components::ToastFlavor;
 use crate::{pane_group::TerminalViewResources, terminal::model::session::Sessions};
 use crate::legacy_stubs::{AmbientAgentTaskId, BlocklistAIHistoryModel};
+use crate::legacy_stubs::{AgentViewController};
 
 enum NetworkState {
     /// No viewer network is attached yet; deferred cloud-mode viewers start here until the

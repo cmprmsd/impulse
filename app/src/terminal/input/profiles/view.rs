@@ -16,6 +16,7 @@ use crate::terminal::input::profiles::data_source::{
 use crate::terminal::input::suggestions_mode_model::{
     InputSuggestionsModeEvent, InputSuggestionsModeModel,
 };
+use crate::legacy_stubs::{AgentViewController};
 
 #[derive(Debug, Clone)]
 pub enum InlineProfileSelectorEvent {

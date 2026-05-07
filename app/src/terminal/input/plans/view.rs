@@ -14,6 +14,7 @@ use crate::terminal::input::plans::AcceptPlan;
 use crate::terminal::input::suggestions_mode_model::{
     InputSuggestionsModeEvent, InputSuggestionsModeModel,
 };
+use crate::legacy_stubs::{AIConversationId, AgentViewController};
 
 /// Events emitted by InlinePlanMenuView.
 #[derive(Debug, Clone)]

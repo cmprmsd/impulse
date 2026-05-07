@@ -13,6 +13,7 @@ use crate::search::data_source::{Query, QueryResult};
 use crate::search::mixer::DataSourceRunErrorWrapper;
 use crate::search::SyncDataSource;
 use crate::terminal::input::rewind::search_item::RewindSearchItem;
+use crate::legacy_stubs::{AIConversationId};
 
 /// Action emitted when a rewind point is selected.
 #[derive(Clone, Debug)]

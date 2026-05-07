@@ -27,7 +27,6 @@ use crate::terminal::cli_agent_sessions::plugin_manager::PluginModalKind;
 use crate::terminal::view::inline_banner::{
     ZeroStatePromptSuggestionTriggeredFrom, ZeroStatePromptSuggestionType,
 };
-use crate::terminal::view::load_ai_conversation::RestoredAIConversation;
 use crate::undo_close::UndoCloseStack;
 use crate::undo_close::UndoCloseStackEvent;
 #[cfg(target_family = "wasm")]
@@ -143,6 +142,7 @@ use crate::{
     terminal::{TerminalManager, TerminalModel, TerminalView},
 };
 use crate::legacy_stubs::{AgentConversationEntryId, AmbientAgentTaskId, AnonymousUserSignupEntrypoint, AuthManager, AuthStateProvider, ObjectUid, PaletteSource, ServerApiProvider, SharingDialogSource, Space, SyncId, TelemetryEvent};
+use crate::legacy_stubs::{AIConversation, AIConversationId, CloudConversationData, ServerConversationToken};
 
 mod child_agent;
 pub mod focus_state;

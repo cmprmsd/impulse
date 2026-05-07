@@ -450,3 +450,62 @@ impl ChannelState {
 
 #[derive(Debug, Clone, Default)]
 pub struct PaneViewLocator;
+
+// ---------------------------------------------------------------------------
+// Third sweep: agent SDK types referenced after the use-strip
+// ---------------------------------------------------------------------------
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Default, Serialize, Deserialize)]
+pub struct AIConversationId(pub Uuid);
+
+#[derive(Debug, Clone, Default)]
+pub struct AIConversation;
+
+#[derive(Debug, Clone, Default)]
+pub struct AgentViewController;
+
+#[derive(Debug, Clone, Default)]
+pub struct AgentViewState;
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
+pub enum ConversationStatus {
+    #[default]
+    Active,
+    Closed,
+}
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
+pub enum AgentToolbarItemKind {
+    #[default]
+    Default,
+}
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Default, Serialize, Deserialize)]
+pub struct TaskId(pub Uuid);
+
+#[derive(Debug, Clone, Default)]
+pub struct ServerConversationToken;
+
+#[derive(Debug, Clone, Default)]
+pub struct ConversationNavigationData;
+
+#[derive(Debug, Clone, Default)]
+pub struct QueueItem;
+
+#[derive(Debug, Clone, Default)]
+pub struct LspRepoStatus;
+
+#[derive(Debug, Clone, Default)]
+pub struct ModelAsRef;
+
+#[derive(Debug, Clone, Default)]
+pub struct ResponseEvent;
+
+#[derive(Debug, Clone, Default)]
+pub struct SettingsWidget;
+
+#[derive(Debug, Clone, Default)]
+pub struct AIAgentHarness;
+
+#[derive(Debug, Clone, Default)]
+pub struct CloudConversationData;

@@ -5,6 +5,7 @@ use warp_core::context_flag::ContextFlag;
 use warp_core::features::FeatureFlag;
 use warpui::{AppContext, SingletonEntity};
 use crate::legacy_stubs::{ObjectType, Revision, ServerId, SyncId};
+use crate::legacy_stubs::{QueueItem};
 
 pub mod categories;
 use anyhow::Result;

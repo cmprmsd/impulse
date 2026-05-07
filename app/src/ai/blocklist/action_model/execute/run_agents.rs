@@ -20,6 +20,7 @@ use crate::ai::agent::{
 };
 use crate::ai::blocklist::BlocklistAIHistoryModel;
 use warpui::SingletonEntity;
+use crate::legacy_stubs::{AIConversationId};
 
 /// Per-child spawn timeout. If a child agent doesn't report back within
 /// this window (e.g. binary not found, server error), the slot is failed

@@ -17,6 +17,7 @@ use crate::terminal::cli_agent_sessions::{
 };
 use crate::terminal::CLIAgent;
 use crate::terminal::TerminalView;
+use crate::legacy_stubs::{AgentViewController};
 
 /// Handles updating the local LLM preferences when a selected agent model update is received.
 /// This function is shared between the viewer and sharer to ensure consistent behavior.

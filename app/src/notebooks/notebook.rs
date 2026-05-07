@@ -109,6 +109,7 @@ use warpui::{AppContext, BlurContext, Element, Entity, FocusContext, ModelHandle
 use crate::legacy_stubs::{UserWorkspaces};
 use crate::pane_group::pane::view::PaneHeaderCustomAction;
 use crate::workspace::ToastStack;
+use crate::legacy_stubs::{ModelAsRef};
 
 mod details_bar;
 

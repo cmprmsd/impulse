@@ -2,6 +2,7 @@
 
 use crate::legacy_stubs::{AuthStateProvider, CloudModel, SyncId, UserWorkspaces};
 use crate::legacy_stubs::{GenericStringObjectId};
+use crate::legacy_stubs::{AIConversationId, AgentViewController};
 pub mod cli;
 pub mod cli_controller;
 pub mod compact_agent_input;
@@ -46,7 +47,6 @@ use crate::code_review::comment_rendering::{CommentViewCard, HeaderClickHandler}
 use crate::terminal::model::BlockId;
 use crate::terminal::model_events::ModelEvent;
 use crate::terminal::model_events::ModelEventDispatcher;
-use crate::terminal::view::ambient_agent::{AmbientAgentViewModel, AmbientAgentViewModelEvent};
 use crate::terminal::TerminalModel;
 use crate::view_components::action_button::{
     ActionButtonTheme, NakedTheme, PrimaryTheme, SecondaryTheme,

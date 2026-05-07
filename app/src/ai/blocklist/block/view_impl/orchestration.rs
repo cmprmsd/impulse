@@ -34,6 +34,7 @@ use crate::ui_components::icons::Icon;
 use super::common::render_scrollable_collapsible_content;
 use super::output::{action_icon, Props};
 use super::WithContentItemSpacing;
+use crate::legacy_stubs::{AIConversation, AIConversationId, ConversationStatus};
 
 const GENERATING_TITLE_PLACEHOLDER: &str = "Generating title...";
 const ORCHESTRATION_COLLAPSED_MAX_HEIGHT: f32 = 200.;

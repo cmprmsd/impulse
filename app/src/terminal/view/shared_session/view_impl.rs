@@ -2,7 +2,6 @@
 
 use crate::ai::blocklist::BlocklistAIHistoryModel;
 use crate::context_chips::ContextChipKind;
-use crate::drive::sharing::ShareableObject;
 use crate::editor::{InteractionState, ReplicaId};
 use crate::settings::InputModeSettings;
 use crate::terminal::block_list_viewport::ScrollPositionUpdate;

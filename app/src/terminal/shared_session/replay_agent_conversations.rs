@@ -4,6 +4,7 @@ use api::client_action as api_client_action;
 use api::response_event as api_response_event;
 use api::response_event::stream_finished as stream_finished_event;
 use std::collections::HashMap;
+use crate::legacy_stubs::{AIConversation, ResponseEvent, TaskId};
 
 // Reconstructs all response events from conversations for use in session sharing.
 // These messages are used to replay conversations as if they were happening live.

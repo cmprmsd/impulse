@@ -32,6 +32,7 @@ use crate::view_components::alert::{Alert, AlertConfig};
 use crate::workspace::WorkspaceAction;
 use ai::api_keys::{ApiKeyManager, ApiKeyManagerEvent};
 use warpui::{ViewHandle};
+use crate::legacy_stubs::{AgentViewController};
 
 struct ManageDefaultsTheme;
 

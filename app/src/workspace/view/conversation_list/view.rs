@@ -4,8 +4,6 @@ use std::ops::Range;
 use std::sync::{Arc, Mutex};
 
 use crate::appearance::Appearance;
-use crate::drive::sharing::dialog::SharingDialog;
-use crate::drive::sharing::ShareableObject;
 use crate::editor::{
     EditorView, Event as EditorEvent, PropagateAndNoOpNavigationKeys,
     PropagateHorizontalNavigationKeys, SingleLineEditorOptions, TextOptions,
@@ -45,6 +43,7 @@ use warpui::{
 };
 use crate::legacy_stubs::{AgentConversationEntryId, SharingDialogSource};
 use crate::legacy_stubs::{BlocklistAIHistoryModel};
+use crate::legacy_stubs::{AIConversationId};
 
 const VIEW_ALL_LABEL: &str = "View all";
 /// Maximum number of past items to show before the user toggles "view all".

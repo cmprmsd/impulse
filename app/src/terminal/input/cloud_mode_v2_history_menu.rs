@@ -21,6 +21,7 @@ use crate::terminal::input::inline_menu::{InlineMenuPositioner, InlineMenuTabCon
 use crate::terminal::input::suggestions_mode_model::InputSuggestionsModeModel;
 use crate::terminal::model::session::active_session::ActiveSession;
 use warpui::{ViewHandle};
+use crate::legacy_stubs::{AgentViewController};
 
 const MENU_MAX_HEIGHT: f32 = 168.;
 

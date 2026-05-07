@@ -4,6 +4,7 @@ use crate::terminal::input::buffer_model::InputBufferModel;
 use crate::terminal::input::inline_menu::InlineMenuType;
 
 use super::{BufferState, DynamicEnumSuggestionStatus, InputConfig, InputSuggestionsMode};
+use crate::legacy_stubs::{AIConversationId};
 
 /// Model responsible for managing the input suggestions mode state.
 pub struct InputSuggestionsModeModel {

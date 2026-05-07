@@ -1,4 +1,5 @@
 use crate::legacy_stubs::{PaletteSource};
+use crate::legacy_stubs::{AIConversationId, AgentViewController};
 mod agent;
 pub mod buffer_model;
 mod classic;
@@ -336,9 +337,6 @@ use super::{
     },
     warpify::SubshellSource,
     History, HistoryEntry, SizeInfo, TerminalModel, UpArrowHistoryConfig,
-};
-use crate::terminal::view::ambient_agent::{
-    HarnessSelector, HarnessSelectorEvent, HostSelector, HostSelectorEvent, NakedHeaderButtonTheme,
 };
 use async_channel::Sender;
 use futures::stream::AbortHandle;

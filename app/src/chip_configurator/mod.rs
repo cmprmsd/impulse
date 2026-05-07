@@ -3,6 +3,7 @@
 //! This module extracts the reusable chip arrangement logic from the prompt
 //! `EditorModal` so that it can be shared between the terminal prompt editor
 //! and the agent input footer editor.
+use crate::legacy_stubs::{AgentToolbarItemKind};
 pub(crate) mod modal_shell;
 
 pub(crate) use modal_shell::{

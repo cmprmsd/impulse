@@ -1,4 +1,5 @@
 use crate::legacy_stubs::{AgentModeEntrypoint, AmbientAgentTaskId, AnonymousUserSignupEntrypoint, AuthManager, AuthState, AuthStateProvider, CloudModel, CodebaseIndexManager, GenericStringObjectFormat, JsonObjectType, ObjectUid, PaletteSource, RemoteServerInitPhase, RemoteServerManager, RemoteServerManagerEvent, ServerApi, SharingDialogSource, SyncId, TelemetryEvent, UpdateManager, UserUid, UserWorkspaces};
+use crate::legacy_stubs::{AIConversation, AIConversationId, AgentViewController, ServerConversationToken};
 mod action;
 mod block_banner;
 pub mod block_onboarding;
@@ -127,12 +128,6 @@ use crate::terminal::view::init_environment::{
     },
     InitEnvironmentBlock, InitEnvironmentBlockEvent,
 };
-use crate::terminal::view::ssh_remote_server_choice_view::{
-    SshRemoteServerChoiceView, SshRemoteServerChoiceViewEvent,
-};
-use crate::terminal::view::ssh_remote_server_failed_banner::{
-    SshRemoteServerFailedBanner, SshRemoteServerFailedBannerEvent, SshRemoteServerFailureKind,
-};
 use crate::terminal::view::telemetry::PromptSuggestionFallbackReason;
 use crate::workspace::view::cloud_agent_capacity_modal::CloudAgentCapacityModalVariant;
 
@@ -204,7 +199,6 @@ use crate::context_chips::prompt::Prompt;
 use crate::context_chips::prompt_type::PromptType;
 use crate::context_chips::ContextChipKind;
 use crate::drive::settings::WarpDriveSettings;
-use crate::drive::sharing::ShareableObject;
 use crate::drive::CloudObjectTypeAndId;
 use crate::env_vars::{
     env_var_collection_block::{EnvVarCollectionBlock, EnvVarCollectionBlockEvent},

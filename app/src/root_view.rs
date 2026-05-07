@@ -91,6 +91,7 @@ use warpui::{
 };
 use warpui::{FocusContext, NextNewWindowsHasThisWindowsBoundsUponClose};
 use crate::legacy_stubs::{AuthManager, AuthState, AuthStateProvider, CloudModel, GenericStringObjectFormat, JsonObjectType, ObjectType, ServerApiProvider, SyncId, TeamTesterStatus, TeamUpdateManager, UpdateManager, UserWorkspaces};
+use crate::legacy_stubs::{ServerConversationToken};
 
 #[cfg(target_family = "wasm")]
 

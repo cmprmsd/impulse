@@ -5,6 +5,7 @@
 //! Agent Mode UI.
 
 use crate::legacy_stubs::{AmbientAgentTaskId, CloudModel, ServerApiProvider, TeamUpdateManager, TelemetryEvent, UserWorkspaces};
+use crate::legacy_stubs::{AIConversation, ServerConversationToken, TaskId};
 pub mod input_context;
 mod pending_response_streams;
 pub mod response_stream;

@@ -28,6 +28,7 @@ use crate::terminal::model::session::active_session::ActiveSession;
 use crate::ui_components::icons::Icon;
 use crate::view_components::action_button::{ActionButton, ActionButtonTheme, ButtonSize};
 use crate::workspace::WorkspaceAction;
+use crate::legacy_stubs::{AIConversationId, AgentViewController};
 
 #[derive(Debug, Clone)]
 pub enum InlineHistoryMenuEvent {

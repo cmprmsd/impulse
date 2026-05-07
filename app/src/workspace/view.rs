@@ -1,5 +1,6 @@
 use crate::legacy_stubs::{AmbientAgentTaskId, AnonymousUserSignupEntrypoint, AuthManager, AuthState, AuthStateProvider, CloseTarget, CloudModel, CodebaseIndexManager, GenericStringObjectFormat, JsonObjectType, ObjectOperation, ObjectType, ObjectUid, OperationSuccessType, Owner, PaletteSource, RemoteServerManager, RemoteServerManagerEvent, ServerApi, ServerApiProvider, ServerId, SharingDialogSource, Space, SyncId, UpdateManager, UpdateManagerEvent, UserWorkspaces};
 use crate::legacy_stubs::{AIClient};
+use crate::legacy_stubs::{AIConversation};
 mod build_plan_migration_modal;
 pub(crate) mod cloud_agent_capacity_modal;
 pub(crate) mod codex_modal;
@@ -72,7 +73,6 @@ use crate::terminal::enable_auto_reload_modal::{
 use crate::terminal::model::terminal_model::ConversationTranscriptViewerStatus;
 use crate::terminal::session_settings::SessionSettings;
 use crate::terminal::view::inline_banner::ZeroStatePromptSuggestionType;
-use crate::terminal::view::load_ai_conversation::{RestorationDirState, RestoredAIConversation};
 use crate::terminal::view::{
     AgentOnboardingVersion, ConversationRestorationInNewPaneType, OnboardingIntention,
     OnboardingVersion,
@@ -259,10 +259,6 @@ use crate::terminal::session_settings::{
 };
 use crate::terminal::settings::{SpacingMode, TerminalSettings};
 use crate::terminal::shell::ShellType;
-#[cfg(all(feature = "local_fs", not(target_family = "wasm")))]
-use crate::terminal::view::ambient_agent::{
-    HandoffSubmissionState, PendingHandoff, SnapshotUploadStatus,
-};
 #[cfg(feature = "local_tty")]
 use crate::terminal::view::docker_sandbox::DEFAULT_DOCKER_SANDBOX_BASE_IMAGE;
 use crate::terminal::{self, SizeInfo, TerminalView};

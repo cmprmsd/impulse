@@ -11,6 +11,7 @@ use crate::search::mixer::DataSourceRunErrorWrapper;
 use crate::search::SyncDataSource;
 use crate::terminal::input::plans::search_item::PlanSearchItem;
 use crate::terminal::input::plans::AcceptPlan;
+use crate::legacy_stubs::{AIConversationId};
 
 pub struct PlanMenuDataSource {
     conversation_id: AIConversationId,

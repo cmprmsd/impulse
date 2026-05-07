@@ -15,6 +15,7 @@ use crate::GlobalResourceHandlesProvider;
 use std::path::PathBuf;
 use warpui::windowing::WindowManager;
 use warpui::{AppContext, SingletonEntity, TypedActionView};
+use crate::legacy_stubs::{AIConversationId};
 
 /// Specifies where a forked conversation should be opened.
 #[derive(Debug, Clone, Copy, Default, PartialEq, Eq)]

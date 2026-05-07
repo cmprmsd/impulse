@@ -34,6 +34,7 @@ use crate::ui_components::icons::Icon as WarpUIIcon;
 
 use crate::ai::agent::{PassiveSuggestionTrigger, StaticQueryType};
 use crate::legacy_stubs::{ServerId};
+use crate::legacy_stubs::{AIConversationId, ServerConversationToken};
 
 const INLINE_BANNER_SPACING: f32 = 8.;
 const INLINE_BANNER_BUTTON_PADDING: f32 = 8.;

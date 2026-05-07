@@ -42,6 +42,7 @@ use super::{
     block::DirectoryContext, history_model::BlocklistAIHistoryModel, BlocklistAIHistoryEvent,
 };
 use crate::legacy_stubs::{UserWorkspaces};
+use crate::legacy_stubs::{ConversationStatus};
 
 /// A non-image file picked via the "attach file" button, stored until query submission.
 #[derive(Clone, Debug, PartialEq, Eq)]

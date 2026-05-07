@@ -21,6 +21,7 @@ use warpui::EventContext;
 use warpui::{AppContext, Element, SingletonEntity};
 
 use crate::warp_managed_paths_watcher::warp_managed_skill_dirs;
+use crate::legacy_stubs::{AIConversationId};
 
 lazy_static! {
     static ref CONTENT_HASHER: SipHasher = SipHasher::new_with_keys(0, 0);

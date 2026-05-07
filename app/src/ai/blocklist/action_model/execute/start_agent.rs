@@ -14,6 +14,7 @@ use warp_cli::agent::Harness;
 use warp_core::features::FeatureFlag;
 
 use super::{ActionExecution, AnyActionExecution, ExecuteActionInput, PreprocessActionInput};
+use crate::legacy_stubs::{AIConversationId, ConversationStatus};
 
 /// Per-request outcome of a StartAgent dispatch.
 #[derive(Debug, Clone)]

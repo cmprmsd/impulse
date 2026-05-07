@@ -1,3 +1,4 @@
+use crate::legacy_stubs::{AgentToolbarItemKind};
 pub mod new_session_shell;
 pub mod startup_shell;
 pub mod working_directory_config;

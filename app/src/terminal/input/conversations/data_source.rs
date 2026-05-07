@@ -10,6 +10,7 @@ use crate::search::SyncDataSource;
 use crate::terminal::input::conversations::search_item::ConversationSearchItem;
 use crate::terminal::input::conversations::AcceptConversation;
 use crate::terminal::model::session::active_session::ActiveSession;
+use crate::legacy_stubs::{AgentViewController, ConversationNavigationData};
 
 pub struct ConversationMenuDataSource {
     agent_view_controller: ModelHandle<AgentViewController>,

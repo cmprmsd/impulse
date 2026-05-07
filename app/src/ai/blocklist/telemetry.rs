@@ -2,6 +2,7 @@ use serde::Serialize;
 use serde_json::{json, Value};
 use strum_macros::{EnumDiscriminants, EnumIter};
 use warp_core::telemetry::{EnablementState, TelemetryEvent, TelemetryEventDesc};
+use crate::legacy_stubs::{AIConversationId};
 
 #[derive(Debug, EnumDiscriminants)]
 #[strum_discriminants(derive(EnumIter))]

@@ -19,6 +19,7 @@ use crate::terminal::input::suggestions_mode_model::{
     InputSuggestionsModeEvent, InputSuggestionsModeModel,
 };
 use crate::terminal::model::session::active_session::ActiveSession;
+use crate::legacy_stubs::{AgentViewController, ConversationNavigationData};
 
 /// Events emitted by InlineConversationMenuView.
 #[derive(Debug, Clone)]

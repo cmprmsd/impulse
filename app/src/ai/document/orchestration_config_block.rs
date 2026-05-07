@@ -23,6 +23,7 @@ use crate::appearance::Appearance;
 use crate::ui_components::blended_colors;
 use crate::BlocklistAIHistoryModel;
 use warp_core::ui::theme::WarpTheme;
+use crate::legacy_stubs::{AIConversationId};
 
 /// Renders a pill-shaped toggle switch (36×18) matching the Figma mock.
 fn render_pill_toggle(is_on: bool, theme: &WarpTheme) -> Box<dyn Element> {

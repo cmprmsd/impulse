@@ -49,6 +49,7 @@ use crate::terminal::input::suggestions_mode_model::{
 };
 use crate::terminal::{self, input};
 use warpui::{WeakViewHandle};
+use crate::legacy_stubs::{AgentViewController};
 
 /// Events emitted by InlineMenuView.
 #[derive(Debug, Clone)]

@@ -41,6 +41,7 @@ use super::persistence::{PersistedAIInput, PersistedAIInputType};
 use super::RequestInput;
 use warpui::{Action};
 use crate::legacy_stubs::{ServerApiProvider};
+use crate::legacy_stubs::{ConversationStatus, ServerConversationToken, TaskId};
 
 mod conversation_loader;
 pub use conversation_loader::{

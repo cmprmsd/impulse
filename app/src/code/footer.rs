@@ -39,6 +39,7 @@ use crate::view_components::action_button::{
 #[cfg(feature = "local_fs")]
 use repo_metadata::repositories::DetectedRepositories;
 use warpui::{AppContext, Element, Entity, ModelHandle, View, WeakModelHandle};
+use crate::legacy_stubs::{LspRepoStatus};
 
 const FOOTER_HEIGHT: f32 = 24.;
 /// Margin around the LSP icon container

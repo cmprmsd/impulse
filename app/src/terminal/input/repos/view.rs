@@ -15,6 +15,7 @@ use crate::terminal::input::repos::AcceptRepo;
 use crate::terminal::input::suggestions_mode_model::{
     InputSuggestionsModeEvent, InputSuggestionsModeModel,
 };
+use crate::legacy_stubs::{AgentViewController};
 
 /// Events emitted by InlineReposMenuView.
 #[derive(Debug, Clone)]

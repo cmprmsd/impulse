@@ -13,6 +13,7 @@ use crate::{
 use serde::{Deserialize, Serialize};
 use warp_core::ui::appearance::Appearance;
 use crate::legacy_stubs::{CloudObjectTypeAndId, SyncId};
+use crate::legacy_stubs::{QueueItem};
 
 pub mod manager;
 pub mod view;
