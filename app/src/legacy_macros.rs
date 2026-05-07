@@ -9,37 +9,9 @@
 //! Crate-wide visibility is achieved with `#[macro_export]` + a
 //! `pub use` re-export at the crate root in `lib.rs`.
 
-#[macro_export]
-macro_rules! safe_debug {
-    (safe: ($($safe_arg:tt)+), full: ($($full_arg:tt)+)) => {
-        log::debug!($($full_arg)+)
-    };
-    ($($arg:tt)+) => { log::debug!($($arg)+) };
-}
-
-#[macro_export]
-macro_rules! safe_info {
-    (safe: ($($safe_arg:tt)+), full: ($($full_arg:tt)+)) => {
-        log::info!($($full_arg)+)
-    };
-    ($($arg:tt)+) => { log::info!($($arg)+) };
-}
-
-#[macro_export]
-macro_rules! safe_warn {
-    (safe: ($($safe_arg:tt)+), full: ($($full_arg:tt)+)) => {
-        log::warn!($($full_arg)+)
-    };
-    ($($arg:tt)+) => { log::warn!($($arg)+) };
-}
-
-#[macro_export]
-macro_rules! safe_error {
-    (safe: ($($safe_arg:tt)+), full: ($($full_arg:tt)+)) => {
-        log::error!($($full_arg)+)
-    };
-    ($($arg:tt)+) => { log::error!($($arg)+) };
-}
+// safe_* macros: warp_core provides them via #[macro_export]; we don't redefine
+// here to avoid E0659 ambiguity at every call site that has
+// `use warp_core::safe_*;` at file level.
 
 // send_telemetry_* macros: stub them at the crate root via #[macro_export].
 // Files that previously used these via `use warp_core::send_telemetry_*;`
