@@ -253,7 +253,7 @@ pub struct BlocklistAIActionModel {
     is_view_only: bool,
 
     /// The ID of the ambient agent task which owns this action model, if any.
-    ambient_agent_task_id: Option<crate::ai::ambient_agents::AmbientAgentTaskId>,
+    ambient_agent_task_id: Option<crate::legacy_stubs::AmbientAgentTaskId>,
 }
 
 impl BlocklistAIActionModel {
@@ -417,7 +417,7 @@ impl BlocklistAIActionModel {
 
     pub fn set_ambient_agent_task_id(
         &mut self,
-        id: Option<crate::ai::ambient_agents::AmbientAgentTaskId>,
+        id: Option<crate::legacy_stubs::AmbientAgentTaskId>,
         ctx: &mut ModelContext<Self>,
     ) {
         self.ambient_agent_task_id = id;

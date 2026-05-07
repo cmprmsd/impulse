@@ -48,7 +48,7 @@ impl OneTimeModalModel {
                 return;
             };
 
-            let auth_state = crate::auth::AuthStateProvider::as_ref(ctx).get().clone();
+            let auth_state = crate::legacy_stubs::AuthStateProvider::as_ref(ctx).get().clone();
             let is_existing_user = auth_state.is_onboarded().unwrap_or_default();
             if is_existing_user {
                 // Settings modals settings are synced to the cloud, not respecting the user's sync setting, so they
@@ -334,7 +334,7 @@ impl OneTimeModalModel {
         }
 
         // Check if user is authenticated
-        let auth_state = crate::auth::AuthStateProvider::as_ref(ctx).get();
+        let auth_state = crate::legacy_stubs::AuthStateProvider::as_ref(ctx).get();
 
         if auth_state.is_anonymous_or_logged_out() {
             return false;

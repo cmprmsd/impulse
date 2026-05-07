@@ -12972,7 +12972,7 @@ impl Input {
     /// Uploads image and file attachments to GCS via presigned URLs, then emits `SendAgentPrompt`
     /// with the resulting `FileReference` attachments appended.
     fn upload_files_then_send_prompt(
-        task_id: crate::ai::ambient_agents::AmbientAgentTaskId,
+        task_id: crate::legacy_stubs::AmbientAgentTaskId,
         server_conversation_token: Option<
             session_sharing_protocol::common::ServerConversationToken,
         >,

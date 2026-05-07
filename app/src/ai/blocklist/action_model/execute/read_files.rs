@@ -116,7 +116,7 @@ impl ReadFilesExecutor {
         let remote_client = match &session_type {
             Some(SessionType::WarpifiedRemote {
                 host_id: Some(host_id),
-            }) => remote_server::manager::RemoteServerManager::as_ref(ctx)
+            }) => crate::legacy_stubs::RemoteServerManager::as_ref(ctx)
                 .client_for_host(host_id)
                 .cloned(),
             _ => None,

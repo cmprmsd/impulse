@@ -15,7 +15,7 @@ use crate::terminal::shell::Shell;
 /// `warp remote-server` process running on the remote host over SSH.
 ///
 /// The executor is always constructed with a live `RemoteServerClient` that
-/// was obtained from [`crate::remote_server::manager::RemoteServerManager`]
+/// was obtained from [`crate::crate::legacy_stubs::RemoteServerManager`]
 /// after the session reached the `Connected` state. The manager owns the
 /// authoritative per-session client; this executor holds a cloned `Arc` to
 /// the same underlying channels and transitively keeps them alive as long

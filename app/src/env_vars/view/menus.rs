@@ -424,7 +424,7 @@ impl EnvVarCollectionView {
                 update_manager.untrash_object(
                     CloudObjectTypeAndId::GenericStringObject {
                         object_type: GenericStringObjectFormat::Json(
-                            crate::cloud_object::JsonObjectType::EnvVarCollection,
+                            crate::legacy_stubs::JsonObjectType::EnvVarCollection,
                         ),
                         id: env_var_collection_id,
                     },
@@ -443,7 +443,7 @@ impl EnvVarCollectionView {
                 update_manager.trash_object(
                     CloudObjectTypeAndId::from_generic_string_object(
                         GenericStringObjectFormat::Json(
-                            crate::cloud_object::JsonObjectType::EnvVarCollection,
+                            crate::legacy_stubs::JsonObjectType::EnvVarCollection,
                         ),
                         env_var_collection_id,
                     ),
@@ -460,7 +460,7 @@ impl EnvVarCollectionView {
                 update_manager.duplicate_object(
                     &CloudObjectTypeAndId::from_generic_string_object(
                         GenericStringObjectFormat::Json(
-                            crate::cloud_object::JsonObjectType::EnvVarCollection,
+                            crate::legacy_stubs::JsonObjectType::EnvVarCollection,
                         ),
                         env_var_collection_id,
                     ),
@@ -479,7 +479,7 @@ impl EnvVarCollectionView {
                     window_id,
                     &[CloudObjectTypeAndId::from_generic_string_object(
                         GenericStringObjectFormat::Json(
-                            crate::cloud_object::JsonObjectType::EnvVarCollection,
+                            crate::legacy_stubs::JsonObjectType::EnvVarCollection,
                         ),
                         env_var_collection_id,
                     )],

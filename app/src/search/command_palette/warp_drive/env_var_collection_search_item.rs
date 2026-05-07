@@ -152,8 +152,8 @@ impl SearchItem for EnvVarCollectionSearchItem {
     fn execute_result(&self) -> Self::Action {
         CommandPaletteItemAction::ViewInWarpDrive {
             id: CloudObjectTypeAndId::GenericStringObject {
-                object_type: crate::cloud_object::GenericStringObjectFormat::Json(
-                    crate::cloud_object::JsonObjectType::EnvVarCollection,
+                object_type: crate::legacy_stubs::GenericStringObjectFormat::Json(
+                    crate::legacy_stubs::JsonObjectType::EnvVarCollection,
                 ),
                 id: self.cloud_env_var_collection.id,
             },

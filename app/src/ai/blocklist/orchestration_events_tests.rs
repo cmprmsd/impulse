@@ -366,7 +366,7 @@ fn test_lifecycle_event_type_from_proto_includes_cancelled_and_blocked() {
 
 #[test]
 fn test_has_pending_events_tracks_any_event_kind() {
-    let conversation_id = crate::ai::agent::conversation::AIConversationId::new();
+    let conversation_id = crate::legacy_stubs::AIConversationId::new();
     let mut service = OrchestrationEventService::new_without_subscriptions();
     assert!(!service.has_pending_events(conversation_id));
     service.pending_events.insert(

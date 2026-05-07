@@ -644,7 +644,7 @@ fn test_render_list_page_with_environments_shows_list() {
             let object = CloudAmbientAgentEnvironment::new(
                 sync_id,
                 CloudAmbientAgentEnvironmentModel::new(environment),
-                crate::cloud_object::CloudObjectMetadata::mock(),
+                crate::legacy_stubs::CloudObjectMetadata::mock(),
                 crate::cloud_object::CloudObjectPermissions::mock_personal(),
             );
 
@@ -710,7 +710,7 @@ fn test_render_list_page_with_personal_and_team_environments_shows_section_heade
             let personal_object = CloudAmbientAgentEnvironment::new(
                 personal_id,
                 CloudAmbientAgentEnvironmentModel::new(personal_env),
-                crate::cloud_object::CloudObjectMetadata::mock(),
+                crate::legacy_stubs::CloudObjectMetadata::mock(),
                 crate::cloud_object::CloudObjectPermissions::mock_personal(),
             );
 
@@ -722,7 +722,7 @@ fn test_render_list_page_with_personal_and_team_environments_shows_section_heade
             let team_object = CloudAmbientAgentEnvironment::new(
                 team_id,
                 CloudAmbientAgentEnvironmentModel::new(team_env),
-                crate::cloud_object::CloudObjectMetadata::mock(),
+                crate::legacy_stubs::CloudObjectMetadata::mock(),
                 team_permissions,
             );
 
@@ -769,7 +769,7 @@ fn test_render_list_page_with_only_personal_environments_shows_personal_header()
             let personal_object = CloudAmbientAgentEnvironment::new(
                 personal_id,
                 CloudAmbientAgentEnvironmentModel::new(personal_env),
-                crate::cloud_object::CloudObjectMetadata::mock(),
+                crate::legacy_stubs::CloudObjectMetadata::mock(),
                 crate::cloud_object::CloudObjectPermissions::mock_personal(),
             );
 
@@ -1272,7 +1272,7 @@ fn test_toolbar_renders_search_editor_view() {
             let object = CloudAmbientAgentEnvironment::new(
                 sync_id,
                 CloudAmbientAgentEnvironmentModel::new(environment),
-                crate::cloud_object::CloudObjectMetadata::mock(),
+                crate::legacy_stubs::CloudObjectMetadata::mock(),
                 crate::cloud_object::CloudObjectPermissions::mock_personal(),
             );
 

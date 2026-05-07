@@ -52,7 +52,7 @@ impl ApplyDiffModel {
         let ai_identifiers = ai_identifiers.clone();
 
         let remote_client = session_context.host_id().and_then(|host_id| {
-            remote_server::manager::RemoteServerManager::as_ref(ctx)
+            crate::legacy_stubs::RemoteServerManager::as_ref(ctx)
                 .client_for_host(host_id)
                 .cloned()
         });

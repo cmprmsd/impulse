@@ -259,7 +259,7 @@ impl EditorView {
                     return false;
                 }
 
-                if !crate::ai::AIRequestUsageModel::handle(ctx)
+                if !crate::legacy_stubs::AIClient::handle(ctx)
                     .as_ref(ctx)
                     .can_request_voice()
                 {

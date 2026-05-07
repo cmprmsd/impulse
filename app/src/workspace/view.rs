@@ -7089,7 +7089,7 @@ impl Workspace {
                 Some(WarpDriveItemId::Object(
                     CloudObjectTypeAndId::from_generic_string_object(
                         GenericStringObjectFormat::Json(
-                            crate::cloud_object::JsonObjectType::EnvVarCollection,
+                            crate::legacy_stubs::JsonObjectType::EnvVarCollection,
                         ),
                         *env_var_collection_id,
                     ),
@@ -13663,7 +13663,7 @@ impl Workspace {
                             Some(WarpDriveItemId::Object(
                                 CloudObjectTypeAndId::from_generic_string_object(
                                     GenericStringObjectFormat::Json(
-                                        crate::cloud_object::JsonObjectType::EnvVarCollection,
+                                        crate::legacy_stubs::JsonObjectType::EnvVarCollection,
                                     ),
                                     env_var_collection_id,
                                 ),

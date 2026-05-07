@@ -396,7 +396,7 @@ impl OrchestrationEventStreamer {
         let Some(run_id) = self.self_run_id(conversation_id, ctx) else {
             return;
         };
-        let Ok(task_id) = run_id.parse::<crate::ai::ambient_agents::AmbientAgentTaskId>() else {
+        let Ok(task_id) = run_id.parse::<crate::legacy_stubs::AmbientAgentTaskId>() else {
             return;
         };
         let local_cursor = self
@@ -645,7 +645,7 @@ impl OrchestrationEventStreamer {
                 continue;
             };
 
-            let Ok(task_id) = run_id.parse::<crate::ai::ambient_agents::AmbientAgentTaskId>()
+            let Ok(task_id) = run_id.parse::<crate::legacy_stubs::AmbientAgentTaskId>()
             else {
                 log::warn!("could not parse run_id {run_id:?} for {conv_id:?}");
                 self.reevaluate_eligibility(conv_id, ctx);
@@ -662,7 +662,7 @@ impl OrchestrationEventStreamer {
     fn spawn_restore_fetch(
         &mut self,
         conv_id: AIConversationId,
-        task_id: crate::ai::ambient_agents::AmbientAgentTaskId,
+        task_id: crate::legacy_stubs::AmbientAgentTaskId,
         sqlite_cursor: i64,
         ctx: &mut ModelContext<Self>,
     ) {
@@ -686,7 +686,7 @@ impl OrchestrationEventStreamer {
     fn finish_restore_fetch(
         &mut self,
         conv_id: AIConversationId,
-        task_id: crate::ai::ambient_agents::AmbientAgentTaskId,
+        task_id: crate::legacy_stubs::AmbientAgentTaskId,
         sqlite_cursor: i64,
         run_result: anyhow::Result<crate::ai::ambient_agents::task::AmbientAgentTask>,
         ctx: &mut ModelContext<Self>,
@@ -756,7 +756,7 @@ impl OrchestrationEventStreamer {
     fn start_restore_fetch_retry_timer(
         &mut self,
         conv_id: AIConversationId,
-        task_id: crate::ai::ambient_agents::AmbientAgentTaskId,
+        task_id: crate::legacy_stubs::AmbientAgentTaskId,
         sqlite_cursor: i64,
         ctx: &mut ModelContext<Self>,
     ) {

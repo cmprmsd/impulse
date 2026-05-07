@@ -15,7 +15,7 @@ use crate::NetworkStatus;
 
 
 type ServerAIFact = GenericServerObject<
-    crate::cloud_object::model::generic_string_model::GenericStringObjectId,
+    crate::legacy_stubs::GenericStringObjectId,
     CloudAIFactModel,
 >;
 

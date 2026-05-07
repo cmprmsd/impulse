@@ -181,7 +181,7 @@ fn initialize_app(app: &mut App) {
     app.add_singleton_model(|_| History::new(vec![]));
     app.add_singleton_model(|_| GitHubAuthNotifier::new());
     app.add_singleton_model(AgentConversationsModel::new);
-    app.add_singleton_model(remote_server::manager::RemoteServerManager::new);
+    app.add_singleton_model(crate::legacy_stubs::RemoteServerManager::new);
 }
 
 struct MockOptions {

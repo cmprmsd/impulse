@@ -61,7 +61,7 @@ fn test_variable_row_addition_and_removal() {
 
         env_var_collection_view.update(&mut app, |view, ctx| {
             view.open_new_env_var_collection(
-                crate::cloud_object::Owner::mock_current_user(),
+                crate::legacy_stubs::Owner::mock_current_user(),
                 None,
                 ctx,
             );

@@ -826,7 +826,7 @@ impl TerminalView {
     #[cfg(not(target_family = "wasm"))]
     fn start_cloud_followup_from_tombstone(
         &mut self,
-        task_id: crate::ai::ambient_agents::AmbientAgentTaskId,
+        task_id: crate::legacy_stubs::AmbientAgentTaskId,
         ctx: &mut ViewContext<Self>,
     ) {
         if !FeatureFlag::HandoffCloudCloud.is_enabled() {

@@ -24456,7 +24456,7 @@ impl TerminalView {
 
     pub(super) fn toggle_file_tree(
         &mut self,
-        cli_agent: Option<crate::server::telemetry::CLIAgentType>,
+        cli_agent: Option<crate::legacy_stubs::CLIAgentType>,
         ctx: &mut ViewContext<Self>,
     ) {
 

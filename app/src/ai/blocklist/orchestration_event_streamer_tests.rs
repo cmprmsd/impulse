@@ -191,11 +191,11 @@ fn make_ambient_task_with_event_seq(
 
 fn make_server_metadata_with_harness(
     harness: AIAgentHarness,
-) -> crate::ai::agent::conversation::ServerAIConversationMetadata {
+) -> crate::legacy_stubs::ServerAIConversationMetadata {
     use crate::persistence::model::ConversationUsageMetadata;
     use chrono::Utc;
 
-    crate::ai::agent::conversation::ServerAIConversationMetadata {
+    crate::legacy_stubs::ServerAIConversationMetadata {
         title: "test".to_string(),
         working_directory: None,
         harness,
@@ -526,7 +526,7 @@ fn finish_restore_fetch_uses_server_cursor_when_sqlite_is_absent() {
             me.streams.entry(conversation_id).or_default();
         });
 
-        let task_id: crate::ai::ambient_agents::AmbientAgentTaskId =
+        let task_id: crate::legacy_stubs::AmbientAgentTaskId =
             "550e8400-e29b-41d4-a716-446655440000".parse().unwrap();
         poller.update(&mut app, |me, ctx| {
             me.finish_restore_fetch(
@@ -682,7 +682,7 @@ fn finish_restore_fetch_no_ops_when_conversation_deleted_mid_flight() {
         });
 
         // The in-flight fetch now completes — with children.
-        let task_id: crate::ai::ambient_agents::AmbientAgentTaskId =
+        let task_id: crate::legacy_stubs::AmbientAgentTaskId =
             "550e8400-e29b-41d4-a716-446655440000".parse().unwrap();
         poller.update(&mut app, |me, ctx| {
             me.finish_restore_fetch(
@@ -745,7 +745,7 @@ fn finish_restore_fetch_err_does_not_resurrect_deleted_conversation() {
         });
 
         // The in-flight fetch now completes with an error.
-        let task_id: crate::ai::ambient_agents::AmbientAgentTaskId =
+        let task_id: crate::legacy_stubs::AmbientAgentTaskId =
             "550e8400-e29b-41d4-a716-446655440000".parse().unwrap();
         poller.update(&mut app, |me, ctx| {
             me.finish_restore_fetch(
@@ -886,7 +886,7 @@ fn finish_restore_fetch_reconnects_sse_when_children_added_to_open_connection() 
         });
 
         // The restore fetch returns with a child run_id.
-        let task_id: crate::ai::ambient_agents::AmbientAgentTaskId =
+        let task_id: crate::legacy_stubs::AmbientAgentTaskId =
             "550e8400-e29b-41d4-a716-446655440000".parse().unwrap();
         poller.update(&mut app, |me, ctx| {
             me.finish_restore_fetch(

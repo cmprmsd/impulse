@@ -151,7 +151,7 @@ fn initialize_app(app: &mut App) {
     app.add_singleton_model(DefaultTerminal::new);
     app.add_singleton_model(|_| IgnoredSuggestionsModel::new(vec![]));
     app.add_singleton_model(|_| crate::code_review::git_status_update::GitStatusUpdateModel::new());
-    app.add_singleton_model(remote_server::manager::RemoteServerManager::new);
+    app.add_singleton_model(crate::legacy_stubs::RemoteServerManager::new);
 
     #[cfg(feature = "local_fs")]
     app.add_singleton_model(RepoMetadataModel::new);
