@@ -18,7 +18,7 @@ use warpui::{
         button::{ButtonVariant, TextAndIcon, TextAndIconAlignment},
         components::{Coords, UiComponent, UiComponentStyles},
     },
-    AppContext, Element, Entity, SingletonEntity as _, TypedActionView, View, ViewContext,
+};
 
 use crate::{
     cloud_object::{model::persistence::CloudModel, CloudObject},
@@ -27,6 +27,7 @@ use crate::{
         SingleLineEditorOptions, TextOptions, ValidInputType,
     },
 
+};
 /// Width of the alias name editor.
 const ALIAS_EDITOR_WIDTH: f32 = 100.;
 

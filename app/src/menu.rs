@@ -25,11 +25,6 @@ use warpui::{
         MainAxisSize, MouseInBehavior, MouseStateHandle, ParentElement, Radius, Rect, SavePosition,
         Shrinkable, Text,
     },
-    fonts::{FamilyId, Properties},
-    keymap::FixedBinding,
-    platform::Cursor,
-    ui_components::components::UiComponent,
-    Action, AppContext, Entity, SingletonEntity, TypedActionView, View, ViewContext,
 };
 
 pub const CHEVRON_RIGHT_ALIGN_SVG_PATH: &str = "bundled/svg/chevron-right-align.svg";

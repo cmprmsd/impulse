@@ -22,7 +22,6 @@ use crate::TemplatableMCPServerManager;
 use crate::UserWorkspaces;
 use crate::{
     pane_group::{pane::view, BackingView, PaneConfiguration, PaneEvent},
-    Appearance,
 };
 use ai::api_keys::{ApiKeyManager, ApiKeyManagerEvent};
 use itertools::Itertools;
@@ -41,7 +40,7 @@ use warpui::{
         Container, CrossAxisAlignment, Expanded, Flex, Highlight, MouseStateHandle, ParentElement,
         PartialClickableElement, ScrollbarWidth, Text,
     },
-    AppContext, Element, Entity, ModelHandle, SingletonEntity, TypedActionView, View, ViewContext,
+};
 
 const MODEL_MENU_WIDTH: f32 = 250.;
 

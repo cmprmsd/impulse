@@ -3,8 +3,6 @@ use std::sync::Arc;
 use mockall::predicate::eq;
 
 use super::*;
-    AIClient, AgentRunEvent, MockAIClient, ReadAgentMessageResponse,
-};
 
 fn make_run_event(
     sequence: i64,

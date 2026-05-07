@@ -13,7 +13,6 @@ use warpui::{
         button::ButtonVariant,
         components::{Coords, UiComponent, UiComponentStyles},
     },
-    AppContext, Element, Entity, EntityId, SingletonEntity, TypedActionView, View, ViewContext,
 };
 
 use crate::{

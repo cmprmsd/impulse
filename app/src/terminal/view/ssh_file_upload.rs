@@ -11,12 +11,11 @@ use warpui::{
         Border, Container, CornerRadius, CrossAxisAlignment, Flex, FormattedTextElement,
         HighlightedHyperlink, MainAxisSize, MouseStateHandle, ParentElement, Radius,
     },
-    ui_components::{button::ButtonVariant, components::UiComponent as _},
-    Element, Entity, SingletonEntity, TypedActionView, View, ViewContext,
 };
 
 use crate::{
     terminal::ssh::util::InteractiveSshCommand, ui_components::buttons::icon_button,
+};
 
 pub type FileUploadId = usize;
 

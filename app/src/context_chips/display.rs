@@ -19,8 +19,6 @@ use warpui::{
         ChildView, Clipped, Container, CrossAxisAlignment, Element, Flex, MainAxisAlignment,
         MainAxisSize, ParentElement, Wrap,
     },
-    AppContext, Entity, EntityId, FocusContext, ModelHandle, SingletonEntity, TypedActionView,
-    View, ViewContext, ViewHandle,
 };
 
 use super::{

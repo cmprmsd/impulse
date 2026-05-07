@@ -10,6 +10,7 @@ use super::{
     settings_page::{
         MatchData, PageType, SettingsPageMeta, SettingsPageViewHandle, SettingsWidget, PAGE_PADDING,
     },
+};
 use crate::{
     appearance::Appearance,
     auth::AuthStateProvider,
@@ -19,6 +20,7 @@ use crate::{
         server_api::referral::{ReferralInfo, ReferralsClient},
         telemetry::TelemetryEvent,
     },
+};
 use warpui::{
     clipboard::ClipboardContent,
     elements::{
@@ -31,8 +33,6 @@ use warpui::{
         button::ButtonVariant,
         components::{Coords, UiComponent, UiComponentStyles},
     },
-    AppContext, Entity, EventContext, FocusContext, SingletonEntity, TypedActionView, View,
-    ViewContext, ViewHandle,
 };
 
 const HEADER_FONT_SIZE: f32 = 18.;

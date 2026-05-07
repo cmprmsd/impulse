@@ -5,7 +5,6 @@ use warpui::{
         ConstrainedBox, Container, CrossAxisAlignment, Flex, FormattedTextElement,
         HighlightedHyperlink, HyperlinkLens, MainAxisAlignment, MainAxisSize, ParentElement,
     },
-    AppContext, Element, Entity, SingletonEntity, TypedActionView, View, ViewContext,
 };
 
 use crate::{

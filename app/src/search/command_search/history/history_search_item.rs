@@ -7,9 +7,6 @@ use warpui::{
         Align, ConstrainedBox, Container, CrossAxisAlignment, Flex, Highlight, Icon,
         MainAxisAlignment, MainAxisSize, ParentElement, Shrinkable, Text,
     },
-    fonts::{Properties, Weight},
-    ui_components::components::{Coords, UiComponent, UiComponentStyles},
-    AppContext, Element, SingletonEntity,
 };
 
 use crate::search::item::SearchItem;
@@ -18,6 +15,7 @@ use crate::search::{
 };
 use crate::{
     appearance::Appearance, terminal::rich_history::render_rich_history,
+};
 use crate::{search::command_search::searcher::CommandSearchItemAction, terminal::HistoryEntry};
 
 const COMMAND_METADATA_LEFT_MARGIN_FROM_METADATA: f32 = 8.;

@@ -6,8 +6,6 @@ use warpui::{
         Hoverable, MainAxisSize, MouseState, MouseStateHandle, ParentElement, Radius, Shrinkable,
         SizeConstraintCondition, SizeConstraintSwitch,
     },
-    platform::Cursor,
-    Action, AppContext, Element, EventContext, SingletonEntity,
 };
 
 use crate::search::item::IconLocation;

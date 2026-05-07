@@ -9,9 +9,6 @@ use warpui::{
         MainAxisSize, MouseStateHandle, ParentElement, Radius, Shrinkable, SizeConstraintCondition,
         SizeConstraintSwitch, Text,
     },
-    fonts::FamilyId,
-    platform::Cursor,
-    AppContext, Element, EventContext, SingletonEntity,
 };
 
 use crate::{

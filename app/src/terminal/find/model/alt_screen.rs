@@ -7,6 +7,7 @@ use crate::{
         find::{FindConfig, RegexDFAs},
         index::Point,
     },
+};
 
 use super::FindOptions;
 

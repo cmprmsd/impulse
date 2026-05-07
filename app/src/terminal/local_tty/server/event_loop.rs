@@ -8,7 +8,6 @@ use warp_cli::TerminalServerArgs;
 
 use crate::terminal::{
     local_tty::{self, server::protocol::NonblockingSocketFd},
-    platform,
 };
 
 use super::{api, logging, protocol, RECV_SOCKET_FILENO, SEND_SOCKET_FILENO};

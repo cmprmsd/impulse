@@ -15,6 +15,7 @@ use crate::{
         view_getters::{notebook_view, terminal_view},
     },
 
+};
 /// Asserts that the notebook in the given pane has the expected Markdown content.
 pub fn assert_notebook_contents(
     tab_index: usize,

@@ -18,9 +18,6 @@ use warpui::{
         CrossAxisAlignment, Fill, Flex, Hoverable, MainAxisAlignment, MouseStateHandle,
         OffsetPositioning, ParentAnchor, ParentElement, ParentOffsetBounds, Radius, Stack,
     },
-    platform::Cursor,
-    ui_components::components::{UiComponent, UiComponentStyles},
-    AppContext, Element, Entity, SingletonEntity, TypedActionView, View, ViewContext,
 };
 use warpui::{FocusContext, ViewHandle};
 

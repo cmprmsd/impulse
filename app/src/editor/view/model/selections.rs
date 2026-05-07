@@ -18,6 +18,7 @@ use crate::{
         CursorColors, RangeExt,
     },
 
+};
 /// This type encapsulates enough information about a selection to be able to
 /// draw it. Compared to the `Selection` type, the points are converted based on
 /// the `DisplayMap` to `DisplayPoint`s.

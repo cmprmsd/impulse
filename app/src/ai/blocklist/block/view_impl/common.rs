@@ -41,7 +41,6 @@ use warpui::{
         button::Button,
         components::{Coords, UiComponent, UiComponentStyles},
     },
-    Action, AppContext, Element, EventContext, SingletonEntity, View, ViewHandle,
 };
 
 use super::{add_highlights_to_rich_text, add_highlights_to_text, output::LinkActionConstructors};
@@ -57,9 +56,6 @@ use crate::{
         },
         loading::shimmering_warp_loading_text,
     },
-    terminal::{self, TerminalModel},
-    util::link_detection::{add_link_detection_mouse_interactions, DetectedLinksState},
-    workspaces::{user_workspaces::UserWorkspaces, workspace::CustomerType},
 };
 use crate::{
     ai::{

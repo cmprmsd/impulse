@@ -56,9 +56,8 @@ use crate::{
         },
         TerminalModel, TerminalView,
     },
-    throttle::throttle,
-};
 
+};
 /// The amount of time we will wait to batch consecutive write to pty requests before sending an event to the server.
 const PTY_WRITES_BATCH_THRESHOLD: Duration = if cfg!(test) {
     Duration::from_millis(5)

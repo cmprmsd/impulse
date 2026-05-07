@@ -14,9 +14,7 @@ use warpui::{
         CrossAxisAlignment, Flex, MainAxisAlignment, MainAxisSize, MouseStateHandle, ParentElement,
         Radius, ScrollbarWidth,
     },
-    platform::Cursor,
-    ui_components::components::UiComponent,
-    AppContext, Element, Entity, FocusContext, SingletonEntity, TypedActionView, View, ViewContext,
+};
 
 use super::{is_delete_allowed, style, AIFact, CloudAIFact, CloudAIFactModel};
 use crate::ai::facts::AIMemory;

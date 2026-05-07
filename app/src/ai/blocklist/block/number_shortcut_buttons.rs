@@ -4,9 +4,6 @@ use warpui::{
         Flex, Hoverable, MouseInBehavior, MouseStateHandle, ParentElement, SavePosition,
         ScrollTarget, ScrollToPositionMode,
     },
-    keymap::FixedBinding,
-    ui_components::{button::Button, components::UiComponent},
-    AppContext, Element, Entity, TypedActionView, View, ViewContext, ViewHandle, WeakViewHandle,
 };
 
 use super::numbered_button::{

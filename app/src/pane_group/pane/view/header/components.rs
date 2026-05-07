@@ -10,6 +10,7 @@ use warp_core::ui::theme::Fill;
 use warpui::elements::{
     Align, Clipped, ConstrainedBox, Container, CrossAxisAlignment, Flex, Hoverable,
     MainAxisAlignment, MainAxisSize, MouseStateHandle, ParentElement, SavePosition, Shrinkable,
+};
 use warpui::text_layout::ClipConfig;
 use warpui::ui_components::components::UiComponent;
 use warpui::Element;

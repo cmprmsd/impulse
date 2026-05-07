@@ -15,7 +15,6 @@ use warpui::{
         button::ButtonVariant,
         components::{Coords, UiComponent, UiComponentStyles},
     },
-    AppContext, Element, Entity, SingletonEntity, View, ViewContext,
 };
 
 const TITLE_EXISTING_USERS: &str = "We've updated our telemetry policy.";

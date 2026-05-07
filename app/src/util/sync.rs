@@ -3,7 +3,6 @@
 use std::future::Future;
 use std::sync::{
     atomic::{AtomicBool, Ordering},
-    Arc,
 };
 
 use event_listener::Event;

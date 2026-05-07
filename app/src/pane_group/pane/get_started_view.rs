@@ -11,8 +11,6 @@ use warpui::{
         button::{ButtonVariant, TextAndIcon, TextAndIconAlignment},
         components::{Coords, UiComponent, UiComponentStyles},
     },
-    AppContext, Element, Entity, ModelHandle, SingletonEntity as _, TypedActionView, View,
-    ViewContext, ViewHandle,
 };
 
 use crate::{
@@ -24,6 +22,7 @@ use crate::{
     pane_group::{
         focus_state::PaneFocusHandle, pane::view, BackingView, PaneConfiguration, PaneEvent,
     },
+};
 
 pub fn init(app: &mut AppContext) {
     use warpui::keymap::macros::*;

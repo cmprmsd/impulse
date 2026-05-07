@@ -15,6 +15,7 @@ use crate::{
         templatable_installation::{TemplatableMCPServerInstallation, VariableType, VariableValue},
     },
 
+};
 /// Normalize MCP JSON input to ensure it has a server name wrapper.
 ///
 /// If the JSON is a single server definition (has `command` or `url` at the top level),

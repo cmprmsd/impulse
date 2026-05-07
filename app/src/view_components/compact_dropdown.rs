@@ -17,8 +17,6 @@ use warpui::{
         button::ButtonVariant,
         components::{Coords, UiComponent, UiComponentStyles},
     },
-    Action, AppContext, BlurContext, Element, Entity, SingletonEntity, TypedActionView, View,
-    ViewContext, ViewHandle,
 };
 
 #[cfg(test)]

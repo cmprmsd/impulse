@@ -8,9 +8,6 @@ use warpui::{
         CrossAxisAlignment, Empty, Fill, Flex, Hoverable, MouseStateHandle, OffsetPositioning,
         ParentAnchor, Radius, SavePosition, Stack, Text, DEFAULT_UI_LINE_HEIGHT_RATIO,
     },
-    platform::Cursor,
-    AppContext, Element, Entity, EntityId, ModelHandle, SingletonEntity as _, TypedActionView,
-    View, ViewContext, ViewHandle,
 };
 use warpui::{
     elements::{ParentElement, ParentOffsetBounds},
@@ -30,9 +27,6 @@ use crate::{
             AIDocumentId, AIDocumentModel, AIDocumentModelEvent, AIDocumentVersion,
         },
     },
-    terminal::input::{MenuPositioning, MenuPositioningProvider},
-    ui_components::blended_colors,
-    AIAgentTodoList, BlocklistAIHistoryModel,
 };
 use warpui::fonts::{Properties, Weight};
 

@@ -3,6 +3,7 @@ use super::{
         render_page_title, MatchData, PageType, SettingsPageMeta, SettingsPageViewHandle,
         SettingsWidget, HEADER_FONT_SIZE, PAGE_PADDING,
     },
+};
 use crate::{
     appearance::Appearance,
     channel::{Channel, ChannelState},

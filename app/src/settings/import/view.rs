@@ -13,7 +13,7 @@ use warpui::{
         components::{Coords, UiComponent, UiComponentStyles},
         radio_buttons::{self, RadioButtonItem},
     },
-    Element, Entity, ModelContext, ModelHandle, SingletonEntity, TypedActionView, View,
+};
 
 use warpui::ui_components::radio_buttons::RadioButtonStateHandle;
 
@@ -31,11 +31,6 @@ use crate::{
         alt_screen_reporting::AltScreenReporting, keys_settings::KeysSettings,
         session_settings::SessionSettings,
     },
-    themes::theme::{CustomTheme, SelectedSystemThemes, ThemeKind},
-    ui_components::blended_colors,
-    user_config::{self, WarpConfig},
-    window_settings::WindowSettings,
-    GlobalResourceHandlesProvider, TelemetryEvent,
 };
 
 use super::config::{QuakeModeWindow, ThemeType};

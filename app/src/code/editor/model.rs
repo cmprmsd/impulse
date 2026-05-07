@@ -27,6 +27,7 @@ use warpui::units::{IntoPixels, Pixels};
 use crate::util::link_detection::get_word_range_at_offset;
 use crate::{
     appearance::Appearance, editor::InteractionState, notebooks::editor::model::word_unit,
+};
 
 use ai::diff_validation::DiffDelta;
 use itertools::Itertools;
@@ -63,7 +64,6 @@ use warp_editor::{
         BlockItem, Decoration, LineDecoration, RenderEvent, RenderLineLocation, RenderState,
         RichTextStyles, UpdateDecorationAfterLayout, WidthSetting,
     },
-    selection::{SelectionMode, SelectionModel, TextUnit},
 };
 use warpui::elements::{
     AnchorPair, OffsetPositioning, OffsetType, PositionedElementOffsetBounds, PositioningAxis,

@@ -11,7 +11,6 @@ use warpui::{
         button::{ButtonVariant, TextAndIcon, TextAndIconAlignment},
         components::{UiComponent, UiComponentStyles},
     },
-    Element, ViewContext,
 };
 
 use crate::{
@@ -20,8 +19,6 @@ use crate::{
         active_env_var_collection_data::TrashStatus,
         view::env_var_collection::{EnvVarCollectionAction, EnvVarCollectionView},
     },
-    ui_components::{breadcrumb::BreadcrumbState, buttons::icon_button, icons::Icon},
-    AppContext, Appearance, SingletonEntity,
 };
 
 const VARIABLE_DIVIDER_HEIGHT: f32 = 2.;

@@ -13,6 +13,7 @@ use crate::{
     server::telemetry::TelemetryEvent,
     settings_view::features_page::render_group,
     terminal::session_settings::*,
+};
 
 #[derive(Clone, Debug)]
 #[allow(clippy::enum_variant_names)]

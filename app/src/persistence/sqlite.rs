@@ -10,7 +10,6 @@ use std::{
     fs,
     path::PathBuf,
     sync::Arc,
-    thread,
 };
 
 use ai::project_context::model::ProjectRulePath;
@@ -36,6 +35,7 @@ use warpui::{AppContext, SingletonEntity};
 use super::agent::{delete_agent_conversations, upsert_agent_conversation};
 use super::block_list::{
     delete_ai_conversation, delete_blocks, save_block, update_block_agent_view_visibility,
+};
 use super::model::{
     self, ActiveMCPServer, CurrentUserInformation, MCPEnvironmentVariables, NewActiveMCPServer,
     NewApp, NewCommand, NewFolder, NewNotebook, NewServerExperiment, NewTab, NewTeam, NewWindow,
@@ -48,13 +48,8 @@ use super::model::{
 use super::schema;
 use super::{
     BlockCompleted, FinishedCommandMetadata, ModelEvent, PersistedData, StartedCommandMetadata,
-    WriterHandles,
 };
 use crate::ai::agent::conversation::AIConversationId;
-    CloudScheduledAmbientAgent, CloudScheduledAmbientAgentModel,
-};
-    CloudAmbientAgentEnvironment, CloudAmbientAgentEnvironmentModel,
-};
 use crate::ai::document::ai_document_model::AIDocumentId;
 use crate::ai::execution_profiles::{CloudAIExecutionProfile, CloudAIExecutionProfileModel};
 use crate::ai::facts::{CloudAIFact, CloudAIFactModel};
@@ -67,9 +62,6 @@ use crate::app_state::{
     AIFactPaneSnapshot, AmbientAgentPaneSnapshot, CodeReviewPaneSnapshot,
     EnvVarCollectionPaneSnapshot, LeftPanelSnapshot, RightPanelSnapshot, SettingsPaneSnapshot,
     WorkflowPaneSnapshot,
-};
-    CloudObject, JsonObjectType, ObjectIdType, ObjectType, Owner, RevisionAndLastEditor,
-    GENERIC_STRING_OBJECT_PREFIX, JSON_OBJECT_PREFIX,
 };
 use crate::code::editor_management::CodeSource;
 use crate::drive::folders::{CloudFolder, CloudFolderModel, FolderId};

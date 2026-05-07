@@ -10,7 +10,6 @@ use warpui::{
         components::{Coords, UiComponent, UiComponentStyles},
         switch::SwitchStateHandle,
     },
-    AppContext, Element, Entity, SingletonEntity, TypedActionView, View, ViewContext, ViewHandle,
 };
 
 use crate::{
@@ -21,6 +20,7 @@ use crate::{
         features_page::render_group,
         settings_page::{render_body_item, LocalOnlyIconState, ToggleState},
     },
+};
 
 #[derive(Debug, Clone, Copy)]
 pub enum Action {

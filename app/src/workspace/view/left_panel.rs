@@ -10,10 +10,6 @@ use warpui::{
         DragBarSide, Element, Empty, Flex, MainAxisAlignment, MainAxisSize, MouseStateHandle,
         ParentElement, Resizable, ResizableStateHandle, Shrinkable,
     },
-    platform::Cursor,
-    ui_components::components::{Coords, UiComponent, UiComponentStyles},
-    AppContext, Entity, FocusContext, ModelHandle, SingletonEntity, TypedActionView, View,
-    ViewContext, ViewHandle, WeakViewHandle,
 };
 
 use crate::ai::agent::conversation::AIConversationId;
@@ -53,9 +49,6 @@ use crate::{
         buttons::{icon_button, icon_button_with_color},
         icons,
     },
-    util::bindings::keybinding_name_to_display_string,
-    workspace::WorkspaceAction,
-    TelemetryEvent,
 };
 
 #[derive(Default)]

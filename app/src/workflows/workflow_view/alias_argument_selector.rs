@@ -6,6 +6,7 @@ use warpui::{
     elements::ChildView,
     ui_components::components::{Coords, UiComponent, UiComponentStyles},
     AppContext, Element, Entity, FocusContext, SingletonEntity, TypedActionView, View, ViewContext,
+};
 
 use crate::{
     cloud_object::model::persistence::CloudModel,
@@ -15,6 +16,7 @@ use crate::{
         SingleLineEditorOptions, TextOptions,
     },
 
+};
 /// Width of the argument editor in alias mode.
 pub const ALIAS_ARGUMENT_EDITOR_WIDTH: f32 = 300.;
 const EDITOR_FONT_SIZE: f32 = 14.;

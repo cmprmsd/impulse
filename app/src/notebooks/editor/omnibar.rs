@@ -8,6 +8,7 @@ use warp_editor::{
         BlockType as ContentBlockType, BufferBlockStyle, BufferTextStyle, TextStyles,
         TextStylesWithMetadata,
     },
+};
 use warpui::{
     accessibility::{AccessibilityContent, ActionAccessibilityContent, WarpA11yRole},
     elements::{
@@ -15,10 +16,6 @@ use warpui::{
         MainAxisSize, MouseStateHandle, OffsetPositioning, OffsetType, ParentElement, Point,
         PositionedElementOffsetBounds, PositioningAxis, Radius, Rect, XAxisAnchor, YAxisAnchor,
     },
-    presenter::ChildView,
-    ui_components::components::{Coords, UiComponent, UiComponentStyles},
-    AppContext, Element, Entity, ModelHandle, SingletonEntity, SizeConstraint, TypedActionView,
-    View, ViewContext, ViewHandle,
 };
 
 use crate::{
@@ -31,7 +28,6 @@ use crate::{
 use super::{
     model::{NotebooksEditorModel, RichTextEditorModelEvent},
     view::EditorViewAction,
-    BlockType,
 };
 
 const OMNIBAR_HEIGHT: f32 = 32.;

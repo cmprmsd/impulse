@@ -35,7 +35,6 @@ use std::{
     collections::HashMap,
     iter::{self, Iterator},
     ops::{AddAssign, Range},
-    str,
 };
 use string_offset::{ByteOffset, CharOffset};
 use sum_tree::{self, Cursor, FilterCursor, SeekBias, SumTree};

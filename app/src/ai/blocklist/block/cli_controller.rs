@@ -26,6 +26,7 @@ use crate::{
         model_events::{ModelEvent, ModelEventDispatcher},
         TerminalModel,
     },
+};
 
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
 pub enum UserTakeOverReason {

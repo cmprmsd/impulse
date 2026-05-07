@@ -13,7 +13,6 @@ use warpui::{
         button::{ButtonVariant, TextAndIcon, TextAndIconAlignment},
         components::{UiComponent, UiComponentStyles},
     },
-    Element, ViewContext,
 };
 
 use super::env_var_collection::{
@@ -27,6 +26,7 @@ use crate::{
     search::external_secrets::{
         searcher::ExternalSecretSearchItemAction, view::ExternalSecretsMenuEvent,
     },
+};
 #[cfg(all(not(target_family = "wasm"), feature = "local_tty"))]
 use crate::{
     terminal::local_shell::LocalShellState,

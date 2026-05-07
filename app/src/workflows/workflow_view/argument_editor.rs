@@ -14,7 +14,6 @@ use warpui::{
         button::ButtonVariant,
         components::{Coords, UiComponent, UiComponentStyles},
     },
-    AppContext, Element, SingletonEntity as _, ViewContext, ViewHandle,
 };
 
 use crate::{
@@ -26,12 +25,14 @@ use crate::{
         EditOrigin, EditorView, Event as EditorEvent, InteractionState,
         PlainTextEditorViewAction as EditorAction,
     },
+};
 
 use super::alias_argument_selector::{AliasArgumentSelector, AliasArgumentSelectorEvent};
 
 use super::{
     WorkflowAction, WorkflowView, WorkflowViewEvent, BUTTON_BORDER_RADIUS, EDITOR_FONT_SIZE,
     HORIZONTAL_TEXT_INPUT_PADDING, SECTION_SPACING, VERTICAL_TEXT_INPUT_PADDING,
+};
 
 const ARGUMENT_INPUT_HEIGHT: f32 = 30.;
 const ARGUMENT_LABEL_TEXT: &str = "Arguments";

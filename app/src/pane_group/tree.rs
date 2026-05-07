@@ -6,14 +6,13 @@ use std::{fmt, iter, mem};
 use warpui::elements::{
     ChildAnchor, Container, DispatchEventResult, Empty, OffsetPositioning, ParentAnchor,
     ParentOffsetBounds, PositionedElementAnchor, PositionedElementOffsetBounds, SavePosition,
+};
 use warpui::AppContext;
 use warpui::{
     elements::{
         ConstrainedBox, Element, EventHandler, Flex, Hoverable, MouseStateHandle, ParentElement,
         Rect, Shrinkable,
     },
-    platform::Cursor,
-    EntityId, ViewContext,
 };
 
 use super::{ActivationReason, PaneGroup, PaneId};

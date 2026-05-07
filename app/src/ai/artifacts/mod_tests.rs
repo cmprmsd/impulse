@@ -3,8 +3,6 @@ use anyhow::anyhow;
 use chrono::{TimeZone, Utc};
 
 #[cfg(feature = "local_fs")]
-    ArtifactDownloadCommonFields, FileArtifactResponseData, ScreenshotArtifactResponseData,
-};
 
 #[test]
 fn test_parse_github_pr_url() {

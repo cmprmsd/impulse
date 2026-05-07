@@ -12,6 +12,7 @@ use crate::ai::{
         CancellationReason, PassiveSuggestionTrigger, PassiveSuggestionTriggerType,
         RenderableAIError, ServerOutputId, Shared,
     },
+};
 use chrono::TimeDelta;
 use warpui::{AppContext, ViewContext};
 

@@ -36,6 +36,7 @@ use crate::{
         AIAgentActionId, AIAgentExchange, AIAgentInput, AIAgentOutputStatus, FinishedAIAgentOutput,
         MessageId, RenderableAIError, RequestCost, Suggestions,
     },
+};
 
 #[cfg(feature = "local_fs")]
 use crate::persistence::{database_file_path, establish_ro_connection};

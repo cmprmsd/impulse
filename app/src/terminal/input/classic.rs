@@ -29,7 +29,6 @@ use warpui::{
         Hoverable, OffsetPositioning, ParentAnchor, ParentElement, ParentOffsetBounds,
         SavePosition, Stack,
     },
-    AppContext, SingletonEntity,
 };
 
 use super::{should_render_prompt_using_editor_decorator_elements, Input, SubshellRenderState};

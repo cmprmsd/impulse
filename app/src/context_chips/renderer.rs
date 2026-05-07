@@ -12,7 +12,6 @@ use warpui::ui_components::components::UiComponent;
 use warpui::Action;
 use warpui::{
     elements::{Container, CrossAxisAlignment, Flex, Text},
-    Element,
 };
 
 use crate::appearance::Appearance;

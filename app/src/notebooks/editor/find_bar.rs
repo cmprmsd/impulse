@@ -20,8 +20,6 @@ use warpui::{
         components::{Coords, UiComponent, UiComponentStyles},
         toggle_button::ToggleButton,
     },
-    AppContext, BlurContext, Element, Entity, FocusContext, ModelHandle, SingletonEntity,
-    TypedActionView, View, ViewContext, ViewHandle,
 };
 
 use crate::{

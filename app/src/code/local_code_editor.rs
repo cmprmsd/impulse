@@ -43,7 +43,7 @@ use warpui::{
         button::ButtonVariant,
         components::{Coords, UiComponent, UiComponentStyles},
     },
-    AppContext, Element, Entity, SingletonEntity, TypedActionView, View, ViewContext, ViewHandle,
+};
 use warpui::{platform::SaveFilePickerConfiguration, ModelHandle};
 
 use crate::menu::{Event, Menu, MenuItem, MenuItemFields};
@@ -55,10 +55,6 @@ use crate::{
         global_buffer_model::{BufferState, GlobalBufferModel},
         SaveOutcome, ShowFindReferencesCardProvider,
     },
-    debounce::debounce,
-    settings::AISettings,
-    terminal::TerminalView,
-    util::sync::Condition,
 };
 use crate::{
     code::{editor::EditorReviewComment, global_buffer_model::GlobalBufferModelEvent},

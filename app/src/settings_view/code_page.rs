@@ -7,7 +7,6 @@ use super::{
         SettingsPageMeta, SettingsPageViewHandle, SettingsWidget, HEADER_PADDING,
         TOGGLE_BUTTON_RIGHT_PADDING,
     },
-    LocalOnlyIconState, SettingsAction, SettingsSection, ToggleSettingActionPair, ToggleState,
 };
 use crate::{
     ai::persisted_workspace::{
@@ -33,8 +32,6 @@ use crate::{
         update_manager::TeamUpdateManager, user_workspaces::UserWorkspaces,
         workspace::AdminEnablementSetting,
     },
-    CodebaseIndexFinishedStatus, CodebaseIndexManager, CodebaseIndexManagerEvent,
-    CodebaseIndexStatus, CodebaseIndexingError,
 };
 use ai::project_context::model::{ProjectContextModel, ProjectContextModelEvent};
 use ai::workspace::WorkspaceMetadata;
@@ -66,8 +63,6 @@ use warpui::{
         components::{Coords, UiComponent, UiComponentStyles},
         switch::{SwitchStateHandle, TooltipConfig},
     },
-    Action, AppContext, Entity, ModelHandle, SingletonEntity, TypedActionView, View, ViewContext,
-    ViewHandle,
 };
 
 const MAIN_SECTION_MARGIN: f32 = 12.;

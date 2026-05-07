@@ -10,6 +10,7 @@ use session_sharing_protocol::{
         ActivePrompt, OrderedTerminalEvent, OrderedTerminalEventType, ParticipantId, Selection,
         SessionId,
     },
+};
 use warpui::{App, ModelHandle};
 use websocket::{Message, WebsocketMessage as _};
 
@@ -23,6 +24,7 @@ use crate::{
         shared_session::{SharedSessionScrollbackType, MAX_BYTES_SHAREABLE},
         TerminalModel,
     },
+};
 
 use super::{Network, PtyBytesBatchStatus, Stage};
 

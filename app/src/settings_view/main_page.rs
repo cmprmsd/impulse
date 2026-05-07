@@ -5,7 +5,6 @@ use super::{
         MatchData, PageType, SettingsPageMeta, SettingsPageViewHandle, SettingsWidget, ToggleState,
         HEADER_PADDING,
     },
-    SettingsAction, SettingsSection, ToggleSettingActionPair,
 };
 use crate::autoupdate::{self, AutoupdateStage, AutoupdateState};
 use crate::send_telemetry_from_ctx;
@@ -14,7 +13,6 @@ use crate::{
     auth::{auth_state::AuthState, auth_view_modal::AuthViewVariant},
     report_if_error,
     settings::cloud_preferences::CloudPreferencesSettings,
-    TelemetryEvent,
 };
 use crate::{auth::auth_manager::AuthManager, server::ids::ServerId};
 use crate::{auth::auth_manager::LoginGatedFeature, workspaces::workspace::CustomerType};
@@ -39,7 +37,6 @@ use warpui::{
         Align, ConstrainedBox, Container, CornerRadius, CrossAxisAlignment, Element, Flex,
         MouseStateHandle, ParentElement, Radius, Shrinkable, Text,
     },
-    Action, AppContext,
 };
 use warpui::{
     elements::{CacheOption, Image},

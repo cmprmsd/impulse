@@ -22,8 +22,6 @@ use warpui::{
         button::{ButtonVariant, TextAndIcon, TextAndIconAlignment},
         components::{Coords, UiComponent, UiComponentStyles},
     },
-    AppContext, Entity, EntityId, ModelHandle, SingletonEntity, TypedActionView, View, ViewContext,
-    ViewHandle, WindowId,
 };
 
 use crate::{appearance::Appearance, workspace::WorkspaceAction};
@@ -34,9 +32,6 @@ use super::{
         FOOTER_ICON_SIZE, SCROLLBAR_OFFSET, SCROLLBAR_WIDTH, SECTION_SPACING,
         SECTION_SPACING_BOTTOM,
     },
-    sections::sections,
-    ChangelogSectionView, ContentSectionData, ContentSectionView, FeatureSection,
-    FeatureSectionData, FeatureSectionView, Section, TipsCompleted,
 };
 
 const SEND_SVG_PATH: &str = "bundled/svg/send.svg";

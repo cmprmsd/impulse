@@ -21,9 +21,6 @@ use warpui::{
         MainAxisAlignment, MainAxisSize, MouseStateHandle, OffsetPositioning, ParentAnchor,
         ParentElement, ParentOffsetBounds, Radius, Shrinkable, Stack, Text,
     },
-    platform::Cursor,
-    ui_components::components::UiComponent,
-    AppContext, Element, Entity, SingletonEntity, TypedActionView, View, ViewContext, ViewHandle,
 };
 
 use crate::{
@@ -56,8 +53,6 @@ use crate::{
         action_button::{ActionButton, DangerNakedTheme, DangerSecondaryTheme, PrimaryTheme},
         DismissibleToast,
     },
-    workspace::ToastStack,
-    GlobalResourceHandlesProvider,
 };
 
 const DEFAULT_JSON_TEXT: &str = r#"{

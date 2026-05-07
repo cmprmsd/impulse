@@ -8,8 +8,6 @@ use crate::editor::{
 use crate::modal::{Modal, ModalEvent};
 use crate::network::NetworkStatus;
 use crate::send_telemetry_from_ctx;
-    ObjectOperation, OperationSuccessType, UpdateManagerEvent,
-};
 use crate::view_components::action_button::{ActionButton, PrimaryTheme};
 use crate::{
     ai::facts::{AIFact, AIMemory},
@@ -33,8 +31,7 @@ use warpui::{
         Align, Border, ChildView, ClippedScrollable, ConstrainedBox, Container, CornerRadius, Flex,
         ParentElement, Radius, ScrollbarWidth,
     },
-    ui_components::components::UiComponent,
-    AppContext, Element, Entity, FocusContext, SingletonEntity, TypedActionView, View, ViewContext,
+};
 
 const HEADER_TEXT: &str = "Suggested rule";
 const MAX_EDITOR_HEIGHT: f32 = 240.;

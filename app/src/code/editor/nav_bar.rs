@@ -13,8 +13,7 @@ use warpui::{
         button::ButtonVariant,
         components::{UiComponent, UiComponentStyles},
     },
-    units::IntoPixels,
-    AppContext, Element, Entity, ModelHandle, SingletonEntity, TypedActionView, View, ViewContext,
+};
 
 use crate::{
     editor::InteractionState,

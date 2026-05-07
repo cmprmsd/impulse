@@ -21,8 +21,6 @@ use warpui::{
         ConstrainedBox, Container, CrossAxisAlignment, Flex, MainAxisAlignment, MainAxisSize,
         Shrinkable, Text, Wrap,
     },
-    fonts::{Properties, Weight},
-    AppContext, Element, Entity, TypedActionView, View, ViewContext, ViewHandle,
 };
 
 #[derive(Debug, Clone)]

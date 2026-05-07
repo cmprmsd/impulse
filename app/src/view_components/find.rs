@@ -1,6 +1,7 @@
 use crate::appearance::Appearance;
 use crate::editor::{
     EditorView, Event as EditorEvent, PropagateAndNoOpNavigationKeys, SingleLineEditorOptions,
+};
 use crate::send_telemetry_from_ctx;
 use crate::settings::InputModeSettings;
 use crate::ui_components::{blended_colors, icons::Icon};
@@ -15,7 +16,6 @@ pub use warpui::{
     accessibility::{AccessibilityContent, WarpA11yRole},
     elements::{ParentElement as _, Stack},
     geometry::vector::vec2f,
-    AppContext,
 };
 use warpui::{
     elements::{
@@ -23,7 +23,6 @@ use warpui::{
         DropShadow, Element, Flex, Hoverable, MouseStateHandle, ParentAnchor, ParentOffsetBounds,
         Text,
     },
-    Entity, SingletonEntity, TypedActionView, View,
 };
 use warpui::{presenter::ChildView, ViewContext, ViewHandle};
 use warpui::{FocusContext, ModelHandle};

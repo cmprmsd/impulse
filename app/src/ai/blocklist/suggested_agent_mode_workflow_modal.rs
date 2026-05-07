@@ -8,6 +8,7 @@ use crate::{
         workflow_view::{WorkflowView, WorkflowViewEvent},
         WorkflowSelectionSource, WorkflowSource, WorkflowType,
     },
+};
 use pathfinder_geometry::vector::vec2f;
 use std::{collections::HashMap, default::Default, sync::Arc};
 use warp_core::{send_telemetry_from_ctx, ui::appearance::Appearance};
@@ -16,11 +17,6 @@ use warpui::{
         ChildAnchor, Empty, OffsetPositioning, PositionedElementAnchor,
         PositionedElementOffsetBounds,
     },
-    fonts::Weight,
-    keymap::FixedBinding,
-    presenter::ChildView,
-    ui_components::components::{Coords, UiComponentStyles},
-    AppContext, Element, Entity, SingletonEntity, TypedActionView, View, ViewContext, ViewHandle,
 };
 
 const SUGGESTED_PROMPT_MODAL_HEADER: &str = "Prompt";

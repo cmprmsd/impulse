@@ -9,9 +9,6 @@ use warpui::{
         HighlightedHyperlink, MainAxisAlignment, MainAxisSize, MouseStateHandle, ParentElement,
         SavePosition, Shrinkable, SizeConstraintCondition, SizeConstraintSwitch, Text,
     },
-    platform::Cursor,
-    ui_components::components::{Coords, UiComponent, UiComponentStyles},
-    AppContext, Element, Entity, FocusContext, SingletonEntity, TypedActionView, View, ViewContext,
 };
 
 use crate::{
@@ -32,6 +29,7 @@ use crate::{
             MEDIUM_SIZE_SWITCH_THRESHOLD,
         },
     },
+};
 
 const ACCEPT_LABEL: &str = "Generate tests";
 const CANCEL_LABEL: &str = "Dismiss";

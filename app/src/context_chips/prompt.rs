@@ -3,6 +3,7 @@ use crate::{
         AISettings, AISettingsChangedEvent, InputSettings, InputSettingsChangedEvent,
         WarpPromptSeparator,
     },
+};
 
 pub use super::ContextChipKind;
 use itertools::Itertools;

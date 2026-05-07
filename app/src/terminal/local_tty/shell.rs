@@ -4,7 +4,6 @@ use std::{
     ffi::OsString,
     io,
     path::{Path, PathBuf},
-    process,
 };
 use typed_path::UnixPathBuf;
 use warp_core::channel::{Channel, ChannelState};
@@ -18,6 +17,7 @@ use crate::{
         shell::{ShellName, ShellType},
         ShellLaunchData,
     },
+};
 
 #[cfg(windows)]
 use crate::util::windows::{powershell_5_path, powershell_7_path, wsl_path};

@@ -4,9 +4,8 @@ use warp_core::ui::appearance::Appearance;
 use warpui::{
     assets::asset_cache::AssetSource,
     elements::{CacheOption, Icon, Image},
-    Element,
-};
 
+};
 /// Returns a special icon for the given file path, if any.
 pub fn icon_from_file_path(path: &str, appearance: &Appearance) -> Option<Box<dyn Element>> {
     let theme = appearance.theme();

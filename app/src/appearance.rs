@@ -1,7 +1,6 @@
 use settings::Setting as _;
 use warpui::{
     fonts::FamilyId, AddSingletonModel, AppContext, AssetProvider, Entity, ModelContext,
-    SingletonEntity,
 };
 
 #[cfg(target_os = "macos")]
@@ -25,6 +24,7 @@ use crate::{
         active_theme_kind, FontSettings, FontSettingsChangedEvent, MonospaceFontSize, Settings,
         ThemeSettings,
     },
+};
 
 use anyhow::anyhow;
 

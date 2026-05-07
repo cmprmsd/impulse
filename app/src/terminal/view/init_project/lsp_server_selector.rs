@@ -19,7 +19,6 @@ use warpui::{
         keyboard_shortcut::KeyboardShortcut,
         text::Span,
     },
-    AppContext, Element, SingletonEntity, TypedActionView, ViewContext, ViewHandle,
 };
 
 use super::{InitProjectBlockAction, InitStepBlock};

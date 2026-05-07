@@ -13,7 +13,6 @@ use warpui::{
         checkbox::Checkbox,
         components::{UiComponent, UiComponentStyles},
     },
-    AppContext, Element, Entity, ModelHandle, SingletonEntity, TypedActionView, View, ViewContext,
 };
 
 use crate::{
@@ -31,6 +30,7 @@ use crate::{
         settings::{TerminalSettings, TerminalSettingsChangedEvent},
         view::TerminalAction,
     },
+};
 
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub enum TerminalViewZeroStateAction {

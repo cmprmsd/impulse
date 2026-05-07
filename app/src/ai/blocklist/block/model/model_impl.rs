@@ -15,6 +15,7 @@ use crate::ai::{
         history_model,
         model::{AIRequestType, PassiveRequestType},
     },
+};
 
 use super::{AIBlockModel, AIBlockOutputStatus, OutputStatusUpdateCallback};
 

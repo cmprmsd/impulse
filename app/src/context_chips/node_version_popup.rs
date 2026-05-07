@@ -10,9 +10,7 @@ use warpui::{
         ConstrainedBox, Container, CornerRadius, CrossAxisAlignment, DropShadow, Flex,
         MainAxisAlignment, MainAxisSize, Radius, Text,
     },
-    fonts::Properties,
-    keymap::FixedBinding,
-    AppContext, Element, Entity, ModelHandle, SingletonEntity, TypedActionView, View, ViewContext,
+};
 
 use crate::menu::{self, Event as MenuEvent, Menu, MenuItemFields};
 use crate::terminal::model_events::{ModelEvent, ModelEventDispatcher};

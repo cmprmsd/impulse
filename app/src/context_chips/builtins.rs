@@ -7,7 +7,6 @@ use crate::terminal::shell::ShellType;
 
 use super::{
     context_chip::{GeneratorContext, ShellCommand, ShellCommandGenerator},
-    ChipValue,
 };
 
 #[cfg(test)]

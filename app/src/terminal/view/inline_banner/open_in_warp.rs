@@ -8,10 +8,12 @@ use crate::{
         model::session::Session,
         view::{open_in_warp::OpenablePath, InlineBannerId, TerminalAction},
     },
+};
 
 use super::{
     render_inline_block_list_banner, InlineBannerButtonState, InlineBannerCloseButton,
     InlineBannerContent, InlineBannerStyle, InlineBannerTextButton, InlineBannerTextButtonFont,
+};
 
 #[derive(Clone, Copy, Debug)]
 pub enum OpenInWarpBannerAction {

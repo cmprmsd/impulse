@@ -14,7 +14,6 @@ use warpui::{
         components::{UiComponent, UiComponentStyles},
         text::Span,
     },
-    AppContext, Element, SingletonEntity, ViewHandle,
 };
 
 use crate::{
@@ -22,6 +21,7 @@ use crate::{
         model::{persistence::CloudModel, view::CloudViewModel},
         CloudObject, CloudObjectMetadataExt, Owner,
     },
+};
 
 use crate::workspace::header_toolbar_item::HeaderToolbarItemKind;
 use crate::workspace::tab_settings::TabSettings;

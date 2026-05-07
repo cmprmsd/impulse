@@ -11,6 +11,7 @@ use crate::ai::block_context::BlockContext;
 use crate::ai::blocklist::inline_action::code_diff_view::FileDiff;
 use crate::ai::blocklist::{
     apply_edits, BlocklistAIHistoryModel, FileReadResult, RequestFileEditsFormatKind,
+};
 use crate::ai::paths::host_native_absolute_path;
 use crate::settings::AISettings;
 use crate::terminal::event::{BlockType, UserBlockCompleted};

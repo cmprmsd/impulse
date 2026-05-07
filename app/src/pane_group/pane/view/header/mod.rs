@@ -12,6 +12,7 @@ use crate::{
         },
         BackingView, Direction, PaneDragDropLocation, PaneId, TabBarHoverIndex,
     },
+};
 
 use crate::workspace::TabBarDropTargetData;
 
@@ -30,9 +31,6 @@ use warpui::{
         ParentAnchor, ParentElement, ParentOffsetBounds, PositionedElementAnchor,
         PositionedElementOffsetBounds, Radius, SavePosition, Shrinkable, Stack, Text,
     },
-    presenter::ChildView,
-    AppContext, Element, Entity, EntityId, ModelHandle, SingletonEntity, TypedActionView, View,
-    ViewContext, ViewHandle,
 };
 
 use super::PaneDropTargetData;

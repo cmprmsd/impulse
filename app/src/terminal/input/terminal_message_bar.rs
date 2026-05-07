@@ -10,7 +10,6 @@ use warpui::{AppContext, Entity, ModelHandle, SingletonEntity, View, ViewContext
 use super::buffer_model::InputBufferModel;
 use super::message_bar::{
     common::render_terminal_message, truncated_command_for_block, Message, MessageItem,
-    MessageProvider,
 };
 use crate::ai::blocklist::{
     BlocklistAIContextEvent, BlocklistAIContextModel, BlocklistAIInputModel,

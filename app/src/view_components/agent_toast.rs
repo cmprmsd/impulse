@@ -13,10 +13,6 @@ use warpui::{
         OffsetPositioning, Padding, ParentElement, PositionedElementAnchor,
         PositionedElementOffsetBounds, Radius, SavePosition, Stack,
     },
-    keymap::Keystroke,
-    r#async::SpawnedFutureHandle,
-    ui_components::components::{Coords, UiComponent, UiComponentStyles},
-    AppContext, Element, Entity, EntityId, SingletonEntity, TypedActionView, View, ViewContext,
 };
 
 use crate::appearance::Appearance;

@@ -17,18 +17,12 @@ use crate::{
         blocklist::{controller::RequestInput, ResponseStreamId},
         llms::LLMId,
     },
-    cloud_object::{Owner, Revision, ServerMetadata, ServerPermissions},
-    input_suggestions::HistoryInputSuggestion,
-    persistence::{model::PersistedAutoexecuteMode, ModelEvent},
-    server::ids::ServerId,
-    terminal::model::session::SessionId,
-    test_util::settings::initialize_settings_for_tests,
-    GlobalResourceHandles, GlobalResourceHandlesProvider,
 };
 
 use super::{
     AIConversationMetadata, AIQueryHistoryOutputStatus, BlocklistAIHistoryModel, PersistedAIInput,
 
+};
 /// Helper function to create a PersistedAIInput for testing
 fn create_persisted_query(
     query_text: &str,

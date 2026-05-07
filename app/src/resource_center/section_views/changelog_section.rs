@@ -7,9 +7,7 @@ use warpui::{
         Flex, FormattedTextElement, HighlightedHyperlink, Icon, Image, MouseStateHandle,
         ParentElement, Radius,
     },
-    fonts::Weight,
-    ui_components::components::{UiComponent, UiComponentStyles},
-    AppContext, Entity, ModelAsRef, ModelHandle, SingletonEntity, TypedActionView, View,
+};
 
 use crate::{
     appearance::Appearance,

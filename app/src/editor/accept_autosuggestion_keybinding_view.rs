@@ -28,7 +28,6 @@ use warpui::{
         ChildAnchor, CornerRadius, Element, Hoverable, MouseStateHandle, OffsetPositioning,
         ParentAnchor, ParentOffsetBounds, Stack,
     },
-    AppContext, SingletonEntity,
 };
 use warpui::{Entity, TypedActionView, View, ViewHandle};
 

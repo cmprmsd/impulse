@@ -3,6 +3,7 @@ use crate::ai::blocklist::view_util::format_credits;
 use crate::appearance::Appearance;
 use crate::persistence::model::{
     token_usage_category_display_name, ModelTokenUsage, FULL_TERMINAL_USE_CATEGORY,
+};
 use crate::ui_components::blended_colors;
 use std::cmp::Ordering;
 use std::collections::HashMap;
@@ -14,7 +15,6 @@ use warpui::{
         Border, Container, CornerRadius, CrossAxisAlignment, Empty, Flex, MainAxisSize,
         MouseStateHandle, ParentElement, Radius, Text,
     },
-    AppContext, Element, Entity, SingletonEntity, TypedActionView, View, ViewContext,
 };
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]

@@ -23,6 +23,7 @@ pub(crate) use telemetry::MalformedFinalLineProxyEvent;
 pub use telemetry::{EditAcceptAndContinueClickedEvent, EditAcceptClickedEvent};
 pub use telemetry::{
     EditReceivedEvent, EditResolvedEvent, EditStats, RequestFileEditsFormatKind,
+};
 
 use crate::{
     ai::{
@@ -39,6 +40,7 @@ use crate::{
         },
         paths::host_native_absolute_path,
     },
+};
 
 use super::{ActionExecution, AnyActionExecution, ExecuteActionInput, PreprocessActionInput};
 

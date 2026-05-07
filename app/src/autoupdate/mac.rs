@@ -26,7 +26,6 @@ use crate::{
     appearance::AppearanceManager,
     autoupdate::{AutoupdateStage, AutoupdateState},
     channel::{Channel, ChannelState},
-    safe_info,
 };
 
 use super::{release_assets_directory_url, DownloadReady};

@@ -3,8 +3,6 @@ use warpui::{
         ConstrainedBox, Container, CornerRadius, CrossAxisAlignment, Flex, Hoverable,
         MouseStateHandle, ParentElement, Radius, Text,
     },
-    platform::Cursor,
-    AppContext, Element, Entity, SingletonEntity, TypedActionView, View, ViewContext,
 };
 
 use crate::{appearance::Appearance, ui_components::icons::Icon};

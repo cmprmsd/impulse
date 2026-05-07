@@ -11,9 +11,6 @@ use warpui::{
         Align, ConstrainedBox, Container, CrossAxisAlignment, Flex, Highlight, Icon,
         MainAxisAlignment, MainAxisSize, ParentElement, Shrinkable, Text,
     },
-    fonts::{Properties, Weight},
-    ui_components::components::{Coords, UiComponent, UiComponentStyles},
-    AppContext, Element, SingletonEntity,
 };
 
 use crate::ui_components::icons::Icon as UiIcon;

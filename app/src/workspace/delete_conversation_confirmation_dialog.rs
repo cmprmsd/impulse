@@ -5,9 +5,6 @@ use warpui::{
         Align, ChildAnchor, ChildView, Container, OffsetPositioning, ParentAnchor,
         ParentOffsetBounds, Stack,
     },
-    keymap::{FixedBinding, Keystroke},
-    ui_components::components::{UiComponent, UiComponentStyles},
-    AppContext, Element, Entity, SingletonEntity, TypedActionView, View, ViewContext, ViewHandle,
 };
 
 use crate::{

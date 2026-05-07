@@ -10,9 +10,6 @@ use warpui::{
         CrossAxisAlignment, Element, Fill, Flex, MainAxisSize, MouseStateHandle, ParentElement,
         Radius, Shrinkable,
     },
-    keymap::{DescriptionContext, Keystroke},
-    ui_components::components::{Coords, UiComponent, UiComponentStyles},
-    AppContext, Entity, SingletonEntity, TypedActionView, View, ViewContext, ViewHandle,
 };
 
 use crate::settings_view;
@@ -32,12 +29,14 @@ use crate::{
         EditorView, Event as EditorEvent, PropagateAndNoOpNavigationKeys, SingleLineEditorOptions,
         TextOptions,
     },
+};
 
 use super::{
     section_views::{
         DESCRIPTION_FONT_SIZE, ITEM_PADDING_BOTTOM, SCROLLBAR_OFFSET, SCROLLBAR_WIDTH,
         SECTION_HEADER_FONT_SIZE, SECTION_SPACING,
     },
+};
 
 use super::utils::{BLOCKS_KEYBINDINGS, INPUT_EDITOR_KEYBINDINGS, TERMINAL_KEYBINDINGS};
 

@@ -30,6 +30,7 @@ use super::SessionInfo;
 
 pub use in_band_command_executor::{
     is_in_band_command, InBandCommand, InBandCommandCancelledEvent, InBandCommandExecutor,
+};
 #[cfg(feature = "local_tty")]
 pub use local_command_executor::LocalCommandExecutor;
 pub use noop_command_executor::NoOpCommandExecutor;

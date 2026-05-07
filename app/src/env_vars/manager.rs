@@ -9,7 +9,6 @@ use crate::{
         },
         ids::SyncId,
     },
-    PaneViewLocator, WindowId,
 };
 use std::collections::{hash_map::Entry, HashMap};
 use warpui::{Entity, EntityId, ModelContext, SingletonEntity, WeakViewHandle};

@@ -9,6 +9,7 @@ use crate::{
         SET_INPUT_MODE_UNLOCKED_AGENT_ACTION_NAME, SET_INPUT_MODE_UNLOCKED_TERMINAL_ACTION_NAME,
     },
 
+};
 /// Cache of keybindings used in terminal.
 pub struct TerminalKeybindings {
     // Cache of editable keybinding names, to render in tooltips. This cache is necessary because

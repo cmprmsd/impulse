@@ -6,8 +6,6 @@ use warpui::{
         ConstrainedBox, Container, Flex, Highlight, Icon, MainAxisAlignment, MainAxisSize,
         ParentElement, Text,
     },
-    fonts::{Properties, Weight},
-    AppContext, Element, SingletonEntity,
 };
 
 use crate::appearance::Appearance;

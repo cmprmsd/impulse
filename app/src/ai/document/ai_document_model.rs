@@ -43,6 +43,7 @@ use crate::{
         model::session::{active_session::ActiveSession, Session},
         TerminalView,
     },
+};
 use ai::agent::orchestration_config::{OrchestrationConfig, OrchestrationConfigStatus};
 use ai::diff_validation::DiffDelta;
 use warp_editor::{model::RichTextEditorModel, render::model::RichTextStyles};

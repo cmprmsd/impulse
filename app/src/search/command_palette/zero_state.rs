@@ -15,6 +15,7 @@ use warpui::elements::{Container, Flex, MouseStateHandle, ParentElement, Shrinka
 use warpui::{
     AppContext, Element, Entity, ModelHandle, SingletonEntity, TypedActionView, View, ViewContext,
 
+};
 /// A zero-state view for the command palette.
 pub struct ZeroState {
     filter_chip_to_mouse_state_handle: HashMap<QueryFilter, MouseStateHandle>,

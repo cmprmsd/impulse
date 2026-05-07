@@ -4,8 +4,7 @@ use warpui::{
         Border, Container, CornerRadius, CrossAxisAlignment, Flex, MainAxisAlignment, MainAxisSize,
         MouseStateHandle, ParentElement, Radius, Shrinkable,
     },
-    ui_components::components::{Coords, UiComponent, UiComponentStyles},
-    AppContext, Element, Entity, FocusContext, SingletonEntity, TypedActionView, View, ViewContext,
+};
 
 use crate::{
     appearance::Appearance,

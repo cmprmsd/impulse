@@ -10,7 +10,6 @@ use warpui::{
         button::{Button, ButtonVariant},
         components::{UiComponent, UiComponentStyles},
     },
-    AppContext, Element, Entity, SingletonEntity, TypedActionView, View, ViewContext,
 };
 
 use crate::ui_components::icons::Icon;

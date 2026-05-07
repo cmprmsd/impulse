@@ -12,8 +12,6 @@ use crate::settings::PrivacySettings;
 use crate::terminal::model::session::{IsLegacySSHSession, SessionInfo};
 use crate::terminal::model_events::{ModelEvent, ModelEventDispatcher};
 use crate::{send_telemetry_from_ctx, TelemetryEvent};
-    PreinstallCheckResult, PreinstallStatus, RemoteLibc, RemotePlatform, UnsupportedReason,
-};
 
 use super::pty_controller::{EventLoopSender, PtyController};
 

@@ -73,7 +73,6 @@ use warp_util::file::FileLoadError;
 use warp_util::file_type::is_buffer_binary;
 use warpui::{
     r#async::{Spawnable, SpawnableOutput},
-    AppContext, Entity, EntityId, ModelContext, ModelHandle, SingletonEntity,
 };
 
 #[cfg(feature = "local_fs")]

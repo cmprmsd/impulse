@@ -36,7 +36,6 @@ use crate::{
         team_tester::TeamTesterStatus, user_workspaces::UserWorkspaces,
         workspace::SandboxedAgentSettings,
     },
-    AgentNotificationsModel, GlobalResourceHandles, GlobalResourceHandlesProvider, LaunchMode,
 };
 
 use super::{BlocklistAIHistoryModel, BlocklistAIPermissions};

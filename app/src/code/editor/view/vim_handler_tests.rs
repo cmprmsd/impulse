@@ -34,6 +34,7 @@ async fn layout_editor_view(app: &mut App, editor: &ViewHandle<CodeEditorView>) 
     .await;
 }
 
+};
 /// Helper function to initialize all required singleton models for CodeEditorView tests.
 fn initialize_code_editor_app(app: &mut App) {
     initialize_settings_for_tests(app);

@@ -32,6 +32,7 @@ use crate::{
         },
         view_getters::{single_input_view_for_tab, terminal_view},
     },
+};
 
 use super::{
     assert_active_block_output_for_single_terminal_in_tab, assert_active_block_received_precmd,

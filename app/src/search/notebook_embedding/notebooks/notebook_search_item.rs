@@ -4,9 +4,6 @@ use warpui::{
         ConstrainedBox, Container, CrossAxisAlignment, Flex, Highlight, MainAxisAlignment,
         MainAxisSize, ParentElement, Text,
     },
-    fonts::{Properties, Weight},
-    ui_components::components::{Coords, UiComponent, UiComponentStyles},
-    AppContext, Element, SingletonEntity,
 };
 
 use crate::search::result_renderer::ItemHighlightState;
@@ -21,6 +18,7 @@ use crate::{
             searcher::EmbeddingSearchItemAction, view::styles,
         },
     },
+};
 use crate::{notebooks::CloudNotebook, search::item::SearchItem};
 
 /// The size of the object type icons, in pixels.

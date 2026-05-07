@@ -4,8 +4,6 @@ use std::ops::Range;
 use std::sync::{Arc, Mutex};
 
 use crate::ai::agent::conversation::AIConversationId;
-    AgentConversationEntryId, AgentConversationNavigationSubject, AgentConversationsModel,
-};
 use crate::ai::blocklist::history_model::BlocklistAIHistoryModel;
 use crate::appearance::Appearance;
 use crate::drive::sharing::dialog::SharingDialog;
@@ -22,6 +20,7 @@ use crate::workspace::header_toolbar_item::HeaderToolbarItemKind;
 use crate::workspace::tab_settings::TabSettings;
 use crate::workspace::view::conversation_list::item::{
     render_item, render_static_item, ItemProps, ItemState, OverflowMenuDisplay, StaticItemProps,
+};
 use crate::workspace::ToastStack;
 use crate::workspace::WorkspaceAction;
 use warp_core::features::FeatureFlag;

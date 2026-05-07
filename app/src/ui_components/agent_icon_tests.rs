@@ -24,6 +24,7 @@ use crate::ai::agent_conversations_model::entry::{
 };
 use crate::ai::agent_conversations_model::{
     AgentConversationEntry, AgentConversationEntryId, AgentConversationProvenance,
+};
 use crate::terminal::CLIAgent;
 use crate::ui_components::icon_with_status::IconWithStatusVariant;
 

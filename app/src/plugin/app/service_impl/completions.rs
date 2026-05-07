@@ -7,6 +7,7 @@ use warp_completer::signatures::CommandRegistry;
 
 use crate::plugin::service::{
     RegisterCommandSignatureRequest, RegisterCommandSignatureResponse,
+};
 
 #[derive(Clone)]
 pub struct RegisterCommandSignatureServiceImpl {

@@ -9,6 +9,7 @@ use crate::{
         prompt::{PromptConfiguration, PromptSelection},
         ContextChipKind,
     },
+};
 
 fn initialize_app(app: &mut App) {
     initialize_settings_for_tests(app);

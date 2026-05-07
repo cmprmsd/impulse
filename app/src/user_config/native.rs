@@ -13,6 +13,7 @@ use crate::tab_configs::{TabConfig, TabConfigError};
 use crate::themes::theme::WarpThemeConfig;
 use crate::warp_managed_paths_watcher::{
     repository_update_touches_path, repository_update_touches_prefix, WarpManagedPathsWatcher,
+};
 use crate::workflows::workflow::Workflow;
 
 use super::util::{
@@ -21,6 +22,7 @@ use super::util::{
 };
 use super::{
     launch_configs_dir, tab_configs_dir, themes_dir, workflows_dir, WarpConfigUpdateEvent,
+};
 
 impl super::WarpConfig {
     pub fn new(ctx: &mut ModelContext<Self>) -> Self {

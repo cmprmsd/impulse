@@ -63,8 +63,6 @@ use crate::{
         TerminalModel, CANCEL_COMMAND_KEYBINDING, TOGGLE_AUTOEXECUTE_MODE_KEYBINDING,
         TOGGLE_HIDE_CLI_RESPONSES_KEYBINDING, TOGGLE_QUEUE_NEXT_PROMPT_KEYBINDING,
     },
-    util::bindings::keybinding_name_to_keystroke,
-    BlocklistAIHistoryModel,
 };
 use instant::Instant;
 use parking_lot::FairMutex;

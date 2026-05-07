@@ -1,7 +1,6 @@
 use crate::terminal::{
     find::model::{alt_screen::run_find_on_alt_screen, FindOptions},
     model::index::Point,
-    TerminalModel,
 };
 
 #[test]

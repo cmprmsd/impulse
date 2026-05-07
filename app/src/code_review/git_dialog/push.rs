@@ -14,6 +14,7 @@ use warpui::{
         CornerRadius, CrossAxisAlignment, Element, Flex, Hoverable, MainAxisAlignment,
         MainAxisSize, MouseStateHandle, ParentElement, Radius, ScrollbarWidth, Text,
     },
+};
 
 use crate::{
     code::editor::{add_color, remove_color},
@@ -25,6 +26,7 @@ use crate::{
         },
         telemetry_event::{CodeReviewTelemetryEvent, GitDialogStatus, GitOperationKind},
     },
+};
 use warp_core::send_telemetry_from_ctx;
 
 /// Push-specific sub-actions, dispatched wrapped in `GitDialogAction::Push`.

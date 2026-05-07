@@ -9,12 +9,7 @@ use warpui::{
         MainAxisAlignment, MainAxisSize, MouseStateHandle, ParentElement, Radius, Rect, Shrinkable,
         Stack, Text,
     },
-    fonts::{Properties, Weight},
-    geometry::vector::Vector2F,
-    presenter::ChildView,
-    text_layout::ClipConfig,
-    ui_components::button::ButtonVariant,
-    AppContext, Element, Entity, EventContext, SingletonEntity, TypedActionView, View, ViewContext,
+};
 
 use string_offset::CharOffset;
 

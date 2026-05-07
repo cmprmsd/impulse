@@ -11,6 +11,7 @@ use crate::{
         GenericCloudObject, GenericStringObjectFormat, GenericStringObjectUniqueKey,
         JsonObjectType, Revision, ServerCloudObject, UniquePer,
     },
+};
 
 use settings::{
     macros::define_settings_group, RespectUserSyncSetting, SupportedPlatforms, SyncToCloud,

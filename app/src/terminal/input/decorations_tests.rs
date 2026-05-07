@@ -12,6 +12,7 @@ use crate::{
         },
         model::session::SessionInfo,
     },
+};
 use warp_completer::completer::SuggestionTypeName;
 
 #[test]

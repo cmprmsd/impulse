@@ -15,13 +15,13 @@ use crate::terminal::{
         index::Point,
         terminal_model::{BlockIndex, BlockSortDirection},
     },
+};
 use crate::view_components::find::FindDirection;
 
 use super::{
     rich_content::{FindableRichContentHandle, RichContentMatchId},
-    FindOptions,
-};
 
+};
 /// Runs a find operation on the blocklist using the given `options` and returns a
 /// `BlockListFindRun` with the results.
 ///

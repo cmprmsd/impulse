@@ -17,8 +17,6 @@ use warpui::{
     fonts::{Properties, Weight},
     platform::{file_picker::FilePickerError, FilePickerConfiguration},
     r#async::{SpawnedFutureHandle, Timer},
-    ui_components::components::UiComponent,
-    AppContext, Entity, SingletonEntity, TypedActionView, View, ViewContext, ViewHandle,
 };
 
 use crate::{
@@ -33,6 +31,7 @@ use crate::{
         action_button::{ActionButton, ButtonSize, PrimaryTheme, SecondaryTheme},
         DismissibleToast,
     },
+};
 
 #[cfg(all(feature = "local_fs", not(target_family = "wasm")))]
 use git2::Repository as GitRepository;

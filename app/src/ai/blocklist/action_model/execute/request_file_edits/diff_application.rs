@@ -21,12 +21,11 @@ use crate::{
         blocklist::SessionContext,
         paths::host_native_absolute_path,
     },
-    auth::auth_state::AuthState,
-    safe_debug, safe_warn, send_telemetry_on_executor,
 };
 
 use super::telemetry::{
     DiffInvalidFileEvent, DiffMatchFailedEvent, MissingLineNumbersEvent,
+};
 
 /// Result of reading a file from disk or a remote server.
 ///

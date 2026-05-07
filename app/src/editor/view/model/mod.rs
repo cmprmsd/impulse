@@ -36,7 +36,6 @@ use warpui::{
 };
 use warpui::{
     text::{point::Point, word_boundaries::WordBoundariesPolicy, TextBuffer},
-    SingletonEntity,
 };
 
 use crate::{editor::RangeExt, vim_registers::VimRegisters};
@@ -48,7 +47,6 @@ use vim::{
         LineMotion, MotionType, TextObjectInclusion, TextObjectType, VimOperator, WordBound,
         WordMotion,
     },
-    vim_a_paragraph, vim_inner_paragraph,
 };
 use vim::{
     vim_a_block, vim_a_quote, vim_a_word, vim_find_char_on_line, vim_find_matching_bracket,

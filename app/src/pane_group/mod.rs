@@ -1,7 +1,5 @@
 use crate::ai::agent::api::ServerConversationToken;
 use crate::ai::agent::conversation::{AIAgentHarness, AIConversation, AIConversationId};
-    AgentConversationEntryId, AgentConversationNavigationSubject, AgentConversationsModel,
-use crate::ai::ai_document_view::AIDocumentView;
 use crate::ai::blocklist::agent_view::AgentViewEntryOrigin;
 use crate::ai::blocklist::history_model::CloudConversationData;
 use crate::ai::blocklist::inline_action::code_diff_view::CodeDiffView;
@@ -108,8 +106,6 @@ use crate::persistence::ModelEvent;
 use crate::report_if_error;
 use crate::resource_center::{
     mark_feature_used_and_write_to_user_defaults, Tip, TipAction, TipsCompleted,
-};
-    AnonymousUserSignupEntrypoint, PaletteSource, SharingDialogSource, TelemetryEvent,
 };
 use crate::session_management::SessionNavigationData;
 use crate::settings_view::mcp_servers_page::MCPServersSettingsPage;

@@ -8,9 +8,6 @@ use warp_core::ui::{
 use warpui::{
     clipboard::ClipboardContent,
     elements::*,
-    text_layout::ClipConfig,
-    ui_components::{button::ButtonVariant, components::UiComponent as _},
-    Entity, SingletonEntity as _, TypedActionView, View, ViewContext,
 };
 
 use crate::{terminal::model::terminal_model::ExitReason, ui_components};

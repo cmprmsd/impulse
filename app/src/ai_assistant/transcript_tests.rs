@@ -1,5 +1,6 @@
 use crate::{
     appearance, test_util::settings::initialize_settings_for_tests,
+};
 
 use warpui::{platform::WindowStyle, App};
 
@@ -9,6 +10,7 @@ use crate::ai_assistant::{
         default_assistant_transcript_part, default_code_block_segment, default_formatted_message,
         default_other_segment,
     },
+};
 
 use super::Transcript;
 

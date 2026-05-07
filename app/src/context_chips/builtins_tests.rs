@@ -9,6 +9,7 @@ use crate::{
             SessionInfo,
         },
     },
+};
 
 #[test]
 fn test_working_directory() {

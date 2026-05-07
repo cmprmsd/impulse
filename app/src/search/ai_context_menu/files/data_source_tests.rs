@@ -3,6 +3,7 @@ use crate::search::{
         files::data_source::{file_data_source_for_pwd, fuzzy_match_files, FileSnapshot},
         mixer::AIContextMenuSearchableAction,
     },
+};
 use crate::{terminal::model::session::Session, workspace::ActiveSession};
 use repo_metadata::repositories::DetectedRepositories;
 use repo_metadata::RepoMetadataModel;

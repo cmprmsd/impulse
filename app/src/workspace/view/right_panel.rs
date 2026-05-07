@@ -47,19 +47,14 @@ use warpui::{
         resizable_state_handle, Container, DragBarSide, Element, MainAxisSize, MouseStateHandle,
         Resizable, ResizableStateHandle,
     },
-    AppContext, Entity, ModelHandle, SingletonEntity, TypedActionView, View, ViewContext,
-    ViewHandle, WeakViewHandle,
 };
 use warpui::{
     elements::{
         ChildView, Clipped, ConstrainedBox, CrossAxisAlignment, Flex, MainAxisAlignment,
         ParentElement, Shrinkable, Text,
     },
-    fonts::{Properties, Weight},
-    platform::Cursor,
-    ui_components::components::UiComponent,
-};
 
+};
 /// Describes which agent destination is available for sending review comments.
 #[derive(Clone, Debug, PartialEq)]
 pub enum ReviewDestination {

@@ -4,8 +4,6 @@ use warpui::{
         ConstrainedBox, Container, Element, Empty, Flex, MouseStateHandle, ParentElement,
         Shrinkable,
     },
-    ui_components::components::{UiComponent, UiComponentStyles},
-    AppContext, Entity, SingletonEntity, TypedActionView, View, ViewContext,
 };
 
 use crate::util::color::{ContrastingColor, MinimumAllowedContrast};

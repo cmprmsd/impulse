@@ -44,6 +44,7 @@ use crate::{
         },
         SyncDataSource,
     },
+};
 
 pub struct DataSourceArgs {
     pub active_session: ModelHandle<ActiveSession>,

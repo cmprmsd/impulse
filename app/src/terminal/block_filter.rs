@@ -12,8 +12,6 @@ use warpui::{
         Dismiss, DropShadow, Empty, Flex, Hoverable, MouseStateHandle, OffsetPositioning,
         ParentAnchor, ParentElement, ParentOffsetBounds, Radius, Rect, Shrinkable, Stack, Text,
     },
-    presenter::ChildView,
-    AppContext, Element, Entity, SingletonEntity, TypedActionView, View, ViewContext, ViewHandle,
 };
 
 use crate::terminal::model::terminal_model::BlockIndex;
@@ -23,6 +21,7 @@ use crate::{
         EditOrigin, EditorView, Event as EditorEvent, PropagateAndNoOpNavigationKeys,
         SingleLineEditorOptions, TextOptions, ValidInputType,
     },
+};
 
 use super::model::find::{FindConfig, RegexDFAs};
 

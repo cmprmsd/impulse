@@ -5,7 +5,6 @@ use crate::terminal::shared_session::replay_agent_conversations::reconstruct_res
 use crate::terminal::shared_session::role_change_modal::TEXT_FONT_SIZE;
 use crate::terminal::shared_session::{
     ai_agent::encode_agent_response_event, max_session_size, SharedSessionActionSource,
-    SharedSessionScrollbackType,
 };
 use crate::terminal::TerminalModel;
 use byte_unit::Byte;
@@ -28,7 +27,6 @@ use warpui::ui_components::radio_buttons::{
 use super::style::{self, BUTTON_GAP, MODAL_MARGIN};
 use warpui::{
     platform::Cursor, AppContext, Element, Entity, SingletonEntity, TypedActionView, View,
-    ViewContext,
 };
 
 #[derive(Default)]

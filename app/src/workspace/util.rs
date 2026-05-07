@@ -1,7 +1,6 @@
 use serde::{Deserialize, Serialize};
 use warpui::{
     elements::MouseStateHandle, AppContext, EntityId, SingletonEntity, ViewContext, ViewHandle,
-    WindowId,
 };
 
 use super::OneTimeModalModel;

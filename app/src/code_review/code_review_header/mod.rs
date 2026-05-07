@@ -9,6 +9,7 @@ use crate::{
         code_review_view::{get_discard_button_disabled_tooltip, CodeReviewAction, LoadedState},
         diff_state::DiffStateModel,
     },
+};
 use pathfinder_geometry::vector::vec2f;
 use warp_core::features::FeatureFlag;
 use warpui::elements::{Hoverable, ParentElement};
@@ -25,10 +26,9 @@ use warpui::{
         button::{ButtonVariant, TextAndIcon, TextAndIconAlignment},
         components::UiComponentStyles,
     },
-    AppContext, Element, ModelHandle, ViewHandle,
-};
 
 // This is a best effort guess of the size of all of the elements in the header to know when we should start to wrap to the second row
+};
 const HEADER_WRAP_BREAKPOINT: f32 = 450.;
 
 pub(crate) const HEADER_BUTTON_PADDING: Coords = Coords {

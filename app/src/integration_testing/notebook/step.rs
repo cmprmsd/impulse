@@ -16,6 +16,7 @@ use crate::{
         cloud_objects::update_manager::UpdateManager,
         ids::{ClientId, SyncId},
     },
+};
 
 fn notebook_editor(
     app: &App,

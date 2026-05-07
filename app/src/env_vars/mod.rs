@@ -17,11 +17,6 @@ use crate::{
         GenericCloudObject, GenericStringObjectFormat, GenericStringObjectUniqueKey,
         JsonObjectType, Revision, ServerCloudObject,
     },
-    drive::items::{env_var_collection::WarpDriveEnvVarCollection, WarpDriveItem},
-    external_secrets::ExternalSecret,
-    server::{ids::SyncId, sync_queue::QueueItem},
-    terminal::shell::ShellType,
-    Appearance, CloudObjectTypeAndId,
 };
 
 #[derive(Clone, Debug, PartialEq)]

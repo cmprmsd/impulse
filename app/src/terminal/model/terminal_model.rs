@@ -25,8 +25,10 @@ pub use crate::terminal::history::HistoryEntry;
 
 use super::ansi::{
     FinishUpdateValue, InputBufferValue, Mode, PendingHook, TmuxInstallFailedInfo,
+};
 use super::block::{
     AgentInteractionMetadata, Block, BlockId, BlockMetadata, BlockSize, BlocklistEnvVarMetadata,
+};
 use super::blockgrid::BlockGrid;
 use super::grid::grid_handler::{
     ContainsPoint, FragmentBoundary, GridHandler, Link, PossiblePath, TermMode,
@@ -49,7 +51,6 @@ use super::{tmux, Secret, SecretHandle};
 use crate::terminal::model::ansi::{
     ClearValue, CommandFinishedValue, ExitShellValue, InitShellValue, InitSshValue,
     InitSubshellValue, PreInteractiveSSHSessionValue, PrecmdValue, PreexecValue, SSHValue,
-    SourcedRcFileForWarpValue,
 };
 use crate::terminal::model::grid::IndexRegion;
 use crate::terminal::model::session::SessionInfo;

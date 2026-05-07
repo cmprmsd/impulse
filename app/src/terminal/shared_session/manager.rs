@@ -5,6 +5,7 @@ use session_sharing_protocol::common::SessionId;
 
 use warpui::{
     AppContext, Entity, EntityId, ModelContext, SingletonEntity, ViewHandle, WeakViewHandle,
+};
 
 use crate::terminal::TerminalView;
 

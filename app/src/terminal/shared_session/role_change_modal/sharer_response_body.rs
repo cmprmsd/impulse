@@ -17,7 +17,6 @@ use warpui::{
         button::ButtonVariant,
         components::{UiComponent, UiComponentStyles},
     },
-    AppContext, Element, Entity, SingletonEntity, TypedActionView, View, ViewContext,
 };
 
 use warp_core::features::FeatureFlag;

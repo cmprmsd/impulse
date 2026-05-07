@@ -8,10 +8,9 @@ mod channel_config;
 use anyhow::Result;
 use warp_core::{
     channel::{Channel, ChannelState},
-    features,
-};
 
 // Simple wrapper around warp::run() for dev channel builds.
+};
 fn main() -> Result<()> {
     ChannelState::set(
         ChannelState::new(Channel::Dev, channel_config::load_config!("dev"))

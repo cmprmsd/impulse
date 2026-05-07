@@ -44,17 +44,12 @@ use warp_editor::{
             CodeBlockType, IndentBehavior, IndentUnit, TextStyles, TextStylesWithMetadata,
         },
     },
-    model::{CoreEditorModel, RichTextEditorModel},
-    render::model::{AutoScrollMode, RenderEvent, RenderState, RichTextStyles},
-    search::Searcher,
-    selection::{SelectionMode, SelectionModel, TextDirection, TextUnit},
 };
 use warpui::elements::ListIndentLevel;
 
 use super::{
     super::telemetry::SelectionMode as TelemetrySelectionMode, embedding_model::NotebookEmbed,
     interaction_state_model::InteractionStateModel, notebook_command::NotebookCommand,
-    NotebookWorkflow,
 };
 
 const DEBOUNCED_RESIZE_PERIOD: Duration = Duration::from_millis(5);

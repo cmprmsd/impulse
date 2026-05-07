@@ -1,7 +1,6 @@
 use warpui::platform::OperatingSystem;
 use warpui::{
     keymap::{EditableBinding, Keystroke, Trigger},
-    App,
 };
 
 use crate::{

@@ -11,10 +11,6 @@ use warpui::{
         Border, ConstrainedBox, Container, CornerRadius, CrossAxisAlignment, Element, Flex,
         ParentElement, Shrinkable,
     },
-    fonts::Weight,
-    keymap::Keystroke,
-    ui_components::components::{UiComponent, UiComponentStyles},
-    AppContext, Entity, TypedActionView, View,
 };
 use warpui::{keymap::FixedBinding, ViewContext};
 use warpui::{Action, BlurContext, EntityId, ModelHandle, SingletonEntity, WindowId};

@@ -24,7 +24,6 @@ use warp_editor::{
 };
 use warpui::{
     elements::{Border, Empty},
-    SingletonEntity,
 };
 use warpui::{
     elements::{ConstrainedBox, CornerRadius, Margin, Padding, Radius},

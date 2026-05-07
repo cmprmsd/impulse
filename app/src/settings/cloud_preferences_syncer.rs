@@ -36,15 +36,15 @@ use crate::{
         cloud_preferences::{CloudPreference, CloudPreferenceModel, Platform, Preference},
         manager::SettingsManager,
     },
+};
 
 use warp_core::execution_mode::AppExecutionMode;
 
 use super::{
     cloud_preferences::{CloudPreferencesSettings, CloudPreferencesSettingsChangedEvent},
     manager::SettingsEvent,
-    PrivacySettings,
-};
 
+};
 /// Provides client ids for creating cloud preferences.
 /// We define this as a trait so tests can track what client ids are created and use
 /// them for mocking server responses.

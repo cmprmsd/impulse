@@ -16,6 +16,7 @@ use crate::ToastStack;
 use crate::ai::mcp::{
     // Import events for file-based manager and watcher conditionally
     // since their WASM variants don't export events.
+};
 
 use crate::{
     ai::mcp::{
@@ -42,6 +43,7 @@ use crate::{
         update_modal::{UpdateModalBody, UpdateModalBodyEvent},
         ServerCardItemId,
     },
+};
 use markdown_parser::{FormattedText, FormattedTextFragment, FormattedTextLine};
 use settings::ToggleableSetting as _;
 use std::cmp::Ordering;
@@ -61,7 +63,6 @@ use warpui::{
         components::{Coords, UiComponent, UiComponentStyles},
         switch::SwitchStateHandle,
     },
-    AppContext, Element, Entity, SingletonEntity, TypedActionView, View, ViewContext, ViewHandle,
 };
 
 const DESCRIPTION_TEXT: &str = "Add MCP servers to extend the Warp Agent's capabilities. MCP servers expose data sources or tools to agents through a standardized interface, essentially acting like plugins. Add a custom server, or use the presets to get started with popular servers. You can also find team servers that have been shared with you here. ";

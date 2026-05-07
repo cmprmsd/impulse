@@ -41,6 +41,7 @@ use crate::workspace::{active_terminal_in_window, ForkedConversationDestination,
 use warpui::elements::{
     Align, Border, ChildView, Clipped, ClippedScrollStateHandle, ClippedScrollable, ConstrainedBox,
     Container, CornerRadius, Dismiss, Empty, Fill, Flex, ParentElement, Radius, SavePosition,
+};
 use warpui::keymap::BindingId;
 use warpui::units::{IntoPixels, Pixels};
 use warpui::{

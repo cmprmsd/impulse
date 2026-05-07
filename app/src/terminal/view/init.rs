@@ -1,5 +1,6 @@
 use super::{
     AgentOnboardingVersion, AskAISource, ContextMenuAction, OnboardingIntention, OnboardingVersion,
+};
 
 use crate::ai::predict::prompt_suggestions::ACCEPT_PROMPT_SUGGESTION_KEYBINDING;
 
@@ -23,6 +24,7 @@ use crate::{
         escape_sequences::{self, EscCodes},
         selection::SelectionDirection,
     },
+};
 use warp_core::context_flag::ContextFlag;
 use warpui::keymap::ContextPredicate;
 use warpui::keymap::{BindingDescription, PerPlatformKeystroke};
@@ -30,7 +32,6 @@ use warpui::platform::OperatingSystem;
 use warpui::{
     keymap::{EditableBinding, FixedBinding},
     units::IntoLines,
-    AppContext,
 };
 
 pub const TOGGLE_BLOCK_FILTER_KEYBINDING: &str =

@@ -19,6 +19,7 @@ use crate::{
         AIAgentInput, AIAgentTextSection, AgentOutputImage, AgentOutputImageLayout,
         AgentOutputMermaidDiagram, MessageId, UserQueryMode,
     },
+};
 use ui_components::lightbox::{LightboxImage, LightboxImageSource};
 use warpui::{elements::Empty, Element};
 

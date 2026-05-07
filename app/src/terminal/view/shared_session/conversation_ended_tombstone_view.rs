@@ -1,6 +1,4 @@
 use crate::ai::agent::conversation::AIConversationId;
-    conversation_output_status_from_conversation, AmbientAgentTaskId, AmbientConversationStatus,
-};
 use crate::ai::artifacts::{Artifact, ArtifactButtonsRow, ArtifactButtonsRowEvent};
 use crate::ai::blocklist::{format_credits, BlocklistAIHistoryModel};
 use crate::appearance::Appearance;
@@ -27,6 +25,7 @@ use warpui::elements::{
 use warpui::fonts::{Properties, Weight};
 use warpui::{
     AppContext, Element, Entity, EntityId, SingletonEntity, TypedActionView, View, ViewContext,
+};
 
 #[cfg(not(target_family = "wasm"))]
 

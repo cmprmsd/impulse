@@ -4,6 +4,7 @@ use std::path::{Path, PathBuf};
 use lsp::supported_servers::LSPServerType;
 use lsp::{
     LanguageId, LanguageServerId, LspManagerModel, LspManagerModelEvent, LspServerModel,
+};
 use warp_core::send_telemetry_from_ctx;
 
 use crate::code::lsp_telemetry::{LspControlActionType, LspEnablementSource, LspTelemetryEvent};
@@ -23,7 +24,6 @@ use warpui::{
         Border, ConstrainedBox, Container, CornerRadius, CrossAxisAlignment, Fill, Flex,
         MainAxisAlignment, OffsetPositioning, Padding, ParentElement, Radius, Stack,
     },
-    AppContext, Element, Entity, ModelHandle, SingletonEntity, View, WeakModelHandle,
 };
 use warpui::{TypedActionView, ViewContext, ViewHandle};
 

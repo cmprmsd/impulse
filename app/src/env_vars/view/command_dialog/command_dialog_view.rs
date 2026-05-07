@@ -9,10 +9,11 @@ use warpui::{
         button::ButtonVariant,
         components::{UiComponent, UiComponentStyles},
     },
-    AppContext, Element, Entity, FocusContext, SingletonEntity, TypedActionView, View, ViewContext,
+};
 
 use crate::editor::{
     EditorOptions, EditorView, Event, PropagateAndNoOpNavigationKeys, SingleLineEditorOptions,
+};
 
 use super::EnvVarSecretCommand;
 

@@ -8,6 +8,7 @@ use warp_core::ui::theme::Fill;
 use warpui::elements::{ChildView, MainAxisSize};
 use warpui::{
     AppContext, Element, Entity, EntityId, ModelHandle, SingletonEntity as _, View, ViewContext,
+};
 
 use crate::ai::blocklist::agent_view::AgentViewController;
 use crate::ai::blocklist::block::cli_controller::{CLISubagentController, CLISubagentEvent};

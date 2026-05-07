@@ -6,8 +6,6 @@ use warpui::{
         CrossAxisAlignment, Flex, Hoverable, MainAxisSize, MouseStateHandle, ParentElement,
         Shrinkable,
     },
-    ui_components::components::{UiComponent, UiComponentStyles},
-    AppContext, Element, EventContext,
 };
 
 use crate::appearance::Appearance;

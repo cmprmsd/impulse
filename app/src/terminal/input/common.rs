@@ -13,6 +13,7 @@ use crate::{
         model::TerminalModel,
         view::{TerminalAction, PADDING_LEFT},
     },
+};
 use pathfinder_geometry::vector::vec2f;
 use vim::vim::{VimMode, VimState};
 use warp_completer::completer::Description;
@@ -24,12 +25,8 @@ use warpui::{
         OffsetType, ParentAnchor, ParentElement, ParentOffsetBounds, PositionedElementOffsetBounds,
         PositioningAxis, Radius, Shrinkable, Stack, Text, XAxisAnchor,
     },
-    fonts::Weight,
-    presenter::ChildView,
-    ui_components::components::{UiComponent, UiComponentStyles},
-    AppContext, EntityId, SingletonEntity, ViewHandle,
-};
 
+};
 /// Whether the terminal input message bar should be shown.
 ///
 /// The message bar is hidden when AI is disabled, the user has turned it off in settings,

@@ -22,7 +22,6 @@ use super::{
     teams_page::TeamsPageView,
     warp_drive_page::WarpDriveSettingsPageView,
     warpify_page::WarpifyPageView,
-    SettingsSection,
 };
 use crate::{
     appearance::Appearance,
@@ -53,8 +52,6 @@ use warpui::{
         button::{Button, ButtonVariant},
         components::{Coords, UiComponent, UiComponentStyles},
     },
-    units::Pixels,
-    Action, AppContext, SingletonEntity, ViewContext, ViewHandle,
 };
 
 pub const TOGGLE_BUTTON_RIGHT_PADDING: f32 = 5.;

@@ -1,12 +1,14 @@
 use super::directory_color_add_picker::{DirectoryColorAddPicker, DirectoryColorAddPickerEvent};
 use super::settings_page::{
     AdditionalInfo, Category, LocalOnlyIconState, MatchData, PageType, SettingsWidget,
+};
 use super::{flags, SettingsSection};
 use super::{
     settings_page::{
         build_reset_button, render_body_item, render_body_item_label, render_dropdown_item,
         SettingsPageEvent, SettingsPageMeta, SettingsPageViewHandle, ToggleState, HEADER_PADDING,
     },
+};
 use super::{SettingActionPairContexts, SettingActionPairDescriptions, ToggleSettingActionPair};
 use crate::appearance::{Appearance, AppearanceEvent};
 use crate::channel::{Channel, ChannelState};
@@ -52,7 +54,6 @@ use crate::workspace::tab_settings::{
     DirectoryTabColor, PreserveActiveTabColor, ShowCodeReviewButton, ShowIndicatorsButton,
     ShowVerticalTabPanelInRestoredWindows, TabCloseButtonPosition, TabSettings,
     TabSettingsChangedEvent, UseLatestUserPromptAsConversationTitleInTabNames, UseVerticalTabs,
-    WorkspaceDecorationVisibility,
 };
 use crate::workspace::WorkspaceAction;
 use crate::{editor::EditorView, themes::theme_chooser::ThemeChooserMode};
@@ -93,7 +94,6 @@ use warpui::{
         Dismiss, Element, Fill, Flex, Hoverable, MouseStateHandle, ParentElement, Radius,
         Shrinkable, DEFAULT_UI_LINE_HEIGHT_RATIO,
     },
-    rendering::ThinStrokes,
 };
 use warpui::{platform::SystemTheme, Action};
 use warpui::{

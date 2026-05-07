@@ -10,8 +10,6 @@ use crate::terminal::{
         index::{Point, Side},
         terminal_model::WithinBlock,
     },
-    shared_session::tests::terminal_model_for_viewer,
-    GridType, SizeInfo, SizeUpdate, SizeUpdateReason, TerminalModel,
 };
 use warpui::text::SelectionType;
 

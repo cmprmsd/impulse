@@ -17,7 +17,7 @@ use warpui::{
         button::ButtonVariant,
         components::{Coords, UiComponent, UiComponentStyles},
     },
-    AppContext, Entity, FocusContext, SingletonEntity as _, TypedActionView, View, ViewContext,
+};
 
 use crate::{
     appearance::Appearance,
@@ -26,6 +26,7 @@ use crate::{
         diff_state::DiffMode,
     },
 
+};
 /// A single selectable target in the diff selector menu.
 #[derive(Debug, Clone)]
 pub struct DiffTarget {

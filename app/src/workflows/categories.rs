@@ -6,8 +6,6 @@ use warpui::{
         ScrollStateHandle, Scrollable, ScrollableElement, ScrollbarWidth, Shrinkable, Text,
         UniformList, UniformListState, LEFT_PADDING as SCROLLABLE_LEFT_PADDING,
     },
-    fonts::{Properties, Weight},
-    AppContext, Entity, SingletonEntity, TypedActionView, View, ViewContext, WeakViewHandle,
 };
 
 use crate::appearance::Appearance;

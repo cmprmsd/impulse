@@ -13,6 +13,7 @@ use crate::{
         auth_manager::{AuthManager, AuthManagerEvent},
         AuthStateProvider,
     },
+};
 
 use ai::api_keys::{ApiKeyManager, ApiKeyManagerEvent};
 

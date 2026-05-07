@@ -3,9 +3,6 @@ use warpui::{
     elements::{
         Align, ConstrainedBox, Container, Flex, ParentElement, SavePosition, Shrinkable, Stack,
     },
-    fonts::FamilyId,
-    ui_components::components::{Coords, UiComponent, UiComponentStyles},
-    AppContext, Element, ViewContext, ViewHandle,
 };
 
 use crate::{
@@ -22,6 +19,7 @@ use crate::{
     },
 
 // Metadata labels (name and description)
+};
 const LABEL_FONT_SIZE: f32 = 12.;
 const METADATA_SPACING: f32 = 8.;
 const LAST_ROW_ELEMENT_SPACING: f32 = 2.;

@@ -11,6 +11,7 @@ use crate::{
     pane_group::{CodePane, PaneGroup, PaneId, TerminalPane},
     report_if_error, send_telemetry_from_app_ctx,
 
+};
 /// Scope of what's being quit/closed.
 #[derive(Clone)]
 enum QuitScope<'a> {

@@ -4,7 +4,6 @@
 //! The side panel Warp AI implementation lives in `super::ai_assistant`.
 pub(crate) mod agent;
 pub(crate) mod agent_events;
-pub(crate) mod ai_document_view;
 pub mod artifacts;
 pub(crate) mod attachment_utils;
 pub(crate) mod block_context;
@@ -35,5 +34,4 @@ pub fn init(app: &mut AppContext) {
     blocklist::toggleable_items::init(app);
     blocklist::suggested_agent_mode_workflow_modal::init(app);
     blocklist::suggested_rule_modal::init(app);
-    ai_document_view::init(app);
 }

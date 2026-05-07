@@ -1,5 +1,3 @@
-    CloudObject, CloudObjectSyncStatus, GenericStringObjectFormat, JsonObjectType,
-};
 use crate::drive::CloudObjectTypeAndId;
 use crate::network::NetworkStatus;
 use crate::pane_group::focus_state::PaneFocusHandle;
@@ -12,8 +10,6 @@ use warpui::{
         CrossAxisAlignment, Expanded, Flex, MainAxisAlignment, MainAxisSize, ParentElement,
         ScrollbarWidth,
     },
-    ui_components::components::UiComponent,
-    AppContext, Element, Entity, FocusContext, ModelHandle, TypedActionView, View, ViewContext,
 };
 
 use crate::ui_components::icons::Icon;

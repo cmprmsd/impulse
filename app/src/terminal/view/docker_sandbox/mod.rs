@@ -20,8 +20,6 @@ use crate::terminal::local_tty::docker_sandbox::resolve_sbx_path_from_user_shell
 use crate::terminal::TerminalManager;
 
 #[cfg(not(target_family = "wasm"))]
-    environment::prepare_environment, terminal::TerminalDriver, WARP_DRIVE_SYNC_TIMEOUT,
-};
 #[cfg(not(target_family = "wasm"))]
 #[cfg(not(target_family = "wasm"))]
 #[cfg(not(target_family = "wasm"))]

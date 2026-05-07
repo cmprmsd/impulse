@@ -10,13 +10,6 @@ use warpui::{
         ParentAnchor, ParentElement, ParentOffsetBounds, PositioningAxis, SavePosition,
         ScrollbarWidth, Shrinkable, Stack, XAxisAnchor, YAxisAnchor,
     },
-    id,
-    keymap::EditableBinding,
-    platform::Cursor,
-    presenter::ChildView,
-    ui_components::components::UiComponent,
-    AppContext, BlurContext, Element, Entity, FocusContext, ModelAsRef, ModelHandle,
-    SingletonEntity, TypedActionView, View, ViewContext, ViewHandle, WindowId,
 };
 
 use crate::{
@@ -60,10 +53,6 @@ use crate::{
             highlight_icon_button_with_context_menu, icon_button_with_context_menu, MenuDirection,
         },
     },
-    util::bindings::CustomAction,
-    view_components::{alert::AlertConfig, Alert, DismissibleToast, ToastType},
-    workspace::ToastStack,
-    Appearance, CloudObjectTypeAndId, TelemetryEvent,
 };
 
 use super::{command_dialog::EnvVarCommandDialog, menus::Menus};

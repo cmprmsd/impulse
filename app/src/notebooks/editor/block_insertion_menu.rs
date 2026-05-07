@@ -13,7 +13,6 @@ use warpui::{
         button::ButtonTooltipPosition,
         components::{UiComponent, UiComponentStyles},
     },
-    AppContext, Element, SingletonEntity, ViewContext, ViewHandle,
 };
 
 use crate::{
@@ -26,13 +25,13 @@ use crate::{
         searcher::EmbeddingSearchItemAction,
         view::{EmbeddingSearchEvent, EmbeddingSearchMenu},
     },
+};
 
 use super::{
     embedded_item::EmbeddedWorkflow,
     view::{EditorViewAction, EditorViewEvent, RichTextEditorView},
-    BlockType,
-};
 
+};
 /// The saved position ID for the block insertion button.
 const BLOCK_INSERT_BUTTON_ID: &str = "notebook_block_insertion_button";
 

@@ -20,9 +20,7 @@ use warpui::{
         Border, Container, DropTarget, DropTargetData, Flex, MainAxisSize, ParentElement,
         SavePosition, Shrinkable,
     },
-    keymap::EditableBinding,
-    presenter::ChildView,
-    AppContext, Element, Entity, ModelHandle, SingletonEntity, TypedActionView, View, ViewContext,
+};
 
 use crate::pane_group::focus_state::{PaneFocusHandle, PaneGroupFocusEvent};
 

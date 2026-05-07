@@ -12,6 +12,7 @@ use warpui::elements::{Empty, MouseStateHandle};
 use warpui::platform::WindowStyle;
 use warpui::{
     AddSingletonModel, App, AppContext, Element, Entity, SingletonEntity, TypedActionView, View,
+};
 
 #[test]
 fn test_parse_repo_input_owner_repo() {

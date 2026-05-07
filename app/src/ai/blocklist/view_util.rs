@@ -15,7 +15,6 @@ use warpui::{
         components::{UiComponent, UiComponentStyles},
         text::Span,
     },
-    AppContext, Element, EntityId, EventContext, SingletonEntity,
 };
 
 use crate::{

@@ -13,7 +13,6 @@ use warpui::{
         chip::Chip,
         components::{Coords, UiComponent, UiComponentStyles},
     },
-    AppContext, Element, SingletonEntity,
 };
 
 use crate::ai::blocklist::block::view_impl::common::UserQueryProps;

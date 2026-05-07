@@ -41,10 +41,6 @@ use warpui::{
         ScrollStateHandle, Scrollable, ScrollableElement, ScrollbarWidth, Shrinkable, Stack, Text,
         UniformList, UniformListState,
     },
-    keymap::FixedBinding,
-    ui_components::components::UiComponent,
-    AppContext, Element, Entity, FocusContext, SingletonEntity as _, TypedActionView, View,
-    ViewContext, ViewHandle, WindowId,
 };
 
 use warpui::clipboard::ClipboardContent;

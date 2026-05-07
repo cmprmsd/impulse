@@ -12,8 +12,7 @@ use crate::{
         conversation::AIConversationId,
         AIIdentifiers, CancellationReason,
     },
-    network::NetworkStatus,
-    report_error, send_telemetry_from_ctx,
+};
 
 #[derive(Debug, Clone, PartialEq, Eq, Hash)]
 pub struct ResponseStreamId(String);

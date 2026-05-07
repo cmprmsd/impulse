@@ -22,8 +22,6 @@ use warpui::{
         Border, ConstrainedBox, Container, CornerRadius, CrossAxisAlignment, Flex, Hoverable,
         MainAxisAlignment, MouseStateHandle, ParentElement, Radius, Text,
     },
-    platform::Cursor,
-    AppContext, Element, Entity, TypedActionView, View, ViewContext,
 };
 
 pub enum UpdateModalBodyEvent {

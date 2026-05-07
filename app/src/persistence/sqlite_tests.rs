@@ -7,6 +7,7 @@ use crate::{
         AppState, CodePaneSnapShot, CodePaneTabSnapshot, LeafContents, LeafSnapshot,
         PaneNodeSnapshot, TabSnapshot, TerminalPaneSnapshot, WindowSnapshot,
     },
+};
 
 use super::{
     decode_path, deduplicate_events, encode_path, read_sqlite_data, save_app_state, setup_database,

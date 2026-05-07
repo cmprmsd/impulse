@@ -15,6 +15,7 @@ use {
         repository::{RepositorySubscriber, SubscriberId},
         Repository, RepositoryUpdate,
     },
+};
 
 #[cfg(feature = "local_fs")]
 use super::diff_state::DiffStats;

@@ -48,7 +48,6 @@ use crate::{
     pane_group::{NewTerminalOptions, PanesLayout},
     send_telemetry_from_ctx,
     server::{server_api::ServerTime, telemetry::TelemetryEvent},
-    UpdateQuakeModeEventArg,
 };
 use crate::{
     auth::auth_override_warning_modal::{AuthOverrideWarningModal, AuthOverrideWarningModalEvent},
@@ -80,8 +79,6 @@ use warpui::keymap::{EditableBinding, FixedBinding};
 use warpui::windowing::WindowManager;
 
 use crate::ai::llms::{LLMPreferences, LLMPreferencesEvent};
-    apply_free_tier_default_model_override, build_onboarding_models, current_onboarding_auth_state,
-};
 
 use warpui::elements::{
     Border, ChildAnchor, OffsetPositioning, ParentAnchor, ParentElement, ParentOffsetBounds, Stack,

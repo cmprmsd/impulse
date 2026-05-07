@@ -69,7 +69,6 @@ use crate::{
         team_tester::TeamTesterStatus, update_manager::TeamUpdateManager,
         user_profiles::UserProfiles, user_workspaces::UserWorkspaces,
     },
-    AgentNotificationsModel, GlobalResourceHandles, GlobalResourceHandlesProvider,
 };
 #[cfg(feature = "local_fs")]
 use repo_metadata::RepoMetadataModel;

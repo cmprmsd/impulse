@@ -31,7 +31,6 @@ use crate::{
     workspaces::{
         team_tester::TeamTesterStatus, user_profiles::UserProfiles, user_workspaces::UserWorkspaces,
     },
-    GlobalResourceHandles, GlobalResourceHandlesProvider,
 };
 
 use super::NotebookManager;

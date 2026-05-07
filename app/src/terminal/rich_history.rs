@@ -4,8 +4,6 @@ use warpui::{
     elements::{
         Align, ConstrainedBox, Container, CrossAxisAlignment, Flex, Icon, ParentElement, Shrinkable,
     },
-    ui_components::components::{Coords, UiComponent, UiComponentStyles},
-    AppContext, Element, SingletonEntity,
 };
 
 use super::HistoryEntry;
@@ -38,6 +36,8 @@ pub fn render_rich_history(entry: &HistoryEntry, ctx: &AppContext) -> Box<dyn El
         let icon = if exit_code.was_successful() {
             UiIcon::CheckSkinny
         } else {
+            UiIcon::CrossSkinny
+        };
         flex_column.add_child(
             Container::new(render_row_with_icon_and_paragraph(
                 icon.into(),

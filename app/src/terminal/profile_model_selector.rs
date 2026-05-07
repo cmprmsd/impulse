@@ -13,11 +13,6 @@ use warpui::{
         ParentOffsetBounds, Percentage, PositionedElementAnchor, PositionedElementOffsetBounds,
         Radius, Rect, SavePosition, Stack, Text, DEFAULT_UI_LINE_HEIGHT_RATIO,
     },
-    platform::Cursor,
-    text_layout::ClipConfig,
-    ui_components::components::UiComponent,
-    AppContext, Element, Entity, EntityId, ModelHandle, SingletonEntity as _, TypedActionView,
-    View, ViewContext, ViewHandle,
 };
 
 const SIDECAR_HORIZONTAL_GAP: f32 = 8.;
@@ -56,7 +51,6 @@ use crate::{
         action_button::{ActionButton, ActionButtonTheme, ButtonSize, SecondaryTheme},
         FeaturePopup, NewFeaturePopupEvent, NewFeaturePopupLabel,
     },
-    workspace::WorkspaceAction,
 };
 
 use warp_core::ui::theme::{color::internal_colors, Fill};

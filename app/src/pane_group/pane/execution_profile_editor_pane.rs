@@ -1,11 +1,11 @@
 use super::{
     view::PaneView, DetachType, PaneConfiguration, PaneContent, PaneGroup, PaneId, ShareableLink,
-    ShareableLinkError,
 };
 use crate::{
     ai::execution_profiles::editor::{
         ExecutionProfileEditorManager, ExecutionProfileEditorView, ExecutionProfileEditorViewEvent,
     },
+};
 use warpui::{AppContext, ModelHandle, SingletonEntity, View, ViewContext, ViewHandle};
 
 pub struct ExecutionProfileEditorPane {

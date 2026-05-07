@@ -38,6 +38,7 @@ use warp_core::semantic_selection::SemanticSelection;
 use warpui::elements::{
     Align, ConstrainedBox, CornerRadius, CrossAxisAlignment, Empty, Expanded, FormattedTextElement,
     Hoverable, MainAxisAlignment, MainAxisSize, MouseStateHandle, Radius, SavePosition,
+};
 use warpui::{
     elements::{Border, Container, Flex, ParentElement},
     AppContext, Element, SingletonEntity,

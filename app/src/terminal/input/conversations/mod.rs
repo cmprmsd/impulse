@@ -14,6 +14,7 @@ use crate::ai::active_agent_views_model::{ActiveAgentViewsModel, ConversationOrT
 use crate::ai::conversation_navigation::ConversationNavigationData;
 use crate::terminal::input::inline_menu::{
     default_navigation_message_items, InlineMenuAction, InlineMenuMessageArgs, InlineMenuRowAction,
+};
 use crate::terminal::input::message_bar::{Message, MessageItem};
 
 /// Tab identifiers for the inline conversation menu.

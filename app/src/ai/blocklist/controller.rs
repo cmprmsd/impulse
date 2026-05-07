@@ -42,6 +42,7 @@ use crate::ai::{
         AIIdentifiers, EntrypointType, FinishedAIAgentOutput, RenderableAIError, RequestCost,
         RequestMetadata, StaticQueryType, UserQueryMode,
     },
+};
 use crate::features::FeatureFlag;
 use crate::global_resource_handles::GlobalResourceHandlesProvider;
 use crate::network::NetworkStatus;
@@ -55,9 +56,8 @@ use crate::terminal::view::inline_banner::ZeroStatePromptSuggestionType;
 use crate::terminal::{
     model::session::{active_session::ActiveSession, SessionType},
     model::terminal_model::TerminalModel,
-    ShellLaunchData,
 };
-use crate::{send_telemetry_from_ctx, server::telemetry::TelemetryEvent};
+use crate::send_telemetry_from_ctx;
 use anyhow::anyhow;
 use chrono::{DateTime, Local};
 use itertools::Itertools;

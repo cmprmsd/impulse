@@ -11,6 +11,7 @@ use crate::{
         shell::ShellType,
         History,
     },
+};
 use chrono::Local;
 use futures::future::join_all;
 use futures::Future;

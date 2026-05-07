@@ -30,8 +30,6 @@ use warpui::{
         button::ButtonVariant,
         components::{UiComponent, UiComponentStyles},
     },
-    AppContext, BlurContext, Element, Entity, FocusContext, ModelAsRef, ModelHandle,
-    SingletonEntity, TypedActionView, View, ViewContext, ViewHandle, WindowId,
 };
 
 use crate::{
@@ -84,14 +82,6 @@ use crate::{
         decrease_notebook_font_size, increase_notebook_font_size, FontSettings,
         FontSettingsChangedEvent, NotebookFontSize,
     },
-    terminal::safe_mode_settings::get_secret_obfuscation_mode,
-    throttle::throttle,
-    ui_components::icons::{self, Icon},
-    util::bindings::{self, CustomAction},
-    view_components::{DismissibleToast, ToastType},
-    workflows::{WorkflowSource, WorkflowType},
-    workspace::ToastStack,
-    workspaces::user_workspaces::UserWorkspaces,
 };
 
 use self::details_bar::DetailsBar;

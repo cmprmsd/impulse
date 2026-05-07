@@ -4,8 +4,6 @@ use warpui::{
         Clipped, ConstrainedBox, Container, CornerRadius, CrossAxisAlignment, Expanded, Flex,
         Hoverable, Icon, MouseStateHandle, ParentElement, Radius, Text,
     },
-    platform::Cursor,
-    AppContext, Element,
 };
 
 use warp_core::ui::appearance::Appearance;

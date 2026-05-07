@@ -1,8 +1,6 @@
 use std::collections::HashSet;
 use std::path::{Path, PathBuf};
 
-    CodebaseIndexManager, CodebaseIndexManagerEvent,
-};
 use settings::Setting;
 use warp_util::path::user_friendly_path;
 use warpui::{
@@ -10,8 +8,6 @@ use warpui::{
         Border, ChildView, ConstrainedBox, Container, CrossAxisAlignment, Flex, Hoverable,
         MainAxisSize, MouseStateHandle, ParentElement, Text,
     },
-    platform::Cursor,
-    AppContext, Element, Entity, SingletonEntity, TypedActionView, View, ViewContext, ViewHandle,
 };
 
 use crate::{

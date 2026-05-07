@@ -10,13 +10,13 @@ use crate::{
         settings::TerminalSettings,
         view::TerminalAction,
     },
+};
 use settings::Setting;
 use warpui::{
     elements::{
         Border, ChildView, Container, CornerRadius, DropTarget, Element, Flex, Hoverable,
         ParentElement, Radius, SavePosition, Stack,
     },
-    AppContext, SingletonEntity,
 };
 
 use super::{
@@ -25,6 +25,7 @@ use super::{
         add_voltron_overlay, add_workflow_info_overlay, maybe_add_buy_credits_banner,
         wrap_input_with_terminal_padding_and_focus_handler,
     },
+};
 
 impl Input {
     /// Renders the universal input. This is used when `FeatureFlag::AgentView` is disabled and the

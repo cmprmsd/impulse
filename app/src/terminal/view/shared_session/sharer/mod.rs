@@ -4,6 +4,7 @@ use inactivity_modal::InactivityModal;
 use async_channel::Sender;
 use warpui::{
     elements::MouseStateHandle, r#async::SpawnedFutureHandle, SingletonEntity, ViewContext,
+};
 
 use crate::terminal::{shared_session::settings::SharedSessionSettings, TerminalView};
 

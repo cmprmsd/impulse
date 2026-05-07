@@ -7,7 +7,6 @@ use warpui::{
         ChildAnchor, Dismiss, MouseStateHandle, OffsetPositioning, PositionedElementAnchor,
         PositionedElementOffsetBounds, Stack,
     },
-    AppContext, Element, EventContext,
 };
 
 use super::{TerminalAction, TerminalView};

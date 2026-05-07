@@ -11,14 +11,6 @@ use warpui::{
         Scrollable, ScrollableElement, ScrollbarWidth, Shrinkable, Stack, Text, UniformList,
         UniformListState,
     },
-    fonts::{FamilyId, Weight},
-    geometry::vector::vec2f,
-    keymap::FixedBinding,
-    platform::{Cursor, SystemTheme},
-    ui_components::components::{UiComponent, UiComponentStyles},
-    windowing::{StateEvent, WindowManager},
-    AppContext, Entity, FocusContext, ModelHandle, SingletonEntity, Tracked, TypedActionView,
-    UpdateModel, View, ViewContext, ViewHandle,
 };
 
 use crate::resource_center::{mark_feature_used_and_write_to_user_defaults, Tip, TipAction};
@@ -30,6 +22,7 @@ use crate::{
     editor::{
         Event as EditorEvent, PropagateAndNoOpNavigationKeys, SingleLineEditorOptions, TextOptions,
     },
+};
 use crate::{appearance::AppearanceManager, send_telemetry_from_ctx};
 use crate::{editor::EditorView, resource_center::TipsCompleted};
 use crate::{

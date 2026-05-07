@@ -1,7 +1,6 @@
 
 use crate::ai::agent::{
     conversation::{AIConversation, AIConversationId},
-    MessageId,
 };
 use crate::test_util::ai_agent_tasks::{
     create_api_subtask, create_api_task, create_message, create_subagent_tool_call_message,

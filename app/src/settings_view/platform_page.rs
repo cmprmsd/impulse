@@ -7,6 +7,7 @@ use super::{
         MatchData, PageType, SettingsPageMeta, SettingsPageViewHandle, SettingsWidget,
         CONTENT_FONT_SIZE, SUBHEADER_FONT_SIZE,
     },
+};
 use crate::util::truncation::truncate_from_end;
 use crate::{
     appearance::Appearance,
@@ -29,7 +30,6 @@ use warpui::{
         button::ButtonVariant,
         components::{Coords, UiComponent, UiComponentStyles},
     },
-    AppContext, Entity, SingletonEntity, TypedActionView, View, ViewContext, ViewHandle,
 };
 
 const MODAL_WIDTH: f32 = 460.;

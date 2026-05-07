@@ -4,7 +4,6 @@ mod channel_config;
 use anyhow::Result;
 use warp_core::{
     channel::{Channel, ChannelState},
-    features,
 };
 
 fn main() -> Result<()> {

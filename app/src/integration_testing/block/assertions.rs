@@ -14,6 +14,7 @@ use crate::{
     integration_testing::{
         terminal::util::ExpectedOutput, view_getters::single_terminal_view_for_tab,
     },
+};
 use crate::{
     settings::InputModeSettings,
     terminal::{heights_approx_eq, model::terminal_model::BlockIndex, TerminalModel, TerminalView},

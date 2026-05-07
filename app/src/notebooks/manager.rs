@@ -5,6 +5,7 @@ use futures_util::stream::AbortHandle;
 use markdown_parser::markdown_parser::parse_markdown_to_raw_text;
 use warpui::{
     r#async::SpawnedFutureHandle, Entity, EntityId, ModelContext, SingletonEntity, WeakViewHandle,
+};
 
 use crate::{
     cloud_object::{
@@ -20,6 +21,7 @@ use crate::{
         },
         ids::SyncId,
     },
+};
 
 use super::{notebook::NotebookView, CloudNotebook};
 

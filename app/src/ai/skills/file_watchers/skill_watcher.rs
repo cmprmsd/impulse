@@ -16,6 +16,7 @@ use watcher::{BulkFilesystemWatcherEvent, HomeDirectoryWatcher, HomeDirectoryWat
 
 use crate::warp_managed_paths_watcher::{
     filter_repository_update_by_prefix, warp_managed_skill_dirs, WarpManagedPathsWatcher,
+};
 use ai::skills::{
     home_skills_path, parse_skill, ParsedSkill, SkillProvider, SKILL_PROVIDER_DEFINITIONS,
 };

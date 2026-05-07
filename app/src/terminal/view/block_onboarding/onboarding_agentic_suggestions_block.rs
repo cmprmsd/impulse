@@ -1,6 +1,7 @@
 use crate::ai::blocklist::ai_brand_color;
 use crate::ai::blocklist::{
     BlocklistAIActionEvent, BlocklistAIActionModel, BlocklistAIHistoryEvent,
+};
 use crate::terminal::event::BlockType;
 use crate::terminal::model::session::SessionId;
 use crate::terminal::model_events::{ModelEvent, ModelEventDispatcher};
@@ -32,8 +33,6 @@ use warpui::{
         Border, ConstrainedBox, Container, Flex, Hoverable, MainAxisAlignment, MainAxisSize,
         MouseStateHandle, ParentElement, Text, Wrap,
     },
-    platform::Cursor,
-    AppContext, Element, Entity, ModelHandle, SingletonEntity, View, ViewContext,
 };
 
 const ONBOARDING_BOX_WIDTH: f32 = 210.;

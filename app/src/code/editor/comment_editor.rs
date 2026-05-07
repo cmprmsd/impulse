@@ -24,11 +24,6 @@ use warpui::{
         Border, ChildView, Clipped, ConstrainedBox, Container, CornerRadius, CrossAxisAlignment,
         Flex, MainAxisAlignment, MainAxisSize, ParentElement, Radius, Shrinkable, Text,
     },
-    keymap::Keystroke,
-    text_layout::ClipConfig,
-    units::Pixels,
-    AppContext, Element, Entity, FocusContext, ModelHandle, SingletonEntity, TypedActionView, View,
-    ViewContext, ViewHandle,
 };
 
 /// Default width of the comment editor, in pixels.

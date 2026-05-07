@@ -5,6 +5,7 @@ use warpui::{
         Container, CrossAxisAlignment, Flex, Hoverable, MainAxisAlignment, MouseStateHandle,
         ParentElement,
     },
+};
 
 use crate::{
     appearance::Appearance,
@@ -31,7 +32,8 @@ pub fn title_font_size(font_settings: &FontSettings) -> f32 {
 /// Font properties for the notebook title.
 pub const TITLE_FONT_PROPERTIES: fonts::Properties = fonts::Properties {
     style: fonts::Style::Normal,
-    weight: fonts::Weight::Bold,
+    weight: fonts::Weight::BOLD,
+    stretch: fonts::Stretch::NORMAL,
 };
 
 /// Wraps the title element in spacing. If not `None`, the details element is shown above the title.

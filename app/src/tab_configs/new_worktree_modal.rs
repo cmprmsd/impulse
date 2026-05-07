@@ -14,9 +14,8 @@ use warpui::{
         checkbox::Checkbox,
         components::{Coords, UiComponent, UiComponentStyles},
     },
-    AppContext, Entity, SingletonEntity, TypedActionView, View, ViewContext, ViewHandle,
-};
 
+};
 /// Registers keybindings for the new-worktree modal (ESC to close).
 pub fn init(app: &mut AppContext) {
     use warpui::keymap::macros::*;

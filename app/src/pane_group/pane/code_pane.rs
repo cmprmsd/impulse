@@ -7,6 +7,7 @@ use crate::{
         editor_management::{CodeEditorStatus, CodeManager, CodeSource},
         view::{CodeView, CodeViewEvent},
     },
+};
 
 use super::{
     DetachType, PaneConfiguration, PaneContent, PaneId, PaneView, ShareableLink, ShareableLinkError,

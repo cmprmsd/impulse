@@ -7,7 +7,6 @@ use warp_terminal::model::{
         cell::{self, LineLength as _},
         Dimensions as _,
     },
-    Point, VisiblePoint, VisibleRow,
 };
 
 use crate::terminal::{model::grid::Cursor, SizeInfo};

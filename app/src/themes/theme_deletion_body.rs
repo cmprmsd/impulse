@@ -17,7 +17,6 @@ use warpui::ui_components::button::ButtonVariant;
 use warpui::ui_components::components::{Coords, UiComponent, UiComponentStyles};
 use warpui::{
     platform::Cursor, AppContext, Element, Entity, SingletonEntity, TypedActionView, View,
-    ViewContext,
 };
 
 const BUTTON_PADDING: f32 = 12.;

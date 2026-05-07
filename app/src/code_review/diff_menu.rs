@@ -13,11 +13,7 @@ use warpui::{
         MainAxisSize, MouseInBehavior, ParentElement, Radius, ScrollStateHandle, Scrollable,
         ScrollableElement, ScrollbarWidth, Text, UniformList, UniformListState,
     },
-    fonts::{Properties, Weight},
-    id,
-    keymap::FixedBinding,
-    ui_components::components::{Coords, UiComponent, UiComponentStyles},
-    AppContext, Entity, FocusContext, SingletonEntity as _, TypedActionView, View, ViewContext,
+};
 
 use crate::{
     appearance::Appearance,
@@ -26,6 +22,7 @@ use crate::{
         EditorOptions, EditorView, Event as EditorEvent, PropagateAndNoOpNavigationKeys,
         TextOptions,
     },
+};
 
 const MENU_WIDTH: f32 = 280.;
 const MENU_MAX_LIST_HEIGHT: f32 = 200.;

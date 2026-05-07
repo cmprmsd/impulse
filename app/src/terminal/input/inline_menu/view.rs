@@ -20,12 +20,14 @@ use warpui::fonts::Weight;
 use warpui::platform::Cursor;
 use warpui::prelude::{
     Align, ChildView, ConstrainedBox, Container, CrossAxisAlignment, Empty, Flex, SavePosition,
+};
 use warpui::scene::{Border, CornerRadius, Radius};
 use warpui::ui_components::button::ButtonVariant;
 use warpui::ui_components::components::{Coords, UiComponent, UiComponentStyles};
 use warpui::{elements::ScrollStateHandle, ModelHandle, View};
 use warpui::{
     Action, AppContext, Element, Entity, SingletonEntity, TypedActionView, ViewContext, ViewHandle,
+};
 
 use crate::ai::blocklist::agent_view::{
     agent_view_bg_color, AgentViewController, AgentViewControllerEvent,

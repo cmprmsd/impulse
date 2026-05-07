@@ -25,6 +25,7 @@ define_settings_group!(WorkflowAliases, settings: [
         storage_key: "WorkflowAliases",
     }
 ]);
+};
 
 #[derive(Debug, PartialEq, Serialize, Deserialize, Clone, schemars::JsonSchema, SettingsValue)]
 #[schemars(description = "A shortcut alias for a Warp Drive workflow.")]

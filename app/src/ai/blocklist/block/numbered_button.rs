@@ -11,7 +11,6 @@ use warpui::{
         button::{Button, ButtonVariant},
         components::{UiComponent, UiComponentStyles},
     },
-    AppContext, Element, SingletonEntity, ViewHandle,
 };
 
 use super::compact_agent_input::CompactAgentInput;

@@ -5,12 +5,10 @@ use warpui::{AppContext, ModelContext, ModelHandle, SingletonEntity};
 
 use crate::{
     ai::agent::{conversation::AIConversationId, CancellationReason},
-    BlocklistAIHistoryModel,
 };
 
 use super::{
     response_stream::{ResponseStream, ResponseStreamId},
-    BlocklistAIController,
 };
 
 pub(super) struct PendingResponseStreams {

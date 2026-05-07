@@ -21,7 +21,7 @@ use warpui::{
         button::{ButtonVariant, TextAndIcon, TextAndIconAlignment},
         components::{UiComponent, UiComponentStyles},
     },
-    AppContext, Element, Entity, ModelHandle, SingletonEntity, TypedActionView, View, ViewContext,
+};
 
 #[cfg(feature = "local_fs")]
 use crate::notebooks::post_process_notebook;
@@ -40,14 +40,6 @@ use crate::{
         },
         BackingView, PaneConfiguration, PaneEvent,
     },
-    safe_warn, send_telemetry_from_ctx,
-    server::telemetry::{NotebookActionEvent, NotebookTelemetryMetadata, TelemetryEvent},
-    settings::FontSettings,
-    terminal::model::session::Session,
-    ui_components::icons::Icon,
-    view_components::{MarkdownToggleEvent, MarkdownToggleView},
-    workflows::{WorkflowSource, WorkflowType},
-    workspace::ActiveSession,
 };
 
 use super::{

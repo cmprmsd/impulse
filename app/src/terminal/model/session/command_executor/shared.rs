@@ -6,6 +6,7 @@ use crate::terminal::{
         tmux::commands::TmuxCommand,
     },
 
+};
 /// Set of events sent by command executors.
 pub enum ExecutorCommandEvent {
     /// The command should be executed.

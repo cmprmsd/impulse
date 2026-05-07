@@ -3,16 +3,16 @@ use super::{
         MatchData, PageType, SettingsPageEvent, SettingsPageMeta, SettingsPageViewHandle,
         SettingsWidget,
     },
+};
 use crate::{
     appearance::Appearance, channel::ChannelState, themes::theme::ColorScheme,
+};
 use warpui::{
     assets::asset_cache::AssetSource,
     elements::{
         Align, CacheOption, ConstrainedBox, Container, CrossAxisAlignment, Element, Flex, Image,
         MainAxisAlignment, MouseStateHandle, ParentElement, Wrap,
     },
-    ui_components::components::UiComponent,
-    AppContext, Entity, View, ViewContext, ViewHandle,
 };
 
 pub struct AboutPageView {

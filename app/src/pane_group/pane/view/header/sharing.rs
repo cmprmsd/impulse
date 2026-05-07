@@ -19,6 +19,7 @@ use crate::{
         dialog::{SharingDialog, SharingDialogEvent},
         ContentEditability, ShareableObject,
     },
+};
 
 use super::{Event, OpenOverlay, PaneHeader, PaneHeaderAction};
 

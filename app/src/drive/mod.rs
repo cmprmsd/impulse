@@ -10,7 +10,6 @@ pub(crate) mod index;
 pub mod items;
 pub mod panel;
 pub mod settings;
-pub mod sharing;
 pub mod workflows;
 
 use std::{cmp::Ordering, fmt};
@@ -26,6 +25,7 @@ use crate::{
         model::view::{CloudViewModel, UpdateTimestamp},
         CloudObject, GenericStringObjectFormat, ObjectIdType, ObjectType,
     },
+};
 
 type SortByComparator<'a> = dyn FnMut(&&dyn CloudObject, &&dyn CloudObject) -> Ordering + 'a;
 

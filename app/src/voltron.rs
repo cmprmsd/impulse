@@ -17,6 +17,7 @@ use crate::appearance::Appearance;
 use crate::editor::EditorView;
 use crate::editor::{
     Event as EditorEvent, PlainTextEditorViewAction, PropagateAndNoOpNavigationKeys,
+};
 use crate::menu::{Event as MenuEvent, Menu, MenuItem, MenuItemFields};
 use crate::terminal::input::MenuPositioning;
 use crate::terminal::resizable_data::{ModalType, ResizableData, DEFAULT_VOLTRON_WIDTH};
@@ -40,6 +41,7 @@ use warpui::ui_components::button::{ButtonVariant, TextAndIcon, TextAndIconAlign
 use warpui::ui_components::components::UiComponent;
 use warpui::{
     AppContext, Entity, FocusContext, SingletonEntity, TypedActionView, View, ViewContext,
+};
 
 const DROPDOWN_BUTTON_WIDTH: f32 = 200.;
 const DROPDOWN_PADDING: f32 = 6.;

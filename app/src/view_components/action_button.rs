@@ -14,12 +14,6 @@ use warpui::{
         Hoverable, MouseStateHandle, OffsetPositioning, Padding, ParentAnchor, ParentElement as _,
         ParentOffsetBounds, Radius, Stack, Text, DEFAULT_UI_LINE_HEIGHT_RATIO,
     },
-    fonts::{Properties, Weight},
-    keymap::Keystroke,
-    platform::Cursor,
-    ui_components::components::{Coords, UiComponent, UiComponentStyles},
-    AppContext, BlurContext, Element, Entity, EventContext, FocusContext, SingletonEntity as _,
-    TypedActionView, View, ViewContext,
 };
 
 use crate::{

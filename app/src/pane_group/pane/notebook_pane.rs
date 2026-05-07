@@ -13,11 +13,13 @@ use crate::{
         manager::{NotebookManager, NotebookSource},
         notebook::{NotebookEvent, NotebookView},
     },
+};
 
 use super::{
     super::{DefaultSessionModeBehavior, Direction},
     view::PaneView,
     DetachType, PaneConfiguration, PaneContent, PaneGroup, PaneId, ShareableLink,
+};
 
 pub struct NotebookPane {
     view: ViewHandle<PaneView<NotebookView>>,

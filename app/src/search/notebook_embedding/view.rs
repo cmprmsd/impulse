@@ -18,10 +18,6 @@ use warpui::{
         Radius, SavePosition, ScrollStateHandle, Scrollable, ScrollableElement, Shrinkable,
         UniformList, UniformListState,
     },
-    presenter::ChildView,
-    ui_components::components::{UiComponent, UiComponentStyles},
-    AppContext, Element, Entity, FocusContext, ModelHandle, SingletonEntity, TypedActionView, View,
-    ViewContext, ViewHandle, WeakViewHandle,
 };
 
 use super::searcher::{EmbeddingSearchItemAction, EmbeddingSearchMixer};

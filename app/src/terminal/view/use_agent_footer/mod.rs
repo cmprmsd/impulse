@@ -48,9 +48,6 @@ use warpui::{
         ChildView, Container, CrossAxisAlignment, Empty, Expanded, Flex, MainAxisSize,
         ParentElement,
     },
-    keymap::Keystroke,
-    AppContext, Element, Entity, EntityId, ModelHandle, SingletonEntity, TypedActionView, View,
-    ViewContext, ViewHandle,
 };
 
 use crate::{

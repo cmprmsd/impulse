@@ -1,8 +1,6 @@
 use super::env_var_collection_search_item::EnvVarCollectionSearchItem;
 use super::notebook_search_item::NotebookSearchItem;
 use super::workflow_search_item::WorkflowSearchItem;
-    CloudObject, CloudObjectLocation, GenericStringObjectFormat, JsonObjectType, ObjectType,
-};
 use crate::drive::folders::CloudFolder;
 use crate::env_vars::CloudEnvVarCollection;
 use crate::notebooks::CloudNotebook;
@@ -538,8 +536,6 @@ impl WarpDriveSearcher for FuzzyWarpDriveSearcher {
 mod full_text_searcher {
     use std::sync::Arc;
 
-        CloudObject, CloudObjectLocation, GenericStringObjectFormat, JsonObjectType, ObjectType,
-    };
     use crate::define_search_schema;
     use crate::drive::folders::CloudFolder;
     use crate::env_vars::CloudEnvVarCollection;

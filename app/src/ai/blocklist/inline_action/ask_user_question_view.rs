@@ -15,9 +15,6 @@ use warpui::{
     },
     keymap::{FixedBinding, Keystroke},
     r#async::{SpawnedFutureHandle, Timer},
-    units::Pixels,
-    AppContext, Element, Entity, FocusContext, ModelHandle, SingletonEntity, TypedActionView, View,
-    ViewContext, ViewHandle,
 };
 
 use crate::{
@@ -56,7 +53,6 @@ use crate::{
         action_button::{ButtonSize, KeystrokeSource, NakedTheme, PrimaryTheme},
         compactible_action_button::CompactibleActionButton,
     },
-    Appearance,
 };
 
 const ASK_USER_QUESTION_ACTIVE: &str = "AskUserQuestionActive";

@@ -10,8 +10,6 @@ use crate::{
         },
         ids::{ClientId, SyncId},
     },
-    workflows::{workflow_view::WorkflowView, WorkflowViewMode},
-    PaneViewLocator, WindowId,
 };
 use std::collections::{hash_map::Entry, HashMap};
 use warpui::{Entity, EntityId, ModelContext, SingletonEntity};

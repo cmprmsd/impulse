@@ -1,6 +1,4 @@
 use super::*;
-    AmbientAgentEnvironment, CloudAmbientAgentEnvironmentModel, GithubRepo,
-};
 use crate::network::NetworkStatus;
 use crate::root_view::CreateEnvironmentArg;
 use crate::settings::PrivacySettings;

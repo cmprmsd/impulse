@@ -7,6 +7,7 @@ use crate::terminal::{
         session::SessionInfo,
         test_utils::TestBlockListBuilder,
     },
+};
 
 use super::TypeaheadMode;
 

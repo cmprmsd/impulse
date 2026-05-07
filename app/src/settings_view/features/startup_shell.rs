@@ -16,6 +16,7 @@ use crate::{
         session_settings::{SessionSettings, SessionSettingsChangedEvent},
     },
 
+};
 /// A view for configuring the initial shell for new sessions. This can be the
 /// user's login shell, the default installed version of zsh, bash, or fish,
 /// or an arbitrary user-provided path.

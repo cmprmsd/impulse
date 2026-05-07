@@ -6,6 +6,7 @@ use markdown_parser::{
 use warpui::elements::{
     Align, ChildView, ConstrainedBox, Container, CornerRadius, CrossAxisAlignment, Empty, Flex,
     FormattedTextElement, MainAxisAlignment, MainAxisSize, MouseStateHandle, ParentElement, Radius,
+};
 use warpui::fonts::{Properties, Weight};
 use warpui::geometry::vector::Vector2F;
 use warpui::keymap::{FixedBinding, Keystroke};
@@ -14,6 +15,7 @@ use warpui::platform::Cursor;
 use warpui::ui_components::components::UiComponent;
 use warpui::{
     AppContext, Element, Entity, EventContext, SingletonEntity, TypedActionView, View, ViewContext,
+};
 
 use pathfinder_color::ColorU;
 use warp_core::ui::theme::{phenomenon::PhenomenonStyle, Fill};

@@ -16,6 +16,7 @@ use super::{
 use crate::appearance::Appearance;
 use crate::input_suggestions::{
     DETAILS_PANEL_MARGIN, DETAILS_PANEL_PADDING, HISTORY_DETAILS_PANEL_WIDTH,
+};
 use crate::themes::theme::WarpTheme;
 use warpui::elements::{
     Align, Border, ConstrainedBox, Container, CornerRadius, CrossAxisAlignment, DragBarSide,

@@ -4,6 +4,7 @@ use warpui::{
     presenter::ChildView,
     windowing::{StateEvent, WindowManager},
     AppContext, Element, Entity, FocusContext, SingletonEntity, TypedActionView, View, ViewContext,
+};
 
 use crate::{
     ai::{document::ai_document_model::AIDocumentId, facts::CloudAIFactModel},
@@ -18,6 +19,7 @@ use crate::{
         ids::{ClientId, ServerId, SyncId},
         telemetry::SharingDialogSource,
     },
+};
 
 use super::{
     drive_helpers::{
@@ -25,9 +27,6 @@ use super::{
         has_feature_gated_anonymous_user_reached_notebook_limit,
         has_feature_gated_anonymous_user_reached_workflow_limit,
     },
-    index::{DriveIndex, DriveIndexAction, DriveIndexEvent},
-    items::WarpDriveItemId,
-    CloudObjectTypeAndId, DriveObjectType,
 };
 
 pub const MIN_SIDEBAR_WIDTH: f32 = 250.;

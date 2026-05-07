@@ -1,6 +1,7 @@
 use crate::ai::mcp::file_based_manager::FileBasedMCPManagerEvent;
 use crate::ai::mcp::templatable_manager::oauth::{
     load_credentials_from_secure_storage, write_to_secure_storage, FILE_BASED_MCP_CREDENTIALS_KEY,
+};
 use crate::ai::mcp::FileBasedMCPManager;
 use core::fmt;
 use itertools::Itertools;
@@ -13,11 +14,10 @@ use crate::ai::mcp::templatable::GalleryData;
 use crate::ai::mcp::templatable_manager::FigmaMcpStatus;
 use crate::ai::mcp::{
     Author, CloudMCPServer, JsonTemplate, MCPGalleryManager, MCPServerUpdate,
+};
 
 use crate::ai::mcp::parsing::resolve_json;
 use crate::ai::mcp::TemplatableMCPServer;
-    MCPServerModel, MCPServerTelemetryTransportType, MCPTemplateCreationSource,
-};
 use crate::{
     ai::mcp::{
         logs, templatable::CloudTemplatableMCPServer, templatable_installation::VariableValue,
@@ -30,6 +30,7 @@ use crate::{
     server::{
         cloud_objects::update_manager::UpdateManager, ids::SyncId, telemetry::TelemetryEvent,
     },
+};
 use async_compat::CompatExt as _;
 use cfg_if::cfg_if;
 use futures::FutureExt as _;
@@ -47,9 +48,8 @@ use warpui::{windowing::WindowManager, ModelContext, SingletonEntity};
 use super::{
     oauth::{self, AuthContext, FileBasedPersistedCredentialsMap, PersistedCredentialsMap},
     MCPServerState, SpawnedServerInfo, TemplatableMCPServerInfo, TemplatableMCPServerManager,
-    TemplatableMCPServerManagerEvent,
-};
 
+};
 /// Controls the behavior of `spawn_server_impl`.
 enum SpawnMode {
     /// Initial spawn - clears logs and sends telemetry.

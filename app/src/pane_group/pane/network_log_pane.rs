@@ -5,7 +5,6 @@ use crate::workspace::PaneViewLocator;
 
 use super::{
     view::PaneView, DetachType, PaneConfiguration, PaneContent, PaneGroup, PaneId, ShareableLink,
-    ShareableLinkError,
 };
 
 pub struct NetworkLogPane {

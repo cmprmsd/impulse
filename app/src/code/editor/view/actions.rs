@@ -10,6 +10,7 @@ use crate::{
     cmd_or_ctrl_shift, code_review::comments::CommentId,
     code_review::telemetry_event::CodeReviewTelemetryEvent, editor::InteractionState,
     features::FeatureFlag, notebooks::editor::model::word_unit, send_telemetry_from_ctx,
+};
 use lazy_static::lazy_static;
 use rangemap::RangeSet;
 use std::collections::{HashMap, HashSet};
@@ -24,6 +25,7 @@ use warp_editor::{
         element::RichTextAction,
         model::{ExpansionType, LineCount, Location},
     },
+};
 use warp_util::user_input::UserInput;
 use warpui::{
     actions::StandardAction,

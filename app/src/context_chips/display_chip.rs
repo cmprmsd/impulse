@@ -40,9 +40,6 @@ use warpui::{
         CrossAxisAlignment, Flex, Hoverable, MouseStateHandle, OffsetPositioning, ParentAnchor,
         ParentElement, ParentOffsetBounds, Radius, Stack, Text, DEFAULT_UI_LINE_HEIGHT_RATIO,
     },
-    fonts::{Cache, FamilyId, Properties, Weight},
-    AppContext, Element, Entity, EntityId, Gradient, ModelHandle, SingletonEntity, TypedActionView,
-    View, ViewContext, ViewHandle,
 };
 
 use crate::appearance::Appearance;
@@ -55,7 +52,6 @@ use super::{
     display_menu::{
         ChipMenuType, DisplayChipMenu, FixedFooter, GenericMenuItem, PromptDisplayMenuEvent,
     },
-    github_pr_display_text_from_url, render_text_from_kind, ChipResult, ContextChipKind,
 };
 use crate::workspace::view::TOGGLE_RIGHT_PANEL_BINDING_NAME;
 

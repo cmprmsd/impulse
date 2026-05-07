@@ -47,9 +47,6 @@ use crate::{
         view::Event,
         TerminalManager, TerminalView,
     },
-    view_components::ToastFlavor,
-    workspace::{sync_inputs::SyncedInputState, PaneViewLocator},
-    AIExecutionProfilesModel,
 };
 
 #[cfg(feature = "local_fs")]

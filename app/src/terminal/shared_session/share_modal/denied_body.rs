@@ -4,7 +4,6 @@ use warpui::ui_components::button::ButtonVariant;
 use warpui::ui_components::components::UiComponent;
 use warpui::{
     platform::Cursor, AppContext, Element, Entity, SingletonEntity, TypedActionView, View,
-    ViewContext,
 };
 
 use super::style::{self, MODAL_PADDING};

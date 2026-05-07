@@ -5,6 +5,7 @@ use crate::{appearance::Appearance, terminal::view::TerminalAction};
 use super::{
     render_inline_block_list_banner, InlineBannerButtonState, InlineBannerCloseButton,
     InlineBannerContent, InlineBannerIcon, InlineBannerStyle, InlineBannerTextButton,
+};
 
 pub struct AwsBedrockLoginBannerState {
     pub id: usize,

@@ -9,7 +9,6 @@ use warpui::{
         button::{ButtonTooltipPosition, ButtonVariant},
         components::{UiComponent, UiComponentStyles},
     },
-    AppContext, Element, SingletonEntity,
 };
 
 use crate::{

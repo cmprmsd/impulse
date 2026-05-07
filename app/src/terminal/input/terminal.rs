@@ -4,7 +4,6 @@ use super::{
         add_workflow_info_overlay, should_show_terminal_input_message_bar,
         wrap_input_with_terminal_padding_and_focus_handler,
     },
-    Input, InputAction, InputDropTargetData,
 };
 
 use crate::{
@@ -23,8 +22,6 @@ use warpui::{
         Border, Clipped, Container, DropTarget, Element, Flex, Hoverable, ParentElement,
         SavePosition, Stack,
     },
-    presenter::ChildView,
-    AppContext, SingletonEntity,
 };
 
 impl Input {

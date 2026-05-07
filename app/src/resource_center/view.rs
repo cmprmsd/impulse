@@ -12,9 +12,6 @@ use warpui::{
         button::ButtonVariant,
         components::{Coords, UiComponent, UiComponentStyles},
     },
-    windowing::{StateEvent, WindowManager},
-    AppContext, Entity, EntityId, FocusContext, ModelHandle, SingletonEntity, TypedActionView,
-    View, ViewContext, ViewHandle, WindowId,
 };
 
 use super::{
@@ -23,7 +20,6 @@ use super::{
         FOOTER_ICON_SIZE, HEADER_FONT_SIZE, ICON_PADDING, KEYBOARD_ICON_SIZE, SCROLLBAR_OFFSET,
         SECTION_SPACING,
     },
-    KeybindingsView, ResourceCenterMainEvent, ResourceCenterMainView, TipsCompleted,
 };
 use crate::ui_components::{buttons::icon_button, window_focus_dimming::WindowFocusDimming};
 use crate::{

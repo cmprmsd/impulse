@@ -19,10 +19,6 @@ use warpui::{
         MouseStateHandle, OffsetPositioning, ParentAnchor, ParentElement, ParentOffsetBounds,
         Radius, ScrollbarWidth, Shrinkable, Stack, Text,
     },
-    keymap::FixedBinding,
-    platform::Cursor,
-    prelude::Align,
-    AppContext, Element, Entity, SingletonEntity, TypedActionView, View, ViewContext, ViewHandle,
 };
 
 use crate::search::result_renderer::ItemHighlightState;

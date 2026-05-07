@@ -11,7 +11,6 @@ use warpui::{
     elements::{
         ClippedScrollStateHandle, Container, Element, Flex, MouseStateHandle, ParentElement, Text,
     },
-    SingletonEntity, ViewContext,
 };
 
 use crate::{
@@ -30,6 +29,7 @@ use crate::{
         create_pr, get_branch_commit_messages, get_branch_diff_entries, get_diff_for_pr,
         FileChangeEntry, PrInfo,
     },
+};
 use warp_core::send_telemetry_from_ctx;
 
 /// PR-mode sub-actions, dispatched wrapped in `GitDialogAction::Pr`.

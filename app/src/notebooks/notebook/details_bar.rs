@@ -6,9 +6,6 @@ use warpui::{
         Container, CrossAxisAlignment, Flex, Highlight, MainAxisAlignment, MainAxisSize,
         MouseStateHandle, ParentElement, Shrinkable,
     },
-    platform::Cursor,
-    ui_components::components::{UiComponent, UiComponentStyles},
-    AppContext, Element, SingletonEntity,
 };
 
 use crate::{
@@ -24,6 +21,7 @@ use crate::{
         buttons::{accent_icon_button, icon_button},
         icons::Icon,
     },
+};
 
 use super::{super::active_notebook_data::ActiveNotebookData, NotebookAction, EDIT_BUTTON_MARGIN};
 

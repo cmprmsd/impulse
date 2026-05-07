@@ -10,11 +10,6 @@ use warpui::{
         Align, ConstrainedBox, Container, CrossAxisAlignment, Element, Flex, Hoverable, Icon,
         MouseState, MouseStateHandle, ParentElement, Shrinkable,
     },
-    fonts::Weight,
-    platform::Cursor,
-    ui_components::components::{UiComponent, UiComponentStyles},
-    Action, AppContext, Entity, EntityId, ModelHandle, SingletonEntity, TypedActionView, View,
-    ViewContext, WindowId,
 };
 
 use crate::resource_center::{

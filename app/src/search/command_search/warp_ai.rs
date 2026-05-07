@@ -18,6 +18,7 @@ use crate::{
         result_renderer::ItemHighlightState,
         workflows::fuzzy_match::FuzzyMatchWorkflowResult,
     },
+};
 
 use async_trait::async_trait;
 use itertools::Itertools;

@@ -38,12 +38,6 @@ use warpui::{
         Flex, MainAxisSize, OffsetPositioning, ParentAnchor, ParentElement, ParentOffsetBounds,
         Point, Radius, ScrollData, Stack, Text, ZIndex,
     },
-    event::DispatchedEvent,
-    fonts::FamilyId,
-    ui_components::components::UiComponent,
-    units::{IntoPixels, Pixels},
-    AfterLayoutContext, AppContext, ClipBounds, Element, Event, EventContext, LayoutContext,
-    ModelHandle, PaintContext, SingletonEntity, SizeConstraint,
 };
 
 use super::diff::{DiffHunkDisplay, DiffStatus};
@@ -54,7 +48,6 @@ use crate::{
         line::EditorLineLocation,
         view::{CodeEditorViewAction, SavedComment},
     },
-    view_components::action_button::{ActionButtonTheme, SecondaryTheme},
 };
 use warp_core::features::FeatureFlag;
 use warpui::elements::{Hoverable, MouseStateHandle};

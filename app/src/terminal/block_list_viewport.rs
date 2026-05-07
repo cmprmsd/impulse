@@ -31,10 +31,8 @@ use super::{
         selection::SelectionPoint,
         terminal_model::{BlockIndex, BlockSortDirection, WithinBlock},
     },
-    view::BlockVisibilityMode,
-    SizeInfo, HEIGHT_FUDGE_FACTOR_LINES,
-};
 
+};
 /// Wraps a scroll position for the purposes of centralizing update logic.
 pub struct ScrollState {
     position: ScrollPosition,

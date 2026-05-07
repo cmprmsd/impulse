@@ -7,7 +7,6 @@ use rmcp::transport::{
         AuthClient, AuthorizationManager, CredentialStore, InMemoryCredentialStore,
         OAuthClientConfig, OAuthState, OAuthTokenResponse, StoredCredentials,
     },
-    AuthError, AuthorizationSession,
 };
 use serde::de::DeserializeOwned;
 use serde::{Deserialize, Serialize};

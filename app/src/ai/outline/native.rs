@@ -24,6 +24,7 @@ use crate::{
         AISettings, AISettingsChangedEvent, CodeSettings, CodeSettingsChangedEvent, InputSettings,
         InputSettingsChangedEvent,
     },
+};
 
 use super::OutlineStatus;
 

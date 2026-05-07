@@ -8,7 +8,6 @@ use warpui::{
         Container, CornerRadius, CrossAxisAlignment, Element, Flex, FormattedTextElement,
         MainAxisAlignment, ParentElement, Radius, SelectableArea, SelectionHandle, Shrinkable,
     },
-    AppContext, Entity, ModelHandle, SingletonEntity, TypedActionView, View, ViewContext,
 };
 
 use super::search_results_common::{

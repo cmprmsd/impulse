@@ -12,11 +12,6 @@ use warpui::{
         Expanded, Flex, Hoverable, MouseStateHandle, OffsetPositioning, ParentAnchor,
         ParentElement as _, ParentOffsetBounds, Radius, Stack,
     },
-    fonts::Weight,
-    keymap::EditableBinding,
-    platform::{file_picker::FilePickerError, Cursor, FilePickerConfiguration},
-    ui_components::components::{UiComponent as _, UiComponentStyles},
-    AppContext, Element, Entity, SingletonEntity as _, TypedActionView, View, ViewContext,
 };
 
 use crate::util::bindings::{keybinding_name_to_display_string, BindingGroup, CustomAction};

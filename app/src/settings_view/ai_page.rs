@@ -25,6 +25,7 @@ use crate::settings::{
     SharedBlockTitleGenerationEnabled, ShouldRenderCLIAgentToolbar,
     ShouldRenderUseAgentToolbarForUserCommands, ShouldShowOzUpdatesInZeroState, ShowAgentTips,
     ShowConversationHistory, ShowHintText, ThinkingDisplayMode, VoiceInputEnabled,
+};
 use crate::terminal::session_settings::{SessionSettings, SessionSettingsChangedEvent};
 use crate::terminal::CLIAgent;
 use crate::view_components::{
@@ -58,8 +59,6 @@ use warpui::{
         components::{Coords, UiComponent, UiComponentStyles},
         switch::{SwitchStateHandle, TooltipConfig},
     },
-    Action, AppContext, Element, Entity, SingletonEntity, TypedActionView, View, ViewContext,
-    ViewHandle,
 };
 
 use super::execution_profile_view::{ExecutionProfileView, ExecutionProfileViewEvent};
@@ -73,10 +72,8 @@ use super::{
         LocalOnlyIconState, MatchData, PageType, SettingsPageMeta, SettingsPageViewHandle,
         SettingsWidget, ToggleState, HEADER_PADDING, TOGGLE_BUTTON_RIGHT_PADDING,
     },
-    SettingActionPairContexts, SettingActionPairDescriptions, SettingsAction, SettingsSection,
-    ToggleSettingActionPair,
-};
 
+};
 /// Identifies which subpage of the AI settings the user is viewing.
 /// When `None`, the page shows all widgets (legacy/full view).
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -105,9 +102,6 @@ impl AISubpage {
 }
 use crate::ai::{AIRequestUsageModel, AIRequestUsageModelEvent};
 use crate::menu::{MenuItem, MenuItemFields};
-    AgentModeAutoDetectionSettingOrigin, AutonomySettingToggleSource,
-    ToggleCodeSuggestionsSettingSource,
-};
 use crate::ui_components::icons::Icon;
 use crate::view_components::dropdown::DropdownAction;
 use crate::{

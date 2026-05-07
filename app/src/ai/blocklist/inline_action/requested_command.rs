@@ -18,9 +18,6 @@ use warpui::{
         Flex, MainAxisSize, MouseStateHandle, OffsetPositioning, ParentElement, Radius,
         SelectableArea, SelectionHandle, Stack, Text,
     },
-    keymap::{Context, EditableBinding, FixedBinding, Keystroke},
-    AppContext, Element, Entity, ModelHandle, SingletonEntity, TypedActionView, UpdateView, View,
-    ViewContext, ViewHandle,
 };
 
 use crate::ai::agent::{AIAgentActionResult, AIAgentActionType};

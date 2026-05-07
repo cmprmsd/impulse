@@ -1,6 +1,5 @@
 use warpui::{
     elements::{MouseStateHandle, Text},
-    Element,
 };
 
 use crate::appearance::Appearance;

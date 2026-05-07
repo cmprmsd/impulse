@@ -31,6 +31,8 @@ impl GridStorage {
         let lines = if finished {
             lines.min(self.cursor.point.row.0 + 1)
         } else {
+            lines
+        };
 
         match self.rows.cmp(&lines) {
             Ordering::Less => self.grow_lines(lines),

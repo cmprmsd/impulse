@@ -11,7 +11,6 @@ use warpui::{
         ConstrainedBox, Container, CornerRadius, CrossAxisAlignment, Flex, MainAxisAlignment,
         MainAxisSize, ParentElement, Radius, Text,
     },
-    AppContext, Element, SingletonEntity, ViewHandle,
 };
 
 use crate::ai::agent::conversation::AIConversationId;

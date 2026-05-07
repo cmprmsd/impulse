@@ -24,6 +24,7 @@ use crate::{
         CLIAgentInputState, CLIAgentSession, CLIAgentSessionContext, CLIAgentSessionStatus,
         CLIAgentSessionsModel,
     },
+};
 
 use super::super::{AIBlockMetadata, RichContentMetadata, RichContentType};
 use super::*;

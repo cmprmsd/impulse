@@ -13,7 +13,6 @@ use crate::terminal::{
         index::Point,
         terminal_model::{BlockIndex, BlockSortDirection},
     },
-    GridType, TerminalModel,
 };
 
 use super::{BlockListFindRun, BlockListMatch};

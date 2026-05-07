@@ -8,14 +8,6 @@ use crate::{
         drive_helpers::has_feature_gated_anonymous_user_reached_env_var_limit,
         export::ExportManager, CloudObjectTypeAndId,
     },
-    env_vars::active_env_var_collection_data::TrashStatus,
-    external_secrets::SecretManager,
-    menu::{Event as MenuEvent, Menu, MenuItem, MenuItemFields},
-    pane_group::PaneEvent,
-    server::cloud_objects::update_manager::UpdateManager,
-    ui_components::icons::Icon,
-    util::bindings::{keybinding_name_to_display_string, trigger_to_keystroke, CustomAction},
-    AppContext, CloudModel, FeatureFlag,
 };
 
 use super::env_var_collection::{EnvVarCollectionAction, EnvVarCollectionView, VariableRowIndex};

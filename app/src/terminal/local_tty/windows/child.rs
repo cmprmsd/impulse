@@ -3,6 +3,7 @@ use std::ffi::c_void;
 use windows::Win32::Foundation::HANDLE;
 use windows::Win32::System::Threading::{
     RegisterWaitForSingleObject, UnregisterWait, INFINITE, WT_EXECUTEINWAITTHREAD,
+};
 
 use mio::{event::Source, Interest, Registry, Token};
 

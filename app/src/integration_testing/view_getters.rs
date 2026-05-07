@@ -17,6 +17,7 @@ use crate::{
         command_palette::{self},
         command_search::view::CommandSearchView,
     },
+};
 use warpui::Entity;
 use warpui::{async_assert, integration::AssertionCallback, App, View, ViewHandle, WindowId};
 

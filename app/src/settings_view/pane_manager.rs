@@ -1,7 +1,6 @@
 use crate::pane_group::SettingsPane;
 use crate::{
     pane_group::{PaneContent, PaneId},
-    PaneViewLocator,
 };
 use std::collections::HashMap;
 use warpui::{Entity, EntityId, ModelContext, SingletonEntity, ViewHandle, WindowId};

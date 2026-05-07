@@ -8,11 +8,6 @@ use warpui::{
         CrossAxisAlignment, Dismiss, Element, Flex, MouseStateHandle, OffsetPositioning,
         ParentAnchor, ParentElement, ParentOffsetBounds, Radius, Shrinkable, Stack, Text,
     },
-    fonts::{Properties, Weight},
-    keymap::FixedBinding,
-    ui_components::components::{Coords, UiComponent, UiComponentStyles},
-    AppContext, Entity, FocusContext, ModelHandle, SingletonEntity, TypedActionView, View,
-    ViewContext, ViewHandle,
 };
 
 pub const MODAL_CORNER_RADIUS: Radius = Radius::Pixels(8.);

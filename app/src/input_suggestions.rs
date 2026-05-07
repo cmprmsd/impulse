@@ -30,8 +30,6 @@ use warpui::{
         SizeConstraintCondition, SizeConstraintSwitch, Stack, Text, UniformList, UniformListState,
         XAxisAnchor, YAxisAnchor,
     },
-    fonts::{Cache, Properties, Weight},
-    AppContext, Entity, SingletonEntity, TypedActionView, View, ViewContext, WeakViewHandle,
 };
 
 use crate::appearance::Appearance;

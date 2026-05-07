@@ -21,6 +21,7 @@ use crate::{
         render_warning_box, SubmittableTextInput, SubmittableTextInputEvent,
         WarningBoxButtonConfig, WarningBoxConfig,
     },
+};
 use instant::{Duration, Instant};
 use log::debug;
 #[cfg(not(target_family = "wasm"))]
@@ -38,13 +39,7 @@ use warpui::{
         ScrollToPositionMode, ScrollbarWidth, SizeConstraintCondition, SizeConstraintSwitch, Stack,
         Text,
     },
-    fonts::{Properties, Weight},
-    geometry::vector::vec2f,
-    keymap::FixedBinding,
-    platform::Cursor,
-    prelude::Coords,
-    ui_components::components::{UiComponent, UiComponentStyles},
-    AppContext, Entity, FocusContext, SingletonEntity, TypedActionView, View, ViewContext,
+};
 
 const SUBMIT_BUTTON_FOCUSED: &str = "SubmitButtonFocused";
 

@@ -3,6 +3,7 @@ use warpui::{async_assert, integration::TestStep, SingletonEntity};
 use crate::{
     integration_testing::view_getters::workspace_view, undo_close::UndoCloseStack,
 
+};
 /// Mock pressing a button on the Warp-native quit modal. Note that this modal is currently only
 /// used on Linux, not macOS.
 pub fn press_native_modal_button(button_index: usize) -> TestStep {

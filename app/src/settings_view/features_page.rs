@@ -12,6 +12,7 @@ use warpui::{elements::DispatchEventResult, platform::Cursor};
 #[cfg(any(target_os = "linux", target_os = "freebsd"))]
 use {
     crate::settings::ForceX11, crate::settings::LinuxAppConfiguration,
+};
 
 use super::keybindings::KeyBindingModifyingState;
 #[cfg(feature = "local_tty")]
@@ -19,6 +20,7 @@ use super::settings_page::render_sub_sub_header;
 use super::settings_page::{
     add_setting, build_reset_button, render_body_item_label, render_dropdown_item_label,
     render_local_only_icon, Category, LocalOnlyIconState, MatchData, PageType, SettingsWidget,
+};
 use super::settings_page::{
     render_body_item, render_dropdown_item, AdditionalInfo, SettingsPageMeta,
     SettingsPageViewHandle, ToggleState, CONTENT_FONT_SIZE, HEADER_PADDING,
@@ -28,12 +30,14 @@ use super::{flags, DisplayCount};
 use super::{SettingsSection, ToggleSettingActionPair};
 use crate::editor::{
     Event as EditorEvent, SingleLineEditorOptions, TextOptions,
+};
 use crate::search::command_search::settings::{
     CommandSearchSettings, ShowGlobalWorkflowsInUniversalSearch,
 };
 use crate::settings::ai::AISettings;
 use crate::settings::{
     AISettingsChangedEvent, ScrollSettingsChangedEvent, ShowChangelogAfterUpdate,
+};
 use crate::settings::{
     AliasExpansionEnabled, AliasExpansionSettings, AppEditorSettings, AtContextMenuInTerminalMode,
     AutocompleteSymbols, AutosuggestionKeybindingHint, ChangelogSettings, CloudPreferencesSettings,
@@ -45,6 +49,7 @@ use crate::settings::{
     QuakeModeSettings, ScrollSettings, SelectionSettings, ShowAutosuggestionIgnoreButton,
     ShowTerminalInputMessageBar, SshSettings, SyntaxHighlighting, TabBehavior, VimModeEnabled,
     VimStatusBar, VimUnnamedSystemClipboard, DEFAULT_QUAKE_MODE_SIZE_PERCENTAGES,
+};
 use crate::terminal::alt_screen_reporting::{
     AltScreenReporting, FocusReportingEnabled, MouseReportingEnabled, ScrollReportingEnabled,
 };

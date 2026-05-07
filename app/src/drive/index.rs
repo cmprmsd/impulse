@@ -48,7 +48,6 @@ use crate::{
     workspaces::{
         update_manager::TeamUpdateManager, user_workspaces::UserWorkspaces, workspace::WorkspaceUid,
     },
-    ObjectActions,
 };
 
 use super::{
@@ -71,7 +70,6 @@ use super::{
         dialog::{SharingDialog, SharingDialogEvent},
         ContentEditability, ShareableObject,
     },
-    CloudObjectTypeAndId, DriveObjectType, DriveSortOrder,
 };
 use crate::drive::panel::DrivePanelAction;
 use futures::Future;

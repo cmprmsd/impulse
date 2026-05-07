@@ -1,13 +1,10 @@
 mod action;
-mod agent_view;
-pub mod ambient_agent;
 mod block_banner;
 pub mod block_onboarding;
 pub(crate) mod blocklist_filter;
 mod bookmarks;
 pub mod init;
 pub mod inline_banner;
-pub mod load_ai_conversation;
 use ai::agent::action::InsertReviewComment;
 pub use load_ai_conversation::ConversationRestorationInNewPaneType;
 // TODO(advait): if we align on prompt suggestions banner in Input, move code out of inline_banner mod.
@@ -19,6 +16,7 @@ use crate::ai::skills::SkillOpenOrigin;
 use crate::global_resource_handles::GlobalResourceHandlesProvider;
 pub use init_project::{
     InitActionResult, InitProjectModel, InitProjectModelEvent, InitStepBlock, InitStepKind,
+};
 use onboarding::callout::{FinalState, OnboardingCalloutViewEvent, OnboardingQuery};
 use onboarding::{OnboardingCalloutView, OnboardingKeybindings};
 pub(crate) mod docker_sandbox;
@@ -33,8 +31,6 @@ pub mod rich_content;
 mod shared_session;
 mod shell_terminated_banner;
 pub mod ssh_file_upload;
-pub(crate) mod ssh_remote_server_choice_view;
-pub(crate) mod ssh_remote_server_failed_banner;
 mod tab_metadata;
 #[cfg(any(test, feature = "integration_tests"))]
 mod testing;
@@ -52,7 +48,6 @@ use crate::ai::blocklist::agent_view::{
     AgentViewEntryBlockParams, AgentViewEntryOrigin, AgentViewHeaderDisabledTheme,
     AgentViewHeaderTheme, AgentViewZeroStateBlock, AgentViewZeroStateEvent, EphemeralMessageModel,
     ExitAgentViewError, ExitConfirmationTrigger, InlineAgentViewHeader, OrchestrationPillBar,
-    ENTER_OR_EXIT_CONFIRMATION_WINDOW,
 };
 use crate::ai::conversation_utils;
 use crate::ai::predict::prompt_suggestions::{
@@ -76,8 +71,6 @@ use super::cli_agent;
 use super::CLIAgent;
 #[cfg(feature = "local_fs")]
 use crate::ai::agent::{CurrentHead, DiffBase};
-    conversation_output_status_from_conversation, AmbientAgentTaskId, AmbientConversationStatus,
-};
 use crate::ai::blocklist::block::cli::{CLISubagentView, CLISubagentViewEvent};
 use crate::ai::blocklist::block::cli_controller::{
     CLISubagentController, CLISubagentEvent, UserTakeOverReason,
@@ -126,8 +119,6 @@ use crate::code_review::git_status_update::{
 };
 use crate::code_review::telemetry_event::CodeReviewPaneEntrypoint;
 use crate::projects::ProjectManagementModel;
-    RemoteServerInitPhase, RemoteServerManager, RemoteServerManagerEvent,
-};
 use crate::settings::ai::FocusedTerminalInfo;
 use crate::settings_view::mcp_servers_page::MCPServersSettingsPage;
 use crate::terminal::cli_agent_sessions::event::{
@@ -424,17 +415,6 @@ use crate::pane_group::{
 };
 use crate::resource_center::{
     mark_feature_used_and_write_to_user_defaults, Tip, TipHint, TipsCompleted,
-};
-    self, AgentModeAttachContextMethod, AgentModeEntrypoint, AgentModeRewindEntrypoint,
-    AnonymousUserSignupEntrypoint, InteractionSource, LinkOpenMethod, NotificationAgentVariant,
-    PaletteSource, PromptSuggestionViewType, SecretInteraction, SlowBootstrapInfo,
-    ToggleBlockFilterSource, WorkflowTelemetryMetadata,
-};
-    server_api::ServerApi,
-    telemetry::{
-        CommandCorrectionAcceptedType, CommandCorrectionEvent, NotificationsTurnedOnSource,
-        SaveAsWorkflowModalSource, TelemetryEvent,
-    },
 };
 use crate::session_management::{CommandContext, SessionNavigationPromptElements};
 use crate::settings::{PrivacySettings, PrivacySettingsChangedEvent, PrivacySettingsSnapshot};

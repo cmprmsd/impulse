@@ -7,6 +7,7 @@ use crate::{
     ai::{
         agent::redaction::redact_secrets, blocklist::block::secret_redaction::find_secrets_in_text,
     },
+};
 
 pub fn assert_secret_tooltip_open(open: bool) -> AssertionCallback {
     Box::new(move |app, window_id| {

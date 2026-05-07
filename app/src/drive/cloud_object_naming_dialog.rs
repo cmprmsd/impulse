@@ -10,7 +10,6 @@ use warpui::{
         button::ButtonVariant,
         components::{Coords, UiComponent, UiComponentStyles},
     },
-    AppContext, Element, ViewHandle,
 };
 
 use crate::{

@@ -4,7 +4,6 @@ use std::path::PathBuf;
 
 use super::{
     comment::ImportedCommentDetails, PendingImportedReviewComment,
-    PendingImportedReviewCommentTarget,
 };
 use crate::code_review::comments::diff_hunk_parser::parse_diff_hunk;
 

@@ -18,13 +18,6 @@ use crate::{
         editor::keys::NotebookKeybindings,
         link::{NotebookLinks, SessionSource},
     },
-    search::files::model::FileSearchModel,
-    server::server_api::{team::MockTeamClient, workspace::MockWorkspaceClient},
-    settings_view::keybindings::KeybindingChangedNotifier,
-    terminal::keys::TerminalKeybindings,
-    test_util::settings::initialize_settings_for_tests,
-    workspace::ActiveSession,
-    GlobalResourceHandles, GlobalResourceHandlesProvider, UserWorkspaces,
 };
 
 struct TestView {

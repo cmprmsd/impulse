@@ -5,9 +5,6 @@ use warpui::{
         ConstrainedBox, Container, CrossAxisAlignment, Flex, Highlight, Icon, MainAxisAlignment,
         MainAxisSize, ParentElement, Text,
     },
-    fonts::{Properties, Weight},
-    ui_components::components::{UiComponent, UiComponentStyles},
-    AppContext, Element, SingletonEntity,
 };
 
 use crate::{

@@ -8,6 +8,7 @@ use crate::terminal::{color, SizeInfo};
 use pathfinder_geometry::vector::{vec2f, Vector2F};
 use warpui::elements::{
     AfterLayoutContext, AppContext, Element, EventContext, LayoutContext, PaintContext, Point,
+};
 use warpui::event::DispatchedEvent;
 use warpui::geometry::rect::RectF;
 

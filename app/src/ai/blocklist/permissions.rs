@@ -11,6 +11,7 @@ use crate::{
             AIExecutionProfile, ActionPermission, AskUserQuestionPermission, WriteToPtyPermission,
         },
     },
+};
 use warp_core::execution_mode::AppExecutionMode;
 
 use crate::ai::mcp::mcp_provider_from_file_path;

@@ -13,7 +13,6 @@ use crate::{
     settings_view::keybindings::KeybindingChangedNotifier,
     test_util::settings::initialize_settings_for_tests,
     workflows::workflow::{Argument, Workflow},
-    UserWorkspaces,
 };
 
 fn initialize_app(app: &mut App) {

@@ -64,8 +64,6 @@ use super::{
         render_body_item, render_sub_header, SettingsPageMeta, SettingsPageViewHandle, ToggleState,
         HEADER_PADDING, TOGGLE_BUTTON_RIGHT_PADDING,
     },
-    settings_page::{LocalOnlyIconState, MatchData, PageType, SettingsWidget, PAGE_PADDING},
-    SettingsAction, SettingsSection, ToggleSettingActionPair,
 };
 
 use crate::modal::{Modal, ModalEvent, ModalViewState};

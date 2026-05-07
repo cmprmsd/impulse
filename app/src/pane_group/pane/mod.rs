@@ -8,7 +8,6 @@
 //! The [`PaneContent`] interface requires implementers to maintain a [`PaneId`] for their pane.
 //! The [`PaneId`] must be created via a [`PaneView<BackingView>`]. The [`PaneId`] is consequently
 //! used to render a [`PaneView`] which internally renders the pane, including the [`BackingView`].
-pub(super) mod ai_document_pane;
 pub(super) mod ai_fact_pane;
 pub(super) mod code_diff_pane;
 pub(super) mod code_diff_pane_model;
@@ -41,17 +40,6 @@ use crate::{
         ai_document_view::AIDocumentView, blocklist::inline_action::code_diff_view::CodeDiffView,
         facts::AIFactView,
     },
-    code::view::CodeView,
-    drive::sharing::ShareableObject,
-    env_vars::view::env_var_collection::EnvVarCollectionView,
-    menu::MenuItem,
-    notebooks::{file::FileNotebookView, notebook::NotebookView},
-    server::network_log_view::NetworkLogView,
-    server::telemetry::SharingDialogSource,
-    settings::PaneSettings,
-    settings_view::{environments_page::EnvironmentsPageView, SettingsView},
-    terminal::{available_shells::AvailableShell, TerminalView},
-    workflows::workflow_view::WorkflowView,
 };
 use serde::{Deserialize, Serialize};
 use url::Url;

@@ -22,6 +22,7 @@ use crate::{
         model::session::Session,
         view::inline_banner::{OpenInWarpBannerAction, OpenInWarpBannerState},
     },
+};
 use settings::Setting as _;
 use warp_completer::{
     completer::TopLevelCommandCaseSensitivity,
@@ -30,6 +31,7 @@ use warp_completer::{
         hir::{Command, Expression},
         simple::all_parsed_commands,
     },
+};
 
 use super::{Event, InlineBannerItem, InlineBannerType, TerminalView};
 

@@ -24,6 +24,7 @@ use warp_core::{
             Fill,
         },
     },
+};
 use warp_editor::{
     content::buffer::InitialBufferState, render::element::VerticalExpansionBehavior,
 };
@@ -41,11 +42,6 @@ use warpui::{
         Radius, SavePosition, ScrollTarget, ScrollToPositionMode, ScrollbarWidth, Shrinkable,
         SizeConstraintCondition, SizeConstraintSwitch, Stack, Text,
     },
-    keymap::{EditableBinding, FixedBinding, Keystroke},
-    platform::{Cursor, OperatingSystem},
-    ui_components::components::{Coords, UiComponent, UiComponentStyles},
-    AppContext, Element, Entity, FocusContext, ModelHandle, SingletonEntity, TypedActionView, View,
-    ViewContext, ViewHandle,
 };
 
 use super::malformed_line_heuristics::has_malformed_terminal_correction_signal;

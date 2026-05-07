@@ -27,7 +27,6 @@ use warpui::ui_components::text_input::TextInput;
 use warpui::ViewHandle;
 use warpui::{
     platform::Cursor, AppContext, Element, Entity, SingletonEntity, TypedActionView, View,
-    ViewContext,
 };
 
 const BUTTON_PADDING: f32 = 12.;

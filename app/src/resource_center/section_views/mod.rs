@@ -14,9 +14,6 @@ use warpui::{
         Align, Border, ConstrainedBox, Container, CrossAxisAlignment, Element, Flex, Hoverable,
         Icon, MouseStateHandle, ParentElement, ScrollbarWidth, Shrinkable,
     },
-    platform::Cursor,
-    ui_components::components::{UiComponent, UiComponentStyles},
-    AppContext, ViewContext, ViewHandle,
 };
 
 pub const HEADER_FONT_SIZE: f32 = 16.;

@@ -18,6 +18,7 @@ use std::{
         atomic::{AtomicBool, Ordering},
         Arc,
     },
+};
 
 use anyhow::Context as _;
 use command::blocking::Command;

@@ -21,8 +21,6 @@ use warpui::{
         FormattedTextElement, HighlightedHyperlink, Hoverable, MainAxisAlignment, MouseStateHandle,
         ParentElement, Text,
     },
-    platform::Cursor,
-    AppContext, Element, Entity, FocusContext, TypedActionView, View, ViewHandle,
 };
 use warpui::{SingletonEntity, ViewContext};
 
@@ -30,7 +28,6 @@ use crate::ai::mcp::{TemplatableMCPServer, TemplatableMCPServerManager, Template
 
 use crate::ui_components::{
     avatar::{Avatar, AvatarContent},
-    blended_colors,
 };
 use warpui::elements::{CornerRadius, Padding, Radius};
 

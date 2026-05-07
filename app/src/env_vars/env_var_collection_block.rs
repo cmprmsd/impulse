@@ -18,8 +18,7 @@ use warpui::{
         Flex, FormattedTextElement, MouseStateHandle, ParentElement, Radius, SavePosition,
         SelectableArea, SelectionHandle,
     },
-    keymap::{FixedBinding, Keystroke},
-    AppContext, Element, Entity, EntityId, FocusContext, SingletonEntity, TypedActionView, View,
+};
 
 use crate::{
     ai::blocklist::block::view_impl::{CONTENT_HORIZONTAL_PADDING, CONTENT_ITEM_VERTICAL_MARGIN},
@@ -35,6 +34,7 @@ use crate::{
         view::TerminalAction,
     },
 
+};
 /// The vertical padding applied to the env var collection block's content body.
 /// For horizontal padding, use [`INLINE_ACTION_HORIZONTAL_PADDING`] for consistency.
 const ENV_VAR_COLLECTION_BODY_VERTICAL_PADDING: f32 = 16.;

@@ -15,7 +15,7 @@ use warpui::{
         components::{UiComponent, UiComponentStyles},
         toggle_menu::{ToggleMenuItem, ToggleMenuStateHandle},
     },
-    AppContext, Element, Entity, FocusContext, SingletonEntity, TypedActionView, View, ViewContext,
+};
 
 use crate::{
     cloud_object::{model::persistence::CloudModel, Revision},
@@ -23,6 +23,7 @@ use crate::{
         EditorOptions, EditorView, Event, PropagateAndNoOpNavigationKeys, SingleLineEditorOptions,
         TextOptions,
     },
+};
 
 const CONTAINER_PADDING: f32 = 16.;
 const CORE_WIDTH: f32 = 400.;

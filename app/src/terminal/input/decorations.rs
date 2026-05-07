@@ -21,6 +21,7 @@ use super::Input;
 pub use warp_completer::{
     completer::SuggestionTypeName, util::parse_current_commands_and_tokens, ParsedTokenData,
 
+};
 /// Options to enable/disable command decoration and/or AI input background tasks spawned on input
 /// edits.
 #[derive(Default, Clone, Copy)]

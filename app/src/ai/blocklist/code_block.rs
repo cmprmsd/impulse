@@ -13,8 +13,6 @@ use warpui::{
         Border, ConstrainedBox, Container, CornerRadius, CrossAxisAlignment, Empty, Expanded, Flex,
         MainAxisAlignment, MainAxisSize, ParentElement, Radius, Shrinkable, Text,
     },
-    ui_components::components::UiComponent,
-    AppContext, Element, SingletonEntity,
 };
 use warpui::{EventContext, ViewHandle};
 

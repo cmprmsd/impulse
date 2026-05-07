@@ -12,7 +12,6 @@ use warpui::{
         keyboard_shortcut::KeyboardShortcut,
         text::Span,
     },
-    AppContext, Element, Entity, SingletonEntity, TypedActionView, View, ViewContext,
 };
 
 type ItemLabelFn<T> = Box<dyn Fn(&T, &AppContext) -> Span>;

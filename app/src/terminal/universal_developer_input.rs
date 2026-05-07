@@ -9,6 +9,7 @@ use crate::{
     terminal::profile_model_selector::{
         calculate_max_profile_name_width, calculate_scaled_font_size,
     },
+};
 use pathfinder_color::ColorU;
 #[cfg(not(target_family = "wasm"))]
 use settings::Setting as _;
@@ -22,9 +23,6 @@ use warpui::{
         MainAxisAlignment, MainAxisSize, ParentElement, Radius, Rect, Shrinkable,
         SizeConstraintCondition, SizeConstraintSwitch,
     },
-    ui_components::{components::UiComponentStyles, segmented_control::RenderableOptionConfig},
-    AppContext, Element, Entity, EntityId, SingletonEntity as _, TypedActionView, View, ViewAsRef,
-    ViewContext, ViewHandle,
 };
 
 use warp_core::ui::{
@@ -33,11 +31,11 @@ use warp_core::ui::{
         contrast::{foreground_color_with_minimum_contrast, MinimumAllowedContrast},
         Opacity, Rgb,
     },
+};
 
 use std::boxed::Box;
 use warpui::{
     ui_components::segmented_control::{SegmentedControl, SegmentedControlEvent},
-    ModelHandle,
 };
 
 use warp_core::ui::appearance::Appearance;
@@ -72,8 +70,6 @@ use crate::{
     view_components::action_button::{
         ActionButton, ActionButtonTheme, ButtonSize, NakedTheme, TooltipAlignment,
     },
-    workspaces::user_workspaces::UserWorkspaces,
-    BlocklistAIHistoryModel,
 };
 use warp_core::features::FeatureFlag;
 use warpui::ui_components::segmented_control::{LabelConfig, TooltipConfig};

@@ -19,9 +19,6 @@ use crate::{
         resizable_data::ResizableData,
         shared_session::permissions_manager::SessionPermissionsManager,
     },
-    test_util::settings::initialize_settings_for_tests,
-    workspaces::{team_tester::TeamTesterStatus, user_workspaces::UserWorkspaces},
-    Assets, ObjectActions,
 };
 
 use super::DrivePanel;

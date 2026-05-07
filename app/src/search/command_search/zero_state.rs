@@ -8,8 +8,6 @@ use warpui::{
     elements::{
         Container, CornerRadius, Flex, Hoverable, MouseStateHandle, ParentElement, Radius, Text,
     },
-    platform::Cursor,
-    AppContext, Element, Entity, SingletonEntity, TypedActionView, View, ViewContext,
 };
 
 use crate::appearance::Appearance;

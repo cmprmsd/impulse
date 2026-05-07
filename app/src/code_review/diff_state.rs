@@ -33,6 +33,7 @@ use crate::features::FeatureFlag;
 use crate::util::git::get_pr_for_branch;
 use crate::util::git::{
     detect_current_branch, detect_main_branch, get_unpushed_commits, run_git_command, Commit,
+};
 
 use super::diff_size_limits::compute_diff_size;
 

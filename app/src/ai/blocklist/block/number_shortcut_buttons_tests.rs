@@ -6,8 +6,7 @@ use warpui::{
         new_scrollable::SingleAxisConfig, ChildView, Clipped, ClippedScrollStateHandle,
         ConstrainedBox, Fill,
     },
-    platform::WindowStyle,
-    App, Entity, Event, Presenter, TypedActionView, View, ViewContext, ViewHandle, WindowId,
+};
 
 use super::*;
 

@@ -3,7 +3,6 @@ use std::{collections::HashSet, sync::Arc};
 
 use crate::{
     ai::{RequestLimitInfo, RequestLimitRefreshDuration},
-    server::telemetry::OpenedWarpAISource,
     terminal::model::terminal_model::BlockIndex,
     workflows::workflow::{Argument, Workflow},
 };
@@ -12,10 +11,6 @@ use lazy_static::lazy_static;
 use pathfinder_color::ColorU;
 use serde::{Deserialize, Serialize};
 use warp_core::command::ExitCode;
-    ai::{
-        RequestLimitInfo as RequestLimitInfoGraphql,
-        RequestLimitRefreshDuration as RequestLimitRefreshDurationGraphql,
-    },
 
 pub mod execution_context;
 pub mod panel;

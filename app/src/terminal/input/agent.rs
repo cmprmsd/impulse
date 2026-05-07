@@ -4,7 +4,6 @@ use super::{
         add_workflow_info_overlay, maybe_add_buy_credits_banner,
         wrap_input_with_terminal_padding_and_focus_handler,
     },
-    Input, InputAction, InputDropTargetData,
 };
 use crate::{
     ai::{
@@ -18,6 +17,7 @@ use crate::{
         },
         harness_availability::HarnessAvailabilityModel,
     },
+};
 use warp_core::settings::Setting;
 use warp_core::ui::theme::color::internal_colors;
 use warpui::elements::Expanded;
@@ -28,8 +28,6 @@ use warpui::{
         MainAxisSize, OffsetPositioning, OffsetType, ParentElement, PositionedElementOffsetBounds,
         PositioningAxis, Radius, SavePosition, Stack, XAxisAnchor, YAxisAnchor,
     },
-    presenter::ChildView,
-    AppContext, SingletonEntity as _,
 };
 
 pub(super) const CLOUD_MODE_V2_MAX_WIDTH: f32 = 720.;

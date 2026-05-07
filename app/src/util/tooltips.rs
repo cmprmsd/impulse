@@ -7,13 +7,12 @@ use warpui::{
     elements::{
         Border, Container, CornerRadius, Flex, MouseStateHandle, ParentElement, Radius, Text,
     },
-    ui_components::components::{Coords, UiComponent, UiComponentStyles},
-    AppContext, Element, EventContext, SingletonEntity,
 };
 
 use crate::{
     appearance::Appearance, settings::PrivacySettings, terminal::model::secrets::SecretLevel,
 
+};
 /// A link to be shown in a tooltip
 pub struct TooltipLink<OnClick> {
     pub text: String,

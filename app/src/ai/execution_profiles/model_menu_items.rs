@@ -8,8 +8,6 @@ use warpui::{
         ConstrainedBox, Container, CrossAxisAlignment, Empty, Flex, ParentElement, SavePosition,
         Shrinkable, Text,
     },
-    fonts::{Properties, Style},
-    Action, AppContext, Element,
 };
 
 pub fn is_auto(llm: &LLMInfo) -> bool {

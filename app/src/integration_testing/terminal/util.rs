@@ -14,9 +14,8 @@ use regex::Regex;
 use crate::terminal::shell::ShellType;
 use crate::terminal::{
     local_tty::shell::{DirectShellStarter, ShellStarter, ShellStarterSource},
-    shell,
-};
 
+};
 /// Returns the shell starter along with the version of the shell about to be run.
 pub fn current_shell_starter_and_version() -> (DirectShellStarter, String) {
     let shell_starter_or_wsl_name = ShellStarter::init(Default::default())

@@ -8,6 +8,7 @@ use crate::editor::{
         },
         Anchor, LocalSelection, LocalSelections,
     },
+};
 use vec1::vec1;
 
 fn local_selections(start: Anchor, end: Anchor) -> LocalSelections {

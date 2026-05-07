@@ -1,13 +1,11 @@
 use std::{
     collections::{HashMap, HashSet},
-    fs,
 };
 
 use crate::ai::skills::skill_manager::SkillWatcherEvent;
 use ai::skills::{ParsedSkill, SkillProvider, SkillScope};
 use repo_metadata::{
     repositories::DetectedRepositories, DirectoryWatcher, RepoMetadataModel, RepositoryUpdate,
-    TargetFile,
 };
 use tempfile::TempDir;
 use warp_util::standardized_path::StandardizedPath;

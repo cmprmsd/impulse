@@ -35,8 +35,7 @@ use warpui::{
         ScrollStateHandle, ScrollableElement, ScrollbarWidth, Stack, Text, UniformList,
         UniformListState,
     },
-    fonts::{Properties, Weight},
-    AppContext, Element, Entity, EventContext, SingletonEntity as _, TypedActionView, View,
+};
 use warpui::{BlurContext, ModelHandle};
 
 use crate::code::active_file::{ActiveFileEvent, ActiveFileModel};

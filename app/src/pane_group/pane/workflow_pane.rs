@@ -1,5 +1,6 @@
 use super::{
     DetachType, PaneConfiguration, PaneContent, PaneGroup, PaneId, PaneView, ShareableLink,
+};
 use crate::{
     app_state::{LeafContents, WorkflowPaneSnapshot},
     drive::{items::WarpDriveItemId, OpenWarpDriveObjectSettings},
@@ -9,6 +10,7 @@ use crate::{
         workflow_view::{WorkflowView, WorkflowViewEvent},
         WorkflowSelectionSource, WorkflowSource, WorkflowType, WorkflowViewMode,
     },
+};
 use anyhow::Context;
 use std::{collections::HashMap, sync::Arc};
 use url::Url;

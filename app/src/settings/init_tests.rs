@@ -40,6 +40,7 @@ define_settings_group!(MigrationTestSettings, settings: [
     },
 ]);
 
+};
 /// Registers separate InMemoryPreferences singletons for public and private
 /// stores, then adds a SettingsManager and the test settings group.
 fn init_test_app(ctx: &mut warpui::AppContext) {

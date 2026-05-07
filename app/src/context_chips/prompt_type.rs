@@ -13,6 +13,7 @@ use crate::{
 use super::{
     current_prompt::CurrentPrompt, prompt_snapshot::PromptSnapshot, ChipResult, ChipValue,
 
+};
 /// The type of warp prompt being used
 #[derive(Clone)]
 pub enum PromptType {

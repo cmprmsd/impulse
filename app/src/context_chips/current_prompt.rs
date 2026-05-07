@@ -34,9 +34,6 @@ use super::{
         ContextChip, Environment, ExternalCommandsAvailability, GeneratorContext, PromptGenerator,
         RefreshConfig, ShellCommandGenerator,
     },
-    logging::{ChipCommandLogEntry, PromptChipExecutionPhase, PromptChipLogger},
-    prompt::Prompt,
-    ChipValue, ContextChipKind,
 };
 #[cfg(feature = "local_fs")]
 use crate::code_review::git_status_update::{GitRepoStatusEvent, GitRepoStatusModel};
@@ -50,7 +47,6 @@ use std::time::Duration;
 use warpui::WeakModelHandle;
 use warpui::{
     r#async::{SpawnedFutureHandle, Timer},
-    AppContext, ViewHandle,
 };
 use warpui::{Entity, ModelAsRef, ModelContext, ModelHandle, SingletonEntity};
 

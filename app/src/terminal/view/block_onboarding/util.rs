@@ -17,7 +17,6 @@ use warpui::{
         button::ButtonVariant,
         components::{UiComponent, UiComponentStyles},
     },
-    Action, AppContext, Element,
 };
 use warpui::{SingletonEntity, ViewHandle};
 

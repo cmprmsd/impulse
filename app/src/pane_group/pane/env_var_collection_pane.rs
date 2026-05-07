@@ -9,10 +9,10 @@ use crate::{
         view::env_var_collection::{EnvVarCollectionEvent, EnvVarCollectionView},
         EnvVarCollectionType,
     },
+};
 
 use super::{
     view::PaneView, DetachType, PaneConfiguration, PaneContent, PaneGroup, PaneId, ShareableLink,
-    ShareableLinkError,
 };
 
 pub struct EnvVarCollectionPane {

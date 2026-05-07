@@ -23,6 +23,7 @@ use crate::{
         warpify::settings::WarpifySettings,
         BlockListSettings,
     },
+};
 
 use warp_core::semantic_selection::SemanticSelection;
 

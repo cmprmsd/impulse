@@ -3,6 +3,7 @@ use warpui::{
         self, Align, Border, CacheOption, ConstrainedBox, Container, Element, Image, ParentElement,
         Text,
     },
+};
 
 use super::red_notification_dot::RedNotificationDot;
 use warp_core::ui::{external_product_icon::ExternalProductIcon, icons::Icon};

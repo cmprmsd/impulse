@@ -19,7 +19,6 @@ use std::num::NonZeroUsize;
 use std::ops::{Range, RangeInclusive};
 use std::{
     cmp::{min, Ordering},
-    mem,
 };
 
 use bounded_vec_deque::BoundedVecDeque;

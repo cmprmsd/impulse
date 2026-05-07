@@ -6,6 +6,7 @@ use crate::{
         agent::{conversation::AIConversationId, CancellationReason},
         blocklist::block::{FinishReason, PendingUserQueryBlock, PendingUserQueryBlockEvent},
     },
+};
 
 use super::rich_content::RichContentMetadata;
 

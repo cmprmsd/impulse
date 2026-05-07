@@ -1,15 +1,13 @@
-    CloudObject, GenericStringObjectFormat, JsonObjectType, Owner, Revision,
-};
 use crate::drive::CloudObjectTypeAndId;
 use crate::editor::{
     EditorView, Event as EditorEvent, PropagateAndNoOpNavigationKeys, SingleLineEditorOptions,
+};
 use crate::network::NetworkStatus;
 use crate::search_bar::SearchBar;
 use crate::settings::{AISettings, AISettingsChangedEvent};
 use crate::ui_components::icons::Icon;
 use crate::view_components::{
     action_button::{ActionButton, NakedTheme},
-    DismissibleToast,
 };
 use crate::workspace::ToastStack;
 use ai::project_context::model::{ProjectContextModel, ProjectContextModelEvent};
@@ -31,9 +29,7 @@ use warpui::{
         Expanded, Flex, FormattedTextElement, HighlightedHyperlink, Hoverable, MainAxisAlignment,
         MainAxisSize, MouseStateHandle, ParentElement,
     },
-    platform::Cursor,
-    ui_components::components::{UiComponent, UiComponentStyles},
-    AppContext, Element, Entity, FocusContext, SingletonEntity, TypedActionView, View, ViewContext,
+};
 
 use super::{is_edit_allowed, is_syncing, style, AIFact, CloudAIFact, CloudAIFactModel};
 use crate::ai::facts::AIMemory;

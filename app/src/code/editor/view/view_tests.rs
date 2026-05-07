@@ -17,7 +17,6 @@ use crate::{
     vim_registers::VimRegisters,
     workspace::{sync_inputs::SyncedInputState, ActiveSession},
     workspaces::user_workspaces::UserWorkspaces,
-    AuthStateProvider,
 };
 
 use super::{CodeEditorRenderOptions, CodeEditorView, CodeEditorViewAction};

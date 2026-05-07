@@ -16,6 +16,7 @@ use crate::{
         safe_mode_settings::get_secret_obfuscation_mode,
         TerminalModel,
     },
+};
 
 use super::grid_renderer::CellGlyphCache;
 use super::model::grid::RespectDisplayedOutput;
@@ -49,10 +50,6 @@ use warpui::{
         components::{Coords, UiComponent, UiComponentStyles},
         radio_buttons::{RadioButtonItem, RadioButtonLayout, RadioButtonStateHandle},
     },
-    units::{IntoLines, IntoPixels, Lines, Pixels},
-    AfterLayoutContext, AppContext, ClipBounds, Entity, Event, EventContext, FocusContext,
-    LayoutContext, PaintContext, SingletonEntity, SizeConstraint, TypedActionView, View,
-    ViewContext, ViewHandle,
 };
 
 const PADDING: f32 = 30.;

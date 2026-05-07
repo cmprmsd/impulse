@@ -31,6 +31,7 @@ use warp_editor::model::CoreEditorModel;
 
 use warp_core::ui::theme::color::internal_colors::{
     accent_overlay_2, accent_overlay_3, neutral_1, neutral_3, neutral_4, neutral_6, text_main,
+};
 use warp_core::ui::theme::Fill;
 use warpui::{
     clipboard::ClipboardContent,
@@ -49,11 +50,8 @@ use warpui::{
         button::{ButtonTooltipPosition, ButtonVariant},
         components::{UiComponent, UiComponentStyles},
     },
-    units::Pixels,
-    AppContext, Entity, EntityId, ModelHandle, SingletonEntity, TypedActionView, View, ViewContext,
-    ViewHandle, WeakViewHandle,
-};
 
+};
 /// Header text for the outdated section when there is exactly one outdated comment.
 const OUTDATED_SECTION_HEADER_SINGULAR: &str = "1 comment will be omitted because it is outdated.";
 /// Header text format for the outdated section when there are multiple outdated comments.

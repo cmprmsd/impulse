@@ -23,6 +23,7 @@ use warp_editor::{
         },
         model::{BlockItem, HitTestBlockType, Location, RenderState},
     },
+};
 
 use warp_util::{path::LineAndColumnArg, user_input::UserInput};
 use warpui::{
@@ -46,9 +47,6 @@ use warpui::{
         button::ButtonVariant,
         components::{Coords, UiComponent, UiComponentStyles},
     },
-    units::Pixels,
-    windowing, AppContext, BlurContext, CursorInfo, Element, Entity, FocusContext, ModelHandle,
-    SingletonEntity, TypedActionView, View, ViewContext, ViewHandle, WeakViewHandle,
 };
 use warpui::{actions::StandardAction, elements::Hoverable};
 use warpui::{keymap::PerPlatformKeystroke, windowing::WindowManager};
@@ -71,7 +69,6 @@ use crate::{
         bindings::CustomAction,
         tooltips::{render_tooltip, should_show_open_in_warp_link, TooltipLink, TooltipRedaction},
     },
-    view_components::DismissibleToast,
 };
 
 #[cfg(feature = "local_fs")]

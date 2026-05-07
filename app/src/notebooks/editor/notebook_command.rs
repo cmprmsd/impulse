@@ -22,6 +22,7 @@ use warp_editor::{
             CODE_BLOCK_SHELL_DISPLAY_LANG,
         },
     },
+};
 
 use markdown_parser::markdown_parser::CODE_BLOCK_DEFAULT_MARKDOWN_LANG;
 use warp_util::user_input::UserInput;
@@ -31,10 +32,6 @@ use warpui::{
         Border, Container, CrossAxisAlignment, Empty, Flex, MainAxisAlignment, MouseStateHandle,
         ParentElement, Shrinkable, Text,
     },
-    fonts::Properties,
-    presenter::ChildView,
-    Element, Entity, ModelAsRef, ModelContext, ModelHandle, SingletonEntity, ViewHandle,
-    WeakModelHandle, WindowId,
 };
 
 use crate::{
@@ -58,9 +55,6 @@ use crate::{
         bindings::CustomAction,
         color::{ContrastingColor, MinimumAllowedContrast},
     },
-    view_components::{Dropdown, DropdownItem},
-    workflows::{workflow::Workflow, WorkflowType},
-    Assets,
 };
 
 use super::{

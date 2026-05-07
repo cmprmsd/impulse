@@ -22,6 +22,7 @@ mod wasm_view;
 use self::vertical_tabs::telemetry::{VerticalTabsDisplayOption, VerticalTabsTelemetryEvent};
 use self::vertical_tabs::{
     render_detail_sidecar, render_settings_popup, VerticalTabsPanelState,
+};
 use crate::workspace::cross_window_tab_drag::{
     AttachTarget, CrossWindowTabDrag, DragResult, DropResult, GhostState,
 };
@@ -29,10 +30,6 @@ pub(crate) use onboarding::OnboardingTutorial;
 
 #[cfg(all(feature = "local_fs", not(target_family = "wasm")))]
 use crate::ai::agent::conversation::AIConversation;
-    AgentConversationNavigationSubject, AgentConversationsModel,
-};
-    NotificationMailboxView, NotificationMailboxViewEvent,
-};
 #[cfg(all(feature = "local_fs", not(target_family = "wasm")))]
 use crate::ai::blocklist::agent_view::agent_input_footer::editor::AgentToolbarEditorMode;
 #[cfg(all(feature = "local_fs", not(target_family = "wasm")))]
@@ -61,7 +58,6 @@ use crate::ai::{
         },
         SlashCommandRequest,
     },
-    facts::{view::AIFactPage, AIFactManager, AIFactView, AIFactViewEvent},
 };
 use crate::ai_assistant::execution_context::WarpAiExecutionContext;
 use crate::app_state::{
@@ -146,8 +142,6 @@ use super::util;
 use super::WorkspaceRegistry;
 use crate::ai::execution_profiles::editor::ExecutionProfileEditorManager;
 use crate::ai::execution_profiles::profiles::{AIExecutionProfilesModel, ClientProfileId};
-    AuthOverrideWarningModal, AuthOverrideWarningModalEvent, AuthOverrideWarningModalVariant,
-};
 #[cfg(feature = "local_fs")]
 use crate::code::editor_management::CodeManager;
 use crate::code::editor_management::CodeSource;

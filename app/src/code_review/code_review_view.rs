@@ -12,6 +12,7 @@ use crate::{
         agent::{AgentReviewCommentBatch, DiffSetHunk},
         blocklist::agent_view::AgentViewEntryOrigin,
     },
+};
 
 #[cfg(feature = "local_fs")]
 use crate::code_review::context::{
@@ -80,7 +81,6 @@ use crate::{
         },
         DismissibleToast,
     },
-    workspace::{ToastStack, Workspace, WorkspaceAction},
 };
 
 use crate::code_review::find_model::CodeReviewFindModel;

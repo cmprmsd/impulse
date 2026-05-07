@@ -3,7 +3,6 @@ use std::borrow::Cow;
 use warp_terminal::model::grid::{
     cell::{self, Cell},
     row::Row,
-    CellType,
 };
 
 use crate::terminal::model::index::Point;

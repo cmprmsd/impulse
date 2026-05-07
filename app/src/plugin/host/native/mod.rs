@@ -20,10 +20,12 @@ use crate::plugin::host::runners::PluginRunners;
 
 use self::{
     plugin_caller::PluginCaller, plugin_ref::PluginRef, runner::PLUGIN_ENTRYPOINT_JS_FILE_NAME,
+};
 use super::{
     service::{
         PluginHostBootstrapRequest, PluginHostBootstrapResponse, PluginHostBootstrapService,
     },
+};
 use logging::initialize_logging;
 
 pub fn run() -> Result<()> {

@@ -8,7 +8,6 @@ use warpui::{
         button::ButtonVariant,
         components::{BorderStyle, Coords, UiComponent, UiComponentStyles},
     },
-    AppContext, Element, Entity, SingletonEntity, TypedActionView, View, ViewContext,
 };
 
 use crate::appearance::Appearance;

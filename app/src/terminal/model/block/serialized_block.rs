@@ -6,6 +6,7 @@ use crate::ai::agent::AIAgentActionId;
 use crate::ai::blocklist::block::cli_controller::LongRunningCommandControlState;
 use crate::terminal::model::block::{
     has_block_failed, AgentViewVisibility, Block, BlockState, PromptInfo,
+};
 use crate::terminal::model::session::SessionId;
 use crate::terminal::model::BlockId;
 use crate::terminal::ShellHost;

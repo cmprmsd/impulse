@@ -11,7 +11,6 @@ use warpui::{
         button::ButtonVariant,
         components::{Coords, UiComponent, UiComponentStyles},
     },
-    AppContext, Element, ModelHandle,
 };
 
 use crate::{appearance::Appearance, ui_components::blended_colors};

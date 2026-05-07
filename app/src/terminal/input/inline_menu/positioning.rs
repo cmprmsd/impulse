@@ -15,6 +15,7 @@ use crate::terminal::input::{
         view::QUERY_RESULT_RENDERER_STYLES,
         InlineMenuType,
     },
+};
 
 use crate::{
     ai::blocklist::agent_view::AgentViewController,

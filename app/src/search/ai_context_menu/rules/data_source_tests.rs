@@ -5,8 +5,6 @@ use settings::manager::SettingsManager;
 use warpui::{App, SingletonEntity};
 
 use crate::ai::facts::{AIFact, AIMemory, CloudAIFactModel};
-    GenericServerObject, Owner, Revision, ServerMetadata, ServerPermissions,
-};
 use crate::notebooks::manager::NotebookManager;
 use crate::search::ai_context_menu::rules::data_source::RulesDataSource;
 use crate::search::data_source::Query;

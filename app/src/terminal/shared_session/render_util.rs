@@ -11,8 +11,6 @@ use warpui::{
         ChildAnchor, Fill, Hoverable, MouseStateHandle, OffsetPositioning, ParentAnchor,
         ParentElement, ParentOffsetBounds, Radius, Stack,
     },
-    ui_components::components::{UiComponent, UiComponentStyles},
-    AppContext, Element, SingletonEntity,
 };
 
 use super::presence_manager::{Participant, MUTED_AVATAR_BORDER_COLOR, MUTED_PARTICIPANT_COLOR};
@@ -41,6 +39,8 @@ pub fn non_hoverable_participant_avatar(
     let background = if is_muted {
         MUTED_PARTICIPANT_COLOR
     } else {
+        participant_color.into()
+    };
     let border_color = if is_muted {
         MUTED_AVATAR_BORDER_COLOR.into()
     } else if image_url.is_none() {

@@ -1,6 +1,7 @@
 use crate::terminal::{
     bootstrap::init_shell_script_for_shell, event_listener::ChannelEventListener,
     model::ansi::Processor, session_settings::SessionSettings, shell::ShellType,
+};
 use async_channel::Receiver;
 use futures_util::SinkExt;
 use parking_lot::FairMutex;

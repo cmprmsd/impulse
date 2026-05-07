@@ -18,6 +18,7 @@ use crate::{
         },
         llms::LLMId,
     },
+};
 
 use super::AIQueryHistoryOutputStatus;
 /// Data we persist for each [`AIAgentExchange`] for use in history. Does not contain output data.

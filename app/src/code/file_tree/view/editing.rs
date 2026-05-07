@@ -18,6 +18,7 @@ use crate::{
         FileTreeEvent,
     },
 
+};
 /// Custom ordering function for items in the file tree.
 ///
 /// Directories are ordered first, sorted alphabetically.

@@ -6,6 +6,7 @@ use crate::{
         step::new_step_with_default_assertions, view_getters::theme_chooser_view,
     },
 
+};
 /// Builds a step that will toggle a setting by [`SettingsAction`]. This can
 /// only update settings with a corresponding action on the settings view.
 pub fn toggle_setting(action: SettingsAction) -> TestStep {

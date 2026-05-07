@@ -8,10 +8,9 @@ mod channel_config;
 use anyhow::Result;
 use warp_core::{
     channel::{Channel, ChannelState},
-    features,
-};
 
 // Simple wrapper around warp::run() for feature preview channel builds.
+};
 fn main() -> Result<()> {
     ChannelState::set(
         ChannelState::new(Channel::Preview, channel_config::load_config!("preview"))

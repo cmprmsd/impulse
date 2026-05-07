@@ -10,11 +10,7 @@ use warpui::{
         MouseStateHandle, Padding, ParentElement, Radius, SavePosition, ScrollTarget,
         ScrollToPositionMode, ScrollbarWidth, Shrinkable, Text,
     },
-    fonts::{Properties, Weight},
-    keymap::{macros::*, FixedBinding, Keystroke},
-    platform::Cursor,
-    ui_components::components::UiComponent,
-    AppContext, Element, Entity, FocusContext, SingletonEntity, TypedActionView, View, ViewContext,
+};
 
 use crate::{
     appearance::Appearance,

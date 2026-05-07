@@ -1,11 +1,13 @@
 use super::dropdown::{
     DropdownAction, DropdownItem, MenuHeaderTextFormatter, DROPDOWN_PADDING, TOP_MENU_BAR_HEIGHT,
+};
 use crate::{
     appearance::Appearance,
     editor::{
         EditorView, Event as EditorEvent, PropagateAndNoOpNavigationKeys, SingleLineEditorOptions,
         TextOptions,
     },
+};
 use warp_editor::editor::NavigationKey;
 use warpui::{
     elements::{
@@ -19,8 +21,6 @@ use warpui::{
         button::{ButtonVariant, TextAndIcon, TextAndIconAlignment},
         components::{Coords, UiComponent, UiComponentStyles},
     },
-    Action, AppContext, BlurContext, Entity, FocusContext, SingletonEntity, TypedActionView, View,
-    ViewContext, ViewHandle,
 };
 
 const EMPTY_DROPDOWN_HEIGHT: f32 = 50.0;

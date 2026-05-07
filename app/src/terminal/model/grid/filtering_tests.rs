@@ -7,6 +7,7 @@ use crate::{
         grid::Dimensions as _,
         index::{VisiblePoint, VisibleRow},
     },
+};
 
 use super::*;
 

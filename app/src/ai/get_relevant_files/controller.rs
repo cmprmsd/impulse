@@ -3,6 +3,7 @@ use ai::index::{
         manager::{CodebaseIndexManager, CodebaseIndexManagerEvent},
         RetrievalID,
     },
+};
 use anyhow::anyhow;
 use futures_util::stream::AbortHandle;
 use instant::Instant;
@@ -21,7 +22,7 @@ use crate::{
         get_relevant_files::api::{FileContext, GetRelevantFiles},
         outline::{OutlineStatus, RepoOutlines},
     },
-    report_error, send_telemetry_from_ctx,
+};
 
 #[derive(Debug)]
 pub enum GetRelevantFilesControllerEvent {

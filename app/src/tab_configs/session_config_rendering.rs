@@ -24,6 +24,7 @@ use crate::ui_components::blended_colors;
 use crate::view_components::callout_bubble::{
     callout_checkbox, callout_label_color, phenomenon_accent_color, phenomenon_background_color,
     phenomenon_body_text_color, phenomenon_disabled_label_text_color, phenomenon_foreground_color,
+};
 
 const PILL_GAP: f32 = 8.;
 

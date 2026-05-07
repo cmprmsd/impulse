@@ -23,7 +23,6 @@ pub use warpui::{
     accessibility::{AccessibilityContent, WarpA11yRole},
     elements::{ParentElement as _, Stack},
     geometry::vector::vec2f,
-    AppContext,
 };
 use warpui::{
     elements::{
@@ -31,7 +30,6 @@ use warpui::{
         DropShadow, Element, Flex, Hoverable, MouseStateHandle, ParentAnchor, ParentOffsetBounds,
         Rect, Text,
     },
-    Entity, SingletonEntity, TypedActionView, View,
 };
 use warpui::{presenter::ChildView, ViewContext, ViewHandle};
 use warpui::{FocusContext, ModelHandle};

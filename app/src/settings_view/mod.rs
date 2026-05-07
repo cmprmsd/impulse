@@ -13,6 +13,7 @@ use crate::{
     pane_group::{
         pane::view, BackingView, Direction, PaneConfiguration, PaneEvent, SplitPaneState,
     },
+};
 use about_page::AboutPageView;
 use ai_page::{AISettingsPageAction, AISettingsPageEvent, AISettingsPageView, AISubpage};
 use appearance_page::{AppearancePageAction, AppearanceSettingsPageView};
@@ -32,6 +33,7 @@ use referrals_page::{ReferralsPageEvent, ReferralsPageView};
 use settings_file_footer::{render_footer, SettingsFooterKind, SettingsFooterMouseStates};
 use settings_page::{
     MatchData, SettingsPage, SettingsPageEvent, SettingsPageMeta, SettingsPageViewHandle,
+};
 use show_blocks_view::{ShowBlocksEvent, ShowBlocksView};
 use std::collections::HashMap;
 use std::path::PathBuf;
@@ -53,11 +55,6 @@ use warpui::{
         OffsetPositioning, ParentAnchor, ParentElement, ParentOffsetBounds, Radius, SavePosition,
         ScrollbarWidth, Shrinkable, Stack, Text,
     },
-    fonts::{Properties, Weight},
-    id,
-    keymap::{ContextPredicate, EnabledPredicate, FixedBinding},
-    Action, AppContext, Entity, ModelHandle, SingletonEntity, TypedActionView, UpdateView as _,
-    View, ViewContext, ViewHandle,
 };
 
 mod about_page;
@@ -65,8 +62,6 @@ mod admin_actions;
 mod agent_assisted_environment_modal;
 mod ai_page;
 mod appearance_page;
-mod billing_and_usage;
-mod billing_and_usage_page;
 mod code_page;
 mod delete_environment_confirmation_dialog;
 mod directory_color_add_picker;
@@ -89,7 +84,6 @@ mod settings_file_footer;
 pub(crate) mod settings_page;
 mod show_blocks_view;
 mod tab_menu;
-mod teams_page;
 mod telemetry;
 mod transfer_ownership_confirmation_modal;
 pub mod update_environment_form;

@@ -17,10 +17,6 @@ use warpui::{
         FormattedTextElement, HighlightedHyperlink, Hoverable, HyperlinkUrl, MainAxisAlignment,
         MainAxisSize, MouseStateHandle, ParentElement, Radius, Shrinkable, Text, Wrap,
     },
-    fonts::Weight,
-    platform::Cursor,
-    ui_components::components::{UiComponent, UiComponentStyles},
-    AppContext, Element, Entity, SingletonEntity, TypedActionView, View, ViewContext,
 };
 
 const CONFIRM_MARGIN_TOP: f32 = 16.;

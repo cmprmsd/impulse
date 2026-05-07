@@ -5,10 +5,9 @@
 use anyhow::Result;
 use warp_core::{
     channel::{Channel, ChannelConfig, ChannelState, OzConfig, WarpServerConfig},
-    AppId,
-};
 
 // Simple wrapper around warp::run() for Warp OSS builds.
+};
 fn main() -> Result<()> {
     let mut state = ChannelState::new(
         Channel::Oss,

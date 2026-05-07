@@ -18,7 +18,6 @@ use crate::{
     workspaces::{
         team_tester::TeamTesterStatus, user_profiles::UserProfiles, user_workspaces::UserWorkspaces,
     },
-    GlobalResourceHandles, GlobalResourceHandlesProvider,
 };
 
 fn initialize_app(app: &mut App) {

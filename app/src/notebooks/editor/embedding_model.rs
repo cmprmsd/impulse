@@ -12,9 +12,6 @@ use warpui::{
         Align, Border, Container, CrossAxisAlignment, Empty, Flex, MainAxisAlignment,
         MouseStateHandle, ParentElement, Shrinkable,
     },
-    platform::Cursor,
-    ui_components::{button::ButtonVariant, components::UiComponent},
-    AppContext, Element, Entity, ModelAsRef, ModelContext, ModelHandle, SingletonEntity,
 };
 
 use crate::{
@@ -25,6 +22,7 @@ use crate::{
         styles::block_footer_action_button,
         telemetry::{ActionEntrypoint, BlockInfo},
     },
+};
 
 use super::{
     embedded_item::EmbeddedWorkflow,
@@ -33,7 +31,6 @@ use super::{
     notebook_command::{parsed_token_to_color_style_ranges, transform_ansi_color_to_solid_color},
     rich_text_styles,
     view::EditorViewAction,
-    NotebookWorkflow,
 };
 
 #[derive(Default)]

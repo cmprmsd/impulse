@@ -1,7 +1,5 @@
 use itertools::Itertools;
 use serde::{Deserialize, Serialize};
-    GenerateMetadataForCommandFailureType, GenerateMetadataForCommandSuccess,
-};
 use warpui::{SingletonEntity, ViewContext};
 
 use crate::{

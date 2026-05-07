@@ -5,6 +5,7 @@ use super::{
         render_sub_header, LocalOnlyIconState, MatchData, PageType, SettingsPageMeta,
         SettingsPageViewHandle, SettingsWidget,
     },
+};
 use crate::send_telemetry_from_ctx;
 use crate::{appearance::Appearance, themes};
 use crate::{
@@ -14,11 +15,13 @@ use crate::{
     editor::{
         Event as EditorEvent, PropagateAndNoOpNavigationKeys, SingleLineEditorOptions, TextOptions,
     },
+};
 use crate::{search_bar::SearchBar, settings::CloudPreferencesSettings};
 use crate::{
     util::bindings::{
         filter_bindings_including_keystroke, reset_keybinding_to_default, set_custom_keybinding,
     },
+};
 use itertools::Itertools;
 
 use warp_core::ui::theme::color::internal_colors;
@@ -29,10 +32,6 @@ use warpui::{
         EventHandler, Fill, Flex, Hoverable, MouseState, MouseStateHandle, ParentElement, Radius,
         SavePosition, ScrollbarWidth, Shrinkable,
     },
-    fonts::Weight,
-    keymap::{Keystroke, Trigger},
-    ui_components::components::{Coords, UiComponent, UiComponentStyles},
-    AppContext, Element, Entity, SingletonEntity, TypedActionView, View, ViewContext, ViewHandle,
 };
 use warpui::{
     elements::{ConstrainedBox, DispatchEventResult},

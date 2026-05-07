@@ -9,6 +9,7 @@ use crate::code::editor::{
         AddAsContextButton, CommentButton, EditorWrapper, EditorWrapperStateHandle,
         GutterHoverTarget, GutterRange, InnerEditor, LineNumberConfig, RevertHunkButton,
     },
+};
 use crate::code::{
     editor::EditorReviewComment, DiffResult, NoopCommentEditorProvider,
     NoopFindReferencesCardProvider, ShowCommentEditorProvider, ShowFindReferencesCardProvider,
@@ -55,7 +56,6 @@ use warp_editor::{
             RichTextStyles, CODE_EDITOR_HIDDEN_SECTION_EXPANSION_LINES,
         },
     },
-    search::{SearchEvent, Searcher, MATCH_FILL, SELECTED_MATCH_FILL},
 };
 use warp_util::content_version::ContentVersion;
 use warpui::{
@@ -67,14 +67,6 @@ use warpui::{
         OffsetPositioning, Padding, ParentAnchor, ParentElement, ParentOffsetBounds,
         ScrollStateHandle, Shrinkable, Stack,
     },
-    event::ModifiersState,
-    keymap::Keystroke,
-    platform::Cursor,
-    prelude::RectF,
-    text::point::Point,
-    units::Pixels,
-    AppContext, BlurContext, CursorInfo, Element, Entity, FocusContext, ModelHandle,
-    SingletonEntity, View, ViewContext, ViewHandle, WeakViewHandle, WindowId,
 };
 
 mod actions;

@@ -28,10 +28,6 @@ use warpui::{
         Hoverable, MainAxisAlignment, MouseStateHandle, ParentElement, Radius, Shrinkable,
         SizeConstraintCondition, SizeConstraintSwitch, Text, Wrap, WrapFill,
     },
-    keymap::Keystroke,
-    platform::Cursor,
-    ui_components::components::{UiComponent, UiComponentStyles},
-    AppContext, Element, EventContext, SingletonEntity,
 };
 
 use super::inline_action_header::HeaderConfig;

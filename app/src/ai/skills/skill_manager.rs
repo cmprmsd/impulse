@@ -14,6 +14,7 @@ use super::SkillDescriptor;
 use crate::ai::skills::skill_utils::unique_skills;
 use ai::skills::{
     get_provider_for_path, parse_bundled_skill, provider_rank, ParsedSkill, SkillProvider,
+};
 use warp_core::{
     channel::ChannelState, features::FeatureFlag, report_error, safe_warn, ui::icons::Icon,
 };

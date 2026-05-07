@@ -10,7 +10,6 @@ use warpui::{
         button::ButtonVariant,
         components::{Coords, UiComponent, UiComponentStyles},
     },
-    AppContext, Element,
 };
 
 use crate::{
@@ -19,6 +18,7 @@ use crate::{
         ssh::warpify::warpify_description,
         view::{RememberForWarpification, TerminalAction},
     },
+};
 
 use super::{render_block_banner, BLOCK_BANNER_DESCRIPTION_MAX_HEIGHT};
 

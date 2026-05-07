@@ -27,6 +27,7 @@ use crate::{
         view::TerminalViewState,
         History,
     },
+};
 
 use super::util::ExpectedOutput;
 

@@ -16,10 +16,6 @@ use warpui::{
         MouseStateHandle, OffsetPositioning, ParentElement, PositionedElementAnchor,
         PositionedElementOffsetBounds, Radius, SavePosition, Shrinkable, Stack,
     },
-    fonts::Weight,
-    r#async::SpawnedFutureHandle,
-    ui_components::components::{Coords, UiComponent, UiComponentStyles},
-    AppContext, Element, Entity, SingletonEntity, TypedActionView, View, ViewContext,
 };
 use warpui::{Action, ViewHandle};
 

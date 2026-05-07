@@ -18,10 +18,6 @@ use warpui::{
         ScrollableElement, Shrinkable, Stack, UniformList, UniformListState, XAxisAnchor,
         YAxisAnchor,
     },
-    presenter::ChildView,
-    ui_components::components::{UiComponent, UiComponentStyles},
-    AppContext, Element, Entity, FocusContext, ModelHandle, SingletonEntity, TypedActionView, View,
-    ViewContext, ViewHandle, WeakViewHandle,
 };
 
 use crate::{
@@ -50,7 +46,6 @@ use crate::{
         resizable_data::{ModalType, ResizableData, DEFAULT_UNIVERSAL_SEARCH_WIDTH},
         History, HistoryEvent,
     },
-    workspaces::user_workspaces::UserWorkspaces,
 };
 
 use super::{

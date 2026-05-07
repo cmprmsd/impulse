@@ -16,7 +16,7 @@ use warpui::{
         text::Span,
         toggle_menu::{ToggleMenuItem, ToggleMenuStateHandle},
     },
-    AppContext, Element, Entity, FocusContext, SingletonEntity, TypedActionView, View, ViewContext,
+};
 
 use crate::{
     editor::{
@@ -28,6 +28,7 @@ use crate::{
         buttons::{highlight, icon_button},
         icons::{self, Icon},
     },
+};
 
 use warpui::platform::Cursor;
 

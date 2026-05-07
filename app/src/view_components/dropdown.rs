@@ -14,8 +14,6 @@ use warpui::{
         button::{ButtonVariant, TextAndIcon, TextAndIconAlignment},
         components::{Coords, UiComponent, UiComponentStyles},
     },
-    Action, AppContext, BlurContext, Entity, SingletonEntity, TypedActionView, View, ViewContext,
-    ViewHandle, WeakViewHandle,
 };
 
 use crate::{

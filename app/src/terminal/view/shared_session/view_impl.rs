@@ -17,6 +17,7 @@ use crate::terminal::shared_session::role_change_modal::{
 use crate::terminal::shared_session::settings::SharedSessionSettings;
 use crate::terminal::shared_session::{
     join_link, SharedSessionActionSource, SharedSessionScrollbackType, SharedSessionStatus,
+};
 use crate::terminal::view::{
     ContextMenuAction, Event, InlineBannerItem, InlineBannerType, RichContentInsertionPosition,
     SharedSessionBanners, SizeUpdateBuilder, TerminalAction, TerminalView,

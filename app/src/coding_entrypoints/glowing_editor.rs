@@ -6,10 +6,6 @@ use warpui::{
         Align, ConstrainedBox, Container, CornerRadius, CrossAxisAlignment, DropShadow, Flex,
         MainAxisAlignment, ParentElement as _, Radius, Shrinkable,
     },
-    fonts::Weight,
-    ui_components::components::{BorderStyle, Coords, UiComponent as _, UiComponentStyles},
-    AppContext, Element, Entity, FocusContext, SingletonEntity as _, TypedActionView, View,
-    ViewContext, ViewHandle,
 };
 
 use crate::editor::{EditorOptions, EditorView, Event as EditorEvent, TextOptions};

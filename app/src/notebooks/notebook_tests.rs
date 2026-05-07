@@ -55,7 +55,6 @@ use crate::{
         user_profiles::{UserProfileWithUID, UserProfiles},
         user_workspaces::UserWorkspaces,
     },
-    GlobalResourceHandles, GlobalResourceHandlesProvider, PrivacySettings,
 };
 
 use super::{NotebookEvent, NotebookView, EDIT_WINDOW_DURATION, SAVE_PERIOD};
