@@ -612,3 +612,107 @@ pub struct OpenWarpDriveObjectSettings;
 
 #[derive(Debug, Clone, Default)]
 pub struct ObjectClient;
+
+// ---------------------------------------------------------------------------
+// Fifth sweep: more cloud-side helpers seen in remaining errors
+// ---------------------------------------------------------------------------
+
+#[derive(Debug, Clone, Default)]
+pub struct ServerAIConversationMetadata;
+
+#[derive(Debug, Clone, Default)]
+pub struct ReviewComment;
+
+#[derive(Debug, Clone, Default)]
+pub struct RenderableOptionConfig;
+
+#[derive(Debug, Clone, Default)]
+pub struct JsonModel;
+
+#[derive(Debug, Clone, Default)]
+pub struct GenericStringModel;
+
+#[derive(Debug, Clone, Default)]
+pub struct ServerTime;
+
+#[derive(Debug, Clone, Default)]
+pub struct MessageProvider;
+
+#[derive(Debug, Clone, Default)]
+pub struct SizeInfo;
+
+#[derive(Debug, Clone, Default)]
+pub struct PaneTemplateType;
+
+#[derive(Debug, Clone, Default)]
+pub struct NetworkLogView;
+
+#[derive(Debug, Clone, Default)]
+pub struct SubmittableTextInput;
+
+#[derive(Debug, Clone, Default)]
+pub struct TipsCompleted;
+
+#[derive(Debug, Clone, Default)]
+pub struct DetectedLinksState;
+
+#[derive(Debug, Clone, Default)]
+pub struct CustomSecretRegexUpdater;
+
+impl CustomSecretRegexUpdater {
+    pub fn redact_secrets<S: AsRef<str>>(s: S) -> String {
+        s.as_ref().to_string()
+    }
+}
+
+pub fn redact_secrets<S: AsRef<str>>(s: S) -> String {
+    s.as_ref().to_string()
+}
+
+#[derive(Debug, Clone, Default)]
+pub struct AmbientAgentTaskInput;
+
+#[derive(Debug, Clone, Default)]
+pub struct AmbientAgentTaskMetadata;
+
+#[derive(Debug, Clone, Default)]
+pub struct UserContextMetadata;
+
+#[derive(Debug, Clone, Default)]
+pub struct ScheduledAmbientAgent;
+
+#[derive(Debug, Clone, Default)]
+pub struct AgentRun;
+
+#[derive(Debug, Clone, Default)]
+pub struct StartAgentExecutionMode;
+
+#[derive(Debug, Clone, Default)]
+pub struct AIAgentExecutionProfileFields;
+
+#[derive(Debug, Clone, Default)]
+pub struct AgentEnvironment;
+
+#[derive(Debug, Clone, Default)]
+pub struct ScheduledAgentTaskRunHistory;
+
+#[derive(Debug, Clone, Default)]
+pub struct PassiveSuggestionTriggerType;
+
+#[derive(Debug, Clone, Default)]
+pub struct EntrypointType;
+
+#[derive(Debug, Clone, Default)]
+pub struct OutputModelInfo;
+
+#[derive(Debug, Clone, Default)]
+pub struct ChannelStateEvent;
+
+#[derive(Debug, Clone, Default)]
+pub struct ServerEnvironment;
+
+#[derive(Debug, Clone, Default)]
+pub struct AmbientAgentDispatchSource;
+
+#[derive(Debug, Clone, Default)]
+pub struct DispatchAmbientAgentRequest;
