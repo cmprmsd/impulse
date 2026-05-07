@@ -1,14 +1,13 @@
 use std::sync::Arc;
+use crate::legacy_stubs::{AIConversationId};
 
 use warp_core::features::FeatureFlag;
 use warpui::{AppContext, ModelContext, SingletonEntity};
 
 use crate::{
     ai::{
-        agent::{
-            conversation::AIConversationId, AIAgentContext, AIAgentInput, CancellationReason,
-            CloneRepositoryURL, EntrypointType, RequestMetadata,
-        },
+        agent::{ AIAgentContext, AIAgentInput, CancellationReason,
+            CloneRepositoryURL, EntrypointType, RequestMetadata},
         blocklist::agent_view::AgentViewEntryOrigin,
     },
 };

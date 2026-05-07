@@ -1,4 +1,5 @@
 use super::history_model::{
+use crate::legacy_stubs::{TaskId};
     BlocklistAIHistoryEvent, BlocklistAIHistoryModel, ConversationStatusUpdate,
 };
 use super::telemetry::{
@@ -8,9 +9,7 @@ use super::telemetry::{
 };
 use crate::ai::agent::{
     conversation::{AIConversationId, ConversationStatus},
-    task::TaskId,
-    AIAgentExchangeId, AIAgentInput, AIAgentOutputMessageType, LifecycleEventType,
-};
+    AIAgentExchangeId, AIAgentInput, AIAgentOutputMessageType, LifecycleEventType};
 use std::collections::{HashMap, HashSet};
 use uuid::Uuid;
 use warp_core::features::FeatureFlag;

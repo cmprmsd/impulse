@@ -1,9 +1,10 @@
 use warp_core::features::FeatureFlag;
+use crate::legacy_stubs::{AIConversationId};
 use warpui::{SingletonEntity, ViewContext};
 
 use crate::{
     ai::{
-        agent::{conversation::AIConversationId, CancellationReason},
+        agent::{ CancellationReason},
         blocklist::block::{FinishReason, PendingUserQueryBlock, PendingUserQueryBlockEvent},
     },
 };

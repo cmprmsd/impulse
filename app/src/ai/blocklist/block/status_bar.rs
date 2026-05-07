@@ -1,4 +1,5 @@
 use std::{collections::HashSet, sync::Arc, time::Duration};
+use crate::legacy_stubs::{AIConversationId};
 
 use super::{
     cli_controller::{CLISubagentController, CLISubagentEvent, UserTakeOverReason},
@@ -25,10 +26,8 @@ use crate::{
 
 use crate::{
     ai::{
-        agent::{
-            conversation::AIConversationId, icons, AIAgentExchangeId, AIAgentOutput,
-            AIAgentOutputMessageType, CancellationReason, SummarizationType,
-        },
+        agent::{ icons, AIAgentExchangeId, AIAgentOutput,
+            AIAgentOutputMessageType, CancellationReason, SummarizationType},
         blocklist::{
             agent_view::shortcuts::AgentShortcutViewModel,
             ai_brand_color,

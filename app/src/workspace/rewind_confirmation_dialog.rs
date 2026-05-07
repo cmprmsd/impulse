@@ -1,4 +1,5 @@
 use pathfinder_geometry::vector::vec2f;
+use crate::legacy_stubs::{AIConversationId};
 use warp_core::ui::{color::coloru_with_opacity, theme::Fill};
 use warpui::{
     elements::{
@@ -16,7 +17,7 @@ use warpui::{
 };
 
 use crate::{
-    ai::agent::{conversation::AIConversationId, AIAgentExchangeId},
+    ai::agent::{ AIAgentExchangeId},
     appearance::Appearance,
     ui_components::dialog::{dialog_styles, Dialog},
     ui_components::icons::Icon,

@@ -1,10 +1,11 @@
 use std::collections::HashMap;
+use crate::legacy_stubs::{AIConversationId};
 
 use itertools::Itertools;
 use warpui::{AppContext, ModelContext, ModelHandle, SingletonEntity};
 
 use crate::{
-    ai::agent::{conversation::AIConversationId, CancellationReason},
+    ai::agent::{ CancellationReason},
 };
 
 use super::{

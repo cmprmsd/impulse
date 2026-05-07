@@ -1,10 +1,9 @@
 use warpui::{AppContext, ViewContext};
+use crate::legacy_stubs::{AIConversationId};
 
 use crate::ai::{
-    agent::{
-        conversation::AIConversationId, AIAgentInput, AIAgentOutput, RenderableAIError,
-        ServerOutputId, Shared,
-    },
+    agent::{ AIAgentInput, AIAgentOutput, RenderableAIError,
+        ServerOutputId, Shared},
 };
 
 use super::{super::AIBlock, AIBlockModel, AIBlockOutputStatus, OutputStatusUpdateCallback};

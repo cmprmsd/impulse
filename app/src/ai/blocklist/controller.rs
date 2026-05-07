@@ -5,6 +5,7 @@
 //! Agent Mode UI.
 
 use crate::legacy_stubs::{AmbientAgentTaskId, CloudModel, ServerApiProvider, TeamUpdateManager, TelemetryEvent, UserWorkspaces};
+use crate::legacy_stubs::{AIConversationId};
 use crate::legacy_stubs::{AIConversation, ServerConversationToken, TaskId};
 use crate::legacy_stubs::{ConversationStatus};
 pub mod input_context;
@@ -37,12 +38,10 @@ use crate::ai::document::ai_document_model::{
 };
 use crate::ai::llms::LLMId;
 use crate::ai::{
-    agent::{
-        conversation::AIConversationId, extract_user_query_mode, AIAgentActionResultType,
+    agent::{ extract_user_query_mode, AIAgentActionResultType,
         AIAgentAttachment, AIAgentContext, AIAgentExchangeId, AIAgentInput, AIAgentOutputStatus,
         AIIdentifiers, EntrypointType, FinishedAIAgentOutput, RenderableAIError, RequestCost,
-        RequestMetadata, StaticQueryType, UserQueryMode,
-    },
+        RequestMetadata, StaticQueryType, UserQueryMode},
 };
 use crate::features::FeatureFlag;
 use crate::global_resource_handles::GlobalResourceHandlesProvider;

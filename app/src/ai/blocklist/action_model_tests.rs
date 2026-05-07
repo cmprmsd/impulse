@@ -1,7 +1,8 @@
 use std::{collections::HashMap, sync::Arc};
+use crate::legacy_stubs::{TaskId};
 
 use super::*;
-use crate::ai::agent::{task::TaskId, AIAgentActionResultType};
+use crate::ai::agent::{ AIAgentActionResultType};
 
 fn make_action_result(id: &str) -> Arc<AIAgentActionResult> {
     Arc::new(AIAgentActionResult {

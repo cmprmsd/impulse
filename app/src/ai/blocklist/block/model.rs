@@ -2,16 +2,15 @@ mod helper;
 mod model_impl;
 
 pub use helper::AIBlockModelHelper;
+use crate::legacy_stubs::{AIConversationId};
 pub use model_impl::*;
 use session_sharing_protocol::common::ParticipantId;
 use warp_core::features::FeatureFlag;
 
 use crate::ai::{
-    agent::{
-        conversation::AIConversationId, AIAgentExchangeId, AIAgentInput, AIAgentOutput,
+    agent::{ AIAgentExchangeId, AIAgentInput, AIAgentOutput,
         CancellationReason, PassiveSuggestionTrigger, PassiveSuggestionTriggerType,
-        RenderableAIError, ServerOutputId, Shared,
-    },
+        RenderableAIError, ServerOutputId, Shared},
 };
 use chrono::TimeDelta;
 use warpui::{AppContext, ViewContext};
@@ -222,9 +221,7 @@ pub mod testing {
     use warpui::{AppContext, ViewContext};
 
     use crate::ai::{
-        agent::{
-            conversation::AIConversationId, AIAgentInput, AIAgentOutput, ServerOutputId, Shared,
-        },
+        agent::{ AIAgentInput, AIAgentOutput, ServerOutputId, Shared},
         blocklist::{
             model::{AIRequestType, PassiveRequestType, PassiveSuggestionTriggerType},
             AIBlock,

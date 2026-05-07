@@ -2,6 +2,7 @@
 #![cfg_attr(not(feature = "local_fs"), allow(dead_code))]
 
 use std::{collections::HashMap, sync::Arc};
+use crate::legacy_stubs::{AIConversationId};
 use uuid::Uuid;
 
 use anyhow::anyhow;
@@ -10,12 +11,10 @@ use serde::{Deserialize, Serialize};
 
 use crate::{
     ai::{
-        agent::{
-            conversation::AIConversationId, AIAgentActionType, AIAgentAttachment, AIAgentContext,
+        agent::{ AIAgentActionType, AIAgentAttachment, AIAgentContext,
             AIAgentExchangeId, AIAgentInput, AIAgentPtyWriteMode, AskUserQuestionItem,
             FileLocations, PassiveSuggestionResultType, ReadFilesRequest,
-            RequestComputerUseRequest, SearchCodebaseRequest, UseComputerRequest, UserQueryMode,
-        },
+            RequestComputerUseRequest, SearchCodebaseRequest, UseComputerRequest, UserQueryMode},
         llms::LLMId,
     },
 };

@@ -1,5 +1,6 @@
 #[cfg(not(target_family = "wasm"))]
 use anyhow::anyhow;
+use crate::legacy_stubs::{AIConversationId};
 #[cfg(not(target_family = "wasm"))]
 use futures::future::Either;
 use futures::{future::BoxFuture, FutureExt};
@@ -9,9 +10,7 @@ use std::time::Duration;
 use warpui::r#async::Timer;
 use warpui::{AppContext, Entity, ModelContext, SingletonEntity};
 
-use crate::ai::agent::{
-    conversation::AIConversationId, AIAgentAction, AIAgentActionResultType, AIAgentActionType,
-};
+use crate::ai::agent::{ AIAgentAction, AIAgentActionResultType, AIAgentActionType};
 use crate::ai::blocklist::orchestration_events::{OrchestrationEventService, SendMessageResult};
 use crate::ai::blocklist::telemetry::{
     BlocklistOrchestrationTelemetryEvent, TeamAgentCommunicationFailedEvent,

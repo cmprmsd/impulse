@@ -1,12 +1,11 @@
 use futures::{future::BoxFuture, FutureExt};
+use crate::legacy_stubs::{AIConversationId};
 use warpui::{Entity, ModelContext, ModelHandle, SingletonEntity};
 
 use crate::{
     ai::{
-        agent::{
-            conversation::AIConversationId, AIAgentAction, AIAgentActionType,
-            CreateDocumentsRequest, CreateDocumentsResult, DocumentContext,
-        },
+        agent::{ AIAgentAction, AIAgentActionType,
+            CreateDocumentsRequest, CreateDocumentsResult, DocumentContext},
         artifacts::Artifact,
         blocklist::BlocklistAIHistoryModel,
         document::ai_document_model::{AIDocumentModel, AIDocumentVersion},

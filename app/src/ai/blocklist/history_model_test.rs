@@ -1,4 +1,5 @@
 use std::collections::{HashMap, HashSet};
+use crate::legacy_stubs::{ServerConversationToken};
 use std::time::Duration;
 
 use chrono::{DateTime, Local, Utc};
@@ -8,11 +9,9 @@ use warpui::{App, EntityId};
 use crate::{
     ai::{
         agent::{
-            api::ServerConversationToken,
             conversation::{AIAgentHarness, AIConversationId, ServerAIConversationMetadata},
             AIAgentExchange, AIAgentExchangeId, AIAgentInput, AIAgentOutputStatus,
-            FinishedAIAgentOutput, Shared, UserQueryMode,
-        },
+            FinishedAIAgentOutput, Shared, UserQueryMode},
         ambient_agents::AmbientAgentTaskId,
         blocklist::{controller::RequestInput, ResponseStreamId},
         llms::LLMId,

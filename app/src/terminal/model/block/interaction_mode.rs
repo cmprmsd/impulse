@@ -1,9 +1,10 @@
 use anyhow::anyhow;
+use crate::legacy_stubs::{AIConversationId, TaskId};
 use warp_terminal::model::{grid::Dimensions, Point};
 
 use crate::{
     ai::{
-        agent::{conversation::AIConversationId, task::TaskId, AIAgentActionId},
+        agent::{ AIAgentActionId},
         blocklist::block::cli_controller::{LongRunningCommandControlState, UserTakeOverReason},
     },
     terminal::{

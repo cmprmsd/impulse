@@ -1,4 +1,5 @@
 use parking_lot::{FairMutex, RwLock};
+use crate::legacy_stubs::{AIConversationId, TaskId};
 use pathfinder_color::ColorU;
 use settings::Setting as _;
 use std::sync::Arc;
@@ -60,11 +61,9 @@ use crate::workspace::WorkspaceAction;
 use crate::ToastStack;
 use crate::{
     ai::{
-        agent::{
-            conversation::AIConversationId, task::TaskId, AIAgentActionType, AIAgentOutput,
+        agent::{ AIAgentActionType, AIAgentOutput,
             AIAgentOutputMessageType, AIAgentText, AIAgentTextSection, ProgrammingLanguage,
-            WebSearchStatus,
-        },
+            WebSearchStatus},
         blocklist::{
             code_block::CodeSnippetButtonHandles, BlocklistAIActionModel, BlocklistAIHistoryEvent,
             BlocklistAIPermissions,

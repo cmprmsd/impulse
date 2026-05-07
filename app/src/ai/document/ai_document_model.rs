@@ -1,6 +1,7 @@
 #![allow(warnings)]
 
 use crate::legacy_stubs::{AuthStateProvider, UserWorkspaces};
+use crate::legacy_stubs::{AIConversationId};
 
 use std::cmp::Ordering;
 use std::collections::{HashMap, HashSet};
@@ -19,7 +20,7 @@ use crate::global_resource_handles::GlobalResourceHandlesProvider;
 use crate::persistence::ModelEvent;
 use crate::{
     ai::{
-        agent::{conversation::AIConversationId, AIAgentActionId},
+        agent::{ AIAgentActionId},
         blocklist::{BlocklistAIHistoryEvent, BlocklistAIHistoryModel},
         execution_profiles::profiles::AIExecutionProfilesModel,
     },

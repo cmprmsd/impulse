@@ -1,4 +1,5 @@
 use std::{cell::RefCell, rc::Rc};
+use crate::legacy_stubs::{AIConversationId};
 
 use anyhow::anyhow;
 use chrono::{DateTime, Local, TimeDelta};
@@ -9,9 +10,7 @@ use warpui::{Entity, ModelContext, SingletonEntity};
 use crate::{
     ai::agent::{
         api::{self, generate_multi_agent_output, ConvertToAPITypeError},
-        conversation::AIConversationId,
-        AIIdentifiers, CancellationReason,
-    },
+        AIIdentifiers, CancellationReason},
 };
 use crate::legacy_stubs::{ServerApiProvider};
 use crate::network::NetworkStatus;

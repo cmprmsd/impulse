@@ -1,11 +1,10 @@
 use warpui::{AppContext, EntityId, ModelHandle, SingletonEntity};
+use crate::legacy_stubs::{AIConversation};
 
 use crate::{
     ai::{
-        agent::{
-            conversation::AIConversation, AIAgentAction, AIAgentActionId, AIAgentActionType,
-            AIAgentInput, AIAgentOutputMessageType, SummarizationType,
-        },
+        agent::{ AIAgentAction, AIAgentActionId, AIAgentActionType,
+            AIAgentInput, AIAgentOutputMessageType, SummarizationType},
         blocklist::BlocklistAIActionModel,
     },
 };

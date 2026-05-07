@@ -1,8 +1,9 @@
 use warpui::{prelude::ChildView, Element, EntityId, View, ViewContext, ViewHandle};
+use crate::legacy_stubs::{AIConversationId};
 
 use crate::{
     ai::{
-        agent::{conversation::AIConversationId, AIAgentExchangeId},
+        agent::{ AIAgentExchangeId},
         blocklist::{agent_view::AgentViewEntryOrigin, telemetry_banner::TelemetryBanner, AIBlock},
     },
     env_vars::env_var_collection_block::EnvVarCollectionBlock,

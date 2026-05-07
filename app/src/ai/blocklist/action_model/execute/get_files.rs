@@ -1,4 +1,5 @@
 use std::path::{Path, PathBuf};
+use crate::legacy_stubs::{AIConversationId};
 
 use futures::{future::BoxFuture, FutureExt};
 use itertools::Itertools;
@@ -6,10 +7,8 @@ use warpui::{Entity, EntityId, ModelContext, ModelHandle, SingletonEntity};
 
 use crate::{
     ai::{
-        agent::{
-            conversation::AIConversationId, AIAgentAction, AIAgentActionResultType,
-            AIAgentActionType, FileLocations, GetFilesRequestType, GetFilesResult,
-        },
+        agent::{ AIAgentAction, AIAgentActionResultType,
+            AIAgentActionType, FileLocations, GetFilesRequestType, GetFilesResult},
         blocklist::BlocklistAIPermissions,
         get_relevant_files::controller::{
             GetRelevantFilesController, GetRelevantFilesError, GetRelevantFilesStatus,

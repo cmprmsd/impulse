@@ -4,6 +4,7 @@
 // based on the request type and status.
 
 use std::borrow::Cow;
+use crate::legacy_stubs::{AIConversation};
 #[cfg(feature = "local_fs")]
 use std::collections::HashMap;
 use std::iter;
@@ -49,7 +50,7 @@ use crate::terminal::find::BlockListMatch;
 use crate::terminal::grid_renderer::{FOCUSED_MATCH_COLOR, MATCH_COLOR};
 use crate::{
     ai::{
-        agent::{conversation::AIConversation, icons, ShellCommandDelay},
+        agent::{ icons, ShellCommandDelay},
         blocklist::{
             block::status_bar::BlocklistAIStatusBarAction, history_model::BlocklistAIHistoryModel,
             BlocklistAIActionModel, ShellCommandExecutor,

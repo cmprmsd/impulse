@@ -1,4 +1,5 @@
 use std::path::PathBuf;
+use crate::legacy_stubs::{AIConversationId};
 use std::sync::Arc;
 use std::time::Duration;
 
@@ -8,10 +9,8 @@ use itertools::Itertools;
 use warpui::r#async::FutureExt as AsyncFutureExt;
 use warpui::{AppContext, Entity, EntityId, ModelContext, ModelHandle, SingletonEntity};
 
-use crate::ai::agent::{
-    conversation::AIConversationId, AIAgentAction, AIAgentActionType, FileGlobResult,
-    FileGlobV2Match, FileGlobV2Result,
-};
+use crate::ai::agent::{ AIAgentAction, AIAgentActionType, FileGlobResult,
+    FileGlobV2Match, FileGlobV2Result};
 use crate::ai::blocklist::BlocklistAIPermissions;
 use crate::ai::paths::{host_native_absolute_path, join_paths, shell_native_absolute_path};
 use crate::terminal::model::session::ExecuteCommandOptions;

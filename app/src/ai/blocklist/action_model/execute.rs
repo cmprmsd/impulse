@@ -1,4 +1,5 @@
 use warpui::{AppContext, Entity, EntityId, ModelContext, ModelHandle};
+use crate::legacy_stubs::{AIConversationId, TaskId};
 pub(super) mod ask_user_question;
 pub(super) mod call_mcp_tool;
 pub(super) mod create_documents;
@@ -88,11 +89,9 @@ use self::search_codebase::SearchCodebaseExecutor;
 use crate::ai::{agent::AnyFileContent, paths::host_native_absolute_path};
 use crate::{
     ai::{
-        agent::{
-            conversation::AIConversationId, task::TaskId, AIAgentAction, AIAgentActionId,
+        agent::{ AIAgentAction, AIAgentActionId,
             AIAgentActionResult, AIAgentActionResultType, AIAgentActionType, CancellationReason,
-            FileContext, FileLocations, ServerOutputId,
-        },
+            FileContext, FileLocations, ServerOutputId},
         ambient_agents::AmbientAgentTaskId,
         get_relevant_files::controller::GetRelevantFilesController,
     },

@@ -1,4 +1,5 @@
 use std::{collections::HashMap, path::Path, sync::Arc};
+use crate::legacy_stubs::{AIConversationId};
 
 use chrono::Local;
 use lazy_static::lazy_static;
@@ -8,10 +9,8 @@ use warpui::{AppContext, SingletonEntity};
 
 use crate::{
     ai::{
-        agent::{
-            conversation::AIConversationId, AIAgentAttachment, AIAgentContext,
-            DocumentContentAttachmentSource, DriveObjectPayload,
-        },
+        agent::{ AIAgentAttachment, AIAgentContext,
+            DocumentContentAttachmentSource, DriveObjectPayload},
         block_context::BlockContext,
         blocklist::BlocklistAIContextModel,
         document::ai_document_model::{AIDocumentId, AIDocumentModel},

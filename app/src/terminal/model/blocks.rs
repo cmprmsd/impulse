@@ -1,7 +1,8 @@
 use crate::legacy_stubs::{AgentViewState};
+use crate::legacy_stubs::{AIConversationId};
 mod selection;
 
-use crate::ai::agent::{conversation::AIConversationId, AIAgentActionId};
+use crate::ai::agent::{ AIAgentActionId};
 use crate::ai::blocklist::SerializedBlockListItem;
 use crate::terminal::block_filter::BlockFilterQuery;
 

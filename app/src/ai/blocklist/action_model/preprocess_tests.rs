@@ -1,5 +1,6 @@
 use super::*;
-use crate::ai::agent::{task::TaskId, AIAgentAction, AIAgentActionId, AIAgentActionType};
+use crate::legacy_stubs::{TaskId};
+use crate::ai::agent::{ AIAgentAction, AIAgentActionId, AIAgentActionType};
 use std::collections::HashSet;
 
 fn create_test_action(id: AIAgentActionId) -> AIAgentAction {

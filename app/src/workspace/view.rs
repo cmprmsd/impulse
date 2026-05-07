@@ -1,4 +1,5 @@
 use crate::legacy_stubs::{AmbientAgentTaskId, AnonymousUserSignupEntrypoint, AuthManager, AuthState, AuthStateProvider, CloseTarget, CloudModel, CodebaseIndexManager, GenericStringObjectFormat, JsonObjectType, ObjectOperation, ObjectType, ObjectUid, OperationSuccessType, Owner, PaletteSource, RemoteServerManager, RemoteServerManagerEvent, ServerApi, ServerApiProvider, ServerId, SharingDialogSource, Space, SyncId, UpdateManager, UpdateManagerEvent, UserWorkspaces};
+use crate::legacy_stubs::{AIConversationId, ServerConversationToken};
 use crate::legacy_stubs::{AIClient};
 use crate::legacy_stubs::{AIConversation};
 use crate::legacy_stubs::{CloudConversationData};
@@ -43,7 +44,7 @@ use crate::ai::conversation_utils;
 use crate::ai::document::ai_document_model::{AIDocumentId, AIDocumentModel};
 use crate::ai::llms::LLMPreferences;
 use crate::ai::{
-    agent::{api::ServerConversationToken, conversation::AIConversationId, EntrypointType},
+    agent::{ EntrypointType},
     blocklist::{
         inline_action::code_diff_view::CodeDiffView,
         suggested_agent_mode_workflow_modal::{

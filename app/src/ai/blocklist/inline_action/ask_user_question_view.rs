@@ -1,4 +1,5 @@
 use std::{collections::HashSet, sync::Arc, time::Duration};
+use crate::legacy_stubs::{AIConversationId, TaskId};
 
 use ai::agent::{
     action::{AskUserQuestionItem, AskUserQuestionOption, AskUserQuestionType},
@@ -19,10 +20,8 @@ use warpui::{
 
 use crate::{
     ai::{
-        agent::{
-            conversation::AIConversationId, icons::yellow_stop_icon, task::TaskId, AIAgentActionId,
-            AIAgentActionResult, AIAgentActionResultType,
-        },
+        agent::{ icons::yellow_stop_icon, AIAgentActionId,
+            AIAgentActionResult, AIAgentActionResultType},
         blocklist::{
             action_model::{AIActionStatus, BlocklistAIActionEvent, BlocklistAIActionModel},
             block::{

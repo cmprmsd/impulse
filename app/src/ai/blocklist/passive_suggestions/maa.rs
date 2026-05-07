@@ -1,11 +1,12 @@
 use std::sync::Arc;
+use crate::legacy_stubs::{AIConversationId};
 
 use super::super::controller::{BlocklistAIController, BlocklistAIControllerEvent};
 use crate::ai::agent::AIIdentifiers;
 use crate::ai::agent::FileContext;
 use crate::ai::agent::PassiveCodeDiffEntry;
 use crate::ai::agent::PassiveSuggestionTrigger;
-use crate::ai::agent::{conversation::AIConversationId, ShellCommandCompletedTrigger};
+use crate::ai::agent::{ ShellCommandCompletedTrigger};
 use crate::ai::block_context::BlockContext;
 use crate::ai::blocklist::inline_action::code_diff_view::FileDiff;
 use crate::ai::blocklist::{

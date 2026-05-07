@@ -1,4 +1,5 @@
 use std::{collections::HashMap, sync::Arc};
+use crate::legacy_stubs::{AIConversationId, TaskId};
 
 use instant::Instant;
 use parking_lot::FairMutex;
@@ -9,12 +10,10 @@ use warpui::{Entity, EntityId, ModelContext, ModelHandle, SingletonEntity};
 use crate::ai::blocklist::context_model::block_context_from_terminal_model;
 use crate::{
     ai::{
-        agent::{
-            conversation::AIConversationId, task::TaskId, AIAgentActionId, AIAgentActionResultType,
+        agent::{ AIAgentActionId, AIAgentActionResultType,
             AIAgentContext, CancellationReason, ReadShellCommandOutputResult,
             RequestCommandOutputResult, TransferShellCommandControlToUserResult,
-            WriteToLongRunningShellCommandResult,
-        },
+            WriteToLongRunningShellCommandResult},
         blocklist::{
             agent_view::{AgentViewController, AgentViewEntryOrigin},
             BlocklistAIActionEvent, BlocklistAIActionModel, BlocklistAIController,

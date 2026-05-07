@@ -1,4 +1,5 @@
 use std::borrow::Cow;
+use crate::legacy_stubs::{AIConversationId};
 use std::collections::HashMap;
 use std::path::PathBuf;
 use std::sync::Arc;
@@ -11,9 +12,7 @@ use futures::FutureExt;
 use warpui::r#async::FutureExt as AsyncFutureExt;
 use warpui::{AppContext, Entity, EntityId, ModelContext, ModelHandle, SingletonEntity};
 
-use crate::ai::agent::{
-    conversation::AIConversationId, AIAgentAction, AIAgentActionType, GrepResult, ServerOutputId,
-};
+use crate::ai::agent::{ AIAgentAction, AIAgentActionType, GrepResult, ServerOutputId};
 use crate::ai::blocklist::{
     telemetry_banner::should_collect_ai_ugc_telemetry, BlocklistAIPermissions,
 };

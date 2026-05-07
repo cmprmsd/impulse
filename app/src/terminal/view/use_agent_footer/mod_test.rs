@@ -1,4 +1,5 @@
 use std::rc::Rc;
+use crate::legacy_stubs::{AIConversationId, TaskId};
 
 use session_sharing_protocol::sharer::SessionSourceType;
 use warp_core::settings::Setting as _;
@@ -6,10 +7,8 @@ use warpui::{App, AppContext, SingletonEntity, ViewContext};
 
 use crate::{
     ai::{
-        agent::{
-            conversation::AIConversationId, task::TaskId, AIAgentInput, ServerOutputId,
-            UserQueryMode,
-        },
+        agent::{ AIAgentInput, ServerOutputId,
+            UserQueryMode},
         blocklist::{
             agent_view::AgentViewEntryOrigin,
             block::cli_controller::UserTakeOverReason,

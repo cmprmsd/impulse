@@ -1,4 +1,5 @@
 use crate::legacy_stubs::{BlocklistAIHistoryModel};
+use crate::legacy_stubs::{AIConversationId};
 use crate::terminal::model::session::active_session::ActiveSession;
 use crate::{safe_warn};
 mod apply_diff_model;
@@ -30,11 +31,9 @@ pub use telemetry::{
 
 use crate::{
     ai::{
-        agent::{
-            conversation::AIConversationId, AIAgentAction, AIAgentActionId,
+        agent::{ AIAgentAction, AIAgentActionId,
             AIAgentActionResultType, AIAgentActionType, AIAgentOutputMessage,
-            AIAgentOutputMessageType, AIIdentifiers, RequestFileEditsResult, UpdatedFileContext,
-        },
+            AIAgentOutputMessageType, AIIdentifiers, RequestFileEditsResult, UpdatedFileContext},
         blocklist::{
             inline_action::code_diff_view::{
                 CodeDiffView, CodeDiffViewEvent, DiffSessionType, FileDiff,

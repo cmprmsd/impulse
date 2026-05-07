@@ -1,13 +1,12 @@
 use futures::{channel::oneshot, future::BoxFuture, FutureExt};
+use crate::legacy_stubs::{AIConversationId};
 use warp_core::features::FeatureFlag;
 use warpui::{Entity, ModelContext};
 
 use crate::{
     ai::{
-        agent::{
-            conversation::AIConversationId, AIAgentAction, AIAgentActionId, AIAgentActionType,
-            SuggestPromptRequest, SuggestPromptResult,
-        },
+        agent::{ AIAgentAction, AIAgentActionId, AIAgentActionType,
+            SuggestPromptRequest, SuggestPromptResult},
         blocklist::action_model::execute::{
             ActionExecution, AnyActionExecution, ExecuteActionInput, PreprocessActionInput,
         },
