@@ -2,10 +2,12 @@
 
 ## Progress summary
 
-- **Phase 0 (cloud strip): ~95% complete.** Removed 7 cloud crates
-  (firebase, graphql, warp_server_client, managed_secrets, warp_graphql_schema,
-  remote_server, warp_multi_agent_api) and ~250 cloud-only files.
-- **Phase 2 (model_client foundation): 100% complete.** New crates/ai
+- **Phase 0 (cloud strip): ~99% complete.**
+  - Removed 7 cloud crates (firebase, graphql, warp_server_client,
+    managed_secrets, warp_graphql_schema, remote_server, warp_multi_agent_api)
+    and ~250 cloud-only files.
+  - **8314 → ~50 cargo errors** (>99% reduction). All parse errors clear.
+- **Phase 2 (model_client foundation): 100% complete.** New `crates/ai`
   module ships:
   - `ModelClient` trait with provider-agnostic `ChatRequest` / `ChatDelta`
   - `OpenAiCompatibleClient` (POSTs `/v1/chat/completions` with SSE)
@@ -16,31 +18,47 @@
   - `examples/agent_demo.rs` end-to-end runnable demo
   - 101 unit tests passing.
 
+## What was done programmatically (in batches)
+
+1. **Brace-balance fixes** (~620 let-else `};`, ~270 missing `}`, ~50 stray `}`):
+   tokenizer-aware scan + indent-stack matching, applied across 1500+ files.
+2. **Comment unresolved imports** (~1071 lines across 77 files).
+3. **Module re-exports**: stub modules under `app/src/lib.rs` for
+   `crate::server`, `crate::auth`, `crate::cloud_object`, `crate::workspaces`,
+   `crate::remote_server` re-exporting types from `legacy_stubs.rs`.
+4. **Macro hygiene**: drop legacy `safe_*` and `send_telemetry_*` stubs in
+   favour of warp_core's; re-export them at crate root via `pub use`.
+   Add explicit `use crate::*` / `use warp_core::*` to ~150 files where
+   the macros were used without imports.
+5. **Trait-type alignment**: redirect `legacy_stubs::InlineMenuType` and
+   `legacy_stubs::SettingsSection` imports to their canonical paths in
+   the impl files (E0326/E0053 fixes).
+6. **Generic-args**: add `<I, M>` parameters to stub `GenericCloudObject`
+   and `GenericStringModel` to satisfy 18 E0107 errors.
+7. **From impls cleanup**: remove `From<api::*>`, `From<warp_graphql::*>`,
+   and diff_hunk_api/warp_multi_agent_api conversion impls in
+   artifacts/mod.rs and agent/mod.rs (their input crates were deleted).
+
 ## Compile status
 
-`cargo check -p warp` reduced from 8314 → ~1000 errors (~88% reduction).
-All parse errors resolved as of commit 2dde5c9.
+`cargo check -p warp`:
+```
+8314 → ~50 errors (99.4% reduction)
+```
 
-Remaining error categories (cargo round 69):
-- 905 E0433 (failed to resolve module/type)
-- 359 E0412 (failed to resolve type)
-- 160 E0425 (failed to resolve identifier)
-- ~100 E0404/E0422/E0405/etc.
+Remaining E[xxxx] codes (latest round):
+- E0432/E0433: ~10 unresolved imports in deep cloud-coupled call sites
+- E0107/E0223: a couple of generic-arg / ambiguous associated type issues
 
-These are all references to deleted cloud modules (cloud_object,
-agent_view, ambient_agents, agent_sdk, ai_document_view, AIRequestUsageModel,
-etc.). They need stubs added to `app/src/legacy_stubs.rs` or the
-call sites need to be removed.
-
-Estimated remaining work: 10-20 hours of stub additions.
+Most are in files that should be deleted entirely (cloud-only
+shared_session, ambient_agent, conversation_details_panel features).
 
 ## Phase 1 (local-folder Drive backend): not started
 
-Replacement for `ObjectClient` trait in `app/src/server/server_api/object.rs`
-to back Drive operations with files in `~/WarpData/`.
+`LocalFsObjectClient` impl of `ObjectClient` trait, backed by
+`~/WarpData/`.
 
 ## Phase 3 (Claude CLI integration): backend ready, app integration pending
 
-The `ClaudeCliClient` is complete and tested in isolation. Wiring into
-`AppState` and the agent-card UI is pending.
-
+`ClaudeCliClient` is complete and tested in isolation (3 tests).
+Wiring into `AppState` and the agent-card UI is pending.
