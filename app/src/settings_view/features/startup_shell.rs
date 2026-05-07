@@ -15,6 +15,7 @@ use crate::{
         session_settings::{SessionSettings, SessionSettingsChangedEvent},
     }};
 use crate::legacy_stubs::{TelemetryEvent};
+use crate::view_components::dropdown::Dropdown;
 /// A view for configuring the initial shell for new sessions. This can be the
 /// user's login shell, the default installed version of zsh, bash, or fish,
 /// or an arbitrary user-provided path.

@@ -21,6 +21,7 @@ use crate::{
         },
         EditorSettings, SUPPORTED_EDITORS,
     }};
+use crate::view_components::dropdown::Dropdown;
 
 const TABBED_FILE_VIEWER_TOGGLE_HEADER: &str = "Group files into single editor pane";
 const TABBED_FILE_VIEWER_TOGGLE_DESCRIPTION: &str = "When this setting is on, any files opened in the same tab will be automatically grouped into a single editor pane.";

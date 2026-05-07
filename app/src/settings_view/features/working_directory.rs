@@ -12,6 +12,7 @@ use crate::{
     report_if_error, send_telemetry_from_ctx,
     settings_view::features_page::render_group,
     terminal::session_settings::*};
+use crate::view_components::dropdown::Dropdown;
 
 #[derive(Clone, Debug)]
 #[allow(clippy::enum_variant_names)]

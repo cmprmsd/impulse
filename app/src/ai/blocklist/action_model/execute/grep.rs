@@ -34,6 +34,7 @@ use super::{
     ExecuteActionInput, PreprocessActionInput,
 };
 use crate::legacy_stubs::{TelemetryEvent};
+use crate::terminal::CustomSecretRegexUpdater::redact_secrets;
 
 const GREP_TIMEOUT: Duration = Duration::from_secs(10);
 const NON_ZERO_EXIT_CODE_ERROR: &str = "Grep command exited with non-zero exit code";
