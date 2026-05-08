@@ -9,11 +9,22 @@ pub mod conversation {
     pub use crate::legacy_stubs::{
         AIConversation, AIConversationId, ConversationRestorationInNewPaneType, ConversationStatus,
     };
+
+    #[derive(Debug, Clone, Default)]
+    pub struct AIAgentHarness;
 }
 pub mod api {
     pub use crate::legacy_stubs::AIClient;
+
+    pub fn generate_multi_agent_output() {}
+
+    #[derive(Debug, Clone, Default)]
+    pub struct ConvertToAPITypeError;
 }
-pub mod todos {}
+pub mod todos {
+    #[derive(Debug, Clone, Default)]
+    pub struct AIAgentTodoList;
+}
 
 // Re-export types that were moved to the ai crate.
 pub use ai::agent::{action::*, action_result::*, AIAgentCitation, FileLocations};

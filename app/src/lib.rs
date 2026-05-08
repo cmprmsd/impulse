@@ -55,7 +55,10 @@ pub mod server {
     }
     pub mod cloud_objects {
         pub mod update_manager {
-            pub use crate::legacy_stubs::{ObjectOperation, UpdateManager, UpdateManagerEvent};
+            pub use crate::legacy_stubs::{
+                InitiatedBy, ObjectOperation, OperationSuccessType, UpdateManager,
+                UpdateManagerEvent,
+            };
             pub fn get_duplicate_object_name(name: &str, _existing: &[String]) -> String {
                 name.to_string()
             }
@@ -63,6 +66,10 @@ pub mod server {
         pub mod listener {
             pub struct CloudObjectsListener;
         }
+    }
+    pub mod sync_queue {
+        #[derive(Debug, Clone, Default)]
+        pub struct SyncQueue;
     }
 }
 pub mod auth {

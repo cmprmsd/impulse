@@ -16,7 +16,25 @@ pub mod panel;
 pub mod settings;
 pub mod workflows;
 // Cloud-only stub: sharing UI deleted in Phase 0
-pub mod sharing {}
+pub mod sharing {
+    #[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
+    pub enum ContentEditability {
+        #[default]
+        Editable,
+        ReadOnly,
+    }
+
+    #[derive(Debug, Clone, Default)]
+    pub struct ShareableObject;
+
+    #[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
+    pub enum SharingAccessLevel {
+        #[default]
+        Default,
+    }
+
+    pub mod dialog {}
+}
 
 use std::{cmp::Ordering, fmt};
 

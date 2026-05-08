@@ -1104,12 +1104,6 @@ pub struct AmbientAgentEntryBlock;
 #[derive(Debug, Clone, Default)]
 pub struct AmbientAgentViewModelEvent;
 
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
-pub enum InitiatedBy {
-    #[default]
-    Default,
-}
-
 #[derive(Debug, Clone, Default)]
 pub struct RequestFileEditsTelemetryEvent;
 

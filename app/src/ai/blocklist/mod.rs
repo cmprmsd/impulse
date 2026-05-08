@@ -26,7 +26,32 @@ pub(crate) mod telemetry_banner;
 pub(super) mod view_util;
 
 // Cloud-only stub: agent_view module deleted in Phase 0 strip
-pub mod agent_view {}
+pub mod agent_view {
+    pub use crate::legacy_stubs::AgentViewController;
+
+    #[derive(Debug, Clone, Default)]
+    pub struct AgentViewControllerEvent;
+
+    #[derive(Debug, Clone, Default)]
+    pub struct AgentViewEntryOrigin;
+
+    #[derive(Debug, Clone, Default)]
+    pub struct AgentViewState;
+
+    #[derive(Debug, Clone, Default)]
+    pub struct AgentMessageBar;
+
+    #[derive(Debug, Clone, Default)]
+    pub struct EphemeralMessageModel;
+
+    pub fn agent_view_bg_fill() {}
+    pub fn child_agent_status_card() {}
+    pub fn agent_input_footer() {}
+    pub fn editor() {}
+    pub fn fork_from_last_known_good_state_exchange_id() {}
+
+    pub mod shortcuts {}
+}
 
 #[cfg_attr(target_family = "wasm", allow(unused_imports))]
 pub(crate) use action_model::{
