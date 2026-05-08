@@ -1,4 +1,5 @@
 use crate::settings::EnforceMinimumContrast;
+use crate::legacy_stubs::SecretHandle;
 use crate::terminal::color;
 use crate::terminal::grid_renderer::{render_cursor, render_grid, CellGlyphCache};
 use crate::terminal::model::blockgrid::{BlockGrid, CursorDisplayPoint};

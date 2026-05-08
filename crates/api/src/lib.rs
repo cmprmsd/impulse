@@ -161,12 +161,16 @@ pub struct RequestParams;
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum LifecycleEventType {
-    Blocked,
-    Cancelled,
-    Errored,
-    Failed,
+    Unspecified,
+    Started,
     InProgress,
     Succeeded,
+    Failed,
+    Errored,
+    Cancelled,
+    Blocked,
+    Restarted,
+    Idle,
 }
 
 pub mod review_comment {

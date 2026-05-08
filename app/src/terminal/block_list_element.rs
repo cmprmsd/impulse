@@ -1,5 +1,6 @@
 // use crate::ai::blocklist::agent_view::{agent_view_bg_fill, AgentViewState};  // unresolved (cloud detach)
 use crate::ai::blocklist::{ai_brand_color, ATTACH_AS_AGENT_MODE_CONTEXT_TEXT};
+use crate::legacy_stubs::SecretHandle;
 use crate::ai_assistant::{AI_ASSISTANT_SVG_PATH, ASK_AI_ASSISTANT_TEXT};
 use crate::appearance::Appearance;
 use crate::drive::settings::WarpDriveSettings;

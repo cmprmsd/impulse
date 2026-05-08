@@ -1,4 +1,5 @@
 use crate::send_telemetry_from_ctx;
+use crate::legacy_stubs::AgentEvent;
 use crate::legacy_stubs::{TaskId};
 use super::telemetry::{
     BlocklistOrchestrationTelemetryEvent, TeamAgentCommunicationFailedEvent,

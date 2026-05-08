@@ -1,4 +1,5 @@
 use super::history_model::{BlocklistAIHistoryEvent, BlocklistAIHistoryModel};
+use crate::legacy_stubs::AgentEvent;
 use crate::ai::agent::conversation::AIConversationId;
 use super::orchestration_events::{
     build_lifecycle_event, LifecycleEventDetailPayload, LifecycleEventDetailStage,

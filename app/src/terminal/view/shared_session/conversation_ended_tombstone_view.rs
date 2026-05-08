@@ -1,4 +1,5 @@
 use crate::ai::agent::conversation::AIConversationId;
+use crate::legacy_stubs::AmbientAgentTaskId;
 use crate::send_telemetry_from_ctx;
 // use crate::ai::agent_management::telemetry::{AgentManagementTelemetryEvent, ArtifactType};  // unresolved
 // use crate::ai::ambient_agents::{  // unresolved (cloud detach)

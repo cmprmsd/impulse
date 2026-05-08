@@ -1,4 +1,5 @@
 use crate::legacy_stubs::{TaskId};
+use crate::legacy_stubs::AgentEvent;
 use crate::legacy_stubs::{ReviewComment};
 use crate::legacy_stubs::{AIApiError};
 pub(crate) mod icons;

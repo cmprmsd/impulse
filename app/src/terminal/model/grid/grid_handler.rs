@@ -13,6 +13,7 @@ mod resize;
 mod secrets;
 
 use std::borrow::Cow;
+use crate::legacy_stubs::SecretHandle;
 use std::cmp::max;
 use std::collections::{HashMap, HashSet};
 use std::num::NonZeroUsize;

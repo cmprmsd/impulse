@@ -1,4 +1,5 @@
 use crate::ai::blocklist::SerializedBlockListItem;
+use crate::legacy_stubs::SecretHandle;
 use crate::terminal::available_shells::AvailableShell;
 use crate::terminal::block_list_element::GridType;
 use crate::terminal::event::{

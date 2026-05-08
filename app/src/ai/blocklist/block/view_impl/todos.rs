@@ -1,6 +1,7 @@
 //! Rendering logic for todo list components in AI blocks.
 
 use warpui::fonts::Properties;
+use crate::legacy_stubs::AIAgentTodoList;
 use warpui::text_layout::TextStyle;
 use warpui::{
     elements::{

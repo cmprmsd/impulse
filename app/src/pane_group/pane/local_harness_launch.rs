@@ -1,4 +1,5 @@
 use std::{collections::HashMap, ffi::OsString, path::PathBuf, sync::Arc};
+use crate::legacy_stubs::AgentDriverError;
 
 // use crate::ai::{  // unresolved (cloud detach)
 //     agent_sdk::{

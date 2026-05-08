@@ -1,4 +1,5 @@
 use crate::send_telemetry_from_ctx;
+use crate::legacy_stubs::ContextPredicate;
 use warpui::keymap::macros::*;
 use self::telemetry::SettingsTelemetryEvent;
 use crate::pane_group::focus_state::PaneFocusHandle;

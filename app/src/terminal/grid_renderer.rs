@@ -2,6 +2,8 @@ mod cell_glyph_cache;
 mod cell_type;
 
 use crate::terminal::grid_size_util::calculate_grid_baseline_position;
+use crate::legacy_stubs::ObfuscateSecrets;
+use crate::legacy_stubs::SecretHandle;
 use crate::terminal::model::ansi::{Color, CursorShape, CursorStyle};
 use crate::terminal::model::cell::{Cell, Flags};
 use crate::terminal::{color, SizeInfo};

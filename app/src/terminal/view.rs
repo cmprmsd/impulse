@@ -1,4 +1,7 @@
 use crate::send_telemetry_sync_from_ctx;
+use crate::legacy_stubs::ServerConversationToken;
+use crate::legacy_stubs::ObfuscateSecrets;
+use crate::legacy_stubs::AmbientAgentTaskId;
 use crate::send_telemetry_on_executor;
 use crate::send_telemetry_from_ctx;
 use warpui::keymap::macros::*;

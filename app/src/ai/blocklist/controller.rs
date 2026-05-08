@@ -9,6 +9,12 @@ pub mod response_stream;
 pub(super) mod shared_session;
 mod slash_command;
 use input_context::{input_context_for_request, parse_context_attachments};
+use crate::legacy_stubs::AIAgentInput;
+use crate::legacy_stubs::AIAgentAttachment;
+use crate::legacy_stubs::EntrypointType;
+use crate::legacy_stubs::StaticQueryType;
+use crate::legacy_stubs::ServerConversationToken;
+use crate::legacy_stubs::AmbientAgentTaskId;
 pub use slash_command::*;
 
 use self::response_stream::{ResponseStream, ResponseStreamEvent};
@@ -23,7 +29,7 @@ use super::{
     BlocklistAIInputModel, InputType,
 };
 // use crate::ai::agent::api::{self, ServerConversationToken};  // unresolved (cloud detach)
-use crate::ai::agent::conversation::{AIConversation, ConversationStatus};
+use crate::ai::agent::conversation::{AIConversation, AIConversationId, ConversationStatus};
 // use crate::ai::agent::task::TaskId;  // unresolved (cloud detach)
 use crate::ai::agent::{
     AIAgentActionResult, CancellationReason, PassiveSuggestionResultType, PassiveSuggestionTrigger,

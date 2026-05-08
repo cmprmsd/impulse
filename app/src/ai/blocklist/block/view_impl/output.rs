@@ -2,6 +2,7 @@
 //!
 //! This includes text, code snippets, suggested commands, and interactive inline action UX.
 use crate::ai::agent::{
+use crate::legacy_stubs::AIAgentTodoList;
     AIAgentInput, CreateDocumentsResult, EditDocumentsResult, ReadFilesResult, SubagentCall,
     SubagentType, TodoOperation, UploadArtifactResult,
 };

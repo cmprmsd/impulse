@@ -1,4 +1,5 @@
 use std::sync::Arc;
+use crate::legacy_stubs::AIAgentTodoList;
 
 use pathfinder_geometry::vector::vec2f;
 use warp_core::ui::{appearance::Appearance, theme::color::internal_colors, Icon};

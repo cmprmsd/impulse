@@ -1128,8 +1128,8 @@ pub struct AIAgentInput;
 #[derive(Debug, Clone, Default)]
 pub struct AIAgentOutputMessageType;
 
-#[derive(Debug, Clone, Default)]
-pub struct LifecycleEventType;
+// Re-export from api stub crate
+pub use api::LifecycleEventType;
 
 #[derive(Debug, Clone, Default)]
 pub struct AmbientAgentTaskId;
