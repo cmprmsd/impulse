@@ -355,7 +355,7 @@ impl DefaultMessageProducer {
 }
 
 struct InlineHistoryMessageProducer;
-impl MessageProvider<Option<&AcceptHistoryItem>> for InlineHistoryMessageProducer {
+impl InlineHistoryMessageProducer {
     fn produce_message(&self, selected: Option<&AcceptHistoryItem>) -> Option<Message> {
         let enter = MessageItem::keystroke(Keystroke {
             key: "enter".to_owned(),

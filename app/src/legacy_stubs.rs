@@ -560,6 +560,7 @@ pub trait SettingsWidget {
     ) -> Box<dyn warpui::Element> {
         unimplemented!("SettingsWidget stub")
     }
+    fn should_render(&self, _view: &Self::View, _app: &warpui::AppContext) -> bool { true }
 }
 #[derive(Debug, Clone, Default)]
 pub struct AIAgentHarness;
