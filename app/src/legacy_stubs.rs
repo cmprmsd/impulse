@@ -549,7 +549,18 @@ pub trait ModelAsRef {}
 #[derive(Debug, Clone, Default)]
 pub struct ResponseEvent;
 
-pub trait SettingsWidget {}
+pub trait SettingsWidget {
+    type View;
+    fn search_terms(&self) -> &str { "" }
+    fn render(
+        &self,
+        _view: &Self::View,
+        _appearance: &crate::appearance::Appearance,
+        _app: &warpui::AppContext,
+    ) -> Box<dyn warpui::Element> {
+        unimplemented!("SettingsWidget stub")
+    }
+}
 #[derive(Debug, Clone, Default)]
 pub struct AIAgentHarness;
 
@@ -698,7 +709,11 @@ pub struct GenericStringModel<T = (), S = ()>(std::marker::PhantomData<(T, S)>);
 #[derive(Debug, Clone, Default)]
 pub struct ServerTime;
 
-pub trait MessageProvider {}
+// Note: real trait was generic in (Args, Out). Stub deliberately leaves
+// produce_message off the trait — impls in app/src/terminal/.../message_bar.rs
+// add `produce_message` as inherent methods, which works because Rust
+// allows methods on impls without trait membership.
+pub trait MessageProvider<Args> {}
 #[derive(Debug, Clone, Default)]
 pub struct SizeInfo;
 

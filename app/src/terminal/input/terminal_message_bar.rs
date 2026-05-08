@@ -162,7 +162,7 @@ impl<'a> TerminalMessageArgs<'a> {
 }
 
 struct ErroredBlockMessageProducer;
-impl MessageProvider<TerminalMessageArgs<'_>> for ErroredBlockMessageProducer {
+impl ErroredBlockMessageProducer {
     fn produce_message(&self, args: TerminalMessageArgs<'_>) -> Option<Message> {
         let block = args.terminal_model.block_list().last_non_hidden_block()?;
         let context_block_ids = args.context_model.pending_context_block_ids();
@@ -184,7 +184,7 @@ impl MessageProvider<TerminalMessageArgs<'_>> for ErroredBlockMessageProducer {
 }
 
 struct AgentMessageProducer;
-impl MessageProvider<TerminalMessageArgs<'_>> for AgentMessageProducer {
+impl AgentMessageProducer {
     fn produce_message(&self, args: TerminalMessageArgs<'_>) -> Option<Message> {
         let TerminalMessageArgs {
             current_input, app, ..
@@ -212,7 +212,7 @@ impl MessageProvider<TerminalMessageArgs<'_>> for AgentMessageProducer {
 }
 
 struct PlanMessageProducer;
-impl MessageProvider<TerminalMessageArgs<'_>> for PlanMessageProducer {
+impl PlanMessageProducer {
     fn produce_message(&self, args: TerminalMessageArgs<'_>) -> Option<Message> {
         let TerminalMessageArgs {
             current_input, app, ..
@@ -243,7 +243,7 @@ impl MessageProvider<TerminalMessageArgs<'_>> for PlanMessageProducer {
 }
 
 struct ContinueConversationMessageProducer;
-impl MessageProvider<TerminalMessageArgs<'_>> for ContinueConversationMessageProducer {
+impl ContinueConversationMessageProducer {
     fn produce_message(&self, args: TerminalMessageArgs<'_>) -> Option<Message> {
         let TerminalMessageArgs {
             current_input,
@@ -325,7 +325,7 @@ mod internal {
 }
 
 struct DefaultMessageProducer;
-impl MessageProvider<TerminalMessageArgs<'_>> for DefaultMessageProducer {
+impl DefaultMessageProducer {
     fn produce_message(&self, args: TerminalMessageArgs<'_>) -> Option<Message> {
         let is_input_ai_detected = args.is_input_ai_detected();
 
