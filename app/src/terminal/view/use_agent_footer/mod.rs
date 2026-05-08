@@ -52,22 +52,22 @@ use warpui::{
     },
 };
 
-// use crate::{  // unresolved (cloud detach)
-//     ai::blocklist::{agent_view::agent_view_bg_fill, block::cli_controller::CLISubagentEvent},
-//     cmd_or_ctrl_shift,
-//     settings::{
-//         AISettings, AISettingsChangedEvent, CompiledCommandsForCodingAgentToolbar,
-//         InputModeSettings,
-//     },
-//     terminal::cli_agent_sessions::CLIAgentRichInputCloseReason,
-//     terminal::{
-//         model_events::{ModelEvent, ModelEventDispatcher},
-//         TerminalModel,
-//     },
-//     ui_components::{blended_colors, icons::Icon},
-//     view_components::action_button::{
-//         ActionButton, ActionButtonTheme, ButtonSize, KeystrokeSource, TooltipAlignment,
-//     }};
+use crate::{
+    ai::blocklist::{agent_view::agent_view_bg_fill, block::cli_controller::CLISubagentEvent},
+    cmd_or_ctrl_shift,
+    settings::{
+        AISettings, AISettingsChangedEvent, CompiledCommandsForCodingAgentToolbar,
+        InputModeSettings,
+    },
+    terminal::cli_agent_sessions::CLIAgentRichInputCloseReason,
+    terminal::{
+        model_events::{ModelEvent, ModelEventDispatcher},
+        TerminalModel,
+    },
+    ui_components::{blended_colors, icons::Icon},
+    view_components::action_button::{
+        ActionButton, ActionButtonTheme, ButtonSize, KeystrokeSource, TooltipAlignment,
+    }};
 
 use warp_terminal::model::escape_sequences::{BRACKETED_PASTE_END, BRACKETED_PASTE_START};
 

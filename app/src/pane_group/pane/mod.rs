@@ -42,13 +42,13 @@ use std::{any::Any, fmt::Display};
 use crate::pane_group::focus_state::PaneFocusHandle;
 use crate::pane_group::pane::get_started_view::GetStartedView;
 use crate::view_components::action_button::ActionButton;
-// use crate::{  // unresolved (cloud detach)
-//     ai::execution_profiles::editor::ExecutionProfileEditorView,
-//     ai::{
-//         ai_document_view::AIDocumentView, blocklist::inline_action::code_diff_view::CodeDiffView,
-//         facts::AIFactView,
-//     },
-// };
+use crate::{
+    ai::execution_profiles::editor::ExecutionProfileEditorView,
+    ai::{
+        ai_document_view::AIDocumentView, blocklist::inline_action::code_diff_view::CodeDiffView,
+        facts::AIFactView,
+    },
+};
 use serde::{Deserialize, Serialize};
 use url::Url;
 use warp_core::HostId;

@@ -16,6 +16,7 @@ use std::sync::{Arc, Mutex};
 use diesel::SqliteConnection;
 
 use crate::ai::agent::AIAgentExchangeId;
+use crate::legacy_stubs::AIConversationId;
 use crate::ai::agent::CancellationReason;
 use crate::ai::artifacts::Artifact;
 use crate::ai::document::ai_document_model::AIDocumentModel;
@@ -25,13 +26,13 @@ use crate::persistence::ModelEvent;
 use crate::terminal::model::block::BlockId;
 use crate::terminal::view::blocklist_filter;
 use crate::GlobalResourceHandlesProvider;
-// use crate::{  // unresolved (cloud detach)
-//     ai::agent::{
-//         conversation::{AIConversation, AIConversationId},
-//         AIAgentActionId, AIAgentExchange, AIAgentInput, AIAgentOutputStatus, FinishedAIAgentOutput,
-//         MessageId, RenderableAIError, RequestCost, Suggestions,
-//     },
-// };
+use crate::{
+    ai::agent::{
+        conversation::{AIConversation, AIConversationId},
+        AIAgentActionId, AIAgentExchange, AIAgentInput, AIAgentOutputStatus, FinishedAIAgentOutput,
+        MessageId, RenderableAIError, RequestCost, Suggestions,
+    },
+};
 
 #[cfg(feature = "local_fs")]
 use crate::persistence::{database_file_path, establish_ro_connection};

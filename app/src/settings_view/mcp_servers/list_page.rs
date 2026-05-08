@@ -23,37 +23,37 @@ use crate::ai::mcp::{
     FileMCPWatcherEvent,
 };
 
-// use crate::{  // unresolved (cloud detach)
-//     ai::mcp::{
-//         gallery::MCPGalleryManagerEvent,
-//         logs,
-//         templatable::TemplatableMCPServer,
-//         templatable_manager::{TemplatableMCPServerManager, TemplatableMCPServerManagerEvent},
-//         FileBasedMCPManager, MCPGalleryManager, MCPProvider, TemplatableMCPServerInstallation,
-//     },
-//     appearance::Appearance,
-//     cloud_object::{
-//         model::persistence::{CloudModel, CloudModelEvent},
-//         GenericStringObjectFormat, JsonObjectType,
-//     },
-//     drive::CloudObjectTypeAndId,
-//     editor::{EditorView, PropagateAndNoOpNavigationKeys, SingleLineEditorOptions, TextOptions},
-//     pane_group::Direction,
-//     search_bar::SearchBar,
-//     settings_view::mcp_servers::{
-//         server_card::{
-//             ServerCardEvent, ServerCardOptions, ServerCardStatus, ServerCardView, TitleChip,
-//         },
-//         style,
-//         update_modal::{UpdateModalBody, UpdateModalBodyEvent},
-//         ServerCardItemId,
-//     },
-//     ui_components::blended_colors,
-//     view_components::action_button::{ActionButton, NakedTheme},
-//     workflows::local_workflows::tail_command_for_shell,
-//     workspace::Workspace,
-//     workspaces::user_workspaces::UserWorkspaces,
-// };
+use crate::{
+    ai::mcp::{
+        gallery::MCPGalleryManagerEvent,
+        logs,
+        templatable::TemplatableMCPServer,
+        templatable_manager::{TemplatableMCPServerManager, TemplatableMCPServerManagerEvent},
+        FileBasedMCPManager, MCPGalleryManager, MCPProvider, TemplatableMCPServerInstallation,
+    },
+    appearance::Appearance,
+    cloud_object::{
+        model::persistence::{CloudModel, CloudModelEvent},
+        GenericStringObjectFormat, JsonObjectType,
+    },
+    drive::CloudObjectTypeAndId,
+    editor::{EditorView, PropagateAndNoOpNavigationKeys, SingleLineEditorOptions, TextOptions},
+    pane_group::Direction,
+    search_bar::SearchBar,
+    settings_view::mcp_servers::{
+        server_card::{
+            ServerCardEvent, ServerCardOptions, ServerCardStatus, ServerCardView, TitleChip,
+        },
+        style,
+        update_modal::{UpdateModalBody, UpdateModalBodyEvent},
+        ServerCardItemId,
+    },
+    ui_components::blended_colors,
+    view_components::action_button::{ActionButton, NakedTheme},
+    workflows::local_workflows::tail_command_for_shell,
+    workspace::Workspace,
+    workspaces::user_workspaces::UserWorkspaces,
+};
 use markdown_parser::{FormattedText, FormattedTextFragment, FormattedTextLine};
 use settings::ToggleableSetting as _;
 use std::cmp::Ordering;

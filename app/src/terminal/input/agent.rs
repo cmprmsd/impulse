@@ -5,19 +5,19 @@ use super::{
         wrap_input_with_terminal_padding_and_focus_handler,
     },
 };
-// use crate::{  // unresolved (cloud detach)
-//     ai::{
-//         blocklist::{
-//             agent_view::{
-//                 agent_view_bg_fill,
-//                 shortcuts::{render_agent_shortcuts_view, AgentShortcutsViewContext},
-//                 AgentViewState,
-//             },
-//             InputType,
-//         },
-//         harness_availability::HarnessAvailabilityModel,
-//     },
-// };
+use crate::{
+    ai::{
+        blocklist::{
+            agent_view::{
+                agent_view_bg_fill,
+                shortcuts::{render_agent_shortcuts_view, AgentShortcutsViewContext},
+                AgentViewState,
+            },
+            InputType,
+        },
+        harness_availability::HarnessAvailabilityModel,
+    },
+};
 use warp_core::settings::Setting;
 use warp_core::ui::theme::color::internal_colors;
 use warpui::elements::Expanded;

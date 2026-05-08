@@ -13,9 +13,9 @@ use sysinfo::ProcessesToUpdate;
 use warp_core::channel::ChannelState;
 use warpui::{App, AppContext, Entity, ModelContext, SingletonEntity};
 
-// use crate::{  // unresolved (cloud detach)
-//     send_telemetry_from_app_ctx, send_telemetry_sync_from_ctx,
-//     system::memory_footprint, terminal::TerminalView, TelemetryEvent};
+use crate::{
+    send_telemetry_from_app_ctx, send_telemetry_sync_from_ctx,
+    system::memory_footprint, terminal::TerminalView, TelemetryEvent};
 
 /// The threshold at which we emit a memory usage warning.
 const MEMORY_USAGE_WARNING_THRESHOLD: Option<Byte> = byte_unit::Byte::GIGABYTE.multiply(10);
@@ -31,8 +31,8 @@ const REPORT_WINDOW_S: usize = 300;
 /// The number of data points aggregated into a resource usage report.
 const REPORT_SAMPLE_COUNT: usize = REPORT_WINDOW_S / REFRESH_INTERVAL_S;
 
-// Make sure the refresh interval cleanly divides the report window into an
-// integral number of samples.
+Make sure the refresh interval cleanly divides the report window into an
+integral number of samples.
 static_assertions::const_assert_eq!(REPORT_WINDOW_S % REFRESH_INTERVAL_S, 0);
 
 pub enum SystemInfoEvent {

@@ -26,27 +26,27 @@ use crate::{
     workflows::{CloudWorkflow, WorkflowViewMode},
     workspace::active_terminal_in_window};
 
-// use super::{  // unresolved (cloud detach)
-//     cloud_object_naming_dialog::CloudObjectNamingDialog,
-//     drive_helpers::{
-//         has_feature_gated_anonymous_user_reached_env_var_limit,
-//         has_feature_gated_anonymous_user_reached_notebook_limit,
-//         has_feature_gated_anonymous_user_reached_workflow_limit,
-//     },
-//     empty_trash_confirmation_dialog::{EmptyTrashConfirmationDialog, EmptyTrashConfirmationEvent},
-//     folders::CloudFolder,
-//     items::{
-//         ai_fact_collection::WarpDriveAIFactCollection,
-//         item::{tools_panel_menu_direction, ItemStates, WarpDriveRow},
-//         mcp_server_collection::WarpDriveMCPServerCollection,
-//         WarpDriveItemId,
-//     },
-//     settings::WarpDriveSettings,
-//     sharing::{
-//         dialog::{SharingDialog, SharingDialogEvent},
-//         ContentEditability, ShareableObject,
-//     },
-// };
+use super::{
+    cloud_object_naming_dialog::CloudObjectNamingDialog,
+    drive_helpers::{
+        has_feature_gated_anonymous_user_reached_env_var_limit,
+        has_feature_gated_anonymous_user_reached_notebook_limit,
+        has_feature_gated_anonymous_user_reached_workflow_limit,
+    },
+    empty_trash_confirmation_dialog::{EmptyTrashConfirmationDialog, EmptyTrashConfirmationEvent},
+    folders::CloudFolder,
+    items::{
+        ai_fact_collection::WarpDriveAIFactCollection,
+        item::{tools_panel_menu_direction, ItemStates, WarpDriveRow},
+        mcp_server_collection::WarpDriveMCPServerCollection,
+        WarpDriveItemId,
+    },
+    settings::WarpDriveSettings,
+    sharing::{
+        dialog::{SharingDialog, SharingDialogEvent},
+        ContentEditability, ShareableObject,
+    },
+};
 use crate::drive::panel::DrivePanelAction;
 use futures::Future;
 use itertools::Itertools;

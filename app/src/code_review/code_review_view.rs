@@ -7,12 +7,12 @@ use std::{
     sync::Arc,
 };
 
-// use crate::{  // unresolved (cloud detach)
-//     ai::{
-//         agent::{AgentReviewCommentBatch, DiffSetHunk},
-//         blocklist::agent_view::AgentViewEntryOrigin,
-//     },
-// };
+use crate::{
+    ai::{
+        agent::{AgentReviewCommentBatch, DiffSetHunk},
+        blocklist::agent_view::AgentViewEntryOrigin,
+    },
+};
 
 #[cfg(feature = "local_fs")]
 use crate::code_review::context::{

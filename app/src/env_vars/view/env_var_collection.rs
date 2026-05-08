@@ -14,37 +14,37 @@ use warpui::{
     },
 };
 
-// use crate::{  // unresolved (cloud detach)
-//     ai::blocklist::block::secret_redaction::find_secrets_in_text_with_levels,
-//     drive::{
-//         items::WarpDriveItemId,
-//         sharing::{ContentEditability, ShareableObject},
-//     },
-//     editor::EditorView,
-//     env_vars::{
-//         active_env_var_collection_data::{
-//             ActiveEnvVarCollection, ActiveEnvVarCollectionData, ActiveEnvVarCollectionDataEvent,
-//             SavingStatus, TrashStatus,
-//         },
-//         CloudEnvVarCollection, CloudEnvVarCollectionModel, EnvVar, EnvVarCollection,
-//         EnvVarCollectionType, EnvVarValue,
-//     },
-//     menu::MenuItem,
-//     network::{NetworkStatus, NetworkStatusEvent},
-//     pane_group::{
-//         focus_state::PaneFocusHandle, pane::view, BackingView, PaneConfiguration, PaneEvent,
-//     },
-//     search::external_secrets::view::ExternalSecretsMenu,
-//     send_telemetry_from_ctx,
-//     terminal::{model::secrets::SecretLevel, safe_mode_settings::get_secret_obfuscation_mode},
-//     ui_components::{
-//         breadcrumb::{render_breadcrumbs, BreadcrumbState},
-//         buttons::icon_button,
-//         icons::Icon,
-//         menu_button::{
-//             highlight_icon_button_with_context_menu, icon_button_with_context_menu, MenuDirection,
-//         },
-//     }};
+use crate::{
+    ai::blocklist::block::secret_redaction::find_secrets_in_text_with_levels,
+    drive::{
+        items::WarpDriveItemId,
+        sharing::{ContentEditability, ShareableObject},
+    },
+    editor::EditorView,
+    env_vars::{
+        active_env_var_collection_data::{
+            ActiveEnvVarCollection, ActiveEnvVarCollectionData, ActiveEnvVarCollectionDataEvent,
+            SavingStatus, TrashStatus,
+        },
+        CloudEnvVarCollection, CloudEnvVarCollectionModel, EnvVar, EnvVarCollection,
+        EnvVarCollectionType, EnvVarValue,
+    },
+    menu::MenuItem,
+    network::{NetworkStatus, NetworkStatusEvent},
+    pane_group::{
+        focus_state::PaneFocusHandle, pane::view, BackingView, PaneConfiguration, PaneEvent,
+    },
+    search::external_secrets::view::ExternalSecretsMenu,
+    send_telemetry_from_ctx,
+    terminal::{model::secrets::SecretLevel, safe_mode_settings::get_secret_obfuscation_mode},
+    ui_components::{
+        breadcrumb::{render_breadcrumbs, BreadcrumbState},
+        buttons::icon_button,
+        icons::Icon,
+        menu_button::{
+            highlight_icon_button_with_context_menu, icon_button_with_context_menu, MenuDirection,
+        },
+    }};
 
 use super::{command_dialog::EnvVarCommandDialog, menus::Menus};
 use warpui::{AppContext, BlurContext, Element, Entity, FocusContext, ModelHandle, TypedActionView, View, ViewContext, ViewHandle, WindowId};
@@ -59,17 +59,17 @@ use crate::legacy_stubs::{CloudModelEvent, Owner, ServerId, SyncId};
 use crate::legacy_stubs::{CloudModel, UpdateManager};
 use crate::legacy_stubs::{ContainingObject};
 
-// Universal
+Universal
 pub(super) const CORE_HORIZONATAL_MARGIN: f32 = 24.;
 pub(super) const CORE_MAX_WIDTH: f32 = 800.;
 pub(super) const DESCRIPTION_EDITOR_POSITION: &str = "envvar_description_editor";
 
-// View
+View
 const SCROLLBAR_WIDTH: ScrollbarWidth = ScrollbarWidth::Auto;
 const CORE_VERTICAL_MARGIN: f32 = 36.;
 const SECTION_SPACING: f32 = 16.;
 
-// Variable rows
+Variable rows
 pub(super) const ROW_SPACING: f32 = 8.;
 pub const EDUCATION_TEXT: &str = "Add secret or command. Warp never stores external secrets";
 const VARIABLE_FONT_SIZE: f32 = 13.;
@@ -81,16 +81,16 @@ const VARIABLE_VALUE_PLACEHOLDER_TEXT: &str = "Value";
 const VARIABLE_DESCRIPTION_PLACEHOLDER_TEXT: &str = "Description";
 const VARIABLE_NAME_PLACEHOLDER_TEXT: &str = "Variable";
 
-// Text input fields
+Text input fields
 const TITLE_PLACEHOLDER_TEXT: &str = "Add a title";
 const DESCRIPTION_PLACEHOLDER_TEXT: &str = "Add a description";
 
-// Button spacing
+Button spacing
 const BUTTON_CONTAINER_HORIZONTAL_MARGIN: f32 = 36.;
 const BUTTON_CONTAINER_BOTTOM_MARGIN: f32 = 10.;
 const BUTTON_SPACING: f32 = 8.;
 
-// Validation error styling
+Validation error styling
 pub(super) const ERROR_BORDER_WIDTH: f32 = 1.;
 pub(super) const ERROR_ALERT_MARGIN_TOP: f32 = 8.;
 

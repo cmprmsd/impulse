@@ -434,8 +434,26 @@ pub struct ChipValue;
 #[derive(Debug, Clone, Default)]
 pub struct LaunchConfig;
 
-#[derive(Debug, Clone, Default)]
-pub struct AIClient;
+/// Stub trait so call sites that expect `dyn AIClient` parse.
+/// Methods are stubbed to return errors at runtime.
+pub trait AIClient: Send + Sync {
+    fn read_agent_message<'a>(
+        &'a self,
+        _message_id: &'a str,
+    ) -> std::pin::Pin<Box<dyn std::future::Future<Output = anyhow::Result<ReadAgentMessageResponse>> + Send + 'a>> {
+        Box::pin(async {
+            Err(anyhow::anyhow!("AIClient is a stub; not implemented in OSS fork"))
+        })
+    }
+    fn mark_message_delivered<'a>(
+        &'a self,
+        _message_id: &'a str,
+    ) -> std::pin::Pin<Box<dyn std::future::Future<Output = anyhow::Result<()>> + Send + 'a>> {
+        Box::pin(async {
+            Err(anyhow::anyhow!("AIClient is a stub; not implemented in OSS fork"))
+        })
+    }
+}
 
 #[derive(Debug, Clone)]
 pub enum AgentRunEvent {
@@ -983,3 +1001,52 @@ pub struct PassiveSuggestionTrigger;
 #[derive(Debug, Clone, Default)]
 pub struct MCPServerTelemetryError;
 
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
+pub enum AgentSource {
+    #[default]
+    Default,
+}
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
+pub enum LaunchConfigUiLocation {
+    #[default]
+    Default,
+}
+
+#[derive(Debug, Clone, Default)]
+pub struct ReadAgentMessageResponse {
+    pub message_id: String,
+    pub body: String,
+    pub sender_run_id: String,
+    pub subject: Option<String>,
+}
+
+#[derive(Debug, Clone, Default)]
+pub struct ArtifactDownloadResponse;
+
+impl ArtifactDownloadResponse {
+    pub fn artifact_uid(&self) -> &str { "" }
+    pub fn download_url(&self) -> String { String::new() }
+}
+
+#[derive(Debug, Clone, Default)]
+pub struct CitationForTelemetry {
+    pub object_type: ObjectType,
+    pub uid: ObjectUid,
+}
+
+impl CitationForTelemetry {
+    pub fn warp_drive_object(object_type: ObjectType, uid: ObjectUid) -> Self {
+        Self { object_type, uid }
+    }
+}
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
+pub struct AIAgentExchangeId(pub Uuid);
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
+pub struct ServerOutputId(pub Uuid);
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
+pub struct AIDocumentId(pub Uuid);

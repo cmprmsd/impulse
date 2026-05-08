@@ -14,14 +14,14 @@ pub use slash_command::*;
 use self::response_stream::{ResponseStream, ResponseStreamEvent};
 // use super::agent_view::AgentViewEntryOrigin;  // unresolved (cloud detach)
 use super::ResponseStreamId;
-// use super::{  // unresolved (cloud detach)
-//     action_model::{BlocklistAIActionEvent, BlocklistAIActionModel},
-//     agent_view::{AgentViewController, AgentViewControllerEvent},
-//     context_model::BlocklistAIContextModel,
-//     history_model::BlocklistAIHistoryModel,
-//     input_model::InputConfig,
-//     BlocklistAIInputModel, InputType,
-// };
+use super::{
+    action_model::{BlocklistAIActionEvent, BlocklistAIActionModel},
+    agent_view::{AgentViewController, AgentViewControllerEvent},
+    context_model::BlocklistAIContextModel,
+    history_model::BlocklistAIHistoryModel,
+    input_model::InputConfig,
+    BlocklistAIInputModel, InputType,
+};
 // use crate::ai::agent::api::{self, ServerConversationToken};  // unresolved (cloud detach)
 // use crate::ai::agent::conversation::{AIConversation, ConversationStatus};  // unresolved (cloud detach)
 // use crate::ai::agent::task::TaskId;  // unresolved (cloud detach)

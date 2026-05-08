@@ -14,17 +14,17 @@ use warpui::{
     AppContext, Element, Entity, ModelHandle, SingletonEntity, TypedActionView, View, ViewContext,
 };
 
-// use crate::{  // unresolved (cloud detach)
-//     appearance::Appearance,
-//     cloud_object::Owner,
-//     server::{
-//         ids::{ClientId, SyncId},
-//         sync_queue::SyncQueue,
-//     },
-//     ui_components::icons::Icon,
-//     view_components::DismissibleToast,
-//     workspace::ToastStack,
-// };
+use crate::{
+    appearance::Appearance,
+    cloud_object::Owner,
+    server::{
+        ids::{ClientId, SyncId},
+        sync_queue::SyncQueue,
+    },
+    ui_components::icons::Icon,
+    view_components::DismissibleToast,
+    workspace::ToastStack,
+};
 
 use super::{
     modal::BODY_HEIGHT,

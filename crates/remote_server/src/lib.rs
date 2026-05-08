@@ -30,6 +30,21 @@ pub mod proto {
     }
 }
 
+pub mod setup {
+    #[derive(Debug, Clone)]
+    pub enum PreinstallStatus {
+        Ok,
+        Unsupported { reason: UnsupportedReason },
+    }
+
+    #[derive(Debug, Clone)]
+    pub enum UnsupportedReason {
+        GlibcTooOld { required: String, found: String },
+        UnsupportedOs,
+        UnsupportedArch,
+    }
+}
+
 pub mod client {
     pub struct RemoteServerClient;
 

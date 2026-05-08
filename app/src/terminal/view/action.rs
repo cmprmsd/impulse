@@ -24,20 +24,20 @@ use crate::terminal::view::inline_banner::AgentModeSetupSpeedbumpBannerAction;
 use crate::terminal::view::passive_suggestions::PromptSuggestionResolution;
 use crate::terminal::view::RichContentSecretTooltipInfo;
 use crate::workflows::workflow::Workflow;
-// use crate::{  // unresolved (cloud detach)
-//     terminal::{
-//         block_list_element::{
-//             BlockHoverAction, BlockListMenuSource, BlockSelectAction, BlockTextSelectAction,
-//         },
-//         block_list_viewport::OverhangingBlock,
-//         model::{
-//             index::Point,
-//             mouse::MouseState,
-//             selection::{SelectAction, SelectionDirection},
-//             terminal_model::{BlockIndex, WithinModel},
-//             SecretHandle,
-//         },
-//     }};
+use crate::{
+    terminal::{
+        block_list_element::{
+            BlockHoverAction, BlockListMenuSource, BlockSelectAction, BlockTextSelectAction,
+        },
+        block_list_viewport::OverhangingBlock,
+        model::{
+            index::Point,
+            mouse::MouseState,
+            selection::{SelectAction, SelectionDirection},
+            terminal_model::{BlockIndex, WithinModel},
+            SecretHandle,
+        },
+    }};
 
 use super::inline_banner::{
     AnonymousUserLoginBannerAction, AwsBedrockLoginBannerAction, AwsCliNotInstalledBannerAction,
@@ -468,7 +468,7 @@ pub enum TerminalAction {
     OpenCLIAgentRichInput,
 }
 
-// Manually implementing Debug to avoid leaking sensitive information in logs
+Manually implementing Debug to avoid leaking sensitive information in logs
 impl fmt::Debug for TerminalAction {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         use TerminalAction::*;

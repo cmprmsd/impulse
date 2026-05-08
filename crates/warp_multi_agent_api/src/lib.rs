@@ -147,3 +147,32 @@ pub struct FileContentLineRange {
     pub start: u32,
     pub end: u32,
 }
+
+#[derive(Debug, Clone, Default)]
+pub struct CurrentRef {
+    pub r#ref: Option<current_ref::Ref>,
+}
+
+pub mod current_ref {
+    #[derive(Debug, Clone)]
+    pub enum Ref {
+        CurrentBranchName(String),
+        CurrentHeadlessCommitSha(String),
+    }
+}
+
+pub mod current {
+    pub use super::current_ref::Ref as Current;
+}
+
+pub use current::Current;
+
+pub mod base {
+    #[derive(Debug, Clone)]
+    pub enum Base {
+        BaseBranchName(String),
+        BaseHeadlessCommitSha(String),
+        UncommittedChanges(()),
+    }
+}
+pub use base::Base;

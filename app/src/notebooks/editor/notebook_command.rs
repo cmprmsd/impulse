@@ -34,28 +34,28 @@ use warpui::{
     },
 };
 
-// use crate::{  // unresolved (cloud detach)
-//     appearance::Appearance,
-//     completer::SessionAgnosticContext,
-//     debounce::debounce,
-//     drive::workflows::arguments::ArgumentsState,
-//     editor::InteractionState,
-//     notebooks::{
-//         styles::block_footer_action_button,
-//         telemetry::{ActionEntrypoint, BlockInfo},
-//     },
-//     settings::FontSettings,
-//     terminal::input::{
-//         decorations::{parse_current_commands_and_tokens, ParsedTokenData, ParsedTokensSnapshot},
-//         DEBOUNCE_INPUT_DECORATION_PERIOD,
-//     },
-//     themes::theme::{AnsiColorIdentifier, AnsiColors},
-//     ui_components::icons::Icon,
-//     util::{
-//         bindings::CustomAction,
-//         color::{ContrastingColor, MinimumAllowedContrast},
-//     },
-// };
+use crate::{
+    appearance::Appearance,
+    completer::SessionAgnosticContext,
+    debounce::debounce,
+    drive::workflows::arguments::ArgumentsState,
+    editor::InteractionState,
+    notebooks::{
+        styles::block_footer_action_button,
+        telemetry::{ActionEntrypoint, BlockInfo},
+    },
+    settings::FontSettings,
+    terminal::input::{
+        decorations::{parse_current_commands_and_tokens, ParsedTokenData, ParsedTokensSnapshot},
+        DEBOUNCE_INPUT_DECORATION_PERIOD,
+    },
+    themes::theme::{AnsiColorIdentifier, AnsiColors},
+    ui_components::icons::Icon,
+    util::{
+        bindings::CustomAction,
+        color::{ContrastingColor, MinimumAllowedContrast},
+    },
+};
 
 use super::{
     interaction_state_model::InteractionStateModel,

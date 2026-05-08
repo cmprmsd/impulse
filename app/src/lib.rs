@@ -32,7 +32,7 @@ pub mod server {
             pub struct AuthClient;
         }
         pub mod ai {
-            pub struct AIClient;
+            pub use crate::legacy_stubs::AIClient;
         }
     }
     pub mod telemetry {
@@ -131,6 +131,12 @@ pub mod workspaces {
     }
     pub mod workspace {
         pub use crate::legacy_stubs::{CustomerType, Workspace};
+        #[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
+        pub enum HostEnablementSetting {
+            #[default]
+            Default,
+            Enforce,
+        }
     }
 }
 pub mod server_id_traits {}

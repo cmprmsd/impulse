@@ -40,6 +40,14 @@ pub mod agent_management {}
 pub mod conversation_details_panel {
     pub struct ConversationDetailsPanel;
 }
+pub mod persisted_workspace {
+    use std::path::PathBuf;
+    use lsp::supported_servers::LSPServerType;
+    pub enum LspTask {
+        Spawn { file_path: PathBuf },
+        Install { file_path: PathBuf, repo_root: PathBuf, server_type: LSPServerType },
+    }
+}
 
 pub fn init(app: &mut AppContext) {
     blocklist::keyboard_navigable_buttons::init(app);

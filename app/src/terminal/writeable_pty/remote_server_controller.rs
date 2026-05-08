@@ -554,7 +554,7 @@ fn send_unsupported_telemetry<T: EventLoopSender>(
         .unwrap_or((None, None));
     let required_glibc = match &check.status {
         remote_server::setup::PreinstallStatus::Unsupported {
-            reason: UnsupportedReason::GlibcTooOld { required, .. },
+            reason: remote_server::setup::UnsupportedReason::GlibcTooOld { required, .. },
         } => required.to_string(),
         _ => String::new(),
     };

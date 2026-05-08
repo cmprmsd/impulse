@@ -36,40 +36,40 @@ use warpui::{
     },
 };
 
-// use crate::{  // unresolved (cloud detach)
-//     ai::{
-//         blocklist::secret_redaction::find_secrets_in_text,
-//         document::ai_document_model::AIDocumentId,
-//     },
-//     appearance::Appearance,
-//     cmd_or_ctrl_shift,
-//     drive::{
-//         drive_helpers::has_feature_gated_anonymous_user_reached_notebook_limit,
-//         export::ExportManager, items::WarpDriveItemId, sharing::ShareableObject,
-//         CloudObjectTypeAndId, OpenWarpDriveObjectSettings,
-//     },
-//     editor::{
-//         EditOrigin, EditorView, Event as EditorEvent, InteractionState,
-//         PropagateAndNoOpNavigationKeys, SingleLineEditorOptions, TextColors, TextOptions,
-//     },
-//     features::FeatureFlag,
-//     menu::{MenuItem, MenuItemFields},
-//     network::{NetworkStatus, NetworkStatusEvent},
-//     notebooks::{
-//         editor::{model::NotebooksEditorModel, rich_text_styles},
-//         CloudNotebook,
-//     },
-//     pane_group::{
-//         focus_state::{PaneFocusHandle, PaneGroupFocusEvent},
-//         pane::view,
-//         BackingView, PaneConfiguration, PaneEvent,
-//     },
-//     report_if_error, safe_info, send_telemetry_from_ctx,
-//     settings::{
-//         app_installation_detection::{UserAppInstallDetectionSettings, UserAppInstallStatus},
-//         decrease_notebook_font_size, increase_notebook_font_size, FontSettings,
-//         FontSettingsChangedEvent, NotebookFontSize,
-//     }};
+use crate::{
+    ai::{
+        blocklist::secret_redaction::find_secrets_in_text,
+        document::ai_document_model::AIDocumentId,
+    },
+    appearance::Appearance,
+    cmd_or_ctrl_shift,
+    drive::{
+        drive_helpers::has_feature_gated_anonymous_user_reached_notebook_limit,
+        export::ExportManager, items::WarpDriveItemId, sharing::ShareableObject,
+        CloudObjectTypeAndId, OpenWarpDriveObjectSettings,
+    },
+    editor::{
+        EditOrigin, EditorView, Event as EditorEvent, InteractionState,
+        PropagateAndNoOpNavigationKeys, SingleLineEditorOptions, TextColors, TextOptions,
+    },
+    features::FeatureFlag,
+    menu::{MenuItem, MenuItemFields},
+    network::{NetworkStatus, NetworkStatusEvent},
+    notebooks::{
+        editor::{model::NotebooksEditorModel, rich_text_styles},
+        CloudNotebook,
+    },
+    pane_group::{
+        focus_state::{PaneFocusHandle, PaneGroupFocusEvent},
+        pane::view,
+        BackingView, PaneConfiguration, PaneEvent,
+    },
+    report_if_error, safe_info, send_telemetry_from_ctx,
+    settings::{
+        app_installation_detection::{UserAppInstallDetectionSettings, UserAppInstallStatus},
+        decrease_notebook_font_size, increase_notebook_font_size, FontSettings,
+        FontSettingsChangedEvent, NotebookFontSize,
+    }};
 
 use self::details_bar::DetailsBar;
 
@@ -131,7 +131,7 @@ const MEANINGFUL_EDIT_THRESHOLD: usize = 30;
 
 #[cfg(not(test))]
 const EDIT_WINDOW_DURATION: Duration = Duration::from_secs(60);
-// Use a shorter window to make testing reasonable.
+Use a shorter window to make testing reasonable.
 #[cfg(test)]
 const EDIT_WINDOW_DURATION: Duration = Duration::from_millis(5);
 

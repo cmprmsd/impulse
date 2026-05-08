@@ -29,16 +29,16 @@ use crate::terminal::cli_agent_sessions::{
 use crate::PrivacySettings;
 use warp_completer::completer::CompletionContext;
 
-// use crate::{  // unresolved (cloud detach)
-//     input_classifier::InputClassifierModel,
-//     report_if_error, send_telemetry_from_ctx,
-//     settings::{AISettings, AISettingsChangedEvent, InputBoxType, InputSettings},
-//     terminal::{
-//         input::decorations::ParsedTokensSnapshot,
-//         model::{rich_content::RichContentType, session::SessionId},
-//         History, TerminalModel,
-//     },
-// };
+use crate::{
+    input_classifier::InputClassifierModel,
+    report_if_error, send_telemetry_from_ctx,
+    settings::{AISettings, AISettingsChangedEvent, InputBoxType, InputSettings},
+    terminal::{
+        input::decorations::ParsedTokensSnapshot,
+        model::{rich_content::RichContentType, session::SessionId},
+        History, TerminalModel,
+    },
+};
 
 use super::telemetry_banner::should_collect_ai_ugc_telemetry;
 use crate::legacy_stubs::{TelemetryEvent};

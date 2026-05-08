@@ -7,13 +7,13 @@ use warpui::{
     },
 };
 
-// use crate::{  // unresolved (cloud detach)
-//     ai::{blocklist::error_color, AIRequestUsageModel},
-//     network::NetworkStatus,
-//     settings::PrivacySettings,
-//     settings_view::SettingsSection,
-//     ui_components::icons::Icon,
-//     workspace::WorkspaceAction};
+use crate::{
+    ai::{blocklist::error_color, AIRequestUsageModel},
+    network::NetworkStatus,
+    settings::PrivacySettings,
+    settings_view::SettingsSection,
+    ui_components::icons::Icon,
+    workspace::WorkspaceAction};
 use ai::api_keys::ApiKeyManager;
 use warpui::{AppContext, Element, Entity, TypedActionView, View, ViewContext};
 use crate::legacy_stubs::{ServerId};

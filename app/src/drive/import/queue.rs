@@ -2,18 +2,18 @@ use std::collections::HashMap;
 
 use warpui::{Entity, ModelContext, SingletonEntity};
 
-// use crate::{  // unresolved (cloud detach)
-//     cloud_object::{model::persistence::CloudModel, CloudObjectEventEntrypoint, Owner},
-//     drive::folders::FolderId,
-//     notebooks::CloudNotebookModel,
-//     server::{
-//         cloud_objects::update_manager::{
-//             InitiatedBy, ObjectOperation, OperationSuccessType, UpdateManager, UpdateManagerEvent,
-//         },
-//         ids::{ClientId, SyncId},
-//     },
-//     workflows::{workflow::Workflow, workflow_enum::WorkflowEnum},
-// };
+use crate::{
+    cloud_object::{model::persistence::CloudModel, CloudObjectEventEntrypoint, Owner},
+    drive::folders::FolderId,
+    notebooks::CloudNotebookModel,
+    server::{
+        cloud_objects::update_manager::{
+            InitiatedBy, ObjectOperation, OperationSuccessType, UpdateManager, UpdateManagerEvent,
+        },
+        ids::{ClientId, SyncId},
+    },
+    workflows::{workflow::Workflow, workflow_enum::WorkflowEnum},
+};
 
 use super::nodes::{self, FileId};
 

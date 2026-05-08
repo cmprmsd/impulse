@@ -44,31 +44,31 @@ use crate::ai::blocklist::BlocklistAIHistoryEvent;
 
 #[cfg(not(target_family = "wasm"))]
 use crate::terminal::model::session::SessionType;
-// use crate::{  // unresolved (cloud detach)
-//     ai::{
-//         blocklist::{
-//             prompt::prompt_alert::{PromptAlertEvent, PromptAlertView},
-//             BlocklistAIInputModel, InputConfig, InputType,
-//         },
-//         execution_profiles::profiles::AIExecutionProfilesModel,
-//         AIRequestUsageModel,
-//     },
-//     network::NetworkStatus,
-//     settings::AISettings,
-//     settings_view::SettingsSection,
-//     terminal::{
-//         input::MenuPositioningProvider,
-//         keys::TerminalKeybindings,
-//         model::{block::BlockMetadata, session::Sessions},
-//         profile_model_selector::{ProfileModelSelector, ProfileModelSelectorEvent},
-//         session_settings::{SessionSettings, SessionSettingsChangedEvent},
-//         shared_session::permissions_manager::SessionPermissionsManager,
-//     },
-//     ui_components::icons::Icon,
-//     view_components::action_button::{
-//         ActionButton, ActionButtonTheme, ButtonSize, NakedTheme, TooltipAlignment,
-//     },
-// };
+use crate::{
+    ai::{
+        blocklist::{
+            prompt::prompt_alert::{PromptAlertEvent, PromptAlertView},
+            BlocklistAIInputModel, InputConfig, InputType,
+        },
+        execution_profiles::profiles::AIExecutionProfilesModel,
+        AIRequestUsageModel,
+    },
+    network::NetworkStatus,
+    settings::AISettings,
+    settings_view::SettingsSection,
+    terminal::{
+        input::MenuPositioningProvider,
+        keys::TerminalKeybindings,
+        model::{block::BlockMetadata, session::Sessions},
+        profile_model_selector::{ProfileModelSelector, ProfileModelSelectorEvent},
+        session_settings::{SessionSettings, SessionSettingsChangedEvent},
+        shared_session::permissions_manager::SessionPermissionsManager,
+    },
+    ui_components::icons::Icon,
+    view_components::action_button::{
+        ActionButton, ActionButtonTheme, ButtonSize, NakedTheme, TooltipAlignment,
+    },
+};
 use warp_core::features::FeatureFlag;
 use warpui::ui_components::segmented_control::{LabelConfig, TooltipConfig};
 use warpui::{AppContext, Entity, EntityId, ModelHandle, TypedActionView, View, ViewContext, ViewHandle};

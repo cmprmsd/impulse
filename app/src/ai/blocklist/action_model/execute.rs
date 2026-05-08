@@ -87,22 +87,22 @@ use mime_guess::from_path;
 use self::search_codebase::SearchCodebaseExecutor;
 #[cfg(feature = "local_fs")]
 use crate::ai::{agent::AnyFileContent, paths::host_native_absolute_path};
-// use crate::{  // unresolved (cloud detach)
-//     ai::{
-//         agent::{ AIAgentAction, AIAgentActionId,
-//             AIAgentActionResult, AIAgentActionResultType, AIAgentActionType, CancellationReason,
-//             FileContext, FileLocations, ServerOutputId},
-//         ambient_agents::AmbientAgentTaskId,
-//         get_relevant_files::controller::GetRelevantFilesController,
-//     },
-//     terminal::{
-//         model::session::{active_session::ActiveSession, ExecuteCommandOptions, Session},
-//         model_events::ModelEventDispatcher,
-//         shell::ShellType,
-//         ShellLaunchData, TerminalModel,
-//     },
-//     BlocklistAIHistoryModel,
-// };
+use crate::{
+    ai::{
+        agent::{ AIAgentAction, AIAgentActionId,
+            AIAgentActionResult, AIAgentActionResultType, AIAgentActionType, CancellationReason,
+            FileContext, FileLocations, ServerOutputId},
+        ambient_agents::AmbientAgentTaskId,
+        get_relevant_files::controller::GetRelevantFilesController,
+    },
+    terminal::{
+        model::session::{active_session::ActiveSession, ExecuteCommandOptions, Session},
+        model_events::ModelEventDispatcher,
+        shell::ShellType,
+        ShellLaunchData, TerminalModel,
+    },
+    BlocklistAIHistoryModel,
+};
 
 /// Types of actions that can be executed in parallel.
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]

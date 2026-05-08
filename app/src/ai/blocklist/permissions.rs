@@ -3,15 +3,15 @@ use std::{
     path::PathBuf,
 };
 
-// use crate::{  // unresolved (cloud detach)
-//     ai::{
-//         agent::conversation::AIConversationId,
-//         execution_profiles::{
-//             profiles::{AIExecutionProfilesModel, ClientProfileId},
-//             AIExecutionProfile, ActionPermission, AskUserQuestionPermission, WriteToPtyPermission,
-//         },
-//     },
-// };
+use crate::{
+    ai::{
+        agent::conversation::AIConversationId,
+        execution_profiles::{
+            profiles::{AIExecutionProfilesModel, ClientProfileId},
+            AIExecutionProfile, ActionPermission, AskUserQuestionPermission, WriteToPtyPermission,
+        },
+    },
+};
 use warp_core::execution_mode::AppExecutionMode;
 
 use crate::ai::mcp::mcp_provider_from_file_path;
