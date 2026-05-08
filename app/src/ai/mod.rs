@@ -56,8 +56,21 @@ pub use crate::legacy_stubs::{
 };
 
 // Empty submodule placeholders for deleted cloud features
-pub mod ambient_agents {}
-pub mod active_agent_views_model {}
+pub mod ambient_agents {
+    pub use crate::legacy_stubs::AmbientAgentTaskId;
+
+    #[derive(Debug, Clone, Default)]
+    pub struct AgentConfigSnapshot;
+
+    pub mod task {
+        #[derive(Debug, Clone, Default)]
+        pub struct AmbientAgentTask;
+    }
+}
+pub mod active_agent_views_model {
+    #[derive(Debug, Clone, Default)]
+    pub struct ActiveAgentViewsModel;
+}
 pub mod agent_tips {
     pub use crate::legacy_stubs::AgentTip;
 }
