@@ -26,8 +26,8 @@ use crate::auth::auth_view_modal::AuthViewVariant;
 #[cfg(feature = "local_fs")]
 use crate::code::editor_management::CodeSource;
 use crate::code::view::CodeViewAction;
-use crate::code_review::comments::{AttachedReviewComment, PendingImportedReviewComment};
-use crate::code_review::diff_state::DiffMode;
+// (cloud-only deleted) use crate::code_review;
+// (cloud-only deleted) use crate::code_review;
 use crate::env_vars::EnvVarCollectionType;
 use crate::notebooks::file::FileNotebookView;
 use crate::pane_group::focus_state::PaneGroupFocusEvent;

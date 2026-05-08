@@ -1773,9 +1773,15 @@ pub(crate) fn initialize_app(
     ctx.add_singleton_model(move |_| RestoredAgentConversations::new(multi_agent_conversations));
     ctx.add_singleton_model(|_| CLIAgentSessionsModel::new());
     // ActiveAgentViewsModel is used to track active agent conversations and notify listeners when they change.
-    // Cloud-only: ActiveAgentViewsModel + agent orchestration deleted in Phase 0
     ctx.add_singleton_model(AgentNotificationsModel::new);
     ctx.add_singleton_model(BlocklistAIPermissions::new);
+    ctx.add_singleton_model(ai::blocklist::orchestration_events::OrchestrationEventService::new);
+    ctx.add_singleton_model(ai::blocklist::task_status_sync_model::TaskStatusSyncModel::new);
+    if warp_core::features::FeatureFlag::OrchestrationV2.is_enabled() {
+        ctx.add_singleton_model(
+            ai::blocklist::orchestration_event_streamer::OrchestrationEventStreamer::new,
+        );
+    }
 
     ctx.add_singleton_model(RepoOutlines::new);
     ctx.add_singleton_model(|ctx| {
@@ -1890,7 +1896,11 @@ pub(crate) fn initialize_app(
     ctx.add_singleton_model(|_| ResizableData::default());
 
     // Add a singleton model to maintain state of shared session across all windows.
-    // Cloud-only: terminal::shared_session deleted in Phase 0
+    ctx.add_singleton_model(terminal::shared_session::manager::Manager::new);
+
+    ctx.add_singleton_model(
+        terminal::shared_session::permissions_manager::SessionPermissionsManager::new,
+    );
 
     ctx.add_singleton_model(EnvVarCollectionManager::new);
     ctx.add_singleton_model(WorkflowManager::new);

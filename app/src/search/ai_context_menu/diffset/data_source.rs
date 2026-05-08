@@ -1,6 +1,5 @@
 use super::search_item::DiffSetSearchItem;
-use crate::code_review::diff_state::DiffMode;
-
+// (cloud-only deleted) use crate::code_review;
 use crate::search::ai_context_menu::mixer::AIContextMenuSearchableAction;
 use crate::search::data_source::{Query, QueryResult};
 use crate::search::mixer::{DataSourceRunErrorWrapper, SyncDataSource};

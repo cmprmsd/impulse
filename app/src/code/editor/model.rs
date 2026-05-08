@@ -5,7 +5,7 @@ use warp_editor::selection::{TextUnit};
 // Adding this file level gate as some of the code around editability is not used in WASM yet.
 
 use crate::code::editor::line_iterator::LineIterator;
-use crate::code_review::CodeReviewTelemetryEvent;
+// (cloud-only deleted) use crate::code_review;
 use num_traits::SaturatingSub;
 use rangemap::{RangeMap, RangeSet};
 use std::future::Future;
@@ -80,7 +80,7 @@ use super::diff::{
     add_inline_overlay_color, DiffModel, DiffModelEvent, DiffStatus, RenderableDiffHunk,
 };
 use super::line::EditorLineLocation;
-use crate::code_review::comments::{CommentId, CommentOrigin, LineDiffContent};
+// (cloud-only deleted) use crate::code_review;
 use warp_editor::selection::SelectionModel;
 
 /// An opaque handle to a stable line in the editor content, suitable for scroll

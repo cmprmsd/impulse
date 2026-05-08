@@ -14,10 +14,7 @@ use super::{
 };
 use crate::ai::agent::{AgentReviewCommentBatch, DiffSetHunk};
 use crate::code::editor::line::EditorLineLocation;
-use crate::code_review::comments::{
-    AttachedReviewComment, AttachedReviewCommentTarget, CommentOrigin, LineDiffContent,
-};
-
+// (cloud-only deleted) use crate::code_review;
 /// Helper to build an alias map from pairs.
 fn aliases(pairs: &[(&str, &str)]) -> HashMap<SmolStr, String> {
     pairs

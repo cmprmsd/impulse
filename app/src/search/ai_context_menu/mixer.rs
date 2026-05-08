@@ -1,4 +1,4 @@
-use crate::code_review::diff_state::DiffMode;
+// (cloud-only deleted) use crate::code_review;
 use crate::search::mixer::SearchMixer;
 use crate::legacy_stubs::{ObjectType};
 

@@ -15,7 +15,7 @@ use warpui::units::Lines;
 use warpui::EntityId;
 
 use crate::ai::agent::AIAgentExchangeId;
-use crate::code_review::telemetry_event::CodeReviewPaneEntrypoint;
+// (cloud-only deleted) use crate::code_review;
 use crate::terminal::available_shells::AvailableShell;
 use crate::terminal::model::completions::ShellCompletion;
 use crate::terminal::shared_session::SharedSessionActionSource;

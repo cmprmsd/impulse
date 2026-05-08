@@ -24,7 +24,7 @@ use warpui::clipboard::ClipboardContent;
 use warpui::{SingletonEntity, ViewContext};
 
 use crate::ai::blocklist::{BlocklistAIHistoryModel, SlashCommandRequest};
-use crate::code_review::telemetry_event::CodeReviewPaneEntrypoint;
+// (cloud-only deleted) use crate::code_review;
 use crate::search::slash_command_menu::static_commands::commands::{self, COMMAND_REGISTRY};
 use crate::search::slash_command_menu::static_commands::Availability;
 use crate::search::slash_command_menu::{SlashCommandId, StaticCommand};

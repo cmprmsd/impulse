@@ -8,7 +8,7 @@ use crate::ai::mcp::{
     gallery::MCPGalleryManager, templatable_manager::TemplatableMCPServerManager,
 };
 use crate::ai::skills::SkillManager;
-use crate::code_review::git_status_update::GitStatusUpdateModel;
+// (cloud-only deleted) use crate::code_review;
 use crate::terminal::cli_agent_sessions::CLIAgentSessionsModel;
 use crate::warp_managed_paths_watcher::WarpManagedPathsWatcher;
 use warpui::SingletonEntity;

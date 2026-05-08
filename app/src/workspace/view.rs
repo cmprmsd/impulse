@@ -62,10 +62,10 @@ use crate::app_state::{
     PaneNodeSnapshot, PaneUuid, RightPanelSnapshot, SettingsPaneSnapshot, TabSnapshot,
     TerminalPaneSnapshot, WindowSnapshot, WorkflowPaneSnapshot,
 };
-use crate::code_review::diff_state::DiffStateModel;
+// (cloud-only deleted) use crate::code_review;
 #[cfg(feature = "local_fs")]
-use crate::code_review::CodeReviewTelemetryEvent;
-use crate::code_review::GlobalCodeReviewModel;
+// (cloud-only deleted) use crate::code_review;
+// (cloud-only deleted) use crate::code_review;
 use crate::coding_panel_enablement_state::CodingPanelEnablementState;
 use crate::default_terminal::DefaultTerminal;
 use crate::notebooks::CloudNotebook;
@@ -141,7 +141,7 @@ use crate::ai::execution_profiles::profiles::{AIExecutionProfilesModel, ClientPr
 #[cfg(feature = "local_fs")]
 use crate::code::editor_management::CodeManager;
 use crate::code::editor_management::CodeSource;
-use crate::code_review::telemetry_event::CodeReviewPaneEntrypoint;
+// (cloud-only deleted) use crate::code_review;
 use crate::drive::export::ExportManager;
 use crate::drive::settings::WarpDriveSettings;
 use crate::pane_group::{
@@ -155,7 +155,7 @@ use crate::settings::{
     AISettings, AISettingsChangedEvent, CodeSettings, CodeSettingsChangedEvent, CtrlTabBehavior,
     DefaultSessionMode, InputModeSettings,
 };
-use crate::settings_view::environments_page::EnvironmentsPage;
+// (cloud-only deleted) use crate::settings_view::environments_page;
 use crate::settings_view::pane_manager::SettingsPaneManager;
 use crate::settings_view::{SettingsSection, SettingsView, SettingsViewEvent};
 #[cfg(all(target_os = "windows", feature = "local_tty"))]

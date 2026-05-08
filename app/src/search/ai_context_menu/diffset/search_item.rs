@@ -1,5 +1,5 @@
 use crate::appearance::Appearance;
-use crate::code_review::diff_state::DiffMode;
+// (cloud-only deleted) use crate::code_review;
 use crate::search::ai_context_menu::mixer::AIContextMenuSearchableAction;
 use crate::search::ai_context_menu::styles;
 use crate::search::item::SearchItem;

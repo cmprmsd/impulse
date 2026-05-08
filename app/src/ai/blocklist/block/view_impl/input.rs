@@ -1,5 +1,5 @@
 use crate::ai::blocklist::block::CommentElementState;
-use crate::code_review::comments::CommentId;
+// (cloud-only deleted) use crate::code_review;
 use std::collections::{HashMap, HashSet};
 
 #[derive(Copy, Clone)]

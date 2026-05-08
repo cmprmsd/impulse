@@ -45,7 +45,7 @@ use crate::ai::skills::{SkillManager, SkillTelemetryEvent};
 use crate::code::editor::comment_editor::create_readonly_comment_markdown_editor;
 use crate::code::editor::view::CodeEditorRenderOptions;
 use crate::code::editor_management::CodeSource;
-use crate::code_review::comment_rendering::{CommentViewCard, HeaderClickHandler};
+// (cloud-only deleted) use crate::code_review;
 use crate::terminal::model::BlockId;
 use crate::terminal::model_events::ModelEvent;
 use crate::terminal::model_events::ModelEventDispatcher;
@@ -101,7 +101,7 @@ use crate::ai::facts::{AIFact, AIMemory, CloudAIFactModel};
 // use crate::ai::AIRequestUsageModelEvent;  // unresolved (cloud detach)
 use crate::cloud_object::model::generic_string_model::GenericStringObjectId;
 use crate::cloud_object::model::persistence::CloudModel;
-use crate::code_review::telemetry_event::CodeReviewPaneEntrypoint;
+// (cloud-only deleted) use crate::code_review;
 use crate::server::ids::SyncId;
 use crate::server::telemetry::AgentModeRewindEntrypoint;
 use crate::settings::InputSettings;
@@ -210,11 +210,8 @@ use super::inline_action::requested_action::CTRL_C_KEYSTROKE;
 use super::inline_action::requested_action::ENTER_KEYSTROKE;
 use super::suggested_agent_mode_workflow_modal::SuggestedAgentModeWorkflowAndId;
 use super::suggested_rule_modal::SuggestedRuleAndId;
-use crate::code_review::comments::{
-    attach_pending_imported_comments, convert_insert_review_comments, AttachedReviewComment,
-    CommentId, CommentOrigin,
-};
-use crate::code_review::CodeReviewTelemetryEvent;
+// (cloud-only deleted) use crate::code_review;
+// (cloud-only deleted) use crate::code_review;
 use crate::PrivacySettings;
 use crate::{
     ai::agent::{AIAgentInput, ServerOutputId},

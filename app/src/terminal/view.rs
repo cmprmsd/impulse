@@ -112,12 +112,9 @@ use crate::ai::blocklist::{block_context_from_terminal_model, SlashCommandReques
 use crate::ai::document::ai_document_model::{AIDocumentId, AIDocumentModel, AIDocumentVersion};
 use crate::ai::loading::shimmering_warp_loading_text;
 #[cfg(feature = "local_fs")]
-use crate::code_review::context::{
-    convert_file_diffs_to_diffset_hunks, create_attachment_reference_and_key,
-    register_diffset_attachment,
-};
+// (cloud-only deleted) use crate::code_review;
 #[cfg(feature = "local_fs")]
-use crate::code_review::DiffSetScope;
+// (cloud-only deleted) use crate::code_review;
 use crate::terminal::model::blocks::RemovableBlocklistItem;
 #[cfg(feature = "local_fs")]
 use crate::util::file::external_editor::{settings::EditorLayout, EditorSettings};
@@ -137,17 +134,13 @@ use crate::ai::blocklist::block::{AIBlockAction, FinishReason};
 use crate::ai::blocklist::model::{AIBlockModel, AIBlockModelHelper, AIBlockOutputStatus};
 #[cfg(feature = "local_fs")]
 // use crate::ai::persisted_workspace::PersistedWorkspace;  // unresolved (cloud detach)
-use crate::code_review::comments::{
-    convert_insert_review_comments, AttachedReviewComment, PendingImportedReviewComment,
-};
+// (cloud-only deleted) use crate::code_review;
 #[cfg(feature = "local_fs")]
-use crate::code_review::diff_state::DiffStateModel;
-use crate::code_review::diff_state::{DiffMode, GitDeltaPreference};
+// (cloud-only deleted) use crate::code_review;
+// (cloud-only deleted) use crate::code_review;
 #[cfg(feature = "local_fs")]
-use crate::code_review::git_status_update::{
-    GitRepoStatusModel, GitStatusMetadata, GitStatusUpdateModel,
-};
-use crate::code_review::telemetry_event::CodeReviewPaneEntrypoint;
+// (cloud-only deleted) use crate::code_review;
+// (cloud-only deleted) use crate::code_review;
 use crate::projects::ProjectManagementModel;
 use crate::remote_server::manager::{
     RemoteServerInitPhase, RemoteServerManager, RemoteServerManagerEvent,

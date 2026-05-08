@@ -20,8 +20,7 @@ use warpui::units::Pixels;
 use warpui::{AppContext, EntityId, EventContext, LayoutContext, ViewHandle, WindowId};
 
 use crate::code::editor::comment_editor::CommentEditor;
-use crate::code_review::comments::CommentId;
-
+// (cloud-only deleted) use crate::code_review;
 const COMMENT_ID_MAPPING_KEY: &str = "comment_id";
 const ENTITY_ID_MAPPING_KEY: &str = "entity_id";
 const WINDOW_ID_MAPPING_KEY: &str = "window_id";

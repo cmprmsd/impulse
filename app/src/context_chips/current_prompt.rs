@@ -36,7 +36,7 @@ use super::{
     },
 };
 #[cfg(feature = "local_fs")]
-use crate::code_review::git_status_update::{GitRepoStatusEvent, GitRepoStatusModel};
+// (cloud-only deleted) use crate::code_review;
 #[cfg(feature = "local_fs")]
 use crate::context_chips::display_chip::GitLineChanges;
 use std::collections::{HashMap, HashSet};

@@ -14,9 +14,9 @@ use warpui::{App, SingletonEntity};
 use warpui_extras::user_preferences;
 
 #[cfg(feature = "local_fs")]
-use crate::code_review::diff_state::DiffStats;
+// (cloud-only deleted) use crate::code_review;
 #[cfg(feature = "local_fs")]
-use crate::code_review::git_status_update::{GitRepoStatusModel, GitStatusMetadata};
+// (cloud-only deleted) use crate::code_review;
 #[cfg(windows)]
 use crate::system::SystemInfo;
 use crate::{

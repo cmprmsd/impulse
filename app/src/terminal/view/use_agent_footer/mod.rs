@@ -27,8 +27,8 @@ use std::time::Duration;
 
 use warpui::r#async::Timer;
 
-use crate::code_review::diff_state::GitDeltaPreference;
-use crate::code_review::telemetry_event::CodeReviewPaneEntrypoint;
+// (cloud-only deleted) use crate::code_review;
+// (cloud-only deleted) use crate::code_review;
 use anyhow::anyhow;
 use parking_lot::FairMutex;
 use pathfinder_color::ColorU;

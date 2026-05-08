@@ -35,9 +35,7 @@ use crate::ai::block_context::BlockContext;
 use crate::ai::blocklist::block::view_impl::output::are_all_text_sections_empty;
 use crate::ai::skills::SkillDescriptor;
 use crate::code::editor_management::CodeSource;
-use crate::code_review::comments::{
-    AttachedReviewComment as CodeReviewComment, ReviewCommentBatch,
-};
+// (cloud-only deleted) use crate::code_review;
 use crate::search::slash_command_menu::static_commands::commands;
 use ai::agent::orchestration_config::{OrchestrationConfig, OrchestrationConfigStatus};
 use ai::skills::ParsedSkill;

@@ -1,6 +1,6 @@
 use crate::ai::agent::icons::addressed_comment_icon;
 use crate::ai::blocklist::block::CommentElementState;
-use crate::code_review::comments::ReviewCommentBatch;
+// (cloud-only deleted) use crate::code_review;
 use warp_core::ui::appearance::Appearance;
 use warp_core::ui::theme::color::internal_colors;
 use warp_core::ui::Icon;

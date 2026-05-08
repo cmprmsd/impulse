@@ -21,7 +21,7 @@ use warpui::{AppContext, SingletonEntity};
 use crate::ai::agent::{AgentReviewCommentBatch, DiffSetHunk};
 use crate::ai::blocklist::CLAUDE_ORANGE;
 use crate::code::editor::line::EditorLineLocation;
-use crate::code_review::comments::AttachedReviewCommentTarget;
+// (cloud-only deleted) use crate::code_review;
 use crate::ui_components::icons::Icon;
 use warp_completer::parsers::simple::top_level_command;
 use warp_util::path::EscapeChar;

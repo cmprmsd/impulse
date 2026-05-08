@@ -2,7 +2,7 @@ use super::{
     comment_embedded_item_conversion, EmbeddedCommentSpace, EmbeddedItem as _,
     COMMENT_ID_MAPPING_KEY, ENTITY_ID_MAPPING_KEY, WINDOW_ID_MAPPING_KEY,
 };
-use crate::code_review::comments::CommentId;
+// (cloud-only deleted) use crate::code_review;
 use serde_yaml::{Mapping, Value};
 use warp_editor::content::markdown::MarkdownStyle;
 use warpui::{EntityId, WindowId};
