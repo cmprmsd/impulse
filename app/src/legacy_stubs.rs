@@ -109,21 +109,31 @@ impl Default for ObjectType {
     }
 }
 
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Default, Serialize, Deserialize)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Serialize, Deserialize)]
 pub enum GenericStringObjectFormat {
-    #[default]
-    JsonEnvVarCollection,
-    JsonAIFact,
-    JsonMCPServer,
-    JsonAIExecutionProfile,
-    JsonTemplatableMCPServer,
-    JsonCloudEnvironment,
-    JsonScheduledAmbientAgent,
-    JsonPreference,
+    Json(JsonObjectType),
 }
 
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Default, Serialize, Deserialize)]
-pub struct JsonObjectType;
+impl Default for GenericStringObjectFormat {
+    fn default() -> Self {
+        GenericStringObjectFormat::Json(JsonObjectType::Default)
+    }
+}
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Default, Serialize, Deserialize)]
+pub enum JsonObjectType {
+    #[default]
+    Default,
+    AIExecutionProfile,
+    AIFact,
+    CloudAgentConfig,
+    CloudEnvironment,
+    EnvVarCollection,
+    MCPServer,
+    Preference,
+    ScheduledAmbientAgent,
+    TemplatableMCPServer,
+}
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash)]
 pub enum CloudObjectTypeAndId {
@@ -568,7 +578,21 @@ pub struct ShareableLinkError;
 #[derive(Debug, Clone, Default)]
 pub struct AmbientAgentViewModel;
 
-pub trait StringModel {}
+pub trait StringModel: Sized {
+    type CloudObjectType;
+    fn model_type_name(&self) -> &'static str { "" }
+    fn should_enforce_revisions() -> bool { false }
+    fn model_format() -> GenericStringObjectFormat { GenericStringObjectFormat }
+    fn should_show_activity_toasts() -> bool { false }
+    fn warn_if_unsaved_at_quit() -> bool { false }
+    fn can_export() -> bool { false }
+    fn display_name(&self) -> String { String::new() }
+    fn renders_in_warp_drive() -> bool { false }
+    fn set_display_name(&mut self, _: String) {}
+    fn should_clear_on_unique_key_conflict() -> bool { false }
+    fn supports_linking() -> bool { false }
+    fn uniqueness_key(&self) -> Option<String> { None }
+}
 #[derive(Debug, Clone, Default)]
 pub struct DisplaySetting;
 
@@ -654,7 +678,20 @@ pub struct ReviewComment;
 #[derive(Debug, Clone, Default)]
 pub struct RenderableOptionConfig;
 
-pub trait JsonModel {}
+pub trait JsonModel: Sized {
+    type CloudObjectType;
+    fn model_type_name(&self) -> &'static str { "" }
+    fn should_enforce_revisions() -> bool { false }
+    fn json_object_type() -> JsonObjectType { JsonObjectType::Default }
+    fn should_show_activity_toasts() -> bool { false }
+    fn warn_if_unsaved_at_quit() -> bool { false }
+    fn can_export() -> bool { false }
+    fn display_name(&self) -> String { String::new() }
+    fn renders_in_warp_drive() -> bool { false }
+    fn set_display_name(&mut self, _: String) {}
+    fn should_clear_on_unique_key_conflict() -> bool { false }
+    fn supports_linking() -> bool { false }
+}
 #[derive(Debug, Clone, Default)]
 pub struct GenericStringModel<T = (), S = ()>(std::marker::PhantomData<(T, S)>);
 
@@ -1066,12 +1103,6 @@ pub struct AmbientAgentEntryBlock;
 
 #[derive(Debug, Clone, Default)]
 pub struct AmbientAgentViewModelEvent;
-
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
-pub enum JsonObjectType {
-    #[default]
-    Default,
-}
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
 pub enum InitiatedBy {
