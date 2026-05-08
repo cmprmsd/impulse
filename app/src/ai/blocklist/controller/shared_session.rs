@@ -2,6 +2,7 @@
 // This module extends BlocklistAIController with methods used when viewing a shared session
 // and defines state used only for session sharing.
 use std::collections::HashMap;
+use crate::ai::blocklist::agent_view::AgentViewEntryOrigin;
 
 use itertools::Itertools;
 use session_sharing_protocol::common::{AgentAttachment, ParticipantId, ServerConversationToken};

@@ -2,6 +2,7 @@
 //! is defined as additional context to be attached to the next AI query.
 
 use std::{
+use crate::ai::blocklist::agent_view::AgentViewEntryOrigin;
     collections::{HashMap, HashSet},
     path::{Path, PathBuf},
     str::FromStr,

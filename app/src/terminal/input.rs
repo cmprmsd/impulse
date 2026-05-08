@@ -1,4 +1,5 @@
 use warpui::keymap::macros::*;
+use crate::ai::blocklist::agent_view::AgentViewEntryOrigin;
 use crate::legacy_stubs::{PaletteSource};
 use crate::legacy_stubs::{AIConversationId, AgentViewController};
 use crate::legacy_stubs::{AnonymousUserSignupEntrypoint, ServerApi, SyncId};

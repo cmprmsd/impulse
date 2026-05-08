@@ -6,6 +6,7 @@
 //! input contents are an AI query or shell command, which is then used to update the input mode.
 
 use crate::send_telemetry_from_ctx;
+use crate::ai::blocklist::agent_view::AgentViewEntryOrigin;
 use std::sync::Arc;
 
 use futures::stream::AbortHandle;

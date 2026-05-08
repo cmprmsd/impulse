@@ -1,5 +1,6 @@
 //! Implementation of "AI blocks" used to render AI queries and outputs in the blocklist.
 use warpui::keymap::macros::*;
+use crate::ai::blocklist::agent_view::AgentViewEntryOrigin;
 use crate::legacy_stubs::AIAgentTodoList;
 pub mod cli;
 pub mod cli_controller;

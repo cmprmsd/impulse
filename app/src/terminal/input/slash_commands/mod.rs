@@ -1,4 +1,5 @@
 use crate::send_telemetry_from_ctx;
+use crate::ai::blocklist::agent_view::AgentViewEntryOrigin;
 use crate::legacy_stubs::{CloudModel, PaletteSource, SyncId};
 use crate::legacy_stubs::{AIConversationId};
 mod cloud_mode_v2_view;
