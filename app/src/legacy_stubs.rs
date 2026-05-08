@@ -1159,5 +1159,38 @@ pub struct ContextPredicate;
 pub struct StaticQueryType;
 
 #[derive(Debug, Clone, Default)]
-pub struct EntrypointType;
+pub struct PersistedWorkspace;
+
+#[derive(Debug, Clone, Default)]
+pub struct PersistedWorkspaceEvent;
+
+#[derive(Debug, Clone, Default)]
+pub struct AgentInputFooterEvent;
+
+#[derive(Debug, Clone, Default)]
+pub struct InputSuggestionsMode;
+
+#[derive(Debug, Clone, Default)]
+pub struct CloudViewModel;
+
+#[derive(Debug, Clone, Default)]
+pub struct AgentConversationsModel;
+
+#[derive(Debug, Clone, Default)]
+pub struct AgentConversationsModelEvent;
+
+#[derive(Debug, Clone, Default)]
+pub struct LspModelState;
+
+#[derive(Debug, Clone, Default)]
+pub struct LocalOnlyIconState;
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
+pub enum AdminEnablementSetting {
+    #[default]
+    Default,
+}
+
+#[derive(Debug, Clone, Default)]
+pub struct DropdownItem;
 

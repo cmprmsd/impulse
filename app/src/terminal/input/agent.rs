@@ -33,7 +33,7 @@ use warpui::{AppContext};
 use warpui::elements::{ChildView};
 use crate::legacy_stubs::{BlocklistAIHistoryModel};
 use crate::appearance::Appearance;
-// use crate::terminal::TerminalAction;  // unresolved (cloud detach)
+use crate::terminal::view::TerminalAction;
 
 pub(super) const CLOUD_MODE_V2_MAX_WIDTH: f32 = 720.;
 
