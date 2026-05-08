@@ -14405,6 +14405,9 @@ dependencies = [
 [[package]]
 name = "warp_graphql"
 version = "0.0.0"
+dependencies = [
+ "chrono",
+]
 
 [[package]]
 name = "warp_isolation_platform"
