@@ -184,6 +184,7 @@ pub use self::link_detection::{RichContentLink, RichContentLinkTooltipInfo};
 use crate::ai::llms::{LLMId, LLMModelHost, LLMPreferences};
 use crate::settings::CodeSettings;
 pub use action::{AgentOnboardingVersion, OnboardingIntention, OnboardingVersion, TerminalAction};
+use action::TerminalAction::*;
 // use ai::api_keys::{ApiKeyManager, AwsCredentialsState};  // unresolved (cloud detach)
 use ai::index::full_source_code_embedding::manager::{BuildSource, CodebaseIndexManager};
 pub use block_banner::{WithinBlockBanner, BLOCK_BANNER_HEIGHT};
@@ -23132,6 +23133,7 @@ impl TerminalView {
     }
 
     fn context_menu_action(&mut self, action: &ContextMenuAction, ctx: &mut ViewContext<Self>) {
+        use ContextMenuAction::*;
 
         // TODO: handle sharing session with > 1 block selected
         let source = SharedSessionActionSource::BlocklistContextMenu {
@@ -24541,7 +24543,6 @@ impl TypedActionView for TerminalView {
         ctx: &mut ViewContext<Self>,
     ) -> ActionAccessibilityContent {
         use ActionAccessibilityContent::*;
-        use TerminalAction::*;
 
         match action {
             BlockHover(_)

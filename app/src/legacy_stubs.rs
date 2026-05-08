@@ -531,15 +531,11 @@ pub struct QueueItem;
 #[derive(Debug, Clone, Default)]
 pub struct LspRepoStatus;
 
-#[derive(Debug, Clone, Default)]
-pub struct ModelAsRef;
-
+pub trait ModelAsRef {}
 #[derive(Debug, Clone, Default)]
 pub struct ResponseEvent;
 
-#[derive(Debug, Clone, Default)]
-pub struct SettingsWidget;
-
+pub trait SettingsWidget {}
 #[derive(Debug, Clone, Default)]
 pub struct AIAgentHarness;
 
@@ -568,9 +564,7 @@ pub struct ShareableLinkError;
 #[derive(Debug, Clone, Default)]
 pub struct AmbientAgentViewModel;
 
-#[derive(Debug, Clone, Default)]
-pub struct StringModel;
-
+pub trait StringModel {}
 #[derive(Debug, Clone, Default)]
 pub struct DisplaySetting;
 
@@ -595,9 +589,7 @@ pub struct CreateObjectRequest;
 #[derive(Debug, Clone, Default)]
 pub struct CloudObjectSyncStatus;
 
-#[derive(Debug, Clone, Default)]
-pub struct CloudModelType;
-
+pub trait CloudModelType {}
 #[derive(Debug, Clone, Default)]
 pub struct CloudObjectEventEntrypoint;
 
@@ -631,9 +623,7 @@ pub struct CloudEnvVarCollection;
 #[derive(Debug, Clone, Default)]
 pub struct WarpDriveItemId;
 
-#[derive(Debug, Clone, Default)]
-pub struct WarpDriveItem;
-
+pub trait WarpDriveItem {}
 #[derive(Debug, Clone, Default)]
 pub struct DriveIndexVariant;
 
@@ -646,9 +636,7 @@ pub struct OpenWarpDriveObjectArgs;
 #[derive(Debug, Clone, Default)]
 pub struct OpenWarpDriveObjectSettings;
 
-#[derive(Debug, Clone, Default)]
-pub struct ObjectClient;
-
+pub trait ObjectClient {}
 // ---------------------------------------------------------------------------
 // Fifth sweep: more cloud-side helpers seen in remaining errors
 // ---------------------------------------------------------------------------
@@ -662,18 +650,14 @@ pub struct ReviewComment;
 #[derive(Debug, Clone, Default)]
 pub struct RenderableOptionConfig;
 
-#[derive(Debug, Clone, Default)]
-pub struct JsonModel;
-
+pub trait JsonModel {}
 #[derive(Debug, Clone, Default)]
 pub struct GenericStringModel<T = (), S = ()>(std::marker::PhantomData<(T, S)>);
 
 #[derive(Debug, Clone, Default)]
 pub struct ServerTime;
 
-#[derive(Debug, Clone, Default)]
-pub struct MessageProvider;
-
+pub trait MessageProvider {}
 #[derive(Debug, Clone, Default)]
 pub struct SizeInfo;
 
@@ -830,21 +814,15 @@ pub struct ParsedTemplatableMCPServerResult;
 #[derive(Debug, Clone, Default)]
 pub struct ImportQueueArgs;
 
-#[derive(Debug, Clone, Default)]
-pub struct CloudStringObject;
-
+pub trait CloudStringObject {}
 #[derive(Debug, Clone, Default)]
 pub struct CloudObjectTelemetryMetadata;
 
-#[derive(Debug, Clone, Default)]
-pub struct BlockClient;
-
+pub trait BlockClient {}
 #[derive(Debug, Clone, Default)]
 pub struct AuthError;
 
-#[derive(Debug, Clone, Default)]
-pub struct AuthClient;
-
+pub trait AuthClient {}
 #[derive(Debug, Clone, Default)]
 pub struct AttachmentInput;
 
