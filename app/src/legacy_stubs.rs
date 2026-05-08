@@ -109,6 +109,12 @@ impl Default for ObjectType {
     }
 }
 
+impl Default for ObjectType {
+    fn default() -> Self {
+        ObjectType::Notebook
+    }
+}
+
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Serialize, Deserialize)]
 pub enum GenericStringObjectFormat {
     Json(JsonObjectType),
@@ -629,7 +635,18 @@ pub struct CreateObjectRequest;
 #[derive(Debug, Clone, Default)]
 pub struct CloudObjectSyncStatus;
 
-pub trait CloudModelType {}
+pub trait CloudModelType: Sized {
+    fn model_type_name(&self) -> &'static str { "" }
+    fn display_name(&self) -> String { String::new() }
+    fn set_display_name(&mut self, _: String) {}
+    fn renders_in_warp_drive() -> bool { false }
+    fn can_export() -> bool { false }
+    fn can_move_to_space() -> bool { false }
+    fn object_type() -> ObjectType { ObjectType::default() }
+    fn cloud_object_type_and_id(&self) -> Option<CloudObjectTypeAndId> { None }
+    fn should_update_after_server_conflict() -> bool { false }
+    fn serialized(&self) -> Vec<u8> { Vec::new() }
+}
 #[derive(Debug, Clone, Default)]
 pub struct CloudObjectEventEntrypoint;
 
