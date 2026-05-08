@@ -73,6 +73,12 @@ pub mod active_agent_views_model {
 }
 pub mod agent_tips {
     pub use crate::legacy_stubs::AgentTip;
+    pub struct AITipModel<T>(std::marker::PhantomData<T>);
+    impl<T> AITipModel<T> {
+        pub fn new_for_agent_tips<C>(_ctx: &mut C) -> Self {
+            Self(std::marker::PhantomData)
+        }
+    }
 }
 pub mod ai_document_view {}
 pub mod cloud_environments {}

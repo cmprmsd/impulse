@@ -117,6 +117,11 @@ pub mod launch_configs {
     pub struct LaunchConfig;
     pub mod launch_config {
         pub use super::LaunchConfig;
+        #[derive(Debug, Clone, Copy, PartialEq, Eq)]
+        pub enum SplitDirection {
+            Horizontal,
+            Vertical,
+        }
     }
 }
 pub mod workspaces {
@@ -128,6 +133,7 @@ pub mod workspaces {
     }
     pub mod team {
         pub use crate::legacy_stubs::Team;
+        pub use warp_graphql::team::MembershipRole;
     }
     pub mod team_tester {
         pub use crate::legacy_stubs::TeamTesterStatus;

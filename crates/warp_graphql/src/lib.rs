@@ -59,6 +59,8 @@ pub mod team {
     #[derive(Debug, Clone, Copy, PartialEq, Eq)]
     pub enum MembershipRole {
         Default,
+        User,
+        Admin,
     }
 }
 
