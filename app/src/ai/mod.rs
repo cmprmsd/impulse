@@ -43,6 +43,7 @@ pub mod conversation_details_panel {
 pub mod persisted_workspace {
     use std::path::PathBuf;
     use lsp::supported_servers::LSPServerType;
+    pub use crate::legacy_stubs::{PersistedWorkspace, PersistedWorkspaceEvent};
     pub enum LspTask {
         Spawn { file_path: PathBuf },
         Install { file_path: PathBuf, repo_root: PathBuf, server_type: LSPServerType },

@@ -1161,6 +1161,16 @@ pub struct StaticQueryType;
 #[derive(Debug, Clone, Default)]
 pub struct PersistedWorkspace;
 
+impl PersistedWorkspace {
+    pub fn handle<Ctx>(_ctx: &Ctx) -> warpui::ModelHandle<Self> {
+        unimplemented!("PersistedWorkspace stub")
+    }
+
+    pub fn execute_lsp_task<Task, Ctx>(&mut self, _task: Task, _ctx: &mut Ctx) {}
+
+    pub fn enable_lsp_server_for_path<P, S>(&mut self, _path: P, _server_type: S) {}
+}
+
 #[derive(Debug, Clone, Default)]
 pub struct PersistedWorkspaceEvent;
 
