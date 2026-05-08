@@ -1,6 +1,6 @@
 // use crate::ai::active_agent_views_model::ActiveAgentViewsModel;  // unresolved (cloud detach)
 // use crate::ai::agent::api::ServerConversationToken;  // unresolved (cloud detach)
-// use crate::ai::agent::conversation::{AIAgentHarness, AIConversation, AIConversationId};  // unresolved (cloud detach)
+use crate::ai::agent::conversation::{AIAgentHarness, AIConversation, AIConversationId};
 // use crate::ai::agent_conversations_model::{  // unresolved (cloud detach)
 //     AgentConversationsModel, AgentConversationsModelEvent, ConversationOrTask,
 // };

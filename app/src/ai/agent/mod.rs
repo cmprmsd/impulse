@@ -7,7 +7,7 @@ pub(super) mod util;
 
 pub mod conversation {
     pub use crate::legacy_stubs::{
-        AIConversation, AIConversationId, ConversationRestorationInNewPaneType,
+        AIConversation, AIConversationId, ConversationRestorationInNewPaneType, ConversationStatus,
     };
 }
 pub mod api {

@@ -207,7 +207,7 @@ use warpui::elements::{shimmering_text::ShimmeringTextStateHandle, Border, Child
 use warpui::fonts::Properties;
 use warpui::{ViewHandle, WeakModelHandle};
 
-// use crate::ai::agent::conversation::{AIConversation, AIConversationId, ConversationStatus};  // unresolved (cloud detach)
+use crate::ai::agent::conversation::{AIConversation, AIConversationId, ConversationStatus};
 
 #[cfg(any(test, feature = "integration_tests"))]
 use crate::ai::agent::UserQueryMode;

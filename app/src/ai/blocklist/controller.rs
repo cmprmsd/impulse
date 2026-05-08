@@ -23,7 +23,7 @@ use super::{
     BlocklistAIInputModel, InputType,
 };
 // use crate::ai::agent::api::{self, ServerConversationToken};  // unresolved (cloud detach)
-// use crate::ai::agent::conversation::{AIConversation, ConversationStatus};  // unresolved (cloud detach)
+use crate::ai::agent::conversation::{AIConversation, ConversationStatus};
 // use crate::ai::agent::task::TaskId;  // unresolved (cloud detach)
 use crate::ai::agent::{
     AIAgentActionResult, CancellationReason, PassiveSuggestionResultType, PassiveSuggestionTrigger,

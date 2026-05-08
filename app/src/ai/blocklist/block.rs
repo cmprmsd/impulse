@@ -69,7 +69,7 @@ use warpui::elements::ClippedScrollStateHandle;
 use warpui::elements::TableStateHandle;
 use warpui::ui_components::radio_buttons::RadioButtonStateHandle;
 
-// use crate::ai::agent::conversation::AIConversationId;  // unresolved (cloud detach)
+use crate::ai::agent::conversation::AIConversationId;
 use crate::ai::agent::AIAgentActionResultType;
 use crate::ai::agent::AIAgentOutput;
 use crate::ai::agent::AIAgentTextSection;
