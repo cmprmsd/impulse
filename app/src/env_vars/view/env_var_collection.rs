@@ -44,7 +44,8 @@ use crate::{
         menu_button::{
             highlight_icon_button_with_context_menu, icon_button_with_context_menu, MenuDirection,
         },
-    }};
+    },
+};
 
 use super::{command_dialog::EnvVarCommandDialog, menus::Menus};
 use warpui::{AppContext, BlurContext, Element, Entity, FocusContext, ModelHandle, TypedActionView, View, ViewContext, ViewHandle, WindowId};
