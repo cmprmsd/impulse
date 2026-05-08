@@ -1125,3 +1125,42 @@ pub enum InitiatedBy {
 #[derive(Debug, Clone, Default)]
 pub struct RequestFileEditsTelemetryEvent;
 
+#[derive(Debug, Clone, Default)]
+pub struct AIAgentInput;
+
+#[derive(Debug, Clone, Default)]
+pub struct AIAgentOutputMessageType;
+
+#[derive(Debug, Clone, Default)]
+pub struct LifecycleEventType;
+
+#[derive(Debug, Clone, Default)]
+pub struct AmbientAgentTaskId;
+
+#[derive(Debug, Clone, Default)]
+pub struct SecretHandle;
+
+#[derive(Debug, Clone, Default)]
+pub struct ObfuscateSecrets;
+
+#[derive(Debug, Clone, Default)]
+pub struct AgentViewController;
+
+#[derive(Debug, Clone, Default)]
+pub struct AgentEvent;
+
+#[derive(Debug, Clone, Default)]
+pub struct AgentDriverError;
+
+#[derive(Debug, Clone, Default)]
+pub struct ServerConversationToken;
+
+#[derive(Debug, Clone, Default)]
+pub struct ContextPredicate;
+
+#[derive(Debug, Clone, Default)]
+pub struct StaticQueryType;
+
+#[derive(Debug, Clone, Default)]
+pub struct EntrypointType;
+

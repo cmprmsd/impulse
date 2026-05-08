@@ -5,9 +5,11 @@ use super::telemetry::{
     TeamAgentCommunicationFailureReason, TeamAgentCommunicationKind,
     TeamAgentCommunicationTransport, TeamAgentOrchestrationVersion,
 };
-// use crate::ai::agent::{  // unresolved (cloud detach)
-//     conversation::{AIConversationId, ConversationStatus},
-//     AIAgentExchangeId, AIAgentInput, AIAgentOutputMessageType, LifecycleEventType};
+use crate::ai::agent::{
+    conversation::{AIConversationId, ConversationStatus},
+    AIAgentExchangeId,
+};
+use crate::legacy_stubs::{AIAgentInput, AIAgentOutputMessageType, LifecycleEventType};
 use std::collections::{HashMap, HashSet};
 use uuid::Uuid;
 use warp_core::features::FeatureFlag;
