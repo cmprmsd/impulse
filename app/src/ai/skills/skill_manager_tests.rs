@@ -420,7 +420,7 @@ name: test-skill
 description: Test skill without variables
 ---
 
-Plain content with no variables.
+// Plain content with no variables.
 "#,
     )
     .unwrap();

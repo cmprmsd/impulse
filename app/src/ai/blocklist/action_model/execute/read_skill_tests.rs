@@ -35,10 +35,10 @@ description: {}
 # {}
 
 ## Instructions
-Test instructions for this skill.
+// Test instructions for this skill.
 
 ## Examples
-Example usage of the skill.
+// Example usage of the skill.
 "#,
         name, description, name
     );

@@ -641,7 +641,7 @@ fn test_pasting_on_command_selection() {
 ```
 first command
 ```
-More text
+// More text
 ```
 echo command
 ```"#,
@@ -1416,7 +1416,7 @@ fn test_syntax_highlighting_in_command() {
 ```
 git checkout
 ```
-More text
+// More text
 ```
 cargo run
 ```"#,
@@ -1515,11 +1515,11 @@ fn test_text_to_command_selection() {
         let model_handle = model_from_markdown(
             r#"Text
 ```
-First command
+// First command
 ```
-More text
+// More text
 ```
-Second command
+// Second command
 ```"#,
             &mut app,
             true,
@@ -1579,11 +1579,11 @@ fn test_command_to_text_selection() {
         let model_handle = model_from_markdown(
             r#"Text
 ```
-First command
+// First command
 ```
-More text
+// More text
 ```
-Second command
+// Second command
 ```"#,
             &mut app,
             true,
@@ -1618,11 +1618,11 @@ fn test_move_command_selection() {
         let model_handle = model_from_markdown(
             r#"Text
 ```
-First command
+// First command
 ```
-More text
+// More text
 ```
-Second command
+// Second command
 ```"#,
             &mut app,
             true,
@@ -1705,7 +1705,7 @@ fn test_interleaving_command_and_embedding() {
 ```warp-embedded-object
 id: Workflow-test_uid00000000000123
 ```
-More text
+// More text
 ```warp-embedded-object
 id: Workflow-test_uid00000000000245
 ```
@@ -1713,7 +1713,7 @@ id: Workflow-test_uid00000000000245
 def
 ```
 ```
-First command
+// First command
 ```"#,
             &mut app,
             false,

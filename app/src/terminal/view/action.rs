@@ -468,7 +468,7 @@ pub enum TerminalAction {
     OpenCLIAgentRichInput,
 }
 
-Manually implementing Debug to avoid leaking sensitive information in logs
+// Manually implementing Debug to avoid leaking sensitive information in logs
 impl fmt::Debug for TerminalAction {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         use TerminalAction::*;

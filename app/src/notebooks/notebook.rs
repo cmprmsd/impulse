@@ -131,7 +131,7 @@ const MEANINGFUL_EDIT_THRESHOLD: usize = 30;
 
 #[cfg(not(test))]
 const EDIT_WINDOW_DURATION: Duration = Duration::from_secs(60);
-Use a shorter window to make testing reasonable.
+// Use a shorter window to make testing reasonable.
 #[cfg(test)]
 const EDIT_WINDOW_DURATION: Duration = Duration::from_millis(5);
 

@@ -31,8 +31,8 @@ const REPORT_WINDOW_S: usize = 300;
 /// The number of data points aggregated into a resource usage report.
 const REPORT_SAMPLE_COUNT: usize = REPORT_WINDOW_S / REFRESH_INTERVAL_S;
 
-Make sure the refresh interval cleanly divides the report window into an
-integral number of samples.
+// Make sure the refresh interval cleanly divides the report window into an
+// integral number of samples.
 static_assertions::const_assert_eq!(REPORT_WINDOW_S % REFRESH_INTERVAL_S, 0);
 
 pub enum SystemInfoEvent {

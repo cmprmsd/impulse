@@ -149,7 +149,7 @@ const DETAIL_BOX_PADDING_BOTTOM_AND_RIGHT: f32 = 8.;
 const WORKFLOW_CORNER_RADIUS: f32 = 10.;
 const COMMAND_MARGIN_TOP: f32 = 20.;
 
-Padding for text_input
+// Padding for text_input
 const VERTICAL_TEXT_INPUT_PADDING: f32 = 5.;
 const HORIZONTAL_TEXT_INPUT_PADDING: f32 = 10.;
 
