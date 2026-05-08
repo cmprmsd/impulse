@@ -1,6 +1,6 @@
 use warp_core::safe_error;
-use crate::send_telemetry_from_ctx;
 use warpui::keymap::macros::*;
+use warpui::elements::MouseStateHandle;
 use crate::ai::blocklist::view_util::render_provider_icon_button;
 use crate::ai::skills::{SkillOpenOrigin, SkillTelemetryEvent};
 use anyhow::Result;

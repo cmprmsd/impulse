@@ -1,7 +1,6 @@
 use warp_core::safe_info;
 use crate::send_telemetry_from_ctx;
 use warpui::keymap::macros::*;
-use crate::report_if_error;
 use anyhow::Context;
 use async_channel::Sender;
 use futures_util::stream::AbortHandle;
