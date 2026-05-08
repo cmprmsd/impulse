@@ -22,6 +22,14 @@ mod block_list_settings;
 mod alias;
 mod alt_screen;
 pub mod alt_screen_reporting;
+// Cloud-only stub: buy_credits_banner deleted in Phase 0
+pub mod buy_credits_banner {
+    pub use crate::legacy_stubs::BuyCreditsBannerDisplayState;
+    #[derive(Debug, Clone, Default)]
+    pub struct BuyCreditsBanner;
+    #[derive(Debug, Clone, Default)]
+    pub struct BuyCreditsBannerEvent;
+}
 mod audible_bell;
 pub use audible_bell::AudibleBell;
 pub mod available_shells;

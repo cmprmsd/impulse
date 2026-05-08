@@ -5,10 +5,18 @@ use warpui::keymap::macros::*;
 mod action;
 // Stub modules for cloud-detached builds (originals removed).
 pub mod ambient_agent {
-    pub use crate::legacy_stubs::AmbientAgentViewModel;
+    pub use crate::legacy_stubs::{
+        AmbientAgentEntryBlock, AmbientAgentViewModel, AmbientAgentViewModelEvent,
+    };
     pub struct FirstTimeCloudAgentSetupView;
     pub fn is_cloud_agent_pre_first_exchange(_: &impl Sized) -> bool { false }
 }
+
+pub use crate::legacy_stubs::ConversationRestorationInNewPaneType;
+
+// Cloud-only stub modules deleted in Phase 0
+pub mod ssh_remote_server_choice_view {}
+pub mod ssh_remote_server_failed_banner {}
 mod block_banner;
 pub mod block_onboarding;
 pub(crate) mod blocklist_filter;

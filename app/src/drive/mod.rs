@@ -15,6 +15,8 @@ pub mod items;
 pub mod panel;
 pub mod settings;
 pub mod workflows;
+// Cloud-only stub: sharing UI deleted in Phase 0
+pub mod sharing {}
 
 use std::{cmp::Ordering, fmt};
 

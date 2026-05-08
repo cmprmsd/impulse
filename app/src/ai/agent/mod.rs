@@ -5,6 +5,16 @@ pub(crate) mod icons;
 pub(super) mod telemetry;
 pub(super) mod util;
 
+pub mod conversation {
+    pub use crate::legacy_stubs::{
+        AIConversation, AIConversationId, ConversationRestorationInNewPaneType,
+    };
+}
+pub mod api {
+    pub use crate::legacy_stubs::AIClient;
+}
+pub mod todos {}
+
 // Re-export types that were moved to the ai crate.
 pub use ai::agent::{action::*, action_result::*, AIAgentCitation, FileLocations};
 use warp_core::features::FeatureFlag;

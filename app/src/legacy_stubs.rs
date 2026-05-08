@@ -1050,3 +1050,78 @@ pub struct ServerOutputId(pub Uuid);
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
 pub struct AIDocumentId(pub Uuid);
+
+// ---------------------------------------------------------------------------
+// Cloud-only AI types (deleted in Phase 0; stubs to satisfy import sites)
+// ---------------------------------------------------------------------------
+
+#[derive(Debug, Clone, Default)]
+pub struct AIRequestUsageModel;
+
+#[derive(Debug, Clone, Default)]
+pub struct RequestLimitInfo;
+
+#[derive(Debug, Clone, Default)]
+pub struct RequestLimitRefreshDuration;
+
+#[derive(Debug, Clone, Default)]
+pub struct RequestUsageInfo;
+
+#[derive(Debug, Clone, Default)]
+pub struct AgentTip;
+
+#[derive(Debug, Clone, Default)]
+pub struct BuyCreditsBannerDisplayState;
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
+pub enum AgentModeEntrypoint {
+    #[default]
+    Default,
+}
+
+#[derive(Debug, Clone, Default)]
+pub struct UserUid(pub String);
+
+#[derive(Debug, Clone, Default)]
+pub struct ConversationRestorationInNewPaneType;
+
+#[derive(Debug, Clone, Default)]
+pub struct ParsedTokensSnapshot;
+
+#[derive(Debug, Clone, Default)]
+pub struct AmbientAgentEntryBlock;
+
+#[derive(Debug, Clone, Default)]
+pub struct AmbientAgentViewModelEvent;
+
+// Cloud-object marker types (formerly in app::cloud_object, deleted)
+#[derive(Debug, Clone, Default)]
+pub struct Owner;
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
+pub enum CloudObjectEventEntrypoint {
+    #[default]
+    Default,
+}
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
+pub enum GenericStringObjectFormat {
+    #[default]
+    Default,
+}
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
+pub enum JsonObjectType {
+    #[default]
+    Default,
+}
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
+pub enum InitiatedBy {
+    #[default]
+    Default,
+}
+
+#[derive(Debug, Clone, Default)]
+pub struct RequestFileEditsTelemetryEvent;
+

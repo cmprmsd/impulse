@@ -1,6 +1,8 @@
 //! Warp input editor logic related to decorating the input's text, such as
 //! applying syntax highlighting and error underlining.
 
+pub use crate::legacy_stubs::ParsedTokensSnapshot;
+
 use std::{collections::HashMap, ops::Range};
 
 use settings::Setting as _;

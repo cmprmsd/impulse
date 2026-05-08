@@ -25,6 +25,9 @@ pub mod usage;
 pub(crate) mod telemetry_banner;
 pub(super) mod view_util;
 
+// Cloud-only stub: agent_view module deleted in Phase 0 strip
+pub mod agent_view {}
+
 #[cfg_attr(target_family = "wasm", allow(unused_imports))]
 pub(crate) use action_model::{
     apply_edits, read_local_file_context, BlocklistAIActionEvent, BlocklistAIActionModel,

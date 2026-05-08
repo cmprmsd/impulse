@@ -79,6 +79,7 @@ pub mod auth {
             SignUp,
         }
     }
+    pub use crate::legacy_stubs::{AuthStateProvider, UserUid};
 }
 pub mod cloud_object {
     pub mod model {
@@ -97,7 +98,9 @@ pub mod cloud_object {
             }
         }
     }
-    pub use crate::legacy_stubs::Space;
+    pub use crate::legacy_stubs::{
+        CloudObjectEventEntrypoint, GenericStringObjectFormat, JsonObjectType, Owner, Space,
+    };
 }
 pub mod remote_server {
     pub mod manager {
@@ -260,6 +263,7 @@ use ::ai::index::full_source_code_embedding::manager::CodebaseIndexManager;
 use ::ai::index::DEFAULT_SYNC_REQUESTS_PER_MIN;
 // use ::ai::project_context::model::ProjectContextModel;  // unresolved (cloud detach)
 pub use ai::agent::{AIAgentActionResultType, FileEdit};
+pub use crate::legacy_stubs::AgentModeEntrypoint;
 // use ai::agent::{todos::AIAgentTodoList, TodoOperation};  // unresolved (cloud detach)
 // use ai::agent_conversations_model::AgentConversationsModel;  // unresolved (cloud detach)
 // use ai::ambient_agents::scheduled::ScheduledAgentManager;  // unresolved (cloud detach)

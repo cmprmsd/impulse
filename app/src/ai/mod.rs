@@ -49,6 +49,22 @@ pub mod persisted_workspace {
     }
 }
 
+// Cloud-only stubs widely referenced by call sites
+pub use crate::legacy_stubs::{
+    AIRequestUsageModel, AgentTip, BuyCreditsBannerDisplayState, RequestLimitInfo,
+    RequestLimitRefreshDuration, RequestUsageInfo,
+};
+
+// Empty submodule placeholders for deleted cloud features
+pub mod ambient_agents {}
+pub mod active_agent_views_model {}
+pub mod agent_tips {
+    pub use crate::legacy_stubs::AgentTip;
+}
+pub mod ai_document_view {}
+pub mod cloud_environments {}
+pub mod harness_availability {}
+
 pub fn init(app: &mut AppContext) {
     blocklist::keyboard_navigable_buttons::init(app);
     blocklist::block::number_shortcut_buttons::init(app);

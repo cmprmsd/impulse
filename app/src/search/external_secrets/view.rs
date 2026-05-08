@@ -16,8 +16,8 @@ use warpui::{
 
 use crate::{
     appearance::Appearance,
-    external_secrets::ExternalSecret,
     search::{
+        external_secrets::ExternalSecret,
         external_secrets::{
             external_secret_data_source::ExternalSecretDataSource,
             searcher::{ExternalSecretSearchItemAction, ExternalSecretSearchMixer},

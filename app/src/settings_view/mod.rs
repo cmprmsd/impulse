@@ -93,6 +93,9 @@ mod privacy_page;
 mod referrals_page;
 mod settings_file_footer;
 pub(crate) mod settings_page;
+// Cloud-only stub: billing/teams pages deleted in Phase 0
+mod billing_and_usage_page {}
+mod teams_page {}
 mod show_blocks_view;
 mod tab_menu;
 mod telemetry;
