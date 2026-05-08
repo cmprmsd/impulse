@@ -70,14 +70,10 @@ use crate::util::bindings::keybinding_name_to_display_string;
 // use warpui::keymap::ContextPredicate;  // unresolved (cloud detach)
 
 mod about_page;
-mod admin_actions;
-mod agent_assisted_environment_modal;
 mod ai_page;
 mod appearance_page;
 mod code_page;
-mod delete_environment_confirmation_dialog;
 mod directory_color_add_picker;
-pub(crate) mod environments_page;
 mod execution_profile_view;
 mod features;
 mod features_page;
@@ -87,21 +83,18 @@ pub mod mcp_servers;
 pub mod mcp_servers_page;
 mod nav;
 pub mod pane_manager;
-mod platform;
-mod platform_page;
 mod privacy;
 mod privacy_page;
-mod referrals_page;
 mod settings_file_footer;
 pub(crate) mod settings_page;
-// Cloud-only stub: billing/teams pages deleted in Phase 0
-mod billing_and_usage_page {}
-mod teams_page {}
 mod show_blocks_view;
 mod tab_menu;
 mod telemetry;
-mod transfer_ownership_confirmation_modal;
-pub mod update_environment_form;
+// Cloud-only modules deleted in Phase 0 strip:
+// admin_actions, agent_assisted_environment_modal, billing_and_usage_page,
+// delete_environment_confirmation_dialog, environments_page, platform,
+// platform_page, referrals_page, teams_page,
+// transfer_ownership_confirmation_modal, update_environment_form
 mod warp_drive_page;
 mod warpify_page;
 

@@ -2,7 +2,7 @@ use crate::legacy_stubs::{HashedSqliteId, ObjectUid, ServerId, SyncId};
 use crate::workflows::CloudWorkflow;
 use crate::legacy_stubs::{CloudObject, GenericStringObjectFormat, ObjectIdType, ObjectType};
 use crate::ui_components::icons::Icon;
-pub mod cloud_action_confirmation_dialog;
+// Cloud-only: cloud_action_confirmation_dialog deleted in Phase 0
 mod cloud_object_naming_dialog;
 pub mod cloud_object_styling;
 pub mod drive_helpers;

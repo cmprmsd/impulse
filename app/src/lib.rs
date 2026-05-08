@@ -161,7 +161,7 @@ mod banner;
 mod changelog_model;
 mod chip_configurator;
 mod code;
-mod code_review;
+// Cloud-only: code_review deleted in Phase 0 strip
 mod coding_entrypoints;
 mod coding_panel_enablement_state;
 mod command_palette;
@@ -286,7 +286,8 @@ use ai::execution_profiles::profiles::AIExecutionProfilesModel;
 // use ai::persisted_workspace::PersistedWorkspace;  // unresolved (cloud detach)
 use code::editor_management::CodeManager;
 use code::opened_files::OpenedFilesModel;
-use code_review::GlobalCodeReviewModel;
+// Cloud-only: code_review::GlobalCodeReviewModel deleted in Phase 0
+type GlobalCodeReviewModel = crate::legacy_stubs::CloudModel;
 use quit_warning::UnsavedStateSummary;
 #[cfg(feature = "local_fs")]
 use settings::import::model::ImportedConfigModel;
@@ -1615,10 +1616,7 @@ pub(crate) fn initialize_app(
         });
     }
 
-    {
-        use code_review::git_status_update::GitStatusUpdateModel;
-        ctx.add_singleton_model(|_| GitStatusUpdateModel::new());
-    }
+    // Cloud-only: code_review::git_status_update deleted in Phase 0
 
     ctx.add_singleton_model(|ctx| {
         ProjectManagementModel::new(persisted_projects, persistence_writer.sender(), ctx)
@@ -1670,9 +1668,9 @@ pub(crate) fn initialize_app(
     ai::blocklist::init(ctx);
     ai::blocklist::block::status_bar::init(ctx);
     drive::index::init(ctx);
-    drive::sharing::dialog::init(ctx);
+    // Cloud-only: drive::sharing::dialog::init deleted in Phase 0
     ai_assistant::panel::init(ctx);
-    settings_view::update_environment_form::init(ctx);
+    // Cloud-only: settings_view::update_environment_form::init deleted in Phase 0
     env_vars::env_var_collection_block::init(ctx);
     terminal::ssh::install_tmux::init(ctx);
     terminal::ssh::warpify::init(ctx);
@@ -1683,9 +1681,7 @@ pub(crate) fn initialize_app(
     ai::agent::todos::popup::init(ctx);
     terminal::view::init_environment::mode_selector::init(ctx);
     coding_entrypoints::project_buttons::init(ctx);
-    if FeatureFlag::CodeReviewSaveChanges.is_enabled() {
-        code_review::init(ctx);
-    }
+    // Cloud-only: code_review::init deleted in Phase 0
 
     let display_count = ctx.windows().display_count();
     ctx.add_singleton_model(|_| DisplayCount(display_count));
@@ -1777,16 +1773,9 @@ pub(crate) fn initialize_app(
     ctx.add_singleton_model(move |_| RestoredAgentConversations::new(multi_agent_conversations));
     ctx.add_singleton_model(|_| CLIAgentSessionsModel::new());
     // ActiveAgentViewsModel is used to track active agent conversations and notify listeners when they change.
-    ctx.add_singleton_model(|_| ActiveAgentViewsModel::new());
+    // Cloud-only: ActiveAgentViewsModel + agent orchestration deleted in Phase 0
     ctx.add_singleton_model(AgentNotificationsModel::new);
     ctx.add_singleton_model(BlocklistAIPermissions::new);
-    ctx.add_singleton_model(ai::blocklist::orchestration_events::OrchestrationEventService::new);
-    ctx.add_singleton_model(ai::blocklist::task_status_sync_model::TaskStatusSyncModel::new);
-    if warp_core::features::FeatureFlag::OrchestrationV2.is_enabled() {
-        ctx.add_singleton_model(
-            ai::blocklist::orchestration_event_streamer::OrchestrationEventStreamer::new,
-        );
-    }
 
     ctx.add_singleton_model(RepoOutlines::new);
     ctx.add_singleton_model(|ctx| {
@@ -1901,11 +1890,7 @@ pub(crate) fn initialize_app(
     ctx.add_singleton_model(|_| ResizableData::default());
 
     // Add a singleton model to maintain state of shared session across all windows.
-    ctx.add_singleton_model(terminal::shared_session::manager::Manager::new);
-
-    ctx.add_singleton_model(
-        terminal::shared_session::permissions_manager::SessionPermissionsManager::new,
-    );
+    // Cloud-only: terminal::shared_session deleted in Phase 0
 
     ctx.add_singleton_model(EnvVarCollectionManager::new);
     ctx.add_singleton_model(WorkflowManager::new);

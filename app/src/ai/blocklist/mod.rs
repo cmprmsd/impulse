@@ -4,10 +4,9 @@ pub mod block;
 pub mod code_block;
 mod context_model;
 mod controller;
-pub(crate) mod orchestration_event_streamer;
-pub(crate) mod orchestration_events;
-mod passive_suggestions;
-pub(crate) mod task_status_sync_model;
+// Cloud-only modules deleted in Phase 0 strip:
+// orchestration_event_streamer, orchestration_events, passive_suggestions,
+// task_status_sync_model
 pub(super) use controller::RequestInput;
 pub mod history_model;
 pub mod inline_action;

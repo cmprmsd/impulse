@@ -77,7 +77,7 @@ mod secret_regex_updater;
 pub mod session_settings;
 pub mod settings;
 mod share_block_modal;
-pub mod shared_session;
+// Cloud-only: shared_session deleted in Phase 0 strip
 mod shell_launch_state;
 pub mod universal_developer_input;
 
