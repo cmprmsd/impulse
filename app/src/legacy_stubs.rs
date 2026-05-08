@@ -232,6 +232,10 @@ pub enum CloseTarget {
 #[derive(Debug, Clone)]
 pub enum AgentModeEntrypoint {
     Default,
+    BlockToolbelt,
+    ContextMenu { selection_type: AgentModeEntrypointSelectionType },
+    NewPaneBinding,
+    UDITerminalInputSwitcher,
 }
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
@@ -1051,15 +1055,6 @@ pub struct AgentTip;
 #[derive(Debug, Clone, Default)]
 pub struct BuyCreditsBannerDisplayState;
 
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
-pub enum AgentModeEntrypoint {
-    #[default]
-    Default,
-}
-
-#[derive(Debug, Clone, Default)]
-pub struct UserUid(pub String);
-
 #[derive(Debug, Clone, Default)]
 pub struct ConversationRestorationInNewPaneType;
 
@@ -1071,22 +1066,6 @@ pub struct AmbientAgentEntryBlock;
 
 #[derive(Debug, Clone, Default)]
 pub struct AmbientAgentViewModelEvent;
-
-// Cloud-object marker types (formerly in app::cloud_object, deleted)
-#[derive(Debug, Clone, Default)]
-pub struct Owner;
-
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
-pub enum CloudObjectEventEntrypoint {
-    #[default]
-    Default,
-}
-
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
-pub enum GenericStringObjectFormat {
-    #[default]
-    Default,
-}
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
 pub enum JsonObjectType {
